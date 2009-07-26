@@ -1,13 +1,5 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Projects Include="$(SourceFolder)\BuildManager.Common\BuildManager.Common.csproj" />
-    <Projects Include="$(SourceFolder)\TemplateParser\TemplateParser\TemplateParser.csproj" />
-    <Projects Include="$(SourceFolder)\TemplateParser\TemplateParser.Tests\TemplateParser.Tests.csproj" />
-    <Projects Include="$(SourceFolder)\BuildManager.Assets\BuildManager.Assets.csproj" />
-	<Projects Include="$(SourceFolder)\BuildManager.Infrastructure\BuildManager.Infrastructure.csproj" />
-    <Projects Include="$(SourceFolder)\BuildManager.Modules.Services\BuildManager.Modules.Services.csproj" />
-	<Projects Include="$(SourceFolder)\BuildManager.Modules.SkillsView\BuildManager.Modules.SkillsView.csproj" />
-    <Projects Include="$(SourceFolder)\BuildManager.UX\BuildManager.UX.csproj" />
-    <Projects Include="$(SourceFolder)\BuildManager.Tests\BuildManager.Tests.csproj" />
+    <Projects Include="$(SourceFolder)\TemplateManager.sln" />
   </ItemGroup>
 </Project>

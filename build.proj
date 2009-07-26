@@ -27,27 +27,18 @@
                          $(OutputPath)\Tests\**\*.*;
 			 $(OutputPath)\Setup\**\*.*;
 			 $(OutputPath)\*.vshost.*">
-      <Output TaskParameter="Include" ItemName="BuiltItems"/>
-    </CreateItem>
-
-    <CreateItem Include="@(BuiltItems);
-                         $(OutputPath)\data.xml">
       <Output TaskParameter="Include" ItemName="FinalItems"/>
-    </CreateItem>    
-  </Target>
-
-  <Target Name="TestFinalItems" DependsOnTargets="CreateFinalItems">
-    <Message Text="%(FinalItems.Identity)" />
+    </CreateItem>
   </Target>
   
   <Target Name="CreateArchive" DependsOnTargets="CreateFinalItems">
-    <RemoveDir Directories="$(BinFolder)\BuildManager" />
+    <RemoveDir Directories="$(BinFolder)\TemplateManager" />
     <Delete Files="$(BinFolder)\$(Configuration).zip" />
     
-    <Copy SourceFiles="@(FinalItems)" DestinationFiles="@(FinalItems->'$(BinFolder)\BuildManager\%(RecursiveDir)\%(Filename)%(Extension)')" />
-    <Exec Command='"$(SevenZipPath)\7z.exe" a -tzip "$(BinFolder)\$(Configuration).zip" "$(BinFolder)\BuildManager"' />
+    <Copy SourceFiles="@(FinalItems)" DestinationFiles="@(FinalItems->'$(BinFolder)\TemplateManager\%(RecursiveDir)\%(Filename)%(Extension)')" />
+    <Exec Command='"$(SevenZipPath)\7z.exe" a -tzip "$(BinFolder)\$(Configuration).zip" "$(BinFolder)\TemplateManager"' />
     
-    <RemoveDir Directories="$(BinFolder)\BuildManager" />
+    <RemoveDir Directories="$(BinFolder)\TemplateManager" />
   </Target>
 
   <Target Name="BuildMSBuildProjects">
