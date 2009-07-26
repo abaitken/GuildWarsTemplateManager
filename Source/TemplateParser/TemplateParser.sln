@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateParser", "TemplateParser\TemplateParser.csproj", "{CDDBA2FA-9389-40FC-8FB5-E6635C95EB24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateParser.Tests", "TemplateParser.Tests\TemplateParser.Tests.csproj", "{50FE85D1-A2E6-48F4-A3E3-40E6AA29CC7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDDBA2FA-9389-40FC-8FB5-E6635C95EB24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDDBA2FA-9389-40FC-8FB5-E6635C95EB24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDDBA2FA-9389-40FC-8FB5-E6635C95EB24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDDBA2FA-9389-40FC-8FB5-E6635C95EB24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50FE85D1-A2E6-48F4-A3E3-40E6AA29CC7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50FE85D1-A2E6-48F4-A3E3-40E6AA29CC7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50FE85D1-A2E6-48F4-A3E3-40E6AA29CC7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50FE85D1-A2E6-48F4-A3E3-40E6AA29CC7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

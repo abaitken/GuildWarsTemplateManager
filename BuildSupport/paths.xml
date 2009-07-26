@@ -1,0 +1,11 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectDirectory>$(MSBuildProjectDirectory)</ProjectDirectory>
+    <SourceFolder>$(ProjectDirectory)\Source</SourceFolder>
+    <BinFolder>$(ProjectDirectory)\bin</BinFolder>
+    <OutputPath>$(BinFolder)\$(Configuration)</OutputPath>
+    <LibsFolder>$(ProjectDirectory)\Libs</LibsFolder>
+
+    <SevenZipPath>C:\Program Files\7-Zip</SevenZipPath>
+  </PropertyGroup>
+</Project>

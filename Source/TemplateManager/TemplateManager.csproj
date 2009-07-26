@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{013D96FE-CBB0-4D28-AF0B-F73652843409}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TemplateManager</RootNamespace>
+    <AssemblyName>TemplateManager</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <StartupObject>TemplateManager.App</StartupObject>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\Signing\BuildManager.pfx</AssemblyOriginatorKeyFile>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release with Code Analysis|AnyCPU' ">
+    <OutputPath>bin\Release with Code Analysis\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExceptionReporter, Version=2.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\ExceptionReporter\ExceptionReporter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Composite, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Microsoft.Practices\Microsoft.Practices.Composite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Composite.Presentation, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5850e8078cce1523, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Microsoft.Practices\Microsoft.Practices.Composite.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Composite.UnityExtensions, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Microsoft.Practices\Microsoft.Practices.Composite.UnityExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Microsoft.Practices\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Microsoft.Practices\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="AboutView\AboutDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Options\OptionsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchView\SearchPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShellView\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Resource Include="Images\About.png" />
+    <Resource Include="Images\Options.png" />
+    <Resource Include="Images\Search.png" />
+    <Resource Include="Images\HelpTopics.png" />
+    <Resource Include="app.ico" />
+    <Resource Include="Images\DuplicateTemplates.png" />
+    <Resource Include="Images\error.png" />
+    <Resource Include="Images\move.png" />
+    <Resource Include="Images\recyclebin.png" />
+    <Resource Include="Images\warning.png" />
+    <Content Include="Themes\BubbleCreme\Theme.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Themes\BureauBlack\Theme.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Themes\BureauBlue\Theme.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Themes\ExpressionDark\Theme.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Themes\ExpressionLight\Theme.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Themes\RainierOrange\Theme.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Themes\RainierPurple\Theme.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Themes\RainierRadialBlue\Theme.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Themes\ShinyBlue\Theme.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Themes\ShinyDarkPurple\Theme.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Themes\ShinyDarkTeal\Theme.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Themes\ShinyRed\Theme.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Themes\TwilightBlue\Theme.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Themes\WhistlerBlue\Theme.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Include\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AboutView\AboutDialog.xaml.cs">
+      <DependentUpon>AboutDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AboutView\AboutViewModel.cs" />
+    <Compile Include="AboutView\IAboutView.cs" />
+    <Compile Include="AboutView\IAboutViewModel.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AboutView\ApplicationInformation.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Commands\AboutCommand.cs" />
+    <Compile Include="Commands\ActionCommand.cs" />
+    <Compile Include="Commands\ActionParameterCommand.cs" />
+    <Compile Include="Commands\CloseTabCommand.cs" />
+    <Compile Include="Commands\DuplicateTemplatesViewCommand.cs" />
+    <Compile Include="Commands\PushViewIntoRegionCommandBase.cs" />
+    <Compile Include="Commands\CloseDialogWindowCommand.cs" />
+    <Compile Include="Commands\CloseMainWindowCommand.cs" />
+    <Compile Include="Commands\DefaultQueryCancel.cs" />
+    <Compile Include="Commands\HelpTopicsCommand.cs" />
+    <Compile Include="Commands\IOpenFolderDialogHelper.cs" />
+    <Compile Include="Commands\IQueryCancel.cs" />
+    <Compile Include="Commands\OpenFolderDialogCommand.cs" />
+    <Compile Include="Commands\OpenFolderDialogHelper.cs" />
+    <Compile Include="Commands\ResetCommand.cs" />
+    <Compile Include="Commands\ResetSettingsCommand.cs" />
+    <Compile Include="Commands\SearchCommand.cs" />
+    <Compile Include="Commands\SearchCommandBase.cs" />
+    <Compile Include="Commands\ShowOptionsCommand.cs" />
+    <Compile Include="Commands\TemplatesViewCommand.cs" />
+    <Compile Include="IThemeManager.cs" />
+    <Compile Include="Options\ArchiveFolderHelper.cs" />
+    <Compile Include="Options\OptionsFolderHelperBase.cs" />
+    <Compile Include="Options\TemplateFolderHelper.cs" />
+    <Compile Include="WindowPositionManager\IWindowApplicationSettings.cs" />
+    <Compile Include="ListSynchronizer\IListItemConverter.cs" />
+    <Compile Include="ListSynchronizer\MultiSelectorBehaviours.cs" />
+    <Compile Include="ListSynchronizer\TwoListSynchronizer.cs" />
+    <Compile Include="MainModule.cs" />
+    <Compile Include="Options\BuildStoreLocator.cs" />
+    <Compile Include="Commands\CancelOptionsWindowCommand.cs" />
+    <Compile Include="Options\IOptionsView.cs" />
+    <Compile Include="Options\IOptionsViewModel.cs" />
+    <Compile Include="Options\OptionsWindow.xaml.cs">
+      <DependentUpon>OptionsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Options\OptionsViewModel.cs" />
+    <Compile Include="Commands\CloseWindowCommand.cs" />
+    <Compile Include="Commands\GenericCloseWindowCommand.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SearchView\SearchViewModel.cs" />
+    <Compile Include="SearchView\ISearchView.cs" />
+    <Compile Include="SearchView\ISearchViewModel.cs" />
+    <Compile Include="SearchView\SearchPanel.xaml.cs">
+      <DependentUpon>SearchPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceController.cs" />
+    <Compile Include="ShellView\IShellView.cs" />
+    <Compile Include="ShellView\IShellViewModel.cs" />
+    <Compile Include="ShellView\ShellView.xaml.cs">
+      <DependentUpon>ShellView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShellView\ShellViewModel.cs" />
+    <Compile Include="ThemeManager.cs" />
+    <Compile Include="WindowPositionManager\WindowApplicationSettings.cs" />
+    <Compile Include="WindowPositionManager\WindowSettings.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="..\..\Signing\BuildManager.pfx">
+      <Link>BuildManager.pfx</Link>
+    </None>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BuildManager.Common\TemplateManager.Common.csproj">
+      <Project>{5D573659-1A65-4112-9EED-1BF70DB94F22}</Project>
+      <Name>TemplateManager.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BuildManager.Infrastructure\TemplateManager.Infrastructure.csproj">
+      <Project>{67BC7C95-AB1E-422D-9AD4-E34CA77460A9}</Project>
+      <Name>TemplateManager.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BuildManager.Modules.Performance\TemplateManager.Modules.Performance.csproj">
+      <Project>{324F15D5-5E26-447E-BC8D-76BF37B7CCBA}</Project>
+      <Name>TemplateManager.Modules.Performance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BuildManager.Modules.Services\TemplateManager.Modules.Services.csproj">
+      <Project>{85A88912-18FD-4516-A1B9-F4FA1F7A97EC}</Project>
+      <Name>TemplateManager.Modules.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BuildManager.Modules.SkillsView\TemplateManager.Modules.SkillsView.csproj">
+      <Project>{EACC47B1-C3C2-442E-9F4D-1E65C34F8D9A}</Project>
+      <Name>TemplateManager.Modules.SkillsView</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutView\Images\AboutTitleImage.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

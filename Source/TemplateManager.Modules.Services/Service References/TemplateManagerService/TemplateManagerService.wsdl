@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:typens="urn:TemplateManagerService" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" name="TemplateManagerService" targetNamespace="urn:TemplateManagerService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:TemplateManagerService">
+      <xsd:complexType name="VersionInfo">
+        <xsd:all>
+          <xsd:element name="Major" type="xsd:int" />
+          <xsd:element name="Minor" type="xsd:int" />
+          <xsd:element name="Build" type="xsd:int" />
+          <xsd:element name="Revision" type="xsd:int" />
+          <xsd:element name="Configuration" type="xsd:string" />
+          <xsd:element name="Label" type="xsd:string" />
+          <xsd:element name="DownloadUrl" type="xsd:string" />
+          <xsd:element name="InformationUrl" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetLatestVersionRequest" />
+  <wsdl:message name="GetLatestVersionResponse">
+    <wsdl:part name="VersionInfo" type="typens:VersionInfo" />
+  </wsdl:message>
+  <wsdl:portType name="TemplateManagerServicePort">
+    <wsdl:operation name="GetLatestVersion">
+      <wsdl:input message="typens:GetLatestVersionRequest" />
+      <wsdl:output message="typens:GetLatestVersionResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TemplateManagerServiceBinding" type="typens:TemplateManagerServicePort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="GetLatestVersion">
+      <soap:operation soapAction="urn:TemplateManagerServiceAction" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:TemplateManagerService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:TemplateManagerService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TemplateManagerService">
+    <wsdl:port name="TemplateManagerServicePort" binding="typens:TemplateManagerServiceBinding">
+      <soap:address location="http://projects.logaans-site.co.uk/template-manager/server.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

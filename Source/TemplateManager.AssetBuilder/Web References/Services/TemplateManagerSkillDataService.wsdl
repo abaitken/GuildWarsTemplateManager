@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:typens="urn:TemplateManagerSkillDataService" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" name="TemplateManagerSkillDataService" targetNamespace="urn:TemplateManagerSkillDataService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:TemplateManagerSkillDataService">
+      <xsd:complexType name="Attribute">
+        <xsd:all>
+          <xsd:element name="Id" type="xsd:int" />
+          <xsd:element name="Name" type="xsd:string" />
+          <xsd:element name="Profession" type="xsd:int" />
+          <xsd:element name="IsPrimary" type="xsd:boolean" />
+          <xsd:element name="AttributeId" type="xsd:int" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Attributes">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="typens:Attribute[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Campaign">
+        <xsd:all>
+          <xsd:element name="Id" type="xsd:int" />
+          <xsd:element name="Name" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Campaigns">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="typens:Campaign[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Profession">
+        <xsd:all>
+          <xsd:element name="Id" type="xsd:int" />
+          <xsd:element name="Name" type="xsd:string" />
+          <xsd:element name="ProfessionId" type="xsd:int" />
+          <xsd:element name="ValidPrimary" type="xsd:boolean" />
+          <xsd:element name="ValidSecondary" type="xsd:boolean" />
+          <xsd:element name="Image" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Professions">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="typens:Profession[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Skill">
+        <xsd:all>
+          <xsd:element name="Id" type="xsd:int" />
+          <xsd:element name="SkillId" type="xsd:int" />
+          <xsd:element name="Campaign" type="xsd:int" />
+          <xsd:element name="Profession" type="xsd:int" />
+          <xsd:element name="Attribute" type="xsd:int" />
+          <xsd:element name="SkillType" type="xsd:int" />
+          <xsd:element name="EnergyCost" type="xsd:float" />
+          <xsd:element name="CastingTime" type="xsd:float" />
+          <xsd:element name="RechargeTime" type="xsd:float" />
+          <xsd:element name="AdrenalineCost" type="xsd:float" />
+          <xsd:element name="HealthSacrifice" type="xsd:float" />
+          <xsd:element name="EnergyRegen" type="xsd:float" />
+          <xsd:element name="IsElite" type="xsd:boolean" />
+          <xsd:element name="PveOnly" type="xsd:boolean" />
+          <xsd:element name="PvpVersion" type="xsd:boolean" />
+          <xsd:element name="MonsterOnly" type="xsd:boolean" />
+          <xsd:element name="Name" type="xsd:string" />
+          <xsd:element name="Image" type="xsd:string" />
+          <xsd:element name="Tags" type="xsd:string" />
+          <xsd:element name="WikiLink" type="xsd:string" />
+          <xsd:element name="Description" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Skills">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="typens:Skill[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="SkillType">
+        <xsd:all>
+          <xsd:element name="Id" type="xsd:int" />
+          <xsd:element name="Name" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="SkillTypes">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="typens:SkillType[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAttributesRequest" />
+  <wsdl:message name="GetAttributesResponse">
+    <wsdl:part name="Attributes" type="typens:Attributes" />
+  </wsdl:message>
+  <wsdl:message name="GetCampaignsRequest" />
+  <wsdl:message name="GetCampaignsResponse">
+    <wsdl:part name="Campaigns" type="typens:Campaigns" />
+  </wsdl:message>
+  <wsdl:message name="GetProfessionsRequest" />
+  <wsdl:message name="GetProfessionsResponse">
+    <wsdl:part name="Professions" type="typens:Professions" />
+  </wsdl:message>
+  <wsdl:message name="GetSkillsRequest" />
+  <wsdl:message name="GetSkillsResponse">
+    <wsdl:part name="Skills" type="typens:Skills" />
+  </wsdl:message>
+  <wsdl:message name="GetSkillTypesRequest" />
+  <wsdl:message name="GetSkillTypesResponse">
+    <wsdl:part name="SkillTypes" type="typens:SkillTypes" />
+  </wsdl:message>
+  <wsdl:portType name="TemplateManagerSkillDataServicePort">
+    <wsdl:operation name="GetAttributes">
+      <wsdl:input message="typens:GetAttributesRequest" />
+      <wsdl:output message="typens:GetAttributesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaigns">
+      <wsdl:input message="typens:GetCampaignsRequest" />
+      <wsdl:output message="typens:GetCampaignsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfessions">
+      <wsdl:input message="typens:GetProfessionsRequest" />
+      <wsdl:output message="typens:GetProfessionsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSkills">
+      <wsdl:input message="typens:GetSkillsRequest" />
+      <wsdl:output message="typens:GetSkillsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSkillTypes">
+      <wsdl:input message="typens:GetSkillTypesRequest" />
+      <wsdl:output message="typens:GetSkillTypesResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TemplateManagerSkillDataServiceBinding" type="typens:TemplateManagerSkillDataServicePort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="GetAttributes">
+      <soap:operation soapAction="urn:TemplateManagerSkillDataServiceAction" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:TemplateManagerSkillDataService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:TemplateManagerSkillDataService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaigns">
+      <soap:operation soapAction="urn:TemplateManagerSkillDataServiceAction" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:TemplateManagerSkillDataService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:TemplateManagerSkillDataService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfessions">
+      <soap:operation soapAction="urn:TemplateManagerSkillDataServiceAction" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:TemplateManagerSkillDataService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:TemplateManagerSkillDataService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSkills">
+      <soap:operation soapAction="urn:TemplateManagerSkillDataServiceAction" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:TemplateManagerSkillDataService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:TemplateManagerSkillDataService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSkillTypes">
+      <soap:operation soapAction="urn:TemplateManagerSkillDataServiceAction" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:TemplateManagerSkillDataService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:TemplateManagerSkillDataService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TemplateManagerSkillDataService">
+    <wsdl:port name="TemplateManagerSkillDataServicePort" binding="typens:TemplateManagerSkillDataServiceBinding">
+      <soap:address location="http://localhost/TemplateManagerSkillDataService/server.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,105 @@
+﻿<UserControl x:Class="TemplateManager.SearchView.SearchPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:CommandModel="clr-namespace:TemplateManager.Common.CommandModel;assembly=TemplateManager.Common"
+    xmlns:ListSynchronizer1="clr-namespace:TemplateManager.ListSynchronizer">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Build Name:" />
+        <TextBox Text="{Binding SearchParameters.Name}" Grid.Column="1" />
+
+        <TextBlock Text="Author:" Grid.Row="1" />
+        <TextBox Text="{Binding SearchParameters.Author}" Grid.Column="1" Grid.Row="1" />
+
+        <TextBlock Text="Tags:" Grid.Row="2" />
+        <TextBox Text="{Binding SearchParameters.Tags}" Grid.Column="1" Grid.Row="2" />
+
+        <TextBlock Text="Notes:" Grid.Row="3" />
+        <TextBox Text="{Binding SearchParameters.Notes}" Grid.Column="1" Grid.Row="3" />
+
+        <CheckBox Content="Show Valid Templates" Grid.Row="4" IsChecked="{Binding SearchParameters.ShowValidBuilds}" />
+        <CheckBox Content="Show Invalid Templates" Grid.Row="5" IsChecked="{Binding SearchParameters.ShowInvalidBuilds}" />
+
+        <Grid Grid.Row="6" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Primary professions:" />
+            <TextBlock Text="Secondary professions:" Grid.Column="1" />
+
+            <CheckBox Grid.Row="1" Content="Any" IsChecked="{Binding SearchParameters.AnyPrimaryProfession}" />
+            <CheckBox Grid.Row="1" Grid.Column="1" Content="Any" IsChecked="{Binding SearchParameters.AnySecondaryProfession}" />
+
+            <ListBox x:Name="PrimaryProfessions" 
+                      ItemsSource="{Binding PrimaryProfessions}"
+                      ListSynchronizer1:MultiSelectorBehaviours.SynchronizedSelectedItems="{Binding SearchParameters.PrimaryProfessions}"
+                      SelectionMode="Extended"
+                      Grid.Row="2">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding Image}" Width="19" Height="19" />
+                            <TextBlock Text="{Binding Name}" Grid.Column="1" />
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <ListBox x:Name="SecondaryProfessions" 
+                      ItemsSource="{Binding SecondaryProfessions}"
+                      ListSynchronizer1:MultiSelectorBehaviours.SynchronizedSelectedItems="{Binding SearchParameters.SecondaryProfessions}"
+                      SelectionMode="Extended"
+                      Grid.Row="2" Grid.Column="1">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding Image}" Width="19" Height="19" />
+                            <TextBlock Text="{Binding Name}" Grid.Column="1" />
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Grid.Row="7" Grid.ColumnSpan="2">
+            <Button Content="Search" 
+                    Command="{Binding SearchCommand.Command}" 
+                    CommandParameter="{Binding}"
+                    CommandModel:CreateCommandBinding.Command="{Binding SearchCommand}" />
+            
+            <Button Content="Reset" 
+                    Command="{Binding ResetCommand.Command}" 
+                    CommandParameter="{Binding}"
+                    CommandModel:CreateCommandBinding.Command="{Binding ResetCommand}" />
+        </StackPanel>
+    </Grid>
+</UserControl>
