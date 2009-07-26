@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\..\Signing\BuildManager.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\..\Signing\TemplateManager.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -83,11 +83,11 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BuildManager.Infrastructure\TemplateManager.Infrastructure.csproj">
+    <ProjectReference Include="..\TemplateManager.Infrastructure\TemplateManager.Infrastructure.csproj">
       <Project>{67BC7C95-AB1E-422D-9AD4-E34CA77460A9}</Project>
       <Name>TemplateManager.Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BuildManager.Modules.Services\TemplateManager.Modules.Services.csproj">
+    <ProjectReference Include="..\TemplateManager.Modules.Services\TemplateManager.Modules.Services.csproj">
       <Project>{85A88912-18FD-4516-A1B9-F4FA1F7A97EC}</Project>
       <Name>TemplateManager.Modules.Services</Name>
     </ProjectReference>
@@ -97,8 +97,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Signing\BuildManager.pfx">
-      <Link>BuildManager.pfx</Link>
+    <None Include="..\..\Signing\TemplateManager.snk">
+      <Link>TemplateManager.snk</Link>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

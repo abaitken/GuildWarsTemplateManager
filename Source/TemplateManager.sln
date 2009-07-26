@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager", "BuildManager.UX\TemplateManager.csproj", "{013D96FE-CBB0-4D28-AF0B-F73652843409}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager", "TemplateManager\TemplateManager.csproj", "{013D96FE-CBB0-4D28-AF0B-F73652843409}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E1FF6121-5FAB-4226-9F69-0AD94E478DFE}"
 	ProjectSection(SolutionItems) = preProject
@@ -9,21 +9,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TemplateManager.vsmdi = TemplateManager.vsmdi
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Tests", "BuildManager.Tests\TemplateManager.Tests.csproj", "{E362FD63-FFCB-41AC-8305-F442C7DAB711}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Tests", "TemplateManager.Tests\TemplateManager.Tests.csproj", "{E362FD63-FFCB-41AC-8305-F442C7DAB711}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateParser", "TemplateParser\TemplateParser\TemplateParser.csproj", "{CDDBA2FA-9389-40FC-8FB5-E6635C95EB24}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateParser.Tests", "TemplateParser\TemplateParser.Tests\TemplateParser.Tests.csproj", "{50FE85D1-A2E6-48F4-A3E3-40E6AA29CC7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Modules.Services", "BuildManager.Modules.Services\TemplateManager.Modules.Services.csproj", "{85A88912-18FD-4516-A1B9-F4FA1F7A97EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Modules.Services", "TemplateManager.Modules.Services\TemplateManager.Modules.Services.csproj", "{85A88912-18FD-4516-A1B9-F4FA1F7A97EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Infrastructure", "BuildManager.Infrastructure\TemplateManager.Infrastructure.csproj", "{67BC7C95-AB1E-422D-9AD4-E34CA77460A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Infrastructure", "TemplateManager.Infrastructure\TemplateManager.Infrastructure.csproj", "{67BC7C95-AB1E-422D-9AD4-E34CA77460A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Common", "BuildManager.Common\TemplateManager.Common.csproj", "{5D573659-1A65-4112-9EED-1BF70DB94F22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Common", "TemplateManager.Common\TemplateManager.Common.csproj", "{5D573659-1A65-4112-9EED-1BF70DB94F22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Modules.SkillsView", "BuildManager.Modules.SkillsView\TemplateManager.Modules.SkillsView.csproj", "{EACC47B1-C3C2-442E-9F4D-1E65C34F8D9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Modules.SkillsView", "TemplateManager.Modules.SkillsView\TemplateManager.Modules.SkillsView.csproj", "{EACC47B1-C3C2-442E-9F4D-1E65C34F8D9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Modules.Performance", "BuildManager.Modules.Performance\TemplateManager.Modules.Performance.csproj", "{324F15D5-5E26-447E-BC8D-76BF37B7CCBA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Modules.Performance", "TemplateManager.Modules.Performance\TemplateManager.Modules.Performance.csproj", "{324F15D5-5E26-447E-BC8D-76BF37B7CCBA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{94D4F0FC-0027-4294-9680-E44C11E24338}"
 EndProject
@@ -31,7 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{2459
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{BDDD5FB5-3D0F-468B-A5BD-47593C042131}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Common.Tests", "BuildManager.Common.Tests\TemplateManager.Common.Tests.csproj", "{FDBE0B70-9EF1-4C3F-BDB8-21A8BC85E198}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Common.Tests", "TemplateManager.Common.Tests\TemplateManager.Common.Tests.csproj", "{FDBE0B70-9EF1-4C3F-BDB8-21A8BC85E198}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.AssetBuilder", "TemplateManager.AssetBuilder\TemplateManager.AssetBuilder.csproj", "{A2166595-6609-45E9-97C6-3BD837BA6DA0}"
 EndProject

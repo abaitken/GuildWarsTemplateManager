@@ -13,7 +13,7 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\..\Signing\BuildManager.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\..\Signing\TemplateManager.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -122,18 +122,18 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BuildManager.Common\TemplateManager.Common.csproj">
+    <ProjectReference Include="..\TemplateManager.Common\TemplateManager.Common.csproj">
       <Project>{5D573659-1A65-4112-9EED-1BF70DB94F22}</Project>
       <Name>TemplateManager.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BuildManager.Infrastructure\TemplateManager.Infrastructure.csproj">
+    <ProjectReference Include="..\TemplateManager.Infrastructure\TemplateManager.Infrastructure.csproj">
       <Project>{67BC7C95-AB1E-422D-9AD4-E34CA77460A9}</Project>
       <Name>TemplateManager.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Signing\BuildManager.pfx">
-      <Link>BuildManager.pfx</Link>
+    <None Include="..\..\Signing\TemplateManager.snk">
+      <Link>TemplateManager.snk</Link>
     </None>
   </ItemGroup>
   <ItemGroup>

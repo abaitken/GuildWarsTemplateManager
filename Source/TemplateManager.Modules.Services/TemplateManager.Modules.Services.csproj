@@ -13,7 +13,7 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\..\Signing\BuildManager.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\..\Signing\TemplateManager.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -101,7 +101,7 @@
     <Compile Include="UpdateService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BuildManager.Infrastructure\TemplateManager.Infrastructure.csproj">
+    <ProjectReference Include="..\TemplateManager.Infrastructure\TemplateManager.Infrastructure.csproj">
       <Project>{67BC7C95-AB1E-422D-9AD4-E34CA77460A9}</Project>
       <Name>TemplateManager.Infrastructure</Name>
     </ProjectReference>
@@ -111,8 +111,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Signing\BuildManager.pfx">
-      <Link>BuildManager.pfx</Link>
+    <None Include="..\..\Signing\TemplateManager.snk">
+      <Link>TemplateManager.snk</Link>
     </None>
     <None Include="app.config" />
     <None Include="Service References\TemplateManagerService\TemplateManagerService.wsdl" />
