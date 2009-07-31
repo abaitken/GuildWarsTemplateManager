@@ -52,7 +52,7 @@ namespace TemplateManager.Modules.SkillsView.SkillView
         {
             get
             {
-                var collectionView = CollectionViewSource.GetDefaultView(service.Templates);
+                var collectionView = CollectionViewSource.GetDefaultView(service.AllTemplates);
 
                 collectionView.Filter = new Predicate<object>(MatchBuild);
 

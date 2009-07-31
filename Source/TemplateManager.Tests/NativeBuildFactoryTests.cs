@@ -15,8 +15,13 @@ namespace TemplateManager.Tests
         {
             var buildPath = Path.Combine(Environment.CurrentDirectory, "TestBuilds");
 
-            var factory = new NativeBuildFactory(buildPath);
-            Assert.AreEqual(3, factory.Builds.Count());
+            var templateFolder = new NativeBuildFactory(buildPath).TemplateFolder;
+            
+            
+            Assert.AreEqual(2, templateFolder.SubFolders.Count());
+            Assert.AreEqual(1, templateFolder.SubFolders.First().Templates.Count());
+            Assert.AreEqual(1, templateFolder.SubFolders.Skip(1).First().Templates.Count());
+            Assert.AreEqual(1, templateFolder.Templates.Count());
         }
     }
 }

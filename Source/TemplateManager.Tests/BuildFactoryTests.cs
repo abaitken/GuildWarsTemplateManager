@@ -18,9 +18,9 @@ namespace TemplateManager.Tests
 
             var factory = new SkillTemplateService(new DataService());
             factory.RefreshTemplates(buildPath);
-            Assert.AreEqual(1, factory.Templates.Count());
+            Assert.AreEqual(1, factory.TemplateFolder.Templates.Count());
 
-            var build = factory.Templates.First();
+            var build = factory.TemplateFolder.Templates.First();
             
             Assert.AreEqual("Logaan", build.Author);
             Assert.AreEqual("group disrupting", build.Tags);

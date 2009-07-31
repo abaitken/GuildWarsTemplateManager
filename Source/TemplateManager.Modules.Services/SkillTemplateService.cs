@@ -30,31 +30,71 @@ namespace TemplateManager.Modules.Services
             buildFactory = NativeBuildFactory.Create(buildStore);
         }
 
-        public IList<SkillTemplate> Templates
+        public TemplateFolder TemplateFolder
         {
             get
             {
-                var validBuilds =
-                    from buildPair in buildFactory.Builds
-                    let nativeItem = buildPair.Value
-                    where nativeItem != null
-                    select new SkillTemplate(
-                        buildPair.Key,
-                        dataService.Professions.First(i => i.NativeId == nativeItem.PrimaryProfessionId),
-                        dataService.Professions.First(i => i.NativeId == nativeItem.SecondaryProfessionId),
-                        JoinSkillData(nativeItem).ToList(),
-                        JoinAttributedata(nativeItem));
-
-                var invalidBuilds =
-                    from buildPair in buildFactory.Builds
-                    let nativeItem = buildPair.Value
-                    where nativeItem == null
-                    select new SkillTemplate(
-                        buildPair.Key,
-                        dataService.EmptyProfession);
-
-                return validBuilds.Union(invalidBuilds).ToList();
+                return CreateTemplateFolder(buildFactory.TemplateFolder);
             }
+        }
+
+        public IEnumerable<SkillTemplate> AllTemplates
+        {
+            get
+            {
+                return FlattenTemplateStructure(TemplateFolder);
+            }
+        }
+
+        private static IEnumerable<SkillTemplate> FlattenTemplateStructure(TemplateFolder templateFolder)
+        {
+            var subFolderItem = from subFolder in templateFolder.SubFolders
+                                from item in FlattenTemplateStructure(subFolder)
+                                select item;
+            
+            return templateFolder.Templates.Union(subFolderItem);
+        }
+
+
+        private TemplateFolder CreateTemplateFolder(NativeTemplateFolder folder)
+        {
+            var templates = from nativeTemplate in folder.Templates
+                            select CreateTemplate(nativeTemplate.Key, nativeTemplate.Value);
+
+            var subFolders = from nativeFolder in folder.SubFolders
+                             select CreateTemplateFolder(nativeFolder);
+
+            return new TemplateFolder(folder.FolderPath, templates, subFolders);
+        }
+
+        private SkillTemplate CreateInvalidTemplate(string templatePath)
+        {
+            return new SkillTemplate(
+                templatePath,
+                dataService.EmptyProfession);
+        }
+
+        private SkillTemplate CreateTemplate(string templatePath, NativeSkillBuild nativeTemplate)
+        {
+            if (nativeTemplate == null)
+                return CreateInvalidTemplate(templatePath);
+
+            var primaryProfession = dataService.Professions.FirstOrDefault(i => i.NativeId == nativeTemplate.PrimaryProfessionId);
+
+            if (primaryProfession == null)
+                return CreateInvalidTemplate(templatePath);
+
+            var secondaryProfession = dataService.Professions.First(i => i.NativeId == nativeTemplate.SecondaryProfessionId);
+
+            if (secondaryProfession == null)
+                return CreateInvalidTemplate(templatePath);
+
+            return new SkillTemplate(
+                templatePath,
+                primaryProfession,
+                secondaryProfession,
+                JoinSkillData(nativeTemplate).ToList(),
+                JoinAttributedata(nativeTemplate));
         }
 
         #endregion
@@ -79,4 +119,5 @@ namespace TemplateManager.Modules.Services
                 select result;
         }
     }
+
 }

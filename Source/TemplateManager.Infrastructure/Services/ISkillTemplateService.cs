@@ -5,7 +5,8 @@ namespace TemplateManager.Infrastructure.Services
 {
     public interface ISkillTemplateService
     {
-        IList<SkillTemplate> Templates { get; }
+        TemplateFolder TemplateFolder { get; }
+        IEnumerable<SkillTemplate> AllTemplates { get; }
         void RefreshTemplates(string buildStore);
     }
 }

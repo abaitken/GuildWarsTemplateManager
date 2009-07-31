@@ -31,7 +31,7 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
         {
             get
             {
-                return from item in service.Templates
+                return from item in service.AllTemplates
                        where !item.IsInvalid
                        group item by item.SkillKey
                        into g
