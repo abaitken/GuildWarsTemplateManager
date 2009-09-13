@@ -9,14 +9,14 @@ namespace TemplateManager.AboutView
     internal class AboutViewModel : ViewModelBase, IAboutViewModel
     {
         private readonly IAboutView view;
-        private readonly ApplicationInformation applicationInformation;
+        private readonly IApplicationInformationService applicationInformationService;
 
-        public AboutViewModel(IAboutView view)
+        public AboutViewModel(IAboutView view, IApplicationInformationService applicationInformationService)
         {
             this.view = view;
+            this.applicationInformationService = applicationInformationService;
             view.Model = this;
 
-            applicationInformation = new ApplicationInformation();
             CloseWindowCommand = new GenericCloseWindowCommand();
         }
         
@@ -24,7 +24,7 @@ namespace TemplateManager.AboutView
         {
             get
             {
-                return applicationInformation.AssemblyCopyright;
+                return applicationInformationService.AssemblyCopyright;
             }
         }
 
@@ -32,7 +32,7 @@ namespace TemplateManager.AboutView
         {
             get
             {
-                return string.Format(CultureInfo.CurrentCulture, "About {0}", applicationInformation.AssemblyTitle);
+                return string.Format(CultureInfo.CurrentCulture, "About {0}", applicationInformationService.AssemblyTitle);
             }
         }
 
@@ -41,9 +41,9 @@ namespace TemplateManager.AboutView
             get
             {
                 return string.Format(CultureInfo.CurrentCulture, "{0} v{1} {2}", 
-                                     applicationInformation.AssemblyProduct,  
-                                     applicationInformation.FileVersion, 
-                                     applicationInformation.AssemblyConfiguration);
+                                     applicationInformationService.AssemblyProduct,  
+                                     applicationInformationService.FileVersion, 
+                                     applicationInformationService.AssemblyConfiguration);
             }
         }
 

@@ -6,9 +6,9 @@ namespace TemplateManager.Modules.Services
 {
     internal class UpdateService : IUpdateService
     {
+        private bool cacheInformation;
         private string informationUrl;
         private Version latestVersion;
-        private bool cacheInformation;
 
         #region IUpdateService Members
 
@@ -41,7 +41,7 @@ namespace TemplateManager.Modules.Services
         {
             if(cacheInformation)
                 return;
-            
+
             cacheInformation = true;
 
             var client = new TemplateManagerServicePortClient();
@@ -50,7 +50,6 @@ namespace TemplateManager.Modules.Services
 
             latestVersion = new Version(result.Major, result.Minor, result.Build, result.Revision);
             informationUrl = result.InformationUrl;
-
         }
     }
 }

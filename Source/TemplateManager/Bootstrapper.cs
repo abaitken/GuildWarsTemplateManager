@@ -6,6 +6,7 @@ using TemplateManager.Modules.Performance;
 using TemplateManager.Modules.Services;
 using TemplateManager.Modules.SkillsView;
 using TemplateManager.ShellView;
+using TemplateManager.Modules.Backup;
 
 namespace TemplateManager
 {
@@ -30,6 +31,7 @@ namespace TemplateManager
         protected override IModuleCatalog GetModuleCatalog()
         {
             var catalog = new ModuleCatalog();
+            catalog.AddModule(typeof(BackupModule));
             catalog.AddModule(typeof(ServicesModule));
             catalog.AddModule(typeof(MainModule), "ServicesModule");
             catalog.AddModule(typeof(SkillsViewModule), "ServicesModule", "MainModule");

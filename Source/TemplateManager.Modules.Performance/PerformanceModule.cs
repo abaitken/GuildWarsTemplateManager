@@ -18,11 +18,11 @@ namespace TemplateManager.Modules.Performance
 
         public void Initialize()
         {
-            container.RegisterType<IPerformanceView, PerformanceView>();
-            container.RegisterType<IPerformanceViewModel, PerformanceViewModel>();
+            //container.RegisterType<IPerformanceView, PerformanceView>();
+            //container.RegisterType<IPerformanceViewModel, PerformanceViewModel>();
 
-            regionManager.RegisterViewWithRegion(RegionNames.SidePanelRegion,
-                                                 () => container.Resolve<IPerformanceViewModel>().View);
+            //regionManager.RegisterViewWithRegion(RegionNames.SidePanelRegion,
+            //                                     () => container.Resolve<IPerformanceViewModel>().View);
         }
     }
 }

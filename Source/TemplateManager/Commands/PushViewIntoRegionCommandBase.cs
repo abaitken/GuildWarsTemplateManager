@@ -6,6 +6,7 @@ using TemplateManager.Common.CommandModel;
 
 namespace TemplateManager.Commands
 {
+
     abstract class PushViewIntoRegionCommandBase : CommandModelBase
     {
         private readonly IUnityContainer container;

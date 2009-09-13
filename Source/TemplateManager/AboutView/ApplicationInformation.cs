@@ -1,13 +1,15 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
+using Microsoft.Practices.Unity;
 
 namespace TemplateManager.AboutView
 {
-    internal class ApplicationInformation
+    internal class ApplicationInformation : IApplicationInformationService
     {
         private readonly Assembly currentAssembly;
 
+        [InjectionConstructor]
         public ApplicationInformation()
             : this(Assembly.GetExecutingAssembly())
         {
