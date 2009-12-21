@@ -4,6 +4,7 @@
              xmlns:CommandModel="clr-namespace:TemplateManager.Common.CommandModel;assembly=TemplateManager.Common"
         xmlns:Regions="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
         xmlns:Infrastructure="clr-namespace:TemplateManager.Infrastructure;assembly=TemplateManager.Infrastructure"
+	xmlns:ad="clr-namespace:AvalonDock;assembly=AvalonDock"
         x:Name="ThisControl">
     <UserControl.Resources>
         <DataTemplate x:Key="CustomTabHeader">

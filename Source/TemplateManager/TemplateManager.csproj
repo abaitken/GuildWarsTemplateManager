@@ -51,6 +51,10 @@
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AvalonDock, Version=1.2.2691.0, Culture=neutral, PublicKeyToken=85a1e0ada7ec13e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\AvalonDock\AvalonDock.dll</HintPath>
+    </Reference>
     <Reference Include="ExceptionReporter, Version=2.0.0.4, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libs\ExceptionReporter\ExceptionReporter.dll</HintPath>
@@ -208,7 +212,6 @@
     </Compile>
     <Compile Include="AboutView\ApplicationInformation.cs" />
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Commands\AboutCommand.cs" />
     <Compile Include="Commands\ActionCommand.cs" />
     <Compile Include="Commands\ActionParameterCommand.cs" />
     <Compile Include="Commands\CloseTabCommand.cs" />
@@ -227,7 +230,6 @@
     <Compile Include="Commands\SearchCommand.cs" />
     <Compile Include="Commands\SearchCommandBase.cs" />
     <Compile Include="Commands\SearchViewCommand.cs" />
-    <Compile Include="Commands\ShowOptionsCommand.cs" />
     <Compile Include="Commands\TemplatesViewCommand.cs" />
     <Compile Include="IThemeManager.cs" />
     <Compile Include="MainView\MainView.xaml.cs">

@@ -5,6 +5,10 @@ using TemplateManager.Commands;
 using TemplateManager.Common.CommandModel;
 using TemplateManager.Infrastructure.Services;
 using TemplateManager.UpdateCheck;
+using TemplateManager.AboutView;
+using TemplateManager.ShellView;
+using System.Windows;
+using TemplateManager.Options;
 
 namespace TemplateManager.MainView
 {
@@ -70,9 +74,9 @@ namespace TemplateManager.MainView
 
         private void GenerateCommands(IUnityContainer container)
         {
-            ShowOptionsCommand = new ShowOptionsCommand(container);
+            ShowOptionsCommand = new ActionCommand(ShowOptionsWindow);
             HelpCommand = new HelpTopicsCommand();
-            AboutCommand = new AboutCommand(container);
+            AboutCommand = new ActionCommand(ShowAboutWindow);
             CloseWindowCommand = new CloseMainWindowCommand();
             HelpTopicsCommand = new HelpTopicsCommand();
             TemplatesViewCommand = new TemplatesViewCommand(container, regionManager);
@@ -86,6 +90,28 @@ namespace TemplateManager.MainView
         {
             var updateCheckView = container.Resolve<IUpdateCheckViewModel>().View;
             updateCheckView.Display();
+        }
+
+        private void ShowAboutWindow()
+        {
+            var view = container.Resolve<IAboutViewModel>().View;
+
+            // TODO : Fix owner
+            var owner = container.Resolve<IShellView>() as Window;
+
+            if (owner != null)
+                view.Owner = owner;
+
+            view.ShowDialog();
+        }
+
+        private void ShowOptionsWindow()
+        {
+            var window = container.Resolve<IOptionsViewModel>().View;
+            var windowResult = window.ShowDialog();
+
+            if (windowResult.HasValue && windowResult.Value)
+                window.Model.WriteSetings();
         }
     }
 
