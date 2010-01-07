@@ -4,18 +4,26 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 
-namespace TemplateManager.ListSynchronizer
+namespace TemplateManager.Common.Behaviours.ListSynchronizer
 {
     /// <summary>
     /// A sync behaviour for a multiselector.
     /// </summary>
     public static class MultiSelectorBehaviours
     {
-        public static readonly DependencyProperty SynchronizedSelectedItemsProperty = DependencyProperty.RegisterAttached(
-            "SynchronizedSelectedItems", typeof(IList), typeof(MultiSelectorBehaviours), new PropertyMetadata(null, OnSynchronizedSelectedItemsChanged));
-        
-        private static readonly DependencyProperty SynchronizationManagerProperty = DependencyProperty.RegisterAttached(
-            "SynchronizationManager", typeof(SynchronizationManager), typeof(MultiSelectorBehaviours), new PropertyMetadata(null));
+        private static readonly DependencyProperty SynchronizationManagerProperty = 
+            DependencyProperty.RegisterAttached(
+                        "SynchronizationManager",
+                        typeof(SynchronizationManager),
+                        typeof(MultiSelectorBehaviours),
+                        new PropertyMetadata(null));
+
+        public static readonly DependencyProperty SynchronizedSelectedItemsProperty = 
+            DependencyProperty.RegisterAttached(
+                        "SynchronizedSelectedItems",
+                        typeof(IList),
+                        typeof(MultiSelectorBehaviours),
+                        new PropertyMetadata(null, OnSynchronizedSelectedItemsChanged));
 
         /// <summary>
         /// Gets the synchronized selected items.
@@ -47,11 +55,12 @@ namespace TemplateManager.ListSynchronizer
             dependencyObject.SetValue(SynchronizationManagerProperty, value);
         }
 
-        private static void OnSynchronizedSelectedItemsChanged(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs e)
+        private static void OnSynchronizedSelectedItemsChanged(DependencyObject dependencyObject,
+                                                               DependencyPropertyChangedEventArgs e)
         {
-            if (e.OldValue != null)
+            if(e.OldValue != null)
             {
-                SynchronizationManager synchronizer = GetSynchronizationManager(dependencyObject);
+                var synchronizer = GetSynchronizationManager(dependencyObject);
                 synchronizer.StopSynchronizing();
 
                 SetSynchronizationManager(dependencyObject, null);
@@ -61,10 +70,10 @@ namespace TemplateManager.ListSynchronizer
             var selector = dependencyObject as Selector;
 
             // check that this property is an IList, and that it is being set on a ListBox
-            if (list != null && selector != null)
+            if(list != null && selector != null)
             {
-                SynchronizationManager synchronizer = GetSynchronizationManager(dependencyObject);
-                if (synchronizer == null)
+                var synchronizer = GetSynchronizationManager(dependencyObject);
+                if(synchronizer == null)
                 {
                     synchronizer = new SynchronizationManager(selector);
                     SetSynchronizationManager(dependencyObject, synchronizer);
@@ -73,6 +82,8 @@ namespace TemplateManager.ListSynchronizer
                 synchronizer.StartSynchronizingList();
             }
         }
+
+        #region Nested type: SynchronizationManager
 
         /// <summary>
         /// A synchronization manager.
@@ -96,13 +107,13 @@ namespace TemplateManager.ListSynchronizer
             /// </summary>
             public void StartSynchronizingList()
             {
-                IList list = GetSynchronizedSelectedItems(multiSelector);
+                var list = GetSynchronizedSelectedItems(multiSelector);
 
-                if (list != null)
-                {
-                    synchronizer = new TwoListSynchronizer(GetSelectedItemsCollection(multiSelector), list);
-                    synchronizer.StartSynchronizing();
-                }
+                if(list == null)
+                    return;
+
+                synchronizer = new TwoListSynchronizer(GetSelectedItemsCollection(multiSelector), list);
+                synchronizer.StartSynchronizing();
             }
 
             /// <summary>
@@ -115,14 +126,16 @@ namespace TemplateManager.ListSynchronizer
 
             private static IList GetSelectedItemsCollection(Selector selector)
             {
-                if (selector is MultiSelector)
+                if(selector is MultiSelector)
                     return (selector as MultiSelector).SelectedItems;
 
-                if (selector is ListBox)
+                if(selector is ListBox)
                     return (selector as ListBox).SelectedItems;
 
                 throw new InvalidOperationException("Target object has no SelectedItems property to bind.");
             }
         }
+
+        #endregion
     }
 }

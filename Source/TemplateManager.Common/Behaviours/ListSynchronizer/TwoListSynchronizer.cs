@@ -4,14 +4,14 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Windows;
 
-namespace TemplateManager.ListSynchronizer
+namespace TemplateManager.Common.Behaviours.ListSynchronizer
 {
     /// <summary>
     /// Keeps two lists synchronized. 
     /// </summary>
     public class TwoListSynchronizer : IWeakEventListener
     {
-        private static readonly IListItemConverter DefaultConverter = new DoNothingListItemConverter();
+        private static readonly IListItemConverter defaultConverter = new DoNothingListItemConverter();
         private readonly IList masterList;
         private readonly IListItemConverter masterTargetConverter;
         private readonly IList targetList;
@@ -36,7 +36,7 @@ namespace TemplateManager.ListSynchronizer
         /// <param name="masterList">The master list.</param>
         /// <param name="targetList">The target list.</param>
         public TwoListSynchronizer(IList masterList, IList targetList)
-            : this(masterList, targetList, DefaultConverter)
+            : this(masterList, targetList, defaultConverter)
         {
         }
 
@@ -56,10 +56,10 @@ namespace TemplateManager.ListSynchronizer
             // In some cases the target list might have its own view on which items should included:
             // so update the master list from the target list
             // (This is the case with a ListBox SelectedItems collection: only items from the ItemsSource can be included in SelectedItems)
-            if (!TargetAndMasterCollectionsAreEqual())
-            {
-                SetListValuesFromSource(targetList, masterList, ConvertFromTargetToMaster);
-            }
+            if(TargetAndMasterCollectionsAreEqual())
+                return;
+
+            SetListValuesFromSource(targetList, masterList, ConvertFromTargetToMaster);
         }
 
         /// <summary>
@@ -93,10 +93,8 @@ namespace TemplateManager.ListSynchronizer
         /// <param name="list">The list to listen to.</param>
         protected void ListenForChangeEvents(IList list)
         {
-            if (list is INotifyCollectionChanged)
-            {
+            if(list is INotifyCollectionChanged)
                 CollectionChangedEventManager.AddListener(list as INotifyCollectionChanged, this);
-            }
         }
 
         /// <summary>
@@ -120,14 +118,10 @@ namespace TemplateManager.ListSynchronizer
             {
                 var insertionPoint = e.NewStartingIndex + i;
 
-                if (insertionPoint > list.Count)
-                {
+                if(insertionPoint > list.Count)
                     list.Add(converter(e.NewItems[i]));
-                }
                 else
-                {
                     list.Insert(insertionPoint, converter(e.NewItems[i]));
-                }
             }
         }
 
@@ -175,14 +169,10 @@ namespace TemplateManager.ListSynchronizer
 
         private void PerformActionOnAllLists(ChangeListAction action, IList sourceList, NotifyCollectionChangedEventArgs collectionChangedArgs)
         {
-            if (sourceList == masterList)
-            {
+            if(sourceList == masterList)
                 PerformActionOnList(targetList, action, collectionChangedArgs, ConvertFromMasterToTarget);
-            }
             else
-            {
                 PerformActionOnList(masterList, action, collectionChangedArgs, ConvertFromTargetToMaster);
-            }
         }
 
         private void PerformActionOnList(IList list, ChangeListAction action, NotifyCollectionChangedEventArgs collectionChangedArgs, Converter<object, object> converter)
@@ -198,10 +188,8 @@ namespace TemplateManager.ListSynchronizer
 
             // for the number of items being removed, remove the item from the Old Starting Index
             // (this will cause following items to be shifted down to fill the hole).
-            for (var i = 0; i < itemCount; i++)
-            {
+            for(var i = 0; i < itemCount; i++)
                 list.RemoveAt(e.OldStartingIndex);
-            }
         }
 
         private static void ReplaceItems(IList list, NotifyCollectionChangedEventArgs e, Converter<object, object> converter)
@@ -210,18 +198,16 @@ namespace TemplateManager.ListSynchronizer
             AddItems(list, e, converter);
         }
 
-        private void SetListValuesFromSource(IList sourceList, IList targetList, Converter<object, object> converter)
+        private void SetListValuesFromSource(IList sourceList, IList target, Converter<object, object> converter)
         {
-            StopListeningForChangeEvents(targetList);
+            StopListeningForChangeEvents(target);
 
-            targetList.Clear();
+            target.Clear();
 
-            foreach (var o in sourceList)
-            {
-                targetList.Add(converter(o));
-            }
+            foreach(var o in sourceList)
+                target.Add(converter(o));
 
-            ListenForChangeEvents(targetList);
+            ListenForChangeEvents(target);
         }
 
         private bool TargetAndMasterCollectionsAreEqual()
@@ -235,14 +221,10 @@ namespace TemplateManager.ListSynchronizer
         /// <param name="sourceList">The source list.</param>
         private void UpdateListsFromSource(IList sourceList)
         {
-            if (sourceList == masterList)
-            {
+            if(sourceList == masterList)
                 SetListValuesFromSource(masterList, targetList, ConvertFromMasterToTarget);
-            }
             else
-            {
                 SetListValuesFromSource(targetList, masterList, ConvertFromTargetToMaster);
-            }
         }
 
 

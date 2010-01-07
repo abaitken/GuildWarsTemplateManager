@@ -97,22 +97,18 @@
     </Compile>
     <Compile Include="DuplicateTemplate\DuplicateSkillTemplateViewModel.cs" />
     <Compile Include="DuplicateTemplate\IDuplicateSkillTemplateViewModel.cs" />
-    <Compile Include="SkillView\DeleteTemplateCommand.cs" />
     <Compile Include="InfoPanel.xaml.cs">
       <DependentUpon>InfoPanel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SkillView\IListItemConverter.cs" />
     <Compile Include="SkillView\ISkillsView.cs" />
     <Compile Include="SkillView\ISkillsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SkillView\MultiSelectorBehaviours.cs" />
     <Compile Include="SkillView\SearchParameters.cs" />
     <Compile Include="SkillView\SkillsView.xaml.cs">
       <DependentUpon>SkillsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="SkillView\SkillsViewModel.cs" />
     <Compile Include="SkillsViewModule.cs" />
-    <Compile Include="SkillView\TwoListSynchronizer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="DuplicateTemplate\DuplicateSkillTemplateView.xaml">

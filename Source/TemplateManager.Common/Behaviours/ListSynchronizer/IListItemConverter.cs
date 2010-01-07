@@ -1,4 +1,4 @@
-namespace TemplateManager.ListSynchronizer
+namespace TemplateManager.Common.Behaviours.ListSynchronizer
 {
     /// <summary>
     /// Converts items in the Master list to Items in the target list, and back again.

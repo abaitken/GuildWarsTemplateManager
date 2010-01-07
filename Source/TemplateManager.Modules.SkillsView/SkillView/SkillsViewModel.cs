@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Data;
 using System.Windows.Input;
-using Microsoft.Practices.Composite.Events;
 using Microsoft.Practices.Composite.Presentation.Commands;
-using TemplateManager.Common.CommandModel;
 using TemplateManager.Common.ViewModel;
 using TemplateManager.Infrastructure.Events;
 using TemplateManager.Infrastructure.Model;
@@ -15,24 +13,21 @@ namespace TemplateManager.Modules.SkillsView.SkillView
 {
     internal class SkillsViewModel : ViewModelBase, ISkillsViewModel
     {
-        private readonly ICommandModel deleteTemplateCommand;
+        private readonly IServiceController controller;
+        private readonly IDataService dataService;
         private readonly ISkillTemplateService service;
         private readonly ISkillsView view;
-        private readonly IDataService dataService;
-        private SearchParameters searchParameters;
-        private SearchParameters searchParametersForSearching;
+        private SearchParameters searchParameters = new SearchParameters();
 
         public SkillsViewModel(ISkillsView view,
                                IServiceController controller,
                                IDataService dataService)
         {
             this.view = view;
+            this.controller = controller;
             this.dataService = dataService;
             service = controller.Service;
-            deleteTemplateCommand = new DeleteTemplateCommand(controller);
-            SearchCommand = new DelegateCommand<object>(OnSearch);
-            ResetCommand = new DelegateCommand<object>(OnReset);
-            searchParametersForSearching = new SearchParameters();
+            GenerateCommands();
 
 
             controller.TemplatesChanged += ServiceBuildsChanged;
@@ -40,32 +35,16 @@ namespace TemplateManager.Modules.SkillsView.SkillView
             view.Model = this;
         }
 
-        private void OnReset(object obj)
-        {
-            SearchParameters = new SearchParameters();
-        }
-
-        private void OnSearch(object obj)
-        {
-            SearchParameters = SearchParametersForSearching;
-        }
-
-        private SearchParameters SearchParameters
+        public SearchParameters SearchParameters
         {
             get { return searchParameters; }
             set
             {
+                if(searchParameters == value)
+                    return;
+
                 searchParameters = value;
-                RefreshBuilds();
-            }
-        }
-        public SearchParameters SearchParametersForSearching
-        {
-            get { return searchParametersForSearching; }
-            set
-            {
-                searchParametersForSearching = value;
-                SendPropertyChanged("SearchParametersForSearching");
+                SendPropertyChanged("SearchParameters");
             }
         }
 
@@ -98,10 +77,7 @@ namespace TemplateManager.Modules.SkillsView.SkillView
             }
         }
 
-        public ICommandModel DeleteTemplateCommand
-        {
-            get { return deleteTemplateCommand; }
-        }
+        public ICommand DeleteTemplateCommand { get; private set; }
 
         public ICommand SearchCommand { get; private set; }
 
@@ -113,6 +89,24 @@ namespace TemplateManager.Modules.SkillsView.SkillView
         }
 
         #endregion
+
+        private void GenerateCommands()
+        {
+            DeleteTemplateCommand = new DelegateCommand<SkillTemplate>(template => controller.DeleteTemplate(template));
+            SearchCommand = new DelegateCommand<object>(OnSearch);
+            ResetCommand = new DelegateCommand<object>(OnReset);
+        }
+
+        private void OnReset(object obj)
+        {
+            SearchParameters = new SearchParameters();
+            RefreshBuilds();
+        }
+
+        private void OnSearch(object obj)
+        {
+            RefreshBuilds();
+        }
 
         private void RefreshBuilds()
         {

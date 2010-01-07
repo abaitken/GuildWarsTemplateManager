@@ -65,6 +65,9 @@
     <Compile Include="..\Include\GlobalAssemblyInfo.cs">
       <Link>GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Behaviours\ListSynchronizer\IListItemConverter.cs" />
+    <Compile Include="Behaviours\ListSynchronizer\MultiSelectorBehaviours.cs" />
+    <Compile Include="Behaviours\ListSynchronizer\TwoListSynchronizer.cs" />
     <Compile Include="CommandLineOption.cs" />
     <Compile Include="CommandLineParser.cs" />
     <Compile Include="CommandModel\CommandModelBase.cs" />
