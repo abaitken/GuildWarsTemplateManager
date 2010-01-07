@@ -1,5 +1,4 @@
 ﻿using Microsoft.Practices.Composite.Modularity;
-using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
 using TemplateManager.Modules.SkillsView.DuplicateTemplate;
 using TemplateManager.Modules.SkillsView.SkillView;

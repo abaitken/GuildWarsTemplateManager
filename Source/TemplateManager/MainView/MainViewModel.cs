@@ -51,7 +51,6 @@ namespace TemplateManager.MainView
         public ICommandModel TemplatesViewCommand { get; private set; }
         public ICommandModel DuplicateTemplatesViewCommand { get; private set; }
         public ICommandModel CloseTabCommand { get; private set; }
-        public ICommandModel SearchViewCommand { get; private set; }
         public ICommandModel ShowUpdateCheckWindowCommand { get; private set; }
 
         public void OnViewLoaded()
@@ -81,7 +80,6 @@ namespace TemplateManager.MainView
             HelpTopicsCommand = new HelpTopicsCommand();
             TemplatesViewCommand = new TemplatesViewCommand(container, regionManager);
             DuplicateTemplatesViewCommand = new DuplicateTemplatesViewCommand(container, regionManager);
-            SearchViewCommand = new SearchViewCommand(container, regionManager);
             CloseTabCommand = new CloseTabCommand(regionManager);
             ShowUpdateCheckWindowCommand = new ActionCommand(DisplayUpdateNotification);
         }

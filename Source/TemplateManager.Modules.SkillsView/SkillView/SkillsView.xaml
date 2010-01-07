@@ -4,54 +4,155 @@
              xmlns:dg="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit"
              xmlns:CommandModel="clr-namespace:TemplateManager.Common.CommandModel;assembly=TemplateManager.Common"
              xmlns:SkillsView1="clr-namespace:TemplateManager.Modules.SkillsView"
+             xmlns:ListSynchronizer1="clr-namespace:TemplateManager.ListSynchronizer"
              x:Name="ThisControl">
-    <dg:DataGrid ItemsSource="{Binding Builds}" 
+    <DockPanel>
+        <Expander DockPanel.Dock="Right" Header="Search">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Build Name:" />
+                <TextBox Text="{Binding SearchParametersForSearching.Name}" Grid.Column="1" />
+
+                <TextBlock Text="Author:" Grid.Row="1" />
+                <TextBox Text="{Binding SearchParametersForSearching.Author}" Grid.Column="1" Grid.Row="1" />
+
+                <TextBlock Text="Tags:" Grid.Row="2" />
+                <TextBox Text="{Binding SearchParametersForSearching.Tags}" Grid.Column="1" Grid.Row="2" />
+
+                <TextBlock Text="Notes:" Grid.Row="3" />
+                <TextBox Text="{Binding SearchParametersForSearching.Notes}" Grid.Column="1" Grid.Row="3" />
+
+                <CheckBox Content="Show Valid Templates" Grid.Row="4" IsChecked="{Binding SearchParametersForSearching.ShowValidBuilds}" />
+                <CheckBox Content="Show Invalid Templates" Grid.Row="5" IsChecked="{Binding SearchParametersForSearching.ShowInvalidBuilds}" />
+
+                <Grid Grid.Row="6" Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Primary professions:" />
+                    <TextBlock Text="Secondary professions:" Grid.Column="1" />
+
+                    <CheckBox Grid.Row="1" Content="Any" IsChecked="{Binding SearchParametersForSearching.AnyPrimaryProfession}" />
+                    <CheckBox Grid.Row="1" Grid.Column="1" Content="Any" IsChecked="{Binding SearchParametersForSearching.AnySecondaryProfession}" />
+
+                    <ListBox x:Name="PrimaryProfessions" 
+                      ItemsSource="{Binding PrimaryProfessions}"
+                      ListSynchronizer1:MultiSelectorBehaviours.SynchronizedSelectedItems="{Binding SearchParametersForSearching.PrimaryProfessions}"
+                      SelectionMode="Extended"
+                      Grid.Row="2">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding Image}" Width="19" Height="19" />
+                                    <TextBlock Text="{Binding Name}" Grid.Column="1" />
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <ListBox x:Name="SecondaryProfessions" 
+                      ItemsSource="{Binding SecondaryProfessions}"
+                      ListSynchronizer1:MultiSelectorBehaviours.SynchronizedSelectedItems="{Binding SearchParametersForSearching.SecondaryProfessions}"
+                      SelectionMode="Extended"
+                      Grid.Row="2" Grid.Column="1">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding Image}" Width="19" Height="19" />
+                                    <TextBlock Text="{Binding Name}" Grid.Column="1" />
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Grid.Row="7" Grid.ColumnSpan="2">
+                    <Button Content="Search" 
+                    Command="{Binding SearchCommand}"  />
+
+                    <Button Content="Reset" 
+                    Command="{Binding ResetCommand}"  />
+                </StackPanel>
+            </Grid>
+
+        </Expander>
+
+        <dg:DataGrid ItemsSource="{Binding Builds}" 
                  AutoGenerateColumns="False" 
                  IsReadOnly="True" 
                  x:Name="BuildListBox"
                  SelectionMode="Single">
-        <dg:DataGrid.RowDetailsTemplate>
-            <DataTemplate>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-                    <SkillsView1:InfoPanel />
+            <dg:DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <SkillsView1:InfoPanel />
 
-                    <StackPanel Orientation="Vertical" Grid.Column="1">
-                        <Button Content="Edit" IsEnabled="False" />
-                        <Button Command="{Binding Path=Model.DeleteTemplateCommand.Command, ElementName=ThisControl}"
+                        <StackPanel Orientation="Vertical" Grid.Column="1">
+                            <Button Content="Edit" IsEnabled="False" />
+                            <Button Command="{Binding Path=Model.DeleteTemplateCommand.Command, ElementName=ThisControl}"
                                 CommandModel:CreateCommandBinding.Command="{Binding Path=Model.DeleteTemplateCommand, ElementName=ThisControl}"
                                 CommandParameter="{Binding}">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                <Image Source="/TemplateManager.Modules.SkillsView;component/Images/Delete.png" Width="16" Height="16" />
-                                <TextBlock Text="Delete" Grid.Column="1" />
-                            </Grid>
-                        </Button>
-                        <Button>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                <Image Source="/TemplateManager.Modules.SkillsView;component/Images/rename.png" Width="16" Height="16" />
-                                <TextBlock Text="Rename" Grid.Column="1" />
-                            </Grid>
-                        </Button>
-                    </StackPanel>
-                </Grid>
-            </DataTemplate>
-        </dg:DataGrid.RowDetailsTemplate>
-        <dg:DataGrid.Columns>
-            <dg:DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True"/>
-            <dg:DataGridTextColumn Header="Primary Profession" Binding="{Binding PrimaryProfession}" IsReadOnly="True"/>
-            <dg:DataGridTextColumn Header="Secondary Profession" Binding="{Binding SecondaryProfession}" IsReadOnly="True"/>
-            <!--<dg:DataGridTemplateColumn Header="Skills">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="/TemplateManager.Modules.SkillsView;component/Images/Delete.png" Width="16" Height="16" />
+                                    <TextBlock Text="Delete" Grid.Column="1" />
+                                </Grid>
+                            </Button>
+                            <Button>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="/TemplateManager.Modules.SkillsView;component/Images/rename.png" Width="16" Height="16" />
+                                    <TextBlock Text="Rename" Grid.Column="1" />
+                                </Grid>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </dg:DataGrid.RowDetailsTemplate>
+            <dg:DataGrid.Columns>
+                <dg:DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True"/>
+                <dg:DataGridTextColumn Header="Primary Profession" Binding="{Binding PrimaryProfession}" IsReadOnly="True"/>
+                <dg:DataGridTextColumn Header="Secondary Profession" Binding="{Binding SecondaryProfession}" IsReadOnly="True"/>
+                <!--<dg:DataGridTemplateColumn Header="Skills">
                         <dg:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <ItemsControl ItemsSource="{Binding Skills}">
@@ -69,6 +170,7 @@
                             </DataTemplate>
                         </dg:DataGridTemplateColumn.CellTemplate>
                     </dg:DataGridTemplateColumn>-->
-        </dg:DataGrid.Columns>
-    </dg:DataGrid>
+            </dg:DataGrid.Columns>
+        </dg:DataGrid>
+    </DockPanel>
 </UserControl>

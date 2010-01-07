@@ -6,7 +6,6 @@ using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Services;
 using TemplateManager.MainView;
 using TemplateManager.Options;
-using TemplateManager.SearchView;
 using TemplateManager.UpdateCheck;
 
 namespace TemplateManager
@@ -46,9 +45,6 @@ namespace TemplateManager
 
             container.RegisterType<IAboutView, AboutDialog>();
             container.RegisterType<IAboutViewModel, AboutViewModel>();
-
-            container.RegisterType<ISearchView, SearchPanel>();
-            container.RegisterType<ISearchViewModel, SearchViewModel>();
 
             container.RegisterType<IOptionsView, OptionsWindow>();
             container.RegisterType<IOptionsViewModel, OptionsViewModel>();

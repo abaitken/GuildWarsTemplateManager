@@ -13,7 +13,6 @@ namespace TemplateManager.MainView
         ICommandModel TemplatesViewCommand { get; }
         ICommandModel DuplicateTemplatesViewCommand { get; }
         ICommandModel CloseTabCommand { get; }
-        ICommandModel SearchViewCommand { get; }
         ICommandModel ShowUpdateCheckWindowCommand { get; }
         void OnViewLoaded();
     }

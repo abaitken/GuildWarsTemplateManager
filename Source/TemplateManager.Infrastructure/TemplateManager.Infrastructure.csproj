@@ -76,8 +76,6 @@
       <Link>GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="DeleteBehaviour.cs" />
-    <Compile Include="Events\SearchParameters.cs" />
-    <Compile Include="Events\SkillTemplateFilterEvent.cs" />
     <Compile Include="Extensions\LinqToXmlExtensions.cs" />
     <Compile Include="HashCodeBuilder.cs" />
     <Compile Include="Model\TemplateFolder.cs" />
@@ -99,6 +97,9 @@
     <None Include="..\..\Signing\TemplateManager.snk">
       <Link>TemplateManager.snk</Link>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Events\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,7 +1,10 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Data;
+using System.Windows.Input;
 using Microsoft.Practices.Composite.Events;
+using Microsoft.Practices.Composite.Presentation.Commands;
 using TemplateManager.Common.CommandModel;
 using TemplateManager.Common.ViewModel;
 using TemplateManager.Infrastructure.Events;
@@ -12,23 +15,39 @@ namespace TemplateManager.Modules.SkillsView.SkillView
 {
     internal class SkillsViewModel : ViewModelBase, ISkillsViewModel
     {
+        private readonly ICommandModel deleteTemplateCommand;
         private readonly ISkillTemplateService service;
         private readonly ISkillsView view;
+        private readonly IDataService dataService;
         private SearchParameters searchParameters;
+        private SearchParameters searchParametersForSearching;
 
         public SkillsViewModel(ISkillsView view,
                                IServiceController controller,
-                               IEventAggregator eventAggregator)
+                               IDataService dataService)
         {
             this.view = view;
+            this.dataService = dataService;
             service = controller.Service;
             deleteTemplateCommand = new DeleteTemplateCommand(controller);
+            SearchCommand = new DelegateCommand<object>(OnSearch);
+            ResetCommand = new DelegateCommand<object>(OnReset);
+            searchParametersForSearching = new SearchParameters();
 
-            eventAggregator.GetEvent<SkillTemplateFilterEvent>().Subscribe(SkillTemplateFilterChanged);
 
             controller.TemplatesChanged += ServiceBuildsChanged;
 
             view.Model = this;
+        }
+
+        private void OnReset(object obj)
+        {
+            SearchParameters = new SearchParameters();
+        }
+
+        private void OnSearch(object obj)
+        {
+            SearchParameters = SearchParametersForSearching;
         }
 
         private SearchParameters SearchParameters
@@ -39,6 +58,25 @@ namespace TemplateManager.Modules.SkillsView.SkillView
                 searchParameters = value;
                 RefreshBuilds();
             }
+        }
+        public SearchParameters SearchParametersForSearching
+        {
+            get { return searchParametersForSearching; }
+            set
+            {
+                searchParametersForSearching = value;
+                SendPropertyChanged("SearchParametersForSearching");
+            }
+        }
+
+        public IEnumerable<Profession> PrimaryProfessions
+        {
+            get { return dataService.PrimaryProfessions; }
+        }
+
+        public IEnumerable<Profession> SecondaryProfessions
+        {
+            get { return dataService.SecondaryProfessions; }
         }
 
         #region ISkillsViewModel Members
@@ -60,12 +98,14 @@ namespace TemplateManager.Modules.SkillsView.SkillView
             }
         }
 
-        private readonly ICommandModel deleteTemplateCommand;
-
         public ICommandModel DeleteTemplateCommand
         {
             get { return deleteTemplateCommand; }
         }
+
+        public ICommand SearchCommand { get; private set; }
+
+        public ICommand ResetCommand { get; private set; }
 
         public string HeaderText
         {
@@ -77,11 +117,6 @@ namespace TemplateManager.Modules.SkillsView.SkillView
         private void RefreshBuilds()
         {
             SendPropertyChanged("Builds");
-        }
-
-        private void SkillTemplateFilterChanged(SearchParameters newFilter)
-        {
-            SearchParameters = newFilter;
         }
 
         private void ServiceBuildsChanged(object sender, EventArgs e)
