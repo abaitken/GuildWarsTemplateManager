@@ -79,6 +79,10 @@
     <Compile Include="ViewModel\DataModelBase.cs" />
     <Compile Include="ViewModel\LiveDataModelBase.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="WindowPositionManager\IWindowSettings.cs" />
+    <Compile Include="WindowPositionManager\WindowSettingsBase.cs" />
+    <Compile Include="WindowPositionManager\WindowExtensions.cs" />
+    <Compile Include="WindowPositionManager\WindowSettingsProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Signing\TemplateManager.snk">

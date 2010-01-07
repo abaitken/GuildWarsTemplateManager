@@ -1,8 +1,8 @@
 using System.Windows;
 
-namespace TemplateManager.WindowPositionManager
+namespace TemplateManager.Common.WindowPositionManager
 {
-    public interface IWindowApplicationSettings
+    public interface IWindowSettings
     {
         Rect Location { get; set; }
         WindowState WindowState { get; set; }

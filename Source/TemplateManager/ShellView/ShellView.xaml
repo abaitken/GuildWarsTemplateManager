@@ -1,12 +1,13 @@
 ﻿<Window x:Class="TemplateManager.ShellView.ShellView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-         xmlns:WindowPositionManager1="clr-namespace:TemplateManager.WindowPositionManager"
          xmlns:Regions="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
          xmlns:Infrastructure="clr-namespace:TemplateManager.Infrastructure;assembly=TemplateManager.Infrastructure"
+         xmlns:WindowPositionManager="clr-namespace:TemplateManager.Common.WindowPositionManager;assembly=TemplateManager.Common"
+         xmlns:ShellView="clr-namespace:TemplateManager.ShellView"
         Title="{Binding WindowTitle}"
         Height="600" Width="800" 
         MinWidth="320" MinHeight="240"
-        WindowPositionManager1:WindowSettings.Save="True">
+        WindowPositionManager:WindowExtensions.WindowSettings="{x:Type ShellView:ShellViewSettings}">
     <ContentControl Regions:RegionManager.RegionName="{x:Static Infrastructure:RegionNames.ShellRegion}" />
 </Window>

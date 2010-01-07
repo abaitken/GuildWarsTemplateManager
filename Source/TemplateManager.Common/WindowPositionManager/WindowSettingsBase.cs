@@ -1,13 +1,11 @@
 using System.Configuration;
 using System.Windows;
 
-namespace TemplateManager.WindowPositionManager
+namespace TemplateManager.Common.WindowPositionManager
 {
-    internal class WindowApplicationSettings : ApplicationSettingsBase, IWindowApplicationSettings
+    public abstract class WindowSettingsBase : ApplicationSettingsBase, IWindowSettings
     {
-        // TODO : This only permits one instance of these settings
-
-        #region IWindowApplicationSettings Members
+        #region IWindowSettings Members
 
         [UserScopedSetting]
         public Rect Location
@@ -15,7 +13,7 @@ namespace TemplateManager.WindowPositionManager
             get
             {
                 if(this["Location"] != null)
-                    return ((Rect) this["Location"]);
+                    return (Rect) this["Location"];
 
                 return Rect.Empty;
             }

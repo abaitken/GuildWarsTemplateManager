@@ -234,7 +234,6 @@
     <Compile Include="UpdateCheck\UpdateCheckView.xaml.cs">
       <DependentUpon>UpdateCheckView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WindowPositionManager\IWindowApplicationSettings.cs" />
     <Compile Include="MainModule.cs" />
     <Compile Include="Options\BuildStoreLocator.cs" />
     <Compile Include="Commands\CancelOptionsWindowCommand.cs" />
@@ -267,8 +266,7 @@
     </Compile>
     <Compile Include="ShellView\ShellViewModel.cs" />
     <Compile Include="ThemeManager.cs" />
-    <Compile Include="WindowPositionManager\WindowApplicationSettings.cs" />
-    <Compile Include="WindowPositionManager\WindowSettings.cs" />
+    <Compile Include="ShellView\ShellViewSettings.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
