@@ -1,5 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Windows;
+using System.Windows.Input;
+using Microsoft.Practices.Composite.Presentation.Commands;
 using TemplateManager.Commands;
 using TemplateManager.Common.CommandModel;
 using TemplateManager.Common.ViewModel;
@@ -17,9 +21,14 @@ namespace TemplateManager.AboutView
             this.applicationInformationService = applicationInformationService;
             view.Model = this;
 
-            CloseWindowCommand = new GenericCloseWindowCommand();
+            CloseWindowCommand = new DelegateCommand<Window>(OnCloseWindow);
         }
-        
+
+        private static void OnCloseWindow(Window obj)
+        {
+            obj.Close();
+        }
+
         public string AssemblyCopyright
         {
             get
@@ -47,7 +56,7 @@ namespace TemplateManager.AboutView
             }
         }
 
-        public ICommandModel CloseWindowCommand { get; private set; }
+        public ICommand CloseWindowCommand { get; private set; }
 
         public IAboutView View
         {

@@ -30,9 +30,8 @@
         </TextBlock>
         <Button Content="OK" 
                 HorizontalAlignment="Center" 
-                Command="{Binding CloseWindowCommand.Command}" 
+                Command="{Binding CloseWindowCommand}" 
                 CommandParameter="{Binding View}" 
-                CommandModel:CreateCommandBinding.Command="{Binding CloseWindowCommand}"
                 Grid.Row="4"/>
     </Grid>
 </Window>

@@ -203,14 +203,9 @@
     </Compile>
     <Compile Include="AboutView\ApplicationInformation.cs" />
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Commands\ActionCommand.cs" />
-    <Compile Include="Commands\ActionParameterCommand.cs" />
     <Compile Include="Commands\CloseTabCommand.cs" />
     <Compile Include="Commands\DuplicateTemplatesViewCommand.cs" />
     <Compile Include="Commands\PushViewIntoRegionCommandBase.cs" />
-    <Compile Include="Commands\CloseDialogWindowCommand.cs" />
-    <Compile Include="Commands\CloseMainWindowCommand.cs" />
-    <Compile Include="Commands\HelpTopicsCommand.cs" />
     <Compile Include="Commands\TemplatesViewCommand.cs" />
     <Compile Include="IThemeManager.cs" />
     <Compile Include="MainView\MainView.xaml.cs">
@@ -233,8 +228,6 @@
       <DependentUpon>OptionsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Options\OptionsViewModel.cs" />
-    <Compile Include="Commands\CloseWindowCommand.cs" />
-    <Compile Include="Commands\GenericCloseWindowCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

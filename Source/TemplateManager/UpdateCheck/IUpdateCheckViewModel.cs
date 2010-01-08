@@ -1,3 +1,4 @@
+using System.Windows.Input;
 using TemplateManager.Common.CommandModel;
 
 namespace TemplateManager.UpdateCheck
@@ -8,6 +9,6 @@ namespace TemplateManager.UpdateCheck
         string CurrentVersion { get; }
         string LatestVersion { get; }
         string InformationUrl { get; }
-        ICommandModel CloseWindowCommand { get; }
+        ICommand CloseWindowCommand { get; }
     }
 }

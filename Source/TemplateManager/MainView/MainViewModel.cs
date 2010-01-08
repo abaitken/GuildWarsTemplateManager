@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Windows.Input;
+using Microsoft.Practices.Composite.Presentation.Commands;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
 using TemplateManager.Commands;
@@ -33,7 +35,7 @@ namespace TemplateManager.MainView
             this.regionManager = regionManager;
             view.Model = this;
 
-            GenerateCommands(container);
+            GenerateCommands();
         }
 
         #region IShellViewModel Members
@@ -43,15 +45,15 @@ namespace TemplateManager.MainView
             get { return view; }
         }
 
-        public ICommandModel ShowOptionsCommand { get; private set; }
-        public ICommandModel AboutCommand { get; private set; }
-        public ICommandModel HelpCommand { get; private set; }
-        public ICommandModel CloseWindowCommand { get; private set; }
-        public ICommandModel HelpTopicsCommand { get; private set; }
+        public ICommand ShowOptionsCommand { get; private set; }
+        public ICommand AboutCommand { get; private set; }
+        public ICommand HelpCommand { get; private set; }
+        public ICommand CloseWindowCommand { get; private set; }
+        public ICommand HelpTopicsCommand { get; private set; }
         public ICommandModel TemplatesViewCommand { get; private set; }
         public ICommandModel DuplicateTemplatesViewCommand { get; private set; }
         public ICommandModel CloseTabCommand { get; private set; }
-        public ICommandModel ShowUpdateCheckWindowCommand { get; private set; }
+        public ICommand ShowUpdateCheckWindowCommand { get; private set; }
 
         public void OnViewLoaded()
         {
@@ -71,17 +73,37 @@ namespace TemplateManager.MainView
             DisplayUpdateNotification();
         }
 
-        private void GenerateCommands(IUnityContainer container)
+        private void GenerateCommands()
         {
-            ShowOptionsCommand = new ActionCommand(ShowOptionsWindow);
-            HelpCommand = new HelpTopicsCommand();
-            AboutCommand = new ActionCommand(ShowAboutWindow);
-            CloseWindowCommand = new CloseMainWindowCommand();
-            HelpTopicsCommand = new HelpTopicsCommand();
+            ShowOptionsCommand = new DelegateCommand<object>(ShowOptionsWindow);
+            HelpCommand = new DelegateCommand<object>(OnHelpRequested);
+            AboutCommand = new DelegateCommand<object>(ShowAboutWindow);
+            CloseWindowCommand = new DelegateCommand<Window>(OnCloseWindow);
+            HelpTopicsCommand = new DelegateCommand<object>(OnHelpTopicsRequested);
             TemplatesViewCommand = new TemplatesViewCommand(container, regionManager);
             DuplicateTemplatesViewCommand = new DuplicateTemplatesViewCommand(container, regionManager);
             CloseTabCommand = new CloseTabCommand(regionManager);
-            ShowUpdateCheckWindowCommand = new ActionCommand(DisplayUpdateNotification);
+            ShowUpdateCheckWindowCommand = new DelegateCommand<object>(DisplayUpdateNotification);
+        }
+
+        private static void OnCloseWindow(Window obj)
+        {
+            obj.Close();
+        }
+
+        private static void OnHelpRequested(object obj)
+        {
+            MessageBox.Show("Help is unavailable");
+        }
+
+        private static void OnHelpTopicsRequested(object obj)
+        {
+            MessageBox.Show("Help topics are unavailable");
+        }
+
+        private void DisplayUpdateNotification(object obj)
+        {
+            DisplayUpdateNotification();
         }
 
         private void DisplayUpdateNotification()
@@ -90,7 +112,7 @@ namespace TemplateManager.MainView
             updateCheckView.Display();
         }
 
-        private void ShowAboutWindow()
+        private void ShowAboutWindow(object obj)
         {
             var view = container.Resolve<IAboutViewModel>().View;
 
@@ -103,7 +125,7 @@ namespace TemplateManager.MainView
             view.ShowDialog();
         }
 
-        private void ShowOptionsWindow()
+        private void ShowOptionsWindow(object obj)
         {
             var window = container.Resolve<IOptionsViewModel>().View;
             var windowResult = window.ShowDialog();

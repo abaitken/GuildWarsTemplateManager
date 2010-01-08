@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Windows.Input;
 using TemplateManager.Common.CommandModel;
 
 namespace TemplateManager.AboutView
@@ -8,7 +9,7 @@ namespace TemplateManager.AboutView
         IAboutView View { get; }
         string Title { get; }
         string ProductAndVersion { get; }
-        ICommandModel CloseWindowCommand { get; }
+        ICommand CloseWindowCommand { get; }
         string AssemblyCopyright { get; }
         IEnumerable<string> Credits { get; }
     }

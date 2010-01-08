@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Windows;
+using System.Windows.Input;
+using Microsoft.Practices.Composite.Presentation.Commands;
 using TemplateManager.Commands;
 using TemplateManager.Common.CommandModel;
 using TemplateManager.Infrastructure.Services;
@@ -23,7 +26,12 @@ namespace TemplateManager.UpdateCheck
 
         private void CreateCommands()
         {
-            CloseWindowCommand = new GenericCloseWindowCommand();
+            CloseWindowCommand = new DelegateCommand<Window>(OnCloseWindow);
+        }
+
+        private void OnCloseWindow(Window obj)
+        {
+            obj.Close();
         }
 
         public IUpdateCheckView View
@@ -46,7 +54,7 @@ namespace TemplateManager.UpdateCheck
             get { return updateService.InformationUrl; }
         }
 
-        public ICommandModel CloseWindowCommand
+        public ICommand CloseWindowCommand
         {
             get; private set;
         }
