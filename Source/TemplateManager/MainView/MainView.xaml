@@ -50,12 +50,10 @@
 
             <MenuItem Header="_View">
                 <MenuItem Header="_Templates"
-                          Command="{Binding TemplatesViewCommand.Command}"
-                          CommandModel:CreateCommandBinding.Command="{Binding TemplatesViewCommand}"
+                          Command="{Binding TemplatesViewCommand}"
                           CommandParameter="{x:Static Infrastructure:RegionNames.DocumentRegion}"/>
                 <MenuItem Header="_Duplicate Templates"
-                          Command="{Binding DuplicateTemplatesViewCommand.Command}"
-                          CommandModel:CreateCommandBinding.Command="{Binding DuplicateTemplatesViewCommand}"
+                          Command="{Binding DuplicateTemplatesViewCommand}"
                           CommandParameter="{x:Static Infrastructure:RegionNames.DocumentRegion}">
                     <MenuItem.Icon>
                         <Image Source="/Images/DuplicateTemplates.png" Width="16" Height="16" />

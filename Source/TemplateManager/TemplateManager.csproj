@@ -204,9 +204,6 @@
     <Compile Include="AboutView\ApplicationInformation.cs" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Commands\CloseTabCommand.cs" />
-    <Compile Include="Commands\DuplicateTemplatesViewCommand.cs" />
-    <Compile Include="Commands\PushViewIntoRegionCommandBase.cs" />
-    <Compile Include="Commands\TemplatesViewCommand.cs" />
     <Compile Include="IThemeManager.cs" />
     <Compile Include="MainView\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>

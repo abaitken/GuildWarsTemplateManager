@@ -11,8 +11,8 @@ namespace TemplateManager.MainView
         ICommand HelpCommand { get; }
         ICommand CloseWindowCommand { get; }
         ICommand HelpTopicsCommand { get; }
-        ICommandModel TemplatesViewCommand { get; }
-        ICommandModel DuplicateTemplatesViewCommand { get; }
+        ICommand TemplatesViewCommand { get; }
+        ICommand DuplicateTemplatesViewCommand { get; }
         ICommandModel CloseTabCommand { get; }
         ICommand ShowUpdateCheckWindowCommand { get; }
         void OnViewLoaded();
