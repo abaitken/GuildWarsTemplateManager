@@ -1,7 +1,6 @@
 ﻿<Window x:Class="TemplateManager.Options.OptionsWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:CommandModel="clr-namespace:TemplateManager.Common.CommandModel;assembly=TemplateManager.Common"
     Title="{Binding WindowTitle}" SizeToContent="WidthAndHeight" MinHeight="250" MinWidth="450">
 
     <Grid Margin="10">
@@ -22,9 +21,7 @@
                 <TextBox Text="{Binding TemplateFolder}" />
                 <Button Grid.Column="1" 
                             Content="..." 
-                            Command="{Binding OpenFolderDialogCommand.Command}" 
-                            CommandParameter="{Binding TemplateFolderDialogHelper}"
-                            CommandModel:CreateCommandBinding.Command="{Binding OpenFolderDialogCommand}" />
+                            Command="{Binding BrowseForTemplateFolderCommand}"  />
             </Grid>
 
             <TextBlock Text="What will 'delete' do?" />
@@ -39,9 +36,7 @@
                 <TextBox Text="{Binding ArchiveFolder}" />
                 <Button Grid.Column="1" 
                             Content="..." 
-                            Command="{Binding OpenFolderDialogCommand.Command}" 
-                            CommandParameter="{Binding ArchiveFolderDialogHelper}"
-                            CommandModel:CreateCommandBinding.Command="{Binding OpenFolderDialogCommand}" />
+                            Command="{Binding BrowseForArchiveFolderCommand}" />
             </Grid>
 
             <Grid>
@@ -62,19 +57,16 @@
             </Grid.ColumnDefinitions>
 
             <UniformGrid Grid.Column="1" Columns="3" Rows="1">
-                <Button Command="{Binding UseDefaultsCommand.Command}" 
-                            CommandParameter="{Binding View}"
-                            CommandModel:CreateCommandBinding.Command="{Binding UseDefaultsCommand}">Restore _Defaults</Button>
+                <Button Command="{Binding UseDefaultsCommand}" 
+                            CommandParameter="{Binding View}">Restore _Defaults</Button>
 
                 <Button IsDefault="True" 
-                            Command="{Binding CloseWindowSuccessCommand.Command}" 
-                            CommandParameter="{Binding View}" 
-                            CommandModel:CreateCommandBinding.Command="{Binding CloseWindowSuccessCommand}">_OK</Button>
+                            Command="{Binding CloseWindowSuccessCommand}" 
+                            CommandParameter="{Binding View}">_OK</Button>
 
                 <Button IsCancel="True" 
-                            Command="{Binding CloseWindowCommand.Command}" 
-                            CommandParameter="{Binding View}" 
-                            CommandModel:CreateCommandBinding.Command="{Binding CloseWindowCommand}">_Cancel</Button>
+                            Command="{Binding CloseWindowCommand}" 
+                            CommandParameter="{Binding View}">_Cancel</Button>
             </UniformGrid>
         </Grid>
     </Grid>

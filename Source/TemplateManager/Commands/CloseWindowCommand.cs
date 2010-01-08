@@ -7,26 +7,8 @@ namespace TemplateManager.Commands
 {
     public abstract class CloseWindowCommand : CommandModelBase
     {
-        private static readonly IQueryCancel Default = new DefaultQueryCancel();
-
-        private readonly IQueryCancel queryCancel;
-
-        protected CloseWindowCommand()
-            : this(Default)
-        {
-            
-        }
-
-        protected CloseWindowCommand(IQueryCancel queryCancel)
-        {
-            this.queryCancel = queryCancel;
-        }
-
         public override void OnExecute(object sender, ExecutedRoutedEventArgs e)
         {
-            if(!queryCancel.Validate())
-                return;
-
             var window = e.Parameter as Window;
 
             if(window == null)

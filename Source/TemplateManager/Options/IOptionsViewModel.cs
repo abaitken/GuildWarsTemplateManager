@@ -1,21 +1,18 @@
 using System.Collections.Generic;
-using TemplateManager.Commands;
-using TemplateManager.Common.CommandModel;
+using System.Windows.Input;
 
 namespace TemplateManager.Options
 {
-    public interface IOptionsViewModel : IQueryCancel
+    public interface IOptionsViewModel
     {
         IOptionsView View { get; }
 
         void WriteSetings();
 
         string TemplateFolder { get; set; }
-        IOpenFolderDialogHelper TemplateFolderDialogHelper { get; }
         bool IsTemplateFolderValid { get; }
 
         string ArchiveFolder { get; set; }
-        IOpenFolderDialogHelper ArchiveFolderDialogHelper { get; }
         bool IsDeleteBehaviourSettingValid { get; }
 
         string SelectedTheme { get; set; }
@@ -28,9 +25,10 @@ namespace TemplateManager.Options
 
         string WindowTitle { get; }
 
-        ICommandModel CloseWindowSuccessCommand { get; }
-        ICommandModel CloseWindowCommand { get; }
-        ICommandModel UseDefaultsCommand { get; }
-        ICommandModel OpenFolderDialogCommand { get; }
+        ICommand CloseWindowSuccessCommand { get; }
+        ICommand CloseWindowCommand { get; }
+        ICommand UseDefaultsCommand { get; }
+        ICommand BrowseForArchiveFolderCommand { get; }
+        ICommand BrowseForTemplateFolderCommand { get; }
     }
 }

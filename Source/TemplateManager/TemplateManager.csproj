@@ -210,13 +210,7 @@
     <Compile Include="Commands\PushViewIntoRegionCommandBase.cs" />
     <Compile Include="Commands\CloseDialogWindowCommand.cs" />
     <Compile Include="Commands\CloseMainWindowCommand.cs" />
-    <Compile Include="Commands\DefaultQueryCancel.cs" />
     <Compile Include="Commands\HelpTopicsCommand.cs" />
-    <Compile Include="Commands\IOpenFolderDialogHelper.cs" />
-    <Compile Include="Commands\IQueryCancel.cs" />
-    <Compile Include="Commands\OpenFolderDialogCommand.cs" />
-    <Compile Include="Commands\OpenFolderDialogHelper.cs" />
-    <Compile Include="Commands\ResetSettingsCommand.cs" />
     <Compile Include="Commands\TemplatesViewCommand.cs" />
     <Compile Include="IThemeManager.cs" />
     <Compile Include="MainView\MainView.xaml.cs">
@@ -225,9 +219,6 @@
     <Compile Include="MainView\MainViewModel.cs" />
     <Compile Include="MainView\IMainView.cs" />
     <Compile Include="MainView\IMainViewModel.cs" />
-    <Compile Include="Options\ArchiveFolderHelper.cs" />
-    <Compile Include="Options\OptionsFolderHelperBase.cs" />
-    <Compile Include="Options\TemplateFolderHelper.cs" />
     <Compile Include="UpdateCheck\UpdateCheckViewModel.cs" />
     <Compile Include="UpdateCheck\IUpdateCheckView.cs" />
     <Compile Include="UpdateCheck\IUpdateCheckViewModel.cs" />
@@ -236,7 +227,6 @@
     </Compile>
     <Compile Include="MainModule.cs" />
     <Compile Include="Options\BuildStoreLocator.cs" />
-    <Compile Include="Commands\CancelOptionsWindowCommand.cs" />
     <Compile Include="Options\IOptionsView.cs" />
     <Compile Include="Options\IOptionsViewModel.cs" />
     <Compile Include="Options\OptionsWindow.xaml.cs">
@@ -310,10 +300,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="AboutView\Images\AboutTitleImage.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ListSynchronizer\" />
-    <Folder Include="SearchView\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

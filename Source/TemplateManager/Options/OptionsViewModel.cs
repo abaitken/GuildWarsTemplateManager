@@ -1,16 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
-using TemplateManager.Commands;
-using TemplateManager.Common.CommandModel;
+using System.Windows;
+using System.Windows.Forms;
+using System.Windows.Input;
+using Microsoft.Practices.Composite.Presentation.Commands;
 using TemplateManager.Common.ViewModel;
 using TemplateManager.Properties;
+using MessageBox=System.Windows.MessageBox;
 
 namespace TemplateManager.Options
 {
     public class OptionsViewModel : ViewModelBase, IOptionsViewModel
     {
-        private readonly IOpenFolderDialogHelper archiveFolderDialogHelper;
-        private readonly IOpenFolderDialogHelper templateFolderDialogHelper;
         private readonly IOptionsView view;
         private string archiveFolder;
         private string deleteBehaviour;
@@ -21,13 +23,7 @@ namespace TemplateManager.Options
             this.view = view;
             view.Model = this;
 
-            CloseWindowSuccessCommand = new GenericCloseWindowCommand(this);
-            CloseWindowCommand = new CancelOptionsWindowCommand();
-            UseDefaultsCommand = new ResetSettingsCommand();
-            OpenFolderDialogCommand = new OpenFolderDialogCommand();
-
-            archiveFolderDialogHelper = new ArchiveFolderHelper(this);
-            templateFolderDialogHelper = new TemplateFolderHelper(this);
+            GenerateCommands();
             ReadSettings();
         }
 
@@ -59,11 +55,6 @@ namespace TemplateManager.Options
             }
         }
 
-        public IOpenFolderDialogHelper TemplateFolderDialogHelper
-        {
-            get { return templateFolderDialogHelper; }
-        }
-
         public bool IsTemplateFolderValid
         {
             get { return Directory.Exists(TemplateFolder); }
@@ -93,21 +84,17 @@ namespace TemplateManager.Options
             get { return "Options"; }
         }
 
-        public ICommandModel CloseWindowSuccessCommand { get; private set; }
-        public ICommandModel CloseWindowCommand { get; private set; }
-        public ICommandModel UseDefaultsCommand { get; private set; }
-        public ICommandModel OpenFolderDialogCommand { get; private set; }
+        public ICommand CloseWindowSuccessCommand { get; private set; }
+        public ICommand CloseWindowCommand { get; private set; }
+        public ICommand UseDefaultsCommand { get; private set; }
+        public ICommand BrowseForArchiveFolderCommand { get; private set; }
+        public ICommand BrowseForTemplateFolderCommand { get; private set; }
 
         public IOptionsView View
         {
             get { return view; }
         }
 
-
-        public IOpenFolderDialogHelper ArchiveFolderDialogHelper
-        {
-            get { return archiveFolderDialogHelper; }
-        }
 
         public bool IsDeleteBehaviourSettingValid
         {
@@ -140,12 +127,81 @@ namespace TemplateManager.Options
             get { return App.ThemeManager.AvailableThemes; }
         }
 
-        public bool Validate()
+        #endregion
+
+        private void GenerateCommands()
         {
-            return IsDeleteBehaviourSettingValid && IsTemplateFolderValid;
+            CloseWindowSuccessCommand = new DelegateCommand<Window>(OnOK);
+            CloseWindowCommand = new DelegateCommand<Window>(OnCancel);
+            UseDefaultsCommand = new DelegateCommand<Window>(OnResetSettings);
+            BrowseForArchiveFolderCommand = new DelegateCommand<object>(OnBrowseForArchiveFolder);
+            BrowseForTemplateFolderCommand = new DelegateCommand<object>(OnBrowseForTemplateFolder);
         }
 
-        #endregion
+        private void OnBrowseForTemplateFolder(object obj)
+        {
+            SelectNewFolder(() => TemplateFolder, v => TemplateFolder = v);
+        }
+
+        private void OnBrowseForArchiveFolder(object obj)
+        {
+            SelectNewFolder(() => ArchiveFolder, v => ArchiveFolder = v);
+        }
+
+        private static void SelectNewFolder(Func<string> get, Action<string> set)
+        {
+            var result = SelectNewFolder(get());
+
+            if(!string.IsNullOrEmpty(result))
+                set(result);
+        }
+
+        private static string SelectNewFolder(string currentFolder)
+        {
+            var folder = currentFolder;
+
+            if(string.IsNullOrEmpty(folder) || !Directory.Exists(folder))
+                folder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            var fd = new FolderBrowserDialog
+                         {
+                             SelectedPath = folder
+                         };
+
+            return fd.ShowDialog() == DialogResult.OK ? fd.SelectedPath : null;
+        }
+
+        private static void OnResetSettings(Window obj)
+        {
+            if(
+                MessageBox.Show("Are you sure you want to restore the default settings?",
+                                "Restore default settings",
+                                MessageBoxButton.YesNo,
+                                MessageBoxImage.Question) == MessageBoxResult.No)
+                return;
+
+            CloseWindow(obj, false);
+            Settings.Default.Reset();
+        }
+
+        private void OnOK(Window obj)
+        {
+            if(!IsDeleteBehaviourSettingValid || !IsTemplateFolderValid)
+                return;
+
+            CloseWindow(obj, true);
+        }
+
+        private static void CloseWindow(Window obj, bool result)
+        {
+            obj.DialogResult = result;
+            obj.Close();
+        }
+
+        private static void OnCancel(Window obj)
+        {
+            CloseWindow(obj, false);
+        }
 
         private void ReadSettings()
         {
