@@ -1,7 +1,6 @@
 ﻿<UserControl x:Class="TemplateManager.MainView.MainView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:CommandModel="clr-namespace:TemplateManager.Common.CommandModel;assembly=TemplateManager.Common"
         xmlns:Regions="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
         xmlns:Infrastructure="clr-namespace:TemplateManager.Infrastructure;assembly=TemplateManager.Infrastructure"
         x:Name="ThisControl">
@@ -19,7 +18,7 @@
                     </ContentPresenter.Content>
                 </ContentPresenter>
                 <Button Margin="8,0,0,0" 
-                        Command="{Binding Path=Model.CloseTabCommand.Command, ElementName=ThisControl}" 
+                        Command="{Binding Path=Model.CloseTabCommand, ElementName=ThisControl}" 
                         CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type TabItem}}}" 
                         HorizontalContentAlignment="Center" 
                         VerticalContentAlignment="Center">
@@ -91,7 +90,7 @@
             </MenuItem>
         </Menu>
 
-        <TabControl CommandModel:CreateCommandBinding.Command="{Binding CloseTabCommand}" Regions:RegionManager.RegionName="{x:Static Infrastructure:RegionNames.DocumentRegion}" />
+        <TabControl Regions:RegionManager.RegionName="{x:Static Infrastructure:RegionNames.DocumentRegion}" />
 
     </DockPanel>
 </UserControl>

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Input;
 using Microsoft.Practices.Composite.Presentation.Commands;
-using TemplateManager.Commands;
-using TemplateManager.Common.CommandModel;
 using TemplateManager.Infrastructure.Services;
 
 namespace TemplateManager.UpdateCheck

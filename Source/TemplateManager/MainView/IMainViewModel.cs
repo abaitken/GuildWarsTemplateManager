@@ -1,5 +1,4 @@
 using System.Windows.Input;
-using TemplateManager.Common.CommandModel;
 
 namespace TemplateManager.MainView
 {
@@ -13,7 +12,7 @@ namespace TemplateManager.MainView
         ICommand HelpTopicsCommand { get; }
         ICommand TemplatesViewCommand { get; }
         ICommand DuplicateTemplatesViewCommand { get; }
-        ICommandModel CloseTabCommand { get; }
+        ICommand CloseTabCommand { get; }
         ICommand ShowUpdateCheckWindowCommand { get; }
         void OnViewLoaded();
     }

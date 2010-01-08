@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Globalization;
 using System.Windows;
 using System.Windows.Input;
 using Microsoft.Practices.Composite.Presentation.Commands;
-using TemplateManager.Commands;
-using TemplateManager.Common.CommandModel;
 using TemplateManager.Common.ViewModel;
 
 namespace TemplateManager.AboutView

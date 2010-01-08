@@ -1,7 +1,6 @@
 ﻿<Window x:Class="TemplateManager.UpdateCheck.UpdateCheckView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:CommandModel="clr-namespace:TemplateManager.Common.CommandModel;assembly=TemplateManager.Common"
     Title="Update Check" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Height="150" Width="300">
     <Grid>
         <Grid.RowDefinitions>

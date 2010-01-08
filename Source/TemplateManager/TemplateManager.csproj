@@ -203,7 +203,6 @@
     </Compile>
     <Compile Include="AboutView\ApplicationInformation.cs" />
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Commands\CloseTabCommand.cs" />
     <Compile Include="IThemeManager.cs" />
     <Compile Include="MainView\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
@@ -290,6 +289,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="AboutView\Images\AboutTitleImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Commands\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

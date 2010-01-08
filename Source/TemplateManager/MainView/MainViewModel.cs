@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Windows.Controls;
 using System.Windows.Input;
 using Microsoft.Practices.Composite.Presentation.Commands;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
-using TemplateManager.Commands;
-using TemplateManager.Common.CommandModel;
+using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Services;
 using TemplateManager.Modules.SkillsView.DuplicateTemplate;
 using TemplateManager.Modules.SkillsView.SkillView;
@@ -23,7 +23,6 @@ namespace TemplateManager.MainView
         private readonly IRegionManager regionManager;
         private readonly IUpdateService updateService;
         private readonly IMainView view;
-        private WeakReference viewReference;
 
         public MainViewModel(IMainView view,
                               IUpdateService updateService,
@@ -55,7 +54,7 @@ namespace TemplateManager.MainView
         public ICommand HelpTopicsCommand { get; private set; }
         public ICommand TemplatesViewCommand { get; private set; }
         public ICommand DuplicateTemplatesViewCommand { get; private set; }
-        public ICommandModel CloseTabCommand { get; private set; }
+        public ICommand CloseTabCommand { get; private set; }
         public ICommand ShowUpdateCheckWindowCommand { get; private set; }
 
         public void OnViewLoaded()
@@ -85,8 +84,14 @@ namespace TemplateManager.MainView
             HelpTopicsCommand = new DelegateCommand<object>(OnHelpTopicsRequested);
             TemplatesViewCommand = new DelegateCommand<string>(OnShowTemplates);
             DuplicateTemplatesViewCommand = new DelegateCommand<string>(OnShowDuplicateTemplates);
-            CloseTabCommand = new CloseTabCommand(regionManager);
+            CloseTabCommand = new DelegateCommand<TabItem>(OnCloseTab);
             ShowUpdateCheckWindowCommand = new DelegateCommand<object>(DisplayUpdateNotification);
+        }
+
+        private void OnCloseTab(TabItem tabItem)
+        {
+            var region = regionManager.Regions[RegionNames.DocumentRegion];
+            region.Remove(tabItem.Content);
         }
 
         private void OnShowDuplicateTemplates(string regionName)

@@ -1,5 +1,3 @@
-using TemplateManager.Common.CommandModel;
-
 namespace TemplateManager.ShellView
 {
     public interface IShellViewModel

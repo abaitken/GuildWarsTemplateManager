@@ -70,9 +70,6 @@
     <Compile Include="Behaviours\ListSynchronizer\TwoListSynchronizer.cs" />
     <Compile Include="CommandLineOption.cs" />
     <Compile Include="CommandLineParser.cs" />
-    <Compile Include="CommandModel\CommandModelBase.cs" />
-    <Compile Include="CommandModel\CreateCommandBinding.cs" />
-    <Compile Include="CommandModel\ICommandModel.cs" />
     <Compile Include="Converters\VisibilityCoverter.cs" />
     <Compile Include="FileSystem\FolderHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

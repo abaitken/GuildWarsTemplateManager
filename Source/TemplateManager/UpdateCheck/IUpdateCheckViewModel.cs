@@ -1,5 +1,4 @@
 using System.Windows.Input;
-using TemplateManager.Common.CommandModel;
 
 namespace TemplateManager.UpdateCheck
 {
