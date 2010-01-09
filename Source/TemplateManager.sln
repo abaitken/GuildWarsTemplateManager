@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.AssetBuilde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Modules.Backup", "Template.Modules.Backup\TemplateManager.Modules.Backup.csproj", "{F13EB40F-C081-49FB-A8BC-782E45FCC921}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Modules.Themes", "TemplateManager.Modules.Themes\TemplateManager.Modules.Themes.csproj", "{F853FDF1-C4E4-467C-A764-5242DACEB5BA}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = TemplateManager.vsmdi
@@ -130,6 +132,12 @@ Global
 		{F13EB40F-C081-49FB-A8BC-782E45FCC921}.Release with Code Analysis|Any CPU.Build.0 = Release|Any CPU
 		{F13EB40F-C081-49FB-A8BC-782E45FCC921}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F13EB40F-C081-49FB-A8BC-782E45FCC921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F853FDF1-C4E4-467C-A764-5242DACEB5BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F853FDF1-C4E4-467C-A764-5242DACEB5BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F853FDF1-C4E4-467C-A764-5242DACEB5BA}.Release with Code Analysis|Any CPU.ActiveCfg = Release|Any CPU
+		{F853FDF1-C4E4-467C-A764-5242DACEB5BA}.Release with Code Analysis|Any CPU.Build.0 = Release|Any CPU
+		{F853FDF1-C4E4-467C-A764-5242DACEB5BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F853FDF1-C4E4-467C-A764-5242DACEB5BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -143,5 +151,6 @@ Global
 		{324F15D5-5E26-447E-BC8D-76BF37B7CCBA} = {2459D0E8-C6AE-4D62-A992-C026F319E386}
 		{85A88912-18FD-4516-A1B9-F4FA1F7A97EC} = {2459D0E8-C6AE-4D62-A992-C026F319E386}
 		{F13EB40F-C081-49FB-A8BC-782E45FCC921} = {2459D0E8-C6AE-4D62-A992-C026F319E386}
+		{F853FDF1-C4E4-467C-A764-5242DACEB5BA} = {2459D0E8-C6AE-4D62-A992-C026F319E386}
 	EndGlobalSection
 EndGlobal

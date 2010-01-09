@@ -1,6 +1,7 @@
 using System;
 using System.Reflection;
 using System.Resources;
+using System.Runtime.InteropServices;
 
 [assembly: AssemblyCompany("Alex Boyne-Aitken")]
 [assembly: AssemblyProduct("Template Manager")]
@@ -12,6 +13,8 @@ using System.Resources;
 [assembly: CLSCompliant(true)]
 
 
+[assembly: ComVisible(false)]
+
 //In order to begin building localizable applications, set 
 //<UICulture>CultureYouAreCodingWith</UICulture> in your .csproj file
 //inside a <PropertyGroup>.  For example, if you are using US english
@@ -20,3 +23,5 @@ using System.Resources;
 //the line below to match the UICulture setting in the project file.
 
 [assembly: NeutralResourcesLanguage("en-US")]
+
+[assembly: AssemblyCulture("")]

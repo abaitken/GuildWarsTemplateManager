@@ -59,6 +59,9 @@
     <Content Include="Assets\AssemblyInfo.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Compile Include="..\Include\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="AssetBuilder.cs" />
     <Compile Include="Assets\AssetLoader.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -107,6 +110,9 @@
     <Compile Include="XamlBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Signing\TemplateManager.snk">
+      <Link>TemplateManager.snk</Link>
+    </None>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
