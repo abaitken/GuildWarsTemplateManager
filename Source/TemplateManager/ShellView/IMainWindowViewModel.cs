@@ -1,8 +1,8 @@
 namespace TemplateManager.ShellView
 {
-    public interface IShellViewModel
+    public interface IMainWindowViewModel
     {
-        IShellView View { get; }
+        IMainWindowView View { get; }
         string WindowTitle { get; }
         void ShowView();
 

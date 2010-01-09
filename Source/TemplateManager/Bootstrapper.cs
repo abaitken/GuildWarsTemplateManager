@@ -16,13 +16,13 @@ namespace TemplateManager
         {
             base.ConfigureContainer();
 
-            Container.RegisterType<IShellView, ShellView.ShellView>(new ContainerControlledLifetimeManager());
-            Container.RegisterType<IShellViewModel, ShellViewModel>();
+            Container.RegisterType<IMainWindowView, ShellView.MainWindowView>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IMainWindowViewModel, MainWindowViewModel>();
         }
 
         protected override DependencyObject CreateShell()
         {
-            var model = Container.Resolve<IShellViewModel>();
+            var model = Container.Resolve<IMainWindowViewModel>();
             model.ShowView();
 
             return model.View as DependencyObject;

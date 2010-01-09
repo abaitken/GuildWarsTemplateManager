@@ -1,4 +1,4 @@
-﻿<Window x:Class="TemplateManager.ShellView.ShellView"
+﻿<Window x:Class="TemplateManager.ShellView.MainWindowView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
          xmlns:Regions="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
@@ -8,6 +8,6 @@
         Title="{Binding WindowTitle}"
         Height="600" Width="800" 
         MinWidth="320" MinHeight="240"
-        WindowPositionManager:WindowExtensions.WindowSettings="{x:Type ShellView:ShellViewSettings}">
+        WindowPositionManager:WindowExtensions.WindowSettings="{x:Type ShellView:MainWindowViewSettings}">
     <ContentControl Regions:RegionManager.RegionName="{x:Static Infrastructure:RegionNames.ShellRegion}" />
 </Window>

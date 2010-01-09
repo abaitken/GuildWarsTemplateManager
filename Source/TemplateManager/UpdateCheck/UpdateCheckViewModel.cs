@@ -26,7 +26,7 @@ namespace TemplateManager.UpdateCheck
             CloseWindowCommand = new DelegateCommand<Window>(OnCloseWindow);
         }
 
-        private void OnCloseWindow(Window obj)
+        private static void OnCloseWindow(Window obj)
         {
             obj.Close();
         }

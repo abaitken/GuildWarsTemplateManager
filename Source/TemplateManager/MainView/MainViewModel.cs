@@ -40,7 +40,7 @@ namespace TemplateManager.MainView
             GenerateCommands();
         }
 
-        #region IShellViewModel Members
+        #region IMainWindowViewModel Members
 
         public IMainView View
         {
@@ -165,7 +165,7 @@ namespace TemplateManager.MainView
             var view = container.Resolve<IAboutViewModel>().View;
 
             // TODO : Fix owner
-            var owner = container.Resolve<IShellView>() as Window;
+            var owner = container.Resolve<IMainWindowView>() as Window;
 
             if (owner != null)
                 view.Owner = owner;

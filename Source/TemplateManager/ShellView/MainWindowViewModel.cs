@@ -1,16 +1,16 @@
 namespace TemplateManager.ShellView
 {
-    class ShellViewModel : IShellViewModel
+    class MainWindowViewModel : IMainWindowViewModel
     {
-        private readonly IShellView view;
+        private readonly IMainWindowView view;
 
-        public ShellViewModel(IShellView view)
+        public MainWindowViewModel(IMainWindowView view)
         {
             this.view = view;
             view.Model = this;
         }
 
-        public IShellView View
+        public IMainWindowView View
         {
             get { return view; }
         }
