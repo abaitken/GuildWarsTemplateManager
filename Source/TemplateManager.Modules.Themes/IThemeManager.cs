@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace TemplateManager
+namespace TemplateManager.Modules.Themes
 {
     public interface IThemeManager
     {

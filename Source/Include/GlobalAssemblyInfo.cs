@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademark("")]
 
 [assembly: AssemblyConfiguration("ALPHA")]
-[assembly: AssemblyFileVersion("0.3.0.0")]
+[assembly: AssemblyFileVersion("0.4.0.0")]
 [assembly: CLSCompliant(true)]
 
 

@@ -2,9 +2,12 @@
 using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Composite.UnityExtensions;
 using Microsoft.Practices.Unity;
+using TemplateManager.Common;
+using TemplateManager.Infrastructure;
 using TemplateManager.Modules.Performance;
 using TemplateManager.Modules.Services;
 using TemplateManager.Modules.SkillsView;
+using TemplateManager.Modules.Themes;
 using TemplateManager.ShellView;
 using TemplateManager.Modules.Backup;
 
@@ -12,16 +15,38 @@ namespace TemplateManager
 {
     internal class Bootstrapper : UnityBootstrapper
     {
+        private readonly string[] args;
+
+        public Bootstrapper(string[] args)
+        {
+            this.args = args;
+        }
+
         protected override void ConfigureContainer()
         {
             base.ConfigureContainer();
 
-            Container.RegisterType<IMainWindowView, ShellView.MainWindowView>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IApplicationSettings, ApplicationSettings>(new ContainerControlledLifetimeManager());
+
+            Container.RegisterType<IMainWindowView, MainWindowView>();
             Container.RegisterType<IMainWindowViewModel, MainWindowViewModel>();
+        }
+
+        private static class Const
+        {
+            public static readonly CommandLineOption ResetOption = new CommandLineOption("reset", "r");
         }
 
         protected override DependencyObject CreateShell()
         {
+            var settings = Container.Resolve<IApplicationSettings>();
+            settings.Reload();
+
+            var arguments = CommandLineParser.Parse(args);
+
+            if (arguments[Const.ResetOption])
+                settings.Reset();
+
             var model = Container.Resolve<IMainWindowViewModel>();
             model.ShowView();
 
@@ -31,6 +56,7 @@ namespace TemplateManager
         protected override IModuleCatalog GetModuleCatalog()
         {
             var catalog = new ModuleCatalog();
+            catalog.AddModule(typeof(ThemesModule));
             catalog.AddModule(typeof(BackupModule));
             catalog.AddModule(typeof(ServicesModule));
             catalog.AddModule(typeof(MainModule), "ServicesModule");

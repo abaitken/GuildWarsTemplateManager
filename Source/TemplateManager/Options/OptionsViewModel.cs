@@ -6,7 +6,8 @@ using System.Windows.Forms;
 using System.Windows.Input;
 using Microsoft.Practices.Composite.Presentation.Commands;
 using TemplateManager.Common.ViewModel;
-using TemplateManager.Properties;
+using TemplateManager.Infrastructure;
+using TemplateManager.Modules.Themes;
 using MessageBox=System.Windows.MessageBox;
 
 namespace TemplateManager.Options
@@ -14,13 +15,17 @@ namespace TemplateManager.Options
     public class OptionsViewModel : ViewModelBase, IOptionsViewModel
     {
         private readonly IOptionsView view;
+        private readonly IApplicationSettings applicationSettings;
+        private readonly IThemeManager themeManager;
         private string archiveFolder;
         private string deleteBehaviour;
         private string templatefolder;
 
-        public OptionsViewModel(IOptionsView view)
+        public OptionsViewModel(IOptionsView view, IApplicationSettings applicationSettings, IThemeManager themeManager)
         {
             this.view = view;
+            this.applicationSettings = applicationSettings;
+            this.themeManager = themeManager;
             view.Model = this;
 
             GenerateCommands();
@@ -31,14 +36,15 @@ namespace TemplateManager.Options
 
         public void WriteSetings()
         {
-            if(Settings.Default.TemplateFolder != TemplateFolder)
-                Settings.Default.TemplateFolder = TemplateFolder;
+            if (applicationSettings.TemplateFolder != TemplateFolder)
+                applicationSettings.TemplateFolder = TemplateFolder;
 
-            if(Settings.Default.Theme != SelectedTheme)
-                Settings.Default.Theme = SelectedTheme;
+            if(applicationSettings.Theme != SelectedTheme)
+                applicationSettings.Theme = SelectedTheme;
 
-            Settings.Default.DeleteBehaviour = DeleteBehaviour;
-            Settings.Default.ArchiveFolder = ArchiveFolder;
+            applicationSettings.DeleteBehaviour = DeleteBehaviour;
+            applicationSettings.ArchiveFolder = ArchiveFolder;
+            applicationSettings.Save();
         }
 
         public string TemplateFolder
@@ -124,7 +130,7 @@ namespace TemplateManager.Options
 
         public IEnumerable<string> AvailableThemes
         {
-            get { return App.ThemeManager.AvailableThemes; }
+            get { return themeManager.AvailableThemes; }
         }
 
         #endregion
@@ -171,7 +177,7 @@ namespace TemplateManager.Options
             return fd.ShowDialog() == DialogResult.OK ? fd.SelectedPath : null;
         }
 
-        private static void OnResetSettings(Window obj)
+        private void OnResetSettings(Window obj)
         {
             if(
                 MessageBox.Show("Are you sure you want to restore the default settings?",
@@ -181,7 +187,7 @@ namespace TemplateManager.Options
                 return;
 
             CloseWindow(obj, false);
-            Settings.Default.Reset();
+            applicationSettings.Reset();
         }
 
         private void OnOK(Window obj)
@@ -205,13 +211,10 @@ namespace TemplateManager.Options
 
         private void ReadSettings()
         {
-            TemplateFolder = Settings.Default.TemplateFolder;
-            if(string.IsNullOrEmpty(TemplateFolder))
-                TemplateFolder = BuildStoreLocator.FindBuildStorePath();
-
-            ArchiveFolder = Settings.Default.ArchiveFolder;
-            DeleteBehaviour = Settings.Default.DeleteBehaviour;
-            SelectedTheme = Settings.Default.Theme;
+            TemplateFolder = applicationSettings.TemplateFolder;
+            ArchiveFolder = applicationSettings.ArchiveFolder;
+            DeleteBehaviour = applicationSettings.DeleteBehaviour;
+            SelectedTheme = applicationSettings.Theme;
         }
     }
 }

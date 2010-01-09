@@ -1,16 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Windows;
-using TemplateManager.Properties;
+using System.Windows.Markup;
+using System.Xml;
+using TemplateManager.Common.FileSystem;
+using TemplateManager.Infrastructure;
 
-namespace TemplateManager
+namespace TemplateManager.Modules.Themes
 {
     class ThemeManager : IThemeManager
     {
+        private readonly IApplicationSettings applicationSettings;
+
         private static class Const
         {
             public const string ThemeDirectoryName = "Themes";
@@ -19,11 +24,12 @@ namespace TemplateManager
 
         private ResourceDictionary currentlyLoadedTheme;
 
-        public ThemeManager()
+        public ThemeManager(IApplicationSettings applicationSettings)
         {
-            ApplyTheme(Settings.Default.Theme);
+            this.applicationSettings = applicationSettings;
+            ApplyTheme(applicationSettings.Theme);
 
-            Settings.Default.PropertyChanged += PropertyChanged;
+            applicationSettings.ThemeChanged += OnThemeChange;
         }
 
         public IEnumerable<string> AvailableThemes
@@ -41,8 +47,14 @@ namespace TemplateManager
 
         private static ResourceDictionary GetThemeResourceDictionary(string themeName)
         {
-            var packUri = string.Format(CultureInfo.InvariantCulture, "/{0}/{1}/Theme.xaml", Const.ThemeDirectoryName, themeName);
-            return Application.LoadComponent(new Uri(packUri, UriKind.Relative)) as ResourceDictionary;
+            var themePath = FolderHelper.CreatePathFromParts(AppDomain.CurrentDomain.BaseDirectory,
+                                                             Const.ThemeDirectoryName,
+                                                             themeName,
+                                                             "Theme.xaml");
+
+            var reader = XmlReader.Create(themePath);
+
+            return XamlReader.Load(reader) as ResourceDictionary;
         }
 
         private void ApplyTheme(string themeName)
@@ -69,12 +81,10 @@ namespace TemplateManager
             currentlyLoadedTheme = null;
         }
 
-        private void PropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void OnThemeChange(object sender, EventArgs e)
         {
-            if (e.PropertyName != "Theme")
-                return;
-
-            ApplyTheme(Settings.Default.Theme);
+            // TODO : This event could send the new value
+            ApplyTheme(applicationSettings.Theme);
         }
 
     }

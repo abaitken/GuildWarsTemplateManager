@@ -1,30 +1,30 @@
 using System;
-using System.ComponentModel;
 using System.IO;
 using Microsoft.VisualBasic.FileIO;
 using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Model;
 using TemplateManager.Infrastructure.Services;
-using TemplateManager.Properties;
 
 namespace TemplateManager
 {
     internal class ServiceController : IServiceController
     {
         private readonly ISkillTemplateService service;
+        private readonly IApplicationSettings applicationSettings;
 
-        public ServiceController(ISkillTemplateService service)
+        public ServiceController(ISkillTemplateService service, IApplicationSettings applicationSettings)
         {
             this.service = service;
+            this.applicationSettings = applicationSettings;
             service.RefreshTemplates(BuildStore);
-            Settings.Default.PropertyChanged += PropertyChanged;
+            applicationSettings.TemplateFolderChanged += TemplateFolderChanged;
         }
 
         #region IServiceController Members
 
         public string BuildStore
         {
-            get { return Settings.Default.TemplateFolder; }
+            get { return applicationSettings.TemplateFolder; }
         }
 
         public ISkillTemplateService Service
@@ -36,30 +36,23 @@ namespace TemplateManager
 
         #endregion
 
-        private void PropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            if(e.PropertyName == "TemplateFolder")
-                OnBuildStoreChanged();
-        }
-
-        private void OnBuildStoreChanged()
+        private void TemplateFolderChanged(object sender, EventArgs e)
         {
             service.RefreshTemplates(BuildStore);
 
             if(TemplatesChanged != null)
                 TemplatesChanged(this, new EventArgs());
-
         }
 
         public void DeleteTemplate(SkillTemplate template)
         {
-            switch (Settings.Default.DeleteBehaviour)
+            switch (applicationSettings.DeleteBehaviour)
             {
                 case DeleteBehaviour.DeleteAndRecycle:
                     FileSystem.DeleteFile(template.BuildFile, UIOption.AllDialogs, RecycleOption.SendToRecycleBin, UICancelOption.DoNothing);
                     break;
                 case DeleteBehaviour.MoveAndArchive:
-                    var targetPath = Path.Combine(Settings.Default.ArchiveFolder, Path.GetFileName(template.BuildFile));
+                    var targetPath = Path.Combine(applicationSettings.ArchiveFolder, Path.GetFileName(template.BuildFile));
                     FileSystem.MoveFile(template.BuildFile, targetPath, UIOption.AllDialogs, UICancelOption.DoNothing);
                     break;
                 case DeleteBehaviour.DeletePermanently:

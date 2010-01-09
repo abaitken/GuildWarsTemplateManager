@@ -130,62 +130,6 @@
     <Resource Include="Images\move.png" />
     <Resource Include="Images\recyclebin.png" />
     <Resource Include="Images\warning.png" />
-    <Content Include="Themes\BubbleCreme\Theme.xaml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Themes\BureauBlack\Theme.xaml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Themes\BureauBlue\Theme.xaml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Themes\ExpressionDark\Theme.xaml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Themes\ExpressionLight\Theme.xaml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Themes\RainierOrange\Theme.xaml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Themes\RainierPurple\Theme.xaml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Themes\RainierRadialBlue\Theme.xaml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Themes\ShinyBlue\Theme.xaml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Themes\ShinyDarkPurple\Theme.xaml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Themes\ShinyDarkTeal\Theme.xaml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Themes\ShinyRed\Theme.xaml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Themes\TwilightBlue\Theme.xaml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Themes\WhistlerBlue\Theme.xaml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Include\GlobalAssemblyInfo.cs">
@@ -197,13 +141,14 @@
     <Compile Include="AboutView\AboutViewModel.cs" />
     <Compile Include="AboutView\IAboutView.cs" />
     <Compile Include="AboutView\IAboutViewModel.cs" />
+    <Compile Include="ApplicationSettings.cs" />
+    <Compile Include="TemplateStoreLocator.cs" />
     <Compile Include="IApplicationInformationService.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="AboutView\ApplicationInformation.cs" />
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="IThemeManager.cs" />
     <Compile Include="MainView\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
@@ -217,7 +162,6 @@
       <DependentUpon>UpdateCheckView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainModule.cs" />
-    <Compile Include="Options\BuildStoreLocator.cs" />
     <Compile Include="Options\IOptionsView.cs" />
     <Compile Include="Options\IOptionsViewModel.cs" />
     <Compile Include="Options\OptionsWindow.xaml.cs">
@@ -227,16 +171,6 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
     <Compile Include="ServiceController.cs" />
     <Compile Include="ShellView\IMainWindowView.cs" />
     <Compile Include="ShellView\IMainWindowViewModel.cs" />
@@ -244,20 +178,9 @@
       <DependentUpon>MainWindowView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ShellView\MainWindowViewModel.cs" />
-    <Compile Include="ThemeManager.cs" />
     <Compile Include="ShellView\MainWindowViewSettings.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <None Include="..\..\Signing\TemplateManager.snk">
       <Link>TemplateManager.snk</Link>
-    </None>
-    <None Include="app.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
@@ -285,6 +208,10 @@
     <ProjectReference Include="..\TemplateManager.Modules.SkillsView\TemplateManager.Modules.SkillsView.csproj">
       <Project>{EACC47B1-C3C2-442E-9F4D-1E65C34F8D9A}</Project>
       <Name>TemplateManager.Modules.SkillsView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TemplateManager.Modules.Themes\TemplateManager.Modules.Themes.csproj">
+      <Project>{F853FDF1-C4E4-467C-A764-5242DACEB5BA}</Project>
+      <Name>TemplateManager.Modules.Themes</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
