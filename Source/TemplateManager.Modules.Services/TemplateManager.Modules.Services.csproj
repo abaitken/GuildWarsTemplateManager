@@ -69,12 +69,15 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Runtime.Serialization">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.ServiceModel">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.XML" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -95,7 +98,7 @@
     <Compile Include="NativeObjects\NativeBuildFactory.cs" />
     <Compile Include="NativeObjects\NativeTemplateFolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\TemplateManagerService\Reference.cs">
+    <Compile Include="Service References\RemoteServices\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -118,24 +121,28 @@
     <None Include="..\..\Signing\TemplateManager.snk">
       <Link>TemplateManager.snk</Link>
     </None>
-    <None Include="Service References\TemplateManagerService\TemplateManagerService.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\TemplateManagerService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\TemplateManagerService\configuration.svcinfo" />
-    <None Include="Service References\TemplateManagerService\configuration91.svcinfo" />
-    <None Include="Service References\TemplateManagerService\TemplateManager.Modules.Services.TemplateManagerService.VersionInfo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
+    <None Include="Service References\RemoteServices\TemplateManagerService.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\TemplateManagerService\" />
+    <WCFMetadataStorage Include="Service References\RemoteServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RemoteServices\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RemoteServices\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RemoteServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\RemoteServices\TemplateManager.Modules.Services.RemoteServices.VersionInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

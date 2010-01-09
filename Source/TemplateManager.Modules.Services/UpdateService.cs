@@ -1,6 +1,6 @@
 using System;
 using TemplateManager.Infrastructure.Services;
-using TemplateManager.Modules.Services.TemplateManagerService;
+using TemplateManager.Modules.Services.RemoteServices;
 
 namespace TemplateManager.Modules.Services
 {
@@ -39,7 +39,7 @@ namespace TemplateManager.Modules.Services
 
         private void GetInformation()
         {
-            if(cacheInformation)
+            if (cacheInformation)
                 return;
 
             cacheInformation = true;
@@ -47,6 +47,9 @@ namespace TemplateManager.Modules.Services
             var client = new TemplateManagerServicePortClient();
             var result = client.GetLatestVersion();
             client.Close();
+
+            if (result == null)
+                return;
 
             latestVersion = new Version(result.Major, result.Minor, result.Build, result.Revision);
             informationUrl = result.InformationUrl;

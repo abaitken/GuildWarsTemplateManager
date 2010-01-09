@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8d29147a-50f5-49e3-a372-e79dd9b602d5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5defb425-056e-4a4c-ba99-57a28167be74" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -20,7 +20,7 @@
     <MetadataSource Address="http://projects.logaans-site.co.uk/template-manager/service.wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TemplateManagerService.wsdl" MetadataType="Wsdl" ID="10b41d25-04c0-4f99-9dd7-3047c37b179c" SourceId="1" SourceUrl="http://projects.logaans-site.co.uk/template-manager/service.wsdl" />
+    <MetadataFile FileName="TemplateManagerService.wsdl" MetadataType="Wsdl" ID="060b9160-88f1-403f-9968-6697bb0d669d" SourceId="1" SourceUrl="http://projects.logaans-site.co.uk/template-manager/service.wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

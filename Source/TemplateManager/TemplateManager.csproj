@@ -182,6 +182,7 @@
     <None Include="..\..\Signing\TemplateManager.snk">
       <Link>TemplateManager.snk</Link>
     </None>
+    <None Include="app.config" />
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
