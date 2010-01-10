@@ -44,9 +44,8 @@ namespace TemplateManager.Modules.Services
 
             cacheInformation = true;
 
-            var client = new TemplateManagerServicePortClient();
+            var client = new TemplateManagerService();
             var result = client.GetLatestVersion();
-            client.Close();
 
             if (result == null)
                 return;

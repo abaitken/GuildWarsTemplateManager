@@ -98,14 +98,19 @@
     <Compile Include="NativeObjects\NativeBuildFactory.cs" />
     <Compile Include="NativeObjects\NativeTemplateFolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\RemoteServices\Reference.cs">
+    <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="ServicesModule.cs" />
     <Compile Include="SkillTemplateService.cs" />
     <Compile Include="UpdateService.cs" />
+    <Compile Include="Web References\RemoteServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TemplateManager.Infrastructure\TemplateManager.Infrastructure.csproj">
@@ -121,28 +126,35 @@
     <None Include="..\..\Signing\TemplateManager.snk">
       <Link>TemplateManager.snk</Link>
     </None>
-    <None Include="Service References\RemoteServices\TemplateManagerService.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\RemoteServices\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\RemoteServices\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\RemoteServices\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\RemoteServices\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\RemoteServices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\RemoteServices\TemplateManager.Modules.Services.RemoteServices.VersionInfo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\RemoteServices\TemplateManagerService.wsdl" />
+    <None Include="Web References\RemoteServices\VersionInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://projects.logaans-site.co.uk/template-manager/server.php%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\RemoteServices\</RelPath>
+      <UpdateFromURL>http://projects.logaans-site.co.uk/template-manager/server.php%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TemplateManager_Modules_Services_RemoteServices_TemplateManagerService</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
