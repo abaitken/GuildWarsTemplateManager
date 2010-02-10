@@ -79,6 +79,7 @@
     <Compile Include="Extensions\LinqToXmlExtensions.cs" />
     <Compile Include="HashCodeBuilder.cs" />
     <Compile Include="IApplicationSettings.cs" />
+    <Compile Include="Model\ISkill.cs" />
     <Compile Include="Model\TemplateFolder.cs" />
     <Compile Include="Services\IDataService.cs" />
     <Compile Include="Interfaces\IHeadedContent.cs" />

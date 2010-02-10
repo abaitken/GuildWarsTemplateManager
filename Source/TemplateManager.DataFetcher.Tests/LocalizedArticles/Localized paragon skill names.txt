@@ -1,0 +1,148 @@
+﻿== Nightfall ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Blazing Spear]] || Javelot ardent || Lodernder Speer || Lancia Ardente || Lanza resplandeciente || Płomienna Włócznia || 불타는 창 || ブレイズ スピア || 熾燃之矛 || 闪耀之矛
+|-
+| [[Mighty Throw]] || Lancer puissant || Mächtiger Wurf || Lancio Potente || Lanzamiento poderoso || Potężny Rzut || 강력한 투창 || マイティ スロー || 強力投擲 || 强力投射
+|-
+| [[Cruel Spear]] || Javelot cruel || Grausamer Speer || Lancia Crudele || Lanza cruel || Okrutna Włócznia || 잔혹한 창 || クルエル スピア || 殘酷之矛 || 残忍之矛
+|-
+| [[Harrier's Toss]] || Lancer d'harrier || Wurf des Läufers || Lancio del Predatore || Lanzamiento del cazador || Rzut Grabieżcy || 약탈자의 투창 || ハリアー トス || 獵捕者投擲 || 捕猎投射
+|-
+| [[Unblockable Throw]] || Lancer impitoyable || Unblockbarer Wurf || Lancio Inarrestabile || Lanzamiento imparable || Nieblokowalny Rzut || 무적의 투창 || アンブロッカブル スロー || 驚天投擲 || 无坚不摧
+|-
+| [[Spear of Lightning]] || Javelot d'éclair || Speer des Blitzes || Lancia del Fulmine || Lanza de relámpago || Włócznia Błyskawicy || 번개창 || ライトニング スピア || 閃電之矛 || 闪电矛
+|-
+| [[Wearying Spear]] || Javelot lassant || Ermüdender Speer || Lancia Stancante || Lanza cansada || Włócznia Zmęczenia || 권태의 창 || ウェアリー スピア || 衰竭之矛 || 衰竭投射
+|-
+| [[Focused Anger]] || Colère concentrée || Konzentrierter Zorn || Rabbia Focalizzata || Enfado dirigido || Skupiona Złość || 분노 집중 || フォーカス アンガー || 集聚怒氣 || 怒不可遏
+|-
+| [[Natural Temper]] || Tempérament naturel || Natürliche Laune || Indole Naturale || Temperamento natural || Naturalny Gniew || 자연스러운 기질 || ナチュラル テンパー || 原始情緒 || 原生之怒
+|-
+| [[Anthem of Fury]] || Hymne de furie || Hymne der Wut || Inno della Furia || Himno de furia || Hymn Furii || 분노의 성가 || フューリー アンセム || 狂暴聖歌 || 狂怒圣歌
+|-
+| [[Crippling Anthem]] || Hymne d'infirmité || Verkrüppelungs-Hymne || Inno Azzoppante || Himno lisiador || Okulawiający Hymn || 부상의 성가 || クリップル アンセム || 致殘聖歌 || 致残圣歌
+|-
+| [[Defensive Anthem]] || Hymne défensif || Verteidigungshymne || Inno Difensivo || Himno defensivo || Obronny Hymn || 방어의 성가 || ディフェンシブ アンセム || 防禦聖歌 || 防护圣歌
+|-
+| [[Anthem of Aggression]] || Hymne d'agression || Hymne der Aggression || Inno dell'Aggressione || Himno de agresión || Hymn Agresji || 공격의 성가 || アグレッション アンセム || 突擊聖歌 || 侵略圣歌
+|-
+| [[Godspeed]] || Bon voyage || Gute Reise || Buon Viaggio || Bienandanza || Boska Prędkość || 성공의 기원 || ゴッドスピード || 天使賜福 || 平安祝福
+|-
+| [[Anthem of Flame]] || Hymne de flamme || Hymne der Flamme || Inno della Fiamma || Himno de fuego || Hymn Płomienia || 화염의 성가 || フレイム アンセム || 火焰聖歌 || 烈焰圣歌
+|-
+| [[Anthem of Envy]] || Hymne de jalousie || Hymne des Neids || Inno dell'Invidia || Himno de envidia || Hymn Zazdrości || 선망의 성가 || エンヴィー アンセム || 妒忌聖歌 || 嫉恨圣歌
+|-
+| [[Song of Power]] || Chant de la puissance || Machtgesang || Canto del Potere || Canción de poder || Pieśń Potęgi || 힘의 노래 || パワー ソング || 能量之歌 || 能量之歌
+|-
+| [[Zealous Anthem]] || Hymne zélé || Eifrige Hymne || Inno Zelante || Himno de celo || Hymn Gorliwości || 열망의 성가 || ゼラス アンセム || 熱望聖歌 || 热情圣歌
+|-
+| [[Aria of Zeal]] || Aria de zèle || Arie des Eifers || Aria dello Zelo || Aria de celo || Aria Gorliwości || 열정의 아리아 || ジール アリア || 狂熱詠唱 || 狂热咏唱
+|-
+| [[Lyric of Zeal]] || Poème de zèle || Lyrik des Eifers || Lirica dello Zelo || Lírica de celo || Liryk Gorliwości || 열정의 서정시 || ジール リリック || 熱情吟唱 || 鼓动
+|-
+| [[Ballad of Restoration]] || Ballade de rétablissement || Ballade der Wiederherstellung || Ballata del Ripristino || Balada de restauración || Ballada Odnowy || 회복의 연가 || レストレイション バラード || 復原歌謠 || 清心谣
+|-
+| [[Chorus of Restoration]] || Choeur de rétablissement || Chor der Wiederherstellung || Coro del Ripristino || Coro de restauración || Chorał Odnowy || 회복의 합창 || レストレイション コーラス || 復原和鳴 || 普善咒
+|-
+| [[Song of Restoration]] || Chant de rétablissement || Gesang der Wiederherstellung || Canto del Ripristino || Canción de la restauración || Pieśń Odnowy || 회복의 노래 || レストレイション ソング || 復原之歌 || 痊愈之歌
+|-
+| [[Aria of Restoration]] || Aria de rétablissement || Arie der Wiederherstellung || Aria del Ripristino || Aria de restauración || Aria Odnowy || 회복의 아리아 || レストレイション アリア || 復原詠唱 || 痊愈咏叹
+|-
+| [[Song of Concentration]] || Chanson de concentration || Lied der Konzentration || Canzone della Concentrazione || Canción de concentración || Pieśń Koncentracji || 집중의 노래 || コンセントレーション ソング || 專注之歌 || 专注之歌
+|-
+| [[Anthem of Guidance]] || Hymne de direction || Hymne der Führung || Inno della Guida || Himno de guía || Hymn Naprowadzenia || 지휘의 성가 || ガイダンス アンセム || 指導聖歌 || 指引圣歌
+|-
+| [[Energizing Chorus]] || Choeur énergisant || Energie bringender Chor || Coro Energizzante || Coro vitalizante || Energetyzujący Chorał || 격려의 합창 || エナジャイズ コーラス || 充能和鳴 || 蓄能之音
+|-
+| [[Lyric of Purification]] || Poème de purification || Lyrik der Läuterung || Lirica di Purificazione || Lírica de purificación || Liryk Oczyszczenia || 정화의 서정시 || ピュリフィケーション リリック || 潔淨吟唱 || 净化之词
+|-
+| [[Song of Purification]] || Chanson de purification || Lied der Läuterung || Canzone della Purificazione || Canción de purificación || Pieśń Oczyszczenia || 정화의 노래 || ピュリフィケーション ソング || 淨化之歌 || 净化之曲
+|-
+| [[Hexbreaker Aria]] || Aria de leveur de maléfice || Verhexungsbrech-Arie || Aria Anti-Fattura || Aria rompemaleficios || Aria Łamiąca Klątwy || 약화 파괴의 아리아 || ヘックスブレイカー アリア || 破咒詠唱 || 破法咏叹
+|-
+| [["Brace Yourself!"]] || "Préparez-vous !" || "Seid vorbereitet!" || "Preparatevi!" || "¡Firme!" || Ustój! || 마음을 굳게 먹어라! || ブレイス ユアセルフ！ || 「鼓起勇氣！」 || “鼓起勇气！”
+|-
+| [[Awe]] || Crainte || Ehrfurcht || Soggezione || Pavor || Bojaźń || 외경심 유발 || オゥ || 敬畏 || 敬畏
+|-
+| [[Soldier's Fury]] || Fureur du soldat || Wut des Soldaten || Furia del Soldato || Furia del soldado || Żołnierska Furia || 병사의 분노 || ソルジャー フューリー || 士兵的狂暴 || 军士之怒
+|-
+| [[Aggressive Refrain]] || Refrain agressif || Aggressiver Refrain || Ritornello Aggressivo || Estribillo agresivo || Agresywny Zaśpiew || 공세의 공명 || アグレッシブ リフレイン || 侵略合聲 || 激励之曲
+|-
+| [[Enduring Harmony]] || Harmonie persistante || Dauerhafte Harmonie || Armonia Permanente || Armonía duradera || Trwała Harmonia || 인내의 화음 || エンジュア ハーモニー || 恆久福音　 || 坚韧福音
+|-
+| [[Blazing Finale]] || Finale enflammé || Loderndes Finale || Finale Ardente || Cierre llameante || Ognisty Finał || 화염의 피날레 || ブレイズ フィナーレ || 熾燃樂章 || 燃烧的尾音
+|-
+| [[Burning Refrain]] || Refrain brûlant || Brennender Refrain || Ritornello Bruciante || Estribillo quemador || Płonący Zaśpiew || 불길의 공명 || バーン リフレイン || 燃燒合聲 || 灼热之曲
+|-
+| [[Energizing Finale]] || Finale énergisant || Energie bringendes Finale || Finale Energetico || Final vigorizante || Energetyzujący Finał || 격려의 피날레 || エナジャイズ フィナーレ || 能量樂章 || 蓄能的结束曲
+|-
+| [[Finale of Restoration]] || Finale de rétablissement || Finale der Wiederherstellung || Finale del Ripristino || Cierre de restauración || Finał Odnowy || 복원의 피날레 || レストレイション フィナーレ || 復原樂章 || 恢复福音
+|-
+| [[Mending Refrain]] || Refrain de réparation || Genesungsrefrain || Ritornello Riparatore || Estribillo sanador || Zaśpiew Ozdrowienia || 보충의 공명 || メンド リフレイン || 修補合聲 || 愈合之曲
+|-
+| [[Purifying Finale]] || Finale purifiant || Reinigendes Finale || Finale Purificante || Cierre purificador || Oczyszczający Finał || 정화의 피날레 || ピュリファイ フィナーレ || 淨化樂章 || 清毒福音
+|-
+| [[Bladeturn Refrain]] || Refrain du Bladeturn || Klingenumkehr-Refrain || Ritornello Ruotalama || Estribillo afilado || Zaśpiew Odpędzenia Ostrzy || 대검술 공명 || ブレードターン リフレイン || 刃轉合聲 || 倒戈之音
+|-
+| [[Glowing Signet]] || Sceau rayonnant || Glühendes Siegel || Sigillo Luminoso || Sello brillante || Rozżarzony Sygnet || 백열 인장 || グロー シグネット || 灼熱紋章 || 灼热纹章
+|-
+| [[Leader's Zeal]] || Zèle du meneur || Eifer des Anführers || Zelo del Condottiero || Celo del líder || Gorliwość Dowódcy || 지휘자의 열정 || リーダー ジール || 領導者的熱誠 || 领袖的热诚
+|-
+| [[Leader's Comfort ]] || Confort du meneur || Trost des Anführers || Conforto del Leader || Comodidad del líder || Pocieszenie Dowódcy || 지휘자의 안락 || リーダー コンフォート || 領導者的安慰 || 领袖的安抚
+|-
+| [[Signet of Aggression]] || Sceau d'agression || Siegel der Aggression || Sigillo dell'Aggressione || Sello de agresión || Sygnet Agresji || 공세의 인장 || アグレッション シグネット || 侵略紋章 || 侵略纹章
+|-
+| [[Signet of Synergy]] || Sceau de synergie || Siegel der Synergie || Sigillo della Sinergia || Sello de sinergia || Sygnet Synergii || 공유 인장 || シナジー シグネット || 協力紋章 || 协力纹章
+|-
+| [[Remedy Signet]] || Sceau du remède || Heilmittel-Siegel || Sigillo del Rimedio || Sello del remedio || Sygnet Remedium || 상태치료 인장 || レメディ シグネット || 醫治紋章 || 医疗纹章
+|-
+| [[Signet of Return]] || Sceau de retour || Siegel der Wiederkehr || Sigillo del Ritorno || Sello del retorno || Sygnet Powrotu || 소환 인장 || リターン シグネット || 返生紋章 || 回归纹章
+|-
+| [[Angelic Protection]] || Protection angélique || Engelsschutz || Protezione Angelica || Protección angelical || Anielska Ochrona || 성스러운 비호 || アンジェリック プロテクション || 天使守護 || 天使之翼
+|-
+| [[Angelic Bond]] || Lien angélique || Engelsbindung || Legame Angelico || Vínculo angelical || Anielska Więź || 고결한 유대 || アンジェリック ボンド || 天使連結 || 圣光链
+|-
+| [[Cautery Signet]] || Sceau cautère || Siegel der Verätzung || Sigillo della Cauterizzazione || Sello de cauterio || Sygnet Wypalenia || 소독의 인장 || コーテリー シグネット || 淨潔紋章 || 祛病纹章
+|-
+| [["Make Your Time!"]] || Profitez de votre temps ! || "Nehmt Euch Zeit!" || Perdurate! || ¡Esta es la nuestra! || Przygotować Się! || 서두르자! || メイク ユア タイム！ || 「把握時間！」 || “成王败寇！”
+|-
+| [["Can't Touch This!" ]] || Touche pas ! || "Can't touch this!" || Vietato Toccare!  || "¡No nos toquéis!”" || Łapy Precz!  || 우릴 건드릴 수 없다! || キャント タッチ ディス！ || 「別碰我！」 || “生人莫近！”
+|-
+| [["Stand Your Ground!"]] || Tenez bon ! || "Haltet Eure Stellung!" || Non Muovetevi! || “¡Mantente en guardia!” || Utrzymać pozycje! || 물러서지 마라! || スタンド ユア グラウンド！ || 「堅守崗位！」 || “坚守岗位！”
+|-
+| [["Lead the Way!"]] || Ouvrez le chemin ! || Geht voran! || Guidaci! || ”¡Lidera la marcha!” || Prowadź! || 앞장서라! || リード ザ ウェイ！ || 「由你帶路！」 || “带路！”
+|-
+| [["Make Haste!"]] || Faites vite ! || "Beeilt Euch!" || In fretta! || ”¡Rápido!” || Pospieszcie się! || 재빨리 움직여라! || メイク ヘイスト！ || 「衝鋒！」 || “全速前进！”
+|-
+| [["We Shall Return!"]] || Nous reviendrons ! || Wir werden wiederkommen! || Torneremo! || "¡Volveremos!" || Jeszcze Tu Wrócimy! || 모두 무사히 돌아갈 것이다! || ウィー シャル リターン！ || 「我們將重返！」 || “东山再起！”
+|-
+| [["Find Their Weakness!"]] || Trouvez leur faiblesse ! || "Findet ihren Schwachpunkt!" || Scopri la Loro Debolezza! || "¡A por su punto débil!" || Odnajdźcie Ich Słabości! || 약점을 찾아라! || ファインド ウィークネス！ || 「找出弱點！」 || “浴血奋战！”
+|-
+| [["The Power Is Yours!"]] || La force est avec vous ! || "Die Macht ist Euer!" || Il Potere è nelle Tue Mani! || "¡El poder es vuestro!" || Potęga Jest Wasza! || 힘은 우리 것이다! || パワー イズ ユアーズ！ || 「力量在我！」 || “赐我力量！”
+|-
+| [["Never Give Up!" ]] || N'abandonnez jamais ! || "Gebt nicht auf!" || "Non Datevi per Vinti!" || ¡No te rindas!  || Trzymać Się! || 결코 포기하지 마라! || ネバー ギブアップ！ || 「不要放棄！」 || “绝不放弃！”
+|-
+| [["The power is yours!"]] || La force est avec vous ! || Die Macht ist Euer! || Il potere è nelle tue mani! || ¡El poder es vuestro! || Potęga jest w was! || 힘은 우리 것이다! || パワー イズ ユアーズ！ || 力量在我！ || 赐我力量！
+|-
+| [["Help Me!"]] || A l'aide ! || Helft mir! || "Aiutatemi!" || ¡Ayuda! || Pomóżcie Mi! || 날 지원하라! || ヘルプ ミー！ || 「幫助我！」 || “请求援助！”
+|-
+| [["Fall Back!"]] || Repliez-vous ! || Zieht Euch zurück! || "Ripieghiamo!" || "¡Atrás!" || Wycofać Się! || 후퇴! || フォール バック！  || 「回防！」 || “后退！”
+|-
+| [[Incoming!]] || Attention ! || "Schon unterwegs!" || Arrivano! || “¡Que vienen!” || Nadchodzą! || 전투 준비! || インカミング！ || 「敵人來襲！」 || “敌人来袭！”
+|-
+| [[They're on Fire!]] || Ils sont enflammés ! || Sie brennen! || Bruciano! || "¡Están ardiendo!" || Płoną! || 적은 불타고 있다! || オン ファイア！ || 「他們著火了！」 || “不足为惧！”
+|-
+| [["Never Surrender!"]] || Ne vous rendez jamais ! || "Ergebt Euch nicht!" || "Mai Arrendersi!" || "¡Arriba!" || "Nie Poddawajcie Się! || 결코 굴복하지 마라! || ネバー サレンダー！ || 「絕不投降！」 || “绝不屈服！”
+|-
+| [["It's just a flesh wound."]] || C'est juste une petite blessure || Es ist nur eine Fleischwunde. || È Solo una Ferita Superficiale || "¡Es sólo un rasguño!”" || To tylko draśnięcie! || 별것 아닌 상처일 뿐이다! || ジャスト フレッシュ ウーンド || 「不過是皮肉傷」 || “皮肉之苦！”
+|-
+| [["Forge the Way!"]] || Ouvrez la voie ! || "Kämpft Euch voran!" || Forgia la Via! || "¡Ábrete paso!" || Utoruj Sobie Drogę! || 서서히 전진하자! || フォージ ザ ウェイ！ || 「殺出血路！」 || “逃生！”
+|-
+| [[Barbed Spear]] || Javelot perforant || Stachelspeer || Lancia Appuntita || Lanza espinada || Kolczasta Włócznia || 가시창 || バーブ スピア || 荊棘之矛 || 荆棘之矛
+|}
+<noinclude>
+[[Category:Tables]]
+</noinclude>

@@ -1,0 +1,303 @@
+﻿== Core ==
+__NOTOC__
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Animate Bone Fiend]] || Animation de démon squelette || Knochenteufel beleben || Anima Demone d'Ossa || Animar demonio de hueso || Ożywienie Kościanego Biesa || 해골 마귀 || アニメート ボーン フィーンド || 操縱惡魔骸骨 || 操纵骨魔
+|-
+| [[Animate Bone Minions]] || Animation de serviteurs squelettes || Knochendiener beleben || Anima Sgherri d'Ossa || Animar siervos de hueso || Ożywienie Kościanych Sługusów || 해골 악령 || アニメート ボーン ミニオン || 操縱骸骨爪牙 || 操纵骨灵仆从
+|-
+| [[Grenth's Balance]] || Equilibre de Grenth || Grenths Ausgleich || Equilibrio di Grenth || Balanza de Grenth || Równowaga Grentha || 그렌트의 천칭 || グレンス バランス || 古蘭斯的平衡 || 古兰斯的平衡
+|-
+| [[Well of Blood]] || Puits de sang || Brunnen des Blutes || Pozzo di Sangue || Pozo de sangre || Studnia Krwi || 피의 늪 || ブラッド ウェル || 血之池 || 鲜血之池
+|-
+| [[Well of the Profane]] || Puits du profane || Gottloser Brunnen || Pozzo del Profano || Pozo del profano || Studnia Profanacji || 이교도의 늪 || プロフェイン ウェル || 褻瀆之池 || 亵渎之池
+|-
+| [[Putrid Explosion]] || Explosion putride || Explosion der Verwesung || Esplosione Putrida || Explosión de putrefacción || Eksplozja Zgnilizny || 시체 폭파 || ピュートリッド エクスプロージョン || 屍爆 || 尸爆
+|-
+| [[Soul Feast]] || Festin de l'âme || Seelenschmaus || Banchetto dell'Anima || Festín de almas || Uczta Duszy || 영혼의 포만감 || ソウル フィースト || 靈魂饗宴 || 灵魂盛宴
+|-
+| [[Parasitic Bond]] || Lien parasitaire || Parasitäre Fesseln || Legame Parassitario || Vínculo parasitario || Pasożytnicza Więź || 속박의 덫 || パラシティック ボンド || 寄生連結 || 附骨之蛆
+|-
+| [[Barbs]] || Barbelés || Widerhaken || Punte || Púas || Ciernie || 갈고리 || バーブ || 芒刺 || 倒刺
+|-
+| [[Death Nova]] || Nova mortelle || Todesnova || Nova della Morte || Nova de muerte || Zabójczy Wybuch || 죽음의 폭풍 || デス ノヴァ || 死亡新星 || 死亡新星
+|-
+| [[Deathly Swarm]] || Essaim mortel || Tödlicher Schwarm || Sciame Mortale || Enjambre mortal || Śmiercionośny Rój || 죽음의 벌떼 || デスリー スウォーム || 致命蟲群 || 致命虫群
+|-
+| [[Rotting Flesh]] || Putréfaction || Verrottendes Fleisch || Carne Putrida || Carne pútrida || Gnijące Ciało || 육체의 부패 || ロット フレッシュ || 肉體腐爛 || 腐尸毒
+|-
+| [[Suffering]] || Souffrance || Leiden || Sofferenza || Sufrimiento || Cierpienie || 고통의 파도 || サファー || 苦難 || 苦难
+|-
+| [[Life Siphon]] || Siphon de vie || Leben abzapfen || Sifone Vitale || Grifo de vida || Wyssanie Życia || 생기 흡수 || ライフ サイフォン || 吸取生命 || 生命虹吸
+|-
+| [[Unholy Feast]] || Festin impie || Unheiliger Schmaus || Empio Banchetto || Festín impío || Bluźniercza Uczta || 악마의 향연 || アンホーリー フィースト || 邪惡饗宴 || 邪恶盛宴
+|-
+| [[Tainted Flesh ]] || Chair putréfiée || Verdorbenes Fleisch || Carne Infetta || Carne infectada || Skażone Ciało || 면역의 혜택 || テイント フレッシュ  || 腐敗肉體 || 腐肉
+|-
+| [[Dark Aura]] || Aura noire || Dunkle Aura || Aura Oscura || Aura oscura || Mroczna Aura || 암흑의 오라 || ダーク オーラ || 暗黑靈氣 || 黑暗光环
+|-
+| [[Enfeebling Blood]] || Sang du faible || Schwächendes Blut || Indebolimento del Sangue || Sangre debilitante || Osłabiająca Krew || 허약의 기운 || エンフィーブル ブラッド || 血之衰弱 || 衰弱之血
+|-
+| [[Blood is Power]] || Pouvoir du sang || Blut ist Kraft || Sangue è Potere || La sangre es poder || Krew to Potęga || 피의 권능 || パワー ブラッド || 血之權能 || 血偿
+|-
+| [[Blood of the Master]] || Sang du Maître || Blut des Meisters || Sangue del Padrone || Sangre del maestro || Krew Władcy || 수혈의 손길 || マスター ブラッド || 主人之血 || 血之统御
+|-
+| [[Defile Flesh]] || Souillure charnelle || Fleisch schänden || Contaminazione della Carne || Profanar la carne || Splugawienie Ciała || 육체의 모독 || ディファイル フレッシュ || 肉體敗壞 || 血肉污染
+|-
+| [[Demonic Flesh]] || Chair démoniaque || Dämonenfleisch || Carne Demoniaca || Carne demoníaca || Demoniczne Ciało || 악마의 육체 || デモニック フレッシュ || 惡魔肉體 || 恶魔之体
+|-
+| [[Barbed Signet]] || Sceau barbelé || Siegel der Widerhaken || Sigillo Uncinato || Sello de espinas || Kolczasty Sygnet || 갈고리 인장 || バーブ シグネット || 荊棘紋章 || 荆棘纹章
+|-
+| [[Plague Signet]] || Sceau du fléau || Pest-Siegel || Sigillo della Peste || Sello pestilente || Sygnet Plagi || 전염 인장 || プレイグ シグネット || 疫病紋章 || 瘟疫纹章
+|-
+| [[Dark Pact]] || Pacte noir || Dunkler Pakt || Patto Oscuro || Pacto oscuro || Mroczny Pakt || 암흑의 계약 || ダーク パクト || 暗黑契約 || 黑暗契约
+|-
+| [[Order of Pain]] || Ordre de la douleur || Orden der Schmerzen || Ordine del Dolore || Orden del dolor || Rozkaz Bólu || 고통의 명령 || ペイン オーダー || 痛苦命令 || 痛苦之令
+|-
+| [[Faintheartedness]] || Appréhension || Mutlosigkeit || Codardia || Miedo visceral || Lękliwość || 공포의 족쇄 || フェイントハート || 懦弱 || 懦弱
+|-
+| [[Rigor Mortis]] || Rigor Mortis || Totenstarre || Rigor Mortis || Rigor mortis || Stężenie Pośmiertne || 근육 경직 || リガー モーティス || 肢體僵硬 || 肌肉僵硬
+|-
+| [[Dark Bond]] || Lien noir || Dunkles Band || Legame Oscuro || Vínculo oscuro || Mroczne Więzy || 어둠의 결속 || ダーク ボンド || 暗黑連結 || 暗黑链接
+|-
+| [[Rend Enchantments]] || Abolition des enchantements || Verzauberungen entreißen || Strappa Incantesimi || Desgarrar encantamientos || Rozerwanie Zaklęć || 강화 파괴 || レンド エンチャント || 粉碎加持 || 增益撕裂
+|-
+| [[Lingering Curse]] || Malédiction latente || Bleibender Fluch || Maledizione Persistente || Maldición persistente || Przewlekła Klątwa || 끈질긴 저주 || リンガー カース || 強力詛咒 || 余孽
+|-
+| [[Strip Enchantment]] || Suppression d'un enchantement || Verzauberung rauben || Sottrai Incantesimo || Quitar encantamiento || Zdarcie Zaklęcia || 강화 박탈 || ストリップ エンチャント || 剝奪加持 || 增益剥离
+|-
+| [[Chilblains]] || Engelures || Frostbeulen || Geloni || Sabañones || Odmrożenie || 동상 || チルブレイン || 凍傷 || 冻疮
+|-
+| [[Signet of Agony]] || Sceau d'agonie || Siegel der Qual || Sigillo dell'Agonia || Sello de la agonía || Sygnet Agonii || 고난 인장 || アゴニー シグネット || 劇痛紋章 || 痛苦纹章
+|-
+| [[Mark of Pain]] || Marque de douleur || Zeichen des Schmerzes || Segno del Dolore || Marca del dolor || Piętno Bólu || 고통의 낙인 || ペイン マーク || 痛苦印記 || 痛苦烙印
+|-
+| [[Taste of Death]] || Goût de la mort || Geschmack des Todes || Sapore della Morte || Sabor de la muerte || Posmak Śmierci || 주인의 횡포 || デス テイスト || 死亡滋味 || 死亡体验
+|-
+| [[Vampiric Gaze]] || Regard vampirique || Vampir-Starren || Sguardo del Vampiro || Mirada vampírica || Wampiryczne Spojrzenie || 흡혈의 응시 || ヴァンピリック ゲイズ || 吸血鬼凝視 || 吸血鬼的注视
+|-
+| [[Plague Touch]] || Caresse contagieuse || Pest-Berührung || Tocco della Peste || Toque pestilente || Dotyk Plagi || 저주의 손길 || プレイグ タッチ || 疫病之觸 || 瘟疫之触
+|-
+| [[Vile Touch]] || Caresse nocive || Abscheuliche Berührung || Tocco Vile || Toque vil || Podły Dotyk || 오염의 손길 || バイル タッチ || 不幸之觸 || 不洁之触
+|-
+| [[Weaken Armor]] || Armure affaiblie || Rüstung schwächen || Indebolisci Armatura || Debilitar armadura || Osłabienie Zbroi || 갑옷 약화 || ウィークン アーマー || 防禦弱化 || 破甲
+|}
+== Prophecies ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Animate Bone Horror]] || Animation d'horreur squelettique || Knochenschreck beleben || Anima Orrore d'Ossa || Animar horror de hueso || Ożywienie Kościanej Poczwary || 해골 졸개 || アニメート ボーン ホラー || 操縱恐懼骸骨 || 操纵骨灵
+|-
+| [[Verata's Gaze]] || Regard de Verata || Veratas Starren || Sguardo di Verata || Mirada de Verata || Spojrzenie Veraty || 베라타의 주시 || ヴェラタ ゲイズ || 芙瑞達的凝視 || 维拉塔的注视
+|-
+| [[Verata's Aura]] || Aura de Verata || Veratas Aura || Aura di Verata || Aura de Verata || Aura Veraty || 베라타의 영기 || ヴェラタ オーラ || 芙瑞達的靈氣 || 维拉塔的光环
+|-
+| [[Deathly Chill]] || Froideur mortelle || Tödliche Kühlung || Brivido Mortale || Escalofrío de muerte || Trupi Chłód || 죽음의 한기 || デスリー チル || 致命嚴寒 || 致命深寒
+|-
+| [[Verata's Sacrifice]] || Sacrifice de Verata || Veratas Opfer || Sacrificio di Verata || Sacrificio de Verata || Ofiara Veraty || 베라타의 희생 || ヴェラタ サクリファイス || 芙瑞達的犧牲 || 维拉塔的献祭
+|-
+| [[Well of Power]] || Puits de pouvoir || Brunnen der Kraft || Pozzo del Potere || Pozo de poder || Studnia Mocy || 회복의 늪 || パワー ウェル || 魔力之池 || 力量之池
+|-
+| [[Well of Suffering]] || Puits de douleur || Brunnen des Leidens || Pozzo delle Sofferenze || Pozo de sufrimiento || Studnia Cierpienia || 고통의 늪 || サファー ウェル || 痛苦之池 || 痛苦之池
+|-
+| [[Necrotic Traversal]] || Voyage nécrotique || Nekrotische Verwechslung || Attraversamento Necrotico || Travesía necrótica || Martwicze Przemieszczenie || 어둠의 이동 || ネクロティック トラバーサル || 死亡傳送 || 借尸还魂
+|-
+| [[Consume Corpse]] || Combustion corporelle || Kadaver verzehren || Consuma Cadavere || Consumir cadáver || Pożarcie Zwłok || 어둠의 거래 || コンシューム コープス || 屍體吸收 || 尸骸吞噬
+|-
+| [[Soul Barbs]] || Ame barbelée || Seelenwiderhaken || Schegge dell'Anima || Púas del alma || Ciernie Duszy || 영혼의 갈고리 || ソウル バーブ || 靈魂荊棘 || 灵魂棘刺
+|-
+| [[Shadow Strike]] || Choc de l'ombre || Schattenschlag || Colpo dell'Ombra || Golpe de las sombras || Uderzenie Cienia || 그림자 일격 || シャドウ ストライク || 暗影衝擊 || 暗影冲击
+|-
+| [[Price of Failure]] || Prix de l'échec || Preis des Versagens || Prezzo del Fallimento || Precio del fracaso || Cena Porażki || 실패의 덫 || フェイリア プライス || 失敗的代價 || 失败的代价
+|-
+| [[Virulence]] || Virulence || Ansteckung || Virulenza || Virulencia || Zjadliwa Choroba || 역병의 전염 || ビルレンス || 惡毒 || 剧毒
+|-
+| [[Awaken the Blood]] || Réveil du sang || Das Blut erwecken || Risveglio del Sangue || Despertar la sangre || Przebudzenie Krwi || 피의 자각 || アウェイクン ブラッド || 血之覺醒 || 血之唤醒
+|-
+| [[Desecrate Enchantments]] || Désacralisation d'Enchantements || Verzauberungsschändung || Dissacra Incantesimi || Profanación de encantamientos || Zbezczeszczenie Zaklęć || 신성 모독 || デスクレイト エンチャント || 褻瀆加持 || 增益亵渎
+|-
+| [[Aura of the Lich]] || Aura de la liche || Aura des Lich || Aura del Lich || Aura del liche || Aura Licza || 리치의 오라 || リッチ オーラ || 巫妖靈氣 || 巫妖光环
+|-
+| [[Blood Renewal]] || Transfusion sanguine || Bluterneuerung || Rinnovamento del Sangue || Renovación de la sangre || Krwawa Odnowa || 피의 재생 || ブラッド リニューアル || 血之再生 || 血之再生
+|-
+| [[Enfeeble]] || Affaiblissement || Schwächen || Indebolimento || Debilidad || Osłabienie || 허약 || エンフィーブル || 衰弱 || 衰弱
+|-
+| [[Spiteful Spirit]] || Esprit malveillant || Boshafter Geist || Spirito Malevolo || Espíritu rencoroso || Mściwy Duch || 악의의 기운 || スパイトフル スピリット || 惡靈附身 || 恶灵附体
+|-
+| [[Malign Intervention]] || Intervention néfaste || Unheilvoller Eingriff || Intervento Maligno || Intervención maligna || Szkodliwa Interwencja || 악마의 중재 || マライン インタベンション || 惡性感染 || 邪恶干涉
+|-
+| [[Insidious Parasite]] || Parasite sournois || Heimtückischer Parasit || Parassita Insidioso || Parásito insidioso || Podstępny Pasożyt || 체력 강탈 || インシディアス パラサイト || 狡猾寄生 || 生命寄生
+|-
+| [[Spinal Shivers]] || Frissons glacés || Rückenschauer || Spasmo Spinale || Escalofríos || Przejmujące Dreszcze || 냉기의 전율 || スパイナル シヴァー || 刺骨惡寒 || 刺骨深寒
+|-
+| [[Wither]] || Flétrissure || Verwelken || Appassimento || Marchitar || Więdnięcie || 쇠약 || ウィザー || 孱弱 || 枯萎
+|-
+| [[Life Transfer]] || Transfert de vie || Lebensübertragung || Trasferimento di Vita || Transferencia de vida || Przelanie Życia || 생기 이전 || ライフ トランスファー || 生命轉移 || 生命转移
+|-
+| [[Mark of Subversion]] || Marque de subversion || Zeichen der Subversion || Segno della Sovversione || Marca de subversión || Piętno Przewrotu || 파멸의 낙인 || サブバージョン マーク || 破壞印記 || 颠覆印记
+|-
+| [[Soul Leech]] || Sangsue de l'âme || Seelenfresser || Sanguisuga dell'Anima || Sanguijuela del alma || Wyssanie Duszy || 영혼 착취 || ソウル リーチ || 搾取靈魂 || 灵魂榨取
+|-
+| [[Shadow of Fear]] || Ombre de terreur || Schatten der Angst || Ombra della Paura || Sombra del miedo || Cień Strachu || 공포의 그림자 || フィアー シャドウ || 恐懼陰影 || 恐惧阴影
+|-
+| [[Infuse Condition]] || Transfert de condition || Zustand einflößen || Infondi Condizione || Infundir condición || Przenoszenie Przypadłości || 상태 전이 || インフューズ コンディション || 病症移轉 || 病症转嫁
+|-
+| [[Malaise]] || Malaise || Unwohlsein || Malessere || Malestar || Niemoc || 무기력 전염 || マレイズ || 萎靡不振 || 萎靡
+|-
+| [[Offering of Blood]] || Offrande de sang || Blutopfer || Offerta di Sangue || Ofrenda de sangre || Ofiara z Krwi || 피의 교환 || ブラッド オファー || 血之獻祭 || 血之奉献
+|-
+| [[Dark Fury]] || Fureur noire || Dunkle Wut || Furia Oscura || Furia oscura || Mroczna Furia || 어둠의 분노 || ダーク フューリー || 暗黑憤怒 || 暗之暴怒
+|-
+| [[Order of the Vampire]] || Ordre du vampire || Orden des Vampirs || Ordine del Vampiro || Orden del vampiro || Rozkaz Wampira || 흡혈귀의 주문 || ヴァンパイア オーダー || 吸血鬼命令 || 吸血鬼的指令
+|-
+| [[Plague Sending]] || Propagation du fléau || Pest aussenden || Trasmissione della Peste || Envío pestilente || Przesyłanie Plagi || 저주 전이 || プレイグ センド || 散播疫病 || 瘟疫传播
+|-
+| [[Feast of Corruption]] || Festin de corruption || Schmaus der Verdorbenheit || Banchetto della Corruzione || Festín de corrupción || Uczta Zepsucia || 타락의 향연 || コラプション フィースト || 墮落饗宴 || 堕落盛宴
+|-
+| [[Blood Ritual ]] || Rituel de sang || Blutritual || Rituale del Sangue || Ritual de sangre || Rytuał Krwi || 피의 의식 || ブラッド リチュアル  || 血之祭典 || 鲜血典礼
+|-
+| [[Touch of Agony ]] || Caresse d'agonie || Berührung der Qual || Tocco dell'Agonia || Toque de agonía || Dotyk Agonii || 고난의 손길 || アゴニー タッチ || 劇痛之觸 || 痛苦之触
+|}
+== Factions ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Animate Flesh Golem]] || Animation du Golem de chair || Fleischgolem beleben || Anima Golem di Carne || Animar gólem de carne || Ożywienie Golema Tkankowego || 살점붙은 골렘 || アニメート フレッシュ ゴーレム || 操縱血肉高崙 || 操纵血肉傀儡
+|-
+| [[Animate Vampiric Horror]] || Animation d'horreur vampirique || Vampirschreck beleben || Anima Orrore Vampirico || Animar horror vampírico || Ożywienie Wampirycznej Poczwary || 흡혈졸개 || アニメート ヴァンピリック ホラー || 操縱吸血骸骨 || 操纵吸血骸骨
+|-
+| [[Jaundiced Gaze]] || Regard ictérique || Neidvoller Blick || Sguardo Invidioso || Mirada ictérica || Zawistne Spojrzenie || 편협한 시선 || ジャーンダス ゲイズ || 嫉恨凝視 || 仇视
+|-
+| [[Discord]] || Discorde || Zwietracht || Discordia || Discordia || Niezgoda || 불협화음 || ディスコード || 協調破壞 || 失衡
+|-
+| [[Deathly Chill]] || Froideur mortelle || Tödliche Kühlung || Brivido Mortale || Escalofrío de muerte || Trupi Chłód || 죽음의 한기 || デスリー チル || 致命嚴寒 || 致命深寒
+|-
+| [[Verata's Sacrifice]] || Sacrifice de Verata || Veratas Opfer || Sacrificio di Verata || Sacrificio de Verata || Ofiara Veraty || 베라타의 희생 || ヴェラタ サクリファイス || 芙瑞達的犧牲 || 维拉塔的献祭
+|-
+| [[Well of Weariness]] || Puits de Lassitude || Brunnen der Müdigkeit || Pozzo della Stanchezza || Pozo de cansancio || Studnia Zmęczenia || 소모의 늪 || ウィアリネス ウェル || 疲倦之池 || 疲倦之池
+|-
+| [[Consume Corpse]] || Consommation de cadavre || Kadaver verzehren || Consuma Cadavere || Consumir cadáver || Pożarcie Zwłok || 어둠의 거래 || コンシューム コープス || 屍體吸收 || 尸骸吞噬
+|-
+| [[Reckless Haste]] || Extrême hâte || Rücksichtslose Hast || Fretta Avventata || Prisa temeraria || Nieostrożny Pośpiech || 무모한 빠름 || レックレス ヘイスト || 失心瘋 || 失心疯
+|-
+| [[Wail of Doom]] || Complainte Funeste ||  Schicksalsklage || Lamento del Fato || Gemido de condena || Lament Zagłady || 파멸의 울부짖음 || ドゥーム ウェイル || 毀滅哀嚎 || 末日哀嚎
+|-
+| [[Spoil Victor]] || Vainqueur dépouillé || Sieger plündern || Deruba il Vincitore || Aguafiestas || Łup Zwycięzcy || 우월의 대가 || スポイル ヴィクター || 勝者的掠奪 || 胜者之掠
+|-
+| [[Lifebane Strike]] || Coup du fléau || Lebensfluchstoß || Colpo Devastavita || Golpe envenenado || Zgubne Uderzenie || 생명흡수의 일격 || ライフベイン ストライク || 滅絕衝擊 || 灭绝冲击
+|-
+| [[Bitter Chill]] || Frisson amer || Bitterkalt || Freddo Pungente || Escalofrío punzante || Bolesny Chłód || 극도의 오한 || ビター チル || 冷冽嚴寒 || 深寒
+|-
+| [[Fetid Ground]] || Humus fétide || Stinkender Boden || Terreno Fetido || Suelo fétido || Cuchnąca Ziemia || 악취나는 땅 || フェティド グラウンド || 惡臭地表 || 烂泥
+|-
+| [[Taste of Pain]] || Saveur de douleur || Geschmack der Schmerzen || Sapore del Dolore || Sabor del dolor || Smak Bólu || 고통의 음미 || ペイン テイスト || 苦痛滋味 || 疼痛滋味
+|-
+| [[Defile Enchantments]] || Enchantements profanés || Verzauberungen schänden || Contamina Incantesimi || Profanar encantamientos || Splugawienie Zaklęć || 오염된 강화 마법 || ディファイル エンチャント || 敗壞加持 || 增益玷污
+|-
+| [[Blood Bond]] || Lien du sang || Blutsbande || Legame di Sangue || Vínculo de sangre || Krwawe Więzy || 혈액 공급 || ブラッド ボンド || 血之連結 || 鲜血链
+|-
+| [[Cultist's Fervor]] || Ferveur de l'adepte || Eifer des Sektierers || Fervore dell'Adepto || Fervor del profano || Żarliwość Kultysty || 숭배자의 흥분 || カルティスト ファーバー || 異教儀式 || 膜拜之火
+|-
+| [[Vampiric Spirit]] || Esprit vampirique || Vampirgeist || Spirito Vampirico || Espíritu vampírico || Wampiryczny Duch || 흡혈귀의 정기 || ヴァンピリック スピリット || 吸血之靈 || 吸血之灵
+|-
+| [[Soul Bind]] || Lien des âmes || Seelenfessel || Lega Anima || Vínculo de almas || Spętanie Duszy || 망자의 구속 || ソウル バインド || 靈魂束縛 || 灵魂束缚
+|-
+| [[Shivers of Dread]] || Frissons de terreur || Angstschauer || Brividi di Terrore || Escalofríos temerosos || Dreszcze Grozy || 한기의 전율 || ドレッド シヴァー || 恐懼惡寒 || 畏惧之寒
+|-
+| [[Rising Bile]] || Fiel || Hochkommende Galle || Bile Crescente || Subida de bilis || Wzbierająca Żółć || 잠재된 분노 || ライジング バイル || 憤怒高漲 || 怒火
+|-
+| [[Icy Veins]] || Veines glaciales || Eisadern || Vene di Ghiaccio || Venas heladas || Lodowate Żyły || 차가운 피 || アイシー ベイン || 冰冷紋理 || 寒霜蚀脉
+|-
+| [[Weaken Knees]] || Genoux flageolants || Weiche Knie || Ginocchia Molli || Rodillas debilitadas || Osłabienie Kolan || 무릎 약화 || ウィークン ニー || 削弱膝蓋 || 软骨术
+|-
+| [[Vile Miasma]] || Miasme insalubre || Fauler Gestank || Miasma Vile || Miasma vil || Ohydny Fetor || 지독한 독기운 || バイル マイアズマ || 惡劣毒氣 || 毒雾
+|-
+| [[Order of Apostasy]] || Ordre d'apostasie || Orden der Abtrünnigkeit || Ordine dell’Apostasia || Orden de la apostasía || Rozkaz Apostazji || 변절의 주문 || アポスタシー オーダー || 背叛命令 || 反叛
+|-
+| [[Star Servant]] || Serviteur des étoiles || Sternendiener || Servitore Stella || Sirviente celestial || Gwiezdny Sługa || 천상의 종복 || スター サーバント || 流星使者 || 流星使者
+|-
+| [[Gaze of Contempt]] || Regard du mépris || Verächtlicher Blick || Sguardo di Disprezzo || Mirada de desprecio || Pogardliwe Spojrzenie || 평가의 시선 || コンテンプト ゲイズ || 輕蔑凝視 || 蔑视
+|-
+| [[Dark Fury]] || Fureur noire || Dunkle Wut || Furia Oscura || Furia oscura || Mroczna Furia || 어둠의 분노 || ダーク フューリー || 暗黑憤怒 || 黑暗之怒
+|-
+| [[Plague Sending]] || Propagation du fléau || Pest aussenden || Trasmissione della Peste || Envío pestilente || Przesyłanie Plagi || 저주 전이 || プレイグ センド || 散播疫病 || 瘟疫传播
+|-
+| [[Vampiric Swarm]] || Nuée vampirique || Vampirschwarm || Sciame Vampirico || Enjambre vampírico || Wampiryczny Rój || 흡혈의 벌떼 || ヴァンピリック スウォーム || 吸血蟲群 || 吸血虫群
+|-
+| [[Blood Drinker]] || Buveur de sang || Bluttrinker || Bevi Sangue || Chupador de sangre || Krwiopijca || 피의 흡수 || ブラッド ドリンカー || 鮮血飲者 || 饮血
+|-
+| [[Vampiric Bite]] || Morsure vampirique || Vampirbiss || Morso del Vampiro || Mordedura de vampiro || Wampiryczne Ukąszenie || 흡혈 이빨 || ヴァンピリック バイト || 吸血之咬 || 吸血之咬
+|-
+| [[Wallow's Bite]] || Morsure de bauge || Wälzerbiss || Morso dello Sguazzatore || Mordedura rastrera || Ugryzienie Błotniaka || 수렁 이빨 || ワロー バイト || 墮落之咬 || 堕落之噬
+|-
+| [[Enfeebling Touch]] || Toucher de faiblesse || Schwächende Berührung || Tocco Debilitante || Toque debilitante || Osłabiające Dotknięcie || 쇠약의 손길 || エンフィーブル タッチ || 衰弱之觸 || 衰弱之触
+|-
+| [[Oppressive Gaze]] || Regard de l'oppresseur || Repressiver Blick || Sguardo Oppressivo || Mirada opresora || Gnębiące Spojrzenie || 압박의 주시 || オプレッシブ ゲイズ || 沉重的凝視 || 怒视
+|}
+== Nightfall ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Dissipation]] || Dissipation || Auflösung || Dissipazione || Desvanecimiento || Rozpraszanie || 소실 || ディシペイション || 消散 || 离散
+|-
+| [[Toxic Chill]] || Frisson toxique || Toxische Kälte || Freddo Tossico || Frío tóxico || Toksyczny Chłód || 독성 냉기 || トキシック チル || 劇毒嚴寒 || 剧毒寒流
+|-
+| [[Poisoned Heart]] || Coeur empoisonné || Vergiftetes Herz || Cuore Avvelenato || Corazón envenenado || Zatrute Serce || 의도적인 중독 || ポイズン ハート || 毒害之心 || 浸毒之心
+|-
+| [[Meekness]] || Soumission   || Sanftmut || Mansuetudine || Docilidad || Potulność || 교화 || ミークネス || 溫順 || 温和
+|-
+| [[Ravenous Gaze]] || Regard féroce || Heißhungriger Blick || Sguardo Famelico || Mirada rapaz || Chciwe Spojrzenie || 탐욕의 시선 || ラヴィナス ゲイズ || 貪婪凝視 || 贪婪之眼
+|-
+| [[Order of Undeath]] || Ordre des morts-vivants || Orden der Untoten || Ordine della Non-morte || Orden de los muertos vivientes || Rozkaz Ożywieńców || 죽음의 명령 || アンデス オーダー || 不死命令 || 号令亡灵
+|-
+| [[Putrid Flesh]] || Chair putride || Verwesendes Fleisch || Carne Putrefatta || Carne putrefacta || Zgniłe Ciało || 오염된 육체 || ピュートリッド フレッシュ || 惡臭肉體 || 血肉横飞
+|-
+| [[Feast for the Dead]] || Festin des morts || Fest für die Toten || Banchetto per i Morti || Festín mortal || Uczta Nieumarłych || 망자의 향연 || フィースト フォー デッド || 死亡盛宴 || 死者的盛宴
+|-
+| [[Jagged Bones]] || Os broyés || Versplitterte Knochen || Ossa Seghettate || Huesos serrados || Rozdzierające Kości || 칼날 해골 || ジャグ ボーン || 鋸齒骸骨 || 操纵构造体
+|-
+| [[Contagion]] || Contagion || Ansteckung || Contagio || Contagio || Zakażanie || 상태 전염 || コンテイジョン || 病症蔓延 || 传染
+|-
+| [[Bloodletting]] || Saignée || Aderlass || Prelievo || Sangría || Upuszczanie Krwi || 유혈 || ブラッドレッティング || 放血 || 饮血
+|-
+| [[Ulcerous Lungs]] || Poumons ulcérés || Geschwürige Lungen || Polmoni Ulcerosi || Pulmones ulcerosos || Wrzody Płuc || 부패한 호흡 || アルサラス ラング || 肺臟腐蝕 || 肺溃疡
+|-
+| [[Depravity]] || Dépravation || Verderbtheit || Depravazione || Depravación || Deprawacja || 타락의 대가 || ディプラビティ || 邪惡 || 败坏
+|-
+| [[Pain of Disenchantment]] || Douleur de désenchantement || Schmerz der Entzauberung || Dolore del Disincanto || Dolor del desencantamiento || Ból Antyzaklęcia || 강화 박탈의 고통 || ディスエンチャント ペイン || 覺醒苦痛 || 亵渎之痛
+|-
+| [[Reaper's Mark]] || Empreinte du Faucheur || Zeichen des Schnitters || Segno del Mietitore || Marca del segador || Piętno Żniwiarza || 사신의 표식 || リーパー マーク || 索命印記 || 夺命
+|-
+| [[Mark of Fury]] || Marque de Furie || Zeichen der Wut || Segno della Furia || Marca de furia || Piętno Furii || 분노의 표식 || フューリー マーク || 狂暴印記 || 暴怒印记
+|-
+| [[Vocal Minority]] || Aphonie || Stimmminderheit || Afonia || Minoría ruidosa || Odebranie Głosu || 고음 불가 || ボーカル マイノリティ || 沉靜 || 失声
+|-
+| [[Recurring Scourge]] || Fléau récurrent || Wiederkehrende Geißel || Flagello Ricorrente || Azote repetido || Powracająca Plaga || 반복되는 고난 || リカー スカージ || 苦痛迴圈 || 轮回之灾
+|-
+| [[Corrupt Enchantment]] || Enchantement corrompu || Verzauberung verderben || Corrompi Incantesimo || Corrompencantamientos || Skażenie Zaklęcia || 강화 마법 악용 || コラプト エンチャント || 加持腐化 || 增益腐化
+|-
+| [[Signet of Sorrow]] || Sceau du chagrin || Siegel des Kummers || Sigillo del Rimpianto || Sello del pesar || Sygnet Smutku || 애도의 인장 || ソロー シグネット || 哀傷紋章 || 哀伤纹章
+|-
+| [[Signet of Suffering]] || Sceau de souffrance || Siegel des Leidens || Sigillo della Sofferenza || Sello de sufrimiento || Sygnet Cierpienia || 고통 인장 || サファー シグネット || 苦難紋章 || 苦痛纹章
+|-
+| [[Signet of Lost Souls]] || Sceau des âmes perdues || Siegel der verlorenen Seelen || Sigillo delle Anime Smarrite || Sello de las almas perdidas || Sygnet Zagubionych Dusz || 죽은 영혼의 인장 || ロスト ソウル シグネット || 失魂紋章 || 失魂纹章
+|-
+| [[Verata's Promise]] || Promesse de Verata || Veratas Versprechen || Promessa di Verata || Promesa de Verata || Obietnica Veraty || 베라타의 약속 || ヴェラタ プロミス || 芙瑞達誓言 || 维拉塔的约束
+|-
+| [[Envenom Enchantments]] || Enchantements envenimés || Verzauberungen vergiften || Avvelena Incantesimi || Envenenaencantamientos || Zatruwające Zaklęcia || 독성 강화 마법 || インヴェナム エンチャント || 加持毒害 || 流毒
+|-
+| [[Rip Enchantment]] || Confiscation d'enchantement || Verzauberung zerreißen || Squarcia Incantesimo || Rasgar encantamiento || Rozdarcie Zaklęcia || 강화 마법 해제 || リップ エンチャント || 撕裂加持 || 增益分裂
+|-
+| [[Blood of the Aggressor]] || Sang de l'agresseur || Blut des Aggressoren || Sangue dell'Aggressore || Sangre del agresor || Krew Napastnika || 침략자의 피 || アグレッサー ブラッド || 侵略者之血 || 侵略者之血
+|-
+| [[Well of Darkness]] || Puits d'obscurité || Brunnen der Dunkelheit || Pozzo dell'Oscurità || Pozo de oscuridad || Studnia Ciemności || 어둠의 늪 || ダークネス ウェル || 暗夜之池 || 黑暗之池
+|-
+| [[Well of Silence]] || Puits du silence || Brunnen der Stille || Pozzo del Silenzio || Pozo de silencio || Studnia Milczenia || 침묵의 늪 || サイレンス ウェル || 靜寂之池 || 沉默之池
+|}
+<noinclude>
+[[Category:Tables]]
+</noinclude>

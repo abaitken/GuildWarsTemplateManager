@@ -1,0 +1,303 @@
+﻿== Core ==
+__NOTOC__
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Mantra of Earth]] || Mantra de la Terre || Mantra der Erde || Mantra della Terra || Mantra de la tierra || Mantra Ziemi || 대지의 권능 || アース マントラ || 大地頌歌 || 大地祷文
+|-
+| [[Mantra of Flame]] || Mantra de flamme || Mantra des Feuers || Mantra della Fiamma || Mantra de la llama || Mantra Płomienia || 화염의 권능 || フレイム マントラ || 火焰頌歌 || 火焰祷文
+|-
+| [[Mantra of Frost]] || Mantra de givre || Mantra des Frosts || Mantra della Brina || Mantra del frío || Mantra Mrozu || 서리의 권능 || フロスト マントラ || 冰霜頌歌 || 冰霜祷文
+|-
+| [[Mantra of Lightning]] || Mantra de foudre || Mantra des Blitzes || Mantra del Fulmine || Mantra del relámpago || Mantra Błyskawicy || 번개의 권능 || ライトニング マントラ || 閃電頌歌 || 闪电祷文
+|-
+| [[Hex Breaker]] || Leveur de maléfice || Gebrochene Verhexung || Anti-Fattura || Destructor de maleficios || Łamacz Klątw || 분쇄의 권능 || ヘックス ブレイカー || 破咒頌歌 || 破咒术
+|-
+| [[Mantra of Recovery]] || Mantra de récupération || Mantra der Erholung || Mantra del Recupero || Mantra de recuperación || Mantra Odzyskiwania || 회복의 권능 || リカバリー マントラ || 回復頌歌 || 恢复祷文
+|-
+| [[Mantra of Persistence]] || Mantra de persévérance || Mantra des Bestehens || Mantra della Persistenza || Mantra de persistencia || Mantra Wytrwałości || 영속의 권능 || パーシステンス マントラ || 持久頌歌 || 坚韧祷文
+|-
+| [[Mantra of Inscriptions]] || Mantra des inscriptions || Mantra der Inschriften || Mantra delle Iscrizioni || Mantra de inscripciones || Mantra Inskrypcji || 기억의 권능 || インスクリプション マントラ || 碑銘頌歌 || 抄写祷文
+|-
+| [[Mantra of Resolve]] || Mantra de résolution || Mantra des Abschlusses || Mantra della Risoluzione || Mantra de determinación || Mantra Zdecydowania || 의지의 권능 || リゾルブ マントラ || 意志頌歌 || 意志祷文
+|-
+| [[Fragility]] || Fragilité || Zerbrechlichkeit || Fragilità || Fragilidad || Kruchość || 체질 약화 || フラジリティ || 脆弱 || 脆弱
+|-
+| [[Power Spike]] || Dissipation de pouvoir || Kraftdorn || Spina del Potere || Punzada de poder || Uderzenie Mocy || 마법 강타 || パワー スパイク || 強力釘刺 || 能量钉刺
+|-
+| [[Power Drain]] || Drain de pouvoir || Kraftentzug || Calo di Potere || Drenaje de poder || Wyssanie Mocy || 마력 흡수 || パワー ドレイン || 強力吸收 || 能量抽取
+|-
+| [[Empathy]] || Empathie || Empathie || Empatia || Empatía || Empatia || 자학 || エンパシー || 自虐 || 物理反噬
+|-
+| [[Backfire]] || Retour de flamme || Rückschlag || Ritorno di Fiamma || Detonación || Wypalanie || 마력 역류 || バックファイア || 魔力反噬 || 魔法反噬
+|-
+| [[Diversion]] || Diversion || Ablenkung || Diversione || Distracción || Dywersja || 견제 || ディバージョン || 牽制 || 牵制
+|-
+| [[Conjure Phantasm]] || Conjuration de fantasme || Trugbild beschwören || Evoca Fantasma || Conjurar fantasma || Przyzwanie Widziadła || 환영 소환 || カンジャー ファンタズム || 召喚幻影 || 召唤幻影
+|-
+| [[Ignorance]] || Ignorance || Ignoranz || Ignoranza || Ignorancia || Ignorancja || 인장 무효 || イグノランス || 無知 || 无知
+|-
+| [[Arcane Conundrum]] || Enigme des Arcanes || Arkanes Rätsel || Enigma Arcano || Acertijo arcano || Magiczna Zagadka || 혼란 조장 || アルカナ コヌンドラム || 思緒混亂 || 奥术负荷
+|-
+| [[Illusion of Haste]] || Illusion de hâte || Illusion der Eile || Illusione di Velocità || Ilusión de velocidad || Iluzja Pośpiechu || 신속의 허상 || ヘイスト イリュージョン || 迅速幻覺 || 幻术迅捷
+|-
+| [[Energy Surge]] || Afflux d'énergie || Energiewelle || Flusso di Energia || Aumento de energía || Udar Energetyczny || 에너지 파열 || エネルギー サージ || 能量震盪 || 能量潮涌
+|-
+| [[Ether Feast]] || Festin éthéré || Ätherschmaus || Banchetto d'Etere || Festín de éter || Eteryczna Uczta || 정신의 향락 || エーテル フィースト || 精神饗宴 || 法力盛宴
+|-
+| [[Energy Burn]] || Flamme d'énergie || Energiebrand || Energia Bruciata || Quemadura de energía || Wypalanie Energii || 에너지 연소 || エネルギー バーン || 能量燃燒 || 法力燃烧
+|-
+| [[Clumsiness]] || Maladresse || Ungeschick || Goffaggine || Torpeza || Niezgrabność || 근육 마비 || クラムジネス || 笨拙 || 笨拙
+|-
+| [[Mind Wrack]] || Délabrement spirituel || Geistiges Wrack || Relitto Mentale || Sacudida mental || Spustoszenie Umysłu || 심리적 압박 || マインド ラック || 心靈破壞 || 意识崩坏
+|-
+| [[Crippling Anguish]] || Angoisse paralysante || Verkrüppelnde Qual || Angoscia Paralizzante || Angustia agobiante || Okulawiające Katusze || 속박의 고통 || クリップル アングウィッシュ || 殘廢苦痛 || 残足之痛
+|-
+| [[Soothing Images]] || Images apaisantes || Beruhigende Bilder || Immagini Rassicuranti || Imágenes relajantes || Kojące Wizje || 분노의 진정 || スーズ イメージ || 意念平靜 || 心灵安抚
+|-
+| [[Cry of Frustration]] || Cri de Frustration || Schrei der Frustration || Grido di Frustrazione || Grito de frustración || Krzyk Frustracji || 좌절의 강요 || フラストレイション クライ || 挫折哭喊 || 挫志号叫
+|-
+| [[Leech Signet]] || Sceau sangsue || Blutsauger-Siegel || Sigillo della Sanguisuga || Sello de la sanguijuela || Sygnet Pijawki || 흡수 인장 || リーチ シグネット || 搾取紋章 || 寄生纹章
+|-
+| [[Signet of Humility]] || Sceau d'humilité || Siegel der Demut || Sigillo dell'Umiltà || Sello de la humildad || Sygnet Pokory || 비하 인장 || ヒューミリティ シグネット || 謙卑紋章 || 谦卑纹章
+|-
+| [[Arcane Mimicry ]] || Mimétisme des Arcanes || Arkane Mimikry || Mimica Arcana || Imitación arcana || Magiczna Mimikra || 마법 흉내 || アルカナ ミミック  || 魔力模仿 || 法术模仿
+|-
+| [[Spirit Shackles]] || Chaînes spirituelles || Geistfesseln || Catene Spirituali || Grilletes espirituales || Duchowe Okowy || 정신의 족쇄 || スピリット シャックル || 精神束縛 || 精神束缚
+|-
+| [[Shatter Hex]] || Annihilateur de maléfices || Verhexung brechen || Spezza Fattura || Destruir maleficio || Rozbicie Klątwy || 약화 마법 분쇄 || シャター ヘックス || 降咒粉碎 || 妖咒粉碎
+|-
+| [[Drain Enchantment]] || Drain d'enchantement || Verzauberung entziehen || Prosciuga Incantesimo || Drenar encantamiento || Wyssanie Zaklęcia || 강화 마법 흡수 || ドレイン エンチャント || 加持吸收 || 增益抽取
+|-
+| [[Shatter Enchantment]] || Dissipation des enchantements || Verzauberung brechen || Rompi Incantesimo || Destruir encantamiento || Rozbicie Zaklęcia || 강화 마법 분쇄 || シャター エンチャント || 加持粉碎 || 增益粉碎
+|-
+| [[Echo]] || Echo || Echo || Eco || Eco || Echo || 메아리 || エコー || 回音 || 临摹
+|-
+| [[Arcane Echo ]] || Echo des Arcanes || Arkanes Echo || Eco Arcana || Eco arcano || Magiczne Echo || 마법의 메아리 || アルカナ エコー  || 魔法回音 || 法术临摹
+|-
+| [[Imagined Burden]] || Fardeau imaginaire || Eingebildete Bürde || Fardello Immaginario || Carga imaginaria || Urojone Brzemię || 상상의 속박 || イマジン バーデン || 意念負荷 || 负荷幻象
+|-
+| [[Epidemic]] || Epidémie || Epidemie || Epidemia || Epidemia || Epidemia || 확산 || エピデミック || 病症擴散 || 症状扩散
+|-
+| [[Energy Drain]] || Drain d'énergie || Energieentzug || Risucchio Energia || Drenaje de energía || Wyssanie Energii || 에너지 강탈 || エネルギー ドレイン || 能量吸收 || 能量吸收
+|-
+| [[Energy Tap ]] || Siphon d'énergie || Energie abzapfen || Fonte di Energia || Grifo de energía || Pobranie Energii || 에너지 흡수 || エネルギー タップ  || 能量抽取 || 能量分流
+|}
+== Prophecies ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Power Block]] || Blocage de pouvoir || Kraftblock || Blocco del Potere || Bloqueo de poder || Blokada Mocy || 마법 차단 || パワー ブロック || 強力封鎖 || 魔法禁锢
+|-
+| [[Distortion]] || Distorsion || Verzerrung || Distorsione || Distorsión || Zniekształcenie || 회피의 권능 || ディストーション || 迴避頌歌 || 失真幻象
+|-
+| [[Mantra of Celerity]] || Mantra de célérité || Mantra der Geschwindigkeit || Mantra della Celerità || Mantra de celeridad || Mantra Szybkości || 신속의 권능 || セレリティ マントラ || 靈敏頌歌 || 迅捷祷文
+|-
+| [[Mantra of Concentration]] || Mantra de concentration || Mantra der Konzentration || Mantra della Concentrazione || Mantra de concentración || Mantra Koncentracji || 집중의 권능 || コンセントレイト マントラ || 專注頌歌 || 专注祷文
+|-
+| [[Mantra of Signets ]] || Mantra des sceaux || Mantra der Siegel || Mantra dei Sigilli || Mantra de sellos || Mantra Sygnetów || 인장의 권능 || シグネット マントラ || 紋章頌歌 || 纹章祷文
+|-
+| [[Confusion]] || Confusion || Konfusion || Confusione || Confusión || Zamęt || 혼란 || コンフュージョン || 混亂 || 混乱
+|-
+| [[Inspired Enchantment]] || Enchantement inspiré || Inspirierte Verzauberung || Incantesimo Ispirato || Encantamiento inspirado || Inspirujące Zaklęcie || 강화 마법 제거 || インスパイア エンチャント || 靈感加持 || 增益激励
+|-
+| [[Inspired Hex]] || Maléfice inspiré || Inspirierte Verhexung || Fattura Ispirata || Maleficio inspirado || Inspirująca Klątwa || 약화 마법 제거 || インスパイア ヘックス || 靈感降咒 || 妖咒激励
+|-
+| [[Power Leak]] || Fuite de pouvoir || Kraftleck || Perdita di Potere || Pérdida de poder || Wyciek Mocy || 마력 소거 || パワー リーク || 強力滲漏 || 能量流逝
+|-
+| [[Shatter Delusions]] || Dispersion des illusions || Täuschungen brechen || Delusioni Infrante || Destruir ilusiones || Rozbicie Urojeń || 약화 폭발 || シャター デリュージョン || 幻覺粉碎 || 幻觉粉碎
+|-
+| [[Blackout]] || Black-out || Blackout || Blackout || Suspensión || Zaciemnienie || 기억 상실 || ブラックアウト || 意識喪失 || 失魂
+|-
+| [[Illusion of Weakness]] || Illusion de faiblesse || Illusion der Schwäche || Illusione di Debolezza || Ilusión de debilidad || Iluzja Słabości || 환상 고문 || ウィークネス イリュージョン || 虛弱幻覺 || 幻术虚弱
+|-
+| [[Illusionary Weaponry]] || Armes illusoires || Illusion der Waffen || Armamento Illusorio || Armamento irreal || Iluzoryczna Broń || 환영 공격 || イリュージョナリー ウェポン || 幻象武器 || 幻化武器
+|-
+| [[Sympathetic Visage]] || Visage avenant || Sympathisches Gesicht || Aspetto Compassionevole || Semblante cordial || Życzliwe Oblicze || 고통의 파장 || シンパセティック ヴィサージュ || 感同身受 || 感同身受
+|-
+| [[Channeling]] || Canalisation || Kanalisieren || Incanalamento || Canalización || Czerpanie Mocy || 에너지 갈취 || チャネリング || 聚集能量 || 能量偷取
+|-
+| [[Ether Lord]] || Seigneur éthéré || Herr über den Äther || Signore dell'Etere || Señor del éter || Władca Eteru || 정신의 지배 || エーテル ロード || 精神支配 || 法力支配
+|-
+| [[Phantom Pain]] || Douleur fantôme || Phantomschmerz || Dolore Fantasma || Dolor fantasma || Widmowy Ból || 고통의 환상 || ファントム ペイン || 痛苦幻影 || 幻象苦楚
+|-
+| [[Ethereal Burden]] || Fardeau éthéré || Ätherische Bürde || Fardello Etereo || Carga etérea || Eteryczne Brzemię || 환영의 속박 || エーテル バーデン || 幻影負荷 || 幻象枷锁
+|-
+| [[Guilt]] || Culpabilité || Schuld || Colpa || Culpa || Wina || 악몽의 환기 || ギルト || 內疚 || 负罪
+|-
+| [[Ineptitude]] || Incompétence || Unbeholfenheit || Inettitudine || Ineptitud || Niezdarność || 실명의 속박 || イネプタテュード || 愚蠢 || 致盲
+|-
+| [[Spirit of Failure]] || Esprit de l'échec || Geist des Versagens || Spirito del Fallimento || Espíritu del fracaso || Duch Porażki || 실패의 그림자 || フェイリア スピリット || 失誤心靈 || 心不在焉
+|-
+| [[Wastrel's Worry]] || Embarras de l'incapable || Verschwendung || Preoccupazione del Fannullone || Preocupación del gandul || Zmartwienie Marnotrawcy || 부랑자의 근심 || ウェイストレル ウォーリー || 瓦思崔的憂慮 || 瓦思垂的忧虑
+|-
+| [[Shame]] || Honte || Schande || Vergogna || Vergüenza || Wstyd || 악몽의 반전 || シェイム || 羞愧 || 羞愧
+|-
+| [[Panic]] || Panique || Panik || Panico || Pánico || Panika || 공황 || パニック || 恐慌 || 惊恐
+|-
+| [[Migraine]] || Migraine || Migräne || Emicrania || Migraña || Migrena || 두통 || マイグレイン || 頭痛 || 头痛
+|-
+| [[Fevered Dreams]] || Rêves enfiévrés || Fieberträume || Sogni Febbrili || Sueños febriles || Gorączkowe Sny || 몽환의 전이 || フィーバー ドリーム || 惡夢傳染 || 梦境感染
+|-
+| [[Signet of Midnight]] || Sceau de minuit || Siegel der Mitternacht || Sigillo della Mezzanotte || Sello de la medianoche || Sygnet Północy || 어둠 인장 || ミッドナイト シグネット || 幽暗紋章 || 黑夜纹章
+|-
+| [[Signet of Weariness]] || Sceau de lassitude || Siegel der Müdigkeit || Sigillo della Stanchezza || Sello del cansancio || Sygnet Zmęczenia || 권태 인장 || ウィアリネス シグネット || 疲倦紋章 || 疲劳纹章
+|-
+| [[Signet of Illusions]] || Sceau des illusions || Siegel der Illusionen || Sigillo delle Illusioni || Sello de las ilusiones || Sygnet Iluzji || 환상 인장 || イリュージョン シグネット || 幻術紋章 || 幻术纹章
+|-
+| [[Keystone Signet]] || Sceau de voûte || Schlussstein-Siegel || Sigillo della Pietra di Volta || Sello de la piedra angular || Sygnet Klucza || 활성 인장 || キーストーン シグネット || 楔石紋章 || 楔石纹章
+|-
+| [[Mimic]] || Imitation || Mimikry || Mimo || Imitación || Naśladownictwo || 모방 || ミミック || 模仿 || 模仿
+|-
+| [[Disappear]] || Disparition || Verschwinden || Scomparsa || Desaparecer || Zniknięcie || 투명 || ディサピア || 消失 || 消失
+|-
+| [[Unnatural Signet]] || Sceau antinaturel || Unnatürliches Siegel || Sigillo Innaturale || Sello antinatural || Nienaturalny Sygnet || 영혼 제거 인장 || アンナチュラル シグネット || 反自然紋章 || 逆反纹章
+|-
+| [[Elemental Resistance]] || Résistance aux éléments || Elementarwiderstand || Resistenza Elementale || Resistencia elemental || Odporność na Żywioły || 정령 저항 강화 || エレメンタル レジスタンス || 元素抵抗 || 元素壁垒
+|-
+| [[Physical Resistance]] || Résistance physique || Körperlicher Widerstand || Resistenza Fisica || Resistencia física || Fizyczna Odporność || 물리 저항 강화 || フィジカル レジスタンス || 物理抵抗 || 物理护盾
+|-
+| [[Chaos Storm]] || Tempête chaotique || Chaossturm || Tempesta di Caos || Tormenta del caos || Burza Chaosu || 혼돈의 폭풍 || カオス ストーム || 混沌風暴 || 混乱风暴
+|-
+| [[Arcane Thievery]] || Vol des Arcanes || Arkaner Diebstahl || Furto Arcano || Robo arcano || Magiczne Złodziejstwo || 마법 탈취 || アルカナ シーヴァリー || 魔法竊取 || 魔法窃取
+|-
+| [[Mantra of Recall]] || Mantra de rappel || Mantra der Zurückrufung || Mantra del Ricordo || Mantra del recuerdo || Mantra Przypomnienia || 회수의 권능 || リコール マントラ || 回歸頌歌 || 回忆祷文
+|}
+== Factions ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Lyssa's Balance]] || Equilibre de Lyssa || Lyssas Ausgleich || Equilibrio di Lyssa || Balanza de Lyssa || Równowaga Lyssy || 리사의 균형 || リッサ バランス || 麗莎的平衡 || 莉莎之衡
+|-
+| [[Distortion]] || Distorsion || Verzerrung || Distorsione || Distorsión || Zniekształcenie || 회피의 권능 || ディストーション || 迴避頌歌 || 失真幻象
+|-
+| [[Mantra of Concentration]] || Mantra de concentration || Mantra der Konzentration || Mantra della Concentrazione || Mantra de concentración || Mantra Koncentracji || 집중의 권능 || コンセントレイト マントラ || 專注頌歌 || 专注祷文
+|-
+| [[Revealed Enchantment]] || Enchantement révélé || Enthüllte Verzauberung || Incantesimo Rivelato || Encantamiento descubierto || Ujawnienie Zaklęcia || 강화 마법 탈취 || リヴィール エンチャント || 加持顯露 || 增益吸收
+|-
+| [[Revealed Hex]] || Maléfice révélé || Enthüllte Verhexung || Fattura Rivelata || Maleficio revelado || Ujawnienie Klątwy || 약화 마법 탈취 || リヴィール ヘックス || 降咒顯露 || 妖咒吸收
+|-
+| [[Power Leak]] || Fuite de pouvoir || Kraftleck || Perdita di Potere || Pérdida de poder || Wyciek Mocy || 마력 소거 || パワー リーク || 強力滲漏 || 能量流逝
+|-
+| [[Power Leech]] || Buveur d'énergie || Kraftfresser || Sanguisuga del Potere || Sanguijuela poderosa || Spijanie Mocy || 마력 거머리 || パワー リーチ || 強力榨取 || 能量榨取
+|-
+| [[Empathy]] || Empathie || Empathie || Empatia || Empatía || Empatia || 자학 || エンパシー || 自虐 || 物理反噬
+|-
+| [[Overload]] || Surcharge || Überlastung || Sovraccarico || Sobrecarga || Przeciążenie || 과부하 || オーバーロード || 超載 || 超载
+|-
+| [[Accumulated Pain]] || Cumul de douleur || Angehäufter Schmerz || Dolore Accumulato || Dolor acumulado || Nagromadzenie Bólu || 고통의 축적 || アキュムレート ペイン || 累積痛苦 || 疼痛堆积
+|-
+| [[Psychic Distraction]] || Distraction psychique || Übernatürliche Ablenkung || Distrazione Psichica || Distracción psíquica || Rozkojarzenie || 심적 혼란 || サイキック ディストラクション || 心靈錯亂 || 心智错乱
+|-
+| [[Lyssa's Aura]] || Aura de Lyssa || Lyssas Aura || Aura di Lyssa || Aura de Lyssa || Aura Lyssy || 리사의 오라 || リッサ オーラ || 麗莎靈氣 || 莉莎的光环
+|-
+| [[Ancestor's Visage]] || Visage de l'ancêtre || Antlitz des Ahnen || Volto dell'Antenato || Rostro ancestral || Oblicze Przodka || 분노의 형상 || アンセスター ヴィサージュ || 先人容貌 || 前人之貌
+|-
+| [[Auspicious Incantation]] || Incantation propice || Günstige Beschwörung || Incanto Propizio || Encantamiento próspero || Inkantacja Pomyślności || 행운의 주문 || オースピシャス インカンテイション || 幸運咒語 || 吉咒
+|-
+| [[Images of Remorse]] || Images d'attrition || Bilder der Reue || Immagini del Rimorso || Imágenes de remordimiento || Wizje Skruchy || 자책의 환상 || リモース イメージ || 悔恨幻象 || 悔恨之影
+|-
+| [[Recurring Insecurity]] || Insécurité récurrente || Wiederkehrende Unsicherheit || Insicurezza Ricorrente || Inseguridad constante || Powracająca Niepewność || 잠재된 위험 || リカー インセキュリティ || 危險循環 || 危机重重
+|-
+| [[Kitah's Burden]] || Fardeau de Kitah || Kitahs Bürde || Fardello di Kitah || Carga de Kitah || Brzemię Kitaha || 키타의 속박 || キータ バーデン || 吉塔的負荷 || 负罪枷锁
+|-
+| [[Arcane Languor]] || Alanguissement arcane || Arkane Schwäche || Languore Arcano || Languidez arcana || Magiczna Ospałość || 은밀한 무기력증 || アルカナ ラングァー || 魔法耗盡 || 法力衰弱
+|-
+| [[Conjure Nightmare]] || Conjuration de cauchemar || Alptraum beschwören || Evoca Incubo || Conjurar pesadilla || Przyzwanie Nocnej Zmory || 악몽 소환 || カンジャー ナイトメア || 召喚夢魘 || 召唤梦魇
+|-
+| [[Illusion of Pain]] || Illusion de douleur || Illusion der Schmerzen || Illusione del Dolore || Ilusión de dolor || Iluzja Bólu || 고통의 착각 || ペイン イリュージョン || 苦痛幻覺 || 幻境之痛
+|-
+| [[Psychic Instability]] || Instabilité psychique || Übernatürliche Labilität || Instabilità Psichica || Inestabilidad psíquica || Psychiczna Niestabilność || 심리적 부담 || サイキック インスタビリティ || 精神失衡 || 精神恍惚
+|-
+| [[Spirit of Failure]] || Esprit de l'échec || Geist des Versagens || Spirito del Fallimento || Espíritu del fracaso || Duch Porażki || 실패의 그림자 || フェイリア スピリット || 失誤心靈 || 心不在焉
+|-
+| [[Shared Burden]] || Fardeau partagé || Geteilte Bürde || Fardello Condiviso || Carga compartida || Wspólne Brzemię || 속박의 분담 || シェア バーデン || 共享負荷 || 群体负荷
+|-
+| [[Stolen Speed]] || Vol de vitesse || Gestohlene Eile || Velocità Sottratta || Velocidad robada || Skradziona Szybkość || 시간 차용 || ストールン スピード || 速度竊取 || 速度窃取
+|-
+| [[Power Return]] || Retour de pouvoir || Kraftrevanche || Ritorno di Potere || Regreso poderoso || Przywrócenie Mocy || 마법 되돌리기 || パワー リターン || 強力返回 || 能量回馈
+|-
+| [[Complicate]] || Complication || Erschweren || Complicazione || Complicación || Komplikacja || 혼란 가중 || コンプリケイト || 糾纏 || 纠缠
+|-
+| [[Ether Signet]] || Sceau éthéré || Äther-Siegel || Sigillo dell'Etere || Sello de éter || Eteryczny Sygnet || 정기 인장 || エーテル シグネット || 精神紋章 || 法力纹章
+|-
+| [[Signet of Disruption]] || Sceau d'interruption || Siegel der Unterbrechung || Sigillo del Disturbo || Sello de interrupción || Sygnet Przerwania || 혼란 인장 || ディスラプション シグネット || 擾亂紋章 || 扰乱纹章
+|-
+| [[Signet of Disenchantment]] || Sceau de désenchantement || Siegel der Entzauberung || Sigillo del Disincanto || Sello del desencantamiento || Sygnet Antyzaklęcia || 무효 인장 || ディスエンチャント シグネット || 覺醒紋章 || 觉醒纹章
+|-
+| [[Hex Eater Signet]] || Sceau du Mangeur de Maléfices || Verhexungsfresser-Siegel || Sigillo Mangiafattura || Sello de devoramaleficios || Sygnet Pożeracz Klątw || 약화 흡수 인장 || ヘックス イーター シグネット || 噬咒紋章 || 蚀咒纹章
+|-
+| [[Celestial Haste]] || Hâte céleste || Himmlische Eile || Fretta Celestiale || Celeridad celestial || Niebiański Pośpiech || 천상의 빠름 || セレスチャル ヘイスト || 梵天之速　 || 梵天之速
+|-
+| [[Feedback]] || Rétroaction || Reaktion || Retroazione || Retroalimentación || Sprzężenie Zwrotne || 연쇄 반응 || フィードバック || 反饋 || 反馈
+|-
+| [[Shatter Storm]] || Tempête destructrice || Sturm zerschlagen || Tempesta Distruttrice || Explosión fragmentaria || Burza Rozproszenia || 무효화 폭풍 || シャター ストーム || 粉碎風暴 || 破碎风暴
+|-
+| [[Expel Hexes]] || Expulsion de maléfices || Verhexungen vertreiben || Scaccia Fatture || Maleficios exhortados || Wypędzenie Klątw || 약화 구제 || エクスペル ヘックス || 降咒驅逐 || 驱咒
+|-
+| [[Unnatural Signet]] || Sceau antinaturel || Unnatürliches Siegel || Sigillo Innaturale || Sello antinatural || Nienaturalny Sygnet || 비자연 인장 || アンナチュラル シグネット || 反常紋章 || 异常纹章
+|-
+| [[Arcane Larceny]] || Larcin arcane || Arkane Entwendung || Ruberia Arcana || Latrocinio arcano || Magiczna Kradzież || 마법 강탈 || アルカナ ラーサニー || 盜竊魔法 || 法术转移
+|}
+== Nightfall ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Extend Conditions]] || Conditions prolongées || Zustände ausweiten || Prolunga Condizioni || Prolongar condiciones || Przedłużenie Przypadłości || 상태 연장 || エクステンド コンディション || 病症延長 || 恶化
+|-
+| [[Hypochondria]] || Hypochondrie || Hypochondrie || Ipocondria || Hipocondría || Hipochondria || 우울증 || ハイポコンドリア || 免疫破壞 || 忧郁
+|-
+| [[Power Flux]] || Flux de puissance || Kraftfluss || Flusso di Potere || Flujo de poder || Strumień Energii || 마력 폭주 || パワー フラックス || 強力流失 || 能量泄漏
+|-
+| [[Wastrel's Demise]] || Fin du gaspilleur || Ableben des Verschwenders || Dipartita del Fannullone || Muerte del derrochador || Upadek Marnotrawcy || 부랑자의 소멸 || ウェイストラル ディマイズ || 瓦斯崔之死 || 瓦斯垂的死亡
+|-
+| [[Spiritual Pain]] || Douleur spirituelle || Geisterschmerz || Dolore Spirituale || Dolor espiritual || Duchowy Ból || 영혼의 고통 || スピリチュアル ペイン || 生靈苦痛 || 灵魂之痛
+|-
+| [[Drain Delusions]] || Drain d'illusions || Täuschungen entziehen || Prosciuga Delusioni || Quitailusiones || Wyssanie Urojeń || 기만적 흡수 || ドレイン デリュージョン || 枯竭幻像 || 幻象抽取
+|-
+| [[Persistence of Memory]] || Persistance du souvenir || Beharrliche Erinnerungen || Persistenza della Memoria || Persistencia de los recuerdos || Wytrwała Pamięć || 기억의 지속 || メモリー パーシステンス || 堅定記憶 || 钢铁意志
+|-
+| [[Symbols of Inspiration]] || Symboles d'inspiration || Symbole der Inspiration || Simboli dell'Ispirazione || Símbolos de inspiración || Symbole Inspiracji || 영감의 징표 || インスピレイション シンボル || 靈感標誌 || 激励之符
+|-
+| [[Symbolic Celerity]] || Célérité symbolique || Symbolische Schnelligkeit || Celerità Simbolica || Celeridad simbólica || Przyspieszenie Sygnetów || 신속의 징표 || シンボリック セラリティ || 迅捷標誌 || 迅捷之符
+|-
+| [[Borrowed Energy]] || Emprunt d'énergie || Geliehene Energie || Energia in Prestito || Préstamo de energía || Pożyczona Energia || 에너지 차용 || ボロウ エネルギー || 能量借取 || 能量转借
+|-
+| [[Visions of Regret]] || Visions de Regret || Visionen des Bedauerns || Visioni di Rimpianto || Visiones de arrepentimiento || Wizje Żalu || 후회의 환영 || リグレット ビジョン || 懊悔幻想 || 懊悔
+|-
+| [[Frustration]] || Frustration || Frustration || Frustrazione || Frustración || Frustracja || 좌절감 || フラストレーション || 頓挫 || 挫折
+|-
+| [[Price of Pride]] || Prix de l'orgueil || Preis des Stolzes || Prezzo dell'Orgoglio || Precio del orgullo || Cena Dumy || 자부심의 대가 || プライド プライス || 驕傲的代價 || 傲慢之悔
+|-
+| [[Tease ]] || Taquinerie || Reizen || Burla || Bromista  || Dokuczliwość || 조롱 || ティーズ  || 嘲弄 || 嘲弄
+|-
+| [[Ether Phantom]] || Fantôme éthéré || Äther-Phantom || Fantasma Etereo || Fantasma de éter || Eteryczny Fantom || 착각의 기운 || エーテル ファントム || 幽靈氣息 || 法力幻影
+|-
+| [[Mistrust]] || Défiance || Argwohn || Diffidenza || Recelo || Nieufność || 불신의 기운 || ミストラスト || 疑惑 || 猜疑
+|-
+| [[Web of Disruption]] || Toile d'interruption || Netz der Störung || Rete del Disturbo || Red interruptora || Sieć Rozproszenia || 방해의 거미줄 || ディスラプション ウェブ || 瓦解之網 || 崩坏之网
+|-
+| [[Air of Disenchantment]] || Air de Désenchantement || Flair der Entzauberung || Aria del Disincanto || Aire de desencantamiento || Powietrze Antyzaklęć || 강화 방해의 기운 || ディスエンチャント エアー || 反加持氣息 || 觉醒之息
+|-
+| [[Enchanter's Conundrum]] || Enigme de l'enchanteur || Rätsel des Verzauberers || Enigma dell'Incantatore || Enigma del encantador || Zagadka Zaklinacza || 강화술사의 재치 || エンチャンター コナンドラム || 附魔者之謎 || 增益者的苦恼
+|-
+| [[Signet of Clumsiness]] || Sceau de Maladresse || Siegel der Unbeholfenheit || Sigillo della Goffaggine || Sello de torpeza || Sygnet Niezgrabności || 미숙 인장 || クラムジネス シグネット || 笨拙紋章 || 笨拙纹章
+|-
+| [[Signet of Illusions]] || Sceau des illusions || Siegel der Illusionen || Sigillo delle Illusioni || Sello de las ilusiones || Sygnet Iluzji || 환영 인장 || イリュージョン シグネット || 幻術紋章 || 幻术纹章
+|-
+| [[Discharge Enchantment]] || Congédiement d'enchantement || Verzauberung entlassen || Congeda Incantesimo || Descargar encantamiento || Rozładowanie Zaklęcia || 강화 해제 || ディスチャージ エンチャント || 加持釋放 || 增益解除
+|-
+| [[Hex Eater Vortex]] || Vortex du Mangeur de Maléfices || Verhexungsfresser-Strudel || Vortice Mangiafattura || Vórtice devoramaleficios || Wir Pożeracz Klątw || 약화 무효의 파급 || ヘックス イーター ヴォーテックス || 食咒渦流 || 食咒漩涡
+|-
+| [[Mirror of Disenchantment]] || Miroir de désenchantement || Spiegel der Entzauberung || Specchio del Disincanto || Espejo del desencantamiento || Zwierciadło Antyzaklęcia || 연쇄 강화 해제 || ディスエンチャント ミラー || 反加持之鏡 || 玷污之镜
+|-
+| [[Symbolic Posture]] || Posture symbolique || Symbolische Haltung || Postura Simbolica || Postura simbólica || Symboliczna Poza || 권능의 징표 || シンボリック ポスチャー || 紋章姿態 || 纹章姿态
+|-
+| [[Simple Thievery]] || Simple vol || Simpler Diebstahl || Furto Semplice || Robo simple || Łatwa Kradzież || 간단한 탈취 || シンプル シーヴァリー || 簡易竊取 || 技能偷取
+|}
+<noinclude>
+[[Category:Tables]]
+</noinclude>

@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.15.1" />
+		<meta name="keywords" content="Healing Signet,Agastos the Brave,Anomaly,Armor rating,Ascalon City,Attribute,Campaign,Command Post,Core,Dakk,Destiny&#039;s Gorge" />
+		<link rel="alternate" type="application/x-wiki" title="Edit" href="/index.php?title=Healing_Signet&amp;action=edit" />
+		<link rel="edit" title="Edit" href="/index.php?title=Healing_Signet&amp;action=edit" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="Guild Wars Wiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="/index.php?title=Healing_Signet&amp;action=creativecommons" rel="meta" />
+		<link rel="copyright" href="/wiki/Guild_Wars_Wiki:Copyrights" />
+		<link rel="alternate" type="application/rss+xml" title="Guild Wars Wiki RSS Feed" href="/index.php?title=Special:RecentChanges&amp;feed=rss" />
+		<link rel="alternate" type="application/atom+xml" title="Guild Wars Wiki Atom Feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom" />
+		<title>Healing Signet - Guild Wars Wiki (GWW)</title>
+		<link rel="stylesheet" href="/skins/common/shared.css?207" type="text/css" media="screen" />
+		<link rel="stylesheet" href="/skins/common/commonPrint.css?207" type="text/css" media="print" />
+		<link rel="stylesheet" href="/skins/monobook/main.css?207" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE50Fixes.css?207" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE55Fixes.css?207" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="/skins/monobook/IE60Fixes.css?207" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="/skins/monobook/IE70Fixes.css?207" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" type="text/css" />
+		<link rel="stylesheet" href="/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" type="text/css" media="print" />
+		<link rel="stylesheet" href="/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" type="text/css" />
+		<link rel="stylesheet" href="/index.php?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?207"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "/skins";
+		var wgArticlePath = "/wiki/$1";
+		var wgScriptPath = "";
+		var wgScript = "/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://wiki.guildwars.com";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Healing_Signet";
+		var wgTitle = "Healing Signet";
+		var wgAction = "view";
+		var wgArticleId = "4146";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = 1770737;
+		var wgVersion = "1.15.1";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgMWSuggestTemplate = "http://wiki.guildwars.com/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}\x26suggest";
+		var wgDBname = "my_wiki";
+		var wgSearchNamespaces = [0];
+		var wgMWSuggestMessages = ["with suggestions", "no suggestions"];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="/skins/common/wikibits.js?207"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="/skins/common/ajax.js?207"></script>
+		<script type="text/javascript" src="/skins/common/mwsuggest.js?207"></script>
+		<script type="text/javascript" src="/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Healing_Signet skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">Healing Signet</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From Guild Wars Wiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<div class="infobox skill-box Warrior">
+<p class="skill-name heading"><b>Healing Signet</b></p>
+<div class="skill-details-wrapper">
+<div class="skill-image"><a href="/wiki/File:Healing_Signet.jpg" class="image" title="ID unset"><img alt="ID unset" src="/images/e/e6/Healing_Signet.jpg" width="64" height="64" border="0" /></a></div>
+<div class="skill-stats">
+<ul><li> 2 <a href="/wiki/File:Tango-activation-darker.png" class="image" title="Activation"><img alt="Activation" src="/images/a/aa/Tango-activation-darker.png" width="20" height="20" border="0" /></a>
+</li><li> 4 <a href="/wiki/File:Tango-recharge-darker.png" class="image" title="Recharge"><img alt="Recharge" src="/images/f/f4/Tango-recharge-darker.png" width="20" height="20" border="0" /></a>
+</li></ul>
+</div></div>
+<dl><dt><a href="/wiki/Profession" title="Profession">Profession</a></dt><dd><a href="/wiki/Warrior" title="Warrior">Warrior</a> 
+</dd><dt><a href="/wiki/Attribute" title="Attribute">Attribute</a></dt><dd><a href="/wiki/Tactics" title="Tactics">Tactics</a> 
+</dd><dt><a href="/wiki/Skill_type" title="Skill type">Type</a></dt><dd><a href="/wiki/Signet" title="Signet">Signet</a>
+</dd><dt><a href="/wiki/Campaign" title="Campaign">Campaign</a></dt><dd><a href="/wiki/Core" title="Core">Core</a>
+</dd></dl>
+</div>
+<p><a href="/wiki/Signet" title="Signet">Signet</a>. You gain <span style="color: green; font-weight: bold;">82...154...172</span> Health. You have -40 <a href="/wiki/Armor_rating" title="Armor rating">armor</a> while using this skill.
+</p>
+<dl><dt>Concise description</dt><dd>
+</dd></dl>
+<p>Signet. You gain <span style="color: green; font-weight: bold;">82...154...172</span> Health. <span style="color:gray;">You have -40 armor while using this skill.</span>
+</p>
+<table class="skill-progression" cellpadding="0" cellspacing="0">
+<tr>
+<th colspan="2"> Progression
+</th></tr>
+<tr>
+<td nowrap="nowrap" style="font-weight: bold;vertical-align: top;">
+<div class="attr"><a href="/wiki/Tactics" title="Tactics">Tactics</a></div><div class="var"><a href="/wiki/Heal" title="Heal">Heal</a></div>
+</td><td style="vertical-align: top;">
+<div class="column" style="font-weight: bold;">
+ <div class="attr">0</div><div class="var">82</div>
+</div>
+<div class="column">
+ <div class="attr">1</div><div class="var">88</div>
+</div>
+<div class="column">
+ <div class="attr">2</div><div class="var">94</div>
+</div>
+<div class="column">
+ <div class="attr">3</div><div class="var">100</div>
+</div>
+<div class="column">
+ <div class="attr">4</div><div class="var">106</div>
+</div>
+<div class="column">
+ <div class="attr">5</div><div class="var">112</div>
+</div>
+<div class="column">
+ <div class="attr">6</div><div class="var">118</div>
+</div>
+<div class="column">
+ <div class="attr">7</div><div class="var">124</div>
+</div>
+<div class="column">
+ <div class="attr">8</div><div class="var">130</div>
+</div>
+<div class="column">
+ <div class="attr">9</div><div class="var">136</div>
+</div>
+<div class="column">
+ <div class="attr">10</div><div class="var">142</div>
+</div>
+<div class="column">
+ <div class="attr">11</div><div class="var">148</div>
+</div>
+<div class="column" style="font-weight: bold;">
+ <div class="attr">12</div><div class="var">154</div>
+</div>
+<div class="column">
+ <div class="attr">13</div><div class="var">160</div>
+</div>
+<div class="column">
+ <div class="attr">14</div><div class="var">166</div>
+</div>
+<div class="column" style="font-weight: bold;">
+ <div class="attr">15</div><div class="var">172</div>
+</div>
+<div class="column">
+ <div class="attr">16</div><div class="var">178</div>
+</div>
+<div class="column">
+ <div class="attr">17</div><div class="var">184</div>
+</div>
+<div class="column">
+ <div class="attr">18</div><div class="var">190</div>
+</div><div class="column">
+ <div class="attr">19</div><div class="var">196</div>
+</div><div class="column">
+ <div class="attr">20</div><div class="var">202</div>
+</div><div class="column">
+ <div class="attr">21</div><div class="var">208</div>
+</div>
+</td></tr></table>
+<a name="Acquisition" id="Acquisition"></a><h2><span class="editsection">[<a href="/index.php?title=Healing_Signet&amp;action=edit&amp;section=1" title="Edit section: Acquisition">edit</a>]</span> <span class="mw-headline">Acquisition</span></h2>
+<p><b><a href="/wiki/Skill_quest" title="Skill quest" class="mw-redirect">Skill quests</a></b> 
+</p>
+<ul><li><a href="/wiki/Prophecies" title="Prophecies" class="mw-redirect">Prophecies</a>
+<ul><li><a href="/wiki/Warrior_Test" title="Warrior Test">Warrior Test</a> (<a href="/wiki/Lakeside_County" title="Lakeside County">Lakeside County</a>)
+</li><li><a href="/wiki/Grawl_Invasion" title="Grawl Invasion">Grawl Invasion</a> (<a href="/wiki/Green_Hills_County" title="Green Hills County">Green Hills County</a>)
+</li><li><a href="/wiki/Gargoyle_Trouble" title="Gargoyle Trouble">Gargoyle Trouble</a> (<a href="/wiki/Old_Ascalon" title="Old Ascalon">Old Ascalon</a>)
+</li></ul>
+</li><li><a href="/wiki/Factions" title="Factions" class="mw-redirect">Factions</a>
+<ul><li><a href="/wiki/Mantid_Hatchlings" title="Mantid Hatchlings">Mantid Hatchlings</a> (<a href="/wiki/Monastery_Overlook" title="Monastery Overlook">Monastery Overlook</a>)
+</li><li><a href="/wiki/Locate_Talon_Silverwing" title="Locate Talon Silverwing">Locate Talon Silverwing</a> (<a href="/wiki/Shing_Jea_Monastery" title="Shing Jea Monastery">Shing Jea Monastery</a>)
+</li></ul>
+</li><li><a href="/wiki/Nightfall" title="Nightfall" class="mw-redirect">Nightfall</a>
+<ul><li><a href="/wiki/Rally_the_Recruits_(Tutorial)" title="Rally the Recruits (Tutorial)">Rally the Recruits</a>/<a href="/wiki/Take_the_Shortcut_(Skip_Tutorial)" title="Take the Shortcut (Skip Tutorial)">Take the Shortcut</a> (<a href="/wiki/Island_of_Shehkah" title="Island of Shehkah">Island of Shehkah</a>)
+</li></ul>
+</li></ul>
+<p><b><a href="/wiki/Profession_changer" title="Profession changer">Profession changers</a></b>
+</p>
+<ul><li><a href="/wiki/Core" title="Core">Core</a>
+<ul><li><a href="/wiki/Profession_Changer_(NPC)" title="Profession Changer (NPC)">Profession Changer (NPC)</a> (<a href="/wiki/Great_Temple_of_Balthazar" title="Great Temple of Balthazar">Great Temple of Balthazar</a>)
+</li></ul>
+</li><li><a href="/wiki/Prophecies" title="Prophecies" class="mw-redirect">Prophecies</a>
+<ul><li><a href="/wiki/Agastos_the_Brave" title="Agastos the Brave">Agastos the Brave</a> (<a href="/wiki/Destiny%27s_Gorge" title="Destiny&#39;s Gorge">Destiny's Gorge</a>)
+</li></ul>
+</li><li><a href="/wiki/Factions" title="Factions" class="mw-redirect">Factions</a>
+<ul><li><a href="/wiki/Senji" title="Senji">Senji</a> (<a href="/wiki/Senji%27s_Corner" title="Senji&#39;s Corner">Senji's Corner</a>)
+</li></ul>
+</li><li><a href="/wiki/Nightfall" title="Nightfall" class="mw-redirect">Nightfall</a>
+<ul><li><a href="/wiki/Zuwarah" title="Zuwarah">Zuwarah</a> (<a href="/wiki/Command_Post" title="Command Post">Command Post</a>)
+</li></ul>
+</li></ul>
+<p><b><a href="/wiki/Skill_trainer" title="Skill trainer">Skill trainers</a></b>
+</p>
+<ul><li><a href="/wiki/Prophecies" title="Prophecies" class="mw-redirect">Prophecies</a>
+<ul><li><a href="/wiki/Sir_Bertran" title="Sir Bertran">Sir Bertran</a> (<a href="/wiki/Ascalon_City" title="Ascalon City">Ascalon City</a>)
+</li><li><a href="/wiki/Dakk" title="Dakk">Dakk</a> (<a href="/wiki/Ember_Light_Camp" title="Ember Light Camp">Ember Light Camp</a>)
+</li></ul>
+</li><li><a href="/wiki/Eye_of_the_North" title="Eye of the North" class="mw-redirect">Eye of the North</a>
+<ul><li><a href="/wiki/Micah_Fergson" title="Micah Fergson">Micah Fergson</a> (<a href="/wiki/Eye_of_the_North_(outpost)" title="Eye of the North (outpost)">Eye of the North (outpost)</a>)
+</li></ul>
+</li></ul>
+<a name="Notes" id="Notes"></a><h2><span class="editsection">[<a href="/index.php?title=Healing_Signet&amp;action=edit&amp;section=2" title="Edit section: Notes">edit</a>]</span> <span class="mw-headline">Notes</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:66px;"><a href="/wiki/File:Healing_Signet_Beta_Icon.jpg" class="image" title="Beta icon"><img alt="" src="/images/thumb/c/c8/Healing_Signet_Beta_Icon.jpg/64px-Healing_Signet_Beta_Icon.jpg" width="64" height="64" border="0" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Healing_Signet_Beta_Icon.jpg" class="internal" title="Enlarge"><img src="/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Beta icon</div></div></div>
+<ul><li>"-40 armor" will result in taking double damage from skills that are affected by <a href="/wiki/Armor_rating" title="Armor rating">armor rating</a>.
+</li><li><a href="/wiki/Hero" title="Hero">Heroes</a> and <a href="/wiki/Henchmen" title="Henchmen" class="mw-redirect">henchmen</a> with this skill will retreat from combat in order to use it.
+</li><li>The "-40 armor" is factored in after the <a href="/wiki/Effect_stacking" title="Effect stacking">armor cap</a>. 
+</li></ul>
+<div style="margin: 1em; border: solid silver; border-width: 1px 0px; padding: 2px 5px 2px 5px;">
+<div class="hiddenlinks" style="font-weight: bold; color: #900; float: left;"><a href="/wiki/File:Anomaly.png" class="image" title="Anomaly"><img alt="Anomaly" src="/images/thumb/a/a6/Anomaly.png/18px-Anomaly.png" width="18" height="18" border="0" /></a> <a href="/wiki/Anomaly" title="Anomaly" class="mw-redirect">Anomaly</a>.</div>
+<div style="margin-left: 7.5em;">Despite the skill description, this skill heals rather than giving health gain.</div>
+</div>
+<a name="Trivia" id="Trivia"></a><h2><span class="editsection">[<a href="/index.php?title=Healing_Signet&amp;action=edit&amp;section=3" title="Edit section: Trivia">edit</a>]</span> <span class="mw-headline">Trivia</span></h2>
+<ul><li>In the early days of Guildwars, Healing Signet was planned to be a <a href="/wiki/List_of_common_skills" title="List of common skills">Common skill</a> <i>(thus the colorless beta icon)</i>.
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 866/1000000
+Post-expand include size: 5049/2097152 bytes
+Template argument size: 1243/2097152 bytes
+Expensive parser function count: 0/100
+#ifexist count: 0/100
+-->
+
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:4146-0!1!0!!en!2 and timestamp 20100112190535 -->
+<div class="printfooter">
+Retrieved from "<a href="http://wiki.guildwars.com/wiki/Healing_Signet">http://wiki.guildwars.com/wiki/Healing_Signet</a>"</div>
+			<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>:&#32;<span dir='ltr'><a href="/wiki/Category:Signets" title="Category:Signets">Signets</a></span> | <span dir='ltr'><a href="/wiki/Category:Core_skills" title="Category:Core skills">Core skills</a></span> | <span dir='ltr'><a href="/wiki/Category:Tactics_skills" title="Category:Tactics skills">Tactics skills</a></span> | <span dir='ltr'><a href="/wiki/Category:Anomalies" title="Category:Anomalies">Anomalies</a></span> | <span dir='ltr'><a href="/wiki/Category:Warrior_skill_rewards" title="Category:Warrior skill rewards">Warrior skill rewards</a></span> | <span dir='ltr'><a href="/wiki/Category:Pre-Searing_skills" title="Category:Pre-Searing skills">Pre-Searing skills</a></span> | <span dir='ltr'><a href="/wiki/Category:Skills_without_known_Factions_trainers" title="Category:Skills without known Factions trainers">Skills without known Factions trainers</a></span> | <span dir='ltr'><a href="/wiki/Category:Skills_without_known_Nightfall_trainers" title="Category:Skills without known Nightfall trainers">Skills without known Nightfall trainers</a></span></div></div>			<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="/wiki/Healing_Signet" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk"><a href="/wiki/Talk:Healing_Signet" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-edit"><a href="/index.php?title=Healing_Signet&amp;action=edit" title="You can edit this page.&#10;Please use the preview button before saving [e]" accesskey="e">Edit</a></li>
+				 <li id="ca-history"><a href="/index.php?title=Healing_Signet&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=Healing_Signet" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/skins/common/images/wiki.png);" href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page">Main Page</a></li>
+				<li id="n-Quick-links"><a href="/wiki/Quick_access_links">Quick links</a></li>
+				<li id="n-Guild-Wars-news"><a href="/wiki/News">Guild Wars news</a></li>
+				<li id="n-Feedback-portal"><a href="/wiki/Feedback:Main">Feedback portal</a></li>
+				<li id="n-Community-portal"><a href="/wiki/Guild_Wars_Wiki:Community_portal">Community portal</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/index.php" id="searchform"><input type="hidden" name="nccharset" value="6E55B57A"><div>
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input id="searchInput" name="search" type="text" title="Search Guild Wars Wiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div><input type="hidden" name="__ncforminfo" value="lh1e2yJNTi9nxH3Qs67CpNJzpGa7UJzcAGoBXelnvtobM-UNaPyG1qi0273xweh3tXQTn6DoGRIIJnl7UzVSAzGMMBdVdYAB"></form>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-support'>
+		<h5>support</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-FAQ"><a href="/wiki/Guild_Wars_Wiki:FAQ">FAQ</a></li>
+				<li id="n-Help-center"><a href="/wiki/Help:Contents">Help center</a></li>
+				<li id="n-How-to-help"><a href="/wiki/Guild_Wars_Wiki:How_to_help">How to help</a></li>
+				<li id="n-Admin-noticeboard"><a href="/wiki/Guild_Wars_Wiki:Admin_noticeboard">Admin noticeboard</a></li>
+				<li id="n-Report-a-wiki-bug"><a href="/wiki/Guild_Wars_Wiki:Reporting_wiki_bugs">Report a wiki bug</a></li>
+				<li id="n-About-GWW"><a href="/wiki/Guild_Wars_Wiki:About">About GWW</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Healing_Signet" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Healing_Signet" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="/index.php?title=Healing_Signet&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="/index.php?title=Healing_Signet&amp;oldid=1770737" title="Permanent link to this revision of the page">Permanent link</a></li>
+				<li id="t-listtransclusions"><a href="/wiki/Special:ListTransclusions/Healing_Signet" title="List all transcluded templates and used images of this page">Transclusion list</a></li>
+			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><img src="/images/arenanet-logo.jpg" alt='ArenaNet' /></div>
+			<ul id="f-list">
+					<li id="lastmod"> This page was last modified on 6 November 2009, at 19:58.</li>
+					<li id="viewcount">This page has been accessed 77,569 times.</li>
+					<li id="copyright">Content is available under <a href="/wiki/Guild_Wars_Wiki:Copyrights" title="Guild Wars Wiki:Copyrights">these licensing terms</a>.</li>
+					<li id="privacy"><a href="/wiki/Guild_Wars_Wiki:Privacy_policy" title="Guild Wars Wiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="/wiki/Guild_Wars_Wiki:About" title="Guild Wars Wiki:About">About Guild Wars Wiki</a></li>
+					<li id="disclaimer"><a href="/wiki/Guild_Wars_Wiki:General_disclaimer" title="Guild Wars Wiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.074 secs. --></body></html>

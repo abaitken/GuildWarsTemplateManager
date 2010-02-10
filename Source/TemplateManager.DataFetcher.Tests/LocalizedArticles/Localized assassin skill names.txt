@@ -1,0 +1,217 @@
+﻿== Factions ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Caltrops]] || Chausse-trappes || Trittnägel || Triboli || Cebo || Kolczatka || 날카로운 파편 || カルトラップ || 鐵蒺藜 || 铁蒺藜
+|-
+| [[Blinding Powder]] || Poudre aveuglante || Blendpulver || Polvere Accecante || Pólvora lacrimosa || Proszek Oślepiający || 섬광 화약 || ブラインド パウダー || 致盲粉 || 致盲粉
+|-
+| [[Critical Eye]] || Oeil critique || Kritisches Auge || Occhio Critico || Ojo crítico || Krytyczne Oko || 매서운 눈초리 || クリティカル アイ || 致命之眼 || 致命之眼
+|-
+| [[Beguiling Haze]] || Mirage brumeux || Verführerischer Dunst || Foschia Accattivante || Mirada de seducción || Czarująca Ułuda || 미혹의 아지랑이 || ビガイル ヘイズ || 陰霾薄霧 || 阴霾
+|-
+| [[Mantis Touch]] || Toucher de la mante || Berührung der Mantis || Tocco della Mantide || Toque de la mantis || Dotyk Modliszki || 사마귀 발톱 || マンティス タッチ || 螳螂觸殺 || 螳螂触杀
+|-
+| [[Desperate Strike]] || Coup désespéré || Verzweifelter Stoß || Colpo Disperato || Ataque de la desesperación || Desperackie Uderzenie || 필사의 일격 || デスパレート ストライク || 末路狙殺 || 孤注一掷
+|-
+| [[Death Blossom]] || Efflorescence mortelle || Todesblüte || Fiore della Morte || Brote mortal || Zabójczy Kwiat || 죽음의 꽃 || デス ブラッサム || 死神之花 || 死神之花
+|-
+| [[Critical Strike]] || Attaque critique || Kritischer Stoß || Colpo Critico || Golpe crítico || Krytyczne Uderzenie || 치명적인 일격 || クリティカル ストライク || 致命狙殺 || 绝杀
+|-
+| [[Blades of Steel ]] || Lames d'acier || Stahlklingen || Lame d'Acciaio || Filos de acero  || Stalowe Ostrza || 강철 칼날 || スチール ブレード || 鋼鐵之刃 || 钢铁之刃
+|-
+| [[Twisting Fangs]] || Harpon de convulsion || Schlangenzähne || Zanne Ritorte || Colmillos afilados || Skręcone Kły || 춤추는 송곳니 || ツイスト ファング || 旋殺尖牙 || 旋杀尖牙
+|-
+| [[Horns of the Ox]] || Cornes du boeuf || Hörner des Ochsen || Corna del Bue || Cuernos del buey || Rogi Wołu || 황소의 뿔 || オックス ホーン || 牛角衝擊 || 牛角冲击
+|-
+| [[Falling Spider]] || Retombée arachnide || Fallende Spinne || Ragno in Caduta || Araña colgante || Opadający Pająk || 타락한 거미 || フォール スパイダー || 毒蛛墜殺 || 毒蛛落
+|-
+| [[Jungle Strike]] || Frappe de la jungle || Dschungelschlag || Colpo della Giungla || Golpe selvático || Uderzenie Dżungli || 냉혹한 일격 || ジャングル ストライク || 密林狙殺 || 追击
+|-
+| [[Black Lotus Strike]] || Coup du lotus noir || Schwarzer Lotus-Stoß || Colpo del Loto Nero || Loto negra || Uderzenie Czarnego Lotosu || 검은연꽃 강타 || ブラック ロータス ストライク || 黑蓮狙殺 || 黑莲杀
+|-
+| [[Fox Fangs]] || Crocs du renard || Reißzähne des Fuchses || Denti di Volpe || Colmillos de zorro || Lisie Kły || 여우 발톱 || フォックス ファング || 狐狸尖牙 || 狐牙刺杀
+|-
+| [[Moebius Strike]] || Frappe de Moebius || Möbiusstoß || Colpo di Moebius || Golpe de Moebius || Uderzenie Moebiusa || 뫼비우스 공격 || メビウス ストライク || 莫比斯狙殺 || 魔比斯刺杀
+|-
+| [[Wild Strike]] || Affront sauvage || Wilder Stoß || Colpo Selvaggio || Golpe salvaje || Dzikie Uderzenie || 거센 압박 || ワイルド ストライク || 野蠻狙殺 || 野性击杀
+|-
+| [[Exhausting Assault]] || Assaut épuisant || Ermüdender Angriff || Assalto Estenuante || Ataque agotador || Wyczerpujące Natarcie || 실수 유발 || エグゾウスト アサルト || 衰竭突襲 || 凋零斩
+|-
+| [[Nine Tail Strike]] || Coup des neuf queues || Neunschwänziger Stoß || Colpo a Nove Code || Golpe de las nueve colas || Uderzenie Dziewiątego Ogona || 구미호 발톱 || ナイン テール ストライク || 九尾狙殺 || 九尾乱刺
+|-
+| [[Jagged Strike]] || Coup déchiqueteur || Gezackter Stoß || Colpo Seghettato || Ataque dentado || Rozdzierające Uderzenie || 톱날 공격 || ジャグ ストライク || 鋸齒狙殺 || 锯斩
+|-
+| [[Leaping Mantis Sting]] || Piqûre de mante sauteuse || Stich der springenden Mantis || Pungiglione della Mantide Saltante || Picadura de mantis || Żądło Skaczącej Modliszki || 사마귀 독침 || リープ マンティス スティング || 螳螂之刺 || 螳螂之刺
+|-
+| [[Unsuspecting Strike]] || Attaque sournoise || Unvermuteter Stoß || Colpo Fiducioso || Ataque imprevisto || Niespodziewane Uderzenie || 불의의 일격 || アンサスペクティング ストライク || 意外狙殺 || 出其不意
+|-
+| [[Black Mantis Thrust]] || Attaque de la mante noire || Stoß der schwarzen Mantis || Affondo della Mantide Nera || Estocada de la mantis negra || Pchnięcie Czarnej Modliszki || 흑사마귀 찌르기 || ブラック マンティス スラスト || 黑螳螂刺擊 || 黑螳之刺
+|-
+| [[Disrupting Stab]] || Blessure d'interruption || Unterbrechender Dolchstoß || Pugnalata Dirompente || Tajo de distracción || Przerywające Pchnięcie || 견제의 찌르기 || ディスラプト スタブ || 干擾刺擊 || 扰乱刺杀
+|-
+| [[Golden Lotus Strike]] || Coup du lotus doré || Goldener Lotus-Stoß || Colpo del Loto Dorato || Loto dorada || Uderzenie Złotego Lotosu || 금빛연꽃 찌르기 || ゴールデン ロータス ストライク || 金蓮狙殺 || 金莲杀
+|-
+| [[Repeating Strike ]] || Coup répété || Wiederholender Schlag || Colpo a Ripetizione || Golpe repetitivo  || Powtarzające się Uderzenie || 반복 공격 || リピート ストライク || 連環狙殺 || 连环斩
+|-
+| [[Critical Defenses ]] || Défenses critiques || Kritische Verteidigungen || Difese Critiche || Defensas críticas  || Krytyczna Obrona || 치명타 방어 || クリティカル ディフェンス  || 致命防禦 || 致命防御
+|-
+| [[Way of the Empty Palm]] || Méthode de la paume vide || Weg der leeren Handfläche || Potere del Palmo Vuoto || Camino de la mano abierta || Ścieżka Pustej Dłoni || 맨손의 술수 || エンプティ パーム ウェイ || 無道 || 无为
+|-
+| [[Way of Perfection]] || Méthode du geste parfait || Weg der Perfektion || Potere della Perfezione || Camino de perfección || Ścieżka ku Doskonałości || 탁월한 술수 || パーフェクション ウェイ || 全道 || 无缺
+|-
+| [[Dark Apostasy]] || Apostasie obscure || Dunkle Abtrünnigkeit || Apostasia Oscura || Apostasía oscura || Mroczna Apostazja || 암흑의 배반 || ダーク アポスタシー || 黑暗變節 || 反叛
+|-
+| [[Locust's Fury]] || Fureur de Locuste || Wut der Heuschrecke || Furia della Locusta || Furia de langosta || Furia Szarańczy || 분노한 사마귀 || ロウカスト フューリー || 蝗蟲暴怒 || 蝗虫之怒
+|-
+| [[Shadow Refuge]] || Refuge ombreux || Schattenzuflucht || Cortina d’Ombra || Refugio sombrío || Cieniste Schronienie || 그림자 은신 || シャドウ レフュージ || 暗影庇護 || 影盾
+|-
+| [[Shroud of Distress]] || Linceul de détresse || Schleier des Kummers || Coltre d'Angoscia || Mortaja de agonía || Całun Boleści || 고통의 보호막 || ディストレス シュラウド || 危難遮蔽 || 避难
+|-
+| [[Shadow Form]] || Silhouette || Schattenform || Forma d'Ombra || Forma sombría || Cienisty Kształt || 그림자 형체 || シャドウ フォーム || 暗影形態 || 暗影形态
+|-
+| [[Heart of Shadow]] || Coeur d'ombre || Herz der Schatten || Cuore d'Ombra || Corazón de sombra || Serce Cienia || 유령의 본질 || シャドウ ハート || 暗影之心 || 暗影之心
+|-
+| [[Recall]] || Rappel || Rückruf || Richiamo || Recuerdo || Przywołanie || 리콜 || リコール || 回歸 || 回归
+|-
+| [[Sharpen Daggers]] || Dagues affûtées || Dolche wetzen || Affila Pugnali || Dagas afiladas || Ostre Sztylety || 예리한 단검 || シャーペン ダガー || 銳利匕首 || 锐不可当
+|-
+| [[Way of the Fox]] || Méthode du renard || Weg des Fuchses || Potere della Volpe || Camino del zorro || Ścieżka Lisa || 여우같은 술수 || フォックス ウェイ || 狐道 || 狐化
+|-
+| [[Temple Strike]] || Frappe à la tempe || Tempelstoß || Colpo alle Tempie || Golpe en las sienes || Rozbicie Skroni || 관자놀이 공격 || テンプル ストライク || 太陽穴狙殺 || 太阳拳
+|-
+| [[Golden Phoenix Strike]] || Coup du phénix doré || Goldener Phönix-Stoß || Colpo della Fenice Dorata || Golpe del fénix dorado || Uderzenie Złotego Feniksa || 금빛불새 일격 || ゴールデン フェニックス ストライク || 火鳳凰狙殺 || 火凤凰狙杀
+|-
+| [[Entangling Asp]] || Enlacement reptilien || Schlingnatter || Aspide Attanagliante || Áspid || Wijąca się Żmija || 코브라 덫 || エンタングル アスプ || 蛇纏毒殺 || 蝰蛇缠绕
+|-
+| [[Scorpion Wire]] || Attache de Scorpion || Skorpiondraht || Filo dello Scorpione || Alambre de escorpión || Nić Skorpiona || 전갈의 갈고리 || スコーピオン ワイヤー || 毒蠍綑綁 || 毒蝎附体
+|-
+| [[Mirrored Stance]] || Imitation de pose || Gespiegelte Haltung || Posizione a Specchio || Actitud copiada || Lustrzana Postawa || 자세 모방 || ミラー スタンス || 鏡射態勢 || 镜像
+|-
+| [[Impale]] || Empalement || Aufspießen || Stilettata || Empalar || Przebicie || 빈틈 찌르기 || インペイル || 刺刑 || 刺刑
+|-
+| [[Shameful Fear]] || Peur honteuse || Schändliche Angst || Timore Infame || Temor vergonzoso || Haniebny Strach || 치욕스런 공포 || シェイムフル フィアー || 羞愧恐懼 || 羞愧恐惧
+|-
+| [[Enduring Toxin]] || Toxine immuable || Dauerhaftes Toxin || Tossina Permanente || Toxina persistente || Trwała Trucizna || 끈질긴 독소 || インデュア トキシン || 持續毒素 || 剧毒
+|-
+| [[Seeping Wound]] || Plaie suintante || Eiternde Wunde || Ferita Sanguinante || Herida supurante || Ropiejąca Rana || 증상 악화 || シープ ウンド || 滲透傷口 || 恶化伤口
+|-
+| [[Shroud of Silence]] || Linceul du silence || Schleier des Schweigens || Coltre del Silenzio || Mortaja de silencio || Całun Ciszy || 침묵의 수의 || サイレンス シュラウド || 寂靜遮蔽 || 沉默之幕
+|-
+| [[Way of the Lotus]] || Méthode du lotus || Weg des Lotus || Potere del Loto || Camino del loto || Ścieżka Lotosu || 연꽃 술수 || ロータス ウェイ || 蓮道 || 莲术
+|-
+| [[Expose Defenses]] || Vaines défenses || Verteidigungen aufdecken || Esponi Difese || Defensas expuestas || Przełamanie Zasłony || 허점 폭로 || エクスポーズ ディフェンス || 弱點揭露 || 游刃有余
+|-
+| [[Shadow Shroud]] || Linceul de l'Ombre || Schattenschleier || Coltre Ombrosa || Mortaja sombría || Całun Cienia || 암영의 덮개 || シャドウ シュラウド || 暗影遮蔽 || 暗影之幕
+|-
+| [[Assassin's Promise]] || Promesse de l'Assassin || Versprechen des Assassinen || Promessa dell'Assassino || Promesa del Asesino || Obietnica Zabójcy || 어새신의 약속 || アサシン プロミス || 暗殺者誓言 || 杀手的承诺
+|-
+| [[Mark of Death]] || Stigmate mortel || Zeichen des Todes || Segno della Morte || Marca de muerte || Piętno Śmierci || 죽음의 표식 || デス マーク || 死神印記 || 死亡烙印
+|-
+| [[Shadowy Burden]] || Fardeau nébuleux || Schattenbürde || Fardello d'Ombra || Carga sombría || Cieniste Brzemię || 보이지않는 속박 || シャドウ バーデン || 暗影負荷 || 暗影负荷
+|-
+| [[Siphon Strength]] || Siphon de force || Kraft abzapfen || Sifone della Forza || Sifón de fuerza || Wyssanie Siły || 전투력 흡수 || サイフォン ストレングス || 吸取力量 || 力量虹吸
+|-
+| [[Siphon Speed]] || Siphon de vitesse || Geschwindigkeit abzapfen || Sifone della Velocità || Chorro de velocidad || Wyssanie Szybkości || 속도 흡수 || サイフォン スピード || 吸取速度 || 速度虹吸
+|-
+| [[Mark of Instability]] || Marque d'instabilité || Zeichen der Unbeständigkeit || Segno dell'Instabilità || Marca de inestabilidad || Piętno Niestabilności || 불안정한 표적 || インスタビリティ マーク || 失衡印記 || 失衡印记
+|-
+| [[Signet of Shadows]] || Sceau des Ombres || Siegel der Schatten || Sigillo delle Ombre || Sello de sombras || Sygnet Cienia || 그림자 인장 || シャドウ シグネット || 暗影紋章 || 暗影纹章
+|-
+| [[Signet of Malice]] || Sceau de malice || Siegel der Bosheit || Sigillo della Malizia || Sello de malicia || Sygnet Podłości || 원한 인장 || マリス シグネット || 怨恨紋章 || 恶意纹章
+|-
+| [[Dark Escape]] || Echappatoire obscure || Dunkle Flucht || Fuga nell'Oscurità || Huida oscura || Mroczna Ucieczka || 은밀한 탈출 || ダーク エスケープ || 黑暗脫逃 || 脱逃
+|-
+| [[Dancing Daggers]] || Valse des dagues || Tanzende Dolche || Pugnali Danzanti || Dagas danzantes || Tańczące Sztylety || 춤추는 비수 || ダンシング ダガー || 飛舞匕首 || 匕首飞舞
+|-
+| [[Crippling Dagger]] || Dague d'Infirmité || Verkrüppelnder Dolch || Pugnale Azzoppante || Daga lisiadora || Okulawiający Sztylet || 속박의 비수 || クリップル ダガー || 致殘匕首 || 致残匕首
+|-
+| [[Star Strike]] || Attaque de l'étoile || Sternenstoß || Colpo della Stella || Golpe celestial || Gwiezdne Uderzenie || 천상의 공격 || スター ストライク || 恆星之擊 || 神兵天降
+|-
+| [[Spirit Walk]] || Marche des esprits || Geistermarsch || Cammino dello Spirito || Paseo espiritual || Spacer Ducha || 영혼 이동 || スピリット ウォーク || 神靈漫步 || 神灵之渡
+|-
+| [[Expunge Enchantments]] || Censure d'Enchantements || Verzauberungen ausmerzen || Sopprimi Incantesimi || Cancelar encantamientos || Przegnanie Zaklęć || 강화 말소 || エクシパンジ エンチャント || 抹除加持 || 增益抹杀
+|-
+| [[Iron Palm]] || Paume d'acier || Eiserne Handfläche || Palmo di Ferro || Palma de acero || Żelazna Dłoń || 강철 손바닥 || アイアン パーム || 鐵掌 || 铁掌
+|-
+| [[Unseen Fury]] || Furie invisible || Unsichtbare Wut || Furia Invisibile || Furia inadvertida || Niewidoczna Furia || 어둠속의 공포 || アンシーン フューリー || 目盲狂怒 || 未知之怒
+|-
+| [[Flashing Blades]] || Lames éclatantes || Blitzende Klingen || Lame Scintillanti || Cuchillas fugaces || Błyskające Ostrza || 칼날의 움직임 || フラッシュ ブレード || 閃光劍刃 || 刀光剑影
+|-
+| [[Dash]] || Ruée || Preschen || Slancio || Brío || Pęd || 질주 || ダッシュ || 急衝 || 急冲
+|-
+| [[Shadow of Haste]] || Ombre de hâte || Schatten der Eile || Ombra della Fretta || Sombra fugaz || Cień Pośpiechu || 유령의 재빠름 || ヘイスト シャドウ || 暗影迅速 || 影疾
+|-
+| [[Viper's Defense]] || Défense de la vipère || Verteidigung der Viper || Difesa della Vipera || Defensa de la víbora || Obrona Żmiji || 독사의 방어 || ヴァイパー ディフェンス || 毒蛇防禦 || 毒蛇之御
+|-
+| [[Return]] || Retour || Rückkehr || Ritorno || Retorno || Powrót || 아군으로의 귀환 || リターン || 影返 || 影返
+|-
+| [[Death's Charge]] || Charge mortelle || Angriff des Todes || Peso della Morte || Carga mortal || Szarża Śmierci || 죽음의 돌진 || デス チャージ || 索命 || 催命
+|-
+| [[Dark Prison]] || Prison obscure || Dunkles Gefängnis || Prigione Oscura || Cárcel oscura || Mroczne Więzienie || 그림자 속박 || ダーク プリズン || 影牢 || 影牢
+|-
+| [[Aura of Displacement]] || Aura de déplacement || Aura der Verschiebung || Aura dello Spostamento || Aura de desplazamiento || Aura Przemieszczenia || 변위의 오라 || ディスプレイス オーラ || 位移靈氣 || 瞬移
+|-
+| [[Palm Strike ]] || Coup de paume  || Handflächenschlag || Schiaffo || Bofetada || Uderzenie Dłonią || 손바닥 강타 || パーム ストライク || 劫殺掌 || 掌击
+|}
+== Nightfall ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Malicious Strike]] || Coup malicieux || Böswilliger Stoß || Colpo Maligno || Golpe malicioso || Podłe Uderzenie || 사악한 일격 || マリシャス ストライク || 惡意狙殺 || 残杀
+|-
+| [[Shattering Assault]] || Assaut dévastateur || Vernichtender Angriff || Assalto Frantumante || Asalto destructivo || Wstrząsające Natarcie || 파괴적인 기습 || シャター アサルト || 粉碎突襲 || 破碎斩
+|-
+| [[Golden Skull Strike]] || Attaque du crâne doré || Goldener Schädel-Stoß || Colpo del Teschio Dorato || Golpe del cráneo dorado || Uderzenie Złotej Czaszki || 황금 해골 일격 || ゴールデン スカル ストライク || 金鉗狙殺 || 金颅杀
+|-
+| [[Black Spider Strike]] || Attaque de l'araignée noire || Schwarzer Spinnen-Stoß || Colpo del Ragno Nero || Golpe de la araña negra || Uderzenie Czarnego Pająka || 흑거미 일격 || ブラック スパイダー ストライク || 黑寡婦狙殺 || 黑蛛刺
+|-
+| [[Golden Fox Strike]] || Coup du renard doré || Goldener Fuchs-Stoß || Colpo della Volpe Dorata || Golpe del zorro dorado || Uderzenie Złotego Lisa || 금빛여우 일격 || ゴールデン フォックス ストライク || 金狐狸狙殺 || 金狐斩
+|-
+| [[Deadly Haste]] || Hâte mortelle || Tödliche Eile || Fretta Letale || Prisa mortal || Śmiercionośny Pośpiech || 치명적인 신속함 || デッドリー ヘイスト || 致命速度 || 疾速
+|-
+| [[Assassin's Remedy]] || Remède de l'Assassin || Mittel des Assassinen || Rimedio dell'Assassino || Remedio del Asesino || Remedium Zabójcy || 암살자의 치료 || アサシン レメディ || 暗殺者療法 || 刮骨
+|-
+| [[Deadly Inscriptions]] || Inscriptions mortelles || Tödliche Inschriften || Iscrizioni Letali || Inscripciones mortales || Śmiercionośne Inskrypcje || 죽음의 각인 || デッドリー インスクリプション || 致命銘文 || 致命铭文
+|-
+| [[Fox's Promise]] || Promesse du renard || Versprechen des Fuchses || Promessa della Volpe || Promesa del zorro || Obietnica Lisa || 여우의 약속 || フォックス プロミス || 狐狸誓言 || 灵狐杀
+|-
+| [[Feigned Neutrality]] || Neutralité simulée || Vorgetäuschte Neutralität || Neutralità Simulata || Neutralidad fingida || Udawana Neutralność || 거짓 중립 || フェイン ニュートラリティ || 陰暗庇護 || 诈降
+|-
+| [[Mark of Insecurity]] || Marque d'insécurité || Zeichen der Unsicherheit || Segno dell'Insicurezza || Marca de inseguridad || Piętno Niepewności || 불안의 징후 || インセキュリティ マーク || 驚恐印記 || 危机印记
+|-
+| [[Hidden Caltrops]] || Chausse-trappes cachées || Versteckte Trittnägel || Triboli Nascosti || Cebos escondidos || Ukryta Kolczatka || 숨겨진 마름쇠 || ハイド カルトラップ || 神秘蒺藜 || 鹿钉
+|-
+| [[Assault Enchantments]] || Enchantements d'assauts || Angriffs-Verzauberungen || Assalta Incantesimi || Asaltaencantamientos || Atak na Zaklęcia || 암살자의 강화 제거 || アサルト エンチャント || 衝擊強化 || 增益突袭
+|-
+| [[Wastrel's Collapse]] || Effondrement du gaspilleur || Verfall des Verschwenders || Crollo del Fannullone || Colapso del derrochador || Powalenie Marnotrawcy || 부랑자의 좌절 || ウェイストラル コラプス || 偷襲 || 瓦斯垂的崩溃
+|-
+| [[Lift Enchantment]] || Enchantements levés || Verzauberung lösen || Leva Incantesimo || Aumentaencantamientos || Kradzież Zaklęcia || 강화 마법 훔치기 || リフト エンチャント || 加持拔除 || 增益消散
+|-
+| [[Augury of Death]] || Présage mortel || Todesomen || Presagio di Morte || Augurio de muerte || Wróżba Śmierci || 죽음의 전조 || デス オーグリー || 死亡預言 || 濒死
+|-
+| [[Disrupting Dagger]] || Dague d'interruption || Unterbrechender Dolch || Pugnale Dirompente || Daga desbaratadora || Przerywający Sztylet || 혼란의 비수 || ディスラプト ダガー || 飛散匕首 || 扰乱投射
+|-
+| [[Signet of Toxic Shock]] || Sceau de choc toxique || Siegel des toxischen Schocks || Sigillo dello Shock Tossico || Sello del shock tóxico || Sygnet Toksycznego Szoku || 독성 인장 || トキシック ショック シグネット || 劇毒衝擊紋章 || 毒震纹章
+|-
+| [[Signet of Twilight]] || Sceau de l'aube || Siegel des Zwielichts || Sigillo del Tramonto || Sello de la penumbra || Sygnet Zmroku || 여명 인장 || トワイライト シグネット || 薄暮紋章 || 微光纹章
+|-
+| [[Way of the Assassin ]] || Méthode de l'Assassin || Weg des Assassinen || Potere dell'Assassino || Camino del Asesino || Ścieżka Zabójcy || 암살자의 술수 || アサシン ウェイ || 殺道 || 杀戮
+|-
+| [[Deadly Paradox]] || Paradoxe mortel || Tödliches Paradoxon || Paradosso Letale || Paradoja mortal || Zabójczy Paradoks || 치명적인 모순 || デッドリー パラドックス || 暗殺者之舞 || 逆行
+|-
+| [[Shadow Walk ]] || Marche de l'ombre || Schattenmarsch || Passeggiata dell'Ombra || Paseo sombrío  || Spacer w Cieniu || 그림자 걷기 || シャドウ ウォーク || 暗影微步 || 影渡
+|-
+| [[Death's Retreat]] || Retraite de la mort || Rückzug des Todes || Ritirata della Morte || Retirada mortal || Ucieczka Śmierci || 필사의 퇴각 || デス リトリート || 致命撤退 || 逃生
+|-
+| [[Shadow Prison]] || Prison d'ombre || Schattengefängnis || Prigione d'Ombra || Cárcel sombría || Więzienie Cienia || 어둠의 구속 || シャドウ プリズン || 暗影拘禁 || 影束缚
+|-
+| [[Swap]] || Echange || Tauschen || Scambio || Intercambio || Zamiana || 자리바꿈 || スワップ || 交替 || 交替
+|-
+| [[Shadow Meld]] || Mêlée de l'ombre || Schattenverschmelzung || Fusione con l'Ombra || Mezcla sombría || Cieniste Połączenie || 그림자 동화 || シャドウ メルド || 暗影結合 || 影交织
+|}
+<noinclude>
+[[Category:Tables]]
+</noinclude>

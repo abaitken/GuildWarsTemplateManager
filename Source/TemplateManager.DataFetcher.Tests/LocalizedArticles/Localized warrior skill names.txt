@@ -1,0 +1,301 @@
+﻿== Core ==
+
+{| {{STDT}} class = "expandable"
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Battle Rage]] || Fureur guerrière || Kampfwut || Furia della Battaglia || Furia de batalla || Szał Bojowy || 전투의 분노 || バトル レイジ || 戰鬥憤怒 || 战士之怒
+|-
+| [[Hamstring]] || Coupe-jarret || Lähmung || Azzoppamento || Cortar tendón || Podcięcie Ścięgien || 다리 베기 || ハムストリング || 斷腿攻擊 || 断筋
+|-
+| [[Wild Blow]] || Coup sauvage || Rundumschlag || Colpo Selvaggio || Golpe violento || Dziki Cios || 회심의 일격 || ワイルド ブロウ || 狂暴一擊 || 会心一击
+|-
+| [[Power Attack]] || Attaque puissante || Kraftangriff || Attacco Potente || Ataque poderoso || Potężny Atak || 강맹한 공격 || パワー アタック || 強力攻擊 || 猛击
+|-
+| [[Thrill of Victory]] || Frisson de victoire || Rausch des Sieges || Brivido della Vittoria || Emoción de la victoria || Dreszcz Zwycięstwa || 승리의 감동 || ビクトリー スリル || 勝利的感動 || 压制
+|-
+| [[Distracting Blow]] || Coup de diversion || Ablenkungsschlag || Colpo Distraente || Golpe de distracción || Rozpraszający Cios || 크게 휘두르기 || ディストラクト ブロウ || 虛晃打擊 || 扰乱攻击
+|-
+| [[Cyclone Axe]] || Hache cyclone || Zyklonaxt || Ascia Ciclone || Hacha ciclón || Młyniec || 폭풍의 도끼 || サイクロン アックス || 旋風斧 || 旋风斧
+|-
+| [[Hammer Bash]] || Coup de marteau || Hammerstreich || Colpo di Martello || Martillazo || Miażdzący Młot || 해머 일격 || ハンマー バッシュ || 鎚子重擊 || 锤子重击
+|-
+| [[Bull's Strike]] || Attaque du taureau || Bullenstoß || Colpo del Toro || Golpe del toro || Uderzenie Byka || 성난 황소 || ブル ストライク || 公牛衝擊 || 公牛冲撞
+|-
+| [[Axe Rake]] || Ratissage || Harkenaxt || Ascia Rastrello || Barrido de hacha || Podcięcie Toporem || 도끼 회전 || アックス レーキ || 銳斧掃蕩 || 利斧横扫
+|-
+| [[Cleave]] || Clivage || Spalten || Fessura || Partir en dos || Rozłupanie || 장작 패기 || クリーヴ || 劈擊 || 顺势劈
+|-
+| [[Executioner's Strike]] || Frappe du bourreau || Henkerschlag || Colpo del Boia || Golpe del ejecutor || Uderzenie Kata || 참수인의 도끼 || エグゼキュショナー ストライク || 劊子手之斬 || 处决
+|-
+| [[Dismember]] || Démembrement || Zerstückeln || Smembramento || Desmembrar || Rozczłonkowanie || 사지 가르기 || ディスメンバー || 肢解 || 断骨
+|-
+| [[Disrupting Chop ]] || Taillade d'interruption || Unterbrechender Hieb || Fendente Dirompente || Hachazo desbaratador || Przerywające Cięcie || 방해의 일격 || ディスラプト チョップ  || 擾亂劈砍 || 扰乱斩
+|-
+| [[Swift Chop]] || Coup rapide || Schneller Hieb || Fendente Rapido || Hachazo rápido || Szybkie Cięcie || 신속한 일격 || スウィフト チョップ || 快砍 || 快刀斩
+|-
+| [["For Great Justice!"]] || Pour la justice ! || "Für höhere Gerechtigkeit!" || "Giustizia è Fatta!" || "¡Por la justicia!" || "Za Większą Sprawiedliwość!" || 정의를 위하여! || フォー グレート ジャスティス！ || 「為了正義！」 || 「为了正义！」
+|-
+| [[Defensive Stance]] || Pose défensive || Verteidigungshaltung || Posizione Difensiva || Actitud defensiva || Postawa Obronna || 방어 자세 || ディフェンシブ スタンス || 防禦態勢 || 防御姿态
+|-
+| [[Frenzy]] || Frénésie || Raserei || Frenesia || Frenesí || Furia || 광란 || フレンジ || 狂暴 || 狂暴
+|-
+| [[Endure Pain]] || Résistance à la douleur || Schmerz ertragen || Sopporta Dolore || Soportar el dolor || Odporność na Ból || 인내력 증강 || インデュア ペイン || 忍耐痛苦 || 忍痛
+|-
+| [["Watch Yourself!"]] || "Prenez garde !" || "Passt auf Euch auf!" || "In guardia!" || "¡Cuidado!" || "Pilnujcie się!!" || 조심하게나! || ウォッチ ユアセルフ！ || 「小心！」 || 「小心！」
+|-
+| [[Sprint]] || Sprint || Sprinten || Scatto || Propulsión || Sprint || 전력 질주 || スプリント || 衝刺 || 冲刺
+|-
+| [[Mighty Blow]] || Coup puissant || Mächtiger Schlag || Colpo Possente || Golpe poderoso || Potężny Cios || 기세의 일격 || マイティ ブロウ || 奮力一鎚 || 重捶
+|-
+| [[Devastating Hammer]] || Marteau dévastateur || Verheerender Hammer || Martello Devastante || Martillo devastador || Druzgoczący Młot || 통렬한 일격 || デバステイト ハンマー || 毀滅之鎚 || 破坏之锤
+|-
+| [[Irresistible Blow ]] || Coup impérieux || Brutaler Schlag || Colpo Irresistibile || Golpe brutal || Nieblokowalne Uderzenie || 저항불가의 일격 || イレジスティブル ブロウ  || 致命之鎚 || 不可抗力
+|-
+| [[Counter Blow ]] || Contrecoup || Gegenschlag || Colpo di Rimando || Contraataque || Kontruderzenie || 반격의 휘두르기 || カウンター ブロウ  || 反擊之鎚 || 反击
+|-
+| [[Heavy Blow]] || Coup de brute || Heftiger Schlag || Colpo Pesante || Golpe duro || Ciężki Cios || 혼신의 일격 || ヘヴィー ブロウ || 沉重一鎚 || 锤击
+|-
+| [[Staggering Blow]] || Coup de boutoir || Umwerfender Schlag || Colpo Travolgente || Golpe de desequilibrio || Osłabiający Cios || 약화의 일격 || スタッガー ブロウ || 驚天鎚 || 虚弱之锤
+|-
+| [[Warrior's Cunning]] || Adresse du Guerrier || Verschlagenheit des Kriegers || Astuzia del Guerriero || Astucia del Guerrero || Spryt Wojownika || 전사의 노련함 || ウォーリア カニング || 戰士的靈巧 || 狡诈
+|-
+| [[Shield Bash]] || Coup de bouclier || Heftiger Schildschlag || Colpo di Scudo || Golpe de escudo || Uderzenie Tarczą || 방패 밀치기 || シールド バッシュ || 盾擊 || 盾击
+|-
+| [["Charge!"]] || Chargez ! || "Angriff!" || "Carica!" || "¡Carga!" || "Szarża!" || 돌격하라! || チャージ！ || 「突擊！」 || 「冲锋！」
+|-
+| [["Shields Up!"]] || "Levez les boucliers !" || "Schilde hoch!" || "In alto gli scudi!" || "¡Alzad los escudos!" || "Tarcze w Górę!" || 방패를 들라! || シールド アップ！ || 「舉起盾牌！」 || 「高举盾牌！」
+|-
+| [[Berserker Stance]] || Pose du berserker || Berserkerhaltung || Posizione del Guerriero Furioso || Actitud berserker || Postawa Berserkera || 광전사의 전투 자세 || バーサーカー スタンス || 狂戰士態勢 || 狂暴姿态
+|-
+| [[Balanced Stance ]] || Pose d'équilibre || Ausgeglichene Haltung || Posizione Bilanciata || Actitud equilibrada || Postawa Zrównoważona || 균형 잡힌 방어 자세 || バランス スタンス  || 平衡態勢 || 平衡姿态
+|-
+| [[Hundred Blades]] || Cent lames || Hundert Klingen || Cento Lame || Cien espadas || Sto Ostrzy || 백 개의 칼날 || ハンドレッド ブレード || 快速劍 || 乱刃
+|-
+| [[Sever Artery]] || Tranche-artère || Arterienabtrennung || Arteria Recisa || Cortar arteria || Przecięcie Tętnicy || 깊숙한 자상 || セバー アーテリー || 動脈切割 || 放血
+|-
+| [[Gash]] || Entaille || Schnittwunde || Taglio Profondo || Corte profundo || Głębokie Cięcie || 상처 베기 || ガッシュ || 重斬 || 重创
+|-
+| [[Final Thrust]] || Botte fatale || Endstoß || Affondo Finale || Estocada final || Kończące Pchnięcie || 궁극의 찌르기 || ファイナル スラスト || 終結刺擊 || 黄蜂尾刺
+|-
+| [[Seeking Blade]] || Lame chercheuse || Suchende Klinge || Lama che Cerca || Cuchillada precisa || Przeszywające Ostrze || 무방비의 칼날 || シーク ブレード || 追擊刀 || 解牛利刃
+|-
+| [[Savage Slash]] || Taillade sauvage || Wilder Hieb || Fendente Selvaggio || Tajo salvaje || Brutalne Cięcie || 맹렬한 베기 || サベージ スラッシュ || 猛烈斬擊 || 野蛮斩击
+|}
+
+
+== Prophecies ==
+
+{| {{STDT}} class = "expandable"
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [["To the Limit!"]] || "Extrême limite !" || "Bis ans Limit!" || "All'Ultimo Sangue!" || "¡Hasta el límite!" || "Do granic możliwości!" || 나에게 힘을! || トゥ ザ リミット！ || 「給我力量！」 || 「冲破极限！」
+|-
+| [[Defy Pain]] || Défi à la douleur || Schmerz trotzen || Sfida al Dolore || Desafiar al dolor || Ignorowanie Bólu || 도전의 고통 || デファイ ペイン || 無視痛苦 || 苦行
+|-
+| [[Rush]] || Course || Ansturm || Fretta || Aceleración || Pośpiech || 돌진 || ラッシュ || 突進 || 突进
+|-
+| [[Desperation Blow]] || Frappe désespérée || Verzweiflungsschlag || Colpo della Disperazione || Golpe desesperado || Desperacki Cios || 필사의 일격 || デスパレイション ブロウ || 搏命一擊 || 孤注一掷
+|-
+| [[Protector's Strike]] || Attaque du protecteur || Schlag des Beschützers || Colpo del Protettore || Golpe del protector || Uderzenie Obrońcy || 정확한 강타 || プロテクター ストライク || 保護者之擊 || 以静制动
+|-
+| [[Griffon's Sweep]] || Frappe du griffon || Greifenschlag || Colpo del Grifone || Barrido del grifo || Zamach Gryfa || 그리폰의 날갯짓 || グリフォン スウィープ || 獅鷲獸掃蕩 || 狮鹫横扫
+|-
+| [[Pure Strike]] || Frappe pure || Reiner Schlag || Colpo Puro || Golpe puro || Czyste Uderzenie || 확실한 강타 || ピュア ストライク || 強力衝擊 || 无心之击
+|-
+| [[Skull Crack]] || Brise-crâne || Schädel spalten || Rompi Cranio || Rompecráneos || Rozłupanie Czaszki || 머리 강타 || スカル クラック || 碎顎 || 碎颅
+|-
+| [["I Will Avenge You!"]] || "Je vous vengerai !" || "Ich werde Euch rächen!" || "Ti Vendicherò!" || "¡Os vengaré!" || "Pomszczę Cię!" || 복수할 것이다! || アベンジ！ || 「我要報仇！」 || 「我要报仇！」
+|-
+| [[Eviscerate]] || Eviscération || Ausweiden || Squartamento || Eviscerar || Patroszenie || 복부 강타 || イヴィソレイト || 剖臟 || 破腹
+|-
+| [[Penetrating Blow]] || Coup pénétrant || Durchdringender Schlag || Colpo Penetrante || Golpe penetrante || Przeszywające Uderzenie || 날카로운 일격 || ペネトレイト ブロウ || 破甲攻擊 || 穿甲
+|-
+| [[Axe Twist]] || Hache tournante || Axtdrehung || Manovra d'Ascia || Giro y hachazo || Osłabiający Topór || 춤추는 도끼 || アックス ツイスト || 斧頭絞殺 || 利斧绞杀
+|-
+| [[Flurry]] || Rafale || Schauer || Folata di Colpi || Ráfaga || Nawałnica Ciosów || 질풍 공격 || フラーリィ || 疾風攻勢 || 乱舞
+|-
+| [[Belly Smash]] || Coup ventral || Bauchklatscher || Spanciata || Golpe de barriga || Uderzenie w Brzuch || 바닥 강타 || ベリー スマッシュ || 腹部猛擊 || 腹部猛击
+|-
+| [[Crushing Blow]] || Coup écrasant || Vernichtender Schlag || Schiacciata || Golpe aplastante || Miażdżące Uderzenie || 파괴의 일격 || クラッシュ ブロウ || 碎裂鎚 || 碾压
+|-
+| [[Crude Swing]] || Swing brutal || Grober Schwung || Fendente Crudele || Tajo brutal || Niedbały Zamach || 폭풍의 해머 || クルード スウィング || 狂暴亂舞 || 鲁莽横扫
+|-
+| [[Earth Shaker]] || Marteau pilon || Erdrüttler || Scuoti-terra || Temblor de tierra || Wstrząsotwórca || 대지 진동 || アース シェイカー || 震動大地 || 大地践踏
+|-
+| [[Backbreaker]] || Brise-échine || Rückenbrecher || Spezza-schiena || Rompespaldas || Łamacz Kręgosłupa || 척추 강타 || バックブレイカー || 背擊 || 断背
+|-
+| [[Dolyak Signet]] || Sceau de dolyak || Dolyak-Siegel || Sigillo di Dolyak || Sello de Dolyak || Sygnet Doljaka || 돌리악 인장 || ドルヤク シグネット || 石犛牛紋章 || 野牦牛纹章
+|-
+| [["Victory is Mine!"]] || "A moi la victoire !" || "Der Sieg ist mein!" || "La Vittoria è Mia!" || "¡La victoria es mía!" || "Zwycięstwo jest Moje!" || 승리할 것이다! || ビクトリー イズ マイン！ || 「勝利在我！」 || 「我们必胜！」
+|-
+| [["Fear Me!"]] || "Craignez-moi !" || "Fürchtet mich!" || "Temi la Mia Ira!" || "¡Temedme!" || "Poznajcie Co To Strach!" || 내가 최고다! || フィアー ミー！ || 「我是最強！」 || 「谁敢来战！」
+|-
+| [["I Will Survive!"]] || "Je survivrai !" || "Ich überlebe!" || "Io Sopravviverò!" || "¡Sobreviviré!" || "Przetrwam!" || 살아남을 것이다! || サバイブ！ || 「我要活下去！」 || 「我要生存！」
+|-
+| [["Don't Believe Their Lies!"]] || "Ne croyez pas leurs mensonges !" || "Glaubt nicht an ihre Lügen!" || "Non Credere alle Loro Menzogne!" || "¡No creáis sus mentiras!" || "Nie Wierzcie Ich Kłamstwom!" || 현혹되지마라! || ドゥ ノット ビリーブ！ || 「莫信敵言！」 || 「敌言勿信！」
+|-
+| [[Gladiator's Defense]] || Défense du gladiateur || Gladiatoren-Verteidigung || Difesa del Gladiatore || Defensa del gladiador || Obrona Gladiatora || 검투사의 방어 자세 || グラディエーター ディフェンス || 鬥士防禦態勢 || 斗士的防御
+|-
+| [[Deflect Arrows]] || Déviation des flèches || Pfeilablenkung || Devia Frecce || Desviar flechas || Odbijanie Strzał || 화살 쳐내기 || ディフレクト アロー || 弓箭閃避態勢 || 弓箭无用
+|-
+| [[Warrior's Endurance]] || Endurance du Guerrier || Ausdauer des Kriegers || Resistenza del Guerriero || Fortaleza del Guerrero || Wytrzymałość Wojownika || 전사의 전투 자세 || ウォーリア インデュランス || 戰士忍耐態勢 || 战士之韧
+|-
+| [[Dwarven Battle Stance]] || Pose de combat des Nains || Zwergen-Kampfhaltung || Posizione di Combattimento del Nano || Actitud de batalla de enano || Krasnoludzka Postawa Bojowa || 드워프의 전투 자세 || ドワーヴン バトル スタンス || 矮人戰鬥態勢 || 矮人战斗姿态
+|-
+| [[Disciplined Stance]] || Pose de discipline || Disziplinierte Haltung || Posizione Disciplinata || Actitud disciplinada || Postawa Zdyscyplinowana || 숙련된 방어 자세 || ディシプリン スタンス || 訓練態勢 || 军令姿态
+|-
+| [[Wary Stance ]] || Pose prudente || Wachsame Haltung || Posizione di Guardia || Actitud precavida || Czujna Postawa || 신중한 방어 자세 || ウェアリー スタンス  || 謹慎態勢 || 警惕姿态
+|-
+| [[Shield Stance]] || Pose du bouclier || Schildhaltung || Posizione dello Scudo || Actitud protectora || Postawa Tarczownika || 방패 방어 자세 || シールド スタンス || 舉盾態勢 || 持盾姿态
+|-
+| [[Bull's Charge]] || Charge du taureau || Angriff des Bullen || Carica del Toro || Carga de toro || Szarża Byka || 황소의 돌격 || ブル チャージ || 公牛突擊態勢 || 公牛冲锋
+|-
+| [[Bonetti's Defense]] || Défense de Bonetti || Bonettis Verteidigung || Difesa di Bonetti || Defensa de Bonetti || Obrona Bonetti'ego || 보네티의 방어 자세 || ボネッティ ディフェンス || 博尼迪防禦態勢 || 博内蒂防御
+|-
+| [[Galrath Slash]] || Taillade de Galrath || Galrath-Hieb || Fendente di Galrath || Tajo de Galrath || Cięcie Galratha || 갈라쓰의 베기 || ガルラス スラッシュ || 加拉斯之斬 || 格拉斯之斩
+|-
+| [[Riposte]] || Riposte || Entgegnung || Replica || Estocada || Riposta || 반격 || リポスト || 還擊 || 还击
+|-
+| [[Deadly Riposte]] || Riposte mortelle || Tödliche Entgegnung || Replica Mortale || Estocada mortal || Zabójcza Riposta || 치명적인 반격 || デッドリー リポスト || 致命還擊 || 致命还击
+|-
+| [[Flourish]] || Prospérité || Blütezeit || Fioritura || Blandir || Popis bronią || 세련된 공격 || フラリッシュ || 洗鍊的戰技 || 战意如火
+|}
+
+== Factions ==
+
+{| {{STDT}} class = "expandable"
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Rush]] || Course || Ansturm || Fretta || Aceleración || Pośpiech || 돌진 || ラッシュ || 突進 || 突进
+|-
+| [[Drunken Blow]] || Attaque d'ivresse || Betrunkener Schlag || Colpo Ebbro || Golpe embriagado || Cios Pijaka || 만취의 일격 || ドランク ブロウ || 酣醉打擊 || 醉拳
+|-
+| [[Leviathan's Sweep]] || Frappe du Léviathan || Leviathanschlag || Colpo del Leviatano || Barrido de Leviatán || Zamach Lewiatana || 괴물의 휩쓸기 || リヴァイアサン スウィープ || 海獸掃蕩 || 海妖斩
+|-
+| [[Jaizhenju Strike]] || Frappe de Jaizhenju || Jaizhenjuschlag || Colpo di Jaizhenju || Golpe de Jaizhenju || Uderzenie Jaizhenju || 자이젠주 강타 || ジャイゼンジュ ストライク || 絕纏衝擊 || 迅猛打击
+|-
+| [[Triple Chop]] || Triple coup || Dreifachhieb || Fendente Triplo || Tajada triple || Potrójne Cięcie || 삼면 공격 || トリプル チョップ || 三重砍擊 || 三连斩
+|-
+| [[Furious Axe]] || Hache de rage || Zornige Axt || Ascia Furiosa || Hacha furiosa || Wściekły Topór || 분노의 도끼 || フューリアス アックス || 狂怒之斧 || 狂怒之斧
+|-
+| [[Whirling Axe]] || Hache tournoyante || Wirbelnde Axt || Ascia Roteante || Hacha giratoria || Wirujący Topór || 소용돌이 도끼 || ホワール アックス || 狂風斧 || 狂风斧
+|-
+| [[Penetrating Chop]] || Taillade pénétrante || Durchdringender Hieb || Fendente Penetrante || Tajo penetrante || Przebijające Cięcie || 날카로운 찍기 || ペネトレイト チョップ || 貫穿砍擊 || 穿刺斩
+|-
+| [[Lacerating Chop]] || Taillade lacérante || Zerfetzender Hieb || Fendente Lacerante || Tajo desgarrador || Rozdzierające Cięcie || 분열의 일격 || ラセレイト チョップ || 撕裂砍擊 || 割裂
+|-
+| [[Yeti Smash]] || Frappe du Yéti || Yetischlag || Percossa dello Yeti || Golpe del yeti || Uderzenie Yeti || 예티의 강타 || イエティ スマッシュ || 雪人猛擊 || 雪人猛击
+|-
+| [[Enraged Smash]] || Coup enragé || Erzürnter Schlag || Percossa Furiosa || Golpe enrabietado || Gniewne Uderzenie || 분격의 강타 || エンレイジ スマッシュ || 憤怒猛擊 || 愤怒之锤
+|-
+| [[Fierce Blow]] || Attaque féroce || Erbitterter Schlag || Colpo Feroce || Golpe feroz || Wściekły Cios || 잔인한 강타 || フィアース ブロウ || 兇猛打擊 || 重击
+|-
+| [[Crushing Blow]] || Coup écrasant || Vernichtender Schlag || Schiacciata || Golpe aplastante || Miażdżący Cios || 파괴의 일격 || クラッシュ ブロウ || 碎裂打擊 || 破碎之锤
+|-
+| [[Forceful Blow]] || Coup forcé || Energischer Schlag || Colpo Vigoroso || Golpe eficaz || Mocny Cios || 기세의 휘두르기 || フォースフル ブロウ || 威力打擊 || 全力一击
+|-
+| [[Crude Swing]] || Swing brutal || Grober Schwung || Fendente Crudele || Tajo brutal || Niedbały Zamach || 폭풍의 해머 || クルード スウィング || 狂暴亂舞 || 狂舞
+|-
+| [[Renewing Smash]] || Coup de renouvellement || Erneuernder Schlag || Percossa Rinnovatrice || Golpe renovador || Cios Odnowy || 회복의 휘두르기 || リニュー スマッシュ || 復原猛擊 || 恢复猛击
+|-
+| [[Auspicious Blow]] || Coup propice || Günstiger Schlag || Colpo Propizio || Golpe auspiciante || Skuteczne Uderzenie || 행운의 일격 || オースピシャス ブロウ || 幸運打擊 || 幸运打击
+|-
+| [[Signet of Strength]] || Sceau de force || Siegel der Stärke || Sigillo della Forza || Sello de fuerza || Sygnet Siły || 힘의 인장 || ストレングス シグネット || 力量紋章 || 力量纹章
+|-
+| [[Storm of Swords]] || Tempête d'épées || Schwertsturm || Tempesta di Spade || Tormenta de espadas || Burza Mieczy || 검의 폭풍 || ソード ストーム || 暴風劍 || 暴风剑舞
+|-
+| [["You Will Die!"]] || Vous mourrez ! || "Ihr werdet sterben!" || "Morirai!" || "¡Vais a morir!" || Umrzesz! || 넌 죽은 목숨이다! || ユー ウィル ダイ！ || 「受死吧！」 || 「受死吧！」
+|-
+| [["On Your Knees!"]] || A genoux ! || "Auf Eure Knie!" || In Ginocchio! || "¡De rodillas!”" || Na Kolana! || 무릎 꿇어! || オン ユア ニー！ || 「跪下！」 || 「跪下！」
+|-
+| [["None Shall Pass!"]] || Nul ne passera ! || "Niemand darf vorbei!" || "Non si passa!" || "¡No pasarán!” || Nikt Nie Przejdzie!" || 꼼짝마라! || ナン シャル パス！ || 「無人可過！」 || 「万夫莫开！」
+|-
+| [["Retreat!"]] || "Battez en retraite !" || Rückzug! || "Ritirata!" || ”¡Retirada!” || Wycofać Się! || 신속히 후퇴하라! || リトリート！ || 「撤退！」 || 「撤退！」
+|-
+| [["Coward!"]] || "Froussard !" || "Feigling!" || Vigliacco! || "¡Cobarde!”" || Tchórz! || 비겁한 녀석! || カワード！ || 「懦夫！」 || 「懦夫！」
+|-
+| [[Protector's Defense]] || Défense du protecteur || Verteidigung des Beschützers || Difesa del Protettore || Defensa del protector || Zastawa Obrońcy || 보호자의 방어 자세 || プロテクター ディフェンス || 保護者態勢 || 防护姿态
+|-
+| [[Auspicious Parry]] || Parade propice || Günstige Abwehr || Parata Propizia || Bloqueo favorable || Pomyślne Parowanie || 행운의 방어 자세 || オースピシャス パリー || 幸運迴避 || 幸运招架
+|-
+| [[Primal Rage]] || Rage primitive || Urzorn || Ira Primordiale || Furia primitiva || Pierwotny Szał || 원초적 분노 || プライマル レイジ || 盛怒 || 盛怒
+|-
+| [[Deflect Arrows]] || Déviation des flèches || Pfeilablenkung || Devia Frecce || Desviar flechas || Odbijanie Strzał || 화살 쳐내기 || ディフレクト アロー || 弓箭閃避態勢 || 避箭姿态
+|-
+| [[Tiger Stance]] || Pose du tigre || Tigerhaltung || Posizione della Tigre || Actitud felina || Postawa Tygrysa || 백호의 전투 자세 || タイガー スタンス || 猛虎態勢 || 猛虎姿态
+|-
+| [[Quivering Blade]] || Lame vacillante || Zitternde Klinge || Lama Fremente || Espada temblorosa || Drżące Ostrze || 춤추는 사브르 || クィーバー ブレード || 顫動之刃 || 颤动之刃
+|-
+| [[Silverwing Slash]] || Attaque d'Aildargent || Silberflügel-Hieb || Fendente di Aladargento || Tajo de Aladeacero || Cięcie Srebrnoskrzydłego || 은날개의 베기 || シルバーウイング スラッシュ || 銀翼斬 || 银翼斩
+|-
+| [[Sun and Moon Slash]] || Attaque lunisolaire || Sonne-Mond-Hieb || Fendente Sole e Luna || Tajada del sol y la luna || Cięcie Słońca i Księżyca || 일월 베기 || サン アンド ムーン スラッシュ || 日月斬 || 日月斩
+|-
+| [[Dragon Slash]] || Taillade du dragon || Drachenhieb || Fendente del Drago || Golpe del dragón || Smocze Cięcie || 드래곤 베기 || ドラゴン スラッシュ || 龍斬 || 龙咬
+|-
+| [[Riposte]] || Riposte || Entgegnung || Replica || Estocada || Riposta || 반격 || リポスト || 回刺 || 回刺
+|-
+| [[Standing Slash]] || Entaille permanente || Stehender Hieb || Fendente in Posizione || Golpe firme || Cięcie w Postawie || 위력적인 자세 베기 || スタンド スラッシュ || 態勢之斬 || 立劈
+|-
+| [[Shove]] || Poussée || Schubs || Spintone || Empujón || Popchnięcie || 어깨치기 || シャーブ || 撞擊 || 猛扑
+|}
+
+== Nightfall ==
+
+{| {{STDT}} class = "expandable"
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Counterattack]] || Contre-attaque || Gegenangriff || Contrattacco || Contraataque || Kontratak || 역습 || カウンターアタック || 反擊 || 阻击
+|-
+| [[Magehunter Strike]] || Frappe du chasseur de mages || Magierschlag || Colpo Cacciamaghi || Golpe antihechizos || Cios Łowcy Magów || 대마법 일격 || メイジハンター ストライク || 獵魔者攻擊 || 破法斩
+|-
+| [[Soldier's Strike]] || Attaque de soldat || Soldatenstoß || Colpo del Soldato || Golpe del soldado || Żołnierskie Uderzenie || 병사의 일격 || ソルジャー ストライク || 士兵之擊 || 军兵打击
+|-
+| [[Decapitate]] || Décapitation || Köpfen || Decapitazione || Decapitación || Ścięcie Głowy || 참수의 일격 || ディキャピテイト || 破壞砍擊 || 斩杀
+|-
+| [[Critical Chop]] || Entaille critique || Kritischer Hieb || Fendente Critico || Hachazo crítico || Krytyczne Cięcie || 위협적인 견제 || クリティカル チョップ || 致命砍擊 || 致命斩
+|-
+| [[Agonizing Chop]] || Entaille agonisante || Qualvoller Hieb || Fendente Agonizzante || Hachazo agonizante || Bolesne Cięcie || 필사의 견제 || アゴナイズ チョップ || 苦痛砍擊 || 怒斩
+|-
+| [[Flail]] || Peste || Dreschen || Flagellazione || Flagelo || Atak na Oślep || 능숙한 타작 || フレイル || 連枷 || 流星锤
+|-
+| [[Charging Strike]] || Frappe de charge || Angreifender Schlag || Colpo con Carica || Ataque en embestida || Uderzenie w Szarży || 돌진 공격 || チャージ ストライク || 急速攻擊 || 冲击
+|-
+| [[Headbutt]] || Coup de tête || Kopfstoß || Testata || Cabezazo || Uderzenie Głową || 박치기 || ヘッドバット || 頭鎚 || 头槌
+|-
+| [[Lion's Comfort]] || Confort du lion || Trost des Löwen || Conforto del Leone || Comodidad del león || Lwie Uzdrowienie || 사자의 안정 || ライオン コンフォート || 獸性安慰 || 雄狮的安抚
+|-
+| [[Rage of the Ntouka]] || Rage du Ntouka || Wut des Ntouka || Impeto di Ntouka || Furia del Ntouka || Szał Ntouki || 토우카의 분노 || ントゥカ レイジ || 恩多卡之怒 || 恩多卡之怒
+|-
+| [[Mokele Smash]] || Frappe du Mokele || Mokele-Schlag || Percossa di Mokele || Golpe de mokele || Uderzenie Mokele || 모케레의 강타 || モケーレ スマッシュ || 魔克雷猛擊 || 莫克雷之斩
+|-
+| [[Magehunter's Smash]] || Attaque du chasseur de mages || Magiejägerschmetterer || Percossa Cacciamaghi || Golpe del cazamagos || Uderzenie Łowcy Magów || 대마법 강타 || メイジハンター スマッシュ || 獵魔者猛擊 || 猎魔打击
+|-
+| [[Overbearing Smash]] || Attaque dominatrice || Anmaßender Schlag || Percossa Prepotente || Golpe autoritario || Harde Uderzenie || 위압적인 강타 || オーバーベア スマッシュ || 傲慢猛擊 || 傲慢之锤
+|-
+| [[Signet of Stamina]] || Sceau de constitution || Siegel der Ausdauer || Sigillo della Resistenza || Sello de vitalidad || Sygnet Wytrzymałości || 체력 인장 || スタミナ シグネット || 耐力紋章 || 耐力纹章
+|-
+| [["You're All Alone!"]] || Vous êtes seul ! || "Ihr seid ganz allein!" || Sei Rimasto Solo! || “¡Te han abandonado!” || Jesteś Sam! || 넌 혼자다! || オール アローン！ || 「你落單了！」 || “你落单了！”
+|-
+| [["Aim True!"]] || Visez bien ! || "Zielt genau!" || Mira Bene! || ¡En el blanco! || Mierzcie Dobrze! || 목표 확인! || エイム トゥルー！ || 「鎖定目標！」 || “锁定目标！”
+|-
+| [[Soldier's Stance]] || Pose du soldat || Soldaten-Haltung || Posizione del Soldato || Actitud del soldado || Postawa Żołnierza || 병사의 전투 자세 || ソルジャー スタンス || 士兵態勢 || 军士姿态
+|-
+| [[Soldier's Defense]] || Défense du soldat || Soldaten-Verteidigung || Difesa del Soldato || Defensa del soldado || Żołnierska Obrona || 병사의 방어 자세 || ソルジャー ディフェンス || 士兵防禦 || 军兵防御
+|-
+| [[Burst of Aggression]] || Explosion d'agressivité || Aggressiver Ausbruch || Scarica di Aggressione || Explosión agresiva || Wybuch Agresji || 폭발하는 분노 || アグレッション バースト || 侵略衝擊 || 疾掠
+|-
+| [[Enraging Charge]] || Charge enragée || Wütender Angriff || Carica Infuriante || Carga enrabietada || Wściekła Szarża || 성난 돌격 || エンレイジ チャージ || 怒氣急聚 || 暴怒冲击
+|-
+| [[Frenzied Defense]] || Défense frénétique || Fieberhafte Verteidigung || Difesa Frenetica || Defensa frenética || Szalona Obrona || 격앙된 방어 자세 || フレンジー ディフェンス || 狂暴防禦 || 狂暴守护
+|-
+| [[Steady Stance]] || Pose stable || Ruhige Haltung || Posizione Salda || Actitud firme || Stabilna Postawa || 안정적인 방어 자세 || ステディ スタンス || 堅定態勢 || 不动如山
+|-
+| [[Steelfang Slash]] || Frappe Croc-d'acier || Hieb des stählernen Fanzahns || Fendente Zanna d'Acciaio || Golpe de los colmillos de acero || Cięcie Stalowego Kła || 강철이빨 베기 || スチールファング スラッシュ || 鋼牙斬 || 铁牙刺
+|-
+| [[Crippling Slash]] || Taillade incapacitante || Verkrüppelnder Hieb || Fendente Azzoppante || Tajo lisiador || Okulawiające Cięcie || 둔화의 베기 || クリップル スラッシュ || 致殘斬擊 || 斩脚
+|-
+| [[Barbarous Slice]] || Entaille barbare || Barbarischer Schnitt || Squarcio Barbarico || Corte bárbaro || Barbarzyńskie Podcięcie || 야만스런 베기 || バーバラス スライス || 殘暴切割 || 狂野斩
+|}
+<noinclude>
+[[Category:Tables]]
+</noinclude>

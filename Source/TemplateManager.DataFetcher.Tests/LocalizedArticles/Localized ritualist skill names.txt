@@ -1,0 +1,235 @@
+﻿{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Clamor of Souls]] || Clameur des âmes || Gezeter der Seelen || Clamore delle Anime || Clamor de almas || Krzyk Dusz || 영혼의 아우성 || ソウル クラマー || 喧鬧之靈 || 喧闹之灵
+|-
+| [[Spawning Power]] || Puissance de l'Invocation ||  Macht des Herbeirufens || Riti Sacrificali || Engendramiento || Moc Przywoływania || 생성 || スポーン パワー || 召喚力量 || 召唤之力
+|-
+| [[Ritual Lord]] || Seigneur de rituel || Herr der Rituale || Lord Rituale || Señor de los rituales || Władca Rytuałów || 영혼의 지배자 || リチュアル ロード || 祭祀之主 || 祭祀之主
+|-
+| [[Mighty Was Vorizun]] || Vorizon était puissant || Mächtig war Vorizun || Vorizun era Potente || Bendito sea Vorizun || Potężnym Był Vorizun || 보리준의 강인함 || ヴォリズン マイティ || 萬能者莫里諾 || 莫里诺之力
+|-
+| [[Resilient Weapon]] || Arme résistante || Unverwüstliche Waffe || Arma Resiliente || Arma elástica || Wytrzymały Oręż || 회복의 무기 || リザリアント ウェポン || 活力武裝 || 回力
+|-
+| [[Cruel Was Daoshen]] || Daoshen était cruel || Grausam war Daoshen || Daoshen era Crudele || Malvado sea Daoshen || Okrutnym Był Daoshen || 다오센의 잔인함 || ドウシェン クルーエル || 殘酷者道森 || 道森之酷
+|-
+| [[Defiant Was Xinrae]] || Xinrae était rebelle || Trotzig war Xinrae || Xinrae era Insolente || Desafiante sea Xinrae || Buntowniczą Była Xinrae || 킨라이의 도전 || ジンライ ディファイアント || 反抗軍欣雷 || 欣雷之抗
+|-
+| [[Blind Was Mingson]] || Mingson était aveugle || Blind war Mingson || Mingson era Cieco || Ciego sea Mingson || Ślepym Był Mingson || 밍손의 눈가림 || ミンサン ブラインド || 盲者明森 || 明森之盲
+|-
+| [[Grasping Was Kuurong]] || Kuurong était avide || Erfassend war Kuurong || Kuurong era Avido || Codiciosa sea Kuurong || Zachłannym Był Kuurong || 쿠롱의 구속 || クーラン グラスプ || 貪婪者古朗 || 古朗之婪
+|-
+| [[Generous Was Tsungrai]] || Tsungrai était généreux || Großzügig war Tsungrai || Tsungrai era Generoso || Generoso sea Tsungrai || Hojnym Był Tsungrai || 청라이의 아량 || ツンライ ジェネラス || 慷慨者桑雷 || 桑雷之度
+|-
+| [[Protective Was Kaolai]] || Kaolai était protecteur || Schützend war Kaolai || Kaolai era Protettivo || Protector sea Kaolai || Opiekuńczym Był Kaolai || 카올라이의 수호 || カオライ プロテクティブ || 護衛者高萊 || 高莱之护
+|-
+| [[Tranquil Was Tanasen]] || Tanasen était tranquille || Ruhig war Tanasen || Tanasen era Tranquillo || Calmada sea Tanasen || Cichym Był Tanasen || 타나센의 평온 || タネイスン トランキル || 沉靜者譚納辛 || 谭纳辛之默
+|-
+| [[Lively Was Naomei]] || Namei était si gaie || Lebhaft war Naomei || Naomei era Vivace || Vivaz sea Naomei || Żywotną Była Naomei || 나오메이의 부활 || ナーメイ ライブリー || 復活者娜歐梅 || 娜欧梅之光
+|-
+| [[Vengeful Was Khanhei]] || Khanhei était revanchard || Nachtragend war Khanhei || Khanhei era Vendicativo || Rencoroso sea Khanhei || Mściwym Był Khanhei || 칸헤이의 보복 || カーンヘイ ヴェンジェフル || 復仇者漢何 || 汉何之恨
+|-
+| [[Anguished Was Lingwah]] || Lingwah était angoissée || Gequält war Lingwah || Lingwah era Tormentata || Angustiosa sea Lingwah || Udręczoną Była Lingwah || 링와의 고통 || リンワア アングウィッシュ || 苦痛者琳葳 || 琳薇之痛
+|-
+| [[Draw Spirit]] || Attraction d'esprit || Geist entziehen || Trascina Spirito || Espíritu arrastrado || Przemieszczenie Ducha || 영혼 호출 || ドロー スピリット || 靈之牽引 || 渡灵
+|-
+| [[Vengeful Was Khanhei]] || Khanhei était revanchard || Nachtragend war Khanhei || Khanhei era Vendicativo || Rencoroso sea Khanhei || Mściwym Był Khanhei || 칸헤이의 보복 || カーンヘイ ヴェンジェフル || 復仇者漢何 || 汉何之恨
+|-
+| [[Spirit Boon Strike]] || Coup du compagnon spirituel || Geistersegenstoß || Colpo di Soccorso dello Spirito || Golpe del espíritu unido || Uderzenie Duchowego Daru || 영혼 회복의 충격 || スピリット ブーン ストライク || 聖靈衝擊 || 圣灵冲击
+|-
+| [[Doom]] || Destinée || Untergang || Fato || Maldición || Zagłada || 예정된 충격 || ドゥーム || 末日 || 末日
+|-
+| [[Consume Soul]] || Consommation des âmes || Seele verzehren || Consuma Anima || Alma consumida || Pożercie Duszy || 영혼 소멸 || コンシューム ソウル || 靈魂毀滅 || 灵魂毁灭
+|-
+| [[Essence Strike]] || Frappe d'essence || Essenzschlag || Colpo dell'Essenza || Golpe de esencia || Uderzenie Esencji || 정기 강타 || エッセンス ストライク || 精髓衝擊 || 精髓冲击
+|-
+| [[Explosive Growth]] || Expansion explosive || Explosives Wachstum || Crescita Esplosiva || Crecimiento explosivo || Wybuchowy Byt || 증식의 위력 || エクスプルーシブ グロウス || 爆發增長 || 闪电圈
+|-
+| [[Boon of Creation]] || Compagnon de création || Segen der Schöpfung || Soccorso della Creazione || Bendición creadora || Dar Tworzenia || 소환의 혜택 || クリエイション ブーン || 創物者恩賜 || 造物者的恩赐
+|-
+| [[Spirit Channeling]] || Canalisation d'esprit || Geisterlenkung || Incanalamento dello Spirito || Canalización espiritual || Duchowe Połączenie || 정신 교류 || スピリット チャネリング || 導引之靈 || 引导之灵
+|-
+| [[Armor of Unfeeling]] || Armure de l'impassible || Rüstung der Gefühllosigkeit || Armatura dell'Insensibile || Armadura de insensibilidad || Zbroja Nieczułości || 무의식의 갑옷 || アンフィール アーマー || 無情護甲 || 麻木
+|-
+| [[Spirit Siphon ]] || Siphon de l'esprit || Geist abzapfen || Sifone dello Spirito || Chorro espiritual  || Duchowe Wysysanie || 영혼 흡입 || スピリット サイフォン  || 靈能吸收 || 灵魂虹吸
+|-
+| [[Soothing Memories]] || Souvenirs apaisants || Beruhigende Erinnerungen || Ricordi Rassicuranti || Recuerdos calmantes || Kojące Wspomnienia || 추억의 위로 || スーズ メモリーズ || 柔順記憶 || 平和
+|-
+| [[Spirit Light]] || Esprit illuminé || Geisterlicht || Luce dello Spirito || Luz espiritual || Duchowe Światło || 영혼의 빛 || スピリット ライト || 縛靈之光 || 缚灵之光
+|-
+| [[Mend Body and Soul]] || Guérison du corps et de l'âme || Körper und Seele heilen || Cura Corpo e Anima || Unir cuerpo y alma || Odnowa Ciała i Duszy || 심신 정화 || メンド ボディ アンド ソウル || 魂體治癒 || 魂体治愈
+|-
+| [[Wielder's Boon]] || Compagnon d'arme || Segen des Ausübers || Soccorso del Portatore || Ventaja del atacante || Dar Posiadacza || 무기의 혜택 || ウィールダー ブーン || 奮戰恩賜 || 战斗恩赐
+|-
+| [[Lamentation]] || Lamentation || Wehklage || Lamento || Lamento || Opłakiwanie || 음침한 망령 || ラメンテーション || 哀傷靈魂 || 哀伤之魂
+|-
+| [[Dulled Weapon]] || Arme émoussée || Stumpfe Waffe || Arma Smussata || Arma deslustrada || Stępiony Oręż || 녹슨 무기 || ダル ウェポン || 鈍化武器 || 迟钝
+|-
+| [[Binding Chains]] || Chaînes d'asservissement || Fesselnde Ketten || Catene Vincolanti || Cadenas encadenadas || Unieruchamiające Łańcuchy || 사슬 구속 || バインド チェイン || 束縛鎖鍊 || 束缚之链
+|-
+| [[Painful Bond ]] || Lien de douleur || Schmerzhafte Bindung || Legame Doloroso || Vínculo doloroso  || Bolesne Więzy || 고통스런 계약 || ペインフル ボンド || 苦痛連結 || 疼痛链接
+|-
+| [[Signet of Creation]] || Sceau de création || Siegel der Schöpfung || Sigillo della Creazione || Sello de creación || Sygnet Tworzenia || 소환 인장 || クリエイション シグネット || 創造紋章 || 创造纹章
+|-
+| [[Signet of Spirits]] || Sceau des Esprits || Siegel der Geister || Sigillo degli Spiriti || Sello de espíritus || Sygnet Duchów || 영혼 인장 || スピリット シグネット || 縛靈紋章 || 缚灵纹章
+|-
+| [[Feast of Souls]] || Festin de l'esprit || Schmaus der Seelen || Banchetto di Anime || Festín espiritual || Uczta Dusz || 영혼 만찬 || ゴースト リパスト || 生靈饗宴 || 生灵饕餮
+|-
+| [[Soul Twisting]] || Contorsion de l'âme || Seelenverflechtung || Distorsione dell'Anima || Almas unidas || Skręcenie Duszy || 왜곡된 영혼계약 || ソウル ツイスト || 生靈扭轉 || 生灵扭转
+|-
+| [[Celestial Summoning]] || Invocation céleste || Himmlisches Herbeirufen || Invocazione Celestiale || Invocación celestial || Niebiańskie Przywołanie || 영웅 소환 || セレスチャル サモン || 天空召喚　 || 神之召唤
+|-
+| [[Archemorus' Strike]] || Frappe d'Archemorous || Archemorus' Stoß || Colpo di Archemorus || Golpe de Archemorus || Uderzenie Archemorusa || 아키모러스 강타 || アルケムラス ストライク || 阿契摩洛斯衝擊 || 阿契摩洛斯之击
+|-
+| [[Shield of Saint Viktor]] || Bouclier de Saint Viktor || St. Viktors Schild || Scudo di San Viktor || Escudo de San Viktor || Tarcza św. Wiktora || 성 빅토르 방어막 || セイント ヴィクトル シールド || 聖徒維克之盾 || 圣徒维克多之盾
+|-
+| [[Ghostly Haste]] || Vivacité spectrale || Geisterhafte Eile || Fretta Spettrale || Velocidad fantasmal || Duchowy Pośpiech || 영혼의 신속함 || ゴースト ヘイスト || 幽魂之速 || 幽魂之速
+|-
+| [[Flesh of My Flesh]] || Chair de ma chair || Fleisch von meinem Fleisch || Carne della Mia Carne || Carne de mi carne || Ciało z Mego Ciała || 피같은 살 || マイ フレッシュ || 生體犧牲 || 血祭
+|-
+| [[Rupture Soul]] || Rupture d'âme || Seele zerreißen || Distruggi Anima || Alma rota || Rozerwanie Duszy || 영혼 파열 || ラプチャー ソウル || 生靈迸裂 || 生灵迸裂
+|-
+| [[Spirit to Flesh]] || Esprit de chair || Geist zu Fleisch || Da Spirito a Carne || Espíritu carnal || Duch Dla Duchów || 영혼의 육체화 || フレッシュ スピリット || 生靈之血 || 灵血交替
+|-
+| [[Spirit Rift]] || Faille de l'esprit || Geisterriss || Voragine Fantasma || Grieta del abismo || Duchowa Rozpadlina || 영혼의 균열 || スピリット リフト || 生靈裂縫 || 魂之裂痕
+|-
+| [[Spirit Burn]] || Brûlure de l'esprit || Geisterbrand || Bruciatura dello Spirito || Quemadura espiritual || Duchowy Płomień || 영혼 점화 || スピリット バーン || 生靈燃燒 || 灵魂燃烧
+|-
+| [[Gaze from Beyond]] || Vision de l'au-delà || Blick aus dem Jenseits || Sguardo dall'Aldilà || Mirada del más allá || Spojrzenie z Zaświatów || 보이지않는 시선 || ゲイズ フロム ビヨンド || 天外凝視 || 眺望
+|-
+| [[Spirit Transfer]] || Transfert d'esprit || Geistübertragung || Trasferimento dello Spirito || Transfusión espiritual || Duchowy Transfer || 영혼 흡수 || スピリット トランスファー || 生靈移轉 || 转魂
+|-
+| [[Union]] || Union || Vereinigung || Unione || Unión || Przymierze || 화합의 영혼 || ユニオン || 聯合 || 联合
+|-
+| [[Ancestors' Rage]] || Rage de l'ancêtre || Wut der Vorfahren || Ira degli Antenati || Rabia ancestral || Gniew Przodków || 고대용의 분노 || アンセスター レイジ || 先人的盛怒 || 先人之怒
+|-
+| [[Shadowsong]] || Mélodie des Ombres || Schattengesang || Canto Ombroso || Nanasombría || Pieśń Cienia || 그림자노래 영혼 || シャドウソング || 闇影共鳴 || 影歌
+|-
+| [[Shadowsong]] || Mélodie des Ombres || Schattengesang || Canto Ombroso || Nanasombría || Pieśń Cienia || 그림자노래 || シャドウソング || 暗影之歌 || 暗影咏唱
+|-
+| [[Pain]] || Douleur || Schmerzen || Dolore || Dolor || Ból || 고통 || ペイン || 苦痛 || 疼痛
+|-
+| [[Destruction]] || Destruction || Vernichtung || Distruzione || Destrucción || Zniszczenie || 파멸의 영혼 || ディストラクション || 毀滅 || 毁灭
+|-
+| [[Soothing]] || Apaisement || Beruhigung || Rasserenamento || Calmante || Ukojenie || 진정의 영혼 || スーズ || 緩和 || 安抚
+|-
+| [[Interruption]] || Interruption || Unterbrechung || Interruzione || Interrupción || Przerwanie || 방해의 영혼 || インタラプション || 中斷 || 扰乱
+|-
+| [[Displacement]] || Déplacement || Verschiebung || Spostamento || Desplazamiento || Przemieszczenie || 변칙의 영혼 || ディスプレイス || 偏移 || 偏斜
+|-
+| [[Preservation]] || Préservation || Erhaltung || Preservazione || Conservación || Zabezpieczenie || 보존의 영혼 || プリザベイション || 保護 || 保护
+|-
+| [[Life]] || Vie || Leben || Vita || Vida || Życie || 회생의 영혼 || ライフ || 生命 || 生命
+|-
+| [[Recuperation]] || Rétablissement || Erholung || Recupero || Recuperación || Rekonwalescencja || 휴식의 영혼 || リキューパレーション || 復原 || 复原
+|-
+| [[Dissonance]] || Dissonance || Missklang || Dissonanza || Disonancia || Dysonans || 불화의 영혼 || ディソナンス || 失調 || 失衡
+|-
+| [[Dissonance]] || Dissonance || Missklang || Dissonanza || Disonancia || Dysonans || 불화 || ディソナンス || 不和諧 || 紊乱
+|-
+| [[Earthbind]] || Lien terrestre || Erdbindung || Legaterra || Atadura terrenal || Uziemienie || 고착의 영혼 || アースバインド  || 地縛 || 地缚
+|-
+| [[Shelter]] || Refuge || Unterschlupf || Riparo || Cobijo || Schronienie || 보호의 영혼 || シェルター || 庇護 || 庇护
+|-
+| [[Disenchantment]] || Désenchantement || Entzauberung || Disincanto || Desencantamiento || Antyzaklęcie || 각성의 영혼 || ディスエンチャント || 削弱 || 弱化
+|-
+| [[Disenchantment]] || Désenchantement || Entzauberung || Disincanto || Desencantamiento || Antyzaklęcie || 각성 || ディスエンチャント || 覺醒 || 觉醒
+|-
+| [[Restoration]] || Restauration || Wiederherstellung || Ripristino || Restauración || Odnowa || 부활의 영혼 || レストレイション || 復甦 || 复苏
+|-
+| [[Bloodsong]] || Mélodie du sang || Blutgesang || Canto Sanguinario || Canción sangrienta || Pieśń Krwi || 피의 찬가 영혼 || ブラッドソング || 血歌 || 血歌
+|-
+| [[Bloodsong]] || Mélodie du sang || Blutgesang || Canto Sanguinario || Canción sangrienta || Pieśń Krwi || 피의 찬가 || ブラッドソング || 血歌 || 沥血
+|-
+| [[Wanderlust]] || Voyage || Fernweh || Spirito Vagabondo || Trotamundeo || Żądza Wędrowania || 방랑의 영혼 || ワンダーラスト || 流浪 || 流言
+|-
+| [[Wanderlust]] || Voyage || Fernweh || Spirito Vagabondo || Trotamundeo || Żądza Wędrowania || 방랑 || ワンダーラスト || 流浪 || 流言
+|-
+| [[Splinter Weapon]] || Arme à fragmentation || Splitterwaffe || Arma a Frammentazione || Arma de astillas || Odłamkowy Oręż || 파열의 무기 || スプリンター ウェポン || 爆刺武裝 || 尖刺之躯
+|-
+| [[Weapon of Shadow]] || Arme de l'Ombre || Schattenwaffe || Arma dell'Ombra || Arma de sombra || Cienisty Oręż || 어둠의 무기 || シャドウ ウェポン || 暗影武裝 || 暗影之躯
+|-
+| [[Weapon of Warding]] || Arme de protection || Waffe der Abwehr || Arma della Protezione || Arma de guardia || Ochronny Oręż || 보호의 무기 || ウォード ウェポン || 防護武裝 || 结界之躯
+|-
+| [[Vital Weapon ]] || Arme vitale || Wesentliche Waffe || Arma Vitale || Arma vital  || Życiodajny Oręż || 활력의 무기 || バイタル ウェポン || 生命武裝 || 活力
+|-
+| [[Spirit Light Weapon]] || Arme d'Esprit illuminé || Geisterlichtwaffe || Arma della Luce dello Spirito || Arma de luz espiritual || Oręż Duchowego Światła || 영혼의빛 무기 || スピリット ライト ウェポン || 靈光武裝 || 灵光之躯
+|-
+| [[Wailing Weapon]] || Arme des doléances || Klagende Waffe || Arma del Lamento || Arma de lamentos || Zawodzący Oręż || 비명의 무기 || ウェイル ウェポン || 哭號武裝 || 恸哭之躯
+|-
+| [[Brutal Weapon]] || Arme brute || Grausame Waffe || Arma Brutale || Arma brutal || Brutalny Oręż || 야만스런 무기 || ブルータル ウェポン || 殘暴武裝 || 残暴之躯
+|-
+| [[Guided Weapon ]] || Arme guidée || Gelenkte Waffe || Arma Guidata || Arma dirigida || Prowadzony Oręż || 유도 무기 || ガイド ウェポン || 引導武裝 || 引导之躯
+|-
+| [[Weapon of Quickening]] || Arme de rapidité || Waffe der Beschleunigung || Arma dell'Accelerazione || Arma de velocidad  || Oręż Przyspieszenia || 생기의 무기 || クイック ウェポン || 復甦武裝 || 复苏之躯
+|-
+| [[Nightmare Weapon]] || Arme du tourment || Alptraumwaffe || Arma Incubo || Arma de pesadilla || Upiorny Oręż || 악몽의 무기 || ナイトメア ウェポン || 夢魘武裝 || 梦魇之躯
+|-
+| [[Vengeful Weapon]] || Arme de vengeance || Rachsüchtige Waffe || Arma Vendicatrice || Arma vengativa || Mściwy Oręż || 복수의 무기 || ヴェンジェフル ウェポン || 復仇武裝 || 复仇之躯
+|}
+== Nightfall ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Vocal was Sogolon]] || Sogolon était énergique || Lautstark war Sogolon || Sogolon era Sonoro || Elocuente sea Sogolon || Hałaśliwym był Sogolon || 소골론의 목소리 || ボーカル ワズ ソゴロン || 詠唱者索格隆 || 索格龙的咏唱
+|-
+| [[Destructive was Glaive]] || Glaive était destructeur || Vernichtend war Glaive || Glaive era Distruttiva || Destructor sea Glaive || Niszczycielską Była Glaive || 글레이브의 파괴력 || ディストラクティブ ワズ グレイブ || 毀滅者葛雷薇 || 格雷薇的毁灭
+|-
+| [[Wielder's Strike]] || Attaque du porteur || Stoß des Ausübers || Colpo del Portatore || Golpe del atacante || Uderzenie Posiadacza || 통제자의 일격 || ウィルダー ストライク || 指揮者之擊 || 持物者打击
+|-
+| [[Gaze of Fury]] || Regard de fureur || Wütendes Starren || Sguardo della Furia || Mirada de furia || Spojrzenie Furii || 분노의 시선 || フューリー ゲイズ || 狂暴凝視 || 狂怒
+|-
+| [[Gaze of Fury]] || Regard de fureur || Wütendes Starren || Sguardo della Furia || Mirada de furia || Spojrzenie Furii || 분노의 시선 || フューリー ゲイズ || 狂暴凝視 || 狂怒
+|-
+| [[Renewing Surge]] || Afflux de renouvellement || Erneuernde Welle || Impeto Rinnovante || Oleada renovadora || Odnawialny Udar || 파동의 재생 || リニュー サージ || 復原震盪 || 恢复冲击
+|-
+| [[Offering of Spirit]] || Offrande de l'esprit || Opfer des Geistes || Offerta dello Spirito || Ofrenda de espíritu || Duchowa Ofiara || 영혼의 도움 || スピリット オファー || 生靈奉獻 || 奉灵
+|-
+| [[Spirit's Strength]] || Force de l'esprit || Geistesstärke || Forza dello Spirito || Fuerza espiritual || Duchowa Siła || 영혼의 힘 || スピリット ストレングス || 靈之力 || 灵魂之力
+|-
+| [[Wielder's Zeal]] || Zèle du porteur || Eifer des Ausübers || Zelo del Portatore || Celo del atacante || Gorliwość Posiadacza || 통제자의 열정 || ウィルダー ジール || 指揮者狂熱 || 持物者的热诚
+|-
+| [[Accelerated Growth]] || Croissance accélérée || Beschleunigtes Wachstum || Crescita Accelerata || Crecimiento acelerado || Przyśpieszony Rozrost || 고속 증식 || アクセレレート グロース || 生成加速 || 急速生长
+|-
+| [[Spirit's Gift]] || Don de l'esprit || Geschenk des Geistes || Dono dello Spirito || Don espiritual || Duchowy Dar || 영혼의 선물 || スピリット ギフト || 生靈天賦 || 灵魂恩赐
+|-
+| [[Sight Beyond Sight]] || Vision intérieure || Sicht jenseits der Sicht || Vista Oltre la Vista || Visión del más allá || Wewnętrzny Wzrok || 내면의 눈 || サイト ビヨンド サイト || 天外視覺 || 灵界之眼
+|-
+| [[Renewing Memories ]] || Souvenirs renouvelés || Erneuernde Erinnerungen || Rinnovamento dei Ricordi || Recuerdos renovadores || Odnowienie Wspomnień || 기억의 재생 || リニュー メモリー || 復原記憶 || 记忆重聚 
+|-
+| [[Wielder's Remedy]] || Remède du porteur || Mittel des Ausübers || Rimedio del Portatore || Remedio del atacante || Remedium Posiadacza || 통제자의 치료 || ウィルダー レメディ || 指揮者療法 || 持物者的治疗
+|-
+| [[Ghostmirror Light]] || Lumière du miroir fantôme || Geisterspiegel-Licht || Luce dello Specchio Fantasma || Luz de espejo fantasmal || Światło Lustrzanego Ducha || 유령거울의 빛 || ゴーストミラー ライト || 靈鏡之光 || 灵镜之光
+|-
+| [[Death Pact Signet ]] || Sceau du pacte avec la mort || Todespakt-Siegel || Sigillo del Patto Mortale || Sello de pacto de muerte || Sygnet Śmiertelnego Paktu || 죽음의 계약 인장 || デス パクト シグネット  || 死契紋章 || 死亡契约纹章
+|-
+| [[Signet of Ghostly Might]] || Sceau de puissance spectrale || Siegel der Macht der Geister || Sigillo della Potenza Spettrale || Sello de poder fantasmal || Sygnet Niematerialnej Potęgi || 영적인 완력 인장 || ゴースト マイト シグネット || 生靈神力紋章 || 魂力纹章
+|-
+| [[Signet of Binding]] || Sceau d'asservissement || Siegel der Bindung || Sigillo di Incatenamento || Sello de encadenamiento || Sygnet Spętania || 구속 인장 || バインド シグネット || 束縛紋章 || 束缚纹章
+|-
+| [[Reclaim Essence]] || Essence récupérée || Essenz zurückfordern || Reclama Essenza || Reclamo de esencia || Odzyskanie Esencji || 정기의 회수 || リクレイム エッセンス || 本質回收 || 屠魂
+|-
+| [[Caretaker's Charge]] || Charge du gardien || Angriff des Verwalters || Carica del Custode || Carga del cuidador || Szarża Opiekuna || 문지기의 돌진 || ケアテイカー チャージ || 照看者充能 || 看护者的充能
+|-
+| [[Anguish]] || Angoisse  || Qual || Angoscia || Angustia || Katusze || 격통의 영혼 || アングウィッシュ || 苦惱 || 恼怒
+|-
+| [[Anguish]] || Angoisse || Qual || Angoscia || Angustia || Katusze || 격통 || アングウィッシュ || 苦惱 || 恼怒
+|-
+| [[Empowerment]] || Responsabilisation || Ermächtigung || Autorizzazione || Fortalecimiento || Wzmocnienie || 권능의 영혼 || エンパワー || 活化 || 活化
+|-
+| [[Recovery]] || Récupération || Gesundung || Ripresa || Mejoría || Ozdrowienie || 치료의 영혼 || リカバリー || 痊癒 || 痊愈
+|-
+| [[Weapon of Fury]] || Arme de furie || Waffe der Wut || Arma della Furia || Arma de furia || Wściekły Oręż || 분노의 무기 || フューリー ウェポン || 狂暴武裝 || 狂暴之躯
+|-
+| [[Xinrae's Weapon]] || Arme de Xinrae || Xinraes Waffe || Arma di Xinrae || Arma de Xinrae || Oręż Xinrae || 킨라이의 무기 || ジンライ ウェポン || 欣雷武裝 || 欣雷之躯
+|-
+| [[Warmonger's Weapon]] || Arme du belliciste || Waffe des Kriegshetzers || Arma del Guerrafondaio || Arma del militar || Oręż Podżegacza || 전투광의 무기 || ウォーモンガ ウェポン || 好戰者武裝 || 好战之躯
+|-
+| [[Weapon of Remedy]] || Arme de remède || Waffe der Behebung || Arma del Rimedio || Arma de remedio || Oręż Remedium || 치료의 무기 || レメディ ウェポン || 治療武裝 || 医疗之躯
+|-
+| [[Weapon of Mastery]] || Arme de maîtrise || Waffe der Beherrschung || Arma della Maestria || Arma de maestría || Mistrzowski Oręż || 통제의 무기 || マスタリー ウェポン || 支配者武裝 || 统御之躯
+|}
+<noinclude>
+[[Category:Tables]]
+</noinclude>

@@ -1,0 +1,322 @@
+﻿== Core ==
+__NOTOC__
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Hunter's Shot]] || Tir du chasseur || Jägerschuss || Tiro del Cacciatore || Disparo del cazador || Strzał Myśliwego || 사냥꾼의 화살 || ハンター ショット || 獵人之箭 || 猎人之箭
+|-
+| [[Pin Down]] || Immobilisation || Festnageln || Inchioda || Inmovilizar || Przygwożdżenie || 다리 겨냥 || ピン ダウン || 射足 || 猎足
+|-
+| [[Power Shot]] || Tir puissant || Kraftschuss || Tiro Potente || Disparo poderoso || Potężny Strzał || 강맹한 화살 || パワー ショット || 強力之箭 || 强力射击
+|-
+| [[Barrage]] || Tir de barrage || Sperrfeuer || Raffica || Descarga || Grad Strzał || 다중 사격 || バラージ || 齊射 || 乱射
+|-
+| [[Dual Shot]] || Tir double || Doppelschuss || Doppio Tiro || Disparo doble || Podwójny Strzał || 이중 사격 || デュアル ショット || 雙重箭 || 双重射击
+|-
+| [[Quick Shot]] || Tir rapide || Schnellschuss || Tiro Rapido || Disparo rápido || Szybki Strzał || 재빠른 사격 || クイック ショット || 風速之箭 || 速射
+|-
+| [[Distracting Shot]] || Tir de diversion || Ablenk-Schuss || Tiro Distraente || Disparo de distracción || Przerywający Strzał || 견제의 화살 || ディストラクト ショット || 震暈之箭 || 扰乱射击
+|-
+| [[Precision Shot]] || Tir de précision || Präzisionsschuss || Tiro di Precisione || Disparo preciso || Precyzyjny Strzał || 정밀 사격 || プレシジョン ショット || 精準之箭 || 精准之箭
+|-
+| [[Determined Shot]] || Tir déterminé || Entschlossener Schuss || Tiro Determinato || Disparo definido || Zdecydowany Strzał || 혼신의 일발 || デターミン ショット || 決心之箭 || 决心之射
+|-
+| [[Called Shot]] || Tir ciblé || Ankündigungs-Schuss || Tiro Sicuro || Disparo veloz || Pewny Strzał || 정조준 || コール ショット || 必中之箭 || 必中之射
+|-
+| [[Debilitating Shot]] || Tir débilitant || Entkräftungs-Schuss || Tiro Debilitante || Disparo debilitador || Wyniszczający Strzał || 쇠약의 화살 || ディビリテイト ショット || 衰弱之箭 || 衰弱之箭
+|-
+| [[Concussion Shot]] || Coup cérébral || Erschütterungsschuss || Tiro Stordente || Conmoción || Oszałamiający Strzał || 현혹의 화살 || コンカッション ショット || 迷惑之箭 || 震荡射击
+|-
+| [[Charm Animal]] || Charme animal || Tier zähmen || Incanta Animale || Encantar animal || Oswojenie Zwierzęcia || 동물 길들이기 || チャーム アニマル || 迷魅動物 || 诱捕动物
+|-
+| [[Call of Haste]] || Cri de hâte || Ruf der Eile || Richiamo della Fretta || Llamada de celeridad || Zew Pośpiechu || 신속의 외침 || ヘイスト コール || 敏捷呼喊 || 驭兽•急速
+|-
+| [[Throw Dirt]] || Jet de terre || Dreck werfen || Getta Polvere || Arrojar tierra || Rzut Piachem || 흙먼지 뿌리기 || スロウ ダート || 揚塵 || 扬尘
+|-
+| [[Savage Shot]] || Tir sauvage || Wilder Schuss || Tiro Selvaggio || Disparo violento || Brutalny Strzał || 격분의 화살 || サベージ ショット || 野性之箭 || 野性之箭
+|-
+| [[Antidote Signet]] || Sceau antidote || Gegengift-Siegel || Sigillo dell'Antidoto || Sello de antídoto || Sygnet Antidotum || 해독 인장 || アンチドート シグネット || 解毒紋章 || 解毒纹章
+|-
+| [[Read the Wind]] || Lecture du vent || Wind lesen || Senti il Vento || Medir el viento || Czytanie Wiatru || 바람의 도움 || リード ウインド || 風之解讀 || 疾风之语
+|-
+| [[Kindle Arrows]] || Flèches enflammées || Zündelpfeile || Frecce Infiammabili || Flechas en llamas || Płonące Strzały || 불화살 || キンドル アロー || 火箭 || 火种之箭
+|-
+| [[Choking Gas]] || Gaz suffocant || Würgegas || Gas Soffocante || Gas asfixiante || Duszący Gaz || 질식 화살 || チョーク ガス || 窒息毒氣 || 窒息毒气
+|-
+| [[Apply Poison]] || Application de poison || Gift auftragen || Applica Veleno || Aplicar veneno || Nakładanie Trucizny || 독 바르기 || アプライ ポイズン || 塗毒 || 涂毒
+|-
+| [[Comfort Animal]] || Bien-être animal || Tier erquicken || Conforta Animale || Confortar animal || Uzdrowienie Zwierzęcia || 펫 회복 || コンフォート アニマル || 安慰動物 || 安抚宠物
+|-
+| [[Maiming Strike]] || Assaut de mutilation || Verkrüppelungs-Schlag || Attacco Mutilante || Ataque mutilador || Okaleczające Uderzenie || 날카로운 발톱 || メイム ストライク || 傷殘之擊 || 致残撕咬
+|-
+| [[Scavenger Strike]] || Assaut de charognard || Aasfresser-Schlag || Attacco Predatore || Golpe carroñero || Uderzenie Padlinożercy || 사나운 발톱 || スカベンジャー ストライク || 食腐獸之擊 || 腐肉撕咬
+|-
+| [[Ferocious Strike]] || Attaque féroce || Wilder Schlag || Attacco Ferale || Ataque feroz || Zajadłe Uderzenie || 흉포한 발톱 || フェロウシャス ストライク || 兇猛衝擊 || 凶猛冲击
+|-
+| [[Disrupting Lunge]] || Attaque d'interruption || Unterbrechender Ausfall || Scatto Dirompente || Embestida || Przerywające Uderzenie || 방해의 돌진 || ディスラプト ランジ || 擾亂衝刺 || 扰乱之刺
+|-
+| [[Troll Unguent]] || Onguent des trolls || Trollsalbe || Unguento dei Troll || Ungüento de Troll || Maść z Trolla || 트롤 연고 || トロル アングエント || 巨魔藥膏 || 巨魔药膏
+|-
+| [[Escape]] || Echappatoire || Flucht || Fuga || Escape || Ucieczka || 탈출 || エスケープ || 脫逃 || 逃脱
+|-
+| [[Whirling Defense]] || Tourbillon défensif || Wirbelverteidigung || Vortice Difensivo || Torbellino defensivo || Wirująca Obrona || 회전 방어 || ホワール ディフェンス || 旋風防禦 || 旋风防御
+|-
+| [[Lightning Reflexes]] || Réflexes foudroyants || Blitzreflexe || Riflessi Fulminei || Reflejos felinos || Błyskawiczny Refleks || 번개의 움직임 || ライトニング リフレックス || 閃電迴避 || 闪电反射
+|-
+| [[Storm Chaser]] || Chasseur de tempêtes || Sturmjäger || Inseguitore della Tempesta || Cazador de tormentas || Łowca Burz || 폭풍의 추격자 || ストーム チェイサー || 追風者 || 追风者
+|-
+| [[Barbed Trap]] || Piège barbelé || Stachelfalle || Trappola Uncinata || Trampa de espinas || Kolczasta Pułapka || 가시 함정 || バーブ トラップ || 荊棘陷阱 || 荆棘陷阱
+|-
+| [[Flame Trap]] || Piège de flammes || Flammenfalle || Trappola di Fiamme || Trampa de fuego || Płomienna Pułapka || 화염 함정 || フレイム トラップ || 火焰陷阱 || 火焰陷阱
+|-
+| [[Spike Trap]] || Piège à pointes || Dornenfalle || Trappola di Spine || Trampa de pinchos || Pułapka z Ostrzy || 대못 함정 || スパイク トラップ || 尖刺陷阱 || 尖刺陷阱
+|-
+| [[Winnowing]] || Vannage || Trennung || Vaglio || Aventamiento || Odsiew || 힘의 영혼 || ウィノウイング || 吹拂之風 || 耳语之风
+|-
+| [[Primal Echoes]] || Echos primitifs || Urechos || Echi Primordiali || Ecos primarios || Pierwotne Echa || 메아리의 영혼 || プライマル エコー || 太古回音 || 上古回音
+|-
+| [[Favorable Winds]] || Vents favorables || Günstige Winde || Venti Favorevoli || Vientos favorables || Sprzyjające Wiatry || 순풍의 영혼 || フェイバラブル ウインド || 順風 || 顺风
+|-
+| [[Energizing Wind]] || Vent énergisant || Treibwind || Vento di Energia || Viento vigorizante || Pobudzający Wiatr || 절제의 영혼 || エネルギー ウインド || 能量之風 || 法力之风
+|-
+| [[Quickening Zephyr]] || Zéphyr véloce || Beschleunigender Zephyr || Zefiro Veloce || Céfiro acelerador || Ożywczy Zefir || 신속의 영혼 || クイック ゼファー || 活力微風 || 活力微风
+|-
+| [[Nature's Renewal]] || Renouveau de la nature || Erneuerung der Natur || Rinnovamento della Natura || Renovación de la naturaleza || Odnowienie Natury || 회귀의 영혼 || ネイチャー リニューアル || 自然再生 || 自然再生
+|}
+== Prophecies ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Crippling Shot]] || Tir incapacitant || Verkrüppelungs-Schuss || Tiro Azzoppante || Disparo lesionador || Okulawiający Strzał || 속박의 화살 || クリップル ショット || 致殘之箭 || 致残射击
+|-
+| [[Penetrating Attack]] || Attaque pénétrante || Durchbohr-Angriff || Attacco Penetrante || Ataque penetrante || Przeszywający Atak || 관통 화살 || ペネトレイト アタック || 穿刺攻擊 || 穿刺攻击
+|-
+| [[Splinter Shot]] || Tir de ricochet || Splitterschuss || Tiro Scheggia || Disparo astillado || Strzał Rozpryskowy || 분리 사격 || スプリンター ショット || 碎裂之箭 || 散射
+|-
+| [[Poison Arrow]] || Flèche empoisonnée || Giftpfeil || Freccia Avvelenata || Flecha envenenada || Zatruta Strzała || 중독 사격 || ポイズン アロー || 毒箭 || 毒箭
+|-
+| [[Oath Shot]] || Tir du serment || Eidschuss || Tiro del Giuramento || Disparo de promesa || Obiecany Strzał || 맹세의 일발 || オース ショット || 誓言之箭 || 誓言之箭
+|-
+| [[Point Blank Shot]] || Tir à bout portant || Kurzdistanzschuss || Tiro Ravvicinato || Disparo a quemarropa || Strzał z Bliska || 근접 사격 || ポイント ブランク ショット || 近距弓射 || 近身射击
+|-
+| [[Punishing Shot]] || Tir de représailles || Bestrafungs-Schuss || Tiro Punitivo || Disparo de castigo || Karzący Strzał || 응징의 화살 || パニッシュ ショット || 懲罰之箭 || 惩罚之箭
+|-
+| [[Call of Ferocity]] || Cri féroce || Ruf der Grausamkeit || Richiamo della Ferocia || Llamada de ferocidad || Zew Zajadłości || 사나움의 외침 || フェロシティ コール || 狂暴呼喊 || 驭兽•嘶吼
+|-
+| [[Call of Protection]] || Cri de protection || Ruf des Schutzes || Richiamo della Protezione || Llamada de protección || Zew Ochrony || 보호의 외침 || プロテクション コール || 守護呼喊 || 驭兽•防护
+|-
+| [[Call of Elemental Protection]] || Cri de protection élémentaire || Ruf des Elementarschutzes || Richiamo della Protezione Elementale || Llamada de protección elemental || Zew Odporności na Żywioły || 정령 방어의 외침 || エレメンタル プロテクション コール || 元素守護呼喊 || 驭兽•元素防护
+|-
+| [[Call of Vitality]] || Cri de vitalité || Ruf der Lebhaftigkeit || Richiamo della Vitalità || Llamada de vitalidad || Zew Żywotności || 활력의 외침 || バイタリティ コール || 活力呼喊 || 驭兽•活力
+|-
+| [[Call of Healing]] || Cri de guérison || Ruf der Heilung || Richiamo della Guarigione || Llamada de curación || Zew Uzdrawiania || 치유의 외침 || ヒーリング コール || 治癒呼喊 || 驭兽•治疗
+|-
+| [[Call of Resilience]] || Cri de résistance || Ruf der Belastbarkeit || Richiamo del Recupero || Llamada de resistencia || Zew Odnowy || 원기의 외침 || レジリエンス コール || 回復呼喊 || 驭兽•复苏
+|-
+| [[Call of Feeding]] || Cri de la faim || Ruf der Fütterung || Richiamo del Nutrimento || Llamada a comer || Zew Karmienia || 회복의 외침 || フィーディング コール || 覓食呼喊 || 驭兽•觅食
+|-
+| [[Call of the Hunter]] || Cri du chasseur || Ruf des Jägers || Richiamo del Cacciatore || Llamada del cazador || Zew Łowcy || 사냥꾼의 외침 || ハンター コール || 獵人呼喊 || 驭兽•猎手
+|-
+| [[Call of Brutality]] || Cri de brutalité || Ruf der Brutalität || Richiamo della Brutalità || Llamada de brutalidad || Zew Brutalności || 야수의 외침 || ブルータリティ コール || 野性呼喊 || 驭兽•野性
+|-
+| [[Call of Disruption]] || Cri de perturbation || Ruf der Störung || Richiamo della Distruzione || Llamada del desorden || Zew Przerywania || 견제의 외침 || ディスラプション コール || 擾亂呼喊 || 驭兽•扰乱
+|-
+| [[Revive Animal]] || Renaissance animale || Tier wiederbeleben || Resuscita Animale || Revivir animal || Ożywienie Zwierzęcia || 펫 부활 || リバイブ アニマル || 復活動物 || 复活宠物
+|-
+| [[Symbiotic Bond]] || Lien symbiotique || Symbiotisches Band || Legame Simbiotico || Vínculo simbiótico || Symbiotyczne Więzy || 공존의 결속 || シンバイオティック ボンド || 共生連結 || 同生共死
+|-
+| [[Dodge]] || Esquive || Abducken || Schivata || Esquiva || Unik || 회피 || ドッジ || 閃避 || 闪避
+|-
+| [[Incendiary Arrows]] || Flèches incendiaires || Flammenpfeile || Frecce Incendiarie || Flechas incendiarias || Zapalające Strzały || 발열 화살 || インセンディアリー アロー || 燃燒之箭 || 燃烧之箭
+|-
+| [[Melandru's Arrows]] || Flèches de Melandru || Melandrus Pfeile || Frecce di Melandru || Flechas de Melandru || Strzały Melandru || 멜란드루의 화살 || メランドル アロー || 梅蘭朵之箭 || 梅兰朵之箭
+|-
+| [[Marksman's Wager]] || Pari du tireur || Schützenwette || Scommessa del Tiratore || Apuesta del tirador || Ryzyko Strzelca || 저격수의 도박 || マークスマン ウェイジャー || 弓手的賭注 || 射手的赌注
+|-
+| [[Ignite Arrows]] || Flèches de feu || Brandpfeile || Frecce Esplosive || Flechas inflamables || Strzały Wybuchające || 폭약 화살 || イグナイト アロー || 爆烈箭 || 点燃之箭
+|-
+| [[Bestial Pounce]] || Assaut bestial || Bestiensprung || Balzo Bestiale || Ataque bestial || Bestialski Skok || 맹수의 급습 || ベスティアル パウンス || 野獸突襲 || 野兽扑袭
+|-
+| [[Feral Lunge]] || Coup barbare || Wilder Ausfall || Affondo Selvaggio || Embestida animal || Dzikie Pchnięcie || 맹수의 돌진 || フェラル ランジ || 野性衝刺 || 兽性穿刺
+|-
+| [[Melandru's Assault ]] || Assaut de Melandru || Melandrus Angriff || Assalto di Melandru || Salto de Melandru || Natarcie Melandru || 멜란드루의 강습 || メランドル アサルト  || 梅蘭朵突擊 || 梅兰朵的突袭
+|-
+| [[Predator's Pounce ]] || Coup du prédateur || Raubtier-Sprung || Balzo Predatore || Salto de depredador || Skok Drapieżnika || 약탈자의 급습 || プレデター パウンス  || 獵食者突襲 || 掠夺者突袭
+|-
+| [[Brutal Strike]] || Coup brutal || Schonungsloser Schlag || Attacco Brutale || Ataque brutal || Brutalne Uderzenie || 강맹한 발톱 || ブルータル ストライク || 殘暴衝擊 || 残暴冲击
+|-
+| [[Otyugh's Cry]] || Cri d'Otyugh || Otyughs Schrei || Urlo di Otyugh || Grito de Otyugh || Ryk Otyugha || 오튜의 포효 || オチュー クライ || 食腐獸的吶喊 || 食腐兽的哀嚎
+|-
+| [[Practiced Stance]] || Pose de pratique || Geübte Haltung || Posizione d'Esercizio || Actitud de preparación || Postawa Wyćwiczona || 저격수의 숙련 || プラクティス スタンス || 熟練態勢 || 训练有素
+|-
+| [[Melandru's Resilience]] || Résistance de Melandru || Melandrus Belastbarkeit || Recupero di Melandru || Resistencia de Melandru || Wytrzymałość Melandru || 멜란드루의 원기 || メランドル レジリエンス || 梅蘭朵的元氣 || 梅兰朵的坚韧
+|-
+| [[Dryder's Defenses]] || Défenses du Drider || Dryders Verteidigungen || Difese del Dryder || Defensas de arácnido || Obrona Drydera || 드라이더의 방어 || ドライダー ディフェンス || 蛛化精靈防禦 || 蛛化精灵的防护
+|-
+| [[Tiger's Fury]] || Fureur du tigre || Wut des Tigers || Furia della Tigre || Furia del tigre || Tygrysia Furia || 호랑이의 분노 || タイガー フューリー || 虎之怒 || 猛虎之怒
+|-
+| [[Serpent's Quickness]] || Vitesse du serpent || Schlangen-Schnelligkeit || Velocità del Serpente || Rapidez de la serpiente || Szybkość Węża || 독사의 민첩함 || サーペント クイックネス || 蛇之敏捷 || 蛇的敏捷
+|-
+| [[Dust Trap]] || Piège à poussière || Staubfalle || Trappola di Polvere || Trampa de polvo || Pyłowa Pułapka || 흙먼지 함정 || ダスト トラップ || 塵土陷阱 || 尘土陷阱
+|-
+| [[Healing Spring]] || Source de guérison || Heilquelle || Sorgente Curativa || Manantial de curación || Uzdrawiające Źródło || 치유의 샘 || ヒーリング スプリング || 治癒之泉 || 治疗之泉
+|-
+| [[Winter]] || Hiver || Winter || Inverno || Invierno || Zima || 눈보라 영혼 || ウインター || 寒冬 || 寒冬
+|-
+| [[Edge of Extinction]] || Voie d'extinction || Rand der Auslöschung || Limite dell'Estinzione || Filo de extinción || Skraj Wymarcia || 전멸의 영혼 || エクスティンクション エッジ || 滅絕之地 || 灭绝之地
+|-
+| [[Greater Conflagration]] || Grand brasier || Großflächenbrand || Grande Conflagrazione || Gran conflagración || Większa Pożoga || 불길의 영혼 || グレーター コンフラグレイション || 大火 || 熊熊烈火
+|-
+| [[Fertile Season]] || Saison fertile || Fruchtbare Jahreszeit || Stagione Fertile || Temporada de fertilidad || Czas Obfitości || 활력의 영혼 || ファータイル シーズン || 豐收季節 || 丰收时节
+|-
+| [[Symbiosis]] || Symbiose || Symbiose || Simbiosi || Simbiosis || Symbioza || 공동체의 영혼 || シンビオシス || 共生 || 共生
+|-
+| [[Predatory Season]] || Saison des prédateurs || Jagdsaison || Stagione della Caccia || Temporada de depredadores || Sezon Łowów || 약탈의 영혼 || プレダトリー シーズン || 獵食季節 || 围猎季节
+|-
+| [[Frozen Soil]] || Terre gelée || Eisboden || Terreno Gelato || Suelo congelado || Zmarznięta Ziemia || 동결의 영혼 || フローズン ソイル || 凍土 || 冻土
+|-
+| [[High Winds]] || Grands vents || Hohe Winde || Venti Forti || Vientos fuertes || Silne Wiatry || 역풍의 영혼 || ハイ ウインド || 強風 || 强风
+|-
+| [[Muddy Terrain]] || Terrain boueux || Schlammiges Terrain || Terreno Fangoso || Terreno fangoso || Błotnisty Teren || 늪의 영혼 || マディー テライン || 泥沼 || 污泥沼泽
+|}
+== Factions ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Sundering Attack]] || Attaque éclatante || Trennender Angriff || Attacco della Separazione || Ataque incisivo || Rozdzielający Atak || 파괴 화살 || サンダー アタック || 割裂攻擊 || 破甲箭
+|-
+| [[Zojun's Shot]] || Tir de Zojun || Zojuns Schuss || Tiro di Zojun || Disparo de Zojun || Strzał Zojuna || 조우준의 사격 || ゾジュン ショット || 羅金射擊 || 罗金之射
+|-
+| [[Call of Protection]] || Cri de protection || Ruf des Schutzes || Richiamo della Protezione || Llamada de protección || Zew Ochrony || 보호의 외침 || プロテクション コール || 守護呼喊 || 驭兽•防护
+|-
+| [[Predatory Bond]] || Lien du prédateur || Raubtierverbindung || Legame Predatore || Vínculo depredador || Drapieżcza Więź || 야수의 결속 || プレダトリー ボンド || 獵殺連結 || 猎杀链接
+|-
+| [[Heal as One]] || Guérison partagée || Gemeinsame Heilung || Guarigione Congiunta || Curación simbiótica || Jedność w Uzdrowieniu || 동반 회복 || ヒール アズ ワン || 治癒合一 || 同愈
+|-
+| [[Run as One]] || Course unique || Gemeinsam rennen || Corsa Congiunta || Corramos juntos || Jedność w Biegu || 동반 질주 || ラン アズ ワン || 奔馳合一 || 同速
+|-
+| [[Zojun's Haste]] || Hâte de Zojun || Zojuns Eile || Fretta di Zojun || Premura de Zojun || Pośpiech Zojuna || 조우준의 민첩함 || ゾジュン ヘイスト || 羅金之速 || 罗金之速
+|-
+| [[Marauder's Shot]] || Tir du maraudeur || Plünderer-Schuss || Tiro del Brigante || Disparo del merodeador || Strzał Bandyty || 기습 사격 || マロウダー ショット || 掠奪者射擊 || 掠夺者射击
+|-
+| [[Splinter Shot]] || Tir de ricochet || Splitterschuss || Tiro Scheggia || Disparo astillado || Strzał Rozpryskowy || 폭발 사격 || スプリンター ショット || 碎刺射擊 || 溅射
+|-
+| [[Melandru's Shot]] || Tir de Melandru || Melandrus Schuss || Tiro di Melandru || Disparo de Melandru || Strzał Melandru || 멜란드루 사격 || メランドル ショット || 梅蘭朵射擊 || 梅兰朵之射
+|-
+| [[Focused Shot]] || Tir focalisé || Scharfschuss || Tiro Focalizzato || Disparo certero || Strzał w Skupieniu || 조준 사격 || フォーカス ショット || 專注射擊 || 专注射击
+|-
+| [[Needling Shot]] || Aiguillons || Nadelschuss || Tiro Pungente || Disparo molesto || Strzał Dobijający || 바늘 화살 || ニードル ショット || 刺針射擊 || 针刺射击
+|-
+| [[Broad Head Arrow]] || Flèche à pointe large || Stahlspitzenpfeil || Freccia a Punta Larga || Flecha de punta ancha || Strzała z Szerokim Grotem || 넓은촉 화살 || ブロード ヘッド アロー || 闊首箭 || 阔首箭
+|-
+| [[Glass Arrows]] || Flèches de verre || Glaspfeile || Frecce di Vetro || Flechas de cristal || Szklane Strzały || 유리 화살 || グラス アロー || 玻璃箭 || 玻璃箭
+|-
+| [[Seeking Arrows ]] || Flèches chercheuses || Suchende Pfeile || Frecce Cercanti || Flechas dirigidas || Poszukujące Strzały || 추적 화살 || シーク アロー || 追蹤箭 || 追踪之箭
+|-
+| [[Trapper's Focus]] || Concentration du trappeur || Fokus des Fallenstellers || Concentrazione del Cacciatore || Poder de tramperos || Skupienie Trapera || 능숙한 함정 설치 || トラッパー フォーカス || 設陷者的專注 || 捕猎者的专注
+|-
+| [[Archer's Signet]] || Sceau de l'Archer || Siegel des Bogenschützen || Sigillo dell'Arciere || Sello del arquero || Sygnet Łucznika || 사격 인장 || アーチャー シグネット || 射手紋章 || 射手纹章
+|-
+| [[Savage Pounce]] || Attaque sauvage || Wilder Sprung || Balzo Selvaggio || Salto salvaje || Wściekły Skok || 잔인한 급습 || サベージ パウンス || 野性突襲 || 野性突袭
+|-
+| [[Enraged Lunge]] || Coup enragé || Erzürnter Ausfall || Guizzo Furioso || Embestida enrabietada || Rozszalałe Uderzenie || 분노의 돌진 || エンレイジ ランジ || 暴怒衝刺 || 暴怒冲刺
+|-
+| [[Bestial Mauling]] || Violence bestiale || Bestienattacke || Lacerazione Bestiale || Vapuleo bestial || Bestialskie Zmiażdżenie || 야만적인 발톱 || ベスティアル モール || 獸性之爪 || 兽性之爪
+|-
+| [[Melandru's Assault ]] || Assaut de Melandru || Melandrus Angriff || Assalto di Melandru || Salto de Melandru || Natarcie Melandru || 멜란드루의 강습 || メランドル アサルト   || 梅蘭朵的突擊 || 梅兰朵突击
+|-
+| [[Poisonous Bite]] || Morsure empoisonnée || Giftbiss || Morso Velenoso || Mordedura venenosa || Trujące Ugryzienie || 맹독의 이빨 || ポイズン バイト || 毒咬 || 剧毒撕咬
+|-
+| [[Pounce]] || Bond || Sprung || Balzo || Brinco || Skok || 날렵한 습격 || パウンス || 突襲 || 突袭
+|-
+| [[Celestial Stance]] || Pose céleste || Himmlische Haltung || Posizione Celestiale || Actitud celestial || Postawa Niebiańska || 천상의 방어 자세 || セレスチャル スタンス || 天空態勢 || 神姿
+|-
+| [[Dryder's Defenses]] || Défenses du Drider || Dryders Verteidigungen || Difese del Dryder || Defensas de arácnido || Obrona Drydera || 드라이더의 방어 || ドライダー ディフェンス || 蛛化精靈防禦 || 蛛化精灵的防护
+|-
+| [[Bestial Fury]] || Furie bestiale || Bestienwut || Furia Bestiale || Furia bestial || Furia Bestii || 야성의 분노 || ベスティアル フューリー || 獸性之怒 || 兽性之怒
+|-
+| [[Dust Trap]] || Piège à poussière || Staubfalle || Trappola di Polvere || Trampa de polvo || Pyłowa Pułapka || 흙먼지 함정 || ダスト トラップ || 塵土陷阱 || 尘土陷阱
+|-
+| [[Snare]] || Attrape || Schlinge || Tagliola || Cepo  || Sidła || 올가미 함정 || スネア || 圈套 || 诱捕陷阱
+|-
+| [[Viper's Nest]] || Nid de vipère || Vipernnest || Nido di Vipera || Nido de víboras || Gniazdo Żmij || 독사 함정 || ヴァイパー ネスト || 毒蛇之巢 || 毒蛇之巢
+|-
+| [[Lacerate]] || Lacération || Zerfetzen || Lacerazione || Desgarre || Okaleczenie || 열상의 영혼 || ラサレイト || 撕裂 || 撕裂
+|-
+| [[Final Rest]] || Ultime repos || Letzte Ruhe || Riposo Finale || Descanso eterno || Ostateczny Spoczynek || 안식의 영혼 || ファイナル レスト || 終眠 || 终眠
+|-
+| [[Equinox]] || Equinoxe || Tagundnachtgleiche || Equinozio || Equinoccio || Równonoc || 극점의 영혼 || イクイノックス || 晝夜 || 昼夜
+|-
+| [[Tranquility]] || Tranquillité || Ruhe || Tranquillità || Tranquilidad || Spokój || 평정의 영혼 || トランクイリティー || 寧靜 || 宁静
+|-
+| [[Conflagration]] || Brasier || Feuersbrunst || Conflagrazione || Conflagración || Pożoga || 불화살 영혼 || コンフラグレイション || 火靈 || 焚烧
+|-
+| [[Famine]] || Famine || Hungersnot || Carestia || Hambruna || Klęska Głodu || 고갈의 영혼 || ファミン || 飢荒 || 饥荒
+|-
+| [[Muddy Terrain]] || Terrain boueux || Schlammiges Terrain || Terreno Fangoso || Terreno fangoso || Błotnisty Teren || 늪의 영혼 || マディー テライン || 泥沼 || 泥沼
+|-
+| [[Brambles]] || Ronces || Dornenranken || Rovi || Zarzas || Ciernie || 가시밭 영혼 || ブランブルス || 荊棘 || 荆棘
+|}
+
+== Nightfall ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Screaming Shot]] || Tir hurleur || Schreischuss || Tiro Urlante || Disparo estridente || Wrzeszczący Strzał || 괴성의 화살 || スクリーム ショット || 咆哮射擊 || 咆哮射击
+|-
+| [[Keen Arrow]] || Flèche vive || Scharfer Pfeil || Freccia Affilata || Flecha afilada || Ostra Strzała || 예리한 화살 || キーン アロー || 鋒銳之箭 || 锐锋箭
+|-
+| [[Rampage as One]] || Férocité unie || Gemeinsam toben || Furore Congiunto || Violencia al unísono || Jedność w Szale || 동반 흥분 || ランペイジ アズ ワン || 暴衝合一 || 同怒
+|-
+| [[Prepared Shot]] || Coup préparé || Vorbereiteter Schuss || Tiro Preparato || Disparo preparado || Przygotowany Strzał || 준비된 사격 || プリペア ショット || 完備射擊 || 预备射击
+|-
+| [[Burning Arrow]] || Flèche brûlante || Brennender Pfeil || Freccia Bruciante || Flecha ardiente || Płonąca Strzała || 불타는 사격 || バーン アロー || 燃燒箭 || 灼烧射击
+|-
+| [[Arcing Shot]] || Tir arqué || Bogenschuss || Tiro Parabolico || Disparo parabólico || Wysoki Strzał || 호선 사격 || アーク ショット || 弧光射擊 || 弧光射击
+|-
+| [[Strike as One]] || Attaque solidaire || Gemeinsam zuschlagen || Colpo Congiunto || Golpe al unísono || Jedność w Ataku || 동반 공격 || ストライク アズ ワン || 衝擊合一 || 同杀
+|-
+| [[Crossfire]] || Tir croisé || Kreuzfeuer || Fuoco Incrociato || Fuego cruzado || Ogień Krzyżowy || 십자포화 || クロスファイア || 火網 || 交叉火力
+|-
+| [[Forked Arrow]] || Flèche fourchue || Gegabelter Pfeil || Freccia Forcuta || Flecha ahorquillada || Rozwidlona Strzała || 분산 화살 || フォーク アロー || 雙箭 || 双箭
+|-
+| [[Barbed Arrows]] || Flèches barbelées || Stachelpfeile || Frecce Appuntite || Flechas con espinas || Kolczaste Strzały || 가시 화살 || バーブ アロー || 倒刺箭 || 荆棘之箭
+|-
+| [[Scavenger's Focus]] || Focus du charognard || Fokus des Plünderers || Concentrazione dello Sciacallo || Foco del carroñero || Skupienie Padlinożercy || 하이에나의 집중 || スカベンジャー フォーカス || 食腐者的專注 || 食腐兽的专注
+|-
+| [[Disrupting Accuracy ]] || Précision perturbatrice || Unterbrechende Genauigkeit || Accuratezza Dirompente || Precisión interruptora || Rozpraszająca Celność || 정교한 방해 || ディスラプト アキュレシー || 精準中斷 || 精确扰乱
+|-
+| [[Expert's Dexterity]] || Dextérité de l'expert || Gewandtheit des Profis || Destrezza dell'Esperto || Destreza del experto || Mistrzowska Sprawność || 전문가의 기민함 || エキスパート デクスタリティ || 專精者靈巧 || 灵动
+|-
+| [[Toxicity]] || Toxicité || Giftigkeit || Tossicità || Toxicidad || Toksyczność || 오염의 영혼 || トクシサティ || 毒性 || 毒性
+|-
+| [[Quicksand]] || Sables mouvants || Treibsand || Sabbie Mobili || Arenas movedizas || Ruchome Piaski || 유사의 영혼 || クイックサンド || 流沙 || 流沙
+|-
+| [[Roaring Winds]] || Vents mugissants || Tosender Wind || Venti Impetuosi || Vientos ruidosos || Ryczące Wiatry || 광풍의 영혼 || ウィンド ロア || 怒吼之風 || 怒吼之风
+|-
+| [[Magebane Shot]] || Tir du Fléau des mages || Verderben des Magiers-Schuss || Tiro Rovinamaghi || Disparo antimagos || Strzał Zguby Magów || 대마법 사격 || メイジベイン ショット || 馬格班射擊 || 禁魔箭
+|-
+| [[Natural Stride]] || Foulée naturelle || Natürlicher Schwung || Falcata Naturale || Zancada natural || Naturalny Krok || 자연스러운 걸음 || ナチュラル ストライド || 原始闊步 || 原野狂奔
+|-
+| [[Heket's Rampage]] || Saccage du Heket || Heket-Toben || Furore dell'Ecate || Violencia del heket || Szał Heketa || 두꺼비의 흥분 || ヘケット ランペイジ || 哈克衝擊 || 蟾蜍的复仇
+|-
+| [[Storm's Embrace]] || Etreinte de la tempête || Umarmung des Sturms || Abbraccio della Tempesta || Abrazo de la tormenta || Objęcia Burzy || 태풍의 포옹 || ストーム エンブレイス || 狂風擁抱 || 拥风者
+|-
+| [[Trapper's Speed]] || Vitesse du trappeur || Geschwindigkeit des Fallenstellers || Velocità dell'Intrappolatore || Velocidad del trampero || Szybkość Trapera || 능숙한 함정 전문가 || トラッパー スピード || 設陷者之速 || 快速陷阱
+|-
+| [[Nature's Speed]] || Vitesse de la nature || Geschwindigkeit der Natur || Velocità della Natura || Velocidad de la naturaleza || Szybkość Natury || 자연의 빠르기 || ネイチャー スピード || 原始速度 || 自然之速
+|-
+| [[Tripwire]] || Fil de détente || Stolperdraht || Aziona-trappola || Suelo alambrado || Potykacz || 올가미 철사 || トリップワイヤー || 絆網 || 罗网陷阱
+|-
+| [[Smoke Trap]] || Piège de fumée || Rauchfalle || Trappola di Fumo || Trampa de humo || Pułapka Dymna || 연막 함정 || スモーク トラップ || 煙霧陷阱 || 烟雾陷阱
+|-
+| [[Infuriating Heat]] || Chaleur exaspérante || Irritierende Hitze || Calore Esasperante || Calor indignante || Rozwścieczający Żar || 폭염의 영혼 || インフュリエイト ヒート || 怒火 || 狂怒之焰
+|-
+| [[Pestilence]] || Pestilence || Pestilenz || Pestilenza || Pestilencia || Zaraza || 전염의 영혼 || ペストランス || 瘟疫 || 热疫
+|}
+<noinclude>
+[[Category:Tables]]
+</noinclude>

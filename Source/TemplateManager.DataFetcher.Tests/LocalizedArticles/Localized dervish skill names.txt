@@ -1,0 +1,158 @@
+﻿== Nightfall ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Banishing Strike]] || Bannissement || Bannstoß || Colpo Esorcizzante || Golpe del destierro || Wypędzające Uderzenie || 추방의 일격 || バニッシュ ストライク || 驅逐攻擊 || 驱逐斩
+|-
+| [[Mystic Sweep]] || Fauchage mystique || Mystischer Schwung || Falciata Mistica || Barrido místico || Mistyczny Zamach || 신비로운 휘두름 || ミスティック スウィープ || 祕法掃蕩 || 秘法收割
+|-
+| [[Eremite's Attack]] || Attaque érémitique || Angriff des Eremiten || Attacco dell'Eremita || Ataque del ermitaño || Atak Eremity || 은둔자의 공격 || アーマイト アタック || 隱士攻擊 || 环绕斩
+|-
+| [[Rending Sweep]] || Frappe déchirante || Zerreißende Schwung || Falciata Strappante || Barrido desgarrador || Rozrywający Zamach || 분열의 휘두름 || レンド スウィープ || 撕裂掃蕩 || 撕裂横扫
+|-
+| [[Reap Impurities]] || Moisson des impuretés || Unreinheiten ausnutzen || Sottrai Impurità || Segar impurezas || Żniwo Przypadłości || 불순한 수확 || リープ インピュリティ || 污穢回收 || 疾病收割
+|-
+| [[Twin Moon Sweep]] || Fauchage des deux lunes || Doppelter Mondschwung || Falciata della Luna Gemella || Barrido de la doble luna || Zamach Podwójnego Księżyca || 쌍둥이달 휘두름 || ツイン ムーン スウィープ || 雙月掃蕩 || 双月轮舞
+|-
+| [[Victorious Sweep]] || Fauchage victorieux || Siegreicher Schwung || Falciata Vittoriosa || Barrido victorioso || Zwycięski Zamach || 의기양양한 일격 || ビクトリー スウィープ || 勝者掃蕩 || 胜者之轮
+|-
+| [[Irresistible Sweep]] || Fauchage impérieux || Unwiderstehlicher Schwung || Falciata Irresistibile || Barrido irresistible || Niepowstrzymywalny Zamach || 불가항력의 휘두름 || イレジスタブル スウィープ || 神能掃蕩 || 必中横扫
+|-
+| [[Pious Assault]] || Assaut pieux || Frommer Angriff || Assalto Pio || Asalto piadoso || Nabożny Szturm || 경건한 일격 || パイアス アサルト || 神性突襲 || 信仰突袭
+|-
+| [[Mystic Twister]] || Tornade mystique || Mystischer Wirbelsturm || Tornado Mistico || Tornado místico || Mistyczny Wir || 신비의 회오리 || ミスティック ツイスター || 祕法纏繞 || 秘法螺旋
+|-
+| [[Onslaught]] || Attaque || Attacke || Assalto Violento || Acometida || Napaść || 맹공격 || オンスロート || 猛攻 || 猛攻
+|-
+| [[Mystic Corruption]] || Corruption mystique || Mystische Verdorbenheit || Corruzione Mistica || Corrupción mística || Mistyczne Zepsucie || 은밀한 악영향 || ミスティック コラプション || 腐壞祕法 || 秘法腐蚀
+|-
+| [[Grenth's Grasp]] || Empoigne de Grenth || Grenths Griff || Stretta di Grenth || Garra de Grenth || Uścisk Grentha || 그렌트의 지배 || グレンス グラスプ || 古蘭斯之爪 || 古兰斯之握
+|-
+| [[Grenth's Fingers]] || Doigts de Grenth || Grenths Finger || Dita di Grenth || Dedos de Grenth || Palce Grentha || 그렌트의 손짓 || グレンス フィンガー || 古蘭斯之指 || 古兰斯之指
+|-
+| [[Aura of Thorns ]] || Aura d'épines || Dornenaura || Aura di Spine || Aura de espinas || Ciernista Aura || 가시막 || ソーン オーラ || 荊棘靈氣 || 荆棘光环
+|-
+| [[Veil of Thorns]] || Voile d'épines || Dornenschleier || Velo di Spine || Velo de espinas || Ciernista Zasłona || 가시 덮개 || ソーン ベイル || 荊棘遮罩 || 荆棘之幕
+|-
+| [[Harrier's Grasp]] || Empoigne d'harrier || Griff des Läufers || Stretta del Predatore || Garra del hostigador || Uścisk Grabieżcy || 약탈자의 속박 || ハリヤー グラスプ || 獵捕者之爪 || 捕猎之爪
+|-
+| [[Balthazar's Rage]] || Rage de Balthazar || Balthasars Wut || Ira di Balthazar || Cólera de Balthazar || Szał Baltazara || 발타자르의 격노 || バルタザール レイジ || 巴薩澤盛怒 || 战神之怒
+|-
+| [[Vow of Strength]] || Voeu de force || Gelübde der Stärke || Voto della Forza || Voto de fuerza || Ślub Siły || 힘의 맹약 || ストレングス バウ || 力量誓約 || 盟约之力
+|-
+| [[Ebon Dust Aura]] || Aura de poussière d'ébène || Ebon-Staubaura || Aura della Polvere d'Ebano || Aura de polvo de ébano || Aura Hebanowego Pyłu || 검은 먼지의 장막 || エボン ダスト オーラ || 烏塵靈氣 || 黑土光环
+|-
+| [[Dust Cloak]] || Manteau de poussière || Staubdecke || Mantello della Polvere || Manto polvoriento || Okrycie Pyłem || 먼지 망토 || ダスト クローク || 塵土掩蔽 || 尘土斗篷
+|-
+| [[Staggering Force]] || Force stupéfiante || Umwerfende Gewalt || Forza Travolgente || Fuerza desequilibrante || Nadzwyczajna Moc || 압도적인 기세 || スタガー フォース || 驚天神力 || 移山之力
+|-
+| [[Pious Renewal]] || Renouveau pieux || Fromme Erneuerung || Rinnovamento Pio || Renovación piadosa || Nabożna Odnowa || 경건한 재생 || パイアス リニューアル || 神性修補 || 信仰补偿
+|-
+| [[Zealous Vow]] || Voeu zélé || Eifriges Gelübde || Voto Zelante || Voto de celo || Ślub Gorliwości || 광적인 맹약 || ゼラス バウ || 狂熱誓言 || 狂热誓言
+|-
+| [[Mirage Cloak]] || Manteau de mirage || Trugbild-Umhang || Mantello del Miraggio || Manto milagroso || Okrycie Mirażem || 신기루 망토 || ミラージュ クローク || 魔幻掩蔽 || 幻象斗篷
+|-
+| [[Arcane Zeal]] || Zèle arcane || Arkaner Eifer || Zelo Arcano || Celo arcano || Tajemna Gorliwość || 비밀스러운 열정 || アルカナ ジール || 神秘熱誠 || 奥术热忱
+|-
+| [[Mystic Vigor]] || Vigueur mystique || Mystische Vitalität || Vigore Mistico || Vigor místico || Mistyczny Wigor || 신비로운 활력 || ミスティック ヴィガー || 活力祕法 || 秘法活力
+|-
+| [[Watchful Intervention]] || Intervention vigilante || Wachsame Intervention || Intervento Vigile || Intervención atenta || Czujna Interwencja || 수호신의 중재 || ウォッチフル インタベンション || 警戒干涉 || 警戒守护
+|-
+| [[Vow of Piety]] || Voeu de piété || Gelübde der Frömmigkeit || Voto della Pietà || Voto de piedad || Ślub Pobożności || 경건한 맹약 || パイエティ バウ || 虔誠誓言 || 虔诚之盟
+|-
+| [[Vital Boon]] || Compagnon vital || Wesentliche Wohltat || Dono Vitale || Dádiva vital || Życiodajny Dar || 활력의 은총 || バイタル ブーン || 生命恩賜 || 生命恩赐
+|-
+| [[Heart of Holy Flame]] || Coeur de la Flamme sacrée || Herz der heiligen Flamme || Cuore della Fiamma Sacra || Corazón de la llama sagrada || Serce Świętego Płomienia || 신성한 불길의 격정 || ホーリー フレイム ハート || 聖火之心 || 圣火之心
+|-
+| [[Heart of Fury]] || Coeur de furie || Herz der Wut || Cuore della Furia || Corazón de furia || Serce Furii || 분노의 격정 || フューリー ハート || 憤怒之心 || 愤怒之心
+|-
+| [[Zealous Renewal]] || Renouveau zélé || Eifrige Erneuerung || Rinnovamento Zelante || Renovación de celo || Gorliwa Odnowa || 광신도의 재생 || ゼラス リニューアル || 狂熱復原 || 狂热回复
+|-
+| [[Extend Enchantments]] || Prolongation des Enchantements || Verzauberungen ausweiten || Prolunga Incantesimi || Prolongar encantamientos || Przedłużenie Zaklęć || 강화 마법 연장 || エクステンド エンチャント || 加持延展 || 增益延伸
+|-
+| [[Faithful Intervention]] || Intervention fidèle || Vertrauensvolle Intervention || Intervento Fedele || Intervención de fe || Interwencja Wiary || 헌신적인 중재 || フェイスフル インタベンション || 堅定干涉 || 信徒守护
+|-
+| [[Sand Shards]] || Eclats de sable || Sandscherben || Granelli di Sabbia || Cristales de arena || Piaskowe Odłamki || 모래 파편 || サンド シャード || 沙塵裂片 || 沙砾
+|-
+| [[Lyssa's Haste]] || Hâte de Lyssa || Lyssas Eile || Fretta di Lyssa || Premura de Lyssa || Pośpiech Lyssy || 리사의 민첩함 || リッサ ヘイスト || 麗莎之迅速 || 丽莎之速
+|-
+| [[Guiding Hands]] || Mains directrices || Lenkende Hände || Mani Guidate || Manos guiadoras || Wiodące Dłonie || 유도의 손길 || ガイド ハンド || 神引之手 || 引渡之手
+|-
+| [[Fleeting Stability]] || Brève stabilité || Flüchtige Stabilität || Stabilità Effimera || Estabilidad pasajera || Ulotna Stabilność || 순간적인 안정 || フリート スタビリティ || 短促穩定 || 刹那
+|-
+| [[Attacker's Insight]] || Clairvoyance de l'attaquant || Einblick des Angreifers || Intuito dell'Attaccante || Perspicacia del atacante || Intuicja Napastnika || 공격자의 통찰 || アタッカー インサイト || 攻擊者洞察 || 攻击者的洞察
+|-
+| [[Armor of Sanctity]] || Armure de sainteté || Rüstung der Heiligkeit || Armatura di Santità || Armadura de santidad || Zbroja Świętości || 신성한 갑옷 || サンクティティ アーマー || 聖潔護甲 || 圣洁护甲
+|-
+| [[Mystic Regeneration]] || Régénération mystique || Mystische Regeneration || Rigenerazione Mistica || Regeneración mística || Mistyczna Regeneracja || 신비로운 재생 || ミスティック リジェネレーション || 再生祕法 || 秘法愈合
+|-
+| [[Rending Aura]] || Aura déchirante || Zerreißende Aura || Aura Strappante || Aura desgarradora || Rozrywająca Aura || 파열의 오라 || レンド オーラ || 撕裂靈氣 || 撕裂光环
+|-
+| [[Featherfoot Grace]] || Grâce de Pied-de-plume || Anmut des Federfußes || Grazia del Piedelieve || Gracia del pie con plumas || Łaska Chyżych Stóp || 세련된 발걸음 || フェザーフット グレース || 羽步姿態 || 飞羽
+|-
+| [[Vow of Silence ]] || Voeu du silence || Schweigegelübde || Voto del Silenzio || Voto de silencio || Ślub Milczenia || 침묵의 맹약 || サイレンス バウ  || 沉靜誓約  || 沉默誓言
+|-
+| [[Avatar of Balthazar]] || Avatar de Balthazar || Balthasars Avatar || Apparizione di Balthazar || Avatar de Balthazar || Awatar Baltazara || 발타자르의 아바타 || バルタザール アバター || 巴薩澤化身 || 战争使者
+|-
+| [[Avatar of Dwayna]] || Avatar de Dwayna || Dwaynas Avatar || Apparizione di Dwayna || Avatar de Dwayna || Awatar Dwayny || 드와이나의 아바타 || ドワイナ アバター || 薇娜化身 || 生命使者
+|-
+| [[Avatar of Grenth]] || Avatar de Grenth || Grenths Avatar || Apparizione di Grenth || Avatar de Grenth || Awatar Grentha || 그렌트의 아바타 || グレンス アバター || 古蘭斯化身 || 黄泉使者
+|-
+| [[Avatar of Lyssa]] || Avatar de Lyssa || Lyssas Avatar || Apparizione di Lyssa || Avatar de Lyssa || Awatar Lyssy || 리사의 아바타 || リッサ アバター || 麗莎化身 || 幻象使者
+|-
+| [[Avatar of Melandru]] || Avatar de Melandru || Melandrus Avatar || Apparizione di Melandru || Avatar de Melandru || Awatar Melandru || 멜란드루의 아바타 || メランドル アバター || 梅蘭朵化身 || 自然使者
+|-
+| [[Meditation]] || Méditation || Meditation || Meditazione || Meditación || Medytacja || 명상 || メディテーション || 冥想 || 冥想
+|-
+| [[Eremite's Zeal]] || Zèle érémitique || Eifer des Eremiten || Zelo dell'Eremita || Celo del ermitaño || Gorliwość Eremity || 은둔자의 열정 || アーマイト ジール || 隱士熱誠 || 隐士的热诚
+|-
+| [[Natural Healing]] || Guérison naturelle || Natürliche Heilung || Cura Naturale || Curación innata || Naturalne Uzdrawianie || 자연적인 치유 || ナチュラル ヒーリング || 自然治癒 || 自然治愈
+|-
+| [[Imbue Health ]] || Santé imprégnée || Mit Leben durchdringen || Instilla Salute || Imbuir salud  || Nasycenie Życiem || 체력 고취 || インビュー ヘルス  || 灌注體力 || 生命灌注
+|-
+| [[Mystic Healing]] || Guérison mystique || Mystische Heilung || Cura Mistica || Curación mística || Mistyczne Uzdrowienie || 신비로운 치유 || ミスティック ヒーリング || 治癒秘法 || 秘疗术
+|-
+| [[Dwayna's Touch]] || Toucher de Dwayna || Dwaynas Berührung || Tocco di Dwayna || Toque de Dwayna || Dotyk Dwayny || 드와이나의 손길 || ドワイナ タッチ || 薇娜之觸 || 黛薇娜之触
+|-
+| [[Pious Restoration]] || Rétablissement pieux || Fromme Wiederherstellung || Ripristino Pio || Restauración piadosa || Nabożne Przywrócenie || 경건한 회복 || パイアス レストレイション || 神性復原 || 信仰回复
+|-
+| [[Signet of Pious Light]] || Sceau de lumière pieuse || Siegel des frommen Lichts || Sigillo di Luce Pia || Sello de luz piadosa || Sygnet Nabożnego Światła || 경건한 빛 인장 || パイアス ライト シグネット || 虔誠紋章 || 神光纹章
+|-
+| [[Intimidating Aura]] || Aura intimidante || Einschüchternde Aura || Aura Intimidatoria || Aura intimidante || Aura Zastraszenia || 위협적인 오라 || インティミデイト オーラ || 威嚇靈氣 || 胁迫光环
+|-
+| [[Mystic Sandstorm]] || Tempête de sable mystique || Mystischer Sandsturm || Tempesta di Sabbia Mistica || Tormenta de arena mística || Mistyczna Burza Piaskowa || 신비로운 모래폭풍 || ミスティック サンドストーム || 祕法沙風暴 || 秘法沙暴
+|-
+| [[Winds of Disenchantment]] || Vents de désenchantement || Wind der Entzauberung || Venti del Disincanto || Vientos del desencantamiento || Wiatr Antyzaklęcia || 각성의 바람 || ディスエンチャント ウインド || 反加持之風 || 玷污之风
+|-
+| [[Rending Touch]] || Toucher déchirant || Zerreißende Berührung || Tocco Strappante || Toque desgarrante || Rozrywający Dotyk || 파열의 손길 || レンド タッチ || 撕裂碰觸 || 撕裂之触
+|-
+| [[Crippling Sweep]] || Fauchage invalidant || Verkrüppelnder Schwung || Falciata Azzoppante || Barrido lisiador || Okulawiający Zamach || 속박의 가르기 || クリップル スウィープ || 致殘掃蕩 || 断筋横扫
+|-
+| [[Wounding Strike]] || Attaque blessante || Verwundender Schlag || Colpo Lesionante || Golpe hiriente || Raniące Uderzenie || 상처의 일격 || ウンド ストライク || 創傷攻擊 || 猛斩
+|-
+| [[Reaper's Sweep]] || Frappe du moissonneur || Schwung des Schnitters || Falciata del Mietitore || Barrido del segador || Zamach Żniwiarza || 사신의 가르기 || リーパー スウィープ || 收割者掃蕩 || 收割轮舞
+|-
+| [[Wearying Strike]] || Coup lassant || Ermüdender Schlag || Colpo Stancante || Golpe cansado || Nużące Uderzenie || 침울한 일격 || ウィアリー ストライク || 耗竭攻擊 || 两败俱伤
+|-
+| [[Lyssa's Assault]] || Assaut de Lyssa || Lyssas Angriff || Assalto di Lyssa || Asalto de Lyssa || Natarcie Lyssy || 리사의 습격 || リッサ アサルト || 麗莎之突襲 || 幻影突袭
+|-
+| [[Chilling Victory]] || Victoire frissonnante || Kühler Sieg || Vittoria Gelante || Victoria espeluznante || Lodowate Zwycięstwo || 냉정한 승리 || チル ビクトリー || 冷冽勝者 || 寒冬之掠
+|-
+| [[Conviction]] || Conviction || Überzeugung || Condanna || Convicción || Pewność Siebie || 회개 || コンヴィクション || 信念 || 定罪
+|-
+| [[Enchanted Haste]] || Hâte enchantée || Verzauberte Eile || Fretta Incantata || Prisa encantada || Zaklęty Pośpiech || 강화된 민첩함 || エンチャント ヘイスト || 加持急速 || 神幻之速
+|-
+| [[Pious Concentration]] || Concentration pieuse || Fromme Konzentration || Concentrazione Pia || Concentración piadosa || Nabożna Koncentracja || 경건한 집중 || パイアス コンセントレーション || 神性專注 || 信仰专注
+|-
+| [[Harrier's Haste]] || Hâte d'harrier || Eile des Läufers || Fretta del Predatore || Rapidez del hostigador || Pośpiech Grabieżcy || 약탈자의 민첩함 || ハリヤー ヘイスト || 獵捕者之速 || 飞猎
+|-
+| [[Pious Haste]] || Hâte pieuse || Fromme Eile || Fretta Pia || Prisa piadosa || Nabożny Pośpiech || 경건한 민첩함 || パイアス ヘイスト || 神性迅速 || 信仰疾速
+|-
+| [[Whirling Charge]] || Charge tourbillonnante || Wirbelangriff || Carica Vorticosa || Torbellino de asalto || Wirująca Szarża || 소용돌이 돌격 || ホワール チャージ || 速度充能 || 旋风冲击
+|-
+| [[Test of Faith]] || Test de foi || Glaubensprüfung || Prova di Fede || Prueba de fe || Próba Wiary || 신념의 시험 || フェイス テスト || 信仰考驗 || 信仰试炼
+|}
+<noinclude>
+[[Category:Tables]]
+</noinclude>

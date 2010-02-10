@@ -1,0 +1,61 @@
+﻿{{Skill infobox
+ | name = Healing Signet
+ | campaign = Core
+| profession = Warrior
+ | attribute = Tactics
+| type = Signet
+| activation = 2
+ |recharge = 4
+|description=
+[[Signet]]. You gain {{gr|82|172}} Health. You have -40 [[armor_rating|armor]] while using this skill.
+| concise description = Signet. You gain {{gr|82|172}} Health. <span style="color:gray;">You have -40 armor while using this skill.</span>
+}}
+
+{{Skill progression
+|attribute = [[Tactics]]
+|var1 name = [[Heal]]
+|var1 at0 = 82
+|var1 at15 = 172}}
+
+==Acquisition==
+'''[[Skill quest]]s''' 
+*[[Prophecies]]
+**[[Warrior Test]] ([[Lakeside County]])
+**[[Grawl Invasion]] ([[Green Hills County]])
+**[[Gargoyle Trouble]] ([[Old Ascalon]])
+*[[Factions]]
+**[[Mantid Hatchlings]] ([[Monastery Overlook]])
+**[[Locate Talon Silverwing]] ([[Shing Jea Monastery]])
+*[[Nightfall]]
+**[[Rally the Recruits (Tutorial)|Rally the Recruits]]/[[Take the Shortcut (Skip Tutorial)|Take the Shortcut]] ([[Island of Shehkah]])
+'''[[Profession changer]]s'''
+*[[Core]]
+**[[Profession Changer (NPC)]] ([[Great Temple of Balthazar]])
+*[[Prophecies]]
+**[[Agastos the Brave]] ([[Destiny's Gorge]])
+*[[Factions]]
+**[[Senji]] ([[Senji's Corner]])
+*[[Nightfall]]
+**[[Zuwarah]] ([[Command Post]])
+'''[[Skill trainer]]s'''
+*[[Prophecies]]
+**[[Sir Bertran]] ([[Ascalon City]])
+**[[Dakk]] ([[Ember Light Camp]])
+*[[Eye of the North]]
+**[[Micah Fergson]] ([[Eye of the North (outpost)]])
+
+==Notes==
+[[Image:Healing Signet Beta Icon.jpg|thumb|64px|Beta icon]]
+*"-40 armor" will result in taking double damage from skills that are affected by [[armor rating]].
+*[[Hero]]es and [[henchmen]] with this skill will retreat from combat in order to use it.
+*The "-40 armor" is factored in after the [[Effect_stacking|armor cap]]. 
+
+{{Anomaly|Despite the skill description, this skill heals rather than giving health gain.}}
+
+==Trivia==
+*In the early days of Guildwars, Healing Signet was planned to be a [[List of common skills|Common skill]] ''(thus the colorless beta icon)''.
+
+[[Category:Warrior skill rewards]]
+[[Category:Pre-Searing skills]]
+[[Category:Skills without known Factions trainers]]
+[[Category:Skills without known Nightfall trainers]]

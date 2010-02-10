@@ -1,0 +1,307 @@
+﻿== Core ==
+__NOTOC__
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Gale]] || Bourrasque || Orkan || Burrasca || Vendaval || Podmuch || 돌풍 || ゲイル || 狂風 || 狂风
+|-
+| [[Elemental Attunement]] || Affinité élémentaire || Elementareinstimmung || Armonia Elementale || Sintonía con los elementos || Zestrojenie z Żywiołami || 정령 감응 || エレメンタル アチューン || 元素調和 || 元素协调
+|-
+| [[Armor of Earth]] || Armure de la Terre || Erdrüstung || Armatura della Terra || Armadura de tierra || Zbroja Ziemi || 대지의 갑옷 || アース アーマー || 地之護甲 || 大地护体
+|-
+| [[Earth Attunement]] || Affinité terrestre || Erdeinstimmung || Armonia con la Terra || Sintonía con la tierra || Zestrojenie z Ziemią || 대지 감응 || アース アチューン || 地之調和 || 地之协调
+|-
+| [[Stoning]] || Lapidation || Steinigung || Sassaiola || Lluvia de piedras || Ukamienowanie || 투석 || ストーニング || 石箭 || 飞石
+|-
+| [[Stone Daggers]] || Dagues de pierre || Steindolche || Pugnali di Pietra || Dagas de piedra || Kamienne Sztylety || 돌칼 투척 || ストーン ダガー || 石之匕首 || 石化匕首
+|-
+| [[Aftershock]] || Réplique sismique || Nachbeben || Postumi dello Shock || Descarga de respuesta || Wstrząs Wtórny || 충격의 여파 || アフターショック || 餘震 || 余震
+|-
+| [[Ward Against Melee]] || Protection de contact || Abwehr gegen Nahkampf || Guardia contro gli Attacchi Ravvicinati || Protección ataques cuerpo a cuerpo || Ochrona przed Ciosami || 회피 결계 || ウォード アゲインスト メイレー || 迴避結界 || 闪避结界
+|-
+| [[Ward Against Foes]] || Protection contre l'ennemi || Abwehr gegen Feinde || Guardia contro i Nemici || Protección contra enemigos || Ochrona przed Przeciwnikami || 속박 결계 || ウォード アゲインスト フォウ || 束縛結界 || 束缚结界
+|-
+| [[Aura of Restoration]] || Aura de rétablissement || Wiederherstellungs-Aura || Aura del Ripristino || Aura de restauración || Aura Odnowy || 재생의 오라 || レストレイション オーラ || 回復靈氣 || 恢复光环
+|-
+| [[Conjure Flame]] || Conjuration de flamme || Flammenbeschwörung || Evoca Fiamma || Conjurar llama || Przyzwanie Ognia || 화염 소환 || カンジャー フレイム || 召喚火焰 || 烈焰召唤
+|-
+| [[Inferno]] || Enfer || Inferno || Inferno || Infierno || Piekło || 지옥 화염 || インフェルノ || 地獄火 || 地狱火
+|-
+| [[Fire Attunement]] || Affinité ignée || Feuereinstimmung || Armonia con il Fuoco || Sintonía con el fuego || Zestrojenie z Ogniem || 불의 감응 || ファイア アチューン || 火之調和 || 火之协调
+|-
+| [[Mind Burn]] || Flamme spirituelle || Geistige Verbrennung || Mente che Brucia || Quemadura mental || Wypalanie Umysłu || 정신 연소 || マインド バーン || 心靈燃燒 || 意志灼烧
+|-
+| [[Fireball]] || Boule de feu || Feuerball || Palla di Fuoco || Bola de fuego || Kula Ognia || 화염구 || ファイアボール || 火球 || 火球术
+|-
+| [[Meteor]] || Météore || Meteor || Meteora || Meteoro || Meteoryt || 유성 강타 || メテオ || 隕石 || 流星
+|-
+| [[Immolate]] || Immolation || Feueropfer || Immolazione || Inmolación || Samospalenie || 화염의 제물 || イモレイト || 火焰焚身 || 献祭
+|-
+| [[Flare]] || Eclat de feu || Feuergeschoss || Bengala || Bengala || Flara || 화염 발사 || フレア || 火花 || 火花
+|-
+| [[Fire Storm]] || Tempête de feu || Feuersturm || Tempesta di Fuoco || Tormenta de fuego || Deszcz Ognia || 화염 폭풍 || ファイア ストーム || 火焰風暴 || 火焰风暴
+|-
+| [[Glyph of Elemental Power]] || Glyphe de pouvoir élémentaire || Glyphe der Elementarkraft || Glifo del Potere Elementale || Glifo de poder elemental || Glif Mocy Żywiołów || 정령의 수인 || エレメンタル パワー グリフ || 元素力量符號 || 元素能量雕文
+|-
+| [[Glyph of Lesser Energy]] || Glyphe d'énergie mineure || Glyphe der geringeren Energie || Glifo dell'Energia Minore || Glifo de energía menor || Glif Mniejszej Energii || 약한 에너지 수인 || レッサー エネルギー グリフ || 微能符號 || 节能雕文
+|-
+| [[Rust]] || Rouille || Rost || Ruggine || Óxido || Rdza || 녹슨 인장 || ラスト || 紋章鏽蝕 || 锈蚀
+|-
+| [[Lightning Surge]] || Décharge foudroyante || Blitzwelle || Marea di Fulmini || Oleada de relámpagos || Fala Błyskawic || 번개의 파도 || ライトニング サージ || 閃電震盪 || 闪电震击
+|-
+| [[Conjure Frost]] || Conjuration du froid || Frost beschwören || Evoca Brina || Conjurar escarcha || Przyzwanie Mrozu || 냉기 소환 || カンジャー フロスト || 召喚冰霜 || 冰霜召唤
+|-
+| [[Water Attunement]] || Affinité aquatique || Wassereinstimmung || Armonia con l'Acqua || Sintonía con el agua || Zestrojenie z Wodą || 물의 감응 || ウォーター アチューン || 水之調和 || 水之协调
+|-
+| [[Mind Freeze]] || Gel spirituel || Geistige Erfrierung || Mente Ghiacciata || Congelar mente || Zamrożenie Umysłu || 정신 동결 || マインド フリーズ || 心靈凍結 || 意志冻结
+|-
+| [[Ice Spikes]] || Tessons de glace || Eisdornen || Spine di Ghiaccio || Púas de hielo || Lodowe Kolce || 얼음 철책 || アイス スパイク || 冰之尖刺 || 冰锥
+|-
+| [[Ice Spear]] || Lance de glace || Eisspeer || Lancia di Ghiaccio || Lanza de hielo || Lodowa Włócznia || 얼음 투창 || アイス スピア || 冰之矛 || 冰之长矛
+|-
+| [[Maelstrom]] || Maelström || Strudel || Gorgo || Vorágine || Wir || 대소용돌이 || メイルストローム || 水漩渦 || 漩涡
+|-
+| [[Obsidian Flesh]] || Chair d'obsidienne || Obsidianfleisch || Carne di Ossidiana || Carne de obsidiana || Obsydianowe Ciało || 흑요석 갑옷 || オブシディアン フレッシュ || 黑曜石肉體 || 黑曜石之身
+|-
+| [[Obsidian Flame]] || Flamme d'obsidienne || Obsidianflamme || Fiamma di Ossidiana || Llama de obsidiana || Obsydianowy Płomień || 흑요석 화염 || オブシディアン フレイム || 黑曜石火焰 || 黑曜石烈焰
+|-
+| [[Blinding Flash]] || Eblouissement || Blitzblendung || Lampo Accecante || Destello cegador || Oślepiający Błysk || 섬광 || ブラインド フラッシュ || 眩目之光 || 眩目之光
+|-
+| [[Conjure Lightning]] || Conjuration de la foudre || Blitzbeschwörung || Evoca Fulmine || Conjurar relámpago || Przyzwanie Błyskawicy || 번개 소환 || カンジャー ライトニング || 召喚閃電 || 闪电召唤
+|-
+| [[Lightning Strike]] || Eclair foudroyant || Blitzschlag || Colpo di Fulmine || Ataque de relámpago || Uderzenie Błyskawicą || 번개 강타 || ライトニング ストライク || 閃電衝擊 || 闪电冲击
+|-
+| [[Enervating Charge]] || Décharge incapacitante || Schwächende Aufladung || Scarica Snervante || Carga debilitante || Osłabiający Ładunek || 전기 충격 || エネルベイト チャージ || 衰弱電擊 || 虚弱电击
+|-
+| [[Air Attunement]] || Affinité aérienne || Lufteinstimmung || Armonia con l'Aria || Sintonía con el aire || Zestrojenie z Powietrzem || 바람의 감응 || エアー アチューン || 風之調和 || 风之协调
+|-
+| [[Lightning Orb]] || Globe de foudre || Kugelblitz || Globo del Fulmine || Esfera de relámpago || Piorun Kulisty || 번개의 구 || ライトニング オーブ || 閃電球 || 闪电球
+|-
+| [[Lightning Touch]] || Caresse foudroyante || Blitz-Berührung || Tocco del Fulmine || Toque de relámpago || Elektryzujący Dotyk || 번개의 손길 || ライトニング タッチ || 閃電之觸 || 闪电之触
+|-
+| [[Deep Freeze]] || Congélation || Tiefgefrieren || Profondo Congelamento || Congelación || Przenikliwy Chłód || 심연의 빙하 || ディープ フリーズ || 強力凍結 || 极度深寒
+|-
+| [[Blurred Vision]] || Vision troublée || Verschwommene Sicht || Vista Sfocata || Visión borrosa || Nieostry Wzrok || 시야 교란 || ブラー ビジョン || 模糊視線 || 模糊视线
+|}
+== Prophecies ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Windborne Speed]] || Vitesse du vent || Windgeschwindigkeit || Velocità del Vento || Velocidad del viento || Szybkość Wiatru || 바람의 질주 || ウインドボーン スピード || 風之速 || 疾风术
+|-
+| [[Lightning Storm]] || Tempête foudroyante || Blitzgewitter || Tempesta di Fulmini || Tormenta de relámpagos || Burza z Piorunami || 번개 폭풍 || ライトニング ストーム || 閃電風暴 || 闪电风暴
+|-
+| [[Whirlwind]] || Tornade || Wirbelsturm || Vortice || Torbellino || Trąba Powietrzna || 소용돌이 || ホワール ウインド || 旋風 || 旋风
+|-
+| [[Kinetic Armor]] || Armure cinétique || Kinetik-Rüstung || Armatura Cinetica || Armadura cinética || Kinetyczny Pancerz || 생명의 갑옷 || キネティック アーマー || 魔動護甲 || 波动护甲
+|-
+| [[Eruption]] || Eruption || Eruption || Eruzione || Erupción || Erupcja || 화산 분출 || イラプション || 火山爆發 || 火山喷发
+|-
+| [[Magnetic Aura]] || Aura magnétique || Magnet-Aura || Aura Magnetica || Aura magnética || Magnetyczna Aura || 자기장 장막 || マグネティック オーラ || 磁能靈氣 || 磁力光环
+|-
+| [[Earthquake]] || Séisme || Erdbeben || Terremoto || Terremoto || Trzęsienie Ziemi || 지진 || アースクエイク || 地震 || 地震
+|-
+| [[Grasping Earth]] || Etreinte de la Terre || Zupackende Erde || Morsa della Terra || Presa de la tierra || Grząska Ziemia || 대지의 포박 || グラスプ アース || 地之束縛 || 大地束缚
+|-
+| [[Ward Against Elements ]] || Protection contre les éléments || Abwehr gegen Elemente || Guardia contro gli Elementi || Protección contra los elementos || Ochrona przed Żywiołami || 정령 마법 결계 || ウォード アゲインスト エレメント || 元素結界 || 元素抵抗结界
+|-
+| [[Ether Prodigy]] || Prodige éthéré || Ätherwunder || Prodigio dell'Etere || Prodigio de éter || Eteryczny Cud || 경이로운 에너지 || エーテル プロディジー || 非凡魔力 || 法力喷涌
+|-
+| [[Incendiary Bonds]] || Liens incendiaires || Brandbänder || Legami Incendiari || Vínculos incendiarios || Zapalające Więzy || 화염의 장막 || インセンディアリー ボンド || 燃燒連結 || 烈焰镣铐
+|-
+| [[Ether Renewal]] || Renouveau éthéré || Äthererneuerung || Rinnovamento dell'Etere || Renovación de éter || Eteryczna Odnowa || 에너지 회복 || エーテル リニューアル || 魔力復原 || 法力恢复
+|-
+| [[Flame Burst]] || Jet de flammes || Flammenstoß || Esplosione di Fiamme || Llamaradas || Ognisty Wybuch || 화염 폭발 || フレイム バースト || 火焰爆裂 || 炎爆术
+|-
+| [[Rodgort's Invocation]] || Invocation de Rodgort || Anrufung von Rodgort || Invocazione di Rodgort || Invocación de Rodgort || Inwokacja Rodgorta || 로조트의 강림 || ロッドゴート インバケイション || 洛葛特的魔咒 || 洛戈特的魔咒
+|-
+| [[Mark of Rodgort]] || Marque de Rodgort || Zeichen des Rodgort || Segno di Rodgort || Marca de Rodgort || Piętno Rodgorta || 로조트의 낙인 || ロッドゴート マーク || 洛葛特的印記 || 洛戈特的印记
+|-
+| [[Meteor Shower]] || Pluie de météores || Meteorschauer || Pioggia di Meteore || Lluvia de meteoros || Deszcz Meteorytów || 유성 폭풍 || メテオ シャワー || 隕石雨 || 陨石雨
+|-
+| [[Phoenix]] || Phénix || Phönix || Fenice || Fénix || Feniks || 불사조 소환 || フェニックス || 火鳳凰 || 火凤凰
+|-
+| [[Lava Font]] || Fontaine de lave || Lavabecken || Sorgente di Lava || Fuente de lava || Krynica Lawy || 용암의 열기 || ラヴァ フォント || 熔岩 || 熔岩之泉
+|-
+| [[Searing Heat]] || Chaleur de fournaise || Sengende Hitze || Calore Bruciante || Calor abrasador || Palący Żar || 용암 분출 || シアー ヒート || 灼熱氣息 || 灼肤之痛
+|-
+| [[Glyph of Energy]] || Glyphe d'énergie || Glyphe der Energie || Glifo dell'Energia || Glifo de energía || Glif Energii || 에너지 수인 || エネルギー グリフ || 能量符號 || 能量雕文
+|-
+| [[Glyph of Concentration]] || Glyphe de concentration || Glyphe der Konzentration || Glifo della Concentrazione || Glifo de concentración || Glif Koncentracji || 집중의 수인 || コンセントレイト グリフ || 專注符號 || 专注雕文
+|-
+| [[Glyph of Sacrifice]] || Glyphe de sacrifice || Glyphe der Opferung || Glifo del Sacrificio || Glifo de sacrificio || Glif Ofiary || 희생의 수인 || サクリファイス グリフ || 犧牲符號 || 牺牲雕文
+|-
+| [[Glyph of Renewal]] || Glyphe du renouveau || Glyphe der Erneuerung || Glifo del Rinnovamento || Glifo de renovación || Glif Odnowy || 재생의 수인 || リニューアル グリフ || 再生符號 || 重生雕文
+|-
+| [[Armor of Frost]] || Armure de givre || Frostrüstung || Armatura di Brina || Armadura de escarcha || Zbroja Mrozu || 얼음의 갑옷 || フロスト アーマー || 冰霜護甲 || 冰霜护体
+|-
+| [[Ice Prison]] || Prison de glace || Eisgefängnis || Prigione di Ghiaccio || Prisión de hielo || Lodowe Więzienie || 얼음 속박 || アイス プリズン || 冰之牢獄 || 冰之牢狱
+|-
+| [[Frozen Burst]] || Explosion glaciale || Frostexplosion || Esplosione di Ghiaccio || Estallido helado || Mroźny Wybuch || 냉기 폭발 || フローズン バースト || 冰霜爆裂 || 冰霜爆裂
+|-
+| [[Shard Storm]] || Tempête de glace || Scherbensturm || Tempesta di Schegge || Tormenta de fragmentos || Lodowa Burza || 얼음 파편 || シャード ストーム || 冰風暴 || 碎冰风暴
+|-
+| [[Iron Mist]] || Brume de fer || Eisenbeschlag || Nebbia di Ferro || Niebla de hierro || Żelazna Mgła || 강철 안개 || アイアン ミスト || 鐵之迷霧 || 钢铁迷雾
+|-
+| [[Crystal Wave]] || Vague de cristal || Kristallwelle || Onda di Cristallo || Ola de cristales || Krystaliczna Fala || 수정 파도 || クリスタル ウェイブ || 水晶波動 || 水晶波动
+|-
+| [[Chain Lightning]] || Chaîne d'éclairs || Kettenblitz || Fulmine a Catena || Relámpago encadenado || Wyładowanie Łańcuchowe || 연속 번개 || チェイン ライトニング || 連鎖閃電 || 闪电链
+|-
+| [[Mind Shock]] || Choc spirituel || Geistiger Schock || Shock Mentale || Impacto mental || Wstrząs Mózgu || 정신 충격 || マインド ショック || 心靈震暴 || 心灵爆击
+|-
+| [[Glimmering Mark]] || Marque éblouissante || Schimmerndes Zeichen || Segno Scintillante || Marca atenuada || Migoczące Piętno || 강렬한 섬광 || グリマー マーク || 閃光印記 || 微光印记
+|-
+| [[Thunderclap]] || Coup de tonnerre || Donnerschlag || Rombo di Tuono || Trueno || Grzmot || 우레소리 || サンダークラップ || 雷鳴 || 雷霆一击
+|-
+| [[Lightning Javelin]] || Javelot de foudre || Blitzspeer || Giavellotto del Fulmine || Jabalina de relámpago || Oszczep Błyskawicy || 번개 투창 || ライトニング ジャベリン || 閃電標槍 || 闪电之枪
+|-
+| [[Shock]] || Décharge électrique || Schock || Shock || Descarga || Wstrząs || 번개 충격 || ショック || 電擊 || 电击
+|-
+| [[Swirling Aura]] || Aura tourbillon || Wirbelnde Aura || Aura Turbinante || Torbellino de aura || Wirująca Aura || 소용돌이 장막 || スワール オーラ || 漩渦靈氣 || 涡流光环
+|-
+| [[Mist Form]] || Forme de brume || Nebelform || Forma di Nebbia || Forma de niebla || Mglisty Kształt || 안개 형상 || ミスト フォーム || 迷霧 || 迷雾形态
+|-
+| [[Water Trident]] || Trident marin || Wasserdreizack || Tridente d'Acqua || Tridente de agua || Wodny Trójząb || 포세이돈의 창 || ウォーター トライデント || 水之三叉戟 || 波塞东之戟
+|-
+| [[Armor of Mist ]] || Armure de brume || Nebelrüstung || Armatura di Nebbia || Armadura de niebla || Mglista Zbroja || 안개 갑옷 || ミスト アーマー || 霧之護甲 || 水雾护体
+|-
+| [[Ward Against Harm]] || Protection contre le Mal || Abwehr gegen Schaden || Guardia contro le Ferite || Protección contra daños || Ochrona przed Krzywdą || 물의 결계 || ウォード アゲインスト ハーム || 守護結界 || 伤害防护结界
+|}
+== Factions ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Arc Lightning]] || Arc foudroyant || Blitzbogen || Fulmine ad Arco || Arco de relámpagos || Błyskawica Łukowa || 번개의 호 || アーク ライトニング || 弧光閃電 || 弧光闪电
+|-
+| [[Gust]] || Rafale || Böe || Folata || Soplo || Poryw Wiatru || 소나기 || ガスト || 噴發 || 喷发
+|-
+| [[Lightning Hammer]] || Masse foudroyante || Blitzhammer || Martello Fulminante || Martillo de relámpago || Młot Błyskawic || 번개 해머 || ライトニング ハンマー || 閃電之鎚 || 闪电之锤
+|-
+| [[Windborne Speed]] || Vitesse du vent || Windgeschwindigkeit || Velocità del Vento || Velocidad del viento || Szybkość Wiatru || 바람의 질주 || ウインドボーン スピード || 風之速 || 风之迅捷
+|-
+| [[Teinai's Wind]] || Vent de Teinai || Teinais Wind || Vento di Teinai || Viento de Teinai || Wiatr Teinai || 테이나이의 소용돌이 || テイナイ ウインド || 邸內之風 || 暴风
+|-
+| [[Shock Arrow]] || Flèche de choc  || Schockpfeil || Freccia dello Shock || Flecha eléctrica || Strzała Porażenia || 충격 화살 || ショック アロー || 電擊之箭 || 闪电箭
+|-
+| [[Ride the Lightning]] || Chevauchée de l'éclair || Den Blitz reiten || Cavalca il Fulmine || Cabalga en el rayo || Skok Błyskawicy || 번개 이동 || ライトニング ライド || 閃電傳送 || 导电
+|-
+| [[Shockwave]] || Onde de choc || Stoßwelle || Onda d'Urto || Onda expansiva || Fala Uderzeniowa || 진동파 || ショックウェイブ || 衝擊波 || 冲击波
+|-
+| [[Unsteady Ground]] || Sol instable || Schwankender Boden || Terreno Instabile || Suelo inestable || Niestabilny Grunt || 불규칙한 진동 || アンステディ グラウンド || 地動山搖 || 地动山摇
+|-
+| [[Sliver Armor]] || Armure d'éclats || Splitter-Rüstung || Armatura Scheggiante || Armadura tajada || Zbroja z Odłamków || 갑옷 강화 || スリバー アーマー || 裂片護甲 || 银色护甲
+|-
+| [[Ash Blast]] || Explosion de cendres || Aschenexplosion || Esplosione di Cenere || Explosión de ceniza || Wybuch Popiołu || 먼지 폭풍 || アッシュ ブラスト || 塵暴 || 沙尘暴
+|-
+| [[Dragon's Stomp]] || Pas du dragon || Drachenstampfer || Passo del Drago || Pisotón de dragón || Tupnięcie Smoka || 용의 발구름 || ドラゴン ストンプ || 地龍踩踏 || 巨龙践踏
+|-
+| [[Grasping Earth]] || Etreinte de la Terre || Zupackende Erde || Morsa della Terra || Presa de la tierra || Grząska Ziemia || 대지의 포박 || グラスプ アース || 地之束縛 || 大地束缚
+|-
+| [[Churning Earth]] || Bouleversement terrestre || Aufgeworfene Erde || Terra in Fermento || Temblor de tierra || Wzburzona Ziemia || 진흙 소용돌이 || チャーン アース || 渦流大地 || 涡流
+|-
+| [[Ward of Stability]] || Protection de stabilité || Kreis der Stabilität || Guardia della Stabilità || Protección de estabilidad || Ochrona przed Powaleniem || 안정의 결계 || スタビリティ ウォード || 穩定結界 || 坚实结界
+|-
+| [[Energy Boon]] || Compagnon d'énergie || Energiesegen || Soccorso d’Energia || Bendición de energía || Dar Energii || 에너지 혜택 || エネルギー ブーン || 能量恩賜 || 能量恩赐
+|-
+| [[Second Wind]] || Seconde chance || Zweite Chance || Seconda Opportunità || Viento secundario || Drugi Oddech || 보충의 바람 || セカンド ウインド || 援助之風 || 援助之风
+|-
+| [[Burning Speed]] || Vélocité Incandescente || Brennende Eile || Velocità Bruciante || Velocidad del fuego || Płonąca Szybkość || 불타는 육체 || バーニング スピード || 速度燃燒 || 快速燃烧
+|-
+| [[Flame Burst]] || Jet de flammes || Flammenstoß || Esplosione di Fiamme || Llamaradas || Ognisty Wybuch || 화염 폭발 || フレイム バースト || 火焰爆裂 || 炎爆术
+|-
+| [[Smoldering Embers]] || Ambres ardents || Glühende Kohle || Brace Ardente || Brasas humeantes || Rozżarzone Zgliszcze || 미약한 불씨 || スモルダー エンバー || 陰燒餘燼 || 余烬
+|-
+| [[Double Dragon]] || Double dragon || Doppeldrache || Drago Doppio || Dragón doble || Podwójny Smok || 화염의 쌍두룡 || ダブル ドラゴン || 雙龍 || 双龙吐息
+|-
+| [[Lava Arrows]] || Flèches de Lave || Lavapfeile || Frecce di Lava || Flechas de lava || Magmowe Strzały || 용암 화살 || ラヴァ アロー || 熔岩之箭 || 熔岩之箭
+|-
+| [[Teinai's Heat]] || Chaleur de Teinai || Teinais Hitze || Calore di Teinai || Calor de Teinai || Żar Teinai || 테이나이의 용암 || テイナイ ヒート || 邸內之火 || 地心之火
+|-
+| [[Teinai's Heat]] || Chaleur de Teinai || Teinais Hitze || Calore di Teinai || Calor de Teinai || Żar Teinai || 테이나이의 용암 || テイナイ ヒート || 邸內之火 || 地心之火
+|-
+| [[Bed of Coals]] || Lit de Braise || Kohlenbett || Letto di Brace || Manto de ascuas || Rozżarzone Węgle || 장작 불길 || コール ベッド || 燒炭地床 || 灼热矿床
+|-
+| [[Breath of Fire]] || Souffle de Feu || Feueratem || Alito di Fuoco || Aliento de fuego || Ogniste Tchnienie || 화염의 숨결 || ファイア ブレス || 燃燒氣息 || 烈焰喷吐
+|-
+| [[Star Burst]] || Eclat constellé || Sternenexplosion || Esplosione Stellare || Supernova || Gwiezdny Wybuch || 유성 폭발 || スター バースト || 星爆 || 星爆
+|-
+| [[Glyph of Essence]] || Glyphe d'essence || Glyphe der Essenz || Glifo dell'Essenza || Glifo de esencia || Glif Esencji || 본질의 수인 || エッセンス グリフ || 本質符號 || 精华雕文
+|-
+| [[Shatterstone]] || Brise-roc || Trümmerstein || Frammento di Pietra || Guijarro || Lodowa Skała || 빙하 파편 || シャターストーン || 碎裂冰石 || 碎石
+|-
+| [[Teinai's Prison]] || Prison de Teinai || Teinais Gefängnis || Prigione di Teinai || Prisión de Teinai || Więzienie Teinai || 테이나이의 속박 || テイナイ プリズン || 邸內監禁 || 冰封术
+|-
+| [[Mirror of Ice]] || Miroir de glace || Eisspiegel || Specchio di Ghiaccio || Espejo de hielo || Lodowe Lustro || 얼음 반사 || アイス ミラー || 冰鏡 || 冰镜
+|-
+| [[Teinai's Crystals]] || Cristaux de Teinai || Teinais Kristalle || Cristalli di Teinai || Cristales de Teinai || Kryształy Teinai || 테이나이의 수정 || テイナイ クリスタル || 邸內水晶 || 水晶术
+|-
+| [[Celestial Storm]] || Tempête céleste || Himmelssturm || Tempesta Celestiale || Tormenta celestial || Niebiańska Burza || 천상 폭풍 || セレスチャル ストーム || 天國暴風 || 天风
+|-
+| [[Swirling Aura]] || Aura tourbillon || Wirbelnde Aura || Aura Turbinante || Torbellino de aura || Wirująca Aura || 소용돌이 장막 || スワール オーラ || 漩渦靈氣 || 漩涡光环
+|-
+| [[Icy Prism]] || Prisme de glace || Eisprisma || Prisma di Ghiaccio || Prisma helado || Lodowy Pryzmat || 냉기 굴절 || アイシー プリズム || 冰冷稜柱 || 冰棱
+|-
+| [[Vapor Blade]] || Lame vaporeuse || Dunstklinge || Lama del Vapore || Cuchilla de vapor || Mgliste Otrze || 증기 칼날 || ベイパー ブレード || 蒸氣之刃 || 蒸气之刃
+|}
+== Nightfall ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Blinding Surge]] || Afflux aveuglant || Blendende Welle || Flusso Accecante || Oleada cegadora || Oślepiające Porażenie || 실명의 번개 || ブラインド サージ || 盲目震盪 || 盲目震击
+|-
+| [[Chilling Winds]] || Vents glaciaux || Kühle Winde || Venti Gelidi || Vientos fríos || Lodowate Wiatry || 냉기의 바람 || チル ウインド || 嚴寒之風 || 寒风
+|-
+| [[Lightning Bolt]] || Eclair || Blitzstrahl || Saetta || Descarga eléctrica || Błyskawica || 번개 화살 || ライトニング ボルト || 雷光之箭 || 雷光箭
+|-
+| [[Storm Djinn's Haste]] || Hâte du jinn de tempête || Eile des Sturm-Dschinn || Fretta del Djinn della Tempesta || Prisa del Djinn de tormenta || Pośpiech Burzowego Dżinna || 폭풍 지니의 신속함 || ストーム ジン ヘイスト || 風靈之速 || 风灵之速
+|-
+| [[Stone Striker]] || Briseur de pierre || Steinschläger || Battitore di Pietra || Atacante de piedra || Kamienny Napastnik || 바위 강타 || ストーン ストライカー || 石之打擊 || 岩石打击
+|-
+| [[Sandstorm]] || Tempête de sable || Sandsturm || Tempesta di Sabbia || Tormenta de arena || Burza Piaskowa || 모래 폭풍 || サンド ストーム || 沙塵暴 || 黄砂
+|-
+| [[Glowstone]] || Pierre fluorescente || Leuchtstein || Pietra Fluorescente || Piedra brillante || Błyszczący Kamień || 타오르는 돌 || グロウストーン || 灼熱之石 || 灼热之石
+|-
+| [[Stone Sheath]] || Bouclier de pierre || Steinmantel || Guaina di Pietra || Vaina de piedra || Kamienna Osłona || 대지의 제방 || ストーン シース || 硬石刃鞘 || 石壳
+|-
+| [[Ebon Hawk]] || Faucon d'ébène || Ebonfalke || Falco d'Ebano || Halcón de ébano || Hebanowy Jastrząb || 검은 매 || エボン ホーク || 烏木之鷹 || 乌木投射
+|-
+| [[Stoneflesh Aura]] || Aura de Chair de pierre || Steinfleisch-Aura || Aura di Carne di Pietra || Aura de carne de piedra || Aura Kamiennego Ciała || 돌갑옷 오라 || ストーンフレッシュ オーラ || 石體靈氣 || 石肤光环
+|-
+| [[Glyph of Restoration]] || Glyphe de rétablissement || Glyphe der Wiederherstellung || Glifo del Ripristino || Glifo de restauración || Glif Odnowy || 회복의 수인 || レストレイション グリフ || 復原符號 || 治愈雕文
+|-
+| [[Ether Prism]] || Prisme éthéré || Ätherprisma || Prisma dell'Etere || Prisma de éter || Eteryczny Pryzmat || 정기의 프리즘 || エーテル プリズム || 精神稜鏡 || 法力折射
+|-
+| [[Energy Font ]] || Fontaine d'énergie || Energiebecken || Sorgente di Energia || Fuente de energía  || Energetyczna Krynica || 에너지 원천 || エネルギー フォント  || 能量洗禮 || 能量之泉
+|-
+| [[Master of Magic]] || Maître de la Magie || Meister der Magie || Maestro di Magia || Maestro de magias || Mistrz Magii || 마법의 대가 || マジック マスター || 魔法大師 || 魔法统御
+|-
+| [[Liquid Flame]] || Flamme liquide || Flüssige Flamme || Fiamma Liquida || Llama líquida || Płynny Płomień || 투명한 불길 || リキッド フレイム || 液態火焰 || 流焰
+|-
+| [[Glowing Gaze]] || Regard embrasé || Glühender Blick || Sguardo Luminoso || Mirada brillante || Rozżarzone Spojrzenie || 타오르는 시선 || グロウ ゲイズ || 灼熱凝視 || 灼热之眼
+|-
+| [[Savannah Heat]] || Chaleur de savane || Hitze der Savanne || Calore della Savana || Calor de la sabana || Żar Sawanny || 사바나의 불길 || サバンナ ヒート || 燎原之火 || 天火燎原
+|-
+| [[Searing Flames]] || Flammes virulentes || Versengende Flammen || Fiamme Scottanti || Llamas abrasadoras || Wypalające Płomienie || 폭발 화염 || シアー フレイム || 爆裂火焰 || 凋零之焰
+|-
+| [[Mind Blast]] || Explosion de l'âme || Geistige Explosion || Esplosione Mentale || Maldición mental || Wybuch Umysłu || 정기 폭발 || マインド ブラスト || 心靈轟擊 || 心灵烈焰
+|-
+| [[Flame Djinn's Haste]] || Hâte du jinn de flamme || Eile des Flammen-Dschinn || Fretta del Djinn della Fiamma || Prisa del Djinn de fuego || Pośpiech Ognistego Dżinna || 화염 지니의 신속함 || フレイム ジン ヘイスト || 火靈之速 || 火灵之速
+|-
+| [[Elemental Flame]] || Flamme élémentaire || Elementare Flamme || Fiamma Elementale || Llama elemental || Żywiołowy Płomień || 정령 불꽃 || エレメンタル フレーム || 元素火焰 || 元素火焰
+|-
+| [[Frigid Armor]] || Armure glaciale || Kalte Rüstung || Armatura Glaciale || Armadura frígida || Lodowata Zbroja || 냉기 갑옷 || フリジッド アーマー || 冰凍護甲 || 冰甲术
+|-
+| [[Icy Shackles]] || Chaînes de glace || Eisfesseln || Catene di Ghiaccio || Grilletes de hielo || Lodowe Kajdany || 얼음 족쇄 || アイシー シャックル || 冰冷束縛 || 寒冰束缚
+|-
+| [[Invoke Lightning]] || Invocation de la foudre || Blitz herbeirufen || Invoca Fulmine || Relámpago invocado || Wywołanie Błyskawicy || 번개의 발현 || インヴォーク ライトニング || 閃電祈禱 || 御雷术
+|-
+| [[Steam]] || Buée || Dampf || Vapore || Vapor || Para || 수증기 || スチーム || 蒸汽 || 蒸汽
+|-
+| [[Freezing Gust]] || Rafale givrante || Gefrierende Böe || Folata Congelante || Bocanada helada || Zamrażający Podmuch || 냉기의 돌풍 || フリーズ ガスト || 寒風 || 严寒之风
+|}
+<noinclude>
+[[Category:Tables]]
+</noinclude>

@@ -1,0 +1,301 @@
+﻿== Core ==
+__NOTOC__
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Life Bond]] || Lien de vie || Lebensbindung || Legame Vitale || Vínculo de vida || Życiodajna Więź || 생명의 결속 || ライフ ボンド || 生命連結 || 生命链接
+|-
+| [[Strength of Honor]] || Force de l'Honneur || Stärke der Ehre || Forza dell'Onore || Fuerza del honor || Siła Honoru || 명예의 힘 || オナー ストレングス || 榮耀之力 || 荣耀之力
+|-
+| [[Protective Spirit]] || Esprit protecteur || Schutzgeist || Spirito Protettivo || Espíritu protector || Ochronny Duch || 보호의 성령 || プロテクティブ スピリット || 精神守護 || 守护之灵
+|-
+| [[Divine Intervention]] || Intervention divine || Göttliche Intervention || Intervento Divino || Intervención divina || Boska Interwencja || 거룩한 반전 || ディヴァイン インターベンション || 神之干預 || 神圣干涉
+|-
+| [[Retribution]] || Punition || Vergeltung || Punizione || Retribución || Pomsta || 신의 심판 || レトリビューション || 天譴 || 天谴
+|-
+| [[Scourge Healing]] || Guérison néfaste || Geißelheilung || Guarigione Flagello || Castigar curación || Zgubne Leczenie || 치유의 재앙 || スカージ ヒーリング || 災禍治癒 || 堕落治疗
+|-
+| [[Banish]] || Bannissement || Verbannung || Bando || Desvanecer || Wygnanie || 단죄 || バニッシュ || 驅逐 || 放逐
+|-
+| [[Aegis]] || Egide || Aegis || Egida || Auspicios || Egida || 보호의 기도 || イージス || 神賜之盾 || 庇护之盾
+|-
+| [[Guardian]] || Gardien || Wächter || Guardiano || Guardián || Strażnik || 수호의 기도 || ガーディアン || 守護者 || 守护者
+|-
+| [[Shield of Regeneration ]] || Bouclier de régénération || Schild der Regeneration || Scudo della Rigenerazione || Escudo de regeneración || Tarcza Regeneracji || 재생의 기도 || リジェネレイション シールド || 回復之盾 || 恢复之盾
+|-
+| [[Judge's Insight]] || Clairvoyance du juge || Einblick des Richters || Sguardo del Giudice || Perspicacia del juez || Intuicja Sędziego || 사제의 심판 || ジャッジ インサイト || 神之洞察 || 神圣洞察
+|-
+| [[Zealot's Fire]] || Feu du zélote || Eifererfeuer || Fuoco dello Zelota || Fuego del zelote || Ogień Fanatyka || 광신의 불길 || ゼロット ファイア || 狂信者之火 || 信徒之火
+|-
+| [[Balthazar's Aura]] || Aura de Balthazar || Balthasars Aura || Aura di Balthazar || Aura de Balthazar || Aura Baltazara || 발타자르의 오라 || バルタザール オーラ || 巴薩澤的靈氣 || 巴萨泽的光环
+|-
+| [[Spell Breaker]] || Briseur de sorts || Zauberbrecher || Spezza Incantesimo || Rompeconjuros || Łamacz Czarów || 마법 분쇄 || スペル ブレイカー || 魔法粉碎 || 破法
+|-
+| [[Healing Seed]] || Graine de guérison || Heilender Samen || Seme della Guarigione || Semilla de curación || Uzdrawiające Ziarno || 치유의 씨앗 || ヒーリング シード || 治癒種子 || 治疗之种
+|-
+| [[Mend Ailment]] || Guérison des affections || Leiden heilen || Cura Malattia || Curar mal || Usunięcie Przypadłości || 상태 개선 || メンド エイル || 治療病痛 || 回春术
+|-
+| [[Purge Conditions]] || Purification des conditions || Reinigt Zustände || Purifica Condizioni || Curar condiciones || Oczyszczenie z Przypadłości || 상태 정화 || パージ コンディション || 淨化病症 || 净化术
+|-
+| [[Orison of Healing]] || Prière de guérison || Fürbitte der Heilung || Orazione Curativa || Letanía de curación || Uzdrawiająca Modlitwa || 치유의 기도 || ヒーリング オリゾン || 治癒祈禱 || 祈祷者的祝福
+|-
+| [[Word of Healing]] || Parole de guérison || Wort der Heilung || Parola di Guarigione || Palabra de curación || Słowo Uzdrowienia || 치유의 복음 || ヒーリング ワード || 治癒文字 || 治愈之语
+|-
+| [[Divine Boon]] || Bienfait divin || Göttlicher Segen || Dono Divino || Ayuda divina || Boski Dar || 은총의 세례 || ディヴァイン ブーン || 神之恩賜 || 神之恩赐
+|-
+| [[Heal Party]] || Guérison de groupe || Gruppe heilen || Cura Squadra || Curar grupo || Uzdrowienie Drużyny || 전체 치유 || ヒール パーティー || 治癒隊伍 || 群体治疗
+|-
+| [[Healing Breeze]] || Souffle de guérison || Heilender Hauch || Brezza di Guarigione || Brisa curativa || Bryza Uzdrowienia || 치유의 미풍 || ヒーリング ブリーズ || 治癒之風 || 治愈之风
+|-
+| [[Mending]] || Rénovation || Genesung || Medicamento || Curación || Odnowienie || 재생의 축복 || メンディング || 癒合 || 愈合
+|-
+| [[Infuse Health]] || Transfert de santé || Leben einflößen || Infondi Salute || Infundir salud || Podarowanie Żywotności || 고귀한 나눔 || インフューズ ヘルス || 生之禮讚 || 生命鼓舞
+|-
+| [[Signet of Devotion]] || Sceau de dévotion || Siegel der Hingabe || Sigillo della Devozione || Sello de devoción || Sygnet Oddania || 헌신 인장 || デボーション シグネット || 信仰紋章 || 虔诚纹章
+|-
+| [[Signet of Judgment]] || Sceau du jugement || Siegel des Urteils || Sigillo del Giudizio || Sello del juicio || Sygnet Osądu || 천벌 인장 || ジャッジ シグネット || 制裁紋章 || 制裁纹章
+|-
+| [[Purge Signet]] || Sceau d'épuration || Siegel der Reinigung || Sigillo della Purificazione || Sello de purga || Sygnet Oczyszczenia || 정화 인장 || パージ シグネット || 淨化紋章 || 净化纹章
+|-
+| [[Bane Signet]] || Sceau du fléau || Siegel des Ruins || Sigillo della Sventura || Sello de pesadilla || Sygnet Zguby || 재난 인장 || ベイン シグネット || 天懲紋章 || 天惩纹章
+|-
+| [[Blessed Signet]] || Sceau sacré || Gesegnetes Siegel || Sigillo Benedetto || Sello bendito || Błogosławiony Sygnet || 축복 인장 || ブレス シグネット || 祝福紋章 || 祝福纹章
+|-
+| [[Martyr]] || Martyre || Märtyrer || Martire || Mártir || Męczennik || 고귀한 희생 || マーター || 殉教 || 殉难之手
+|-
+| [[Shielding Hands]] || Mains du protecteur || Schützende Hände || Mani Scudo || Manos protectoras || Ochraniające Dłonie || 방어의 손길 || シールド ハンド || 防禦之手 || 防御之手
+|-
+| [[Remove Hex]] || Annulation des maléfices || Verhexung entfernen || Rimuovi Fattura || Quitar maleficio || Usunięcie Klątwy || 약화 제거 || リムーブ ヘックス || 降咒消除 || 妖咒移除
+|-
+| [[Smite Hex]] || Expiation des maléfices || Verhexung zerschlagen || Colpisci Fattura || Deshacer maleficio || Pogrom Klątwy || 약화 파괴 || スマイト ヘックス || 降咒懲戒 || 惩戒妖咒
+|-
+| [[Convert Hexes]] || Conversion des maléfices || Verhexungen umwandeln || Converti Fatture || Convertir maleficios || Przemiana Klątw || 약화 반전 || コンバート ヘックス || 降咒轉換 || 转咒
+|-
+| [[Resurrect]] || Résurrection || Wiederbeleben || Resurrezione || Resurrección || Wskrzeszenie || 부활 || リザレクト || 復活 || 复活
+|-
+| [[Rebirth]] || Renaissance || Wiedergeburt || Rinascita || Renacimiento || Odrodzenie || 부활 소환 || リバース || 重生 || 重生
+|-
+| [[Reversal of Fortune]] || Revers de fortune || Umkehrung des Schicksals || Rovescio della Fortuna || Inversión de la fortuna || Odwrócenie Losu || 행운의 반전 || フォーチュン リバーサル || 幸運逆轉 || 运势逆转
+|-
+| [[Holy Veil]] || Voile sacré || Heiliger Schleier || Sacro Velo || Velo sagrado || Święty Całun || 신성의 오라 || ホーリー ベール || 神聖遮罩 || 神圣之幕
+|-
+| [[Draw Conditions]] || Egalité de condition || Zustände entziehen || Assorbi Condizioni || Robar condiciones || Przejęcie Przypadłości || 상태 흡수 || ドロー コンディション || 狀態吸收 || 症状吸收
+|-
+| [[Healing Touch]] || Caresse de guérison || Heilende Berührung || Tocco Curativo || Toque curativo || Uzdrawiający Dotyk || 치유의 손길 || ヒーリング タッチ || 治癒之觸 || 治疗之触
+|}
+== Prophecies ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Smite]] || Châtiment || Peinigung || Castigo || Golpe || Pogrom || 천벌 || スマイト || 懲戒 || 惩击
+|-
+| [[Balthazar's Spirit]] || Esprit de Balthazar || Balthasars Geist || Spirito di Balthazar || Espíritu de Balthazar || Duch Baltazara || 발타자르의 성령 || バルタザール スピリット || 巴薩澤的精神 || 巴萨泽的精神
+|-
+| [[Life Attunement]] || Affinité vitale || Lebenseinstimmung || Armonia con la Vita || Sintonía con la vida || Dostrojenie do Życia || 생명의 조화 || ライフ アチューン || 生之調和 || 生命协调
+|-
+| [[Symbol of Wrath]] || Symbole de Courroux || Symbol des Zorns || Simbolo della Collera || Símbolo de la ira || Symbol Gniewu || 신의 노여움 || ラス シンボル || 神怒之符 || 愤怒之符
+|-
+| [[Holy Wrath]] || Colère divine || Heiliger Zorn || Collera Sacra || Ira sagrada || Święty Gniew || 신성한 분노 || ホーリー ラス || 神威 || 神怒
+|-
+| [[Essence Bond]] || Liens de l'Essence || Essenzbindung || Legame dell'Essenza || Vínculo de esencia || Więź Esencji || 영혼의 교감 || エッセンス ボンド || 本質連結 || 精华链接
+|-
+| [[Scourge Sacrifice]] || Sacrifice néfaste || Geißelopfer || Sacrificio del Flagello || Castigar sacrificio || Zgubna Ofiara || 희생의 재앙 || スカージ サクリファイス || 災禍犧牲 || 牺牲之灾
+|-
+| [[Vigorous Spirit]] || Esprit vigoureux || Energischer Geist || Spirito Vigoroso || Espíritu vigoroso || Życiodajny Duch || 활력의 성령 || ビガラス スピリット || 精力充沛 || 精力充沛
+|-
+| [[Watchful Spirit]] || Esprit vigilant || Wachsamer Geist || Spirito di Guardia || Espíritu guardián || Czujny Duch || 주시의 성령 || ウォッチフル スピリット || 精神清醒 || 警惕之魂
+|-
+| [[Blessed Aura]] || Aura sacrée || Gesegnete Aura || Aura Benedetta || Aura bendita || Błogosławiona Aura || 축복의 오라 || ブレス オーラ || 祝福靈氣 || 祝福光环
+|-
+| [[Shield of Deflection]] || Bouclier de détournement || Ablenkungsschild || Scudo della Deviazione || Escudo desviador || Tarcza Odbicia || 회피의 기도 || ディフレクション シールド || 迴避之盾 || 闪避之盾
+|-
+| [[Aura of Faith]] || Aura de foi || Glaubensaura || Aura della Fede || Aura de fe || Aura Wiary || 신앙의 오라 || フェイス オーラ || 信仰靈氣 || 信仰光环
+|-
+| [[Shield of Judgment]] || Bouclier du jugement || Schild des Urteils || Scudo del Giudizio || Escudo del juicio || Tarcza Osądu || 심판의 기도 || ジャッジ シールド || 審判之盾 || 审判之盾
+|-
+| [[Protective Bond]] || Lien de protection || Band des Schutzes || Legame della Protezione || Vínculo de protección || Ochronne Więzy || 보호의 결속 || プロテクティブ ボンド  || 保護連結 || 保护链接
+|-
+| [[Pacifism]] || Pacifisme || Pazifismus || Pacifismo || Pacifismo || Pacyfizm || 평화의 손길 || パシフィズム || 和平 || 和平祝福
+|-
+| [[Amity]] || Amitié || Freundschaft || Amicizia || Concordia || Zgoda || 우호의 손길 || アミティ || 友好 || 友善祝福
+|-
+| [[Peace and Harmony]] || Paix et harmonie || Frieden und Harmonie || Pace e Armonia || Paz y armonía || Pokój i Harmonia || 평화의 기도 || ピース アンド ハーモニー || 平靜與和諧 || 宁静祝福
+|-
+| [[Unyielding Aura]] || Aura inflexible || Unnachgiebige Aura || Aura Inflessibile || Aura de persistencia || Aura Nieustępliwości || 불복의 오라 || アンイールディング オーラ || 堅毅靈氣 || 坚毅光环
+|-
+| [[Unyielding Aura]] || Aura inflexible || Unnachgiebige Aura || Aura Inflessibile || Aura de persistencia || Aura Nieustępliwości || 불복의 오라 || アンイールディング オーラ || 堅毅靈氣 || 坚毅光环
+|-
+| [[Mark of Protection]] || Marque de protection || Schutzzeichen || Segno della Protezione || Marca de protección || Ochronny Symbol || 수호의 문장 || プロテクション マーク || 守護印記 || 保护印记
+|-
+| [[Life Barrier]] || Barrière vitale || Lebenssperre || Barriera della Vita || Barrera de vida || Bariera Życia || 생명력의 보호막 || ライフ バリア || 生命屏障 || 生命屏障
+|-
+| [[Mend Condition]] || Rétablissement partiel || Zustand bessern || Cura Condizione || Arreglar condición || Usunięcie Przypadłości || 상태 치료 || メンド コンディション || 治療病症 || 祛病术
+|-
+| [[Restore Condition]] || Rétablissement total || Zustand wiederherstellen || Ripristino Condizione || Restaurar condición || Przywrócenie Stanu || 상태 회복 || レストア コンディション || 回復病症 || 恢复术
+|-
+| [[Divine Healing]] || Guérison divine || Göttliche Heilung || Guarigione Divina || Curación divina || Boskie Uzdrowienie || 치유의 은총 || ディヴァイン ヒーリング || 神聖治癒 || 圣疗术
+|-
+| [[Heal Area]] || Zone de guérison || Gebiet heilen || Cura Area || Curar área || Uzdrowienie Obszarowe || 치유의 원 || ヒール エリア || 區域治癒 || 生灵之愈
+|-
+| [[Dwayna's Kiss]] || Baiser de Dwayna || Dwaynas Kuss || Bacio di Dwayna || Beso de Dwayna || Pocałunek Dwayny || 드와이나의 입맞춤 || ドワイナ キス || 薇娜之吻 || 黛薇娜之吻
+|-
+| [[Healing Hands]] || Mains du guérisseur || Heilende Hände || Mani Curative || Manos sanadoras || Uzdrawiające Dłonie || 회복의 손 || ヒーリング ハンド || 治癒之手 || 救难之手
+|-
+| [[Heal Other]] || Guérison des autres || Anderen heilen || Cura Altro || Curar a otro || Uzdrowienie Innej Osoby || 타인 치유 || ヒール アザー || 治癒他人 || 治疗他人
+|-
+| [[Vital Blessing]] || Bénédiction vitale || Lebendige Segnung || Benedizione Vitale || Bendición vital || Życiodajne Błogosławieństwo || 활력의 축복 || バイタル ブレス || 生命祝福 || 生命祝福
+|-
+| [[Live Vicariously]] || Vie par procuration || Ersatzleben || Vita Sostitutiva || Transferencia de salud || Zastępcze Życie || 생명력 대리 || ライブ ヴァイケリアスリー || 生命代理 || 生命转借
+|-
+| [[Contemplation of Purity]] || Contemplation de la Pureté || Gebot der Reinheit || Contemplazione della Purezza || Contemplación de pureza || Kontemplacja Czystości || 순수한 명상 || ピュリティ コンテンプレイション || 純淨的冥想 || 纯净沉思
+|-
+| [[Light of Dwayna]] || Lumière de Dwayna || Licht von Dwayna || Luce di Dwayna || Luz de Dwayna || Światło Dwayny || 드와이나의 광휘 || ドワイナ ライト || 薇娜之光 || 黛薇娜之光
+|-
+| [[Succor]] || Secours || Beistand || Soccorso || Auxilio || Wsparcie || 구원 || サカー || 援助 || 救援
+|-
+| [[Divine Spirit]] || Esprit divin || Göttlicher Geist || Spirito Divino || Espíritu divino || Boski Duch || 성령의 은총 || ディヴァイン スピリット || 神聖精神 || 神圣之灵
+|-
+| [[Holy Strike]] || Choc sacré || Heiliger Schlag || Colpo Sacro || Golpe sagrado || Święte Uderzenie || 신성한 일격 || ホーリー ストライク || 神聖衝擊 || 神圣冲击
+|-
+| [[Restore Life]] || Reviviscence || Leben erneuern || Ripristino Vita || Restaurar vida || Przywracanie Życia || 소생 || レストア ライフ || 生命回復 || 生命恢复
+|-
+| [[Vengeance]] || Vengeance || Rache || Vendetta || Venganza || Zemsta || 복수의 부활 || ベンジェンス || 復仇意志 || 复仇意志
+|}
+== Factions ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Smite]] || Châtiment || Peinigung || Castigo || Golpe || Pogrom || 천벌 || スマイト || 懲戒 || 惩击
+|-
+| [[Kirin's Wrath]] || Colère de Kirin || Kirins Zorn || Indignazione del Kirin || Cólera de unicornio || Gniew Kirina || 기린의 노여움 || キリン ラス || 麒麟之怒 || 麒麟之怒
+|-
+| [[Spell Shield ]] || Bouclier contre les sorts || Zauberschild || Scudo Magico || Escudo de conjuros || Tarcza Przeciw Czarom || 마법 보호막 || スペル シールド || 魔法盾 || 魔法盾
+|-
+| [[Deny Hexes]] || Négation de maléfices || Verhexungen zurückweisen || Nega Fatture || Negación de maleficios || Wyparcie Klątw || 약화 부정 || ディナイ ヘックス || 降咒否決 || 妖咒否决
+|-
+| [[Shield Guardian]] || Gardien protecteur || Schildwächter || Guardiano Scudo || Guardián de acero || Uzdrawiający Strażnik || 방패의 혜택 || シールド ガーディアン || 守護者之盾 || 守护者之盾
+|-
+| [[Dwayna's Sorrow]] || Douleur de Dwayna || Dwaynas Leid || Sofferenza di Dwayna || Pesar de Dwayna || Smutek Dwayny || 드와이나의 슬픔 || ドワイナ ソロウ || 薇娜的憂傷 || 黛薇娜的忧伤
+|-
+| [[Spirit Bond]] || Lien spirituel || Geisterbindung || Legame dello Spirito || Vínculo espiritual || Duchowa Więź || 영혼 유대 || スピリット ボンド || 精神連結 || 精神链接
+|-
+| [[Air of Enchantment]] || Atmosphère enchanteresse || Flair der Verzauberung || Aria dell'Incantesimo || Aire de encantamiento || Zaklęte Powietrze || 강화의 기운 || エンチャント エアー || 微風加持 || 春风
+|-
+| [[Mend Condition]] || Rétablissement partiel || Zustand bessern || Cura Condizione || Arreglar condición || Usunięcie Przypadłości || 상태 치료 || メンド コンディション || 治療病症 || 祛病术
+|-
+| [[Heaven's Delight]] || Paradis exquis || Himmlische Wonne || Delizia del Paradiso || Deleite celestial || Niebiańska Rozkosz || 천국의 은총 || ヘブン ディライト || 天堂喜悅 || 神悦
+|-
+| [[Healing Burst]] || Vague de guérison || Heilsalve || Esplosione Guaritrice || Explosión curativa || Uzdrawiający Wybuch || 치유력 폭발 || ヒーリング バースト || 爆發治癒 || 迸发之愈
+|-
+| [[Karei's Healing Circle]] || Cercle de guérison de Karei || Kareis Heilkreis || Circolo Guaritore di Karei || Área curativa de Karei || Uzdrawiający Krąg Karei || 카레이의 원 || カレイ ヒーリング サークル || 嘉黎光環 || 治疗光环
+|-
+| [[Healing Light]] || Lumière rédemptrice || Heilendes Licht || Luce di Guarigione || Luz sanadora || Uzdrawiające Światło || 치유의 빛 || ヒーリング ライト || 治療聖光 || 圣光
+|-
+| [[Healing Whisper ]] || Souffle réparateur || Heilendes Geflüster || Sussurro Curativo || Susurro de curación  || Uzdrawiający Szept || 치유의 속삭임 || ヒーリング ウィスパー || 治癒低語 || 痊愈私语
+|-
+| [[Ethereal Light]] || Lumière éthérée || Ätherisches Licht || Luce Eterea || Luz etérea || Eteryczne Światło || 하늘의 빛 || エーテル ライト || 神癒聖光 || 神圣治愈
+|-
+| [[Jamei's Gaze]] || Regard de Jamei || Jameis Starren || Sguardo di Jamei || Mirada de Jamei || Spojrzenie Jamei || 자메이의 시선 || ジャーメイ ゲイズ || 佳美的凝視 || 佳美的凝视
+|-
+| [[Gift of Health]] || Don de santé || Geschenk des Lebens || Dono della Salute || Don de salud || Dar Życia || 축복받은 치유 || ヘルス ギフト || 體力贈予 || 新生
+|-
+| [[Blessed Light]] || Lumière divine || Gesegnetes Licht || Luce Benedetta || Luz bendita || Błogosławione Światło || 축복의 빛 || ブレス ライト || 祝福聖光 || 祝福圣光
+|-
+| [[Vital Blessing]] || Bénédiction vitale || Lebendige Segnung || Benedizione Vitale || Bendición vital || Życiodajne Błogosławieństwo || 활력의 축복 || バイタル ブレス || 生命祝福 || 活力祝福
+|-
+| [[Signet of Rage]] || Sceau de Rage || Siegel der Wut || Sigillo dell'Ira || Sello de rabia || Sygnet Szału || 격노 인장 || レイジ シグネット || 盛怒紋章 || 神怒纹章
+|-
+| [[Signet of Rejuvenation]] || Sceau de rajeunissement || Siegel der Verjüngung || Sigillo del Ringiovanimento || Sello del rejuvenecimiento || Sygnet Odmłodzenia || 원기 회복 인장 || リジュヴネイション シグネット || 新生紋章 || 回春纹章
+|-
+| [[Boon Signet]] || Sceau du compagnon || Siegel des Segens || Sigillo del Soccorso || Sello vinculante || Sygnet Daru || 은총 인장 || ブーン シグネット || 恩賜紋章 || 恩赐纹章
+|-
+| [[Release Enchantments]] || Libération d'enchantements || Verzauberungen freisetzen || Libera Incantesimi || Liberación de encantamientos || Uwolnienie Zaklęć || 강화 마법 해방 || リリース エンチャント || 釋放加持 || 舍生
+|-
+| [[Life Sheath]] || Bouclier de vie || Lebensmantel || Preserva Vita || Vaina de vida || Osłona Życia || 방어 조끼 || ライフ シース || 生命保護 || 生命之护
+|-
+| [[Star Shine]] || Eclat d'étoile || Sternenschein || Splendore della Stella || Santuario celestial || Gwiezdne Lśnienie || 천상의 광채 || スター シャイン || 星光照耀 || 星光照耀
+|-
+| [[Withdraw Hexes]] || Retrait de maléfices || Verhexungen zurücknehmen || Revoca Fatture || Sacamaleficios || Wycofanie Klątw || 약화 소멸 || ウィズドロー ヘックス || 降咒退散 || 妖咒驱散
+|-
+| [[Contemplation of Purity]] || Contemplation de la Pureté || Gebot der Reinheit || Contemplazione della Purezza || Contemplación de pureza || Kontemplacja Czystości || 순수한 명상 || ピュリティ コンテンプレイション || 純淨的冥想 || 纯净沉思
+|-
+| [[Extinguish]] || Extinction || Löschen || Estinzione || Extinción || Ugaszenie || 진화 || エクスティングィッシュ || 熄滅 || 熄灭
+|-
+| [[Reverse Hex]] || Inversion de maléfice || Verhexung umkehren || Inverti Fattura || Maleficio inverso || Odwrócenie Klątwy || 약화 역이용 || リバース ヘックス || 降咒反轉 || 妖咒反转
+|-
+| [[Empathic Removal]] || Suppression empathique || Ausdrückliche Entfernung || Rimozione Empatica || Eliminación enfática || Empatyczne Usunięcie || 증상 제거 || エンパシック リムーバル || 情感移除 || 移情
+|-
+| [[Light of Dwayna]] || Lumière de Dwayna || Licht von Dwayna || Luce di Dwayna || Luz de Dwayna || Światło Dwayny || 드와이나의 광휘 || ドワイナ ライト || 薇娜之光 || 黛薇娜之光
+|-
+| [[Resurrection Chant]] || Chant de résurrection || Gesang der Wiederbelebung || Salmodia di Resurrezione || Canto de resurrección || Wskrzeszający Chorał || 부활의 노래 || リザレクション チャント || 復活聖歌 || 复活圣歌
+|-
+| [[Ray of Judgment]] || Lumière du jugement || Strahl des Urteils || Raggio del Giudizio || Rayo del juicio || Promień Osądu || 심판의 서광 || ジャッジ レイ || 制裁目光 || 制裁之光
+|-
+| [[Word of Censure]] || Parole du censeur || Wort des Tadels || Parola di Biasimo || Palabra de censura || Słowo Potępienia || 결의의 주문 || センシャー ワード || 譴責文字 || 谴责
+|-
+| [[Spear of Light]] || Lance de lumière || Speer des Lichts || Lancia di Luce || Lanza de luz || Włócznia Światła || 광휘의 창 || ライト スピア || 光之標槍 || 圣光之矛
+|-
+| [[Stonesoul Strike]] || Coup d'Amederoc || Steinseelenschlag || Colpo di Stonesoul || Alma de piedra || Uderzenie Kamiennej Duszy || 영혼석 강타 || ストーンソウル ストライク || 靈石衝擊 || 灵魂之石
+|}
+== Nightfall ==
+
+{| {{STDT}}
+! English !! French !! German !! Italian !! Spanish !! Polish !! Korean !! Japanese !! Chinese (Trad.) !! Chinese (Simp.)
+|-
+| [[Judge's Intervention]] || Intervention du juge || Intervention des Richters || Intervento del Giudice || Intervención del juez || Interwencja Sędziego || 심판의 반전 || ジャッジ インタベンション || 審判干涉 || 制裁干涉
+|-
+| [[Pensive Guardian]] || Gardien pensif || Nachdenklicher Wächter || Guardiano Pensoso || Guardián meditabundo || Zadumany Strażnik || 비전의 방어막 || ペンシブ ガーディアン || 哀思守護 || 沉思护盾
+|-
+| [[Scribe's Insight]] || Clairvoyance du Scribe || Einblick des Schreibers || Intuito dello Scriba || Perspicacia del escriba || Intuicja Skryby || 학자의 통찰 || スクライブ インサイト || 銘刻者洞察 || 雕刻者的洞察
+|-
+| [[Restful Breeze]] || Bise reposante || Beruhigender Hauch || Brezza Riposante || Brisa apacible || Kojąca Bryza || 휴식의 미풍 || レストフル ブリーズ || 平靜微風 || 宁静之息
+|-
+| [[Supportive Spirit]] || Esprit de soutien || Unterstützender Geist || Spirito Sostenitore || Espíritu de apoyo || Wspierający Duch || 원기 보조 || サポーティブ スピリット || 支援靈氣 || 援助之魂
+|-
+| [[Watchful Healing]] || Guérison attentive || Wachsame Heilung || Attenta Guarigione || Curación atenta || Czujne Uzdrawianie || 사려 깊은 치유 || ウォッチフル ヒーリング || 警戒治癒 || 守望
+|-
+| [[Healer's Boon]] || Compagnon du guérisseur || Segen des Heilers || Soccorso del Guaritore || Bendición del sanador  || Dar Uzdrowiciela || 은총받은 치유사 || ヒーラー ブーン || 治癒者恩賜 || 治疗者的恩赐
+|-
+| [[Holy Haste]] || Hâte sacrée || Heilige Eile || Fretta Sacra || Rapidez sagrada || Święty Pośpiech || 치유의 신속함 || ホーリー ヘイスト || 神聖速度 || 神圣之速
+|-
+| [[Shield of Absorption ]] || Bouclier d'absorption || Schild der Absorption || Scudo dell'Assorbimento || Escudo de absorción  || Pochłaniająca Tarcza || 흡수의 방패 || アブソープション シールド || 吸收盾 || 吸收之盾
+|-
+| [[Healer's Covenant]] || Engagement du guérisseur || Verpflichtung des Heilers || Patto del Guaritore || Pacto del sanador || Przymierze Uzdrowiciela || 치유사의 맹약 || ヒーラー コブナント || 治癒者契約 || 治疗盟约
+|-
+| [[Balthazar's Pendulum]] || Balancier de Balthazar || Balthasars Pendel || Pendolo di Balthazar || Péndulo de Balthazar || Wahadło Baltazara || 발타자르의 진동 || バルタザール ペンダラム || 巴薩澤震盪 || 战神之钟
+|-
+| [[Glimmer of Light]] || Lueur || Lichtschimmer || Barlume di Luce || Atisbo de luz || Przebłysk Światła || 희미한 빛 || ライト グリマー || 爍光 || 圣光闪
+|-
+| [[Healing Ring]] || Anneau de guérison || Heilring || Circolo della Guarigione || Anillo curativo || Uzdrawiający Krąg || 치유의 고리 || ヒーリング リング || 治癒光環 || 治疗之环
+|-
+| [[Zealous Benediction]] || Bénédiction zélée || Eifrige Segnung || Benedizione Zelante || Bendición de celo || Błogosławieństwo Gorliwości || 열광적인 기도 || ゼラス ベネディクション || 狂熱祝福 || 热忱
+|-
+| [[Words of Comfort]] || Paroles de réconfort || Tröstende Worte || Parole di Conforto || Palabras confortantes || Słowa Otuchy || 안정의 기도 || コンフォート ワード || 慰問文字 || 安抚之语
+|-
+| [[Cry of Lament]] || Cri des lamentations || Klagegeschrei || Grido di Lamento || Grito de lamento || Płacz Rozpaczy || 애도의 흐느낌 || ラメント クライ || 慟哭挽歌 || 挽歌
+|-
+| [[Light of Deliverance]] || Lumière de la délivrance || Licht der Erlösung || Luce di Liberazione || Luz de liberación || Światło Wybawienia || 구원의 빛 || デリバランス ライト || 拯救聖光 || 判决之光
+|-
+| [[Scourge Enchantment]] || Enchantement fléau || Geißelverzauberung || Incantesimo Flagello || Castigar encantamiento || Zgubne Zaklęcia || 강화 마법의 재앙 || スカージ エンチャント || 災禍加持 || 增益之灾
+|-
+| [[Defender's Zeal]] || Zèle du Défenseur ||  Eifer des Verteidigers || Zelo del Difensore || Celo del defensor || Zapał Obrońcy || 방어자의 열정 || ディフェンダー ジール || 防禦者狂熱 || 防护者的热诚
+|-
+| [[Signet of Mystic Wrath]] || Sceau de colère mystique || Siegel des mystischen Zorns || Sigillo della Collera Mistica || Sello de ira mística || Sygnet Mistycznego Gniewu || 신비한 분노 인장 || ミスティック ラス シグネット || 祕法神譴紋章 || 秘法之力纹章
+|-
+| [[Signet of Removal]] || Sceau de suppression || Siegel der Entfernung || Sigillo della Rimozione || Sello de eliminación || Sygnet Usunięcia || 제거 인장 || リムーバル シグネット || 破除紋章 || 驱咒纹章
+|-
+| [[Dismiss Condition]] || Suppression de condition || Zustand aufheben || Congeda Condizione || Terminar condición || Przegnanie Przypadłości || 상태이상 전환 || ディスミス コンディション || 破除病症 || 康复
+|-
+| [[Divert Hexes]] || Diversion des maléfices || Verhexungen umleiten || Diversione Fatture || Desviar maleficios || Przeobrażanie Klątw || 약화의 전환 || ディバート ヘックス || 降咒轉向 || 妖咒转移
+|-
+| [[Reversal of Damage]] || Revers de dégâts || Umkehrung des Schadens || Rovescio del Danno || Inversión del daño || Odwrócenie Obrażeń || 대미지 반전 || ダメージ リバーサル || 傷害反轉 || 伤害反转
+|-
+| [[Mending Touch]] || Toucher réparateur || Genesungsberührung || Tocco Riparatore || Toque sanador || Odnawiający Dotyk || 회복의 손길 || メンド タッチ || 癒合之觸 || 愈合之触
+|-
+| [[Renew Life]] || Renouvellement de vie || Leben verlängern || Rinnova Vita || Vuelta a la vida || Odnowienie Życia || 생명의 부흥 || リニュー ライフ || 更新生命 || 回魂
+|}
+<noinclude>
+[[Category:Tables]]
+</noinclude>
