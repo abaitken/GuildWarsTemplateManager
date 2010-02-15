@@ -99,6 +99,15 @@ namespace TemplateManager.DataFetcher.Services
                                          Id = data.SkillId,
                                          IsValid = false,
                                          ImageId = "unknown.jpg",
+                                         Campaign = GetValue(data.Campaign),
+                                         Profession = GetValue(data.Profession),
+                                         Attribute = GetValue(data.Attribute),
+                                         Type = GetValue(data.Type),
+                                         Range = GetValue(data.Range),
+                                         Target = GetValue(data.Target),
+                                         AreaOfEffect = GetValue(data.AreaOfEffect),
+                                         Projectile = GetValue(data.Projectile),
+                                         SpecialType = GetValue(data.SpecialType),
                                      };
                     continue;
                 }

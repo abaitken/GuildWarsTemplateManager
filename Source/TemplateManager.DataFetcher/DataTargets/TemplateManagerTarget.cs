@@ -5,8 +5,10 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using TemplateManager.DataFetcher.Logging;
 using TemplateManager.DataFetcher.Model;
+using System.Text;
 
 namespace TemplateManager.DataFetcher.DataTargets
 {
@@ -26,26 +28,58 @@ namespace TemplateManager.DataFetcher.DataTargets
 
         public void Update(IEnumerable<Skill> data)
         {
-            logger.Log(GetType(), "Building data structures", LogSeverity.InformationHigh);
 
             if(File.Exists(dataFile))
             {
+                logger.Log(GetType(), "Loading previous data", LogSeverity.InformationHigh);
                 model.ReadXml(dataFile);
                 model.AcceptChanges();
             }
+            model.RelatedSkills.Clear();
+            model.SkillsRemoves_Lookup.Clear();
+            model.SkillsCauses_Lookup.Clear();
+            model.SkillName.Clear();
+            model.SkillDescription.Clear();
 
+            logger.Log(GetType(), "Building data structures", LogSeverity.InformationHigh);
+            logger.Log(GetType(), "... Updating Removes", LogSeverity.InformationHigh);
             UpdateRemoved(data);
+            logger.Log(GetType(), "... Updating Causes", LogSeverity.InformationHigh);
             UpdateCauses(data);
+            logger.Log(GetType(), "... Updating Categories", LogSeverity.InformationHigh);
             UpdateCategories(data);
+            logger.Log(GetType(), "... Updating Professions", LogSeverity.InformationHigh);
             UpdateProfessions(data);
+            logger.Log(GetType(), "... Updating Profession images", LogSeverity.InformationHigh);
+            UpdateProfessionImages();
+            logger.Log(GetType(), "... Updating Attributes", LogSeverity.InformationHigh);
             UpdateAttributes(data);
+            logger.Log(GetType(), "... Updating Projectiles", LogSeverity.InformationHigh);
             UpdateProjectiles(data);
+            logger.Log(GetType(), "... Updating Targets", LogSeverity.InformationHigh);
             UpdateTargets(data);
+            logger.Log(GetType(), "... Updating Special Types", LogSeverity.InformationHigh);
             UpdateSpecialTypes(data);
+            logger.Log(GetType(), "... Updating Skill Types", LogSeverity.InformationHigh);
             UpdateSkillTypes(data);
+            logger.Log(GetType(), "... Updating Campaigns", LogSeverity.InformationHigh);
             UpdateCampaigns(data);
+            logger.Log(GetType(), "... Updating Area of Effects", LogSeverity.InformationHigh);
             UpdateAreaOfEffects(data);
+            logger.Log(GetType(), "... Updating Ranges", LogSeverity.InformationHigh);
             UpdateRanges(data);
+            logger.Log(GetType(), "... Updating Skills", LogSeverity.InformationHigh);
+            UpdateSkills(data);
+            // TODO : Drop unmodded skill rows
+
+            logger.Log(GetType(), "... Updating Skill lookup tables", LogSeverity.InformationHigh);
+            UpdateSkillText(data);
+            UpdateSkillCauses(data);
+            UpdateSkillRemoves(data);
+            UpdateRelatedSkills(data);
+            UpdateSkillCategories(data);
+
+            CompactImages();
 
             logger.Log(GetType(), "Writing data to disk", LogSeverity.InformationHigh);
             model.WriteXml(dataFile, XmlWriteMode.IgnoreSchema);
@@ -53,7 +87,318 @@ namespace TemplateManager.DataFetcher.DataTargets
             logger.Log(GetType(), "Update complete", LogSeverity.InformationHigh);
         }
 
+        private void UpdateSkillCategories(IEnumerable<Skill> enumerable)
+        {
+            foreach(var skill in enumerable)
+            {
+                if(skill.Categories != null)
+                    foreach(var item in skill.Categories)
+                    {
+                        var row = model.SkillsCategories_Lookup.NewSkillsCategories_LookupRow();
+                        row.SkillsId = skill.Id;
+                        row.CategoriesId =
+                            model.Categories.First(i => i.Name.Equals(item, StringComparison.InvariantCultureIgnoreCase))
+                                .Id;
+                        model.SkillsCategories_Lookup.AddSkillsCategories_LookupRow(row);
+                    }
+            }
+        }
+
+        private void UpdateRelatedSkills(IEnumerable<Skill> enumerable)
+        {
+            foreach(var skill in enumerable)
+            {
+                if(skill.Removes != null)
+                    foreach(var item in skill.RelatedSkills)
+                    {
+                        var row = model.RelatedSkills.NewRelatedSkillsRow();
+                        row.ParentSkillId = skill.Id;
+                        row.RelatedSkillId = item;
+                        model.RelatedSkills.AddRelatedSkillsRow(row);
+                    }
+            }
+        }
+
+        private void UpdateSkillRemoves(IEnumerable<Skill> enumerable)
+        {
+
+            foreach (var skill in enumerable)
+            {
+                if (skill.Removes != null)
+                    foreach (var item in skill.Removes)
+                    {
+                        var row = model.SkillsRemoves_Lookup.NewSkillsRemoves_LookupRow();
+                        row.SkillsId = skill.Id;
+                        row.RemovesId =
+                            model.Removes.First(i => i.Name.Equals(item, StringComparison.InvariantCultureIgnoreCase)).
+                                Id;
+                        model.SkillsRemoves_Lookup.AddSkillsRemoves_LookupRow(row);
+                    }
+            }
+        }
+
+        private void UpdateSkillCauses(IEnumerable<Skill> enumerable)
+        {
+
+            foreach(var skill in enumerable)
+            {
+                if(skill.Causes != null)
+                    foreach(var item in skill.Causes)
+                    {
+                        var row = model.SkillsCauses_Lookup.NewSkillsCauses_LookupRow();
+                        row.SkillsId = skill.Id;
+                        row.CausesId =
+                            model.Causes.First(i => i.Name.Equals(item, StringComparison.InvariantCultureIgnoreCase)).
+                                Id;
+                        model.SkillsCauses_Lookup.AddSkillsCauses_LookupRow(row);
+                    }
+            }
+        }
+
+        private void UpdateSkillText(IEnumerable<Skill> enumerable)
+        {
+
+            foreach(var skill in enumerable)
+            {
+                if(skill.Name != null)
+                    foreach(var name in skill.Name)
+                    {
+                        var row = model.SkillName.NewSkillNameRow();
+                        row.Id = skill.Id;
+                        row.Locale = name.Key;
+                        row.Name = name.Value;
+
+                        model.SkillName.AddSkillNameRow(row);
+                    }
+
+                if(skill.Description != null)
+                    foreach(var text in skill.Description)
+                    {
+                        var row = model.SkillDescription.NewSkillDescriptionRow();
+                        row.Id = skill.Id;
+                        row.Locale = text.Key;
+                        row.Description = text.Value;
+
+                        if (skill.ConciseDescription != null && skill.ConciseDescription.ContainsKey(text.Key))
+                            row.ConciseDescription = skill.ConciseDescription[text.Key];
+
+                        model.SkillDescription.AddSkillDescriptionRow(row);
+                    }
+            }
+        }
+
+        private void CompactImages()
+        {
+            foreach(var row in model.Images)
+            {
+                if(row.RowState == DataRowState.Unchanged)
+                    row.Delete();
+            }
+        }
+
+        private string CreateDataString(byte[] bytes)
+        {
+            return Encoding.Default.GetString(bytes);
+        }
+
         #endregion
+
+        private void UpdateSkills(IEnumerable<Skill> enumerable)
+        {
+            foreach(var skill in enumerable)
+            {
+                var skillRow = model.Skills.FindById(skill.Id);
+
+                var newRow = (skillRow == null);
+
+                if(newRow)
+                {
+                    skillRow = model.Skills.NewSkillsRow();
+                    skillRow.Id = skill.Id;
+                }
+
+                SetValue(skill,
+                         skillRow,
+                         i => i.ActivationTime,
+                         ((r, v) => r.SourceActivationTime = v),
+                         r => r.SetSourceActivationTimeNull());
+
+                SetValue(skill,
+                         skillRow,
+                         i => i.Adrenaline,
+                         ((r, v) => r.SourceAdrenalineCost = v),
+                         r => r.SetSourceAdrenalineCostNull());
+                
+                SetValue(skill,
+                         skillRow,
+                         i => i.CausesExhaustion,
+                         ((r, v) => r.SourceCausesExhaustion = v),
+                         r => r.SetSourceCausesExhaustionNull());
+
+                SetValue(skill,
+                         skillRow,
+                         i => i.EnergyCost,
+                         ((r, v) => r.SourceEnergyCost = v),
+                         r => r.SetSourceEnergyCostNull());
+
+                SetValue(skill,
+                         skillRow,
+                         i => i.IsElite,
+                         ((r, v) => r.SourceIsElite = v),
+                         r => r.SetSourceIsEliteNull());
+                
+                SetValue(skill,
+                         skillRow,
+                         i => i.IsPvEOnly,
+                         ((r, v) => r.SourceIsPvEOnly = v),
+                         r => r.SetSourceIsPvEOnlyNull());
+
+                SetValue(skill,
+                         skillRow,
+                         i => i.HasPvP,
+                         ((r, v) => r.SourceHasPvP = v),
+                         r => r.SetSourceHasPvPNull());
+                
+                SetValue(skill,
+                         skillRow,
+                         i => i.IsPvPVersion,
+                         ((r, v) => r.SourceIsPvP = v),
+                         r => r.SetSourceIsPvPNull());
+
+                skillRow.IsRemoved = skill.IsRemoved;
+                skillRow.IsValid = skill.IsValid;
+
+                SetValue(skill,
+                         skillRow,
+                         i => i.RechargeTime,
+                         ((r, v) => r.SourceRechargeTime = v),
+                         r => r.SetSourceRechargeTimeNull());
+                SetValue(skill,
+                         skillRow,
+                         i => i.Sacrifice,
+                         ((r, v) => r.SourceSacrificeCost = v),
+                         r => r.SetSourceSacrificeCostNull());
+                
+                SetValue(skill,
+                         skillRow,
+                         i => i.Upkeep,
+                         ((r, v) => r.SourceUpkeepCost = v),
+                         r => r.SetSourceUpkeepCostNull());
+
+                skillRow.SourceWikiLink = skill.WikiLink;
+
+                var lookupSkill = skill;
+                
+                skillRow.CampaignRefId =
+                    model.Campaigns.First(
+                        i => i.Name.Equals(lookupSkill.Campaign, StringComparison.InvariantCultureIgnoreCase)).Id;
+
+                skillRow.ProfessionRefId =
+                    model.Professions.First(
+                        i => i.Name.Equals(lookupSkill.Profession, StringComparison.InvariantCultureIgnoreCase)).Id;
+
+                skillRow.AreaOfEffectRefId =
+                    model.AreaOfEffects.First(
+                        i => i.Name.Equals(lookupSkill.AreaOfEffect, StringComparison.InvariantCultureIgnoreCase)).Id;
+
+                skillRow.AttributeRefId =
+                    model.Attributes.First(
+                        i => i.Name.Equals(lookupSkill.Attribute, StringComparison.InvariantCultureIgnoreCase)).Id;
+
+                skillRow.ProjectileRefId =
+                    model.Projectiles.First(
+                        i => i.Name.Equals(lookupSkill.Projectile, StringComparison.InvariantCultureIgnoreCase)).Id;
+
+                skillRow.RangeRefId =
+                    model.Ranges.First(
+                        i => i.Name.Equals(lookupSkill.Range, StringComparison.InvariantCultureIgnoreCase)).Id;
+
+                skillRow.SpecialTypeRefId =
+                    model.SpecialTypes.First(
+                        i => i.Name.Equals(lookupSkill.SpecialType, StringComparison.InvariantCultureIgnoreCase)).Id;
+
+                skillRow.TargetRefId =
+                    model.Targets.First(
+                        i => i.Name.Equals(lookupSkill.Target, StringComparison.InvariantCultureIgnoreCase)).Id;
+
+                skillRow.TypeRefId =
+                    model.SkillTypes.First(
+                        i => i.Name.Equals(lookupSkill.Type, StringComparison.InvariantCultureIgnoreCase)).Id;
+
+                var imageRefId = UpdateSkillImage(skill.ImageId);
+
+                if(!imageRefId.HasValue)
+                    skillRow.SetImageRefIdNull();
+                else
+                    skillRow.ImageRefId = imageRefId.Value;
+
+                if(newRow)
+                    model.Skills.AddSkillsRow(skillRow);
+            }
+        }
+
+        private int? UpdateSkillImage(string fileName)
+        {
+            if (!File.Exists(Path.Combine("images", fileName)))
+                return null;
+
+            var imageData = GetImage(fileName, ImageFormat.Jpeg);
+
+            var currentImage = model.Images.First(i => CreateDataString(i.Data) == CreateDataString(imageData));
+
+            if (currentImage == null)
+            {
+                currentImage = model.Images.NewImagesRow();
+                currentImage.Data = imageData;
+                model.Images.AddImagesRow(currentImage);
+            }
+            else
+            {
+                if(currentImage.RowState == DataRowState.Unchanged)
+                    currentImage.SetModified();
+            }
+
+            return currentImage.Id;
+        }
+
+        private static void SetValue<T>(Skill source,
+                                 Data.GuildWars.Model.SkillsRow target,
+                                 Func<Skill, T?> valueSelector,
+                                 Action<Data.GuildWars.Model.SkillsRow, T> targetSetter,
+                                 Action<Data.GuildWars.Model.SkillsRow> nullSetter)
+            where T : struct
+        {
+            var nullableValue = valueSelector(source);
+
+            if(nullableValue.HasValue)
+                targetSetter(target, nullableValue.Value);
+            else
+                nullSetter(target);
+        }
+
+        private void UpdateProfessionImages()
+        {
+            foreach(var profession in model.Professions)
+            {
+                var name = string.Format("{0}.png", Regex.Replace(profession.Name, "[^a-zA-Z ]", string.Empty));
+
+                if(!File.Exists(Path.Combine("images", name)))
+                    continue;
+
+                var imageData = GetImage(name, ImageFormat.Png);
+
+                if(profession.IsImageRefIdNull())
+                {
+                    var row = model.Images.AddImagesRow(imageData);
+                    profession.ImageRefId = row.Id;
+                }
+                else
+                {
+                    var row = profession.GetImagesRows().First();
+                    row.Data = imageData;
+                }
+            }
+        }
 
         private void UpdateRanges(IEnumerable<Skill> enumerable)
         {
@@ -147,6 +492,7 @@ namespace TemplateManager.DataFetcher.DataTargets
             var row = model.Professions.NewProfessionsRow();
 
             row.Name = searchValue;
+            row.IsValidPrimary = true;
 
             model.Professions.AddProfessionsRow(row);
         }
@@ -269,17 +615,17 @@ namespace TemplateManager.DataFetcher.DataTargets
                 v => model.Removes.AddRemovesRow(v));
         }
 
-        private static byte[] GetImage(Image image)
+        private static byte[] GetImage(Image image, ImageFormat imageFormat)
         {
             var ms = new MemoryStream();
-            image.Save(ms, ImageFormat.Jpeg);
+            image.Save(ms, imageFormat);
             return ms.ToArray();
         }
 
-        private static byte[] GetImage(string imageName)
+        private static byte[] GetImage(string imageName, ImageFormat imageFormat)
         {
             var image = Image.FromFile(Path.Combine("images", imageName));
-            return GetImage(image);
+            return GetImage(image, imageFormat);
         }
     }
 }

@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Windows.Media.Imaging;
 using TemplateManager.Infrastructure.Model;
+using System.Threading;
+using System.Globalization;
 
 namespace TemplateManager.Data.GuildWars
 {
@@ -40,7 +42,10 @@ namespace TemplateManager.Data.GuildWars
             {
                 get
                 {
-                    var row = GetText();
+                    var currentCulture = CultureInfo.CurrentUICulture.Name;
+                    var row = GetSkillNameRows().FirstOrDefault(i => i.Locale == currentCulture) ??
+                              GetSkillNameRows().First(i => i.Locale == "en");
+
                     return row.Name;
                 }
             }
@@ -49,7 +54,7 @@ namespace TemplateManager.Data.GuildWars
             {
                 get
                 {
-                    var row = GetText();
+                    var row = GetDescription();
                     return row.Description;
                 }
             }
@@ -58,9 +63,16 @@ namespace TemplateManager.Data.GuildWars
             {
                 get
                 {
-                    var row = GetText();
+                    var row = GetDescription();
                     return row.ConciseDescription;
                 }
+            }
+
+            private SkillDescriptionRow GetDescription()
+            {
+                var currentCulture = CultureInfo.CurrentUICulture.Name;
+                return GetSkillDescriptionRows().FirstOrDefault(i => i.Locale == currentCulture) ??
+                       GetSkillDescriptionRows().First(i => i.Locale == "en");
             }
 
             public double? RechargeTime
@@ -178,16 +190,6 @@ namespace TemplateManager.Data.GuildWars
                 get { return GetImagesRows().First().GetImage(); }
             }
 
-            public bool IsRemoved
-            {
-                get { return SourceIsRemoved; }
-            }
-
-            public bool IsValid
-            {
-                get { return SourceIsValid; }
-            }
-
             public bool? IsElite
             {
                 get { return GetSingleValue(IsSourceIsEliteNull, i => i.SourceIsElite); }
@@ -214,12 +216,6 @@ namespace TemplateManager.Data.GuildWars
             }
 
             #endregion
-
-            private SkillTextRow GetText()
-            {
-                var result = GetSkillTextRows().FirstOrDefault();
-                return result;
-            }
 
             private T? GetSingleValue<T>(Func<bool> isNull, Func<SkillsRow, T> getter) where T : struct
             {

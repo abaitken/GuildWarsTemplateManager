@@ -25,11 +25,12 @@ namespace TemplateManager.DataFetcher.DataTargets
         {
             logger.Log(GetType(), "Writing skills to disk", LogSeverity.InformationHigh);
 
+            var writer = new StreamWriter(path);
+
             foreach(var skill in data)
-            {
-                File.AppendAllText(path, CreateText(skill));
-                File.AppendAllText(path, '-'.Repeat(60));
-            }
+                writer.Write(CreateText(skill));
+
+            writer.Close();
 
             logger.Log(GetType(), "Update complete", LogSeverity.InformationHigh);
         }
@@ -41,6 +42,7 @@ namespace TemplateManager.DataFetcher.DataTargets
             var result = new StringBuilder();
 
             result.AppendLine(GetSkillText(skill));
+            result.AppendLine('-'.Repeat(60));
 
             return result.ToString();
         }

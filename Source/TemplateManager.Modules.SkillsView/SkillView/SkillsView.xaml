@@ -126,7 +126,7 @@
                         </Grid.ColumnDefinitions>
                         <SkillsView1:InfoPanel />
 
-                        <StackPanel Orientation="Vertical" Grid.Column="1">
+                        <StackPanel Orientation="Vertical" Grid.Column="1" Visibility="Collapsed">
                             <Button Content="Edit" IsEnabled="False" />
                             <Button Command="{Binding Path=Model.DeleteTemplateCommand, ElementName=ThisControl}"
                                     CommandParameter="{Binding}">

@@ -27,7 +27,7 @@ namespace TemplateManager.Data.GuildWars {
         
         private SkillsDataTable tableSkills;
         
-        private SkillTextDataTable tableSkillText;
+        private SkillNameDataTable tableSkillName;
         
         private RemovesDataTable tableRemoves;
         
@@ -62,6 +62,8 @@ namespace TemplateManager.Data.GuildWars {
         private RelatedSkillsDataTable tableRelatedSkills;
         
         private ImagesDataTable tableImages;
+        
+        private SkillDescriptionDataTable tableSkillDescription;
         
         private global::System.Data.DataRelation relationFK_Skills_SkillText;
         
@@ -103,6 +105,12 @@ namespace TemplateManager.Data.GuildWars {
         
         private global::System.Data.DataRelation relationSkillTypes_SkillTypes;
         
+        private global::System.Data.DataRelation relationAttributes_Professions;
+        
+        private global::System.Data.DataRelation relationProfessions_Images;
+        
+        private global::System.Data.DataRelation relationSkills_SkillDescription;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -132,8 +140,8 @@ namespace TemplateManager.Data.GuildWars {
                 if ((ds.Tables["Skills"] != null)) {
                     base.Tables.Add(new SkillsDataTable(ds.Tables["Skills"]));
                 }
-                if ((ds.Tables["SkillText"] != null)) {
-                    base.Tables.Add(new SkillTextDataTable(ds.Tables["SkillText"]));
+                if ((ds.Tables["SkillName"] != null)) {
+                    base.Tables.Add(new SkillNameDataTable(ds.Tables["SkillName"]));
                 }
                 if ((ds.Tables["Removes"] != null)) {
                     base.Tables.Add(new RemovesDataTable(ds.Tables["Removes"]));
@@ -186,6 +194,9 @@ namespace TemplateManager.Data.GuildWars {
                 if ((ds.Tables["Images"] != null)) {
                     base.Tables.Add(new ImagesDataTable(ds.Tables["Images"]));
                 }
+                if ((ds.Tables["SkillDescription"] != null)) {
+                    base.Tables.Add(new SkillDescriptionDataTable(ds.Tables["SkillDescription"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -216,9 +227,9 @@ namespace TemplateManager.Data.GuildWars {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SkillTextDataTable SkillText {
+        public SkillNameDataTable SkillName {
             get {
-                return this.tableSkillText;
+                return this.tableSkillName;
             }
         }
         
@@ -376,6 +387,15 @@ namespace TemplateManager.Data.GuildWars {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public SkillDescriptionDataTable SkillDescription {
+            get {
+                return this.tableSkillDescription;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -437,8 +457,8 @@ namespace TemplateManager.Data.GuildWars {
                 if ((ds.Tables["Skills"] != null)) {
                     base.Tables.Add(new SkillsDataTable(ds.Tables["Skills"]));
                 }
-                if ((ds.Tables["SkillText"] != null)) {
-                    base.Tables.Add(new SkillTextDataTable(ds.Tables["SkillText"]));
+                if ((ds.Tables["SkillName"] != null)) {
+                    base.Tables.Add(new SkillNameDataTable(ds.Tables["SkillName"]));
                 }
                 if ((ds.Tables["Removes"] != null)) {
                     base.Tables.Add(new RemovesDataTable(ds.Tables["Removes"]));
@@ -491,6 +511,9 @@ namespace TemplateManager.Data.GuildWars {
                 if ((ds.Tables["Images"] != null)) {
                     base.Tables.Add(new ImagesDataTable(ds.Tables["Images"]));
                 }
+                if ((ds.Tables["SkillDescription"] != null)) {
+                    base.Tables.Add(new SkillDescriptionDataTable(ds.Tables["SkillDescription"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -527,10 +550,10 @@ namespace TemplateManager.Data.GuildWars {
                     this.tableSkills.InitVars();
                 }
             }
-            this.tableSkillText = ((SkillTextDataTable)(base.Tables["SkillText"]));
+            this.tableSkillName = ((SkillNameDataTable)(base.Tables["SkillName"]));
             if ((initTable == true)) {
-                if ((this.tableSkillText != null)) {
-                    this.tableSkillText.InitVars();
+                if ((this.tableSkillName != null)) {
+                    this.tableSkillName.InitVars();
                 }
             }
             this.tableRemoves = ((RemovesDataTable)(base.Tables["Removes"]));
@@ -635,6 +658,12 @@ namespace TemplateManager.Data.GuildWars {
                     this.tableImages.InitVars();
                 }
             }
+            this.tableSkillDescription = ((SkillDescriptionDataTable)(base.Tables["SkillDescription"]));
+            if ((initTable == true)) {
+                if ((this.tableSkillDescription != null)) {
+                    this.tableSkillDescription.InitVars();
+                }
+            }
             this.relationFK_Skills_SkillText = this.Relations["FK_Skills_SkillText"];
             this.relationFK_Skills_AreaOfEffects = this.Relations["FK_Skills_AreaOfEffects"];
             this.relationFK_Skills_Campaigns = this.Relations["FK_Skills_Campaigns"];
@@ -655,6 +684,9 @@ namespace TemplateManager.Data.GuildWars {
             this.relationFK_Skills_Professions = this.Relations["FK_Skills_Professions"];
             this.relationSkills_Images = this.Relations["Skills_Images"];
             this.relationSkillTypes_SkillTypes = this.Relations["SkillTypes_SkillTypes"];
+            this.relationAttributes_Professions = this.Relations["Attributes_Professions"];
+            this.relationProfessions_Images = this.Relations["Professions_Images"];
+            this.relationSkills_SkillDescription = this.Relations["Skills_SkillDescription"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -666,8 +698,8 @@ namespace TemplateManager.Data.GuildWars {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableSkills = new SkillsDataTable();
             base.Tables.Add(this.tableSkills);
-            this.tableSkillText = new SkillTextDataTable();
-            base.Tables.Add(this.tableSkillText);
+            this.tableSkillName = new SkillNameDataTable();
+            base.Tables.Add(this.tableSkillName);
             this.tableRemoves = new RemovesDataTable();
             base.Tables.Add(this.tableRemoves);
             this.tableSkillsRemoves_Lookup = new SkillsRemoves_LookupDataTable();
@@ -702,17 +734,19 @@ namespace TemplateManager.Data.GuildWars {
             base.Tables.Add(this.tableRelatedSkills);
             this.tableImages = new ImagesDataTable();
             base.Tables.Add(this.tableImages);
+            this.tableSkillDescription = new SkillDescriptionDataTable();
+            base.Tables.Add(this.tableSkillDescription);
             global::System.Data.ForeignKeyConstraint fkc;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_Skills_SkillText", new global::System.Data.DataColumn[] {
                         this.tableSkills.IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableSkillText.IdColumn});
-            this.tableSkillText.Constraints.Add(fkc);
+                        this.tableSkillName.IdColumn});
+            this.tableSkillName.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
             this.relationFK_Skills_SkillText = new global::System.Data.DataRelation("FK_Skills_SkillText", new global::System.Data.DataColumn[] {
                         this.tableSkills.IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableSkillText.IdColumn}, false);
+                        this.tableSkillName.IdColumn}, false);
             this.Relations.Add(this.relationFK_Skills_SkillText);
             this.relationFK_Skills_AreaOfEffects = new global::System.Data.DataRelation("FK_Skills_AreaOfEffects", new global::System.Data.DataColumn[] {
                         this.tableSkills.AreaOfEffectRefIdColumn}, new global::System.Data.DataColumn[] {
@@ -790,6 +824,18 @@ namespace TemplateManager.Data.GuildWars {
                         this.tableSkillTypes.ParentTypeIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableSkillTypes.IdColumn}, false);
             this.Relations.Add(this.relationSkillTypes_SkillTypes);
+            this.relationAttributes_Professions = new global::System.Data.DataRelation("Attributes_Professions", new global::System.Data.DataColumn[] {
+                        this.tableAttributes.ProfessionRefIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableProfessions.IdColumn}, false);
+            this.Relations.Add(this.relationAttributes_Professions);
+            this.relationProfessions_Images = new global::System.Data.DataRelation("Professions_Images", new global::System.Data.DataColumn[] {
+                        this.tableProfessions.ImageRefIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableImages.IdColumn}, false);
+            this.Relations.Add(this.relationProfessions_Images);
+            this.relationSkills_SkillDescription = new global::System.Data.DataRelation("Skills_SkillDescription", new global::System.Data.DataColumn[] {
+                        this.tableSkills.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableSkillDescription.IdColumn}, false);
+            this.Relations.Add(this.relationSkills_SkillDescription);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -798,7 +844,7 @@ namespace TemplateManager.Data.GuildWars {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private bool ShouldSerializeSkillText() {
+        private bool ShouldSerializeSkillName() {
             return false;
         }
         
@@ -888,6 +934,11 @@ namespace TemplateManager.Data.GuildWars {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeSkillDescription() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -942,7 +993,7 @@ namespace TemplateManager.Data.GuildWars {
         
         public delegate void SkillsRowChangeEventHandler(object sender, SkillsRowChangeEvent e);
         
-        public delegate void SkillTextRowChangeEventHandler(object sender, SkillTextRowChangeEvent e);
+        public delegate void SkillNameRowChangeEventHandler(object sender, SkillNameRowChangeEvent e);
         
         public delegate void RemovesRowChangeEventHandler(object sender, RemovesRowChangeEvent e);
         
@@ -977,6 +1028,8 @@ namespace TemplateManager.Data.GuildWars {
         public delegate void RelatedSkillsRowChangeEventHandler(object sender, RelatedSkillsRowChangeEvent e);
         
         public delegate void ImagesRowChangeEventHandler(object sender, ImagesRowChangeEvent e);
+        
+        public delegate void SkillDescriptionRowChangeEventHandler(object sender, SkillDescriptionRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1030,9 +1083,9 @@ namespace TemplateManager.Data.GuildWars {
             
             private global::System.Data.DataColumn columnSourceWikiLink;
             
-            private global::System.Data.DataColumn columnSourceIsRemoved;
+            private global::System.Data.DataColumn columnIsRemoved;
             
-            private global::System.Data.DataColumn columnSourceIsValid;
+            private global::System.Data.DataColumn columnIsValid;
             
             private global::System.Data.DataColumn columnImageRefId;
             
@@ -1221,16 +1274,16 @@ namespace TemplateManager.Data.GuildWars {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn SourceIsRemovedColumn {
+            public global::System.Data.DataColumn IsRemovedColumn {
                 get {
-                    return this.columnSourceIsRemoved;
+                    return this.columnIsRemoved;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn SourceIsValidColumn {
+            public global::System.Data.DataColumn IsValidColumn {
                 get {
-                    return this.columnSourceIsValid;
+                    return this.columnIsValid;
                 }
             }
             
@@ -1271,6 +1324,7 @@ namespace TemplateManager.Data.GuildWars {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public SkillsRow AddSkillsRow(
+                        RelatedSkillsRow parentRelatedSkillsRowByRelatedSkills_Skills, 
                         double SourceActivationTime, 
                         bool SourceIsElite, 
                         double SourceEnergyCost, 
@@ -1292,8 +1346,8 @@ namespace TemplateManager.Data.GuildWars {
                         bool SourceIsPvP, 
                         int TypeRefId, 
                         string SourceWikiLink, 
-                        bool SourceIsRemoved, 
-                        bool SourceIsValid, 
+                        bool IsRemoved, 
+                        bool IsValid, 
                         int ImageRefId) {
                 SkillsRow rowSkillsRow = ((SkillsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -1319,9 +1373,12 @@ namespace TemplateManager.Data.GuildWars {
                         SourceIsPvP,
                         TypeRefId,
                         SourceWikiLink,
-                        SourceIsRemoved,
-                        SourceIsValid,
+                        IsRemoved,
+                        IsValid,
                         ImageRefId};
+                if ((parentRelatedSkillsRowByRelatedSkills_Skills != null)) {
+                    columnValuesArray[0] = parentRelatedSkillsRowByRelatedSkills_Skills[1];
+                }
                 rowSkillsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSkillsRow);
                 return rowSkillsRow;
@@ -1369,8 +1426,8 @@ namespace TemplateManager.Data.GuildWars {
                 this.columnSourceIsPvP = base.Columns["SourceIsPvP"];
                 this.columnTypeRefId = base.Columns["TypeRefId"];
                 this.columnSourceWikiLink = base.Columns["SourceWikiLink"];
-                this.columnSourceIsRemoved = base.Columns["SourceIsRemoved"];
-                this.columnSourceIsValid = base.Columns["SourceIsValid"];
+                this.columnIsRemoved = base.Columns["IsRemoved"];
+                this.columnIsValid = base.Columns["IsValid"];
                 this.columnImageRefId = base.Columns["ImageRefId"];
             }
             
@@ -1420,15 +1477,14 @@ namespace TemplateManager.Data.GuildWars {
                 base.Columns.Add(this.columnTypeRefId);
                 this.columnSourceWikiLink = new global::System.Data.DataColumn("SourceWikiLink", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSourceWikiLink);
-                this.columnSourceIsRemoved = new global::System.Data.DataColumn("SourceIsRemoved", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSourceIsRemoved);
-                this.columnSourceIsValid = new global::System.Data.DataColumn("SourceIsValid", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSourceIsValid);
+                this.columnIsRemoved = new global::System.Data.DataColumn("IsRemoved", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIsRemoved);
+                this.columnIsValid = new global::System.Data.DataColumn("IsValid", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIsValid);
                 this.columnImageRefId = new global::System.Data.DataColumn("ImageRefId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnImageRefId);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("PK_Skills", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
-                this.columnId.AutoIncrement = true;
                 this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
@@ -1441,8 +1497,8 @@ namespace TemplateManager.Data.GuildWars {
                 this.columnProjectileRefId.AllowDBNull = false;
                 this.columnAreaOfEffectRefId.AllowDBNull = false;
                 this.columnTypeRefId.AllowDBNull = false;
-                this.columnSourceIsRemoved.AllowDBNull = false;
-                this.columnSourceIsValid.AllowDBNull = false;
+                this.columnIsRemoved.AllowDBNull = false;
+                this.columnIsValid.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1566,7 +1622,7 @@ namespace TemplateManager.Data.GuildWars {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SkillTextDataTable : global::System.Data.TypedTableBase<SkillTextRow> {
+        public partial class SkillNameDataTable : global::System.Data.TypedTableBase<SkillNameRow> {
             
             private global::System.Data.DataColumn columnId;
             
@@ -1574,20 +1630,16 @@ namespace TemplateManager.Data.GuildWars {
             
             private global::System.Data.DataColumn columnName;
             
-            private global::System.Data.DataColumn columnDescription;
-            
-            private global::System.Data.DataColumn columnConciseDescription;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public SkillTextDataTable() {
-                this.TableName = "SkillText";
+            public SkillNameDataTable() {
+                this.TableName = "SkillName";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal SkillTextDataTable(global::System.Data.DataTable table) {
+            internal SkillNameDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1603,7 +1655,7 @@ namespace TemplateManager.Data.GuildWars {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected SkillTextDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected SkillNameDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1630,20 +1682,6 @@ namespace TemplateManager.Data.GuildWars {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn DescriptionColumn {
-                get {
-                    return this.columnDescription;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn ConciseDescriptionColumn {
-                get {
-                    return this.columnConciseDescription;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1652,59 +1690,57 @@ namespace TemplateManager.Data.GuildWars {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public SkillTextRow this[int index] {
+            public SkillNameRow this[int index] {
                 get {
-                    return ((SkillTextRow)(this.Rows[index]));
+                    return ((SkillNameRow)(this.Rows[index]));
                 }
             }
             
-            public event SkillTextRowChangeEventHandler SkillTextRowChanging;
+            public event SkillNameRowChangeEventHandler SkillNameRowChanging;
             
-            public event SkillTextRowChangeEventHandler SkillTextRowChanged;
+            public event SkillNameRowChangeEventHandler SkillNameRowChanged;
             
-            public event SkillTextRowChangeEventHandler SkillTextRowDeleting;
+            public event SkillNameRowChangeEventHandler SkillNameRowDeleting;
             
-            public event SkillTextRowChangeEventHandler SkillTextRowDeleted;
+            public event SkillNameRowChangeEventHandler SkillNameRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void AddSkillTextRow(SkillTextRow row) {
+            public void AddSkillNameRow(SkillNameRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public SkillTextRow AddSkillTextRow(SkillsRow parentSkillsRowByFK_Skills_SkillText, string Locale, string Name, string Description, string ConciseDescription) {
-                SkillTextRow rowSkillTextRow = ((SkillTextRow)(this.NewRow()));
+            public SkillNameRow AddSkillNameRow(SkillsRow parentSkillsRowByFK_Skills_SkillText, string Locale, string Name) {
+                SkillNameRow rowSkillNameRow = ((SkillNameRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Locale,
-                        Name,
-                        Description,
-                        ConciseDescription};
+                        Name};
                 if ((parentSkillsRowByFK_Skills_SkillText != null)) {
                     columnValuesArray[0] = parentSkillsRowByFK_Skills_SkillText[0];
                 }
-                rowSkillTextRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSkillTextRow);
-                return rowSkillTextRow;
+                rowSkillNameRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSkillNameRow);
+                return rowSkillNameRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public SkillTextRow FindByIdLocale(int Id, string Locale) {
-                return ((SkillTextRow)(this.Rows.Find(new object[] {
+            public SkillNameRow FindByIdLocale(int Id, string Locale) {
+                return ((SkillNameRow)(this.Rows.Find(new object[] {
                             Id,
                             Locale})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public override global::System.Data.DataTable Clone() {
-                SkillTextDataTable cln = ((SkillTextDataTable)(base.Clone()));
+                SkillNameDataTable cln = ((SkillNameDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new SkillTextDataTable();
+                return new SkillNameDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1712,8 +1748,6 @@ namespace TemplateManager.Data.GuildWars {
                 this.columnId = base.Columns["Id"];
                 this.columnLocale = base.Columns["Locale"];
                 this.columnName = base.Columns["Name"];
-                this.columnDescription = base.Columns["Description"];
-                this.columnConciseDescription = base.Columns["ConciseDescription"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1724,68 +1758,63 @@ namespace TemplateManager.Data.GuildWars {
                 base.Columns.Add(this.columnLocale);
                 this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName);
-                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDescription);
-                this.columnConciseDescription = new global::System.Data.DataColumn("ConciseDescription", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnConciseDescription);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("PK_SkillText", new global::System.Data.DataColumn[] {
                                 this.columnId,
                                 this.columnLocale}, true));
                 this.columnId.AllowDBNull = false;
                 this.columnLocale.AllowDBNull = false;
                 this.columnName.AllowDBNull = false;
-                this.columnDescription.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public SkillTextRow NewSkillTextRow() {
-                return ((SkillTextRow)(this.NewRow()));
+            public SkillNameRow NewSkillNameRow() {
+                return ((SkillNameRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new SkillTextRow(builder);
+                return new SkillNameRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Type GetRowType() {
-                return typeof(SkillTextRow);
+                return typeof(SkillNameRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.SkillTextRowChanged != null)) {
-                    this.SkillTextRowChanged(this, new SkillTextRowChangeEvent(((SkillTextRow)(e.Row)), e.Action));
+                if ((this.SkillNameRowChanged != null)) {
+                    this.SkillNameRowChanged(this, new SkillNameRowChangeEvent(((SkillNameRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.SkillTextRowChanging != null)) {
-                    this.SkillTextRowChanging(this, new SkillTextRowChangeEvent(((SkillTextRow)(e.Row)), e.Action));
+                if ((this.SkillNameRowChanging != null)) {
+                    this.SkillNameRowChanging(this, new SkillNameRowChangeEvent(((SkillNameRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.SkillTextRowDeleted != null)) {
-                    this.SkillTextRowDeleted(this, new SkillTextRowChangeEvent(((SkillTextRow)(e.Row)), e.Action));
+                if ((this.SkillNameRowDeleted != null)) {
+                    this.SkillNameRowDeleted(this, new SkillNameRowChangeEvent(((SkillNameRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.SkillTextRowDeleting != null)) {
-                    this.SkillTextRowDeleting(this, new SkillTextRowChangeEvent(((SkillTextRow)(e.Row)), e.Action));
+                if ((this.SkillNameRowDeleting != null)) {
+                    this.SkillNameRowDeleting(this, new SkillNameRowChangeEvent(((SkillNameRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void RemoveSkillTextRow(SkillTextRow row) {
+            public void RemoveSkillNameRow(SkillNameRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1811,7 +1840,7 @@ namespace TemplateManager.Data.GuildWars {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "SkillTextDataTable";
+                attribute2.FixedValue = "SkillNameDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3615,6 +3644,10 @@ namespace TemplateManager.Data.GuildWars {
             
             private global::System.Data.DataColumn columnTemplateId;
             
+            private global::System.Data.DataColumn columnIsPrimaryOnly;
+            
+            private global::System.Data.DataColumn columnProfessionRefId;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public AttributesDataTable() {
                 this.TableName = "Attributes";
@@ -3667,6 +3700,20 @@ namespace TemplateManager.Data.GuildWars {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn IsPrimaryOnlyColumn {
+                get {
+                    return this.columnIsPrimaryOnly;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ProfessionRefIdColumn {
+                get {
+                    return this.columnProfessionRefId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3695,12 +3742,14 @@ namespace TemplateManager.Data.GuildWars {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public AttributesRow AddAttributesRow(string Name, int TemplateId) {
+            public AttributesRow AddAttributesRow(string Name, int TemplateId, bool IsPrimaryOnly, int ProfessionRefId) {
                 AttributesRow rowAttributesRow = ((AttributesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Name,
-                        TemplateId};
+                        TemplateId,
+                        IsPrimaryOnly,
+                        ProfessionRefId};
                 rowAttributesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAttributesRow);
                 return rowAttributesRow;
@@ -3723,6 +3772,8 @@ namespace TemplateManager.Data.GuildWars {
                 this.columnId = base.Columns["Id"];
                 this.columnName = base.Columns["Name"];
                 this.columnTemplateId = base.Columns["TemplateId"];
+                this.columnIsPrimaryOnly = base.Columns["IsPrimaryOnly"];
+                this.columnProfessionRefId = base.Columns["ProfessionRefId"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3733,6 +3784,10 @@ namespace TemplateManager.Data.GuildWars {
                 base.Columns.Add(this.columnName);
                 this.columnTemplateId = new global::System.Data.DataColumn("TemplateId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTemplateId);
+                this.columnIsPrimaryOnly = new global::System.Data.DataColumn("IsPrimaryOnly", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIsPrimaryOnly);
+                this.columnProfessionRefId = new global::System.Data.DataColumn("ProfessionRefId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProfessionRefId);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, false));
                 this.columnId.AutoIncrement = true;
@@ -3871,6 +3926,10 @@ namespace TemplateManager.Data.GuildWars {
             
             private global::System.Data.DataColumn columnTemplateId;
             
+            private global::System.Data.DataColumn columnImageRefId;
+            
+            private global::System.Data.DataColumn columnIsValidPrimary;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public ProfessionsDataTable() {
                 this.TableName = "Professions";
@@ -3923,6 +3982,20 @@ namespace TemplateManager.Data.GuildWars {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ImageRefIdColumn {
+                get {
+                    return this.columnImageRefId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn IsValidPrimaryColumn {
+                get {
+                    return this.columnIsValidPrimary;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3951,12 +4024,14 @@ namespace TemplateManager.Data.GuildWars {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public ProfessionsRow AddProfessionsRow(string Name, int TemplateId) {
+            public ProfessionsRow AddProfessionsRow(string Name, int TemplateId, int ImageRefId, bool IsValidPrimary) {
                 ProfessionsRow rowProfessionsRow = ((ProfessionsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Name,
-                        TemplateId};
+                        TemplateId,
+                        ImageRefId,
+                        IsValidPrimary};
                 rowProfessionsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowProfessionsRow);
                 return rowProfessionsRow;
@@ -3979,6 +4054,8 @@ namespace TemplateManager.Data.GuildWars {
                 this.columnId = base.Columns["Id"];
                 this.columnName = base.Columns["Name"];
                 this.columnTemplateId = base.Columns["TemplateId"];
+                this.columnImageRefId = base.Columns["ImageRefId"];
+                this.columnIsValidPrimary = base.Columns["IsValidPrimary"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3989,6 +4066,10 @@ namespace TemplateManager.Data.GuildWars {
                 base.Columns.Add(this.columnName);
                 this.columnTemplateId = new global::System.Data.DataColumn("TemplateId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTemplateId);
+                this.columnImageRefId = new global::System.Data.DataColumn("ImageRefId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnImageRefId);
+                this.columnIsValidPrimary = new global::System.Data.DataColumn("IsValidPrimary", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIsValidPrimary);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, false));
                 this.columnId.AutoIncrement = true;
@@ -3996,6 +4077,7 @@ namespace TemplateManager.Data.GuildWars {
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
                 this.columnName.AllowDBNull = false;
+                this.columnIsValidPrimary.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6094,6 +6176,284 @@ namespace TemplateManager.Data.GuildWars {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class SkillDescriptionDataTable : global::System.Data.TypedTableBase<SkillDescriptionRow> {
+            
+            private global::System.Data.DataColumn columnId;
+            
+            private global::System.Data.DataColumn columnLocale;
+            
+            private global::System.Data.DataColumn columnDescription;
+            
+            private global::System.Data.DataColumn columnConciseDescription;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public SkillDescriptionDataTable() {
+                this.TableName = "SkillDescription";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal SkillDescriptionDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected SkillDescriptionDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn LocaleColumn {
+                get {
+                    return this.columnLocale;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn DescriptionColumn {
+                get {
+                    return this.columnDescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ConciseDescriptionColumn {
+                get {
+                    return this.columnConciseDescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public SkillDescriptionRow this[int index] {
+                get {
+                    return ((SkillDescriptionRow)(this.Rows[index]));
+                }
+            }
+            
+            public event SkillDescriptionRowChangeEventHandler SkillDescriptionRowChanging;
+            
+            public event SkillDescriptionRowChangeEventHandler SkillDescriptionRowChanged;
+            
+            public event SkillDescriptionRowChangeEventHandler SkillDescriptionRowDeleting;
+            
+            public event SkillDescriptionRowChangeEventHandler SkillDescriptionRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddSkillDescriptionRow(SkillDescriptionRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public SkillDescriptionRow AddSkillDescriptionRow(SkillsRow parentSkillsRowBySkills_SkillDescription, string Locale, string Description, string ConciseDescription) {
+                SkillDescriptionRow rowSkillDescriptionRow = ((SkillDescriptionRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Locale,
+                        Description,
+                        ConciseDescription};
+                if ((parentSkillsRowBySkills_SkillDescription != null)) {
+                    columnValuesArray[0] = parentSkillsRowBySkills_SkillDescription[0];
+                }
+                rowSkillDescriptionRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSkillDescriptionRow);
+                return rowSkillDescriptionRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public SkillDescriptionRow FindByIdLocale(int Id, string Locale) {
+                return ((SkillDescriptionRow)(this.Rows.Find(new object[] {
+                            Id,
+                            Locale})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                SkillDescriptionDataTable cln = ((SkillDescriptionDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new SkillDescriptionDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnId = base.Columns["Id"];
+                this.columnLocale = base.Columns["Locale"];
+                this.columnDescription = base.Columns["Description"];
+                this.columnConciseDescription = base.Columns["ConciseDescription"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnLocale = new global::System.Data.DataColumn("Locale", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLocale);
+                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescription);
+                this.columnConciseDescription = new global::System.Data.DataColumn("ConciseDescription", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnConciseDescription);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("PK_SkillText", new global::System.Data.DataColumn[] {
+                                this.columnId,
+                                this.columnLocale}, true));
+                this.columnId.AllowDBNull = false;
+                this.columnLocale.AllowDBNull = false;
+                this.columnDescription.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public SkillDescriptionRow NewSkillDescriptionRow() {
+                return ((SkillDescriptionRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new SkillDescriptionRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(SkillDescriptionRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.SkillDescriptionRowChanged != null)) {
+                    this.SkillDescriptionRowChanged(this, new SkillDescriptionRowChangeEvent(((SkillDescriptionRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.SkillDescriptionRowChanging != null)) {
+                    this.SkillDescriptionRowChanging(this, new SkillDescriptionRowChangeEvent(((SkillDescriptionRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.SkillDescriptionRowDeleted != null)) {
+                    this.SkillDescriptionRowDeleted(this, new SkillDescriptionRowChangeEvent(((SkillDescriptionRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.SkillDescriptionRowDeleting != null)) {
+                    this.SkillDescriptionRowDeleting(this, new SkillDescriptionRowChangeEvent(((SkillDescriptionRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveSkillDescriptionRow(SkillDescriptionRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Model ds = new Model();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "SkillDescriptionDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
@@ -6388,22 +6748,22 @@ namespace TemplateManager.Data.GuildWars {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool SourceIsRemoved {
+            public bool IsRemoved {
                 get {
-                    return ((bool)(this[this.tableSkills.SourceIsRemovedColumn]));
+                    return ((bool)(this[this.tableSkills.IsRemovedColumn]));
                 }
                 set {
-                    this[this.tableSkills.SourceIsRemovedColumn] = value;
+                    this[this.tableSkills.IsRemovedColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool SourceIsValid {
+            public bool IsValid {
                 get {
-                    return ((bool)(this[this.tableSkills.SourceIsValidColumn]));
+                    return ((bool)(this[this.tableSkills.IsValidColumn]));
                 }
                 set {
-                    this[this.tableSkills.SourceIsValidColumn] = value;
+                    this[this.tableSkills.IsValidColumn] = value;
                 }
             }
             
@@ -6563,12 +6923,12 @@ namespace TemplateManager.Data.GuildWars {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public SkillTextRow[] GetSkillTextRows() {
+            public SkillNameRow[] GetSkillNameRows() {
                 if ((this.Table.ChildRelations["FK_Skills_SkillText"] == null)) {
-                    return new SkillTextRow[0];
+                    return new SkillNameRow[0];
                 }
                 else {
-                    return ((SkillTextRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Skills_SkillText"])));
+                    return ((SkillNameRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Skills_SkillText"])));
                 }
             }
             
@@ -6711,74 +7071,59 @@ namespace TemplateManager.Data.GuildWars {
                     return ((ImagesRow[])(base.GetChildRows(this.Table.ChildRelations["Skills_Images"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public SkillDescriptionRow[] GetSkillDescriptionRows() {
+                if ((this.Table.ChildRelations["Skills_SkillDescription"] == null)) {
+                    return new SkillDescriptionRow[0];
+                }
+                else {
+                    return ((SkillDescriptionRow[])(base.GetChildRows(this.Table.ChildRelations["Skills_SkillDescription"])));
+                }
+            }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public partial class SkillTextRow : global::System.Data.DataRow {
+        public partial class SkillNameRow : global::System.Data.DataRow {
             
-            private SkillTextDataTable tableSkillText;
+            private SkillNameDataTable tableSkillName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal SkillTextRow(global::System.Data.DataRowBuilder rb) : 
+            internal SkillNameRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableSkillText = ((SkillTextDataTable)(this.Table));
+                this.tableSkillName = ((SkillNameDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public int Id {
                 get {
-                    return ((int)(this[this.tableSkillText.IdColumn]));
+                    return ((int)(this[this.tableSkillName.IdColumn]));
                 }
                 set {
-                    this[this.tableSkillText.IdColumn] = value;
+                    this[this.tableSkillName.IdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public string Locale {
                 get {
-                    return ((string)(this[this.tableSkillText.LocaleColumn]));
+                    return ((string)(this[this.tableSkillName.LocaleColumn]));
                 }
                 set {
-                    this[this.tableSkillText.LocaleColumn] = value;
+                    this[this.tableSkillName.LocaleColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public string Name {
                 get {
-                    return ((string)(this[this.tableSkillText.NameColumn]));
+                    return ((string)(this[this.tableSkillName.NameColumn]));
                 }
                 set {
-                    this[this.tableSkillText.NameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string Description {
-                get {
-                    return ((string)(this[this.tableSkillText.DescriptionColumn]));
-                }
-                set {
-                    this[this.tableSkillText.DescriptionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string ConciseDescription {
-                get {
-                    try {
-                        return ((string)(this[this.tableSkillText.ConciseDescriptionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ConciseDescription\' in table \'SkillText\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSkillText.ConciseDescriptionColumn] = value;
+                    this[this.tableSkillName.NameColumn] = value;
                 }
             }
             
@@ -6790,16 +7135,6 @@ namespace TemplateManager.Data.GuildWars {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Skills_SkillText"]);
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsConciseDescriptionNull() {
-                return this.IsNull(this.tableSkillText.ConciseDescriptionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetConciseDescriptionNull() {
-                this[this.tableSkillText.ConciseDescriptionColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -7223,6 +7558,36 @@ namespace TemplateManager.Data.GuildWars {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPrimaryOnly {
+                get {
+                    try {
+                        return ((bool)(this[this.tableAttributes.IsPrimaryOnlyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IsPrimaryOnly\' in table \'Attributes\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAttributes.IsPrimaryOnlyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int ProfessionRefId {
+                get {
+                    try {
+                        return ((int)(this[this.tableAttributes.ProfessionRefIdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ProfessionRefId\' in table \'Attributes\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAttributes.ProfessionRefIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public SkillsRow SkillsRow {
                 get {
                     return ((SkillsRow)(this.GetParentRow(this.Table.ParentRelations["FK_Skills_Attributes"])));
@@ -7240,6 +7605,36 @@ namespace TemplateManager.Data.GuildWars {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public void SetTemplateIdNull() {
                 this[this.tableAttributes.TemplateIdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsIsPrimaryOnlyNull() {
+                return this.IsNull(this.tableAttributes.IsPrimaryOnlyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetIsPrimaryOnlyNull() {
+                this[this.tableAttributes.IsPrimaryOnlyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsProfessionRefIdNull() {
+                return this.IsNull(this.tableAttributes.ProfessionRefIdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetProfessionRefIdNull() {
+                this[this.tableAttributes.ProfessionRefIdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public ProfessionsRow[] GetProfessionsRows() {
+                if ((this.Table.ChildRelations["Attributes_Professions"] == null)) {
+                    return new ProfessionsRow[0];
+                }
+                else {
+                    return ((ProfessionsRow[])(base.GetChildRows(this.Table.ChildRelations["Attributes_Professions"])));
+                }
             }
         }
         
@@ -7293,12 +7688,47 @@ namespace TemplateManager.Data.GuildWars {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int ImageRefId {
+                get {
+                    try {
+                        return ((int)(this[this.tableProfessions.ImageRefIdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ImageRefId\' in table \'Professions\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProfessions.ImageRefIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsValidPrimary {
+                get {
+                    return ((bool)(this[this.tableProfessions.IsValidPrimaryColumn]));
+                }
+                set {
+                    this[this.tableProfessions.IsValidPrimaryColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public SkillsRow SkillsRow {
                 get {
                     return ((SkillsRow)(this.GetParentRow(this.Table.ParentRelations["FK_Skills_Professions"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Skills_Professions"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public AttributesRow AttributesRow {
+                get {
+                    return ((AttributesRow)(this.GetParentRow(this.Table.ParentRelations["Attributes_Professions"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Attributes_Professions"]);
                 }
             }
             
@@ -7310,6 +7740,26 @@ namespace TemplateManager.Data.GuildWars {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public void SetTemplateIdNull() {
                 this[this.tableProfessions.TemplateIdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsImageRefIdNull() {
+                return this.IsNull(this.tableProfessions.ImageRefIdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetImageRefIdNull() {
+                this[this.tableProfessions.ImageRefIdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public ImagesRow[] GetImagesRows() {
+                if ((this.Table.ChildRelations["Professions_Images"] == null)) {
+                    return new ImagesRow[0];
+                }
+                else {
+                    return ((ImagesRow[])(base.GetChildRows(this.Table.ChildRelations["Professions_Images"])));
+                }
             }
         }
         
@@ -7701,6 +8151,96 @@ namespace TemplateManager.Data.GuildWars {
                     this.SetParentRow(value, this.Table.ParentRelations["Skills_Images"]);
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public ProfessionsRow ProfessionsRow {
+                get {
+                    return ((ProfessionsRow)(this.GetParentRow(this.Table.ParentRelations["Professions_Images"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Professions_Images"]);
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        public partial class SkillDescriptionRow : global::System.Data.DataRow {
+            
+            private SkillDescriptionDataTable tableSkillDescription;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal SkillDescriptionRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableSkillDescription = ((SkillDescriptionDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Id {
+                get {
+                    return ((int)(this[this.tableSkillDescription.IdColumn]));
+                }
+                set {
+                    this[this.tableSkillDescription.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string Locale {
+                get {
+                    return ((string)(this[this.tableSkillDescription.LocaleColumn]));
+                }
+                set {
+                    this[this.tableSkillDescription.LocaleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string Description {
+                get {
+                    return ((string)(this[this.tableSkillDescription.DescriptionColumn]));
+                }
+                set {
+                    this[this.tableSkillDescription.DescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ConciseDescription {
+                get {
+                    try {
+                        return ((string)(this[this.tableSkillDescription.ConciseDescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ConciseDescription\' in table \'SkillDescription\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSkillDescription.ConciseDescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public SkillsRow SkillsRow {
+                get {
+                    return ((SkillsRow)(this.GetParentRow(this.Table.ParentRelations["Skills_SkillDescription"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Skills_SkillDescription"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsConciseDescriptionNull() {
+                return this.IsNull(this.tableSkillDescription.ConciseDescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetConciseDescriptionNull() {
+                this[this.tableSkillDescription.ConciseDescriptionColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -7738,20 +8278,20 @@ namespace TemplateManager.Data.GuildWars {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public class SkillTextRowChangeEvent : global::System.EventArgs {
+        public class SkillNameRowChangeEvent : global::System.EventArgs {
             
-            private SkillTextRow eventRow;
+            private SkillNameRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public SkillTextRowChangeEvent(SkillTextRow row, global::System.Data.DataRowAction action) {
+            public SkillNameRowChangeEvent(SkillNameRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public SkillTextRow Row {
+            public SkillNameRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -8279,6 +8819,37 @@ namespace TemplateManager.Data.GuildWars {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public ImagesRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        public class SkillDescriptionRowChangeEvent : global::System.EventArgs {
+            
+            private SkillDescriptionRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public SkillDescriptionRowChangeEvent(SkillDescriptionRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public SkillDescriptionRow Row {
                 get {
                     return this.eventRow;
                 }
