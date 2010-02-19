@@ -24,8 +24,8 @@
             <TextBlock Text="Latest version:"  Grid.Row="1" />
             <TextBlock Text="{Binding LatestVersion}"  Grid.Row="1"  Grid.Column="1" />
         </Grid>
-        <TextBlock HorizontalAlignment="Center" Grid.Row="2">
-            <Hyperlink NavigateUri="{Binding InformationUrl}">Get Latest Version</Hyperlink>
+        <TextBlock HorizontalAlignment="Center" Grid.Row="2" ToolTip="{Binding InformationUrl}">
+            <Hyperlink Command="{Binding OpenWebAddress}" CommandParameter="{Binding InformationUrl}">Get Latest Version</Hyperlink>
         </TextBlock>
         <Button Content="OK" 
                 HorizontalAlignment="Center" 

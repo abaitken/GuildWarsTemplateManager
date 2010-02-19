@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
 using System.Windows.Input;
 using Microsoft.Practices.Composite.Presentation.Commands;
 using TemplateManager.Infrastructure.Services;
@@ -24,7 +25,15 @@ namespace TemplateManager.UpdateCheck
         private void CreateCommands()
         {
             CloseWindowCommand = new DelegateCommand<Window>(OnCloseWindow);
+            OpenWebAddress = new DelegateCommand<string>(OnOpenWebAddress);
         }
+
+        private static void OnOpenWebAddress(string obj)
+        {
+            Process.Start(obj);
+        }
+
+        public ICommand OpenWebAddress { get; private set; }
 
         private static void OnCloseWindow(Window obj)
         {

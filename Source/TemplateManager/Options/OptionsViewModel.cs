@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
 using Microsoft.Practices.Composite.Presentation.Commands;
+using TemplateManager.Common.Commands;
 using TemplateManager.Common.ViewModel;
 using TemplateManager.Infrastructure;
 using MessageBox=System.Windows.MessageBox;
@@ -118,18 +120,18 @@ namespace TemplateManager.Options
 
         private void GenerateCommands()
         {
-            ApplySettingsCommand = new DelegateCommand<object>(OnApply);
-            UseDefaultsCommand = new DelegateCommand<object>(OnResetSettings);
-            BrowseForArchiveFolderCommand = new DelegateCommand<object>(OnBrowseForArchiveFolder);
-            BrowseForTemplateFolderCommand = new DelegateCommand<object>(OnBrowseForTemplateFolder);
+            ApplySettingsCommand = new DelegateCommand(OnApply);
+            UseDefaultsCommand = new DelegateCommand(OnResetSettings);
+            BrowseForArchiveFolderCommand = new DelegateCommand(OnBrowseForArchiveFolder);
+            BrowseForTemplateFolderCommand = new DelegateCommand(OnBrowseForTemplateFolder);
         }
 
-        private void OnBrowseForTemplateFolder(object obj)
+        private void OnBrowseForTemplateFolder()
         {
             SelectNewFolder(() => TemplateFolder, v => TemplateFolder = v);
         }
 
-        private void OnBrowseForArchiveFolder(object obj)
+        private void OnBrowseForArchiveFolder()
         {
             SelectNewFolder(() => ArchiveFolder, v => ArchiveFolder = v);
         }
@@ -157,7 +159,7 @@ namespace TemplateManager.Options
             return fd.ShowDialog() == DialogResult.OK ? fd.SelectedPath : null;
         }
 
-        private void OnResetSettings(object obj)
+        private void OnResetSettings()
         {
             if(
                 MessageBox.Show("Are you sure you want to restore the default settings?",
@@ -169,7 +171,7 @@ namespace TemplateManager.Options
             applicationSettings.Reset();
         }
 
-        private void OnApply(object obj)
+        private void OnApply()
         {
             if(!IsDeleteBehaviourSettingValid || !IsTemplateFolderValid)
                 return;
