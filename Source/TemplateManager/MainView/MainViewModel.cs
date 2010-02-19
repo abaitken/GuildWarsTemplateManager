@@ -160,21 +160,24 @@ namespace TemplateManager.MainView
 
         private void DisplayUpdateNotification()
         {
-            var updateCheckView = container.Resolve<IUpdateCheckViewModel>().View;
-            updateCheckView.Display();
+            ShowView<IUpdateCheckViewModel>(model => model.View);
         }
 
         private void ShowAboutWindow()
         {
-            var view = container.Resolve<IAboutViewModel>().View;
+            ShowView<IAboutViewModel>(model => model.View);
+        }
 
-            // TODO : Fix owner
-            var owner = container.Resolve<IMainWindowView>() as Window;
+        private void ShowView<TModel>(Func<TModel, object> viewSelector)
+        {
+            var model = container.Resolve<TModel>();
+            var viewWindow = viewSelector(model) as Window;
 
-            if (owner != null)
-                view.Owner = owner;
+            if(viewWindow == null)
+                throw new InvalidOperationException("Expected view to be a window");
 
-            view.ShowDialog();
+            viewWindow.Owner = Application.Current.MainWindow;
+            viewWindow.ShowDialog();
         }
 
         private void ShowOptionsWindow(string regionName)

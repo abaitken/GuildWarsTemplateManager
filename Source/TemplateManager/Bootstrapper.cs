@@ -8,9 +8,7 @@ using TemplateManager.Modules.DataExplorer;
 using TemplateManager.Modules.Performance;
 using TemplateManager.Modules.Services;
 using TemplateManager.Modules.SkillsView;
-using TemplateManager.Modules.Themes;
 using TemplateManager.ShellView;
-using TemplateManager.Modules.Backup;
 
 namespace TemplateManager
 {
@@ -57,8 +55,6 @@ namespace TemplateManager
         protected override IModuleCatalog GetModuleCatalog()
         {
             var catalog = new ModuleCatalog();
-            catalog.AddModule(typeof(ThemesModule));
-            catalog.AddModule(typeof(BackupModule));
             var servicesModule = typeof(ServicesModule);
             catalog.AddModule(servicesModule);
             var mainModule = typeof(MainModule);

@@ -17,17 +17,43 @@
                         </Binding>
                     </ContentPresenter.Content>
                 </ContentPresenter>
-                <Button Margin="8,0,0,0" 
+                <Button DockPanel.Dock="Right" 
+                                                Margin="6,0,0,0"
+                                                Width="13"
+                                                Height="13"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                x:Name="_CloseTabButton"
                         Command="{Binding Path=Model.CloseTabCommand, ElementName=ThisControl}" 
-                        CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type TabItem}}}" 
-                        HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center">
-                    <Grid>
-                        <Canvas Width="8" Height="8">
-                            <Line X1="2" X2="6" Y1="2" Y2="6" Stroke="Black" StrokeThickness="1"/>
-                            <Line X1="6" X2="2" Y1="2" Y2="6" Stroke="Black" StrokeThickness="1"/>
-                        </Canvas>
-                    </Grid>
+                        CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type TabItem}}}">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+
+                                        <Border Background="Transparent" x:Name="_border" CornerRadius="2" BorderThickness="1"
+                                                                        HorizontalAlignment="Center"
+                                                                        VerticalAlignment="Center">
+                                            <Canvas Width="10" Height="10">
+                                                <Line x:Name="_line1" X1="2" X2="8" Y1="2" Y2="8" Stroke="Gray" StrokeThickness="1"/>
+                                                <Line x:Name="_line2" X1="8" X2="2" Y1="2" Y2="8" Stroke="Gray" StrokeThickness="1"/>
+                                            </Canvas>
+                                        </Border>
+
+
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="_line1" Property="Stroke" Value="Crimson" />
+                                                <Setter TargetName="_line2" Property="Stroke" Value="Crimson" />
+                                                <Setter TargetName="_border" Property="BorderBrush" Value="#CCCCCC" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
                 </Button>
             </StackPanel>
         </DataTemplate>

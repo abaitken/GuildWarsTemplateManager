@@ -7,7 +7,6 @@ using System.Windows.Input;
 using Microsoft.Practices.Composite.Presentation.Commands;
 using TemplateManager.Common.ViewModel;
 using TemplateManager.Infrastructure;
-using TemplateManager.Modules.Themes;
 using MessageBox=System.Windows.MessageBox;
 
 namespace TemplateManager.Options
@@ -16,16 +15,14 @@ namespace TemplateManager.Options
     {
         private readonly IOptionsView view;
         private readonly IApplicationSettings applicationSettings;
-        private readonly IThemeManager themeManager;
         private string archiveFolder;
         private string deleteBehaviour;
         private string templatefolder;
 
-        public OptionsViewModel(IOptionsView view, IApplicationSettings applicationSettings, IThemeManager themeManager)
+        public OptionsViewModel(IOptionsView view, IApplicationSettings applicationSettings)
         {
             this.view = view;
             this.applicationSettings = applicationSettings;
-            this.themeManager = themeManager;
             view.Model = this;
 
             GenerateCommands();
@@ -38,9 +35,6 @@ namespace TemplateManager.Options
         {
             if (applicationSettings.TemplateFolder != TemplateFolder)
                 applicationSettings.TemplateFolder = TemplateFolder;
-
-            if(applicationSettings.Theme != SelectedTheme)
-                applicationSettings.Theme = SelectedTheme;
 
             applicationSettings.DeleteBehaviour = DeleteBehaviour;
             applicationSettings.ArchiveFolder = ArchiveFolder;
@@ -106,8 +100,6 @@ namespace TemplateManager.Options
         }
 
 
-        public string SelectedTheme { get; set; }
-
         public string DeleteBehaviour
         {
             get { return deleteBehaviour; }
@@ -120,11 +112,6 @@ namespace TemplateManager.Options
                 SendPropertyChanged("DeleteBehaviour");
                 SendPropertyChanged("IsDeleteBehaviourSettingValid");
             }
-        }
-
-        public IEnumerable<string> AvailableThemes
-        {
-            get { return themeManager.AvailableThemes; }
         }
 
         #endregion
@@ -195,7 +182,6 @@ namespace TemplateManager.Options
             TemplateFolder = applicationSettings.TemplateFolder;
             ArchiveFolder = applicationSettings.ArchiveFolder;
             DeleteBehaviour = applicationSettings.DeleteBehaviour;
-            SelectedTheme = applicationSettings.Theme;
         }
 
         public string HeaderText

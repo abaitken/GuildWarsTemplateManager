@@ -68,6 +68,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\TemplateManager.Modules.Services\TemplateManager.Data.xml">
+      <Link>TemplateManager.Data.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SimpleTest\build1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -17,10 +17,5 @@ namespace TemplateManager.UpdateCheck
             get { return DataContext as IUpdateCheckViewModel; }
             set { DataContext = value; }
         }
-
-        public void Display()
-        {
-            ShowDialog();
-        }
     }
 }

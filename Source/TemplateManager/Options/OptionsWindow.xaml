@@ -38,15 +38,6 @@
                             Command="{Binding BrowseForArchiveFolderCommand}" />
             </Grid>
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <TextBlock Text="Theme:" VerticalAlignment="Center"/>
-                <ComboBox Grid.Column="1" SelectedItem="{Binding SelectedTheme}" ItemsSource="{Binding AvailableThemes}" />
-            </Grid>
-
         </StackPanel>
 
         <Grid Grid.Row="2">

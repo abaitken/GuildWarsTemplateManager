@@ -144,8 +144,8 @@ namespace TemplateManager.DataFetcher.Tests
 
             var var = result.Progression.Vars.First();
             Assert.AreEqual("Heal", var.Name);
-            Assert.AreEqual(82, var.Level0);
-            Assert.AreEqual(172, var.MaxLevel);
+            Assert.AreEqual("82", var.Level0);
+            Assert.AreEqual("172", var.MaxLevel);
         }
 
         [TestMethod]

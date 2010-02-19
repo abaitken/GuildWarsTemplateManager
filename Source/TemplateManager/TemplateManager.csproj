@@ -185,10 +185,6 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Template.Modules.Backup\TemplateManager.Modules.Backup.csproj">
-      <Project>{F13EB40F-C081-49FB-A8BC-782E45FCC921}</Project>
-      <Name>TemplateManager.Modules.Backup</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TemplateManager.Common\TemplateManager.Common.csproj">
       <Project>{5D573659-1A65-4112-9EED-1BF70DB94F22}</Project>
       <Name>TemplateManager.Common</Name>
@@ -212,10 +208,6 @@
     <ProjectReference Include="..\TemplateManager.Modules.SkillsView\TemplateManager.Modules.SkillsView.csproj">
       <Project>{EACC47B1-C3C2-442E-9F4D-1E65C34F8D9A}</Project>
       <Name>TemplateManager.Modules.SkillsView</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TemplateManager.Modules.Themes\TemplateManager.Modules.Themes.csproj">
-      <Project>{F853FDF1-C4E4-467C-A764-5242DACEB5BA}</Project>
-      <Name>TemplateManager.Modules.Themes</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -12,6 +12,7 @@ namespace TemplateManager.Tests
 
         [TestMethod]
         [DeploymentItem("SimpleTest", "SimpleTest")]
+        [DeploymentItem("TemplateManager.Data.xml")]
         public void CanGetRelationalBuildData()
         {
             var buildPath = Path.Combine(Environment.CurrentDirectory, "SimpleTest");

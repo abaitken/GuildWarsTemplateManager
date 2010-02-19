@@ -10,7 +10,6 @@ namespace TemplateManager
         private const string DeleteBehaviourSettingsName = "DeleteBehaviour";
         private const string ArchiveFolderSettingsName = "ArchiveFolder";
         private const string TemplateFolderSettingName = "TemplateFolder";
-        private const string ThemeSettingsName = "Theme";
 
 
         #region IApplicationSettings Members
@@ -20,13 +19,6 @@ namespace TemplateManager
         {
             get { return Get<string>(TemplateFolderSettingName, TemplateStoreLocator.FindBuildStorePath); }
             set { this[TemplateFolderSettingName] = value; }
-        }
-
-        [UserScopedSetting]
-        public string Theme
-        {
-            get { return Get(ThemeSettingsName, () => "[Default]"); }
-            set { this[ThemeSettingsName] = value; }
         }
 
         [UserScopedSetting]
@@ -44,7 +36,6 @@ namespace TemplateManager
         }
 
         public event EventHandler TemplateFolderChanged;
-        public event EventHandler ThemeChanged;
         public event EventHandler ArchiveFolderChanged;
         public event EventHandler DeleteBehaviourChanged;
 
@@ -66,9 +57,6 @@ namespace TemplateManager
             {
                 case TemplateFolderSettingName:
                     RaiseChangedEvent(sender, TemplateFolderChanged);
-                    break;
-                case ThemeSettingsName:
-                    RaiseChangedEvent(sender, ThemeChanged);
                     break;
                 case ArchiveFolderSettingsName:
                     RaiseChangedEvent(sender, ArchiveFolderChanged);

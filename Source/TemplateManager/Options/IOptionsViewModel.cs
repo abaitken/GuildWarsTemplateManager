@@ -16,11 +16,8 @@ namespace TemplateManager.Options
         string ArchiveFolder { get; set; }
         bool IsDeleteBehaviourSettingValid { get; }
 
-        string SelectedTheme { get; set; }
-
         string DeleteBehaviour { get; set; }
         
-        IEnumerable<string> AvailableThemes { get; }
         IEnumerable<string> AvailableDeleteBehaviours { get; }
 
         ICommand ApplySettingsCommand { get; }
