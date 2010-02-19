@@ -1,7 +1,6 @@
-﻿<Window x:Class="TemplateManager.Options.OptionsWindow"
+﻿<UserControl x:Class="TemplateManager.Options.OptionsWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="{Binding WindowTitle}" SizeToContent="WidthAndHeight" MinHeight="250" MinWidth="450">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Grid Margin="10">
         <Grid.RowDefinitions>
@@ -24,11 +23,11 @@
                             Command="{Binding BrowseForTemplateFolderCommand}"  />
             </Grid>
 
-            <TextBlock Text="What will 'delete' do?" />
-            <ComboBox SelectedItem="{Binding DeleteBehaviour}" ItemsSource="{Binding AvailableDeleteBehaviours}" />
+            <TextBlock Visibility="Collapsed" Text="What will 'delete' do?" />
+            <ComboBox Visibility="Collapsed" SelectedItem="{Binding DeleteBehaviour}" ItemsSource="{Binding AvailableDeleteBehaviours}" />
 
-            <TextBlock Text="Archive folder:" />
-            <Grid>
+            <TextBlock Visibility="Collapsed" Text="Archive folder:" />
+            <Grid Visibility="Collapsed">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
@@ -56,18 +55,12 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
-            <UniformGrid Grid.Column="1" Columns="3" Rows="1">
-                <Button Command="{Binding UseDefaultsCommand}" 
-                            CommandParameter="{Binding View}">Restore _Defaults</Button>
+            <UniformGrid Grid.Column="1" Columns="2" Rows="1">
+                <Button Command="{Binding UseDefaultsCommand}">Restore _Defaults</Button>
 
                 <Button IsDefault="True" 
-                            Command="{Binding CloseWindowSuccessCommand}" 
-                            CommandParameter="{Binding View}">_OK</Button>
-
-                <Button IsCancel="True" 
-                            Command="{Binding CloseWindowCommand}" 
-                            CommandParameter="{Binding View}">_Cancel</Button>
+                            Command="{Binding ApplySettngsCommand}">_Apply</Button>
             </UniformGrid>
         </Grid>
     </Grid>
-</Window>
+</UserControl>

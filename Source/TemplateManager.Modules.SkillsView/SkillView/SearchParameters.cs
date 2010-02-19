@@ -13,8 +13,8 @@ namespace TemplateManager.Infrastructure.Events
             AnySecondaryProfession = true;
             
 
-            PrimaryProfessions = new ObservableCollection<Profession>();
-            SecondaryProfessions = new ObservableCollection<Profession>();
+            PrimaryProfessions = new ObservableCollection<IProfession>();
+            SecondaryProfessions = new ObservableCollection<IProfession>();
         }
 
         public string Name { get; set; }
@@ -24,8 +24,8 @@ namespace TemplateManager.Infrastructure.Events
         public bool ShowInvalidBuilds { get; set; }
         public bool ShowValidBuilds { get; set; }
         public bool AnyPrimaryProfession { get; set; }
-        public ObservableCollection<Profession> PrimaryProfessions { get; set; }
+        public ObservableCollection<IProfession> PrimaryProfessions { get; set; }
         public bool AnySecondaryProfession { get; set; }
-        public ObservableCollection<Profession> SecondaryProfessions { get; set; }
+        public ObservableCollection<IProfession> SecondaryProfessions { get; set; }
     }
 }

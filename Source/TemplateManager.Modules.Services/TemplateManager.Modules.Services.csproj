@@ -69,12 +69,12 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Web.Services" />
     <Reference Include="System.XML" />
-    <Reference Include="TemplateManager.Assets, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67a38c05e350ab2a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Libs\TemplateManager.Assets\TemplateManager.Assets.dll</HintPath>
-    </Reference>
     <Reference Include="WindowsBase">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
@@ -102,6 +102,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TemplateManager.Data.GuildWars\TemplateManager.Data.GuildWars.csproj">
+      <Project>{F8BF79D8-5153-4FAC-B229-461F905FA18E}</Project>
+      <Name>TemplateManager.Data.GuildWars</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TemplateManager.Infrastructure\TemplateManager.Infrastructure.csproj">
       <Project>{67BC7C95-AB1E-422D-9AD4-E34CA77460A9}</Project>
       <Name>TemplateManager.Infrastructure</Name>
@@ -144,6 +148,11 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>TemplateManager_Modules_Services_RemoteServices_TemplateManagerService</CachedSettingsPropName>
     </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TemplateManager.Data.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

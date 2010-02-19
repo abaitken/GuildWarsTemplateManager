@@ -1,9 +1,0 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TemplateManager.AssetBuilder.Properties" GeneratedClassName="Settings">
-  <Profiles />
-  <Settings>
-    <Setting Name="TemplateManager_AssetBuilder_localhost_TemplateManagerSkillDataService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://localhost/TemplateManagerSkillDataService/server.php</Value>
-    </Setting>
-  </Settings>
-</SettingsFile>

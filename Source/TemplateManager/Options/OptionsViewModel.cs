@@ -85,13 +85,7 @@ namespace TemplateManager.Options
             get { return Infrastructure.DeleteBehaviour.Values; }
         }
 
-        public string WindowTitle
-        {
-            get { return "Options"; }
-        }
-
-        public ICommand CloseWindowSuccessCommand { get; private set; }
-        public ICommand CloseWindowCommand { get; private set; }
+        public ICommand ApplySettingsCommand { get; private set; }
         public ICommand UseDefaultsCommand { get; private set; }
         public ICommand BrowseForArchiveFolderCommand { get; private set; }
         public ICommand BrowseForTemplateFolderCommand { get; private set; }
@@ -137,9 +131,8 @@ namespace TemplateManager.Options
 
         private void GenerateCommands()
         {
-            CloseWindowSuccessCommand = new DelegateCommand<Window>(OnOK);
-            CloseWindowCommand = new DelegateCommand<Window>(OnCancel);
-            UseDefaultsCommand = new DelegateCommand<Window>(OnResetSettings);
+            ApplySettingsCommand = new DelegateCommand<object>(OnApply);
+            UseDefaultsCommand = new DelegateCommand<object>(OnResetSettings);
             BrowseForArchiveFolderCommand = new DelegateCommand<object>(OnBrowseForArchiveFolder);
             BrowseForTemplateFolderCommand = new DelegateCommand<object>(OnBrowseForTemplateFolder);
         }
@@ -177,7 +170,7 @@ namespace TemplateManager.Options
             return fd.ShowDialog() == DialogResult.OK ? fd.SelectedPath : null;
         }
 
-        private void OnResetSettings(Window obj)
+        private void OnResetSettings(object obj)
         {
             if(
                 MessageBox.Show("Are you sure you want to restore the default settings?",
@@ -186,27 +179,15 @@ namespace TemplateManager.Options
                                 MessageBoxImage.Question) == MessageBoxResult.No)
                 return;
 
-            CloseWindow(obj, false);
             applicationSettings.Reset();
         }
 
-        private void OnOK(Window obj)
+        private void OnApply(object obj)
         {
             if(!IsDeleteBehaviourSettingValid || !IsTemplateFolderValid)
                 return;
 
-            CloseWindow(obj, true);
-        }
-
-        private static void CloseWindow(Window obj, bool result)
-        {
-            obj.DialogResult = result;
-            obj.Close();
-        }
-
-        private static void OnCancel(Window obj)
-        {
-            CloseWindow(obj, false);
+            WriteSetings();
         }
 
         private void ReadSettings()
@@ -215,6 +196,11 @@ namespace TemplateManager.Options
             ArchiveFolder = applicationSettings.ArchiveFolder;
             DeleteBehaviour = applicationSettings.DeleteBehaviour;
             SelectedTheme = applicationSettings.Theme;
+        }
+
+        public string HeaderText
+        {
+            get { return "Options"; }
         }
     }
 }

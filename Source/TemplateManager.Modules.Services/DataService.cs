@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using TemplateManager.Assets;
+using TemplateManager.Data.GuildWars;
 using TemplateManager.Infrastructure.Model;
 using TemplateManager.Infrastructure.Services;
 
@@ -8,75 +8,70 @@ namespace TemplateManager.Modules.Services
 {
     internal class DataService : IDataService
     {
+        private readonly Model data;
+
         public DataService()
         {
-            var assetLoader = new AssetLoader();
-            var data = assetLoader.Load();
-
-            Professions = GetProfessions(data).ToList();
-            Skills = GetSkills(data).ToList();
-            Attributes = GetAttributes(data).ToList();
+            data = Model.Load();
         }
 
         #region IDataService Members
 
-        public IEnumerable<Profession> Professions { get; private set; }
-
-        public IEnumerable<Profession> PrimaryProfessions
+        public IEnumerable<IProfession> Professions 
         {
             get
             {
-                return from profession in Professions
-                       where profession.ValidPrimary
-                       orderby profession.Name
-                       select profession;
+                return from item in data.Professions
+                       where item.IsValid
+                       select item as IProfession;
             }
         }
 
-        public IEnumerable<Profession> SecondaryProfessions
+        public IEnumerable<IProfession> PrimaryProfessions
         {
             get
             {
-                return from profession in Professions
-                       where profession.ValidSecondary
-                       orderby profession.Name
-                       select profession;
+                return from item in Professions
+                       where item.IsValidPrimary
+                       select item;
             }
         }
 
-        public Profession EmptyProfession
+        public IEnumerable<IProfession> SecondaryProfessions
         {
-            get { return Professions.First(i => i.NativeId == 0); }
+            get
+            {
+                return from item in Professions
+                       select item;
+                       
+            }
         }
 
-        public IEnumerable<Skill> Skills { get; private set; }
+        public IProfession EmptyProfession
+        {
+            get { return data.Professions.First(i => i.TemplateId == 0); }
+        }
 
-        public IEnumerable<SkillAttribute> Attributes { get; private set; }
+        public IEnumerable<ISkill> Skills
+        {
+            get
+            {
+                return from item in data.Skills
+                       where item.IsValid
+                       select item as ISkill;
+            }
+        }
+
+        public IEnumerable<IAttribute> Attributes 
+        { 
+            get
+            {
+                return from item in data.Attributes
+                       where item.IsValid
+                       select item as IAttribute;
+            }
+        }
 
         #endregion
-
-        private static IEnumerable<SkillAttribute> GetAttributes(NativeData factory)
-        {
-            return from nativeItem in factory.Attributes
-                   select new SkillAttribute(nativeItem.Name, nativeItem.AttributeId, nativeItem.IsPrimary);
-        }
-
-        private static IEnumerable<Skill> GetSkills(NativeData factory)
-        {
-            return from nativeItem in factory.Skills
-                   select
-                       new Skill(nativeItem.SkillId, nativeItem.Name, nativeItem.Image, nativeItem.Description);
-        }
-
-        private static IEnumerable<Profession> GetProfessions(NativeData factory)
-        {
-            return from nativeItem in factory.Professions
-                   select
-                       new Profession(nativeItem.ProfessionId,
-                                      nativeItem.Name,
-                                      nativeItem.Image,
-                                      nativeItem.ValidPrimary,
-                                      nativeItem.ValidSecondary);
-        }
     }
 }

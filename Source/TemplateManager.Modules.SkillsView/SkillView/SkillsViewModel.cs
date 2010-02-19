@@ -48,12 +48,12 @@ namespace TemplateManager.Modules.SkillsView.SkillView
             }
         }
 
-        public IEnumerable<Profession> PrimaryProfessions
+        public IEnumerable<IProfession> PrimaryProfessions
         {
             get { return dataService.PrimaryProfessions; }
         }
 
-        public IEnumerable<Profession> SecondaryProfessions
+        public IEnumerable<IProfession> SecondaryProfessions
         {
             get { return dataService.SecondaryProfessions; }
         }

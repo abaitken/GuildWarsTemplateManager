@@ -36,20 +36,32 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libs\Moq\Moq.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileCacheManagerTests.cs" />
     <Compile Include="GreenTemplateParserTests.cs" />
+    <Compile Include="ImageSerializationTests.cs" />
     <Compile Include="ParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TranslationProviderTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="LocalizedArticles\Localized assassin skill names.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -88,6 +100,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TemplateManager.Common\TemplateManager.Common.csproj">
+      <Project>{5D573659-1A65-4112-9EED-1BF70DB94F22}</Project>
+      <Name>TemplateManager.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TemplateManager.DataFetcher\TemplateManager.DataFetcher.csproj">
       <Project>{139D755B-84F3-447B-AD13-3D4E94F05BB2}</Project>
       <Name>TemplateManager.DataFetcher</Name>

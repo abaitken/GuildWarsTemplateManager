@@ -5,11 +5,11 @@ namespace TemplateManager.Infrastructure.Services
 {
     public interface IDataService
     {
-        IEnumerable<SkillAttribute> Attributes { get; }
-        IEnumerable<Profession> SecondaryProfessions { get; }
-        IEnumerable<Skill> Skills { get; }
-        Profession EmptyProfession { get; }
-        IEnumerable<Profession> PrimaryProfessions { get; }
-        IEnumerable<Profession> Professions { get; }
+        IEnumerable<IAttribute> Attributes { get; }
+        IEnumerable<IProfession> SecondaryProfessions { get; }
+        IEnumerable<ISkill> Skills { get; }
+        IProfession EmptyProfession { get; }
+        IEnumerable<IProfession> PrimaryProfessions { get; }
+        IEnumerable<IProfession> Professions { get; }
     }
 }

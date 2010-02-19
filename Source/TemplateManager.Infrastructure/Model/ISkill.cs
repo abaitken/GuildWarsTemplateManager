@@ -3,20 +3,6 @@ using System.Windows.Media.Imaging;
 
 namespace TemplateManager.Infrastructure.Model
 {
-    public interface IProfession
-    {
-        int TemplateId { get; }
-        string Name { get; }
-        bool IsValid { get; }
-    }
-
-    public interface IAttribute
-    {
-        int TemplateId { get; }
-        string Name { get; }
-        bool IsValid { get; }
-    }
-
     public interface ISkill
     {
         int TemplateId { get; }

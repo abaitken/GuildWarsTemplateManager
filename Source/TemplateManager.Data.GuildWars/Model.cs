@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Media.Imaging;
+using TemplateManager.Common;
 using TemplateManager.Infrastructure.Model;
 using System.Threading;
 using System.Globalization;
@@ -11,6 +12,15 @@ namespace TemplateManager.Data.GuildWars
 {
     public partial class Model
     {
+        public const string DataFile = "TemplateManager.Data.xml";
+
+        public static Model Load()
+        {
+            var result = new Model();
+            result.ReadXml(DataFile);
+            return result;
+        }
+
         #region Nested type: SkillsRow
 
         public partial class SkillsRow : ISkill
@@ -237,6 +247,11 @@ namespace TemplateManager.Data.GuildWars
                 get { return !IsTemplateIdNull(); }
             }
 
+            public BitmapImage Image
+            {
+                get { return GetImagesRows().First().GetImage(); }
+            }
+
             #endregion
         }
 
@@ -266,16 +281,7 @@ namespace TemplateManager.Data.GuildWars
 
             private static BitmapImage GetImage(byte[] source)
             {
-                var stream = new MemoryStream();
-                stream.Write(source, 0, source.Length);
-
-                var result = new BitmapImage();
-                result.BeginInit();
-                result.StreamSource = stream;
-                result.EndInit();
-                result.Freeze();
-
-                return result;
+                return ImageSerializer.CreateImage(source);
             }
 
         }

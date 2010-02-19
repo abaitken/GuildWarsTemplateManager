@@ -6,6 +6,9 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using TemplateManager.Common;
 using TemplateManager.DataFetcher.Logging;
 using TemplateManager.DataFetcher.Model;
 using System.Text;
@@ -14,7 +17,6 @@ namespace TemplateManager.DataFetcher.DataTargets
 {
     internal class TemplateManagerTarget : IDataTarget
     {
-        private const string dataFile = "TemplateManager.Data.GuildWars.xml";
         private readonly ILogger logger;
         private readonly Data.GuildWars.Model model;
 
@@ -28,18 +30,7 @@ namespace TemplateManager.DataFetcher.DataTargets
 
         public void Update(IEnumerable<Skill> data)
         {
-
-            if(File.Exists(dataFile))
-            {
-                logger.Log(GetType(), "Loading previous data", LogSeverity.InformationHigh);
-                model.ReadXml(dataFile);
-                model.AcceptChanges();
-            }
-            model.RelatedSkills.Clear();
-            model.SkillsRemoves_Lookup.Clear();
-            model.SkillsCauses_Lookup.Clear();
-            model.SkillName.Clear();
-            model.SkillDescription.Clear();
+            PrepareExistingData();
 
             logger.Log(GetType(), "Building data structures", LogSeverity.InformationHigh);
             logger.Log(GetType(), "... Updating Removes", LogSeverity.InformationHigh);
@@ -82,9 +73,48 @@ namespace TemplateManager.DataFetcher.DataTargets
             CompactImages();
 
             logger.Log(GetType(), "Writing data to disk", LogSeverity.InformationHigh);
-            model.WriteXml(dataFile, XmlWriteMode.IgnoreSchema);
+            model.WriteXml(Data.GuildWars.Model.DataFile, XmlWriteMode.IgnoreSchema);
 
             logger.Log(GetType(), "Update complete", LogSeverity.InformationHigh);
+        }
+
+        private void PrepareExistingData()
+        {
+            if (File.Exists(Data.GuildWars.Model.DataFile))
+            {
+                logger.Log(GetType(), "Loading previous data", LogSeverity.InformationHigh);
+                model.ReadXml(Data.GuildWars.Model.DataFile);
+            }
+
+
+            logger.Log(GetType(), "Preparing model", LogSeverity.InformationHigh);
+            foreach(var row in model.Images)
+            {
+                if (row.ProfessionsRow != null)
+                    row.ProfessionsRow.SetImageRefIdNull();
+
+                var parentRows = row.GetParentRows("Skills_Images");
+                if (parentRows != null && parentRows.Count() > 0)
+                {
+                    foreach(var parentRow in parentRows)
+                        ((Data.GuildWars.Model.SkillsRow) parentRow).SetImageRefIdNull();
+                }
+            }
+
+            model.Images.Clear();
+
+            model.RelatedSkills.Clear();
+            model.SkillsRemoves_Lookup.Clear();
+            model.SkillsCauses_Lookup.Clear();
+            model.SkillName.Clear();
+            model.SkillDescription.Clear();
+            model.SkillsCategories_Lookup.Clear();
+            
+
+            model.WriteXml("temp.xml", XmlWriteMode.IgnoreSchema);
+            model.Clear();
+            model.ReadXml("temp.xml", XmlReadMode.Fragment);
+            model.AcceptChanges();
         }
 
         private void UpdateSkillCategories(IEnumerable<Skill> enumerable)
@@ -196,7 +226,7 @@ namespace TemplateManager.DataFetcher.DataTargets
             }
         }
 
-        private string CreateDataString(byte[] bytes)
+        private static string CreateDataString(byte[] bytes)
         {
             return Encoding.Default.GetString(bytes);
         }
@@ -342,9 +372,9 @@ namespace TemplateManager.DataFetcher.DataTargets
             if (!File.Exists(Path.Combine("images", fileName)))
                 return null;
 
-            var imageData = GetImage(fileName, ImageFormat.Jpeg);
+            var imageData = GetImage(fileName);
 
-            var currentImage = model.Images.First(i => CreateDataString(i.Data) == CreateDataString(imageData));
+            var currentImage = model.Images.FirstOrDefault(i => CreateDataString(i.Data) == CreateDataString(imageData));
 
             if (currentImage == null)
             {
@@ -385,18 +415,11 @@ namespace TemplateManager.DataFetcher.DataTargets
                 if(!File.Exists(Path.Combine("images", name)))
                     continue;
 
-                var imageData = GetImage(name, ImageFormat.Png);
+                var imageData = GetImage(name);
 
-                if(profession.IsImageRefIdNull())
-                {
-                    var row = model.Images.AddImagesRow(imageData);
-                    profession.ImageRefId = row.Id;
-                }
-                else
-                {
-                    var row = profession.GetImagesRows().First();
-                    row.Data = imageData;
-                }
+
+                var row = model.Images.AddImagesRow(imageData);
+                profession.ImageRefId = row.Id;
             }
         }
 
@@ -615,17 +638,9 @@ namespace TemplateManager.DataFetcher.DataTargets
                 v => model.Removes.AddRemovesRow(v));
         }
 
-        private static byte[] GetImage(Image image, ImageFormat imageFormat)
+        private static byte[] GetImage(string imageName)
         {
-            var ms = new MemoryStream();
-            image.Save(ms, imageFormat);
-            return ms.ToArray();
-        }
-
-        private static byte[] GetImage(string imageName, ImageFormat imageFormat)
-        {
-            var image = Image.FromFile(Path.Combine("images", imageName));
-            return GetImage(image, imageFormat);
+            return ImageSerializer.GetImage(string.Format(@"images\{0}", imageName));
         }
     }
 }

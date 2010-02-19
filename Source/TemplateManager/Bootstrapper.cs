@@ -4,6 +4,7 @@ using Microsoft.Practices.Composite.UnityExtensions;
 using Microsoft.Practices.Unity;
 using TemplateManager.Common;
 using TemplateManager.Infrastructure;
+using TemplateManager.Modules.DataExplorer;
 using TemplateManager.Modules.Performance;
 using TemplateManager.Modules.Services;
 using TemplateManager.Modules.SkillsView;
@@ -58,9 +59,12 @@ namespace TemplateManager
             var catalog = new ModuleCatalog();
             catalog.AddModule(typeof(ThemesModule));
             catalog.AddModule(typeof(BackupModule));
-            catalog.AddModule(typeof(ServicesModule));
-            catalog.AddModule(typeof(MainModule), "ServicesModule");
-            catalog.AddModule(typeof(SkillsViewModule), "ServicesModule", "MainModule");
+            var servicesModule = typeof(ServicesModule);
+            catalog.AddModule(servicesModule);
+            var mainModule = typeof(MainModule);
+            catalog.AddModule(mainModule, servicesModule.Name);
+            catalog.AddModule(typeof(SkillsViewModule), servicesModule.Name, mainModule.Name);
+            catalog.AddModule(typeof(DataExplorerModule), servicesModule.Name);
             catalog.AddModule(typeof(PerformanceModule));
             return catalog;
         }

@@ -8,9 +8,9 @@ namespace TemplateManager.Infrastructure.Model
     public class SkillTemplate
     {
         private readonly string buildFile;
-        private readonly Profession primaryProfession;
-        private readonly Profession secondaryProfession;
-        private readonly IList<Skill> skills;
+        private readonly IProfession primaryProfession;
+        private readonly IProfession secondaryProfession;
+        private readonly IList<ISkill> skills;
         private readonly IEnumerable<AttributeValue> attributes;
         private string author;
         private string tags;
@@ -18,13 +18,13 @@ namespace TemplateManager.Infrastructure.Model
         private bool metaLoaded;
         private readonly bool isInvalid;
 
-        public SkillTemplate(string buildFile, Profession emptyProfession)
-            : this(buildFile, emptyProfession, emptyProfession, Enumerable.Empty<Skill>().ToList(), Enumerable.Empty<AttributeValue>())
+        public SkillTemplate(string buildFile, IProfession emptyProfession)
+            : this(buildFile, emptyProfession, emptyProfession, Enumerable.Empty<ISkill>().ToList(), Enumerable.Empty<AttributeValue>())
         {
             isInvalid = true;
         }
 
-        public SkillTemplate(string buildFile, Profession primaryProfession, Profession secondaryProfession, IList<Skill> skills, IEnumerable<AttributeValue> attributes)
+        public SkillTemplate(string buildFile, IProfession primaryProfession, IProfession secondaryProfession, IList<ISkill> skills, IEnumerable<AttributeValue> attributes)
         {
             if (string.IsNullOrEmpty(buildFile))
                 throw new ArgumentNullException("buildFile");
@@ -50,9 +50,9 @@ namespace TemplateManager.Infrastructure.Model
 
         public string BuildFile { get { return buildFile; } }
         public string Name { get { return Path.GetFileNameWithoutExtension(buildFile); } }
-        public Profession PrimaryProfession { get { return primaryProfession; } }
-        public Profession SecondaryProfession { get { return secondaryProfession; } }
-        public IList<Skill> Skills { get { return skills; } }
+        public IProfession PrimaryProfession { get { return primaryProfession; } }
+        public IProfession SecondaryProfession { get { return secondaryProfession; } }
+        public IList<ISkill> Skills { get { return skills; } }
         public IEnumerable<AttributeValue> Attributes { get { return attributes; } }
 
         public bool IsInvalid { get { return isInvalid; } }
@@ -107,8 +107,8 @@ namespace TemplateManager.Infrastructure.Model
                     return skillKey;
 
                 var orderedResult = from skill in Skills
-                                    orderby skill.NativeId
-                                    select skill.NativeId;
+                                    orderby skill.TemplateId
+                                    select skill.TemplateId;
 
                 skillKey = HashCodeBuilder.Build(orderedResult);
 

@@ -13,23 +13,20 @@ namespace TemplateManager
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-
 #if !DEBUG
-            AppDomain.CurrentDomain.UnhandledException += CurrentDomainUnhandledException;
+            Dispatcher.UnhandledException += Dispatcher_UnhandledException;
 #endif
-
             var boostrapper = new Bootstrapper(e.Args);
             boostrapper.Run();
         }
 
-        static void CurrentDomainUnhandledException(object sender, UnhandledExceptionEventArgs e)
+        static void Dispatcher_UnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
         {
             var reporter = new ExceptionReporter();
             reporter.Config.EmailReportAddress = "logaangarius@hotmail.com";
             reporter.Config.ShowButtonIcons = false;
 
-            var exception = e.ExceptionObject as Exception;
-            reporter.Show(exception);
+            reporter.Show(e.Exception);
 
             Environment.Exit(1);
         }

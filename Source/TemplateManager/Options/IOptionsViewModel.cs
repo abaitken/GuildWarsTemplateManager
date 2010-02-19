@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using System.Windows.Input;
+using TemplateManager.Infrastructure.Interfaces;
 
 namespace TemplateManager.Options
 {
-    public interface IOptionsViewModel
+    public interface IOptionsViewModel : IHeadedContent
     {
         IOptionsView View { get; }
 
@@ -22,11 +23,7 @@ namespace TemplateManager.Options
         IEnumerable<string> AvailableThemes { get; }
         IEnumerable<string> AvailableDeleteBehaviours { get; }
 
-
-        string WindowTitle { get; }
-
-        ICommand CloseWindowSuccessCommand { get; }
-        ICommand CloseWindowCommand { get; }
+        ICommand ApplySettingsCommand { get; }
         ICommand UseDefaultsCommand { get; }
         ICommand BrowseForArchiveFolderCommand { get; }
         ICommand BrowseForTemplateFolderCommand { get; }

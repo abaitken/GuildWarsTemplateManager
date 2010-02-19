@@ -197,6 +197,10 @@
       <Project>{67BC7C95-AB1E-422D-9AD4-E34CA77460A9}</Project>
       <Name>TemplateManager.Infrastructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TemplateManager.Modules.DataExplorer\TemplateManager.Modules.DataExplorer.csproj">
+      <Project>{0F2301AE-648A-4F3F-A06B-06BA4529A725}</Project>
+      <Name>TemplateManager.Modules.DataExplorer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TemplateManager.Modules.Performance\TemplateManager.Modules.Performance.csproj">
       <Project>{324F15D5-5E26-447E-BC8D-76BF37B7CCBA}</Project>
       <Name>TemplateManager.Modules.Performance</Name>

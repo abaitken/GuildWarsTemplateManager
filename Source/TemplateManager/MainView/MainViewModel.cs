@@ -4,8 +4,10 @@ using System.Windows.Input;
 using Microsoft.Practices.Composite.Presentation.Commands;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
+using TemplateManager.Common.Commands;
 using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Services;
+using TemplateManager.Modules.DataExplorer.Presentation.DataExplorer;
 using TemplateManager.Modules.SkillsView.DuplicateTemplate;
 using TemplateManager.Modules.SkillsView.SkillView;
 using TemplateManager.UpdateCheck;
@@ -56,6 +58,7 @@ namespace TemplateManager.MainView
         public ICommand DuplicateTemplatesViewCommand { get; private set; }
         public ICommand CloseTabCommand { get; private set; }
         public ICommand ShowUpdateCheckWindowCommand { get; private set; }
+        public ICommand ExploreDataCommand { get; private set; }
 
         public void OnViewLoaded()
         {
@@ -77,15 +80,21 @@ namespace TemplateManager.MainView
 
         private void GenerateCommands()
         {
-            ShowOptionsCommand = new DelegateCommand<object>(ShowOptionsWindow);
-            HelpCommand = new DelegateCommand<object>(OnHelpRequested);
-            AboutCommand = new DelegateCommand<object>(ShowAboutWindow);
+            ShowOptionsCommand = new DelegateCommand<string>(ShowOptionsWindow);
+            HelpCommand = new DelegateCommand(OnHelpRequested);
+            AboutCommand = new DelegateCommand(ShowAboutWindow);
             CloseWindowCommand = new DelegateCommand<Window>(OnCloseWindow);
-            HelpTopicsCommand = new DelegateCommand<object>(OnHelpTopicsRequested);
+            HelpTopicsCommand = new DelegateCommand(OnHelpTopicsRequested);
             TemplatesViewCommand = new DelegateCommand<string>(OnShowTemplates);
             DuplicateTemplatesViewCommand = new DelegateCommand<string>(OnShowDuplicateTemplates);
             CloseTabCommand = new DelegateCommand<TabItem>(OnCloseTab);
-            ShowUpdateCheckWindowCommand = new DelegateCommand<object>(DisplayUpdateNotification);
+            ShowUpdateCheckWindowCommand = new DelegateCommand(DisplayUpdateNotification);
+            ExploreDataCommand = new DelegateCommand<string>(OnExploreData);
+        }
+
+        private void OnExploreData(string regionName)
+        {
+            ShowView<IDataExplorerView, IDataExplorerViewModel>(regionName, vm => vm.View);
         }
 
         private void OnCloseTab(TabItem tabItem)
@@ -139,19 +148,14 @@ namespace TemplateManager.MainView
             obj.Close();
         }
 
-        private static void OnHelpRequested(object obj)
+        private static void OnHelpRequested()
         {
             MessageBox.Show("Help is unavailable");
         }
 
-        private static void OnHelpTopicsRequested(object obj)
+        private static void OnHelpTopicsRequested()
         {
             MessageBox.Show("Help topics are unavailable");
-        }
-
-        private void DisplayUpdateNotification(object obj)
-        {
-            DisplayUpdateNotification();
         }
 
         private void DisplayUpdateNotification()
@@ -160,7 +164,7 @@ namespace TemplateManager.MainView
             updateCheckView.Display();
         }
 
-        private void ShowAboutWindow(object obj)
+        private void ShowAboutWindow()
         {
             var view = container.Resolve<IAboutViewModel>().View;
 
@@ -173,13 +177,9 @@ namespace TemplateManager.MainView
             view.ShowDialog();
         }
 
-        private void ShowOptionsWindow(object obj)
+        private void ShowOptionsWindow(string regionName)
         {
-            var window = container.Resolve<IOptionsViewModel>().View;
-            var windowResult = window.ShowDialog();
-
-            if (windowResult.HasValue && windowResult.Value)
-                window.Model.WriteSetings();
+            ShowView<IOptionsView, IOptionsViewModel>(regionName, vm => vm.View);
         }
     }
 
