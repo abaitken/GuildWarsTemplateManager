@@ -5,7 +5,6 @@ using System.Windows.Data;
 using System.Windows.Input;
 using TemplateManager.Common.Commands;
 using TemplateManager.Common.ViewModel;
-using TemplateManager.Infrastructure.Events;
 using TemplateManager.Infrastructure.Model;
 using TemplateManager.Infrastructure.Services;
 
@@ -16,7 +15,16 @@ namespace TemplateManager.Modules.SkillsView.SkillView
         private readonly IDataService dataService;
         private readonly ISkillTemplateService service;
         private readonly ISkillsView view;
-        private SearchParameters searchParameters = new SearchParameters();
+        private ICollectionView collectionView;
+        private bool searchAnyPrimaryProfession;
+        private bool searchAnySecondaryProfession;
+        private string searchAuthor;
+        private string searchName;
+        private string searchNotes;
+        private string searchTags;
+        private IList<IProfession> selectedPrimaryProfessions;
+        private IList<IProfession> selectedSecondaryProfessions;
+        private bool? showValidBuilds;
 
         public SkillsViewModel(ISkillsView view,
                                IServiceController controller,
@@ -25,25 +33,15 @@ namespace TemplateManager.Modules.SkillsView.SkillView
             this.view = view;
             this.dataService = dataService;
             service = controller.Service;
+
             GenerateCommands();
+            ResetFilters();
+            CreateView();
 
 
             controller.TemplatesChanged += ServiceBuildsChanged;
 
             view.Model = this;
-        }
-
-        public SearchParameters SearchParameters
-        {
-            get { return searchParameters; }
-            set
-            {
-                if(searchParameters == value)
-                    return;
-
-                searchParameters = value;
-                SendPropertyChanged("SearchParameters");
-            }
         }
 
         public IEnumerable<IProfession> PrimaryProfessions
@@ -56,6 +54,130 @@ namespace TemplateManager.Modules.SkillsView.SkillView
             get { return dataService.SecondaryProfessions; }
         }
 
+        public bool? ShowValidBuilds
+        {
+            get { return showValidBuilds; }
+            set
+            {
+                if(showValidBuilds == value)
+                    return;
+
+                showValidBuilds = value;
+                SendPropertyChanged("ShowValidBuilds");
+            }
+        }
+
+
+        public bool SearchAnyPrimaryProfession
+        {
+            get { return searchAnyPrimaryProfession; }
+            set
+            {
+                if(searchAnyPrimaryProfession == value)
+                    return;
+
+                searchAnyPrimaryProfession = value;
+                SendPropertyChanged("SearchAnyPrimaryProfession");
+            }
+        }
+
+
+        public bool SearchAnySecondaryProfession
+        {
+            get { return searchAnySecondaryProfession; }
+            set
+            {
+                if(searchAnySecondaryProfession == value)
+                    return;
+
+                searchAnySecondaryProfession = value;
+                SendPropertyChanged("SearchAnySecondaryProfession");
+            }
+        }
+
+
+        public IList<IProfession> SelectedSecondaryProfessions
+        {
+            get { return selectedSecondaryProfessions; }
+            set
+            {
+                if(selectedSecondaryProfessions == value)
+                    return;
+
+                selectedSecondaryProfessions = value;
+                SendPropertyChanged("SelectedSecondaryProfessions");
+            }
+        }
+
+
+        public IList<IProfession> SelectedPrimaryProfessions
+        {
+            get { return selectedPrimaryProfessions; }
+            set
+            {
+                if(selectedPrimaryProfessions == value)
+                    return;
+
+                selectedPrimaryProfessions = value;
+                SendPropertyChanged("SelectedPrimaryProfessions");
+            }
+        }
+
+
+        public string SearchName
+        {
+            get { return searchName; }
+            set
+            {
+                if(searchName == value)
+                    return;
+
+                searchName = value;
+                SendPropertyChanged("SearchName");
+            }
+        }
+
+
+        public string SearchTags
+        {
+            get { return searchTags; }
+            set
+            {
+                if(searchTags == value)
+                    return;
+
+                searchTags = value;
+                SendPropertyChanged("SearchTags");
+            }
+        }
+
+        public string SearchNotes
+        {
+            get { return searchNotes; }
+            set
+            {
+                if(searchNotes == value)
+                    return;
+
+                searchNotes = value;
+                SendPropertyChanged("SearchNotes");
+            }
+        }
+
+
+        public string SearchAuthor
+        {
+            get { return searchAuthor; }
+            set
+            {
+                if(searchAuthor == value)
+                    return;
+
+                searchAuthor = value;
+                SendPropertyChanged("SearchAuthor");
+            }
+        }
+
         #region ISkillsViewModel Members
 
         public ISkillsView View
@@ -65,13 +187,14 @@ namespace TemplateManager.Modules.SkillsView.SkillView
 
         public ICollectionView Builds
         {
-            get
+            get { return collectionView; }
+            set
             {
-                var collectionView = CollectionViewSource.GetDefaultView(service.AllTemplates);
+                if(collectionView == value)
+                    return;
 
-                collectionView.Filter = new Predicate<object>(MatchBuild);
-
-                return collectionView;
+                collectionView = value;
+                SendPropertyChanged("Builds");
             }
         }
 
@@ -86,17 +209,35 @@ namespace TemplateManager.Modules.SkillsView.SkillView
 
         #endregion
 
+        private void CreateView()
+        {
+            var defaultView = CollectionViewSource.GetDefaultView(service.AllTemplates);
+            defaultView.Filter = MatchBuild;
+
+            Builds = defaultView;
+        }
+
         private void GenerateCommands()
         {
             SearchCommand = new DelegateCommand(OnSearch);
-            ResetCommand = new DelegateCommand(OnReset);
+            ResetCommand = new DelegateCommand(ResetFilters);
         }
 
-        private void OnReset()
+        private void ResetFilters()
         {
-            SearchParameters = new SearchParameters();
+            ShowValidBuilds = null;
+            SearchAnyPrimaryProfession = true;
+            SearchAnySecondaryProfession = true;
+            SelectedPrimaryProfessions = new List<IProfession>();
+            SelectedSecondaryProfessions = new List<IProfession>();
+            SearchNotes = string.Empty;
+            SearchName = string.Empty;
+            SearchTags = string.Empty;
+            SearchAuthor = string.Empty;
+
             RefreshBuilds();
         }
+
 
         private void OnSearch()
         {
@@ -105,12 +246,13 @@ namespace TemplateManager.Modules.SkillsView.SkillView
 
         private void RefreshBuilds()
         {
-            SendPropertyChanged("Builds");
+            if(collectionView != null)
+                collectionView.Refresh();
         }
 
         private void ServiceBuildsChanged(object sender, EventArgs e)
         {
-            SendPropertyChanged("Builds");
+            CreateView();
         }
 
         private bool MatchBuild(object buildObject)
@@ -120,24 +262,36 @@ namespace TemplateManager.Modules.SkillsView.SkillView
             if(build == null)
                 return false;
 
-            if(SearchParameters == null)
+            if(!IsValid(build, SearchName, i => i.Name))
+                return false;
+
+            if(!IsValid(build, SearchAuthor, i => i.Author))
+                return false;
+
+            if(!IsValid(build, SearchTags, i => i.Tags))
+                return false;
+
+            if(!IsValid(build, SearchNotes, i => i.Notes))
+                return false;
+
+            if(ShowValidBuilds.HasValue && ShowValidBuilds.Value != build.IsValid)
+                return false;
+
+            if(!SearchAnySecondaryProfession && !SelectedSecondaryProfessions.Contains(build.SecondaryProfession))
+                return false;
+
+            if(!SearchAnyPrimaryProfession && !SelectedPrimaryProfessions.Contains(build.PrimaryProfession))
+                return false;
+
+            return true;
+        }
+
+        private static bool IsValid(SkillTemplate build, string searchValue, Func<SkillTemplate, string> valueSelector)
+        {
+            if(string.IsNullOrEmpty(searchValue))
                 return true;
 
-            return
-                (string.IsNullOrEmpty(SearchParameters.Name) ||
-                 build.Name.ToLower().Contains(SearchParameters.Name.ToLower())) &&
-                (string.IsNullOrEmpty(SearchParameters.Author) ||
-                 build.Author.ToLower().Contains(SearchParameters.Author.ToLower())) &&
-                (string.IsNullOrEmpty(SearchParameters.Tags) ||
-                 build.Tags.ToLower().Contains(SearchParameters.Tags.ToLower())) &&
-                (string.IsNullOrEmpty(SearchParameters.Notes) ||
-                 build.Notes.ToLower().Contains(SearchParameters.Notes.ToLower())) &&
-                ((SearchParameters.ShowInvalidBuilds && build.IsInvalid) ||
-                 (SearchParameters.ShowValidBuilds && !build.IsInvalid)) &&
-                (SearchParameters.AnyPrimaryProfession ||
-                 SearchParameters.PrimaryProfessions.Contains(build.PrimaryProfession)) &&
-                (SearchParameters.AnySecondaryProfession ||
-                 SearchParameters.SecondaryProfessions.Contains(build.SecondaryProfession));
+            return valueSelector(build).ToLower().Contains(searchValue.ToLower());
         }
     }
 }

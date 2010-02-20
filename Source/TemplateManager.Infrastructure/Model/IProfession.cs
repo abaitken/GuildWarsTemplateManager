@@ -1,8 +1,9 @@
+using System;
 using System.Windows.Media.Imaging;
 
 namespace TemplateManager.Infrastructure.Model
 {
-    public interface IProfession
+    public interface IProfession : IEquatable<IProfession>
     {
         int TemplateId { get; }
         string Name { get; }

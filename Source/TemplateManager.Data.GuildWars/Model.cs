@@ -253,6 +253,11 @@ namespace TemplateManager.Data.GuildWars
             }
 
             #endregion
+
+            public bool Equals(IProfession other)
+            {
+                return other.Name == Name;
+            }
         }
 
         public partial class AttributesRow : IAttribute

@@ -100,10 +100,10 @@
     <Compile Include="InfoPanel.xaml.cs">
       <DependentUpon>InfoPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SkillView\Class1.cs" />
     <Compile Include="SkillView\ISkillsView.cs" />
     <Compile Include="SkillView\ISkillsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SkillView\SearchParameters.cs" />
     <Compile Include="SkillView\SkillsView.xaml.cs">
       <DependentUpon>SkillsView.xaml</DependentUpon>
     </Compile>

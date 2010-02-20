@@ -16,12 +16,12 @@ namespace TemplateManager.Infrastructure.Model
         private string tags;
         private string notes;
         private bool metaLoaded;
-        private readonly bool isInvalid;
+        private readonly bool isValid;
 
         public SkillTemplate(string buildFile, IProfession emptyProfession)
             : this(buildFile, emptyProfession, emptyProfession, Enumerable.Empty<ISkill>().ToList(), Enumerable.Empty<AttributeValue>())
         {
-            isInvalid = true;
+            isValid = false;
         }
 
         public SkillTemplate(string buildFile, IProfession primaryProfession, IProfession secondaryProfession, IList<ISkill> skills, IEnumerable<AttributeValue> attributes)
@@ -46,6 +46,7 @@ namespace TemplateManager.Infrastructure.Model
             this.secondaryProfession = secondaryProfession;
             this.skills = skills;
             this.attributes = attributes;
+            isValid = true;
         }
 
         public string BuildFile { get { return buildFile; } }
@@ -55,7 +56,7 @@ namespace TemplateManager.Infrastructure.Model
         public IList<ISkill> Skills { get { return skills; } }
         public IEnumerable<AttributeValue> Attributes { get { return attributes; } }
 
-        public bool IsInvalid { get { return isInvalid; } }
+        public bool IsValid { get { return isValid; } }
        
         public string Author
         {
