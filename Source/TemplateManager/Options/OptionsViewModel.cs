@@ -17,8 +17,6 @@ namespace TemplateManager.Options
     {
         private readonly IOptionsView view;
         private readonly IApplicationSettings applicationSettings;
-        private string archiveFolder;
-        private string deleteBehaviour;
         private string templatefolder;
 
         public OptionsViewModel(IOptionsView view, IApplicationSettings applicationSettings)
@@ -38,8 +36,6 @@ namespace TemplateManager.Options
             if (applicationSettings.TemplateFolder != TemplateFolder)
                 applicationSettings.TemplateFolder = TemplateFolder;
 
-            applicationSettings.DeleteBehaviour = DeleteBehaviour;
-            applicationSettings.ArchiveFolder = ArchiveFolder;
             applicationSettings.Save();
         }
 
@@ -62,28 +58,8 @@ namespace TemplateManager.Options
             get { return Directory.Exists(TemplateFolder); }
         }
 
-        public string ArchiveFolder
-        {
-            get { return archiveFolder; }
-            set
-            {
-                if(archiveFolder == value)
-                    return;
-
-                archiveFolder = value;
-                SendPropertyChanged("ArchiveFolder");
-                SendPropertyChanged("IsDeleteBehaviourSettingValid");
-            }
-        }
-
-        public IEnumerable<string> AvailableDeleteBehaviours
-        {
-            get { return Infrastructure.DeleteBehaviour.Values; }
-        }
-
         public ICommand ApplySettingsCommand { get; private set; }
         public ICommand UseDefaultsCommand { get; private set; }
-        public ICommand BrowseForArchiveFolderCommand { get; private set; }
         public ICommand BrowseForTemplateFolderCommand { get; private set; }
 
         public IOptionsView View
@@ -92,48 +68,18 @@ namespace TemplateManager.Options
         }
 
 
-        public bool IsDeleteBehaviourSettingValid
-        {
-            get
-            {
-                return DeleteBehaviour != Infrastructure.DeleteBehaviour.MoveAndArchive ||
-                       (!string.IsNullOrEmpty(ArchiveFolder) && Directory.Exists(ArchiveFolder));
-            }
-        }
-
-
-        public string DeleteBehaviour
-        {
-            get { return deleteBehaviour; }
-            set
-            {
-                if(deleteBehaviour == value)
-                    return;
-
-                deleteBehaviour = value;
-                SendPropertyChanged("DeleteBehaviour");
-                SendPropertyChanged("IsDeleteBehaviourSettingValid");
-            }
-        }
-
         #endregion
 
         private void GenerateCommands()
         {
             ApplySettingsCommand = new DelegateCommand(OnApply);
             UseDefaultsCommand = new DelegateCommand(OnResetSettings);
-            BrowseForArchiveFolderCommand = new DelegateCommand(OnBrowseForArchiveFolder);
             BrowseForTemplateFolderCommand = new DelegateCommand(OnBrowseForTemplateFolder);
         }
 
         private void OnBrowseForTemplateFolder()
         {
             SelectNewFolder(() => TemplateFolder, v => TemplateFolder = v);
-        }
-
-        private void OnBrowseForArchiveFolder()
-        {
-            SelectNewFolder(() => ArchiveFolder, v => ArchiveFolder = v);
         }
 
         private static void SelectNewFolder(Func<string> get, Action<string> set)
@@ -173,8 +119,11 @@ namespace TemplateManager.Options
 
         private void OnApply()
         {
-            if(!IsDeleteBehaviourSettingValid || !IsTemplateFolderValid)
+            if (!IsTemplateFolderValid)
+            {
+                MessageBox.Show("Template folder is invalid.");
                 return;
+            }
 
             WriteSetings();
         }
@@ -182,8 +131,6 @@ namespace TemplateManager.Options
         private void ReadSettings()
         {
             TemplateFolder = applicationSettings.TemplateFolder;
-            ArchiveFolder = applicationSettings.ArchiveFolder;
-            DeleteBehaviour = applicationSettings.DeleteBehaviour;
         }
 
         public string HeaderText

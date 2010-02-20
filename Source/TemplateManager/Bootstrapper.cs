@@ -2,6 +2,7 @@
 using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Composite.UnityExtensions;
 using Microsoft.Practices.Unity;
+using TemplateManager.AboutView;
 using TemplateManager.Common;
 using TemplateManager.Infrastructure;
 using TemplateManager.Modules.DataExplorer;
@@ -29,6 +30,7 @@ namespace TemplateManager
 
             Container.RegisterType<IMainWindowView, MainWindowView>();
             Container.RegisterType<IMainWindowViewModel, MainWindowViewModel>();
+            Container.RegisterType<IApplicationInformationService, ApplicationInformation>();
         }
 
         private static class Const

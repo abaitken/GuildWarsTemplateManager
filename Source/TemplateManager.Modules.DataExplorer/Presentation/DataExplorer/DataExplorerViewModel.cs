@@ -17,8 +17,6 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
         private readonly IDataService service;
         private const string any = "<Any>";
         private static readonly KeyValuePair<string, string> anyPair = new KeyValuePair<string, string>(any, any);
-        
-        
         private ICollectionView skills;
         private bool viewLoaded;
 

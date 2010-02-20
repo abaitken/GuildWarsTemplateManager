@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System.Windows;
 
-[assembly: AssemblyTitle("Build Manager")]
+[assembly: AssemblyTitle("Template Manager")]
 [assembly: AssemblyDescription("")]
 
 [assembly: ThemeInfo(

@@ -155,8 +155,8 @@
             </dg:DataGrid.RowDetailsTemplate>
             <dg:DataGrid.Columns>
                 <dg:DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True"/>
-                <dg:DataGridTextColumn Header="Primary Profession" Binding="{Binding PrimaryProfession}" IsReadOnly="True"/>
-                <dg:DataGridTextColumn Header="Secondary Profession" Binding="{Binding SecondaryProfession}" IsReadOnly="True"/>
+                <dg:DataGridTextColumn Header="Primary Profession" Binding="{Binding PrimaryProfession.Name}" IsReadOnly="True"/>
+                <dg:DataGridTextColumn Header="Secondary Profession" Binding="{Binding SecondaryProfession.Name}" IsReadOnly="True"/>
                 <!--<dg:DataGridTemplateColumn Header="Skills">
                         <dg:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>

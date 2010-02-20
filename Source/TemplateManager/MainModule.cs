@@ -38,8 +38,6 @@ namespace TemplateManager
 
         private void RegisterViews()
         {
-            container.RegisterType<IApplicationInformationService, ApplicationInformation>();
-
             container.RegisterType<IMainView, MainView.MainView>();
             container.RegisterType<IMainViewModel, MainViewModel>();
 

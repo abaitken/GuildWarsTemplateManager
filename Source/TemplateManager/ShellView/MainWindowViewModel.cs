@@ -3,10 +3,12 @@ namespace TemplateManager.ShellView
     class MainWindowViewModel : IMainWindowViewModel
     {
         private readonly IMainWindowView view;
+        private readonly IApplicationInformationService service;
 
-        public MainWindowViewModel(IMainWindowView view)
+        public MainWindowViewModel(IMainWindowView view, IApplicationInformationService service)
         {
             this.view = view;
+            this.service = service;
             view.Model = this;
         }
 
@@ -18,7 +20,7 @@ namespace TemplateManager.ShellView
 
         public string WindowTitle
         {
-            get { return "Build Manager"; }
+            get { return service.AssemblyProduct; }
         }
 
         public void ShowView()

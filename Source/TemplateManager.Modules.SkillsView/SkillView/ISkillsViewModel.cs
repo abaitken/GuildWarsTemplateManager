@@ -8,7 +8,6 @@ namespace TemplateManager.Modules.SkillsView.SkillView
     {
         ISkillsView View { get; }
         ICollectionView Builds { get; }
-        ICommand DeleteTemplateCommand { get; }
         ICommand SearchCommand { get; }
         ICommand ResetCommand { get; }
     }

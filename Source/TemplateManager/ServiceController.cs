@@ -43,27 +43,5 @@ namespace TemplateManager
             if(TemplatesChanged != null)
                 TemplatesChanged(this, new EventArgs());
         }
-
-        public void DeleteTemplate(SkillTemplate template)
-        {
-            switch (applicationSettings.DeleteBehaviour)
-            {
-                case DeleteBehaviour.DeleteAndRecycle:
-                    FileSystem.DeleteFile(template.BuildFile, UIOption.AllDialogs, RecycleOption.SendToRecycleBin, UICancelOption.DoNothing);
-                    break;
-                case DeleteBehaviour.MoveAndArchive:
-                    var targetPath = Path.Combine(applicationSettings.ArchiveFolder, Path.GetFileName(template.BuildFile));
-                    FileSystem.MoveFile(template.BuildFile, targetPath, UIOption.AllDialogs, UICancelOption.DoNothing);
-                    break;
-                case DeleteBehaviour.DeletePermanently:
-                    FileSystem.DeleteFile(template.BuildFile, UIOption.AllDialogs, RecycleOption.DeletePermanently);
-                    break;
-                default:
-                    throw new InvalidOperationException("Unknown delete behaviour");
-            }
-
-            if (TemplatesChanged != null)
-                TemplatesChanged(this, new EventArgs());
-        }
     }
 }

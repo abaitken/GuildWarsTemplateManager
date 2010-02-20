@@ -13,16 +13,8 @@ namespace TemplateManager.Options
         string TemplateFolder { get; set; }
         bool IsTemplateFolderValid { get; }
 
-        string ArchiveFolder { get; set; }
-        bool IsDeleteBehaviourSettingValid { get; }
-
-        string DeleteBehaviour { get; set; }
-        
-        IEnumerable<string> AvailableDeleteBehaviours { get; }
-
         ICommand ApplySettingsCommand { get; }
         ICommand UseDefaultsCommand { get; }
-        ICommand BrowseForArchiveFolderCommand { get; }
         ICommand BrowseForTemplateFolderCommand { get; }
     }
 }

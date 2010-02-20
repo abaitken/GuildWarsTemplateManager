@@ -9,6 +9,5 @@ namespace TemplateManager.Infrastructure.Services
         ISkillTemplateService Service { get; }
 
         event EventHandler TemplatesChanged;
-        void DeleteTemplate(SkillTemplate template);
     }
 }

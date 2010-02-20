@@ -18,7 +18,7 @@
             </Expander.Header>
 
             <StackPanel>
-                <UniformGrid Columns="2" VerticalAlignment="Top">                    
+                <UniformGrid Columns="2" VerticalAlignment="Top">
                     <TextBlock Text="Profession:" />
                     <ComboBox ItemsSource="{Binding Professions}" DisplayMemberPath="Key" SelectedItem="{Binding SelectedProfession}" />
 
@@ -85,31 +85,40 @@
                 <TextBlock Text="Removes" />
                 <ListBox SelectionMode="Extended" ItemsSource="{Binding RemovesValues}" DisplayMemberPath="Key" 
                       ListSynchronizer:MultiSelectorBehaviours.SynchronizedSelectedItems="{Binding SelectedRemovesValues}" />
-                <Button Content="Reset all" Command="{Binding ResetFiltersCommand}" />
-                <Button Content="Refresh" Command="{Binding RefreshCommand}" />
-
+                
+                <UniformGrid Columns="2">
+                    <Button Content="Reset all" Command="{Binding ResetFiltersCommand}" />
+                    <Button Content="Refresh" Command="{Binding RefreshCommand}" />
+                </UniformGrid>
             </StackPanel>
 
         </Expander>
 
-        <ListBox Grid.Column="1" ItemsSource="{Binding Skills}">
+        <ListBox Grid.Column="1" ItemsSource="{Binding Skills}" HorizontalContentAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Border Padding="2" Margin="2" BorderBrush="Gray" BorderThickness="1" CornerRadius="2">
-                        <Grid HorizontalAlignment="Stretch">
+                    <Border Margin="2" BorderThickness="0,0,0,2" BorderBrush="Gray">
+                        <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
 
-                            <Image Source="{Binding Image}" Width="48" Height="48" VerticalAlignment="Top" />
+                            <Image Source="{Binding Image}" Width="48" Height="48" VerticalAlignment="Top" Margin="2" />
 
                             <StackPanel Orientation="Vertical" Grid.Column="1">
                                 <TextBlock Text="{Binding Name}" />
-                                <TextBlock Text="{Binding Profession}" />
-                                <TextBlock Text="{Binding Attribute}" />
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding Profession.Image}" Width="16" Height="16"  Margin="0,0,2,0" />
+                                    <TextBlock Text="{Binding Profession.Name}" Grid.Column="1" />
+                                </Grid>
+                                <TextBlock Text="{Binding Attribute.Name}" />
                                 <TextBlock Text="{Binding Type}" />
-                                <TextBlock Text="{Binding Description}" />
+                                <TextBlock Text="{Binding Description}" TextWrapping="Wrap" />
                             </StackPanel>
                         </Grid>
                     </Border>

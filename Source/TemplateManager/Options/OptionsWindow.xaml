@@ -23,21 +23,6 @@
                             Command="{Binding BrowseForTemplateFolderCommand}"  />
             </Grid>
 
-            <TextBlock Visibility="Collapsed" Text="What will 'delete' do?" />
-            <ComboBox Visibility="Collapsed" SelectedItem="{Binding DeleteBehaviour}" ItemsSource="{Binding AvailableDeleteBehaviours}" />
-
-            <TextBlock Visibility="Collapsed" Text="Archive folder:" />
-            <Grid Visibility="Collapsed">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <TextBox Text="{Binding ArchiveFolder}" />
-                <Button Grid.Column="1" 
-                            Content="..." 
-                            Command="{Binding BrowseForArchiveFolderCommand}" />
-            </Grid>
-
         </StackPanel>
 
         <Grid Grid.Row="2">
@@ -50,7 +35,7 @@
                 <Button Command="{Binding UseDefaultsCommand}">Restore _Defaults</Button>
 
                 <Button IsDefault="True" 
-                            Command="{Binding ApplySettngsCommand}">_Apply</Button>
+                            Command="{Binding ApplySettngisCommand}">_Apply</Button>
             </UniformGrid>
         </Grid>
     </Grid>

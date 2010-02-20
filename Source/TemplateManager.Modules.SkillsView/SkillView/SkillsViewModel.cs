@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Data;
 using System.Windows.Input;
-using Microsoft.Practices.Composite.Presentation.Commands;
+using TemplateManager.Common.Commands;
 using TemplateManager.Common.ViewModel;
 using TemplateManager.Infrastructure.Events;
 using TemplateManager.Infrastructure.Model;
@@ -13,7 +13,6 @@ namespace TemplateManager.Modules.SkillsView.SkillView
 {
     internal class SkillsViewModel : ViewModelBase, ISkillsViewModel
     {
-        private readonly IServiceController controller;
         private readonly IDataService dataService;
         private readonly ISkillTemplateService service;
         private readonly ISkillsView view;
@@ -24,7 +23,6 @@ namespace TemplateManager.Modules.SkillsView.SkillView
                                IDataService dataService)
         {
             this.view = view;
-            this.controller = controller;
             this.dataService = dataService;
             service = controller.Service;
             GenerateCommands();
@@ -77,8 +75,6 @@ namespace TemplateManager.Modules.SkillsView.SkillView
             }
         }
 
-        public ICommand DeleteTemplateCommand { get; private set; }
-
         public ICommand SearchCommand { get; private set; }
 
         public ICommand ResetCommand { get; private set; }
@@ -92,18 +88,17 @@ namespace TemplateManager.Modules.SkillsView.SkillView
 
         private void GenerateCommands()
         {
-            DeleteTemplateCommand = new DelegateCommand<SkillTemplate>(template => controller.DeleteTemplate(template));
-            SearchCommand = new DelegateCommand<object>(OnSearch);
-            ResetCommand = new DelegateCommand<object>(OnReset);
+            SearchCommand = new DelegateCommand(OnSearch);
+            ResetCommand = new DelegateCommand(OnReset);
         }
 
-        private void OnReset(object obj)
+        private void OnReset()
         {
             SearchParameters = new SearchParameters();
             RefreshBuilds();
         }
 
-        private void OnSearch(object obj)
+        private void OnSearch()
         {
             RefreshBuilds();
         }
