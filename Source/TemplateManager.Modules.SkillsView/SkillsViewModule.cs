@@ -14,10 +14,14 @@ namespace TemplateManager.Modules.SkillsView
             this.container = container;
         }
 
+        #region IModule Members
+
         public void Initialize()
         {
             RegisterViews();
         }
+
+        #endregion
 
         private void RegisterViews()
         {

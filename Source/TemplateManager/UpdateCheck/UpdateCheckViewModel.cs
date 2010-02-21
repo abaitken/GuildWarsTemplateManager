@@ -6,13 +6,15 @@ using TemplateManager.Infrastructure.Services;
 
 namespace TemplateManager.UpdateCheck
 {
-    class UpdateCheckViewModel : IUpdateCheckViewModel
+    internal class UpdateCheckViewModel : IUpdateCheckViewModel
     {
-        private readonly IUpdateCheckView view;
         private readonly IApplicationInformationService informationService;
         private readonly IUpdateService updateService;
+        private readonly IUpdateCheckView view;
 
-        public UpdateCheckViewModel(IUpdateCheckView view, IApplicationInformationService informationService, IUpdateService updateService)
+        public UpdateCheckViewModel(IUpdateCheckView view,
+                                    IApplicationInformationService informationService,
+                                    IUpdateService updateService)
         {
             this.view = view;
             this.informationService = informationService;
@@ -22,23 +24,9 @@ namespace TemplateManager.UpdateCheck
             CreateCommands();
         }
 
-        private void CreateCommands()
-        {
-            CloseWindowCommand = new DelegateCommand<Window>(OnCloseWindow);
-            OpenWebAddress = new DelegateCommand<string>(OnOpenWebAddress);
-        }
-
-        private static void OnOpenWebAddress(string obj)
-        {
-            Process.Start(obj);
-        }
-
         public ICommand OpenWebAddress { get; private set; }
 
-        private static void OnCloseWindow(Window obj)
-        {
-            obj.Close();
-        }
+        #region IUpdateCheckViewModel Members
 
         public IUpdateCheckView View
         {
@@ -60,10 +48,24 @@ namespace TemplateManager.UpdateCheck
             get { return updateService.InformationUrl; }
         }
 
-        public ICommand CloseWindowCommand
+        public ICommand CloseWindowCommand { get; private set; }
+
+        #endregion
+
+        private void CreateCommands()
         {
-            get; private set;
+            CloseWindowCommand = new DelegateCommand<Window>(OnCloseWindow);
+            OpenWebAddress = new DelegateCommand<string>(OnOpenWebAddress);
+        }
+
+        private static void OnOpenWebAddress(string obj)
+        {
+            Process.Start(obj);
+        }
+
+        private static void OnCloseWindow(Window obj)
+        {
+            obj.Close();
         }
     }
-
 }

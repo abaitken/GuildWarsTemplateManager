@@ -1,4 +1,6 @@
-﻿namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
+﻿using System.Windows;
+
+namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 {
     /// <summary>
     /// Interaction logic for DataExplorerView.xaml
@@ -11,15 +13,19 @@
             Loaded += DataExplorerView_Loaded;
         }
 
-        void DataExplorerView_Loaded(object sender, System.Windows.RoutedEventArgs e)
-        {
-            Model.ViewLoaded();
-        }
+        #region IDataExplorerView Members
 
         public IDataExplorerViewModel Model
         {
             get { return DataContext as IDataExplorerViewModel; }
             set { DataContext = value; }
+        }
+
+        #endregion
+
+        private void DataExplorerView_Loaded(object sender, RoutedEventArgs e)
+        {
+            Model.ViewLoaded();
         }
     }
 }

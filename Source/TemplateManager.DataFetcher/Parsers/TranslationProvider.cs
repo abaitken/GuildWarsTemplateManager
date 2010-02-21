@@ -188,7 +188,7 @@ namespace TemplateManager.DataFetcher.Parsers
                                    LogSeverity.Warning);
                         break;
                     }
-                    
+
                     // Associate this culture, with the skill name and its translated string
                     translations[culture].Add(key, row[i]);
                 }

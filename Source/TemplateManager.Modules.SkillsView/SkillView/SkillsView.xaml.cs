@@ -10,10 +10,14 @@
             InitializeComponent();
         }
 
+        #region ISkillsView Members
+
         public ISkillsViewModel Model
         {
             get { return DataContext as ISkillsViewModel; }
             set { DataContext = value; }
         }
+
+        #endregion
     }
 }

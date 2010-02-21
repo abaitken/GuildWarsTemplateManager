@@ -66,7 +66,13 @@ namespace TemplateManager.DataFetcher.Tests
 
             var reader = new MemoryStream();
             var formatter = new BinaryFormatter();
-            formatter.Serialize(reader, new Dictionary<string, string> {{"test", "this is a test"}});
+            formatter.Serialize(reader,
+                                new Dictionary<string, string>
+                                    {
+                                        {
+                                            "test", "this is a test"
+                                            }
+                                    });
             reader.Seek(0, SeekOrigin.Begin);
 
             mockedFileSystem.Setup(o => o.Open("cache.bin", FileMode.Open, FileAccess.Read, FileShare.Read)).Returns(

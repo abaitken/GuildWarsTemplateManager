@@ -1,5 +1,4 @@
 using System;
-using TemplateManager.Infrastructure.Model;
 
 namespace TemplateManager.Infrastructure.Services
 {

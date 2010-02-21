@@ -15,9 +15,9 @@ namespace TemplateParser
 
         public static IEnumerable<string> ChunkString(this string source, int chunkSize)
         {
-            for (var i = 0; i < source.Length; i += chunkSize)
+            for(var i = 0; i < source.Length; i += chunkSize)
             {
-                if (source.Length - i < chunkSize)
+                if(source.Length - i < chunkSize)
                     chunkSize = source.Length - i;
 
                 yield return source.Substring(i, chunkSize);
@@ -28,7 +28,7 @@ namespace TemplateParser
         {
             var builder = new StringBuilder();
 
-            foreach (var item in source)
+            foreach(var item in source)
                 builder.Append(item);
 
             return builder.ToString();

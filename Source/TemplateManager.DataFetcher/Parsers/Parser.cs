@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -9,7 +8,6 @@ using TemplateManager.DataFetcher.Abstractions;
 using TemplateManager.DataFetcher.DataProviders;
 using TemplateManager.DataFetcher.Logging;
 using TemplateManager.DataFetcher.Model;
-using System.Diagnostics;
 
 namespace TemplateManager.DataFetcher.Parsers
 {
@@ -261,7 +259,7 @@ namespace TemplateManager.DataFetcher.Parsers
                     vars[level].MaxLevel = value;
                     continue;
                 }
-                            
+
                 logger.Log(GetType(), string.Format("Unknown progression var: {0}", item), LogSeverity.Error);
             }
 
@@ -365,7 +363,7 @@ namespace TemplateManager.DataFetcher.Parsers
                     logger.Log(GetType(), string.Format("InfoBox already contains value: {0}", key), LogSeverity.Warning);
                     continue;
                 }
-                
+
                 result.Add(key, match.Groups["Value"].Value.Trim());
             }
 

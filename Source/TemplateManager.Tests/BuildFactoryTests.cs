@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Linq;
 using System.IO;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TemplateManager.Modules.Services;
 
@@ -9,7 +9,6 @@ namespace TemplateManager.Tests
     [TestClass]
     public class BuildFactoryTests
     {
-
         [TestMethod]
         [DeploymentItem("SimpleTest", "SimpleTest")]
         [DeploymentItem("TemplateManager.Data.xml")]
@@ -22,7 +21,7 @@ namespace TemplateManager.Tests
             Assert.AreEqual(1, factory.TemplateFolder.Templates.Count());
 
             var build = factory.TemplateFolder.Templates.First();
-            
+
             Assert.AreEqual("Logaan", build.Author);
             Assert.AreEqual("group disrupting", build.Tags);
             Assert.AreEqual("This is a note", build.Notes);

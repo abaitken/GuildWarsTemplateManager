@@ -7,38 +7,48 @@ namespace TemplateManager.Infrastructure.Model
 {
     public class SkillTemplate
     {
+        private readonly IEnumerable<AttributeValue> attributes;
         private readonly string buildFile;
+        private readonly bool isValid;
         private readonly IProfession primaryProfession;
         private readonly IProfession secondaryProfession;
         private readonly IList<ISkill> skills;
-        private readonly IEnumerable<AttributeValue> attributes;
         private string author;
-        private string tags;
-        private string notes;
         private bool metaLoaded;
-        private readonly bool isValid;
+        private string notes;
+        private int skillKey;
+        private string tags;
 
         public SkillTemplate(string buildFile, IProfession emptyProfession)
-            : this(buildFile, emptyProfession, emptyProfession, Enumerable.Empty<ISkill>().ToList(), Enumerable.Empty<AttributeValue>())
+            : this(
+                buildFile,
+                emptyProfession,
+                emptyProfession,
+                Enumerable.Empty<ISkill>().ToList(),
+                Enumerable.Empty<AttributeValue>())
         {
             isValid = false;
         }
 
-        public SkillTemplate(string buildFile, IProfession primaryProfession, IProfession secondaryProfession, IList<ISkill> skills, IEnumerable<AttributeValue> attributes)
+        public SkillTemplate(string buildFile,
+                             IProfession primaryProfession,
+                             IProfession secondaryProfession,
+                             IList<ISkill> skills,
+                             IEnumerable<AttributeValue> attributes)
         {
-            if (string.IsNullOrEmpty(buildFile))
+            if(string.IsNullOrEmpty(buildFile))
                 throw new ArgumentNullException("buildFile");
 
-            if (primaryProfession == null)
+            if(primaryProfession == null)
                 throw new ArgumentNullException("primaryProfession");
 
-            if (secondaryProfession == null)
+            if(secondaryProfession == null)
                 throw new ArgumentNullException("secondaryProfession");
 
-            if (skills == null)
+            if(skills == null)
                 throw new ArgumentNullException("skills");
 
-            if (attributes == null)
+            if(attributes == null)
                 throw new ArgumentNullException("attributes");
 
             this.buildFile = buildFile;
@@ -49,15 +59,41 @@ namespace TemplateManager.Infrastructure.Model
             isValid = true;
         }
 
-        public string BuildFile { get { return buildFile; } }
-        public string Name { get { return Path.GetFileNameWithoutExtension(buildFile); } }
-        public IProfession PrimaryProfession { get { return primaryProfession; } }
-        public IProfession SecondaryProfession { get { return secondaryProfession; } }
-        public IList<ISkill> Skills { get { return skills; } }
-        public IEnumerable<AttributeValue> Attributes { get { return attributes; } }
+        public string BuildFile
+        {
+            get { return buildFile; }
+        }
 
-        public bool IsValid { get { return isValid; } }
-       
+        public string Name
+        {
+            get { return Path.GetFileNameWithoutExtension(buildFile); }
+        }
+
+        public IProfession PrimaryProfession
+        {
+            get { return primaryProfession; }
+        }
+
+        public IProfession SecondaryProfession
+        {
+            get { return secondaryProfession; }
+        }
+
+        public IList<ISkill> Skills
+        {
+            get { return skills; }
+        }
+
+        public IEnumerable<AttributeValue> Attributes
+        {
+            get { return attributes; }
+        }
+
+        public bool IsValid
+        {
+            get { return isValid; }
+        }
+
         public string Author
         {
             get
@@ -85,26 +121,11 @@ namespace TemplateManager.Infrastructure.Model
             }
         }
 
-        private void ReadMeta()
-        {
-            if (metaLoaded)
-                return;
-
-            var meta = MetaLoader.LoadMetaFromBuildFile(buildFile);
-            author = meta.Author;
-            tags = meta.Tags;
-            notes = meta.Notes;
-
-            metaLoaded = true;
-        }
-
-        private int skillKey;
-
         public int SkillKey
         {
             get
             {
-                if (skillKey != 0)
+                if(skillKey != 0)
                     return skillKey;
 
                 var orderedResult = from skill in Skills
@@ -115,6 +136,19 @@ namespace TemplateManager.Infrastructure.Model
 
                 return skillKey;
             }
+        }
+
+        private void ReadMeta()
+        {
+            if(metaLoaded)
+                return;
+
+            var meta = MetaLoader.LoadMetaFromBuildFile(buildFile);
+            author = meta.Author;
+            tags = meta.Tags;
+            notes = meta.Notes;
+
+            metaLoaded = true;
         }
 
         public override string ToString()

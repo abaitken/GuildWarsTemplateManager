@@ -13,10 +13,14 @@ namespace TemplateManager.Modules.Services
             this.container = container;
         }
 
+        #region IModule Members
+
         public void Initialize()
         {
             RegisterServices();
         }
+
+        #endregion
 
         private void RegisterServices()
         {

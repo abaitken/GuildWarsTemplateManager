@@ -11,12 +11,12 @@ using TemplateManager.Infrastructure.Services;
 
 namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 {
-    partial class DataExplorerViewModel : ViewModelBase, IDataExplorerViewModel
+    internal partial class DataExplorerViewModel : ViewModelBase, IDataExplorerViewModel
     {
-        private readonly IDataExplorerView view;
-        private readonly IDataService service;
         private const string any = "<Any>";
         private static readonly KeyValuePair<string, string> anyPair = new KeyValuePair<string, string>(any, any);
+        private readonly IDataService service;
+        private readonly IDataExplorerView view;
         private ICollectionView skills;
         private bool viewLoaded;
 
@@ -31,6 +31,8 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             view.Model = this;
         }
 
+        #region IDataExplorerViewModel Members
+
         public ICommand ResetFiltersCommand { get; private set; }
         public ICommand RefreshCommand { get; private set; }
 
@@ -39,7 +41,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return skills; }
             private set
             {
-                if (skills == value)
+                if(skills == value)
                     return;
 
                 skills = value;
@@ -49,13 +51,26 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 
         public void ViewLoaded()
         {
-            if (viewLoaded)
+            if(viewLoaded)
                 return;
 
             viewLoaded = true;
 
             DataProviderLoadComplete();
         }
+
+        public IDataExplorerView View
+        {
+            get { return view; }
+        }
+
+        public string HeaderText
+        {
+            get { return "Data Explorer"; }
+        }
+
+        #endregion
+
         private void GenerateCommands()
         {
             ResetFiltersCommand = new DelegateCommand(ResetFilters);
@@ -64,7 +79,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 
         private void RefreshSkills()
         {
-            if (Skills != null)
+            if(Skills != null)
                 Skills.Refresh();
         }
 
@@ -114,15 +129,6 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 
             Skills = SelectSkills();
         }
-        public IDataExplorerView View
-        {
-            get { return view; }
-        }
-
-        public string HeaderText
-        {
-            get { return "Data Explorer"; }
-        }
 
         private IDictionary<string, string> SelectValues(Func<ISkill, IEnumerable<string>> selector)
         {
@@ -132,16 +138,15 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
                          from value in selectedValues
                          let compareValue = string.IsNullOrEmpty(value) ? value : value.ToLower().Trim()
                          group value by compareValue
-                             into g
+                         into g
                              select new
-                             {
-                                 Key = string.IsNullOrEmpty(g.Key) ? "<None>" : g.Key,
-                                 Value = g.Key
-                             };
+                                        {
+                                            Key = string.IsNullOrEmpty(g.Key) ? "<None>" : g.Key,
+                                            Value = g.Key
+                                        };
 
             var result = values.OrderBy(i => i.Key);
             return result.ToDictionary(k => k.Key, v => v.Value);
-
         }
 
         private IDictionary<string, string> SelectValues(Func<ISkill, string> propertySelector)
@@ -150,17 +155,17 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
                          let value = propertySelector(item)
                          let compareValue = string.IsNullOrEmpty(value) ? value : value
                          group item by compareValue
-                             into g
+                         into g
                              select new
-                             {
-                                 Key = string.IsNullOrEmpty(g.Key) ? "<None>" : g.Key,
-                                 Value = g.Key
-                             };
+                                        {
+                                            Key = string.IsNullOrEmpty(g.Key) ? "<None>" : g.Key,
+                                            Value = g.Key
+                                        };
             var additional = Enumerable.Repeat(new
-            {
-                Key = any,
-                Value = any
-            },
+                                                   {
+                                                       Key = any,
+                                                       Value = any
+                                                   },
                                                1);
 
             var result = values.Concat(additional).OrderBy(i => i.Key);
@@ -180,73 +185,73 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
         {
             var skill = obj as ISkill;
 
-            if (skill == null)
+            if(skill == null)
                 return false;
 
-            if (!skill.IsValid)
+            if(!skill.IsValid)
                 return false;
 
-            if (SearchForTemplateId && skill.TemplateId != SelectedTemplateId)
+            if(SearchForTemplateId && skill.TemplateId != SelectedTemplateId)
                 return false;
 
-            if (!IsValid(SelectedProfession.Value, skill.Profession.Name))
+            if(!IsValid(SelectedProfession.Value, skill.Profession.Name))
                 return false;
 
-            if (!IsValid(SelectedAttribute.Value, skill.Attribute.Name))
+            if(!IsValid(SelectedAttribute.Value, skill.Attribute.Name))
                 return false;
 
-            if (!IsValid(SelectedSkillType.Value, skill.Type))
+            if(!IsValid(SelectedSkillType.Value, skill.Type))
                 return false;
 
-            if (!IsValid(SelectedSpecialType.Value, skill.SpecialType))
+            if(!IsValid(SelectedSpecialType.Value, skill.SpecialType))
                 return false;
 
-            if (!IsValid(SelectedTarget.Value, skill.Target))
+            if(!IsValid(SelectedTarget.Value, skill.Target))
                 return false;
 
-            if (!IsValid(SelectedRange.Value, skill.Range))
+            if(!IsValid(SelectedRange.Value, skill.Range))
                 return false;
 
-            if (!IsValid(SelectedProjectile.Value, skill.Projectile))
+            if(!IsValid(SelectedProjectile.Value, skill.Projectile))
                 return false;
 
-            if (!IsValid(CausesExhaustion, skill.CausesExhaustion))
+            if(!IsValid(CausesExhaustion, skill.CausesExhaustion))
                 return false;
 
-            if (!IsValid(SelectedCampaign.Value, skill.Campaign))
+            if(!IsValid(SelectedCampaign.Value, skill.Campaign))
                 return false;
 
-            if (!IsValid(SelectedActivationTime.Value, skill.ActivationTime.ToString()))
+            if(!IsValid(SelectedActivationTime.Value, skill.ActivationTime.ToString()))
                 return false;
 
-            if (!IsValid(SelectedRechargeTime.Value, skill.RechargeTime.ToString()))
+            if(!IsValid(SelectedRechargeTime.Value, skill.RechargeTime.ToString()))
                 return false;
 
-            if (!IsValid(SelectedEnergyCost.Value, skill.EnergyCost.ToString()))
+            if(!IsValid(SelectedEnergyCost.Value, skill.EnergyCost.ToString()))
                 return false;
 
-            if (!IsValid(SelectedSacrificeCost.Value, skill.Sacrifice.ToString()))
+            if(!IsValid(SelectedSacrificeCost.Value, skill.Sacrifice.ToString()))
                 return false;
 
-            if (!IsValid(SelectedAdrenalineCost.Value, skill.AdrenalineCost.ToString()))
+            if(!IsValid(SelectedAdrenalineCost.Value, skill.AdrenalineCost.ToString()))
                 return false;
 
-            if (!IsValid(SelectedUpkeepValue.Value, skill.UpkeepCost.ToString()))
+            if(!IsValid(SelectedUpkeepValue.Value, skill.UpkeepCost.ToString()))
                 return false;
 
-            if (!IsValid(Elite, skill.IsElite))
+            if(!IsValid(Elite, skill.IsElite))
                 return false;
 
-            if (!IsValid(PvEOnly, skill.IsPvEOnly))
+            if(!IsValid(PvEOnly, skill.IsPvEOnly))
                 return false;
 
-            if (!IsValid(IsPvP, skill.IsPvPVersion))
+            if(!IsValid(IsPvP, skill.IsPvPVersion))
                 return false;
 
-            if (!IsValid(SelectedAreaOfEffect.Value, skill.AreaOfEffect))
+            if(!IsValid(SelectedAreaOfEffect.Value, skill.AreaOfEffect))
                 return false;
 
-            if (!IsValid(SelectedRemovesValues, skill.Removes))
+            if(!IsValid(SelectedRemovesValues, skill.Removes))
                 return false;
 
             return true;
@@ -254,10 +259,10 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 
         private static bool IsValid(IEnumerable<KeyValuePair<string, string>> selectedValues, IEnumerable<string> values)
         {
-            if (selectedValues.Count() == 0)
+            if(selectedValues.Count() == 0)
                 return true;
 
-            if (values.Count() == 0)
+            if(values.Count() == 0)
                 return false;
 
             var matchingValues = from selectedValue in selectedValues
@@ -270,7 +275,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
         private static bool IsValid(bool? filterValue, bool? itemValue)
         {
             // Filter is set to any
-            if (filterValue.HasValue == false)
+            if(filterValue.HasValue == false)
                 return true;
 
             var item = itemValue.HasValue && itemValue.Value;
@@ -281,14 +286,13 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 
         private static bool IsValid(string value, string itemValue)
         {
-            if (value == any)
+            if(value == any)
                 return true;
 
-            if (value == null || itemValue == null)
+            if(value == null || itemValue == null)
                 return value == itemValue;
 
             return value.Equals(itemValue, StringComparison.CurrentCultureIgnoreCase);
         }
     }
-
 }

@@ -11,7 +11,7 @@ namespace TemplateManager
         {
             var result = LookInDocumentsFolder();
 
-            if (!string.IsNullOrEmpty(result))
+            if(!string.IsNullOrEmpty(result))
                 return result;
 
             return LookInGuildWarsInstallFolder();
@@ -21,12 +21,12 @@ namespace TemplateManager
         {
             var key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\ArenaNet\Guild Wars");
 
-            if (key == null)
+            if(key == null)
                 return string.Empty;
 
             var installPath = Path.GetDirectoryName(key.GetValue("Path").ToString());
 
-            if (string.IsNullOrEmpty(installPath))
+            if(string.IsNullOrEmpty(installPath))
                 return string.Empty;
 
             var result = FolderHelper.CreatePathFromParts(installPath, "Templates", "Skills");
@@ -42,7 +42,7 @@ namespace TemplateManager
             var docs = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             var result = FolderHelper.CreatePathFromParts(docs, "Guild Wars", "Templates", "Skills");
 
-            if (Directory.Exists(result))
+            if(Directory.Exists(result))
                 return result;
 
             return string.Empty;

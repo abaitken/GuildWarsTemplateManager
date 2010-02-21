@@ -10,10 +10,14 @@
             InitializeComponent();
         }
 
+        #region IDuplicateSkillTemplateView Members
+
         public IDuplicateSkillTemplateViewModel Model
         {
             get { return DataContext as IDuplicateSkillTemplateViewModel; }
             set { DataContext = value; }
         }
+
+        #endregion
     }
 }

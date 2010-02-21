@@ -44,10 +44,10 @@ namespace TemplateParser
 
         private string GetBits(int length)
         {
-            if (length < 1)
+            if(length < 1)
                 throw new ArgumentOutOfRangeException("length");
 
-            if (currentPosition + length > binaryString.Length)
+            if(currentPosition + length > binaryString.Length)
             {
                 currentPosition = Length;
                 return "0";

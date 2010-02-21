@@ -13,9 +13,9 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
                               object parameter,
                               CultureInfo culture)
         {
-            var item = (bool?)value;
+            var item = (bool?) value;
 
-            return item.HasValue ? (object)item.Value : null;
+            return item.HasValue ? (object) item.Value : null;
         }
 
 
@@ -26,8 +26,8 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
         {
             bool? result = null;
 
-            if (value != null)
-                result = (bool)value;
+            if(value != null)
+                result = (bool) value;
 
             return result;
         }

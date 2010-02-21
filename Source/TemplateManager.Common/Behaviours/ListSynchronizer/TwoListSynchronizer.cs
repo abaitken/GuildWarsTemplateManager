@@ -40,7 +40,25 @@ namespace TemplateManager.Common.Behaviours.ListSynchronizer
         {
         }
 
-        private delegate void ChangeListAction(IList list, NotifyCollectionChangedEventArgs e, Converter<object, object> converter);
+        #region IWeakEventListener Members
+
+        /// <summary>
+        /// Receives events from the centralized event manager.
+        /// </summary>
+        /// <param name="managerType">The type of the <see cref="T:System.Windows.WeakEventManager"/> calling this method.</param>
+        /// <param name="sender">Object that originated the event.</param>
+        /// <param name="e">Event data.</param>
+        /// <returns>
+        /// true if the listener handled the event. It is considered an error by the <see cref="T:System.Windows.WeakEventManager"/> handling in WPF to register a listener for an event that the listener does not handle. Regardless, the method should return false if it receives an event that it does not recognize or handle.
+        /// </returns>
+        public bool ReceiveWeakEvent(Type managerType, object sender, EventArgs e)
+        {
+            HandleCollectionChanged(sender as IList, e as NotifyCollectionChangedEventArgs);
+
+            return true;
+        }
+
+        #endregion
 
         /// <summary>
         /// Starts synchronizing the lists.
@@ -72,22 +90,6 @@ namespace TemplateManager.Common.Behaviours.ListSynchronizer
         }
 
         /// <summary>
-        /// Receives events from the centralized event manager.
-        /// </summary>
-        /// <param name="managerType">The type of the <see cref="T:System.Windows.WeakEventManager"/> calling this method.</param>
-        /// <param name="sender">Object that originated the event.</param>
-        /// <param name="e">Event data.</param>
-        /// <returns>
-        /// true if the listener handled the event. It is considered an error by the <see cref="T:System.Windows.WeakEventManager"/> handling in WPF to register a listener for an event that the listener does not handle. Regardless, the method should return false if it receives an event that it does not recognize or handle.
-        /// </returns>
-        public bool ReceiveWeakEvent(Type managerType, object sender, EventArgs e)
-        {
-            HandleCollectionChanged(sender as IList, e as NotifyCollectionChangedEventArgs);
-
-            return true;
-        }
-
-        /// <summary>
         /// Listens for change events on a list.
         /// </summary>
         /// <param name="list">The list to listen to.</param>
@@ -107,14 +109,13 @@ namespace TemplateManager.Common.Behaviours.ListSynchronizer
 
             if(list != null)
                 CollectionChangedEventManager.RemoveListener(notifyingList, this);
-            
         }
 
         private static void AddItems(IList list, NotifyCollectionChangedEventArgs e, Converter<object, object> converter)
         {
             var itemCount = e.NewItems.Count;
 
-            for (var i = 0; i < itemCount; i++)
+            for(var i = 0; i < itemCount; i++)
             {
                 var insertionPoint = e.NewStartingIndex + i;
 
@@ -139,7 +140,7 @@ namespace TemplateManager.Common.Behaviours.ListSynchronizer
         {
             var sourceList = sender as IList;
 
-            switch (e.Action)
+            switch(e.Action)
             {
                 case NotifyCollectionChangedAction.Add:
                     PerformActionOnAllLists(AddItems, sourceList, e);
@@ -161,13 +162,17 @@ namespace TemplateManager.Common.Behaviours.ListSynchronizer
             }
         }
 
-        private static void MoveItems(IList list, NotifyCollectionChangedEventArgs e, Converter<object, object> converter)
+        private static void MoveItems(IList list,
+                                      NotifyCollectionChangedEventArgs e,
+                                      Converter<object, object> converter)
         {
             RemoveItems(list, e, converter);
             AddItems(list, e, converter);
         }
 
-        private void PerformActionOnAllLists(ChangeListAction action, IList sourceList, NotifyCollectionChangedEventArgs collectionChangedArgs)
+        private void PerformActionOnAllLists(ChangeListAction action,
+                                             IList sourceList,
+                                             NotifyCollectionChangedEventArgs collectionChangedArgs)
         {
             if(sourceList == masterList)
                 PerformActionOnList(targetList, action, collectionChangedArgs, ConvertFromMasterToTarget);
@@ -175,14 +180,19 @@ namespace TemplateManager.Common.Behaviours.ListSynchronizer
                 PerformActionOnList(masterList, action, collectionChangedArgs, ConvertFromTargetToMaster);
         }
 
-        private void PerformActionOnList(IList list, ChangeListAction action, NotifyCollectionChangedEventArgs collectionChangedArgs, Converter<object, object> converter)
+        private void PerformActionOnList(IList list,
+                                         ChangeListAction action,
+                                         NotifyCollectionChangedEventArgs collectionChangedArgs,
+                                         Converter<object, object> converter)
         {
             StopListeningForChangeEvents(list);
             action(list, collectionChangedArgs, converter);
             ListenForChangeEvents(list);
         }
 
-        private static void RemoveItems(IList list, NotifyCollectionChangedEventArgs e, Converter<object, object> converter)
+        private static void RemoveItems(IList list,
+                                        NotifyCollectionChangedEventArgs e,
+                                        Converter<object, object> converter)
         {
             var itemCount = e.OldItems.Count;
 
@@ -192,7 +202,9 @@ namespace TemplateManager.Common.Behaviours.ListSynchronizer
                 list.RemoveAt(e.OldStartingIndex);
         }
 
-        private static void ReplaceItems(IList list, NotifyCollectionChangedEventArgs e, Converter<object, object> converter)
+        private static void ReplaceItems(IList list,
+                                         NotifyCollectionChangedEventArgs e,
+                                         Converter<object, object> converter)
         {
             RemoveItems(list, e, converter);
             AddItems(list, e, converter);
@@ -212,7 +224,9 @@ namespace TemplateManager.Common.Behaviours.ListSynchronizer
 
         private bool TargetAndMasterCollectionsAreEqual()
         {
-            return masterList.Cast<object>().SequenceEqual(targetList.Cast<object>().Select(item => ConvertFromTargetToMaster(item)));
+            return
+                masterList.Cast<object>().SequenceEqual(
+                    targetList.Cast<object>().Select(item => ConvertFromTargetToMaster(item)));
         }
 
         /// <summary>
@@ -227,14 +241,22 @@ namespace TemplateManager.Common.Behaviours.ListSynchronizer
                 SetListValuesFromSource(targetList, masterList, ConvertFromTargetToMaster);
         }
 
+        #region Nested type: ChangeListAction
 
+        private delegate void ChangeListAction(
+            IList list, NotifyCollectionChangedEventArgs e, Converter<object, object> converter);
 
+        #endregion
+
+        #region Nested type: DoNothingListItemConverter
 
         /// <summary>
         /// An implementation that does nothing in the conversions.
         /// </summary>
         internal class DoNothingListItemConverter : IListItemConverter
         {
+            #region IListItemConverter Members
+
             /// <summary>
             /// Converts the specified master list item.
             /// </summary>
@@ -254,6 +276,10 @@ namespace TemplateManager.Common.Behaviours.ListSynchronizer
             {
                 return targetListItem;
             }
+
+            #endregion
         }
+
+        #endregion
     }
 }

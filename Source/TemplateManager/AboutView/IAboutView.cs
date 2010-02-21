@@ -1,5 +1,3 @@
-using System.Windows;
-
 namespace TemplateManager.AboutView
 {
     public interface IAboutView

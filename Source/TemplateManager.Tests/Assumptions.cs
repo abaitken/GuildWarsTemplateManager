@@ -12,7 +12,8 @@ namespace TemplateManager.Tests
             const string source = "source";
             const string other = "other";
 
-            Assert.AreEqual(-1, CultureInfo.CurrentUICulture.CompareInfo.IndexOf(source, other, CompareOptions.IgnoreCase));
+            Assert.AreEqual(-1,
+                            CultureInfo.CurrentUICulture.CompareInfo.IndexOf(source, other, CompareOptions.IgnoreCase));
         }
     }
 }

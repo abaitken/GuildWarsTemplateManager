@@ -1,16 +1,13 @@
 using System;
-using System.IO;
-using Microsoft.VisualBasic.FileIO;
 using TemplateManager.Infrastructure;
-using TemplateManager.Infrastructure.Model;
 using TemplateManager.Infrastructure.Services;
 
 namespace TemplateManager
 {
     internal class ServiceController : IServiceController
     {
-        private readonly ISkillTemplateService service;
         private readonly IApplicationSettings applicationSettings;
+        private readonly ISkillTemplateService service;
 
         public ServiceController(ISkillTemplateService service, IApplicationSettings applicationSettings)
         {

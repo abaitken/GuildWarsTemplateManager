@@ -19,7 +19,7 @@ namespace TemplateParser
         /// <returns>The template code</returns>
         public string CreateTemplateCode(T source)
         {
-            if (source == null)
+            if(source == null)
                 throw new ArgumentNullException("source");
 
             return Base64BinaryConverter.ConvertBitSetsToBase64(GetValues(source));
@@ -43,7 +43,7 @@ namespace TemplateParser
         /// <returns>The resulting object with data from the template</returns>
         public T ParseTemplateCode(string templateCode)
         {
-            if (!Base64BinaryConverter.ValidateBase64String(templateCode))
+            if(!Base64BinaryConverter.ValidateBase64String(templateCode))
                 return default(T);
 
             var binaryString = Base64BinaryConverter.GetBinaryString(templateCode);
@@ -59,7 +59,7 @@ namespace TemplateParser
 
         public bool CanParseTemplateCode(string templateCode)
         {
-            if (!Base64BinaryConverter.ValidateBase64String(templateCode))
+            if(!Base64BinaryConverter.ValidateBase64String(templateCode))
                 return false;
 
             var binaryString = Base64BinaryConverter.GetBinaryString(templateCode);

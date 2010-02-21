@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 
 namespace TemplateParser.Equipment
 {
@@ -11,11 +12,6 @@ namespace TemplateParser.Equipment
             inner = new List<NativeEquipmentItem>();
         }
 
-        public void Add(NativeEquipmentItem item)
-        {
-            inner.Add(item);
-        }
-
         #region IEnumerable<NativeEquipmentItem> Members
 
         public IEnumerator<NativeEquipmentItem> GetEnumerator()
@@ -23,15 +19,16 @@ namespace TemplateParser.Equipment
             return inner.GetEnumerator();
         }
 
-        #endregion
-
-        #region IEnumerable Members
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        IEnumerator IEnumerable.GetEnumerator()
         {
             return inner.GetEnumerator();
         }
 
         #endregion
+
+        public void Add(NativeEquipmentItem item)
+        {
+            inner.Add(item);
+        }
     }
 }

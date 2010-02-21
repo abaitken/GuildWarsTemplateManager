@@ -11,16 +11,15 @@ namespace TemplateManager.Tests
         [TestMethod]
         public void CanLoadAssetData()
         {
+            var resourceStream =
+                Assembly.Load(new AssemblyName("TemplateManager.Assets")).GetManifestResourceStream(
+                    "TemplateManager.Assets.Data.xaml");
 
-            var resourceStream = Assembly.Load(new AssemblyName("TemplateManager.Assets")).GetManifestResourceStream("TemplateManager.Assets.Data.xaml");
-            
             var reader = new StreamReader(resourceStream);
             reader.ReadToEnd();
 
             var assetLoader = new AssetLoader();
             assetLoader.Load();
-
-            
         }
     }
 }

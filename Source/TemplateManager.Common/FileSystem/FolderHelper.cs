@@ -8,7 +8,7 @@ namespace TemplateManager.Common.FileSystem
         {
             var result = initialPart;
 
-            foreach (var part in parts)
+            foreach(var part in parts)
                 result = Path.Combine(result, part);
 
             return result;

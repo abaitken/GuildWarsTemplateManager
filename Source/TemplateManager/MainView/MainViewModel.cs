@@ -1,24 +1,23 @@
 ﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Microsoft.Practices.Composite.Presentation.Commands;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
+using TemplateManager.AboutView;
 using TemplateManager.Common.Commands;
 using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Services;
 using TemplateManager.Modules.DataExplorer.Presentation.DataExplorer;
 using TemplateManager.Modules.SkillsView.DuplicateTemplate;
 using TemplateManager.Modules.SkillsView.SkillView;
-using TemplateManager.UpdateCheck;
-using TemplateManager.AboutView;
-using TemplateManager.ShellView;
-using System.Windows;
 using TemplateManager.Options;
+using TemplateManager.UpdateCheck;
 
 namespace TemplateManager.MainView
 {
-    class MainViewModel : IMainViewModel
+    internal class MainViewModel : IMainViewModel
     {
         private readonly IApplicationInformationService applicationInformationService;
         private readonly IUnityContainer container;
@@ -27,10 +26,10 @@ namespace TemplateManager.MainView
         private readonly IMainView view;
 
         public MainViewModel(IMainView view,
-                              IUpdateService updateService,
-                              IApplicationInformationService applicationInformationService,
-                              IUnityContainer container,
-                              IRegionManager regionManager)
+                             IUpdateService updateService,
+                             IApplicationInformationService applicationInformationService,
+                             IUnityContainer container,
+                             IRegionManager regionManager)
         {
             this.view = view;
             this.updateService = updateService;
@@ -42,7 +41,9 @@ namespace TemplateManager.MainView
             GenerateCommands();
         }
 
-        #region IMainWindowViewModel Members
+        public ICommand ExploreDataCommand { get; private set; }
+
+        #region IMainViewModel Members
 
         public IMainView View
         {
@@ -58,7 +59,6 @@ namespace TemplateManager.MainView
         public ICommand DuplicateTemplatesViewCommand { get; private set; }
         public ICommand CloseTabCommand { get; private set; }
         public ICommand ShowUpdateCheckWindowCommand { get; private set; }
-        public ICommand ExploreDataCommand { get; private set; }
 
         public void OnViewLoaded()
         {
@@ -131,11 +131,11 @@ namespace TemplateManager.MainView
             }
         }
 
-        static object GetView<TView>(IRegion region)
+        private static object GetView<TView>(IRegion region)
         {
-            foreach (var view in region.Views)
+            foreach(var view in region.Views)
             {
-                if (view is TView)
+                if(view is TView)
                     return view;
             }
 
@@ -185,5 +185,4 @@ namespace TemplateManager.MainView
             ShowView<IOptionsView, IOptionsViewModel>(regionName, vm => vm.View);
         }
     }
-
 }

@@ -28,7 +28,7 @@ namespace TemplateManager.Infrastructure.Model
         {
             var metaPath = GetMetaPathFromBuildPath(buildFile);
 
-            if (!File.Exists(metaPath))
+            if(!File.Exists(metaPath))
                 return Empty;
 
             var xdoc = XDocument.Load(metaPath);

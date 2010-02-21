@@ -33,11 +33,6 @@ namespace TemplateManager
             Container.RegisterType<IApplicationInformationService, ApplicationInformation>();
         }
 
-        private static class Const
-        {
-            public static readonly CommandLineOption ResetOption = new CommandLineOption("reset", "r");
-        }
-
         protected override DependencyObject CreateShell()
         {
             var settings = Container.Resolve<IApplicationSettings>();
@@ -45,7 +40,7 @@ namespace TemplateManager
 
             var arguments = CommandLineParser.Parse(args);
 
-            if (arguments[Const.ResetOption])
+            if(arguments[Const.ResetOption])
                 settings.Reset();
 
             var model = Container.Resolve<IMainWindowViewModel>();
@@ -66,5 +61,14 @@ namespace TemplateManager
             catalog.AddModule(typeof(PerformanceModule));
             return catalog;
         }
+
+        #region Nested type: Const
+
+        private static class Const
+        {
+            public static readonly CommandLineOption ResetOption = new CommandLineOption("reset", "r");
+        }
+
+        #endregion
     }
 }

@@ -1,7 +1,6 @@
 ﻿using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
-using TemplateManager.Infrastructure;
 
 namespace TemplateManager.Modules.Performance
 {
@@ -16,6 +15,8 @@ namespace TemplateManager.Modules.Performance
             this.regionManager = regionManager;
         }
 
+        #region IModule Members
+
         public void Initialize()
         {
             //container.RegisterType<IPerformanceView, PerformanceView>();
@@ -24,5 +25,7 @@ namespace TemplateManager.Modules.Performance
             //regionManager.RegisterViewWithRegion(RegionNames.SidePanelRegion,
             //                                     () => container.Resolve<IPerformanceViewModel>().View);
         }
+
+        #endregion
     }
 }

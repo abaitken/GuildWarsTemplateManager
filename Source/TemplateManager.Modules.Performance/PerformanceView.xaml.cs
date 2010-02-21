@@ -1,5 +1,4 @@
-﻿
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 namespace TemplateManager.Modules.Performance
 {

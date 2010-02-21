@@ -9,8 +9,8 @@ namespace TemplateManager.Common.WindowPositionManager
     /// </summary>
     internal class WindowSettingsProvider
     {
-        private readonly Window window;
         private readonly IWindowSettings settings;
+        private readonly Window window;
 
         public WindowSettingsProvider(Window window, IWindowSettings settings)
         {
@@ -74,6 +74,5 @@ namespace TemplateManager.Common.WindowPositionManager
         {
             SaveWindowState();
         }
-        
     }
 }

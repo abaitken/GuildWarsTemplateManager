@@ -19,7 +19,7 @@ namespace TemplateManager.Modules.Services.NativeObjects
 
         public NativeBuildFactory(string buildStore)
         {
-            if (string.IsNullOrEmpty(buildStore))
+            if(string.IsNullOrEmpty(buildStore))
                 throw new ArgumentNullException("buildStore");
 
             this.buildStore = buildStore;
@@ -65,7 +65,7 @@ namespace TemplateManager.Modules.Services.NativeObjects
 
         public static NativeBuildFactory Create(string buildStore)
         {
-            if (string.IsNullOrEmpty(buildStore))
+            if(string.IsNullOrEmpty(buildStore))
                 return Empty;
 
             return new NativeBuildFactory(buildStore);
@@ -77,7 +77,12 @@ namespace TemplateManager.Modules.Services.NativeObjects
         {
             public override NativeTemplateFolder TemplateFolder
             {
-                get { return new NativeTemplateFolder(new Dictionary<string, NativeSkillBuild>(), "Unknown", new List<NativeTemplateFolder>()); }
+                get
+                {
+                    return new NativeTemplateFolder(new Dictionary<string, NativeSkillBuild>(),
+                                                    "Unknown",
+                                                    new List<NativeTemplateFolder>());
+                }
             }
         }
 

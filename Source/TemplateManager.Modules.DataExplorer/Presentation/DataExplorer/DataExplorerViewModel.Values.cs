@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 {
-    partial class DataExplorerViewModel
+    internal partial class DataExplorerViewModel
     {
         private IDictionary<string, string> activationTimes;
         private IDictionary<string, string> adrenalineCosts;
@@ -17,20 +14,21 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
         private IDictionary<string, string> projectiles;
         private IDictionary<string, string> ranges;
         private IDictionary<string, string> rechargeTimes;
+        private IDictionary<string, string> removesValues;
         private IDictionary<string, string> sacrificeCosts;
         private IDictionary<string, string> skillTypes;
         private IDictionary<string, string> specialTypes;
         private IDictionary<string, string> targets;
         private IDictionary<string, string> upkeepValues;
 
-        #region IMainWindowViewModel Members
+        #region IDataExplorerViewModel Members
 
         public IDictionary<string, string> Attributes
         {
             get { return attributes; }
             private set
             {
-                if (attributes == value)
+                if(attributes == value)
                     return;
 
                 attributes = value;
@@ -44,7 +42,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return areaOfEffectValues; }
             set
             {
-                if (areaOfEffectValues == value)
+                if(areaOfEffectValues == value)
                     return;
 
                 areaOfEffectValues = value;
@@ -58,7 +56,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return skillTypes; }
             private set
             {
-                if (skillTypes == value)
+                if(skillTypes == value)
                     return;
 
                 skillTypes = value;
@@ -72,7 +70,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return specialTypes; }
             private set
             {
-                if (specialTypes == value)
+                if(specialTypes == value)
                     return;
 
                 specialTypes = value;
@@ -85,7 +83,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return professions; }
             private set
             {
-                if (professions == value)
+                if(professions == value)
                     return;
                 professions = value;
                 SendPropertyChanged("Professions");
@@ -97,7 +95,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return activationTimes; }
             private set
             {
-                if (activationTimes == value)
+                if(activationTimes == value)
                     return;
 
                 activationTimes = value;
@@ -110,7 +108,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return rechargeTimes; }
             private set
             {
-                if (rechargeTimes == value)
+                if(rechargeTimes == value)
                     return;
 
                 rechargeTimes = value;
@@ -123,7 +121,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return energyCosts; }
             private set
             {
-                if (energyCosts == value)
+                if(energyCosts == value)
                     return;
                 energyCosts = value;
                 SendPropertyChanged("EnergyCosts");
@@ -135,7 +133,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return sacrificeCosts; }
             private set
             {
-                if (sacrificeCosts == value)
+                if(sacrificeCosts == value)
                     return;
                 sacrificeCosts = value;
                 SendPropertyChanged("SacrificeCosts");
@@ -147,7 +145,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return adrenalineCosts; }
             private set
             {
-                if (adrenalineCosts == value)
+                if(adrenalineCosts == value)
                     return;
                 adrenalineCosts = value;
                 SendPropertyChanged("AdrenalineCosts");
@@ -159,7 +157,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return upkeepValues; }
             private set
             {
-                if (upkeepValues == value)
+                if(upkeepValues == value)
                     return;
                 upkeepValues = value;
                 SendPropertyChanged("UpkeepValues");
@@ -171,7 +169,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return campaigns; }
             private set
             {
-                if (campaigns == value)
+                if(campaigns == value)
                     return;
 
                 campaigns = value;
@@ -184,7 +182,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return ranges; }
             private set
             {
-                if (ranges == value)
+                if(ranges == value)
                     return;
 
                 ranges = value;
@@ -197,7 +195,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return targets; }
             private set
             {
-                if (targets == value)
+                if(targets == value)
                     return;
 
                 targets = value;
@@ -210,7 +208,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return projectiles; }
             private set
             {
-                if (projectiles == value)
+                if(projectiles == value)
                     return;
 
                 projectiles = value;
@@ -219,20 +217,18 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
         }
 
 
-        IDictionary<string, string> removesValues;
         public IDictionary<string, string> RemovesValues
         {
             get { return removesValues; }
             set
             {
-                if (removesValues == value)
+                if(removesValues == value)
                     return;
 
                 removesValues = value;
                 SendPropertyChanged("RemovesValues");
             }
         }
-
 
         #endregion
     }

@@ -5,10 +5,12 @@ namespace TemplateManager.Infrastructure.Model
     public class TemplateFolder
     {
         private readonly string folderPath;
-        private readonly IEnumerable<SkillTemplate> templates;
         private readonly IEnumerable<TemplateFolder> subFolders;
+        private readonly IEnumerable<SkillTemplate> templates;
 
-        public TemplateFolder(string folderPath, IEnumerable<SkillTemplate> templates, IEnumerable<TemplateFolder> subFolders)
+        public TemplateFolder(string folderPath,
+                              IEnumerable<SkillTemplate> templates,
+                              IEnumerable<TemplateFolder> subFolders)
         {
             this.folderPath = folderPath;
             this.templates = templates;

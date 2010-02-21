@@ -25,7 +25,7 @@ namespace TemplateManager.Modules.Performance
 
         public string MemoryUsage
         {
-            get { return string.Format("{0:0.00} MB", GC.GetTotalMemory(false)/1024.0/1024.0); }
+            get { return string.Format("{0:0.00} MB", GC.GetTotalMemory(false) / 1024.0 / 1024.0); }
         }
 
         public string HeaderText

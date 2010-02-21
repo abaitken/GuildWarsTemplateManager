@@ -8,7 +8,7 @@ namespace TemplateManager.Infrastructure.Extensions
     {
         public static string GetValueOrDefault(this XElement source)
         {
-            if (source == null)
+            if(source == null)
                 return string.Empty;
 
             return source.Value;
@@ -21,7 +21,7 @@ namespace TemplateManager.Infrastructure.Extensions
 
         public static int ParseIntOrDefault(this XElement source, IFormatProvider provider)
         {
-            if (source == null)
+            if(source == null)
                 return default(int);
 
             return source.ParseInt(provider);
@@ -44,7 +44,7 @@ namespace TemplateManager.Infrastructure.Extensions
 
         public static double ParseDoubleOrDefault(this XElement source, IFormatProvider provider)
         {
-            if (source == null)
+            if(source == null)
                 return default(double);
 
             return double.Parse(source.Value, provider);
@@ -52,7 +52,7 @@ namespace TemplateManager.Infrastructure.Extensions
 
         public static bool ParseBoolOrDefault(this XElement source)
         {
-            if (source == null)
+            if(source == null)
                 return default(bool);
 
             return source.ParseBool();
@@ -60,7 +60,7 @@ namespace TemplateManager.Infrastructure.Extensions
 
         public static bool ParseBool(this XElement source)
         {
-            if (source == null)
+            if(source == null)
                 return default(bool);
 
             return bool.Parse(source.Value);

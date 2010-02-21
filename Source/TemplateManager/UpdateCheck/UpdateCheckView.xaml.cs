@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TemplateManager.UpdateCheck
+﻿namespace TemplateManager.UpdateCheck
 {
     /// <summary>
     /// Interaction logic for UpdateCheck.xaml
@@ -12,10 +10,14 @@ namespace TemplateManager.UpdateCheck
             InitializeComponent();
         }
 
+        #region IUpdateCheckView Members
+
         public IUpdateCheckViewModel Model
         {
             get { return DataContext as IUpdateCheckViewModel; }
             set { DataContext = value; }
         }
+
+        #endregion
     }
 }

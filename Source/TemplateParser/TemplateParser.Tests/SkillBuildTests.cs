@@ -14,8 +14,8 @@ namespace TemplateParser.Tests
         {
             var build = new NativeSkillBuild();
 
-            build.AddAttribute((int)AttributeIndex.AirMagic, 5);
-            build.AddAttribute((int)AttributeIndex.AirMagic, 1);
+            build.AddAttribute((int) AttributeIndex.AirMagic, 5);
+            build.AddAttribute((int) AttributeIndex.AirMagic, 1);
         }
 
         [TestMethod]
@@ -24,16 +24,16 @@ namespace TemplateParser.Tests
         {
             var build = new NativeSkillBuild();
 
-            build.AddSkill((int)SkillIndex.AbaddonsChosen);
-            build.AddSkill((int)SkillIndex.AbaddonsConspiracy);
-            build.AddSkill((int)SkillIndex.AbaddonsFavor);
-            build.AddSkill((int)SkillIndex.AccumulatedPain);
-            build.AddSkill((int)SkillIndex.AcidTrap);
-            build.AddSkill((int)SkillIndex.AdventurersInsight);
-            build.AddSkill((int)SkillIndex.Aegis);
-            build.AddSkill((int)SkillIndex.AegisPvP);
-            build.AddSkill((int)SkillIndex.AfflictedSoulExplosion);
-            build.AddSkill((int)SkillIndex.Aftershock);
+            build.AddSkill((int) SkillIndex.AbaddonsChosen);
+            build.AddSkill((int) SkillIndex.AbaddonsConspiracy);
+            build.AddSkill((int) SkillIndex.AbaddonsFavor);
+            build.AddSkill((int) SkillIndex.AccumulatedPain);
+            build.AddSkill((int) SkillIndex.AcidTrap);
+            build.AddSkill((int) SkillIndex.AdventurersInsight);
+            build.AddSkill((int) SkillIndex.Aegis);
+            build.AddSkill((int) SkillIndex.AegisPvP);
+            build.AddSkill((int) SkillIndex.AfflictedSoulExplosion);
+            build.AddSkill((int) SkillIndex.Aftershock);
         }
 
         [TestMethod]
@@ -41,8 +41,8 @@ namespace TemplateParser.Tests
         {
             var build = new NativeSkillBuild();
 
-            build.AddSkill((int)SkillIndex.AbaddonsChosen);
-            build.AddSkill((int)SkillIndex.AbaddonsChosen);
+            build.AddSkill((int) SkillIndex.AbaddonsChosen);
+            build.AddSkill((int) SkillIndex.AbaddonsChosen);
 
             Assert.AreEqual(1, build.SkillIds.Count());
         }

@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
-using Microsoft.Practices.Composite.Presentation.Commands;
 using TemplateManager.Common.Commands;
 using TemplateManager.Common.ViewModel;
 using TemplateManager.Infrastructure;
@@ -15,8 +12,8 @@ namespace TemplateManager.Options
 {
     public class OptionsViewModel : ViewModelBase, IOptionsViewModel
     {
-        private readonly IOptionsView view;
         private readonly IApplicationSettings applicationSettings;
+        private readonly IOptionsView view;
         private string templatefolder;
 
         public OptionsViewModel(IOptionsView view, IApplicationSettings applicationSettings)
@@ -33,7 +30,7 @@ namespace TemplateManager.Options
 
         public void WriteSetings()
         {
-            if (applicationSettings.TemplateFolder != TemplateFolder)
+            if(applicationSettings.TemplateFolder != TemplateFolder)
                 applicationSettings.TemplateFolder = TemplateFolder;
 
             applicationSettings.Save();
@@ -67,6 +64,10 @@ namespace TemplateManager.Options
             get { return view; }
         }
 
+        public string HeaderText
+        {
+            get { return "Options"; }
+        }
 
         #endregion
 
@@ -119,7 +120,7 @@ namespace TemplateManager.Options
 
         private void OnApply()
         {
-            if (!IsTemplateFolderValid)
+            if(!IsTemplateFolderValid)
             {
                 MessageBox.Show("Template folder is invalid.");
                 return;
@@ -131,11 +132,6 @@ namespace TemplateManager.Options
         private void ReadSettings()
         {
             TemplateFolder = applicationSettings.TemplateFolder;
-        }
-
-        public string HeaderText
-        {
-            get { return "Options"; }
         }
     }
 }

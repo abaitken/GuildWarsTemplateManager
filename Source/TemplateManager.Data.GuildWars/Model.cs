@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Media.Imaging;
 using TemplateManager.Common;
 using TemplateManager.Infrastructure.Model;
-using System.Threading;
-using System.Globalization;
 
 namespace TemplateManager.Data.GuildWars
 {
@@ -21,6 +19,70 @@ namespace TemplateManager.Data.GuildWars
             return result;
         }
 
+        #region Nested type: AttributesRow
+
+        public partial class AttributesRow : IAttribute
+        {
+            #region IAttribute Members
+
+            public bool IsValid
+            {
+                get { return !IsTemplateIdNull(); }
+            }
+
+            #endregion
+        }
+
+        #endregion
+
+        #region Nested type: ImagesRow
+
+        public partial class ImagesRow
+        {
+            private BitmapImage image;
+
+            public BitmapImage GetImage()
+            {
+                if(image == null)
+                    image = GetImage(Data);
+
+                return image;
+            }
+
+            private static BitmapImage GetImage(byte[] source)
+            {
+                return ImageSerializer.CreateImage(source);
+            }
+        }
+
+        #endregion
+
+        #region Nested type: ProfessionsRow
+
+        public partial class ProfessionsRow : IProfession
+        {
+            #region IProfession Members
+
+            public bool IsValid
+            {
+                get { return !IsTemplateIdNull(); }
+            }
+
+            public BitmapImage Image
+            {
+                get { return GetImagesRows().First().GetImage(); }
+            }
+
+            public bool Equals(IProfession other)
+            {
+                return other.Name == Name;
+            }
+
+            #endregion
+        }
+
+        #endregion
+
         #region Nested type: SkillsRow
 
         public partial class SkillsRow : ISkill
@@ -31,7 +93,7 @@ namespace TemplateManager.Data.GuildWars
             {
                 get
                 {
-                    if (IsSourceActivationTimeNull())
+                    if(IsSourceActivationTimeNull())
                         return null;
 
                     return SourceActivationTime;
@@ -73,13 +135,6 @@ namespace TemplateManager.Data.GuildWars
                 }
             }
 
-            private SkillDescriptionRow GetDescription()
-            {
-                var currentCulture = CultureInfo.CurrentUICulture.Name;
-                return GetSkillDescriptionRows().FirstOrDefault(i => i.Locale == currentCulture) ??
-                       GetSkillDescriptionRows().First(i => i.Locale == "en");
-            }
-
             public double? RechargeTime
             {
                 get { return GetSingleValue(IsSourceRechargeTimeNull, i => i.SourceRechargeTime); }
@@ -107,10 +162,7 @@ namespace TemplateManager.Data.GuildWars
 
             public string Type
             {
-                get
-                {
-                    return GetSkillTypesRows().First().Name;
-                }
+                get { return GetSkillTypesRows().First().Name; }
             }
 
             public string Campaign
@@ -222,9 +274,16 @@ namespace TemplateManager.Data.GuildWars
 
             #endregion
 
+            private SkillDescriptionRow GetDescription()
+            {
+                var currentCulture = CultureInfo.CurrentUICulture.Name;
+                return GetSkillDescriptionRows().FirstOrDefault(i => i.Locale == currentCulture) ??
+                       GetSkillDescriptionRows().First(i => i.Locale == "en");
+            }
+
             private T? GetSingleValue<T>(Func<bool> isNull, Func<SkillsRow, T> getter) where T : struct
             {
-                if (isNull())
+                if(isNull())
                     return null;
 
                 return getter(this);
@@ -232,58 +291,5 @@ namespace TemplateManager.Data.GuildWars
         }
 
         #endregion
-
-        public partial class ProfessionsRow : IProfession
-        {
-            #region IProfession Members
-
-            public bool IsValid
-            {
-                get { return !IsTemplateIdNull(); }
-            }
-
-            public BitmapImage Image
-            {
-                get { return GetImagesRows().First().GetImage(); }
-            }
-
-            #endregion
-
-            public bool Equals(IProfession other)
-            {
-                return other.Name == Name;
-            }
-        }
-
-        public partial class AttributesRow : IAttribute
-        {
-            #region IAttribute Members
-
-            public bool IsValid
-            {
-                get { return !IsTemplateIdNull(); }
-            }
-
-            #endregion
-        }
-
-        public partial class ImagesRow
-        {
-            private BitmapImage image;
-
-            public BitmapImage GetImage()
-            {
-                if (image == null)
-                    image = GetImage(Data);
-
-                return image;
-            }
-
-            private static BitmapImage GetImage(byte[] source)
-            {
-                return ImageSerializer.CreateImage(source);
-            }
-
-        }
     }
 }

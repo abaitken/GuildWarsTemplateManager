@@ -56,7 +56,7 @@ namespace TemplateManager.Common.ViewModel
             private set
             {
                 VerifyCalledOnUIThread();
-                if (value != isActive)
+                if(value != isActive)
                 {
                     isActive = value;
                     SendPropertyChanged("IsActive");
@@ -78,7 +78,7 @@ namespace TemplateManager.Common.ViewModel
             set
             {
                 VerifyCalledOnUIThread();
-                if (value != state)
+                if(value != state)
                 {
                     state = value;
                     SendPropertyChanged("State");
@@ -122,7 +122,7 @@ namespace TemplateManager.Common.ViewModel
         {
             VerifyCalledOnUIThread();
 
-            if (!isActive)
+            if(!isActive)
             {
                 IsActive = true;
                 OnActivated();
@@ -143,7 +143,7 @@ namespace TemplateManager.Common.ViewModel
         {
             VerifyCalledOnUIThread();
 
-            if (isActive)
+            if(isActive)
             {
                 IsActive = false;
                 OnDeactivated();
@@ -164,7 +164,7 @@ namespace TemplateManager.Common.ViewModel
         protected void SendPropertyChanged(string propertyName)
         {
             VerifyCalledOnUIThread();
-            if (propertyChangedEvent != null)
+            if(propertyChangedEvent != null)
             {
                 propertyChangedEvent(this, new PropertyChangedEventArgs(propertyName));
             }

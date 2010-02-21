@@ -13,7 +13,7 @@ namespace TemplateManager.Common.WindowPositionManager
 
         public static Type GetWindowSettings(DependencyObject obj)
         {
-            return (Type)obj.GetValue(WindowSettingsProperty);
+            return (Type) obj.GetValue(WindowSettingsProperty);
         }
 
         public static void SetWindowSettings(DependencyObject obj, Type value)
@@ -25,17 +25,17 @@ namespace TemplateManager.Common.WindowPositionManager
         {
             var window = obj as Window;
 
-            if (window == null)
+            if(window == null)
                 return;
 
             var type = e.NewValue as Type;
 
-            if (type == null)
+            if(type == null)
                 return;
 
             var settings = Activator.CreateInstance(type) as IWindowSettings;
 
-            if (settings == null)
+            if(settings == null)
                 return;
 
             var provider = new WindowSettingsProvider(window, settings);

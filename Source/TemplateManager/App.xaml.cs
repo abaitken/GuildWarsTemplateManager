@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Threading;
 using ExceptionReporting;
 
 namespace TemplateManager
@@ -9,7 +10,6 @@ namespace TemplateManager
     /// </summary>
     public partial class App
     {
-
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
@@ -20,7 +20,7 @@ namespace TemplateManager
             boostrapper.Run();
         }
 
-        static void Dispatcher_UnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        private static void Dispatcher_UnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
             var reporter = new ExceptionReporter();
             reporter.Config.EmailReportAddress = "logaangarius@hotmail.com";

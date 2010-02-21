@@ -5,6 +5,5 @@ namespace TemplateManager.ShellView
         IMainWindowView View { get; }
         string WindowTitle { get; }
         void ShowView();
-
     }
 }

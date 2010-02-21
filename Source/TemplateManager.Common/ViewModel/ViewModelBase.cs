@@ -12,7 +12,7 @@ namespace TemplateManager.Common.ViewModel
 
         protected virtual void SendPropertyChanged(string propertyName)
         {
-            if (PropertyChanged != null)
+            if(PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
     }

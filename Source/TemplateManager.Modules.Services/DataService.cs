@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using TemplateManager.Data.GuildWars;
@@ -19,7 +18,7 @@ namespace TemplateManager.Modules.Services
 
         #region IDataService Members
 
-        public IEnumerable<IProfession> Professions 
+        public IEnumerable<IProfession> Professions
         {
             get
             {
@@ -32,7 +31,7 @@ namespace TemplateManager.Modules.Services
         {
             get
             {
-                if (invalidSkill == null)
+                if(invalidSkill == null)
                     invalidSkill = Skills.First(i => i.TemplateId == -1);
 
                 return invalidSkill;
@@ -55,7 +54,6 @@ namespace TemplateManager.Modules.Services
             {
                 return from item in Professions
                        select item;
-                       
             }
         }
 
@@ -73,8 +71,8 @@ namespace TemplateManager.Modules.Services
             }
         }
 
-        public IEnumerable<IAttribute> Attributes 
-        { 
+        public IEnumerable<IAttribute> Attributes
+        {
             get
             {
                 return from item in data.Attributes

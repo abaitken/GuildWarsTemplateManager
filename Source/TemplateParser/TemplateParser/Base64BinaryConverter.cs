@@ -23,10 +23,10 @@ namespace TemplateParser
         public static string ConvertBitSetsToBase64(IEnumerable<BitSet> bitSets)
         {
             var bits = from set in bitSets
-                                       select IntegerToBinaryString(set.Value, set.BitLength);
+                       select IntegerToBinaryString(set.Value, set.BitLength);
 
             var binaryString = new StringBuilder();
-            foreach (var item in bits)
+            foreach(var item in bits)
                 binaryString.Append(item);
 
             return BinaryStringToBase64(binaryString.ToString());
@@ -35,10 +35,10 @@ namespace TemplateParser
         private static string BinaryStringToBase64(string binaryString)
         {
             var values = from item in binaryString.ChunkString(6)
-                                      select BinaryStringToInteger(item.Reverse());
+                         select BinaryStringToInteger(item.Reverse());
 
             var result = from item in values
-                                         select Table.Substring(item, 1);
+                         select Table.Substring(item, 1);
 
             return result.Combine();
         }
@@ -49,8 +49,8 @@ namespace TemplateParser
 
             var temp = chunk.Reverse();
 
-            for (var i = 0; i < temp.Length; i++)
-                result += int.Parse(temp.Substring(i, 1), CultureInfo.InvariantCulture)*(1 << i);
+            for(var i = 0; i < temp.Length; i++)
+                result += int.Parse(temp.Substring(i, 1), CultureInfo.InvariantCulture) * (1 << i);
 
             return result;
         }
@@ -65,7 +65,7 @@ namespace TemplateParser
         {
             var result = "";
 
-            while (value > 0)
+            while(value > 0)
             {
                 var binaryHolder = value % 2;
                 result += binaryHolder;
@@ -90,8 +90,8 @@ namespace TemplateParser
         /// <returns></returns>
         public static bool ValidateBase64String(string itemToValidate)
         {
-            foreach (var character in itemToValidate.ToCharArray())
-                if (!Table.Contains(character))
+            foreach(var character in itemToValidate.ToCharArray())
+                if(!Table.Contains(character))
                     return false;
 
             return true;
@@ -105,7 +105,7 @@ namespace TemplateParser
         public static string GetBinaryString(string value)
         {
             var result = from item in value.ToCharArray()
-                                         select BinaryValueOfChar(item);
+                         select BinaryValueOfChar(item);
 
             return result.Combine();
         }

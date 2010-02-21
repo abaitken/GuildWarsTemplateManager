@@ -7,12 +7,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("Template Manager")]
 [assembly: AssemblyCopyright("Copyright © Alex Boyne-Aitken 2009")]
 [assembly: AssemblyTrademark("")]
-
 [assembly: AssemblyConfiguration("ALPHA")]
 [assembly: AssemblyFileVersion("0.4.0.0")]
 [assembly: CLSCompliant(true)]
-
-
 [assembly: ComVisible(false)]
 
 //In order to begin building localizable applications, set 
@@ -23,5 +20,4 @@ using System.Runtime.InteropServices;
 //the line below to match the UICulture setting in the project file.
 
 [assembly: NeutralResourcesLanguage("en-US")]
-
 [assembly: AssemblyCulture("")]

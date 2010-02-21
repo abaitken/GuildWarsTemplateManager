@@ -68,7 +68,8 @@ namespace TemplateManager.DataFetcher.Tests
         [TestMethod]
         public void FullArticleNotFound()
         {
-            mockedDataProvider.Setup(o => o.RequestData("Game_link:Skill_1", true)).Returns(() => "#REDIRECT [[self:Some Skill]]");
+            mockedDataProvider.Setup(o => o.RequestData("Game_link:Skill_1", true)).Returns(
+                () => "#REDIRECT [[self:Some Skill]]");
             mockedDataProvider.Setup(o => o.RequestData("Some Skill", true)).Returns(() => null);
             mockedDataProvider.Setup(o => o.RequestData("Some Skill (PvP)", true)).Returns(() => null);
 
@@ -83,7 +84,8 @@ namespace TemplateManager.DataFetcher.Tests
         [TestMethod]
         public void NoInfoBoxFound()
         {
-            mockedDataProvider.Setup(o => o.RequestData("Game_link:Skill_1", true)).Returns(() => "#REDIRECT [[self:Some Skill]]");
+            mockedDataProvider.Setup(o => o.RequestData("Game_link:Skill_1", true)).Returns(
+                () => "#REDIRECT [[self:Some Skill]]");
             mockedDataProvider.Setup(o => o.RequestData("Some Skill", true)).Returns(() => "junk");
             mockedDataProvider.Setup(o => o.RequestData("Some Skill (PvP)", true)).Returns(() => null);
 
@@ -99,7 +101,8 @@ namespace TemplateManager.DataFetcher.Tests
         [DeploymentItem("ParserTestData", "ParserTestData")]
         public void InfoBoxParsedCorrectly()
         {
-            mockedDataProvider.Setup(o => o.RequestData("Game_link:Skill_1", true)).Returns(() => "#REDIRECT [[self:Some Skill]]");
+            mockedDataProvider.Setup(o => o.RequestData("Game_link:Skill_1", true)).Returns(
+                () => "#REDIRECT [[self:Some Skill]]");
             mockedDataProvider.Setup(o => o.RequestData("Some_Skill", true)).Returns(() => LoadFile("raw.txt"));
             mockedDataProvider.Setup(o => o.RequestData("Some_Skill_(PvP)", true)).Returns(() => null);
             mockedDataProvider.Setup(o => o.RequestData("Some_Skill", false)).Returns(() => null);
@@ -118,15 +121,19 @@ namespace TemplateManager.DataFetcher.Tests
             Assert.AreEqual("Signet", result.Type);
             Assert.AreEqual(2.0, result.ActivationTime.Value);
             Assert.AreEqual(4.0, result.RechargeTime.Value);
-            Assert.AreEqual("Signet. You gain 82...154...172 Health. You have -40 armor while using this skill.", result.Description);
-            Assert.AreEqual("Signet. You gain 82...154...172 Health. [color=gray]You have -40 armor while using this skill.[/color]", result.ConciseDescription);
+            Assert.AreEqual("Signet. You gain 82...154...172 Health. You have -40 armor while using this skill.",
+                            result.Description);
+            Assert.AreEqual(
+                "Signet. You gain 82...154...172 Health. [color=gray]You have -40 armor while using this skill.[/color]",
+                result.ConciseDescription);
         }
 
         [TestMethod]
         [DeploymentItem("ParserTestData", "ParserTestData")]
         public void WillParseProgression()
         {
-            mockedDataProvider.Setup(o => o.RequestData("Game_link:Skill_1", true)).Returns(() => "#REDIRECT [[self:Some Skill]]");
+            mockedDataProvider.Setup(o => o.RequestData("Game_link:Skill_1", true)).Returns(
+                () => "#REDIRECT [[self:Some Skill]]");
             mockedDataProvider.Setup(o => o.RequestData("Some_Skill", true)).Returns(() => LoadFile("raw.txt"));
             mockedDataProvider.Setup(o => o.RequestData("Some_Skill_(PvP)", true)).Returns(() => null);
             mockedDataProvider.Setup(o => o.RequestData("Some_Skill", false)).Returns(() => null);
@@ -152,14 +159,16 @@ namespace TemplateManager.DataFetcher.Tests
         [DeploymentItem("ParserTestData", "ParserTestData")]
         public void WillFetchImageCorrectly()
         {
-            mockedDataProvider.Setup(o => o.RequestData("Game_link:Skill_1", true)).Returns(() => "#REDIRECT [[self:Some Skill]]");
+            mockedDataProvider.Setup(o => o.RequestData("Game_link:Skill_1", true)).Returns(
+                () => "#REDIRECT [[self:Some Skill]]");
             mockedDataProvider.Setup(o => o.RequestData("Some_Skill", true)).Returns(() => LoadFile("raw.txt"));
             mockedDataProvider.Setup(o => o.RequestData("Some_Skill_(PvP)", true)).Returns(() => null);
             mockedDataProvider.Setup(o => o.RequestData("Some_Skill", false)).Returns(() => LoadFile("html.txt"));
             mockedDataProvider.Setup(o => o.CreateUrl("Some_Skill", false)).Returns("http://domain/Some_Skill");
-            var image = new Bitmap(1,1);
-            mockedDataProvider.Setup(o => o.RequestImage("/images/e/e6/Healing_Signet.jpg")).Returns(() => image).Verifiable();
-            
+            var image = new Bitmap(1, 1);
+            mockedDataProvider.Setup(o => o.RequestImage("/images/e/e6/Healing_Signet.jpg")).Returns(() => image).
+                Verifiable();
+
             mockedFileSystem.Setup(o => o.Exists(@".\1.jpg")).Returns(() => false).Verifiable();
             mockedFileSystem.Setup(o => o.Write(@".\1.jpg", image)).Verifiable();
 
@@ -174,7 +183,8 @@ namespace TemplateManager.DataFetcher.Tests
         [TestMethod]
         public void FireDartArticle()
         {
-            const string skillText = @"{{skill infobox
+            const string skillText =
+                @"{{skill infobox
 | id = 2692 <!-- BMP -->
 | name = Fire Dart
 | campaign = Eye of the North
@@ -195,7 +205,8 @@ namespace TemplateManager.DataFetcher.Tests
 *{{skill icon|Poison Jet}}
 *{{skill icon|Poison Spout}}";
 
-            mockedDataProvider.Setup(o => o.RequestData("Game_link:Skill_1", true)).Returns(() => "#REDIRECT [[self:Some Skill]]");
+            mockedDataProvider.Setup(o => o.RequestData("Game_link:Skill_1", true)).Returns(
+                () => "#REDIRECT [[self:Some Skill]]");
             mockedDataProvider.Setup(o => o.RequestData("Some Skill", true)).Returns(() => skillText);
             mockedDataProvider.Setup(o => o.RequestData("Some Skill", false)).Returns(() => null);
 

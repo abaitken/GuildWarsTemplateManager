@@ -7,10 +7,9 @@ namespace TemplateManager
 {
     internal class ApplicationSettings : ApplicationSettingsBase, IApplicationSettings
     {
-        private const string DeleteBehaviourSettingsName = "DeleteBehaviour";
         private const string ArchiveFolderSettingsName = "ArchiveFolder";
+        private const string DeleteBehaviourSettingsName = "DeleteBehaviour";
         private const string TemplateFolderSettingName = "TemplateFolder";
-
 
         #region IApplicationSettings Members
 

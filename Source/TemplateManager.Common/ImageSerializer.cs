@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
+﻿using System.IO;
 using System.Windows.Media.Imaging;
 
 namespace TemplateManager.Common
@@ -27,11 +23,11 @@ namespace TemplateManager.Common
             var reader = new StreamReader(imageName);
             var stream = reader.BaseStream;
             byte[] buffer = null;
-            if (stream != null && stream.Length > 0)
+            if(stream != null && stream.Length > 0)
             {
-                using (var br = new BinaryReader(stream))
+                using(var br = new BinaryReader(stream))
                 {
-                    buffer = br.ReadBytes((int)stream.Length);
+                    buffer = br.ReadBytes((int) stream.Length);
                 }
             }
 

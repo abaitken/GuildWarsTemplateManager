@@ -1,9 +1,9 @@
 namespace TemplateManager.ShellView
 {
-    class MainWindowViewModel : IMainWindowViewModel
+    internal class MainWindowViewModel : IMainWindowViewModel
     {
-        private readonly IMainWindowView view;
         private readonly IApplicationInformationService service;
+        private readonly IMainWindowView view;
 
         public MainWindowViewModel(IMainWindowView view, IApplicationInformationService service)
         {
@@ -11,6 +11,8 @@ namespace TemplateManager.ShellView
             this.service = service;
             view.Model = this;
         }
+
+        #region IMainWindowViewModel Members
 
         public IMainWindowView View
         {
@@ -27,6 +29,7 @@ namespace TemplateManager.ShellView
         {
             view.Show();
         }
-    }
 
+        #endregion
+    }
 }

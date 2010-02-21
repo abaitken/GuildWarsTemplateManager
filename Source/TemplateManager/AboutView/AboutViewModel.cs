@@ -9,8 +9,8 @@ namespace TemplateManager.AboutView
 {
     internal class AboutViewModel : ViewModelBase, IAboutViewModel
     {
-        private readonly IAboutView view;
         private readonly IApplicationInformationService applicationInformationService;
+        private readonly IAboutView view;
 
         public AboutViewModel(IAboutView view, IApplicationInformationService applicationInformationService)
         {
@@ -21,24 +21,20 @@ namespace TemplateManager.AboutView
             CloseWindowCommand = new DelegateCommand<Window>(OnCloseWindow);
         }
 
-        private static void OnCloseWindow(Window obj)
-        {
-            obj.Close();
-        }
+        #region IAboutViewModel Members
 
         public string AssemblyCopyright
         {
-            get
-            {
-                return applicationInformationService.AssemblyCopyright;
-            }
+            get { return applicationInformationService.AssemblyCopyright; }
         }
 
         public string Title
         {
             get
             {
-                return string.Format(CultureInfo.CurrentCulture, "About {0}", applicationInformationService.AssemblyTitle);
+                return string.Format(CultureInfo.CurrentCulture,
+                                     "About {0}",
+                                     applicationInformationService.AssemblyTitle);
             }
         }
 
@@ -46,9 +42,10 @@ namespace TemplateManager.AboutView
         {
             get
             {
-                return string.Format(CultureInfo.CurrentCulture, "{0} v{1} {2}", 
-                                     applicationInformationService.AssemblyProduct,  
-                                     applicationInformationService.FileVersion, 
+                return string.Format(CultureInfo.CurrentCulture,
+                                     "{0} v{1} {2}",
+                                     applicationInformationService.AssemblyProduct,
+                                     applicationInformationService.FileVersion,
                                      applicationInformationService.AssemblyConfiguration);
             }
         }
@@ -62,11 +59,18 @@ namespace TemplateManager.AboutView
 
         public IEnumerable<string> Credits
         {
-            get 
+            get
             {
                 yield return "Alex Boyne-Aitken, Lead Programmer";
                 yield return "Matt (RavenIII), Artwork";
             }
+        }
+
+        #endregion
+
+        private static void OnCloseWindow(Window obj)
+        {
+            obj.Close();
         }
     }
 }

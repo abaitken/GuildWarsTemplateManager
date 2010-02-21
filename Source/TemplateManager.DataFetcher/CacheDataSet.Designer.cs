@@ -8,242 +8,292 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System;
+using System.CodeDom.Compiler;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.Design;
+using System.Data;
+using System.Data.Common;
+using System.Data.SqlServerCe;
+using System.Diagnostics;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Xml;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+using TemplateManager.DataFetcher.Properties;
+
 #pragma warning disable 1591
 
-namespace GuildWarsDataFetcher {
-    
-    
+namespace GuildWarsDataFetcher
+{
     /// <summary>
     ///Represents a strongly typed in-memory cache of data.
     ///</summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-    [global::System.Serializable()]
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("CacheDataSet")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class CacheDataSet : global::System.Data.DataSet {
-        
+    [GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+    [Serializable()]
+    [DesignerCategory("code")]
+    [ToolboxItem(true)]
+    [XmlSchemaProvider("GetTypedDataSetSchema")]
+    [XmlRoot("CacheDataSet")]
+    [HelpKeyword("vs.data.DataSet")]
+    public partial class CacheDataSet : DataSet
+    {
+        #region Delegates
+
+        public delegate void CacheRowChangeEventHandler(object sender, CacheRowChangeEvent e);
+
+        #endregion
+
+        private SchemaSerializationMode _schemaSerializationMode = SchemaSerializationMode.IncludeSchema;
         private CacheDataTable tableCache;
-        
-        private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public CacheDataSet() {
-            this.BeginInit();
-            this.InitClass();
-            global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
+
+        [DebuggerNonUserCode()]
+        public CacheDataSet()
+        {
+            BeginInit();
+            InitClass();
+            var schemaChangedHandler = new CollectionChangeEventHandler(SchemaChanged);
             base.Tables.CollectionChanged += schemaChangedHandler;
             base.Relations.CollectionChanged += schemaChangedHandler;
-            this.EndInit();
+            EndInit();
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected CacheDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                base(info, context, false) {
-            if ((this.IsBinarySerialized(info, context) == true)) {
-                this.InitVars(false);
-                global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler1 = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
-                this.Tables.CollectionChanged += schemaChangedHandler1;
-                this.Relations.CollectionChanged += schemaChangedHandler1;
+
+        [DebuggerNonUserCode()]
+        protected CacheDataSet(SerializationInfo info, StreamingContext context)
+            :
+                base(info, context, false)
+        {
+            if((IsBinarySerialized(info, context) == true))
+            {
+                InitVars(false);
+                var schemaChangedHandler1 = new CollectionChangeEventHandler(SchemaChanged);
+                Tables.CollectionChanged += schemaChangedHandler1;
+                Relations.CollectionChanged += schemaChangedHandler1;
                 return;
             }
-            string strSchema = ((string)(info.GetValue("XmlSchema", typeof(string))));
-            if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
-                global::System.Data.DataSet ds = new global::System.Data.DataSet();
-                ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Cache"] != null)) {
+            var strSchema = ((string) (info.GetValue("XmlSchema", typeof(string))));
+            if((DetermineSchemaSerializationMode(info, context) == SchemaSerializationMode.IncludeSchema))
+            {
+                var ds = new DataSet();
+                ds.ReadXmlSchema(new XmlTextReader(new StringReader(strSchema)));
+                if((ds.Tables["Cache"] != null))
+                {
                     base.Tables.Add(new CacheDataTable(ds.Tables["Cache"]));
                 }
-                this.DataSetName = ds.DataSetName;
-                this.Prefix = ds.Prefix;
-                this.Namespace = ds.Namespace;
-                this.Locale = ds.Locale;
-                this.CaseSensitive = ds.CaseSensitive;
-                this.EnforceConstraints = ds.EnforceConstraints;
-                this.Merge(ds, false, global::System.Data.MissingSchemaAction.Add);
-                this.InitVars();
+                DataSetName = ds.DataSetName;
+                Prefix = ds.Prefix;
+                Namespace = ds.Namespace;
+                Locale = ds.Locale;
+                CaseSensitive = ds.CaseSensitive;
+                EnforceConstraints = ds.EnforceConstraints;
+                Merge(ds, false, MissingSchemaAction.Add);
+                InitVars();
             }
-            else {
-                this.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
+            else
+            {
+                ReadXmlSchema(new XmlTextReader(new StringReader(strSchema)));
             }
-            this.GetSerializationData(info, context);
-            global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
+            GetSerializationData(info, context);
+            var schemaChangedHandler = new CollectionChangeEventHandler(SchemaChanged);
             base.Tables.CollectionChanged += schemaChangedHandler;
-            this.Relations.CollectionChanged += schemaChangedHandler;
+            Relations.CollectionChanged += schemaChangedHandler;
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public CacheDataTable Cache {
-            get {
-                return this.tableCache;
-            }
+
+        [DebuggerNonUserCode()]
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+        public CacheDataTable Cache
+        {
+            get { return tableCache; }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.BrowsableAttribute(true)]
-        [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
-        public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
-            get {
-                return this._schemaSerializationMode;
-            }
-            set {
-                this._schemaSerializationMode = value;
-            }
+
+        [DebuggerNonUserCode()]
+        [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public override SchemaSerializationMode SchemaSerializationMode
+        {
+            get { return _schemaSerializationMode; }
+            set { _schemaSerializationMode = value; }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public new global::System.Data.DataTableCollection Tables {
-            get {
-                return base.Tables;
-            }
+
+        [DebuggerNonUserCode()]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public new DataTableCollection Tables
+        {
+            get { return base.Tables; }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public new global::System.Data.DataRelationCollection Relations {
-            get {
-                return base.Relations;
-            }
+
+        [DebuggerNonUserCode()]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public new DataRelationCollection Relations
+        {
+            get { return base.Relations; }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected override void InitializeDerivedDataSet() {
-            this.BeginInit();
-            this.InitClass();
-            this.EndInit();
+
+        [DebuggerNonUserCode()]
+        protected override void InitializeDerivedDataSet()
+        {
+            BeginInit();
+            InitClass();
+            EndInit();
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public override global::System.Data.DataSet Clone() {
-            CacheDataSet cln = ((CacheDataSet)(base.Clone()));
+
+        [DebuggerNonUserCode()]
+        public override DataSet Clone()
+        {
+            var cln = ((CacheDataSet) (base.Clone()));
             cln.InitVars();
-            cln.SchemaSerializationMode = this.SchemaSerializationMode;
+            cln.SchemaSerializationMode = SchemaSerializationMode;
             return cln;
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected override bool ShouldSerializeTables() {
+
+        [DebuggerNonUserCode()]
+        protected override bool ShouldSerializeTables()
+        {
             return false;
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected override bool ShouldSerializeRelations() {
+
+        [DebuggerNonUserCode()]
+        protected override bool ShouldSerializeRelations()
+        {
             return false;
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected override void ReadXmlSerializable(global::System.Xml.XmlReader reader) {
-            if ((this.DetermineSchemaSerializationMode(reader) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
-                this.Reset();
-                global::System.Data.DataSet ds = new global::System.Data.DataSet();
+
+        [DebuggerNonUserCode()]
+        protected override void ReadXmlSerializable(XmlReader reader)
+        {
+            if((DetermineSchemaSerializationMode(reader) == SchemaSerializationMode.IncludeSchema))
+            {
+                Reset();
+                var ds = new DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Cache"] != null)) {
+                if((ds.Tables["Cache"] != null))
+                {
                     base.Tables.Add(new CacheDataTable(ds.Tables["Cache"]));
                 }
-                this.DataSetName = ds.DataSetName;
-                this.Prefix = ds.Prefix;
-                this.Namespace = ds.Namespace;
-                this.Locale = ds.Locale;
-                this.CaseSensitive = ds.CaseSensitive;
-                this.EnforceConstraints = ds.EnforceConstraints;
-                this.Merge(ds, false, global::System.Data.MissingSchemaAction.Add);
-                this.InitVars();
+                DataSetName = ds.DataSetName;
+                Prefix = ds.Prefix;
+                Namespace = ds.Namespace;
+                Locale = ds.Locale;
+                CaseSensitive = ds.CaseSensitive;
+                EnforceConstraints = ds.EnforceConstraints;
+                Merge(ds, false, MissingSchemaAction.Add);
+                InitVars();
             }
-            else {
-                this.ReadXml(reader);
-                this.InitVars();
+            else
+            {
+                ReadXml(reader);
+                InitVars();
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected override global::System.Xml.Schema.XmlSchema GetSchemaSerializable() {
-            global::System.IO.MemoryStream stream = new global::System.IO.MemoryStream();
-            this.WriteXmlSchema(new global::System.Xml.XmlTextWriter(stream, null));
+
+        [DebuggerNonUserCode()]
+        protected override XmlSchema GetSchemaSerializable()
+        {
+            var stream = new MemoryStream();
+            WriteXmlSchema(new XmlTextWriter(stream, null));
             stream.Position = 0;
-            return global::System.Xml.Schema.XmlSchema.Read(new global::System.Xml.XmlTextReader(stream), null);
+            return XmlSchema.Read(new XmlTextReader(stream), null);
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        internal void InitVars() {
-            this.InitVars(true);
+
+        [DebuggerNonUserCode()]
+        internal void InitVars()
+        {
+            InitVars(true);
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        internal void InitVars(bool initTable) {
-            this.tableCache = ((CacheDataTable)(base.Tables["Cache"]));
-            if ((initTable == true)) {
-                if ((this.tableCache != null)) {
-                    this.tableCache.InitVars();
+
+        [DebuggerNonUserCode()]
+        internal void InitVars(bool initTable)
+        {
+            tableCache = ((CacheDataTable) (base.Tables["Cache"]));
+            if((initTable == true))
+            {
+                if((tableCache != null))
+                {
+                    tableCache.InitVars();
                 }
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private void InitClass() {
-            this.DataSetName = "CacheDataSet";
-            this.Prefix = "";
-            this.Namespace = "http://tempuri.org/CacheDataSet.xsd";
-            this.EnforceConstraints = true;
-            this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableCache = new CacheDataTable();
-            base.Tables.Add(this.tableCache);
+
+        [DebuggerNonUserCode()]
+        private void InitClass()
+        {
+            DataSetName = "CacheDataSet";
+            Prefix = "";
+            Namespace = "http://tempuri.org/CacheDataSet.xsd";
+            EnforceConstraints = true;
+            SchemaSerializationMode = SchemaSerializationMode.IncludeSchema;
+            tableCache = new CacheDataTable();
+            base.Tables.Add(tableCache);
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private bool ShouldSerializeCache() {
+
+        [DebuggerNonUserCode()]
+        private bool ShouldSerializeCache()
+        {
             return false;
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
-            if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
-                this.InitVars();
+
+        [DebuggerNonUserCode()]
+        private void SchemaChanged(object sender, CollectionChangeEventArgs e)
+        {
+            if((e.Action == CollectionChangeAction.Remove))
+            {
+                InitVars();
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            CacheDataSet ds = new CacheDataSet();
-            global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-            global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-            global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
+
+        [DebuggerNonUserCode()]
+        public static XmlSchemaComplexType GetTypedDataSetSchema(XmlSchemaSet xs)
+        {
+            var ds = new CacheDataSet();
+            var type = new XmlSchemaComplexType();
+            var sequence = new XmlSchemaSequence();
+            var any = new XmlSchemaAny();
             any.Namespace = ds.Namespace;
             sequence.Items.Add(any);
             type.Particle = sequence;
-            global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-            if (xs.Contains(dsSchema.TargetNamespace)) {
-                global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                try {
-                    global::System.Xml.Schema.XmlSchema schema = null;
+            XmlSchema dsSchema = ds.GetSchemaSerializable();
+            if(xs.Contains(dsSchema.TargetNamespace))
+            {
+                var s1 = new MemoryStream();
+                var s2 = new MemoryStream();
+                try
+                {
+                    XmlSchema schema = null;
                     dsSchema.Write(s1);
-                    for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                        schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                    for(IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext();)
+                    {
+                        schema = ((XmlSchema) (schemas.Current));
                         s2.SetLength(0);
                         schema.Write(s2);
-                        if ((s1.Length == s2.Length)) {
+                        if((s1.Length == s2.Length))
+                        {
                             s1.Position = 0;
                             s2.Position = 0;
-                            for (; ((s1.Position != s1.Length) 
-                                        && (s1.ReadByte() == s2.ReadByte())); ) {
+                            for(;
+                                ((s1.Position != s1.Length)
+                                 && (s1.ReadByte() == s2.ReadByte()));)
+                            {
                                 ;
                             }
-                            if ((s1.Position == s1.Length)) {
+                            if((s1.Position == s1.Length))
+                            {
                                 return type;
                             }
                         }
                     }
                 }
-                finally {
-                    if ((s1 != null)) {
+                finally
+                {
+                    if((s1 != null))
+                    {
                         s1.Close();
                     }
-                    if ((s2 != null)) {
+                    if((s2 != null))
+                    {
                         s2.Close();
                     }
                 }
@@ -251,249 +301,290 @@ namespace GuildWarsDataFetcher {
             xs.Add(dsSchema);
             return type;
         }
-        
-        public delegate void CacheRowChangeEventHandler(object sender, CacheRowChangeEvent e);
-        
+
+        #region Nested type: CacheDataTable
+
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class CacheDataTable : global::System.Data.TypedTableBase<CacheRow> {
-            
-            private global::System.Data.DataColumn columnid;
-            
-            private global::System.Data.DataColumn columndata;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CacheDataTable() {
-                this.TableName = "Cache";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
+        [GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        [Serializable()]
+        [XmlSchemaProvider("GetTypedTableSchema")]
+        public partial class CacheDataTable : TypedTableBase<CacheRow>
+        {
+            private DataColumn columndata;
+            private DataColumn columnid;
+
+            [DebuggerNonUserCode()]
+            public CacheDataTable()
+            {
+                TableName = "Cache";
+                BeginInit();
+                InitClass();
+                EndInit();
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal CacheDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
+
+            [DebuggerNonUserCode()]
+            internal CacheDataTable(DataTable table)
+            {
+                TableName = table.TableName;
+                if((table.CaseSensitive != table.DataSet.CaseSensitive))
+                {
+                    CaseSensitive = table.CaseSensitive;
                 }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
+                if((table.Locale.ToString() != table.DataSet.Locale.ToString()))
+                {
+                    Locale = table.Locale;
                 }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
+                if((table.Namespace != table.DataSet.Namespace))
+                {
+                    Namespace = table.Namespace;
                 }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
+                Prefix = table.Prefix;
+                MinimumCapacity = table.MinimumCapacity;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected CacheDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
+
+            [DebuggerNonUserCode()]
+            protected CacheDataTable(SerializationInfo info, StreamingContext context)
+                :
+                    base(info, context)
+            {
+                InitVars();
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn idColumn {
-                get {
-                    return this.columnid;
-                }
+
+            [DebuggerNonUserCode()]
+            public DataColumn idColumn
+            {
+                get { return columnid; }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn dataColumn {
-                get {
-                    return this.columndata;
-                }
+
+            [DebuggerNonUserCode()]
+            public DataColumn dataColumn
+            {
+                get { return columndata; }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
+
+            [DebuggerNonUserCode()]
+            [Browsable(false)]
+            public int Count
+            {
+                get { return Rows.Count; }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CacheRow this[int index] {
-                get {
-                    return ((CacheRow)(this.Rows[index]));
-                }
+
+            [DebuggerNonUserCode()]
+            public CacheRow this[int index]
+            {
+                get { return ((CacheRow) (Rows[index])); }
             }
-            
+
             public event CacheRowChangeEventHandler CacheRowChanging;
-            
+
             public event CacheRowChangeEventHandler CacheRowChanged;
-            
+
             public event CacheRowChangeEventHandler CacheRowDeleting;
-            
+
             public event CacheRowChangeEventHandler CacheRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void AddCacheRow(CacheRow row) {
-                this.Rows.Add(row);
+
+            [DebuggerNonUserCode()]
+            public void AddCacheRow(CacheRow row)
+            {
+                Rows.Add(row);
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CacheRow AddCacheRow(string id, string data) {
-                CacheRow rowCacheRow = ((CacheRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        id,
-                        data};
+
+            [DebuggerNonUserCode()]
+            public CacheRow AddCacheRow(string id, string data)
+            {
+                var rowCacheRow = ((CacheRow) (NewRow()));
+                var columnValuesArray = new object[]
+                                            {
+                                                id,
+                                                data
+                                            };
                 rowCacheRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowCacheRow);
+                Rows.Add(rowCacheRow);
                 return rowCacheRow;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CacheRow FindByid(string id) {
-                return ((CacheRow)(this.Rows.Find(new object[] {
-                            id})));
+
+            [DebuggerNonUserCode()]
+            public CacheRow FindByid(string id)
+            {
+                return ((CacheRow) (Rows.Find(new object[]
+                                                  {
+                                                      id
+                                                  })));
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public override global::System.Data.DataTable Clone() {
-                CacheDataTable cln = ((CacheDataTable)(base.Clone()));
+
+            [DebuggerNonUserCode()]
+            public override DataTable Clone()
+            {
+                var cln = ((CacheDataTable) (base.Clone()));
                 cln.InitVars();
                 return cln;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Data.DataTable CreateInstance() {
+
+            [DebuggerNonUserCode()]
+            protected override DataTable CreateInstance()
+            {
                 return new CacheDataTable();
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal void InitVars() {
-                this.columnid = base.Columns["id"];
-                this.columndata = base.Columns["data"];
+
+            [DebuggerNonUserCode()]
+            internal void InitVars()
+            {
+                columnid = base.Columns["id"];
+                columndata = base.Columns["data"];
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columndata = new global::System.Data.DataColumn("data", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndata);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid}, true));
-                this.columnid.AllowDBNull = false;
-                this.columnid.Unique = true;
-                this.columnid.MaxLength = 500;
-                this.columndata.AllowDBNull = false;
-                this.columndata.MaxLength = 536870911;
+
+            [DebuggerNonUserCode()]
+            private void InitClass()
+            {
+                columnid = new DataColumn("id", typeof(string), null, MappingType.Element);
+                base.Columns.Add(columnid);
+                columndata = new DataColumn("data", typeof(string), null, MappingType.Element);
+                base.Columns.Add(columndata);
+                Constraints.Add(new UniqueConstraint("Constraint1",
+                                                     new DataColumn[]
+                                                         {
+                                                             columnid
+                                                         },
+                                                     true));
+                columnid.AllowDBNull = false;
+                columnid.Unique = true;
+                columnid.MaxLength = 500;
+                columndata.AllowDBNull = false;
+                columndata.MaxLength = 536870911;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CacheRow NewCacheRow() {
-                return ((CacheRow)(this.NewRow()));
+
+            [DebuggerNonUserCode()]
+            public CacheRow NewCacheRow()
+            {
+                return ((CacheRow) (NewRow()));
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+
+            [DebuggerNonUserCode()]
+            protected override DataRow NewRowFromBuilder(DataRowBuilder builder)
+            {
                 return new CacheRow(builder);
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Type GetRowType() {
+
+            [DebuggerNonUserCode()]
+            protected override Type GetRowType()
+            {
                 return typeof(CacheRow);
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+
+            [DebuggerNonUserCode()]
+            protected override void OnRowChanged(DataRowChangeEventArgs e)
+            {
                 base.OnRowChanged(e);
-                if ((this.CacheRowChanged != null)) {
-                    this.CacheRowChanged(this, new CacheRowChangeEvent(((CacheRow)(e.Row)), e.Action));
+                if((CacheRowChanged != null))
+                {
+                    CacheRowChanged(this, new CacheRowChangeEvent(((CacheRow) (e.Row)), e.Action));
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+
+            [DebuggerNonUserCode()]
+            protected override void OnRowChanging(DataRowChangeEventArgs e)
+            {
                 base.OnRowChanging(e);
-                if ((this.CacheRowChanging != null)) {
-                    this.CacheRowChanging(this, new CacheRowChangeEvent(((CacheRow)(e.Row)), e.Action));
+                if((CacheRowChanging != null))
+                {
+                    CacheRowChanging(this, new CacheRowChangeEvent(((CacheRow) (e.Row)), e.Action));
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+
+            [DebuggerNonUserCode()]
+            protected override void OnRowDeleted(DataRowChangeEventArgs e)
+            {
                 base.OnRowDeleted(e);
-                if ((this.CacheRowDeleted != null)) {
-                    this.CacheRowDeleted(this, new CacheRowChangeEvent(((CacheRow)(e.Row)), e.Action));
+                if((CacheRowDeleted != null))
+                {
+                    CacheRowDeleted(this, new CacheRowChangeEvent(((CacheRow) (e.Row)), e.Action));
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+
+            [DebuggerNonUserCode()]
+            protected override void OnRowDeleting(DataRowChangeEventArgs e)
+            {
                 base.OnRowDeleting(e);
-                if ((this.CacheRowDeleting != null)) {
-                    this.CacheRowDeleting(this, new CacheRowChangeEvent(((CacheRow)(e.Row)), e.Action));
+                if((CacheRowDeleting != null))
+                {
+                    CacheRowDeleting(this, new CacheRowChangeEvent(((CacheRow) (e.Row)), e.Action));
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void RemoveCacheRow(CacheRow row) {
-                this.Rows.Remove(row);
+
+            [DebuggerNonUserCode()]
+            public void RemoveCacheRow(CacheRow row)
+            {
+                Rows.Remove(row);
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                CacheDataSet ds = new CacheDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+
+            [DebuggerNonUserCode()]
+            public static XmlSchemaComplexType GetTypedTableSchema(XmlSchemaSet xs)
+            {
+                var type = new XmlSchemaComplexType();
+                var sequence = new XmlSchemaSequence();
+                var ds = new CacheDataSet();
+                var any1 = new XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
                 any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                any1.ProcessContents = XmlSchemaContentProcessing.Lax;
                 sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                var any2 = new XmlSchemaAny();
                 any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
                 any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                any2.ProcessContents = XmlSchemaContentProcessing.Lax;
                 sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                var attribute1 = new XmlSchemaAttribute();
                 attribute1.Name = "namespace";
                 attribute1.FixedValue = ds.Namespace;
                 type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                var attribute2 = new XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "CacheDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
+                XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if(xs.Contains(dsSchema.TargetNamespace))
+                {
+                    var s1 = new MemoryStream();
+                    var s2 = new MemoryStream();
+                    try
+                    {
+                        XmlSchema schema = null;
                         dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                        for(IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator();
+                            schemas.MoveNext();)
+                        {
+                            schema = ((XmlSchema) (schemas.Current));
                             s2.SetLength(0);
                             schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
+                            if((s1.Length == s2.Length))
+                            {
                                 s1.Position = 0;
                                 s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                for(;
+                                    ((s1.Position != s1.Length)
+                                     && (s1.ReadByte() == s2.ReadByte()));)
+                                {
                                     ;
                                 }
-                                if ((s1.Position == s1.Length)) {
+                                if((s1.Position == s1.Length))
+                                {
                                     return type;
                                 }
                             }
                         }
                     }
-                    finally {
-                        if ((s1 != null)) {
+                    finally
+                    {
+                        if((s1 != null))
+                        {
                             s1.Close();
                         }
-                        if ((s2 != null)) {
+                        if((s2 != null))
+                        {
                             s2.Close();
                         }
                     }
@@ -502,642 +593,804 @@ namespace GuildWarsDataFetcher {
                 return type;
             }
         }
-        
+
+        #endregion
+
+        #region Nested type: CacheRow
+
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public partial class CacheRow : global::System.Data.DataRow {
-            
+        [GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        public partial class CacheRow : DataRow
+        {
             private CacheDataTable tableCache;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal CacheRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableCache = ((CacheDataTable)(this.Table));
+
+            [DebuggerNonUserCode()]
+            internal CacheRow(DataRowBuilder rb)
+                :
+                    base(rb)
+            {
+                tableCache = ((CacheDataTable) (Table));
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string id {
-                get {
-                    return ((string)(this[this.tableCache.idColumn]));
-                }
-                set {
-                    this[this.tableCache.idColumn] = value;
-                }
+
+            [DebuggerNonUserCode()]
+            public string id
+            {
+                get { return ((string) (this[tableCache.idColumn])); }
+                set { this[tableCache.idColumn] = value; }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string data {
-                get {
-                    return ((string)(this[this.tableCache.dataColumn]));
-                }
-                set {
-                    this[this.tableCache.dataColumn] = value;
-                }
+
+            [DebuggerNonUserCode()]
+            public string data
+            {
+                get { return ((string) (this[tableCache.dataColumn])); }
+                set { this[tableCache.dataColumn] = value; }
             }
         }
-        
+
+        #endregion
+
+        #region Nested type: CacheRowChangeEvent
+
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public class CacheRowChangeEvent : global::System.EventArgs {
-            
+        [GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        public class CacheRowChangeEvent : EventArgs
+        {
+            private DataRowAction eventAction;
             private CacheRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CacheRowChangeEvent(CacheRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
+
+            [DebuggerNonUserCode()]
+            public CacheRowChangeEvent(CacheRow row, DataRowAction action)
+            {
+                eventRow = row;
+                eventAction = action;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CacheRow Row {
-                get {
-                    return this.eventRow;
-                }
+
+            [DebuggerNonUserCode()]
+            public CacheRow Row
+            {
+                get { return eventRow; }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
+
+            [DebuggerNonUserCode()]
+            public DataRowAction Action
+            {
+                get { return eventAction; }
             }
         }
+
+        #endregion
     }
 }
-namespace GuildWarsDataFetcher.CacheDataSetTableAdapters {
-    
-    
+
+namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
+{
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
     ///</summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class CacheTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlServerCe.SqlCeDataAdapter _adapter;
-        
-        private global::System.Data.SqlServerCe.SqlCeConnection _connection;
-        
-        private global::System.Data.SqlServerCe.SqlCeTransaction _transaction;
-        
-        private global::System.Data.SqlServerCe.SqlCeCommand[] _commandCollection;
-        
+    [GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+    [DesignerCategory("code")]
+    [ToolboxItem(true)]
+    [DataObject(true)]
+    [Designer("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+              ", Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [HelpKeyword("vs.data.TableAdapter")]
+    public partial class CacheTableAdapter : Component
+    {
+        private SqlCeDataAdapter _adapter;
         private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public CacheTableAdapter() {
-            this.ClearBeforeFill = true;
+        private SqlCeCommand[] _commandCollection;
+
+        private SqlCeConnection _connection;
+
+        private SqlCeTransaction _transaction;
+
+        [DebuggerNonUserCode()]
+        public CacheTableAdapter()
+        {
+            ClearBeforeFill = true;
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected internal global::System.Data.SqlServerCe.SqlCeDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
+
+        [DebuggerNonUserCode()]
+        protected internal SqlCeDataAdapter Adapter
+        {
+            get
+            {
+                if((_adapter == null))
+                {
+                    InitAdapter();
                 }
-                return this._adapter;
+                return _adapter;
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        internal global::System.Data.SqlServerCe.SqlCeConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
+
+        [DebuggerNonUserCode()]
+        internal SqlCeConnection Connection
+        {
+            get
+            {
+                if((_connection == null))
+                {
+                    InitConnection();
                 }
-                return this._connection;
+                return _connection;
             }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
+            set
+            {
+                _connection = value;
+                if((Adapter.InsertCommand != null))
+                {
+                    Adapter.InsertCommand.Connection = value;
                 }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
+                if((Adapter.DeleteCommand != null))
+                {
+                    Adapter.DeleteCommand.Connection = value;
                 }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
+                if((Adapter.UpdateCommand != null))
+                {
+                    Adapter.UpdateCommand.Connection = value;
                 }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlServerCe.SqlCeCommand)(this.CommandCollection[i])).Connection = value;
+                for(int i = 0; (i < CommandCollection.Length); i = (i + 1))
+                {
+                    if((CommandCollection[i] != null))
+                    {
+                        ((SqlCeCommand) (CommandCollection[i])).Connection = value;
                     }
                 }
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        internal global::System.Data.SqlServerCe.SqlCeTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
+
+        [DebuggerNonUserCode()]
+        internal SqlCeTransaction Transaction
+        {
+            get { return _transaction; }
+            set
+            {
+                _transaction = value;
+                for(int i = 0; (i < CommandCollection.Length); i = (i + 1))
+                {
+                    CommandCollection[i].Transaction = _transaction;
                 }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                if(((Adapter != null)
+                    && (Adapter.DeleteCommand != null)))
+                {
+                    Adapter.DeleteCommand.Transaction = _transaction;
                 }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                if(((Adapter != null)
+                    && (Adapter.InsertCommand != null)))
+                {
+                    Adapter.InsertCommand.Transaction = _transaction;
                 }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                if(((Adapter != null)
+                    && (Adapter.UpdateCommand != null)))
+                {
+                    Adapter.UpdateCommand.Transaction = _transaction;
                 }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected global::System.Data.SqlServerCe.SqlCeCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
+
+        [DebuggerNonUserCode()]
+        protected SqlCeCommand[] CommandCollection
+        {
+            get
+            {
+                if((_commandCollection == null))
+                {
+                    InitCommandCollection();
+                }
+                return _commandCollection;
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlServerCe.SqlCeDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+
+        [DebuggerNonUserCode()]
+        public bool ClearBeforeFill
+        {
+            get { return _clearBeforeFill; }
+            set { _clearBeforeFill = value; }
+        }
+
+        [DebuggerNonUserCode()]
+        private void InitAdapter()
+        {
+            _adapter = new SqlCeDataAdapter();
+            var tableMapping = new DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Cache";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("data", "data");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Cache] WHERE (([id] = @p1))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "id", global::System.Data.DataRowVersion.Original, null));
-            this._adapter.InsertCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Cache] ([id], [data]) VALUES (@p1, @p2)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "id", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p2", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "data", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [Cache] SET [id] = @p1, [data] = @p2 WHERE (([id] = @p3))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "id", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p2", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "data", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p3", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "id", global::System.Data.DataRowVersion.Original, null));
+            _adapter.TableMappings.Add(tableMapping);
+            _adapter.DeleteCommand = new SqlCeCommand();
+            _adapter.DeleteCommand.Connection = Connection;
+            _adapter.DeleteCommand.CommandText = "DELETE FROM [Cache] WHERE (([id] = @p1))";
+            _adapter.DeleteCommand.CommandType = CommandType.Text;
+            _adapter.DeleteCommand.Parameters.Add(new SqlCeParameter("@p1",
+                                                                     SqlDbType.NVarChar,
+                                                                     0,
+                                                                     ParameterDirection.Input,
+                                                                     true,
+                                                                     0,
+                                                                     0,
+                                                                     "id",
+                                                                     DataRowVersion.Original,
+                                                                     null));
+            _adapter.InsertCommand = new SqlCeCommand();
+            _adapter.InsertCommand.Connection = Connection;
+            _adapter.InsertCommand.CommandText = "INSERT INTO [Cache] ([id], [data]) VALUES (@p1, @p2)";
+            _adapter.InsertCommand.CommandType = CommandType.Text;
+            _adapter.InsertCommand.Parameters.Add(new SqlCeParameter("@p1",
+                                                                     SqlDbType.NVarChar,
+                                                                     0,
+                                                                     ParameterDirection.Input,
+                                                                     true,
+                                                                     0,
+                                                                     0,
+                                                                     "id",
+                                                                     DataRowVersion.Current,
+                                                                     null));
+            _adapter.InsertCommand.Parameters.Add(new SqlCeParameter("@p2",
+                                                                     SqlDbType.NText,
+                                                                     0,
+                                                                     ParameterDirection.Input,
+                                                                     true,
+                                                                     0,
+                                                                     0,
+                                                                     "data",
+                                                                     DataRowVersion.Current,
+                                                                     null));
+            _adapter.UpdateCommand = new SqlCeCommand();
+            _adapter.UpdateCommand.Connection = Connection;
+            _adapter.UpdateCommand.CommandText = "UPDATE [Cache] SET [id] = @p1, [data] = @p2 WHERE (([id] = @p3))";
+            _adapter.UpdateCommand.CommandType = CommandType.Text;
+            _adapter.UpdateCommand.Parameters.Add(new SqlCeParameter("@p1",
+                                                                     SqlDbType.NVarChar,
+                                                                     0,
+                                                                     ParameterDirection.Input,
+                                                                     true,
+                                                                     0,
+                                                                     0,
+                                                                     "id",
+                                                                     DataRowVersion.Current,
+                                                                     null));
+            _adapter.UpdateCommand.Parameters.Add(new SqlCeParameter("@p2",
+                                                                     SqlDbType.NText,
+                                                                     0,
+                                                                     ParameterDirection.Input,
+                                                                     true,
+                                                                     0,
+                                                                     0,
+                                                                     "data",
+                                                                     DataRowVersion.Current,
+                                                                     null));
+            _adapter.UpdateCommand.Parameters.Add(new SqlCeParameter("@p3",
+                                                                     SqlDbType.NVarChar,
+                                                                     0,
+                                                                     ParameterDirection.Input,
+                                                                     true,
+                                                                     0,
+                                                                     0,
+                                                                     "id",
+                                                                     DataRowVersion.Original,
+                                                                     null));
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlServerCe.SqlCeConnection();
-            this._connection.ConnectionString = global::TemplateManager.DataFetcher.Properties.Settings.Default.CacheConnectionString;
+
+        [DebuggerNonUserCode()]
+        private void InitConnection()
+        {
+            _connection = new SqlCeConnection();
+            _connection.ConnectionString = Settings.Default.CacheConnectionString;
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlServerCe.SqlCeCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlServerCe.SqlCeCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [id], [data] FROM [Cache]";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+
+        [DebuggerNonUserCode()]
+        private void InitCommandCollection()
+        {
+            _commandCollection = new SqlCeCommand[1];
+            _commandCollection[0] = new SqlCeCommand();
+            _commandCollection[0].Connection = Connection;
+            _commandCollection[0].CommandText = "SELECT [id], [data] FROM [Cache]";
+            _commandCollection[0].CommandType = CommandType.Text;
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CacheDataSet.CacheDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
+
+        [DebuggerNonUserCode()]
+        [HelpKeyword("vs.data.TableAdapter")]
+        [DataObjectMethod(DataObjectMethodType.Fill, true)]
+        public virtual int Fill(CacheDataSet.CacheDataTable dataTable)
+        {
+            Adapter.SelectCommand = CommandCollection[0];
+            if((ClearBeforeFill == true))
+            {
                 dataTable.Clear();
             }
-            int returnValue = this.Adapter.Fill(dataTable);
+            int returnValue = Adapter.Fill(dataTable);
             return returnValue;
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CacheDataSet.CacheDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            CacheDataSet.CacheDataTable dataTable = new CacheDataSet.CacheDataTable();
-            this.Adapter.Fill(dataTable);
+
+        [DebuggerNonUserCode()]
+        [HelpKeyword("vs.data.TableAdapter")]
+        [DataObjectMethod(DataObjectMethodType.Select, true)]
+        public virtual CacheDataSet.CacheDataTable GetData()
+        {
+            Adapter.SelectCommand = CommandCollection[0];
+            var dataTable = new CacheDataSet.CacheDataTable();
+            Adapter.Fill(dataTable);
             return dataTable;
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CacheDataSet.CacheDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
+
+        [DebuggerNonUserCode()]
+        [HelpKeyword("vs.data.TableAdapter")]
+        public virtual int Update(CacheDataSet.CacheDataTable dataTable)
+        {
+            return Adapter.Update(dataTable);
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CacheDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Cache");
+
+        [DebuggerNonUserCode()]
+        [HelpKeyword("vs.data.TableAdapter")]
+        public virtual int Update(CacheDataSet dataSet)
+        {
+            return Adapter.Update(dataSet, "Cache");
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
+
+        [DebuggerNonUserCode()]
+        [HelpKeyword("vs.data.TableAdapter")]
+        public virtual int Update(DataRow dataRow)
+        {
+            return Adapter.Update(new DataRow[]
+                                      {
+                                          dataRow
+                                      });
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
+
+        [DebuggerNonUserCode()]
+        [HelpKeyword("vs.data.TableAdapter")]
+        public virtual int Update(DataRow[] dataRows)
+        {
+            return Adapter.Update(dataRows);
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string p1) {
-            if ((p1 == null)) {
-                throw new global::System.ArgumentNullException("p1");
+
+        [DebuggerNonUserCode()]
+        [HelpKeyword("vs.data.TableAdapter")]
+        [DataObjectMethod(DataObjectMethodType.Delete, true)]
+        public virtual int Delete(string p1)
+        {
+            if((p1 == null))
+            {
+                throw new ArgumentNullException("p1");
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(p1));
+            else
+            {
+                Adapter.DeleteCommand.Parameters[0].Value = ((string) (p1));
             }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
+            ConnectionState previousConnectionState = Adapter.DeleteCommand.Connection.State;
+            if(((Adapter.DeleteCommand.Connection.State & ConnectionState.Open)
+                != ConnectionState.Open))
+            {
+                Adapter.DeleteCommand.Connection.Open();
             }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+            try
+            {
+                int returnValue = Adapter.DeleteCommand.ExecuteNonQuery();
                 return returnValue;
             }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
+            finally
+            {
+                if((previousConnectionState == ConnectionState.Closed))
+                {
+                    Adapter.DeleteCommand.Connection.Close();
                 }
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string p1, string p2) {
-            if ((p1 == null)) {
-                throw new global::System.ArgumentNullException("p1");
+
+        [DebuggerNonUserCode()]
+        [HelpKeyword("vs.data.TableAdapter")]
+        [DataObjectMethod(DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string p1, string p2)
+        {
+            if((p1 == null))
+            {
+                throw new ArgumentNullException("p1");
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(p1));
+            else
+            {
+                Adapter.InsertCommand.Parameters[0].Value = ((string) (p1));
             }
-            if ((p2 == null)) {
-                throw new global::System.ArgumentNullException("p2");
+            if((p2 == null))
+            {
+                throw new ArgumentNullException("p2");
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(p2));
+            else
+            {
+                Adapter.InsertCommand.Parameters[1].Value = ((string) (p2));
             }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
+            ConnectionState previousConnectionState = Adapter.InsertCommand.Connection.State;
+            if(((Adapter.InsertCommand.Connection.State & ConnectionState.Open)
+                != ConnectionState.Open))
+            {
+                Adapter.InsertCommand.Connection.Open();
             }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+            try
+            {
+                int returnValue = Adapter.InsertCommand.ExecuteNonQuery();
                 return returnValue;
             }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
+            finally
+            {
+                if((previousConnectionState == ConnectionState.Closed))
+                {
+                    Adapter.InsertCommand.Connection.Close();
                 }
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string p1, string p2, string p3) {
-            if ((p1 == null)) {
-                throw new global::System.ArgumentNullException("p1");
+
+        [DebuggerNonUserCode()]
+        [HelpKeyword("vs.data.TableAdapter")]
+        [DataObjectMethod(DataObjectMethodType.Update, true)]
+        public virtual int Update(string p1, string p2, string p3)
+        {
+            if((p1 == null))
+            {
+                throw new ArgumentNullException("p1");
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(p1));
+            else
+            {
+                Adapter.UpdateCommand.Parameters[0].Value = ((string) (p1));
             }
-            if ((p2 == null)) {
-                throw new global::System.ArgumentNullException("p2");
+            if((p2 == null))
+            {
+                throw new ArgumentNullException("p2");
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(p2));
+            else
+            {
+                Adapter.UpdateCommand.Parameters[1].Value = ((string) (p2));
             }
-            if ((p3 == null)) {
-                throw new global::System.ArgumentNullException("p3");
+            if((p3 == null))
+            {
+                throw new ArgumentNullException("p3");
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(p3));
+            else
+            {
+                Adapter.UpdateCommand.Parameters[2].Value = ((string) (p3));
             }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
+            ConnectionState previousConnectionState = Adapter.UpdateCommand.Connection.State;
+            if(((Adapter.UpdateCommand.Connection.State & ConnectionState.Open)
+                != ConnectionState.Open))
+            {
+                Adapter.UpdateCommand.Connection.Open();
             }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+            try
+            {
+                int returnValue = Adapter.UpdateCommand.ExecuteNonQuery();
                 return returnValue;
             }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
+            finally
+            {
+                if((previousConnectionState == ConnectionState.Closed))
+                {
+                    Adapter.UpdateCommand.Connection.Close();
                 }
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string p2, string p3) {
-            return this.Update(p3, p2, p3);
+
+        [DebuggerNonUserCode()]
+        [HelpKeyword("vs.data.TableAdapter")]
+        [DataObjectMethod(DataObjectMethodType.Update, true)]
+        public virtual int Update(string p2, string p3)
+        {
+            return Update(p3, p2, p3);
         }
     }
-    
+
     /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerDesigner, Microsoft.VSD" +
-        "esigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapterManager")]
-    public partial class TableAdapterManager : global::System.ComponentModel.Component {
-        
-        private UpdateOrderOption _updateOrder;
-        
-        private CacheTableAdapter _cacheTableAdapter;
-        
+    [GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+    [DesignerCategory("code")]
+    [ToolboxItem(true)]
+    [Designer("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerDesigner, Microsoft.VSD" +
+              "esigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [HelpKeyword("vs.data.TableAdapterManager")]
+    public partial class TableAdapterManager : Component
+    {
+        #region UpdateOrderOption enum
+
+        /// <summary>
+        ///Update Order Option
+        ///</summary>
+        [GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        public enum UpdateOrderOption
+        {
+            InsertUpdateDelete = 0,
+
+            UpdateInsertDelete = 1,
+        }
+
+        #endregion
+
         private bool _backupDataSetBeforeUpdate;
-        
-        private global::System.Data.IDbConnection _connection;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public UpdateOrderOption UpdateOrder {
-            get {
-                return this._updateOrder;
-            }
-            set {
-                this._updateOrder = value;
-            }
+        private CacheTableAdapter _cacheTableAdapter;
+
+        private IDbConnection _connection;
+        private UpdateOrderOption _updateOrder;
+
+        [DebuggerNonUserCode()]
+        public UpdateOrderOption UpdateOrder
+        {
+            get { return _updateOrder; }
+            set { _updateOrder = value; }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
-            "", "System.Drawing.Design.UITypeEditor")]
-        public CacheTableAdapter CacheTableAdapter {
-            get {
-                return this._cacheTableAdapter;
-            }
-            set {
-                this._cacheTableAdapter = value;
-            }
+
+        [DebuggerNonUserCode()]
+        [Editor("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+                "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
+                "", "System.Drawing.Design.UITypeEditor")]
+        public CacheTableAdapter CacheTableAdapter
+        {
+            get { return _cacheTableAdapter; }
+            set { _cacheTableAdapter = value; }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public bool BackupDataSetBeforeUpdate {
-            get {
-                return this._backupDataSetBeforeUpdate;
-            }
-            set {
-                this._backupDataSetBeforeUpdate = value;
-            }
+
+        [DebuggerNonUserCode()]
+        public bool BackupDataSetBeforeUpdate
+        {
+            get { return _backupDataSetBeforeUpdate; }
+            set { _backupDataSetBeforeUpdate = value; }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Browsable(false)]
-        public global::System.Data.IDbConnection Connection {
-            get {
-                if ((this._connection != null)) {
-                    return this._connection;
+
+        [DebuggerNonUserCode()]
+        [Browsable(false)]
+        public IDbConnection Connection
+        {
+            get
+            {
+                if((_connection != null))
+                {
+                    return _connection;
                 }
-                if (((this._cacheTableAdapter != null) 
-                            && (this._cacheTableAdapter.Connection != null))) {
-                    return this._cacheTableAdapter.Connection;
+                if(((_cacheTableAdapter != null)
+                    && (_cacheTableAdapter.Connection != null)))
+                {
+                    return _cacheTableAdapter.Connection;
                 }
                 return null;
             }
-            set {
-                this._connection = value;
-            }
+            set { _connection = value; }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Browsable(false)]
-        public int TableAdapterInstanceCount {
-            get {
+
+        [DebuggerNonUserCode()]
+        [Browsable(false)]
+        public int TableAdapterInstanceCount
+        {
+            get
+            {
                 int count = 0;
-                if ((this._cacheTableAdapter != null)) {
+                if((_cacheTableAdapter != null))
+                {
                     count = (count + 1);
                 }
                 return count;
             }
         }
-        
+
         /// <summary>
         ///Update rows in top-down order.
         ///</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateUpdatedRows(CacheDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        [DebuggerNonUserCode()]
+        private int UpdateUpdatedRows(CacheDataSet dataSet, List<DataRow> allChangedRows, List<DataRow> allAddedRows)
+        {
             int result = 0;
-            if ((this._cacheTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Cache.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._cacheTableAdapter.Update(updatedRows));
+            if((_cacheTableAdapter != null))
+            {
+                DataRow[] updatedRows = dataSet.Cache.Select(null, null, DataViewRowState.ModifiedCurrent);
+                updatedRows = GetRealUpdatedRows(updatedRows, allAddedRows);
+                if(((updatedRows != null)
+                    && (0 < updatedRows.Length)))
+                {
+                    result = (result + _cacheTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
             return result;
         }
-        
+
         /// <summary>
         ///Insert rows in top-down order.
         ///</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateInsertedRows(CacheDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        [DebuggerNonUserCode()]
+        private int UpdateInsertedRows(CacheDataSet dataSet, List<DataRow> allAddedRows)
+        {
             int result = 0;
-            if ((this._cacheTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Cache.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._cacheTableAdapter.Update(addedRows));
+            if((_cacheTableAdapter != null))
+            {
+                DataRow[] addedRows = dataSet.Cache.Select(null, null, DataViewRowState.Added);
+                if(((addedRows != null)
+                    && (0 < addedRows.Length)))
+                {
+                    result = (result + _cacheTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
             return result;
         }
-        
+
         /// <summary>
         ///Delete rows in bottom-up order.
         ///</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateDeletedRows(CacheDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        [DebuggerNonUserCode()]
+        private int UpdateDeletedRows(CacheDataSet dataSet, List<DataRow> allChangedRows)
+        {
             int result = 0;
-            if ((this._cacheTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Cache.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._cacheTableAdapter.Update(deletedRows));
+            if((_cacheTableAdapter != null))
+            {
+                DataRow[] deletedRows = dataSet.Cache.Select(null, null, DataViewRowState.Deleted);
+                if(((deletedRows != null)
+                    && (0 < deletedRows.Length)))
+                {
+                    result = (result + _cacheTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
             return result;
         }
-        
+
         /// <summary>
         ///Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
         ///</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private global::System.Data.DataRow[] GetRealUpdatedRows(global::System.Data.DataRow[] updatedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
-            if (((updatedRows == null) 
-                        || (updatedRows.Length < 1))) {
+        [DebuggerNonUserCode()]
+        private DataRow[] GetRealUpdatedRows(DataRow[] updatedRows, List<DataRow> allAddedRows)
+        {
+            if(((updatedRows == null)
+                || (updatedRows.Length < 1)))
+            {
                 return updatedRows;
             }
-            if (((allAddedRows == null) 
-                        || (allAddedRows.Count < 1))) {
+            if(((allAddedRows == null)
+                || (allAddedRows.Count < 1)))
+            {
                 return updatedRows;
             }
-            global::System.Collections.Generic.List<global::System.Data.DataRow> realUpdatedRows = new global::System.Collections.Generic.List<global::System.Data.DataRow>();
-            for (int i = 0; (i < updatedRows.Length); i = (i + 1)) {
-                global::System.Data.DataRow row = updatedRows[i];
-                if ((allAddedRows.Contains(row) == false)) {
+            var realUpdatedRows = new List<DataRow>();
+            for(int i = 0; (i < updatedRows.Length); i = (i + 1))
+            {
+                DataRow row = updatedRows[i];
+                if((allAddedRows.Contains(row) == false))
+                {
                     realUpdatedRows.Add(row);
                 }
             }
             return realUpdatedRows.ToArray();
         }
-        
+
         /// <summary>
         ///Update all changes to the dataset.
         ///</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public virtual int UpdateAll(CacheDataSet dataSet) {
-            if ((dataSet == null)) {
-                throw new global::System.ArgumentNullException("dataSet");
+        [DebuggerNonUserCode()]
+        public virtual int UpdateAll(CacheDataSet dataSet)
+        {
+            if((dataSet == null))
+            {
+                throw new ArgumentNullException("dataSet");
             }
-            if ((dataSet.HasChanges() == false)) {
+            if((dataSet.HasChanges() == false))
+            {
                 return 0;
             }
-            if (((this._cacheTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._cacheTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
+            if(((_cacheTableAdapter != null)
+                && (MatchTableAdapterConnection(_cacheTableAdapter.Connection) == false)))
+            {
+                throw new ArgumentException(
+                    "All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                    "tring.");
             }
-            global::System.Data.IDbConnection workConnection = this.Connection;
-            if ((workConnection == null)) {
-                throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
-                        "ger TableAdapter property to a valid TableAdapter instance.");
+            IDbConnection workConnection = Connection;
+            if((workConnection == null))
+            {
+                throw new ApplicationException(
+                    "TableAdapterManager contains no connection information. Set each TableAdapterMana" +
+                    "ger TableAdapter property to a valid TableAdapter instance.");
             }
             bool workConnOpened = false;
-            if (((workConnection.State & global::System.Data.ConnectionState.Broken) 
-                        == global::System.Data.ConnectionState.Broken)) {
+            if(((workConnection.State & ConnectionState.Broken)
+                == ConnectionState.Broken))
+            {
                 workConnection.Close();
             }
-            if ((workConnection.State == global::System.Data.ConnectionState.Closed)) {
+            if((workConnection.State == ConnectionState.Closed))
+            {
                 workConnection.Open();
                 workConnOpened = true;
             }
-            global::System.Data.IDbTransaction workTransaction = workConnection.BeginTransaction();
-            if ((workTransaction == null)) {
-                throw new global::System.ApplicationException("The transaction cannot begin. The current data connection does not support transa" +
-                        "ctions or the current state is not allowing the transaction to begin.");
+            IDbTransaction workTransaction = workConnection.BeginTransaction();
+            if((workTransaction == null))
+            {
+                throw new ApplicationException(
+                    "The transaction cannot begin. The current data connection does not support transa" +
+                    "ctions or the current state is not allowing the transaction to begin.");
             }
-            global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows = new global::System.Collections.Generic.List<global::System.Data.DataRow>();
-            global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows = new global::System.Collections.Generic.List<global::System.Data.DataRow>();
-            global::System.Collections.Generic.List<global::System.Data.Common.DataAdapter> adaptersWithAcceptChangesDuringUpdate = new global::System.Collections.Generic.List<global::System.Data.Common.DataAdapter>();
-            global::System.Collections.Generic.Dictionary<object, global::System.Data.IDbConnection> revertConnections = new global::System.Collections.Generic.Dictionary<object, global::System.Data.IDbConnection>();
+            var allChangedRows = new List<DataRow>();
+            var allAddedRows = new List<DataRow>();
+            var adaptersWithAcceptChangesDuringUpdate = new List<DataAdapter>();
+            var revertConnections = new Dictionary<object, IDbConnection>();
             int result = 0;
-            global::System.Data.DataSet backupDataSet = null;
-            if (this.BackupDataSetBeforeUpdate) {
-                backupDataSet = new global::System.Data.DataSet();
+            DataSet backupDataSet = null;
+            if(BackupDataSetBeforeUpdate)
+            {
+                backupDataSet = new DataSet();
                 backupDataSet.Merge(dataSet);
             }
-            try {
+            try
+            {
                 // ---- Prepare for update -----------
                 //
-                if ((this._cacheTableAdapter != null)) {
-                    revertConnections.Add(this._cacheTableAdapter, this._cacheTableAdapter.Connection);
-                    this._cacheTableAdapter.Connection = ((global::System.Data.SqlServerCe.SqlCeConnection)(workConnection));
-                    this._cacheTableAdapter.Transaction = ((global::System.Data.SqlServerCe.SqlCeTransaction)(workTransaction));
-                    if (this._cacheTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._cacheTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._cacheTableAdapter.Adapter);
+                if((_cacheTableAdapter != null))
+                {
+                    revertConnections.Add(_cacheTableAdapter, _cacheTableAdapter.Connection);
+                    _cacheTableAdapter.Connection = ((SqlCeConnection) (workConnection));
+                    _cacheTableAdapter.Transaction = ((SqlCeTransaction) (workTransaction));
+                    if(_cacheTableAdapter.Adapter.AcceptChangesDuringUpdate)
+                    {
+                        _cacheTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(_cacheTableAdapter.Adapter);
                     }
                 }
                 // 
                 //---- Perform updates -----------
                 //
-                if ((this.UpdateOrder == UpdateOrderOption.UpdateInsertDelete)) {
-                    result = (result + this.UpdateUpdatedRows(dataSet, allChangedRows, allAddedRows));
-                    result = (result + this.UpdateInsertedRows(dataSet, allAddedRows));
+                if((UpdateOrder == UpdateOrderOption.UpdateInsertDelete))
+                {
+                    result = (result + UpdateUpdatedRows(dataSet, allChangedRows, allAddedRows));
+                    result = (result + UpdateInsertedRows(dataSet, allAddedRows));
                 }
-                else {
-                    result = (result + this.UpdateInsertedRows(dataSet, allAddedRows));
-                    result = (result + this.UpdateUpdatedRows(dataSet, allChangedRows, allAddedRows));
+                else
+                {
+                    result = (result + UpdateInsertedRows(dataSet, allAddedRows));
+                    result = (result + UpdateUpdatedRows(dataSet, allChangedRows, allAddedRows));
                 }
-                result = (result + this.UpdateDeletedRows(dataSet, allChangedRows));
+                result = (result + UpdateDeletedRows(dataSet, allChangedRows));
                 // 
                 //---- Commit updates -----------
                 //
                 workTransaction.Commit();
-                if ((0 < allAddedRows.Count)) {
-                    global::System.Data.DataRow[] rows = new System.Data.DataRow[allAddedRows.Count];
+                if((0 < allAddedRows.Count))
+                {
+                    var rows = new DataRow[allAddedRows.Count];
                     allAddedRows.CopyTo(rows);
-                    for (int i = 0; (i < rows.Length); i = (i + 1)) {
-                        global::System.Data.DataRow row = rows[i];
+                    for(int i = 0; (i < rows.Length); i = (i + 1))
+                    {
+                        DataRow row = rows[i];
                         row.AcceptChanges();
                     }
                 }
-                if ((0 < allChangedRows.Count)) {
-                    global::System.Data.DataRow[] rows = new System.Data.DataRow[allChangedRows.Count];
+                if((0 < allChangedRows.Count))
+                {
+                    var rows = new DataRow[allChangedRows.Count];
                     allChangedRows.CopyTo(rows);
-                    for (int i = 0; (i < rows.Length); i = (i + 1)) {
-                        global::System.Data.DataRow row = rows[i];
+                    for(int i = 0; (i < rows.Length); i = (i + 1))
+                    {
+                        DataRow row = rows[i];
                         row.AcceptChanges();
                     }
                 }
             }
-            catch (global::System.Exception ex) {
+            catch(Exception ex)
+            {
                 workTransaction.Rollback();
                 // ---- Restore the dataset -----------
-                if (this.BackupDataSetBeforeUpdate) {
-                    global::System.Diagnostics.Debug.Assert((backupDataSet != null));
+                if(BackupDataSetBeforeUpdate)
+                {
+                    Debug.Assert((backupDataSet != null));
                     dataSet.Clear();
                     dataSet.Merge(backupDataSet);
                 }
-                else {
-                    if ((0 < allAddedRows.Count)) {
-                        global::System.Data.DataRow[] rows = new System.Data.DataRow[allAddedRows.Count];
+                else
+                {
+                    if((0 < allAddedRows.Count))
+                    {
+                        var rows = new DataRow[allAddedRows.Count];
                         allAddedRows.CopyTo(rows);
-                        for (int i = 0; (i < rows.Length); i = (i + 1)) {
-                            global::System.Data.DataRow row = rows[i];
+                        for(int i = 0; (i < rows.Length); i = (i + 1))
+                        {
+                            DataRow row = rows[i];
                             row.AcceptChanges();
                             row.SetAdded();
                         }
@@ -1145,128 +1398,150 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters {
                 }
                 throw ex;
             }
-            finally {
-                if (workConnOpened) {
+            finally
+            {
+                if(workConnOpened)
+                {
                     workConnection.Close();
                 }
-                if ((this._cacheTableAdapter != null)) {
-                    this._cacheTableAdapter.Connection = ((global::System.Data.SqlServerCe.SqlCeConnection)(revertConnections[this._cacheTableAdapter]));
-                    this._cacheTableAdapter.Transaction = null;
+                if((_cacheTableAdapter != null))
+                {
+                    _cacheTableAdapter.Connection = ((SqlCeConnection) (revertConnections[_cacheTableAdapter]));
+                    _cacheTableAdapter.Transaction = null;
                 }
-                if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
-                    global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
+                if((0 < adaptersWithAcceptChangesDuringUpdate.Count))
+                {
+                    var adapters = new DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
                     adaptersWithAcceptChangesDuringUpdate.CopyTo(adapters);
-                    for (int i = 0; (i < adapters.Length); i = (i + 1)) {
-                        global::System.Data.Common.DataAdapter adapter = adapters[i];
+                    for(int i = 0; (i < adapters.Length); i = (i + 1))
+                    {
+                        DataAdapter adapter = adapters[i];
                         adapter.AcceptChangesDuringUpdate = true;
                     }
                 }
             }
             return result;
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected virtual void SortSelfReferenceRows(global::System.Data.DataRow[] rows, global::System.Data.DataRelation relation, bool childFirst) {
-            global::System.Array.Sort<global::System.Data.DataRow>(rows, new SelfReferenceComparer(relation, childFirst));
+
+        [DebuggerNonUserCode()]
+        protected virtual void SortSelfReferenceRows(DataRow[] rows, DataRelation relation, bool childFirst)
+        {
+            Array.Sort<DataRow>(rows, new SelfReferenceComparer(relation, childFirst));
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected virtual bool MatchTableAdapterConnection(global::System.Data.IDbConnection inputConnection) {
-            if ((this._connection != null)) {
+
+        [DebuggerNonUserCode()]
+        protected virtual bool MatchTableAdapterConnection(IDbConnection inputConnection)
+        {
+            if((_connection != null))
+            {
                 return true;
             }
-            if (((this.Connection == null) 
-                        || (inputConnection == null))) {
+            if(((Connection == null)
+                || (inputConnection == null)))
+            {
                 return true;
             }
-            if (string.Equals(this.Connection.ConnectionString, inputConnection.ConnectionString, global::System.StringComparison.Ordinal)) {
+            if(string.Equals(Connection.ConnectionString, inputConnection.ConnectionString, StringComparison.Ordinal))
+            {
                 return true;
             }
             return false;
         }
-        
-        /// <summary>
-        ///Update Order Option
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public enum UpdateOrderOption {
-            
-            InsertUpdateDelete = 0,
-            
-            UpdateInsertDelete = 1,
-        }
-        
+
+        #region Nested type: SelfReferenceComparer
+
         /// <summary>
         ///Used to sort self-referenced table's rows
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        private class SelfReferenceComparer : object, global::System.Collections.Generic.IComparer<global::System.Data.DataRow> {
-            
-            private global::System.Data.DataRelation _relation;
-            
+        [GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        private class SelfReferenceComparer : object, IComparer<DataRow>
+        {
             private int _childFirst;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal SelfReferenceComparer(global::System.Data.DataRelation relation, bool childFirst) {
-                this._relation = relation;
-                if (childFirst) {
-                    this._childFirst = -1;
+            private DataRelation _relation;
+
+            [DebuggerNonUserCode()]
+            internal SelfReferenceComparer(DataRelation relation, bool childFirst)
+            {
+                _relation = relation;
+                if(childFirst)
+                {
+                    _childFirst = -1;
                 }
-                else {
-                    this._childFirst = 1;
+                else
+                {
+                    _childFirst = 1;
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            private bool IsChildAndParent(global::System.Data.DataRow child, global::System.Data.DataRow parent) {
-                global::System.Diagnostics.Debug.Assert((child != null));
-                global::System.Diagnostics.Debug.Assert((parent != null));
-                global::System.Data.DataRow newParent = child.GetParentRow(this._relation, global::System.Data.DataRowVersion.Default);
-                for (
-                ; ((newParent != null) 
-                            && ((object.ReferenceEquals(newParent, child) == false) 
-                            && (object.ReferenceEquals(newParent, parent) == false))); 
-                ) {
-                    newParent = newParent.GetParentRow(this._relation, global::System.Data.DataRowVersion.Default);
-                }
-                if ((newParent == null)) {
-                    for (newParent = child.GetParentRow(this._relation, global::System.Data.DataRowVersion.Original); ((newParent != null) 
-                                && ((object.ReferenceEquals(newParent, child) == false) 
-                                && (object.ReferenceEquals(newParent, parent) == false))); 
-                    ) {
-                        newParent = newParent.GetParentRow(this._relation, global::System.Data.DataRowVersion.Original);
-                    }
-                }
-                if (object.ReferenceEquals(newParent, parent)) {
-                    return true;
-                }
-                return false;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int Compare(global::System.Data.DataRow row1, global::System.Data.DataRow row2) {
-                if (object.ReferenceEquals(row1, row2)) {
+
+            #region IComparer<DataRow> Members
+
+            [DebuggerNonUserCode()]
+            public int Compare(DataRow row1, DataRow row2)
+            {
+                if(ReferenceEquals(row1, row2))
+                {
                     return 0;
                 }
-                if ((row1 == null)) {
+                if((row1 == null))
+                {
                     return -1;
                 }
-                if ((row2 == null)) {
+                if((row2 == null))
+                {
                     return 1;
                 }
 
                 // Is row1 the child or grandchild of row2
-                if (this.IsChildAndParent(row1, row2)) {
-                    return this._childFirst;
+                if(IsChildAndParent(row1, row2))
+                {
+                    return _childFirst;
                 }
 
                 // Is row2 the child or grandchild of row1
-                if (this.IsChildAndParent(row2, row1)) {
-                    return (-1 * this._childFirst);
+                if(IsChildAndParent(row2, row1))
+                {
+                    return (-1 * _childFirst);
                 }
                 return 0;
             }
+
+            #endregion
+
+            [DebuggerNonUserCode()]
+            private bool IsChildAndParent(DataRow child, DataRow parent)
+            {
+                Debug.Assert((child != null));
+                Debug.Assert((parent != null));
+                DataRow newParent = child.GetParentRow(_relation, DataRowVersion.Default);
+                for(
+                    ;
+                    ((newParent != null)
+                     && ((ReferenceEquals(newParent, child) == false)
+                         && (ReferenceEquals(newParent, parent) == false)));
+                    )
+                {
+                    newParent = newParent.GetParentRow(_relation, DataRowVersion.Default);
+                }
+                if((newParent == null))
+                {
+                    for(newParent = child.GetParentRow(_relation, DataRowVersion.Original);
+                        ((newParent != null)
+                         && ((ReferenceEquals(newParent, child) == false)
+                             && (ReferenceEquals(newParent, parent) == false)));
+                        )
+                    {
+                        newParent = newParent.GetParentRow(_relation, DataRowVersion.Original);
+                    }
+                }
+                if(ReferenceEquals(newParent, parent))
+                {
+                    return true;
+                }
+                return false;
+            }
         }
+
+        #endregion
     }
 }
 

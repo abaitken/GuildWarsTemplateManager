@@ -11,8 +11,15 @@
             this.value = value;
         }
 
-        public IAttribute Attribute { get { return attribute; } }
-        public int Value { get { return value; } }
+        public IAttribute Attribute
+        {
+            get { return attribute; }
+        }
+
+        public int Value
+        {
+            get { return value; }
+        }
 
         public override string ToString()
         {

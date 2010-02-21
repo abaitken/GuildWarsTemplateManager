@@ -82,7 +82,7 @@ namespace TemplateManager.DataFetcher.DataTargets
 
             if(!File.Exists(Data.GuildWars.Model.DataFile))
                 return;
-            
+
             logger.Log(GetType(), "Loading previous data", LogSeverity.InformationHigh);
             model.ReadXml(Data.GuildWars.Model.DataFile);
 

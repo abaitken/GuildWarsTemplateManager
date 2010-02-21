@@ -39,7 +39,7 @@ namespace TemplateManager.Modules.Services
 
         private void GetInformation()
         {
-            if (cacheInformation)
+            if(cacheInformation)
                 return;
 
             cacheInformation = true;
@@ -47,7 +47,7 @@ namespace TemplateManager.Modules.Services
             var client = new TemplateManagerService();
             var result = client.GetLatestVersion();
 
-            if (result == null)
+            if(result == null)
                 return;
 
             latestVersion = new Version(result.Major, result.Minor, result.Build, result.Revision);

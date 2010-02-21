@@ -2,12 +2,13 @@
 
 namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 {
-    partial class DataExplorerViewModel
+    internal partial class DataExplorerViewModel
     {
+        private bool? causesExhaustion;
         private bool? elite;
         private bool? isPvp;
         private bool? pvEOnly;
-        private bool? causesExhaustion;
+        private bool searchForTemplateId;
         private KeyValuePair<string, string> selectedActivationTime;
         private KeyValuePair<string, string> selectedAdrenalineCost;
         private KeyValuePair<string, string> selectedAreaOfEffect;
@@ -18,22 +19,22 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
         private KeyValuePair<string, string> selectedProjectile;
         private KeyValuePair<string, string> selectedRange;
         private KeyValuePair<string, string> selectedRechargeTime;
+        private IList<KeyValuePair<string, string>> selectedRemovesValues;
         private KeyValuePair<string, string> selectedSacrificeCost;
         private KeyValuePair<string, string> selectedSkillType;
         private KeyValuePair<string, string> selectedSpecialType;
         private KeyValuePair<string, string> selectedTarget;
+        private int selectedTemplateId;
         private KeyValuePair<string, string> selectedUpkeepValue;
 
-        #region IMainWindowViewModel Members
+        #region IDataExplorerViewModel Members
 
-
-        bool searchForTemplateId;
         public bool SearchForTemplateId
         {
             get { return searchForTemplateId; }
             set
             {
-                if (searchForTemplateId == value)
+                if(searchForTemplateId == value)
                     return;
 
                 searchForTemplateId = value;
@@ -42,13 +43,12 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
         }
 
 
-        int selectedTemplateId;
         public int SelectedTemplateId
         {
             get { return selectedTemplateId; }
             set
             {
-                if (selectedTemplateId == value)
+                if(selectedTemplateId == value)
                     return;
 
                 selectedTemplateId = value;
@@ -62,7 +62,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return selectedAreaOfEffect; }
             set
             {
-                if (selectedAreaOfEffect.Value == value.Value)
+                if(selectedAreaOfEffect.Value == value.Value)
                     return;
 
                 selectedAreaOfEffect = value;
@@ -76,7 +76,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return pvEOnly; }
             set
             {
-                if (pvEOnly == value)
+                if(pvEOnly == value)
                     return;
 
                 pvEOnly = value;
@@ -89,7 +89,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return isPvp; }
             set
             {
-                if (isPvp == value)
+                if(isPvp == value)
                     return;
 
                 isPvp = value;
@@ -102,7 +102,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return selectedProfession; }
             set
             {
-                if (selectedProfession.Value == value.Value)
+                if(selectedProfession.Value == value.Value)
                     return;
 
                 selectedProfession = value;
@@ -115,7 +115,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return selectedRange; }
             set
             {
-                if (selectedRange.Value == value.Value)
+                if(selectedRange.Value == value.Value)
                     return;
 
                 selectedRange = value;
@@ -128,7 +128,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return selectedTarget; }
             set
             {
-                if (selectedTarget.Value == value.Value)
+                if(selectedTarget.Value == value.Value)
                     return;
 
                 selectedTarget = value;
@@ -141,7 +141,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return selectedProjectile; }
             set
             {
-                if (selectedProjectile.Value == value.Value)
+                if(selectedProjectile.Value == value.Value)
                     return;
 
                 selectedProjectile = value;
@@ -154,7 +154,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return selectedAttribute; }
             set
             {
-                if (selectedAttribute.Value == value.Value)
+                if(selectedAttribute.Value == value.Value)
                     return;
 
                 selectedAttribute = value;
@@ -167,7 +167,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return selectedSkillType; }
             set
             {
-                if (selectedSkillType.Value == value.Value)
+                if(selectedSkillType.Value == value.Value)
                     return;
 
                 selectedSkillType = value;
@@ -180,7 +180,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return selectedSpecialType; }
             set
             {
-                if (selectedSpecialType.Value == value.Value)
+                if(selectedSpecialType.Value == value.Value)
                     return;
 
                 selectedSpecialType = value;
@@ -193,7 +193,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return causesExhaustion; }
             set
             {
-                if (causesExhaustion == value)
+                if(causesExhaustion == value)
                     return;
 
                 causesExhaustion = value;
@@ -206,7 +206,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return elite; }
             set
             {
-                if (elite == value)
+                if(elite == value)
                     return;
 
                 elite = value;
@@ -219,7 +219,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return selectedCampaign; }
             set
             {
-                if (selectedCampaign.Value == value.Value)
+                if(selectedCampaign.Value == value.Value)
                     return;
 
                 selectedCampaign = value;
@@ -232,7 +232,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return selectedActivationTime; }
             set
             {
-                if (selectedActivationTime.Value == value.Value)
+                if(selectedActivationTime.Value == value.Value)
                     return;
 
                 selectedActivationTime = value;
@@ -245,7 +245,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return selectedRechargeTime; }
             set
             {
-                if (selectedRechargeTime.Value == value.Value)
+                if(selectedRechargeTime.Value == value.Value)
                     return;
 
                 selectedRechargeTime = value;
@@ -258,7 +258,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return selectedEnergyCost; }
             set
             {
-                if (selectedEnergyCost.Value == value.Value)
+                if(selectedEnergyCost.Value == value.Value)
                     return;
 
                 selectedEnergyCost = value;
@@ -271,7 +271,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return selectedSacrificeCost; }
             set
             {
-                if (selectedSacrificeCost.Value == value.Value)
+                if(selectedSacrificeCost.Value == value.Value)
                     return;
 
                 selectedSacrificeCost = value;
@@ -284,7 +284,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return selectedAdrenalineCost; }
             set
             {
-                if (selectedAdrenalineCost.Value == value.Value)
+                if(selectedAdrenalineCost.Value == value.Value)
                     return;
 
                 selectedAdrenalineCost = value;
@@ -297,7 +297,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             get { return selectedUpkeepValue; }
             set
             {
-                if (selectedUpkeepValue.Value == value.Value)
+                if(selectedUpkeepValue.Value == value.Value)
                     return;
 
                 selectedUpkeepValue = value;
@@ -306,20 +306,18 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
         }
 
 
-        IList<KeyValuePair<string, string>> selectedRemovesValues;
         public IList<KeyValuePair<string, string>> SelectedRemovesValues
         {
             get { return selectedRemovesValues; }
             set
             {
-                if (selectedRemovesValues == value)
+                if(selectedRemovesValues == value)
                     return;
 
                 selectedRemovesValues = value;
                 SendPropertyChanged("SelectedRemovesValues");
             }
         }
-
 
         #endregion
     }

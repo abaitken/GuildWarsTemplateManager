@@ -4,7 +4,7 @@ namespace TemplateManager.MainView
 {
     public interface IMainViewModel
     {
-        IMainView View { get; }        
+        IMainView View { get; }
         ICommand ShowOptionsCommand { get; }
         ICommand AboutCommand { get; }
         ICommand HelpCommand { get; }

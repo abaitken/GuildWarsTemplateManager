@@ -40,14 +40,14 @@ namespace TemplateParser.Equipment
             yield return new BitSet(DefaultModifierIdBitLength, ModifierIdBitLength);
             yield return new BitSet(source.Count(), ItemCountBitLength);
 
-            foreach (var item in source)
+            foreach(var item in source)
             {
                 yield return new BitSet(item.SlotId, EquipmentSlotBitLength);
                 yield return new BitSet(item.ItemId, DefaultItemIdBitLength);
                 yield return new BitSet(item.ModifierIds.Count(), ModifierCountBitLength);
                 yield return new BitSet(item.ColorId, ItemCountBitLength);
 
-                foreach (var modifier in item.ModifierIds)
+                foreach(var modifier in item.ModifierIds)
                     yield return new BitSet(modifier, DefaultModifierIdBitLength);
             }
         }
@@ -61,14 +61,14 @@ namespace TemplateParser.Equipment
         {
             var header = binaryIterator.GetBitSetValue(HeaderBitLength);
 
-            if (header != LegacyVersion)
+            if(header != LegacyVersion)
             {
-                if (header != ExpectedTemplateType)
+                if(header != ExpectedTemplateType)
                     return null;
 
                 var version = binaryIterator.GetBitSetValue(VersionBitLength);
 
-                if (version != ExpectedVersion)
+                if(version != ExpectedVersion)
                     return null;
             }
 
@@ -79,7 +79,7 @@ namespace TemplateParser.Equipment
 
             var result = new NativeEquipmentBuild();
 
-            for (var i = 0; i < itemCount; i++)
+            for(var i = 0; i < itemCount; i++)
             {
                 var item = new NativeEquipmentItem
                                {
@@ -92,7 +92,7 @@ namespace TemplateParser.Equipment
 
                 var modifiers = new List<int>();
 
-                for (var m = 0; m < modifierCount; m++)
+                for(var m = 0; m < modifierCount; m++)
                     modifiers.Add(binaryIterator.GetBitSetValue(bitsPerModifierId));
 
                 item.ModifierIds = modifiers;
@@ -107,15 +107,15 @@ namespace TemplateParser.Equipment
         {
             var header = binaryIterator.GetBitSetValue(HeaderBitLength);
 
-            if (header == LegacyVersion)
+            if(header == LegacyVersion)
                 return false;
 
-            if (header != ExpectedTemplateType)
+            if(header != ExpectedTemplateType)
                 return false;
 
             var version = binaryIterator.GetBitSetValue(VersionBitLength);
 
-            if (version != ExpectedVersion)
+            if(version != ExpectedVersion)
                 return false;
 
             return true;

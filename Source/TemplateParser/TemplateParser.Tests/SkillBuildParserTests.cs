@@ -8,7 +8,9 @@ namespace TemplateParser.Tests
 {
     internal static class TestExtensions
     {
-        public static bool ContainsPair<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> source, TKey key, TValue value)
+        public static bool ContainsPair<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> source,
+                                                      TKey key,
+                                                      TValue value)
         {
             return source.Contains(new KeyValuePair<TKey, TValue>(key, value));
         }
@@ -28,23 +30,23 @@ namespace TemplateParser.Tests
 
             var build = parser.ParseTemplateCode(templateCode);
 
-            Assert.AreEqual((int)ProfessionIndex.Monk, build.PrimaryProfessionId);
-            Assert.AreEqual((int)ProfessionIndex.None, build.SecondaryProfessionId);
+            Assert.AreEqual((int) ProfessionIndex.Monk, build.PrimaryProfessionId);
+            Assert.AreEqual((int) ProfessionIndex.None, build.SecondaryProfessionId);
 
             Assert.AreEqual(3, build.AttributeIdValuePairs.Count());
-            Assert.IsTrue(build.AttributeIdValuePairs.ContainsPair((int)AttributeIndex.ProtectionPrayers, 3));
-            Assert.IsTrue(build.AttributeIdValuePairs.ContainsPair((int)AttributeIndex.DivineFavor, 12));
-            Assert.IsTrue(build.AttributeIdValuePairs.ContainsPair((int)AttributeIndex.HealingPrayers, 12));
+            Assert.IsTrue(build.AttributeIdValuePairs.ContainsPair((int) AttributeIndex.ProtectionPrayers, 3));
+            Assert.IsTrue(build.AttributeIdValuePairs.ContainsPair((int) AttributeIndex.DivineFavor, 12));
+            Assert.IsTrue(build.AttributeIdValuePairs.ContainsPair((int) AttributeIndex.HealingPrayers, 12));
 
             Assert.AreEqual(8, build.SkillIds.Count());
-            Assert.IsTrue(build.SkillIds.Contains((int)SkillIndex.OrisonofHealing));
-            Assert.IsTrue(build.SkillIds.Contains((int)SkillIndex.DwaynasKiss));
-            Assert.IsTrue(build.SkillIds.Contains((int)SkillIndex.WordofHealing));
-            Assert.IsTrue(build.SkillIds.Contains((int)SkillIndex.SignetofRejuvenation));
-            Assert.IsTrue(build.SkillIds.Contains((int)SkillIndex.CureHex));
-            Assert.IsTrue(build.SkillIds.Contains((int)SkillIndex.DismissCondition));
-            Assert.IsTrue(build.SkillIds.Contains((int)SkillIndex.DivineSpirit));
-            Assert.IsTrue(build.SkillIds.Contains((int)SkillIndex.Rebirth));
+            Assert.IsTrue(build.SkillIds.Contains((int) SkillIndex.OrisonofHealing));
+            Assert.IsTrue(build.SkillIds.Contains((int) SkillIndex.DwaynasKiss));
+            Assert.IsTrue(build.SkillIds.Contains((int) SkillIndex.WordofHealing));
+            Assert.IsTrue(build.SkillIds.Contains((int) SkillIndex.SignetofRejuvenation));
+            Assert.IsTrue(build.SkillIds.Contains((int) SkillIndex.CureHex));
+            Assert.IsTrue(build.SkillIds.Contains((int) SkillIndex.DismissCondition));
+            Assert.IsTrue(build.SkillIds.Contains((int) SkillIndex.DivineSpirit));
+            Assert.IsTrue(build.SkillIds.Contains((int) SkillIndex.Rebirth));
         }
 
         [TestMethod]
@@ -58,18 +60,18 @@ namespace TemplateParser.Tests
                                 SecondaryProfessionId = (int) ProfessionIndex.None
                             };
 
-            build.AddAttribute((int)AttributeIndex.HealingPrayers, 12);
-            build.AddAttribute((int)AttributeIndex.ProtectionPrayers, 3);
-            build.AddAttribute((int)AttributeIndex.DivineFavor, 12);
+            build.AddAttribute((int) AttributeIndex.HealingPrayers, 12);
+            build.AddAttribute((int) AttributeIndex.ProtectionPrayers, 3);
+            build.AddAttribute((int) AttributeIndex.DivineFavor, 12);
 
-            build.AddSkill((int)SkillIndex.OrisonofHealing);
-            build.AddSkill((int)SkillIndex.DwaynasKiss);
-            build.AddSkill((int)SkillIndex.WordofHealing);
-            build.AddSkill((int)SkillIndex.SignetofRejuvenation);
-            build.AddSkill((int)SkillIndex.CureHex);
-            build.AddSkill((int)SkillIndex.DismissCondition);
-            build.AddSkill((int)SkillIndex.DivineSpirit);
-            build.AddSkill((int)SkillIndex.Rebirth);
+            build.AddSkill((int) SkillIndex.OrisonofHealing);
+            build.AddSkill((int) SkillIndex.DwaynasKiss);
+            build.AddSkill((int) SkillIndex.WordofHealing);
+            build.AddSkill((int) SkillIndex.SignetofRejuvenation);
+            build.AddSkill((int) SkillIndex.CureHex);
+            build.AddSkill((int) SkillIndex.DismissCondition);
+            build.AddSkill((int) SkillIndex.DivineSpirit);
+            build.AddSkill((int) SkillIndex.Rebirth);
 
 
             var parser = new SkillBuildParser();
@@ -86,17 +88,17 @@ namespace TemplateParser.Tests
             var parser = new SkillBuildParser();
             var build = parser.ParseTemplateCode(templateCode);
 
-            Assert.AreEqual((int)ProfessionIndex.Warrior, build.PrimaryProfessionId);
-            Assert.AreEqual((int)ProfessionIndex.Necromancer, build.SecondaryProfessionId);
+            Assert.AreEqual((int) ProfessionIndex.Warrior, build.PrimaryProfessionId);
+            Assert.AreEqual((int) ProfessionIndex.Necromancer, build.SecondaryProfessionId);
 
             Assert.AreEqual(2, build.AttributeIdValuePairs.Count());
-            Assert.IsTrue(build.AttributeIdValuePairs.ContainsPair((int)AttributeIndex.Strength, 12));
-            Assert.IsTrue(build.AttributeIdValuePairs.ContainsPair((int)AttributeIndex.HammerMastery, 12));
+            Assert.IsTrue(build.AttributeIdValuePairs.ContainsPair((int) AttributeIndex.Strength, 12));
+            Assert.IsTrue(build.AttributeIdValuePairs.ContainsPair((int) AttributeIndex.HammerMastery, 12));
 
             Assert.AreEqual(8, build.SkillIds.Count());
-            
-			/* 8 x NoSkill */
-			Assert.AreEqual(0, build.SkillIds.First());
+
+            /* 8 x NoSkill */
+            Assert.AreEqual(0, build.SkillIds.First());
             Assert.AreEqual(0, build.SkillIds.Skip(1).First());
             Assert.AreEqual(0, build.SkillIds.Skip(2).First());
             Assert.AreEqual(0, build.SkillIds.Skip(3).First());
@@ -105,7 +107,6 @@ namespace TemplateParser.Tests
             Assert.AreEqual(0, build.SkillIds.Skip(6).First());
             Assert.AreEqual(0, build.SkillIds.Skip(7).First());
         }
-
 
 
         [TestMethod]
@@ -140,14 +141,14 @@ namespace TemplateParser.Tests
         {
             var build = new NativeSkillBuild();
 
-            build.AddSkill((int)SkillIndex.OrisonofHealing);
-            build.AddSkill((int)SkillIndex.DwaynasKiss);
-            build.AddSkill((int)SkillIndex.WordofHealing);
-            build.AddSkill((int)SkillIndex.SignetofRejuvenation);
-            build.AddSkill((int)SkillIndex.CureHex);
-            build.AddSkill((int)SkillIndex.DismissCondition);
-            build.AddSkill((int)SkillIndex.DivineSpirit);
-            build.AddSkill((int)SkillIndex.Rebirth);
+            build.AddSkill((int) SkillIndex.OrisonofHealing);
+            build.AddSkill((int) SkillIndex.DwaynasKiss);
+            build.AddSkill((int) SkillIndex.WordofHealing);
+            build.AddSkill((int) SkillIndex.SignetofRejuvenation);
+            build.AddSkill((int) SkillIndex.CureHex);
+            build.AddSkill((int) SkillIndex.DismissCondition);
+            build.AddSkill((int) SkillIndex.DivineSpirit);
+            build.AddSkill((int) SkillIndex.Rebirth);
 
             var parser = new SkillBuildParser();
             parser.CreateTemplateCode(build);
@@ -163,14 +164,14 @@ namespace TemplateParser.Tests
                                 SecondaryProfessionId = (int) ProfessionIndex.Monk
                             };
 
-            build.AddSkill((int)SkillIndex.OrisonofHealing);
-            build.AddSkill((int)SkillIndex.DwaynasKiss);
-            build.AddSkill((int)SkillIndex.WordofHealing);
-            build.AddSkill((int)SkillIndex.SignetofRejuvenation);
-            build.AddSkill((int)SkillIndex.CureHex);
-            build.AddSkill((int)SkillIndex.DismissCondition);
-            build.AddSkill((int)SkillIndex.DivineSpirit);
-            build.AddSkill((int)SkillIndex.Rebirth);
+            build.AddSkill((int) SkillIndex.OrisonofHealing);
+            build.AddSkill((int) SkillIndex.DwaynasKiss);
+            build.AddSkill((int) SkillIndex.WordofHealing);
+            build.AddSkill((int) SkillIndex.SignetofRejuvenation);
+            build.AddSkill((int) SkillIndex.CureHex);
+            build.AddSkill((int) SkillIndex.DismissCondition);
+            build.AddSkill((int) SkillIndex.DivineSpirit);
+            build.AddSkill((int) SkillIndex.Rebirth);
 
             var parser = new SkillBuildParser();
             parser.CreateTemplateCode(build);

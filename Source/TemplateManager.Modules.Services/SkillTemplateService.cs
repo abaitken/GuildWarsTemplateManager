@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Media.Imaging;
 using TemplateManager.Infrastructure.Model;
 using TemplateManager.Infrastructure.Services;
 using TemplateManager.Modules.Services.NativeObjects;
@@ -28,26 +27,22 @@ namespace TemplateManager.Modules.Services
 
         public TemplateFolder TemplateFolder
         {
-            get
-            {
-                return CreateTemplateFolder(buildFactory.TemplateFolder);
-            }
+            get { return CreateTemplateFolder(buildFactory.TemplateFolder); }
         }
 
         public IEnumerable<SkillTemplate> AllTemplates
         {
-            get
-            {
-                return FlattenTemplateStructure(TemplateFolder);
-            }
+            get { return FlattenTemplateStructure(TemplateFolder); }
         }
+
+        #endregion
 
         private static IEnumerable<SkillTemplate> FlattenTemplateStructure(TemplateFolder templateFolder)
         {
             var subFolderItem = from subFolder in templateFolder.SubFolders
                                 from item in FlattenTemplateStructure(subFolder)
                                 select item;
-            
+
             return templateFolder.Templates.Union(subFolderItem);
         }
 
@@ -69,20 +64,23 @@ namespace TemplateManager.Modules.Services
                 templatePath,
                 dataService.EmptyProfession);
         }
+
         // TODO : Consider where skills do not match the primary or secondary profession
         private SkillTemplate CreateTemplate(string templatePath, NativeSkillBuild nativeTemplate)
         {
-            if (nativeTemplate == null)
+            if(nativeTemplate == null)
                 return CreateInvalidTemplate(templatePath);
 
-            var primaryProfession = dataService.Professions.FirstOrDefault(i => i.TemplateId == nativeTemplate.PrimaryProfessionId);
+            var primaryProfession =
+                dataService.Professions.FirstOrDefault(i => i.TemplateId == nativeTemplate.PrimaryProfessionId);
 
-            if (primaryProfession == null)
+            if(primaryProfession == null)
                 return CreateInvalidTemplate(templatePath);
 
-            var secondaryProfession = dataService.Professions.First(i => i.TemplateId == nativeTemplate.SecondaryProfessionId);
+            var secondaryProfession =
+                dataService.Professions.First(i => i.TemplateId == nativeTemplate.SecondaryProfessionId);
 
-            if (secondaryProfession == null)
+            if(secondaryProfession == null)
                 return CreateInvalidTemplate(templatePath);
 
             return new SkillTemplate(
@@ -92,8 +90,6 @@ namespace TemplateManager.Modules.Services
                 JoinSkillData(nativeTemplate).ToList(),
                 JoinAttributedata(nativeTemplate));
         }
-
-        #endregion
 
         private IEnumerable<AttributeValue> JoinAttributedata(NativeSkillBuild nativeItem)
         {
@@ -115,5 +111,4 @@ namespace TemplateManager.Modules.Services
                 select result;
         }
     }
-
 }

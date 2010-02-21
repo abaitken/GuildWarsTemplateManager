@@ -11,19 +11,19 @@ namespace TemplateManager.Common.Behaviours.ListSynchronizer
     /// </summary>
     public static class MultiSelectorBehaviours
     {
-        private static readonly DependencyProperty SynchronizationManagerProperty = 
+        private static readonly DependencyProperty SynchronizationManagerProperty =
             DependencyProperty.RegisterAttached(
-                        "SynchronizationManager",
-                        typeof(SynchronizationManager),
-                        typeof(MultiSelectorBehaviours),
-                        new PropertyMetadata(null));
+                "SynchronizationManager",
+                typeof(SynchronizationManager),
+                typeof(MultiSelectorBehaviours),
+                new PropertyMetadata(null));
 
-        public static readonly DependencyProperty SynchronizedSelectedItemsProperty = 
+        public static readonly DependencyProperty SynchronizedSelectedItemsProperty =
             DependencyProperty.RegisterAttached(
-                        "SynchronizedSelectedItems",
-                        typeof(IList),
-                        typeof(MultiSelectorBehaviours),
-                        new PropertyMetadata(null, OnSynchronizedSelectedItemsChanged));
+                "SynchronizedSelectedItems",
+                typeof(IList),
+                typeof(MultiSelectorBehaviours),
+                new PropertyMetadata(null, OnSynchronizedSelectedItemsChanged));
 
         /// <summary>
         /// Gets the synchronized selected items.

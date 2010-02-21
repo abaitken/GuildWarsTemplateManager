@@ -37,7 +37,7 @@ namespace TemplateManager.DataFetcher.Tests
         {
             mockedDataProvider = new Mock<IDataProvider>();
 
-            foreach (var page in pages)
+            foreach(var page in pages)
                 mockedDataProvider.Setup(o => o.RequestData(page, true)).Returns(LoadFile(page)).AtMostOnce();
 
             mockedLogger = new Mock<ILogger>();

@@ -26,9 +26,13 @@ namespace TemplateManager.Common.Tests
                                                    };
 
 
-        private static IEnumerable<string> CreateArgs(string name, object value, string prefix, string separator, string enclosing)
+        private static IEnumerable<string> CreateArgs(string name,
+                                                      object value,
+                                                      string prefix,
+                                                      string separator,
+                                                      string enclosing)
         {
-            if (string.IsNullOrEmpty(separator.Trim()))
+            if(string.IsNullOrEmpty(separator.Trim()))
             {
                 yield return string.Format("{0}{1}", prefix, name);
                 yield return string.Format("{0}{1}{0}", enclosing, value);
@@ -64,7 +68,7 @@ namespace TemplateManager.Common.Tests
         {
             const string name = "param";
             const string value = "value";
-            
+
             var testItems = CreateArgs(name, value, prefix, separator, enclosing);
             var result = CommandLineParser.Parse(testItems);
 

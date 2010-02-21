@@ -10,10 +10,14 @@
             InitializeComponent();
         }
 
+        #region IMainView Members
+
         public IMainViewModel Model
         {
             get { return DataContext as IMainViewModel; }
             set { DataContext = value; }
         }
+
+        #endregion
     }
 }

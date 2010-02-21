@@ -9,17 +9,17 @@ namespace TemplateParser.Skills
     /// </summary>
     public class NativeSkillBuild
     {
-        const int SkillLimit = 8;
+        private const int SkillLimit = 8;
 
         #region fields
-        
-        private readonly SortedList<int, int> skills;
+
         private readonly SortedList<int, KeyValuePair<int, int>> attributes;
+        private readonly SortedList<int, int> skills;
 
         #endregion
 
         #region constructors
-        
+
         /// <summary>
         /// Initialise the build
         /// </summary>
@@ -30,7 +30,7 @@ namespace TemplateParser.Skills
         }
 
         #endregion
-        
+
         #region properties
 
         /// <summary>
@@ -46,12 +46,18 @@ namespace TemplateParser.Skills
         /// <summary>
         /// A list of attributes and thier associated value
         /// </summary>
-        public IEnumerable<KeyValuePair<int, int>> AttributeIdValuePairs { get { return attributes.Values; } }
+        public IEnumerable<KeyValuePair<int, int>> AttributeIdValuePairs
+        {
+            get { return attributes.Values; }
+        }
 
         /// <summary>
         /// A list of skills
         /// </summary>
-        public IEnumerable<int> SkillIds { get { return skills.Values; } }
+        public IEnumerable<int> SkillIds
+        {
+            get { return skills.Values; }
+        }
 
         #endregion
 
@@ -69,13 +75,13 @@ namespace TemplateParser.Skills
                 where attributePair.Key == attributeId
                 select attributePair;
 
-            if (items.Count() > 0)
+            if(items.Count() > 0)
                 throw new NotSupportedException();
-            
+
             var key = new KeyValuePair<int, int>(attributeId, value);
 
             attributes.Add(attributes.Count, key);
-        }	
+        }
 
         /// <summary>
         /// Add a skill
@@ -83,10 +89,10 @@ namespace TemplateParser.Skills
         /// <param name="skillId">Skill to add</param>
         public void AddSkill(int skillId)
         {
-            if (skillId != 0 && skills.ContainsValue(skillId))
+            if(skillId != 0 && skills.ContainsValue(skillId))
                 return;
 
-            if (skills.Count > SkillLimit)
+            if(skills.Count > SkillLimit)
                 throw new InvalidOperationException();
 
             skills.Add(skills.Count, skillId);

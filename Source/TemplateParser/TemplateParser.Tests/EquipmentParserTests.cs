@@ -246,7 +246,7 @@ namespace TemplateParser.Tests
                                          EquipmentSlot equipmentSlot,
                                          IEnumerable<ModifierIndex> list)
         {
-            ValidateItem(equipmentItem, (int) itemColor, (int)itemIndex, (int)equipmentSlot, list.Cast<int>());
+            ValidateItem(equipmentItem, (int) itemColor, (int) itemIndex, (int) equipmentSlot, list.Cast<int>());
         }
 
         private static void ValidateItem(NativeEquipmentItem equipmentItem,
