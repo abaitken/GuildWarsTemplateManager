@@ -7,8 +7,6 @@ namespace TemplateManager
 {
     internal class ApplicationSettings : ApplicationSettingsBase, IApplicationSettings
     {
-        private const string ArchiveFolderSettingsName = "ArchiveFolder";
-        private const string DeleteBehaviourSettingsName = "DeleteBehaviour";
         private const string TemplateFolderSettingName = "TemplateFolder";
 
         #region IApplicationSettings Members
@@ -20,23 +18,7 @@ namespace TemplateManager
             set { this[TemplateFolderSettingName] = value; }
         }
 
-        [UserScopedSetting]
-        public string ArchiveFolder
-        {
-            get { return Get(ArchiveFolderSettingsName, () => string.Empty); }
-            set { this[ArchiveFolderSettingsName] = value; }
-        }
-
-        [UserScopedSetting]
-        public string DeleteBehaviour
-        {
-            get { return Get(DeleteBehaviourSettingsName, () => "Delete and Recycle"); }
-            set { this[DeleteBehaviourSettingsName] = value; }
-        }
-
         public event EventHandler TemplateFolderChanged;
-        public event EventHandler ArchiveFolderChanged;
-        public event EventHandler DeleteBehaviourChanged;
 
         #endregion
 
@@ -56,12 +38,6 @@ namespace TemplateManager
             {
                 case TemplateFolderSettingName:
                     RaiseChangedEvent(sender, TemplateFolderChanged);
-                    break;
-                case ArchiveFolderSettingsName:
-                    RaiseChangedEvent(sender, ArchiveFolderChanged);
-                    break;
-                case DeleteBehaviourSettingsName:
-                    RaiseChangedEvent(sender, DeleteBehaviourChanged);
                     break;
             }
         }

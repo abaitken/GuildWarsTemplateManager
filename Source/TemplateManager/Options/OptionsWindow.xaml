@@ -35,7 +35,7 @@
                 <Button Command="{Binding UseDefaultsCommand}">Restore _Defaults</Button>
 
                 <Button IsDefault="True" 
-                            Command="{Binding ApplySettngisCommand}">_Apply</Button>
+                            Command="{Binding ApplySettingsCommand}">_Apply</Button>
             </UniformGrid>
         </Grid>
     </Grid>

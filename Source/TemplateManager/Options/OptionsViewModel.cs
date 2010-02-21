@@ -28,7 +28,7 @@ namespace TemplateManager.Options
 
         #region IOptionsViewModel Members
 
-        public void WriteSetings()
+        public void WriteSettings()
         {
             if(applicationSettings.TemplateFolder != TemplateFolder)
                 applicationSettings.TemplateFolder = TemplateFolder;
@@ -126,7 +126,7 @@ namespace TemplateManager.Options
                 return;
             }
 
-            WriteSetings();
+            WriteSettings();
         }
 
         private void ReadSettings()

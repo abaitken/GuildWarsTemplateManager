@@ -13,6 +13,6 @@ namespace TemplateManager.Options
         ICommand ApplySettingsCommand { get; }
         ICommand UseDefaultsCommand { get; }
         ICommand BrowseForTemplateFolderCommand { get; }
-        void WriteSetings();
+        void WriteSettings();
     }
 }
