@@ -47,15 +47,16 @@ namespace TemplateParser
                 return default(T);
 
             var binaryString = Base64BinaryConverter.GetBinaryString(templateCode);
-            return ParseBinary(new BinaryIterator(binaryString));
+            return ParseBinary(new BinaryIterator(binaryString), templateCode);
         }
 
         /// <summary>
         /// Implementation of parsing the binary extracted from the template code
         /// </summary>
         /// <param name="binaryIterator">The binary iterator to help navigatee the binary string</param>
+        /// <param name="templateCode">The original template code</param>
         /// <returns>The resulting object with data from the template</returns>
-        protected abstract T ParseBinary(BinaryIterator binaryIterator);
+        protected abstract T ParseBinary(BinaryIterator binaryIterator, string templateCode);
 
         public bool CanParseTemplateCode(string templateCode)
         {

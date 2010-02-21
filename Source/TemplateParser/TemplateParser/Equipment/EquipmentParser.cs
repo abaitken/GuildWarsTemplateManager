@@ -56,8 +56,9 @@ namespace TemplateParser.Equipment
         /// Implementation of parsing the binary extracted from the template code
         /// </summary>
         /// <param name="binaryIterator">The binary iterator to help navigatee the binary string</param>
+        /// <param name="templaceCode">The original template code</param>
         /// <returns>The resulting object with data from the template</returns>
-        protected override NativeEquipmentBuild ParseBinary(BinaryIterator binaryIterator)
+        protected override NativeEquipmentBuild ParseBinary(BinaryIterator binaryIterator, string templaceCode)
         {
             var header = binaryIterator.GetBitSetValue(HeaderBitLength);
 
@@ -99,6 +100,8 @@ namespace TemplateParser.Equipment
 
                 result.Add(item);
             }
+
+            result.TemplateCode = templaceCode;
 
             return result;
         }

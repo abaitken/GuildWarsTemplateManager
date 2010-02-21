@@ -59,6 +59,8 @@ namespace TemplateParser.Skills
             get { return skills.Values; }
         }
 
+        public string TemplateCode { get; set; }
+
         #endregion
 
         #region methods

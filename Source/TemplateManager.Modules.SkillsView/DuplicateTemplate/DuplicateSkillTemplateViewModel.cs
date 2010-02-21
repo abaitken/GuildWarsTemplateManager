@@ -32,7 +32,7 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
             get
             {
                 return from item in service.AllTemplates
-                       where !item.IsValid
+                       where item.IsValid
                        group item by item.SkillKey
                        into g
                            where g.Count() > 1

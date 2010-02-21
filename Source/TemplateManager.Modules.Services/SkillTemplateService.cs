@@ -88,7 +88,8 @@ namespace TemplateManager.Modules.Services
                 primaryProfession,
                 secondaryProfession,
                 JoinSkillData(nativeTemplate).ToList(),
-                JoinAttributedata(nativeTemplate));
+                JoinAttributedata(nativeTemplate),
+                nativeTemplate.TemplateCode);
         }
 
         private IEnumerable<AttributeValue> JoinAttributedata(NativeSkillBuild nativeItem)

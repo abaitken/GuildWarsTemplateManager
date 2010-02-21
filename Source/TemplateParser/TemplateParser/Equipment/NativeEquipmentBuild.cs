@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace TemplateParser.Equipment
@@ -11,6 +12,8 @@ namespace TemplateParser.Equipment
         {
             inner = new List<NativeEquipmentItem>();
         }
+
+        public string TemplateCode { get; set; }
 
         #region IEnumerable<NativeEquipmentItem> Members
 

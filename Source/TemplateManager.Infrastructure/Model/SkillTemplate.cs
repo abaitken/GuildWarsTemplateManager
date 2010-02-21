@@ -8,6 +8,7 @@ namespace TemplateManager.Infrastructure.Model
     public class SkillTemplate
     {
         private readonly IEnumerable<AttributeValue> attributes;
+        private readonly string templateCode;
         private readonly string buildFile;
         private readonly bool isValid;
         private readonly IProfession primaryProfession;
@@ -25,7 +26,7 @@ namespace TemplateManager.Infrastructure.Model
                 emptyProfession,
                 emptyProfession,
                 Enumerable.Empty<ISkill>().ToList(),
-                Enumerable.Empty<AttributeValue>())
+                Enumerable.Empty<AttributeValue>(), string.Empty)
         {
             isValid = false;
         }
@@ -34,7 +35,8 @@ namespace TemplateManager.Infrastructure.Model
                              IProfession primaryProfession,
                              IProfession secondaryProfession,
                              IList<ISkill> skills,
-                             IEnumerable<AttributeValue> attributes)
+                             IEnumerable<AttributeValue> attributes,
+            string templateCode)
         {
             if(string.IsNullOrEmpty(buildFile))
                 throw new ArgumentNullException("buildFile");
@@ -56,7 +58,13 @@ namespace TemplateManager.Infrastructure.Model
             this.secondaryProfession = secondaryProfession;
             this.skills = skills;
             this.attributes = attributes;
+            this.templateCode = templateCode;
             isValid = true;
+        }
+
+        public string TemplateCode
+        {
+            get { return templateCode; }
         }
 
         public string BuildFile
