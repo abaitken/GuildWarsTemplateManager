@@ -1089,6 +1089,8 @@ namespace TemplateManager.Data.GuildWars {
             
             private global::System.Data.DataColumn columnImageRefId;
             
+            private global::System.Data.DataColumn columnTemplateId;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public SkillsDataTable() {
                 this.TableName = "Skills";
@@ -1295,6 +1297,13 @@ namespace TemplateManager.Data.GuildWars {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TemplateIdColumn {
+                get {
+                    return this.columnTemplateId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1348,7 +1357,8 @@ namespace TemplateManager.Data.GuildWars {
                         string SourceWikiLink, 
                         bool IsRemoved, 
                         bool IsValid, 
-                        int ImageRefId) {
+                        int ImageRefId, 
+                        int TemplateId) {
                 SkillsRow rowSkillsRow = ((SkillsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1375,7 +1385,8 @@ namespace TemplateManager.Data.GuildWars {
                         SourceWikiLink,
                         IsRemoved,
                         IsValid,
-                        ImageRefId};
+                        ImageRefId,
+                        TemplateId};
                 if ((parentRelatedSkillsRowByRelatedSkills_Skills != null)) {
                     columnValuesArray[0] = parentRelatedSkillsRowByRelatedSkills_Skills[1];
                 }
@@ -1429,6 +1440,7 @@ namespace TemplateManager.Data.GuildWars {
                 this.columnIsRemoved = base.Columns["IsRemoved"];
                 this.columnIsValid = base.Columns["IsValid"];
                 this.columnImageRefId = base.Columns["ImageRefId"];
+                this.columnTemplateId = base.Columns["TemplateId"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1483,6 +1495,8 @@ namespace TemplateManager.Data.GuildWars {
                 base.Columns.Add(this.columnIsValid);
                 this.columnImageRefId = new global::System.Data.DataColumn("ImageRefId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnImageRefId);
+                this.columnTemplateId = new global::System.Data.DataColumn("TemplateId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTemplateId);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("PK_Skills", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrementSeed = 1;
@@ -1499,6 +1513,7 @@ namespace TemplateManager.Data.GuildWars {
                 this.columnTypeRefId.AllowDBNull = false;
                 this.columnIsRemoved.AllowDBNull = false;
                 this.columnIsValid.AllowDBNull = false;
+                this.columnTemplateId.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6779,6 +6794,16 @@ namespace TemplateManager.Data.GuildWars {
                 }
                 set {
                     this[this.tableSkills.ImageRefIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int TemplateId {
+                get {
+                    return ((int)(this[this.tableSkills.TemplateIdColumn]));
+                }
+                set {
+                    this[this.tableSkills.TemplateIdColumn] = value;
                 }
             }
             

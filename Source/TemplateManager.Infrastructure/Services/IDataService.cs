@@ -11,5 +11,6 @@ namespace TemplateManager.Infrastructure.Services
         IProfession EmptyProfession { get; }
         IEnumerable<IProfession> PrimaryProfessions { get; }
         IEnumerable<IProfession> Professions { get; }
+        ISkill InvalidSkill { get; }
     }
 }

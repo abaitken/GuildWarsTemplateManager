@@ -1,29 +1,25 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using TemplateManager.Common;
 using TemplateManager.DataFetcher.Logging;
 using TemplateManager.DataFetcher.Model;
-using System.Text;
 
 namespace TemplateManager.DataFetcher.DataTargets
 {
     internal class TemplateManagerTarget : IDataTarget
     {
+        private const int skillOffset = 2;
         private readonly ILogger logger;
-        private readonly Data.GuildWars.Model model;
+        private Data.GuildWars.Model model;
 
         public TemplateManagerTarget(ILogger logger)
         {
             this.logger = logger;
-            model = new Data.GuildWars.Model();
         }
 
         #region IDataTarget Members
@@ -78,23 +74,26 @@ namespace TemplateManager.DataFetcher.DataTargets
             logger.Log(GetType(), "Update complete", LogSeverity.InformationHigh);
         }
 
+        #endregion
+
         private void PrepareExistingData()
         {
-            if (File.Exists(Data.GuildWars.Model.DataFile))
-            {
-                logger.Log(GetType(), "Loading previous data", LogSeverity.InformationHigh);
-                model.ReadXml(Data.GuildWars.Model.DataFile);
-            }
+            model = new Data.GuildWars.Model();
 
+            if(!File.Exists(Data.GuildWars.Model.DataFile))
+                return;
+            
+            logger.Log(GetType(), "Loading previous data", LogSeverity.InformationHigh);
+            model.ReadXml(Data.GuildWars.Model.DataFile);
 
             logger.Log(GetType(), "Preparing model", LogSeverity.InformationHigh);
             foreach(var row in model.Images)
             {
-                if (row.ProfessionsRow != null)
+                if(row.ProfessionsRow != null)
                     row.ProfessionsRow.SetImageRefIdNull();
 
                 var parentRows = row.GetParentRows("Skills_Images");
-                if (parentRows != null && parentRows.Count() > 0)
+                if(parentRows != null && parentRows.Count() > 0)
                 {
                     foreach(var parentRow in parentRows)
                         ((Data.GuildWars.Model.SkillsRow) parentRow).SetImageRefIdNull();
@@ -109,10 +108,10 @@ namespace TemplateManager.DataFetcher.DataTargets
             model.SkillName.Clear();
             model.SkillDescription.Clear();
             model.SkillsCategories_Lookup.Clear();
-            
 
             model.WriteXml("temp.xml", XmlWriteMode.IgnoreSchema);
-            model.Clear();
+            model = new Data.GuildWars.Model();
+
             model.ReadXml("temp.xml", XmlReadMode.Fragment);
             model.AcceptChanges();
         }
@@ -125,7 +124,7 @@ namespace TemplateManager.DataFetcher.DataTargets
                     foreach(var item in skill.Categories)
                     {
                         var row = model.SkillsCategories_Lookup.NewSkillsCategories_LookupRow();
-                        row.SkillsId = skill.Id;
+                        row.SkillsId = CreateRowId(skill);
                         row.CategoriesId =
                             model.Categories.First(i => i.Name.Equals(item, StringComparison.InvariantCultureIgnoreCase))
                                 .Id;
@@ -142,23 +141,27 @@ namespace TemplateManager.DataFetcher.DataTargets
                     foreach(var item in skill.RelatedSkills)
                     {
                         var row = model.RelatedSkills.NewRelatedSkillsRow();
-                        row.ParentSkillId = skill.Id;
-                        row.RelatedSkillId = item;
+                        row.ParentSkillId = CreateRowId(skill);
+                        row.RelatedSkillId = CreateRowId(item);
                         model.RelatedSkills.AddRelatedSkillsRow(row);
                     }
             }
         }
 
+        private static int CreateRowId(int item)
+        {
+            return item + skillOffset;
+        }
+
         private void UpdateSkillRemoves(IEnumerable<Skill> enumerable)
         {
-
-            foreach (var skill in enumerable)
+            foreach(var skill in enumerable)
             {
-                if (skill.Removes != null)
-                    foreach (var item in skill.Removes)
+                if(skill.Removes != null)
+                    foreach(var item in skill.Removes)
                     {
                         var row = model.SkillsRemoves_Lookup.NewSkillsRemoves_LookupRow();
-                        row.SkillsId = skill.Id;
+                        row.SkillsId = CreateRowId(skill);
                         row.RemovesId =
                             model.Removes.First(i => i.Name.Equals(item, StringComparison.InvariantCultureIgnoreCase)).
                                 Id;
@@ -169,14 +172,13 @@ namespace TemplateManager.DataFetcher.DataTargets
 
         private void UpdateSkillCauses(IEnumerable<Skill> enumerable)
         {
-
             foreach(var skill in enumerable)
             {
                 if(skill.Causes != null)
                     foreach(var item in skill.Causes)
                     {
                         var row = model.SkillsCauses_Lookup.NewSkillsCauses_LookupRow();
-                        row.SkillsId = skill.Id;
+                        row.SkillsId = CreateRowId(skill);
                         row.CausesId =
                             model.Causes.First(i => i.Name.Equals(item, StringComparison.InvariantCultureIgnoreCase)).
                                 Id;
@@ -187,14 +189,13 @@ namespace TemplateManager.DataFetcher.DataTargets
 
         private void UpdateSkillText(IEnumerable<Skill> enumerable)
         {
-
             foreach(var skill in enumerable)
             {
                 if(skill.Name != null)
                     foreach(var name in skill.Name)
                     {
                         var row = model.SkillName.NewSkillNameRow();
-                        row.Id = skill.Id;
+                        row.Id = CreateRowId(skill);
                         row.Locale = name.Key;
                         row.Name = name.Value;
 
@@ -205,16 +206,21 @@ namespace TemplateManager.DataFetcher.DataTargets
                     foreach(var text in skill.Description)
                     {
                         var row = model.SkillDescription.NewSkillDescriptionRow();
-                        row.Id = skill.Id;
+                        row.Id = CreateRowId(skill);
                         row.Locale = text.Key;
                         row.Description = text.Value;
 
-                        if (skill.ConciseDescription != null && skill.ConciseDescription.ContainsKey(text.Key))
+                        if(skill.ConciseDescription != null && skill.ConciseDescription.ContainsKey(text.Key))
                             row.ConciseDescription = skill.ConciseDescription[text.Key];
 
                         model.SkillDescription.AddSkillDescriptionRow(row);
                     }
             }
+        }
+
+        private static int CreateRowId(Skill skill)
+        {
+            return skill.Id + skillOffset;
         }
 
         private void CompactImages()
@@ -231,21 +237,20 @@ namespace TemplateManager.DataFetcher.DataTargets
             return Encoding.Default.GetString(bytes);
         }
 
-        #endregion
-
         private void UpdateSkills(IEnumerable<Skill> enumerable)
         {
             foreach(var skill in enumerable)
             {
-                var skillRow = model.Skills.FindById(skill.Id);
+                var skillRow = model.Skills.FindById(CreateRowId(skill));
 
                 var newRow = (skillRow == null);
 
                 if(newRow)
                 {
                     skillRow = model.Skills.NewSkillsRow();
-                    skillRow.Id = skill.Id;
+                    skillRow.Id = CreateRowId(skill);
                 }
+                skillRow.TemplateId = skill.Id;
 
                 SetValue(skill,
                          skillRow,
@@ -258,7 +263,7 @@ namespace TemplateManager.DataFetcher.DataTargets
                          i => i.Adrenaline,
                          ((r, v) => r.SourceAdrenalineCost = v),
                          r => r.SetSourceAdrenalineCostNull());
-                
+
                 SetValue(skill,
                          skillRow,
                          i => i.CausesExhaustion,
@@ -276,7 +281,7 @@ namespace TemplateManager.DataFetcher.DataTargets
                          i => i.IsElite,
                          ((r, v) => r.SourceIsElite = v),
                          r => r.SetSourceIsEliteNull());
-                
+
                 SetValue(skill,
                          skillRow,
                          i => i.IsPvEOnly,
@@ -288,7 +293,7 @@ namespace TemplateManager.DataFetcher.DataTargets
                          i => i.HasPvP,
                          ((r, v) => r.SourceHasPvP = v),
                          r => r.SetSourceHasPvPNull());
-                
+
                 SetValue(skill,
                          skillRow,
                          i => i.IsPvPVersion,
@@ -308,7 +313,7 @@ namespace TemplateManager.DataFetcher.DataTargets
                          i => i.Sacrifice,
                          ((r, v) => r.SourceSacrificeCost = v),
                          r => r.SetSourceSacrificeCostNull());
-                
+
                 SetValue(skill,
                          skillRow,
                          i => i.Upkeep,
@@ -318,7 +323,7 @@ namespace TemplateManager.DataFetcher.DataTargets
                 skillRow.SourceWikiLink = skill.WikiLink;
 
                 var lookupSkill = skill;
-                
+
                 skillRow.CampaignRefId =
                     model.Campaigns.First(
                         i => i.Name.Equals(lookupSkill.Campaign, StringComparison.InvariantCultureIgnoreCase)).Id;
@@ -369,14 +374,14 @@ namespace TemplateManager.DataFetcher.DataTargets
 
         private int? UpdateSkillImage(string fileName)
         {
-            if (!File.Exists(Path.Combine("images", fileName)))
+            if(!File.Exists(Path.Combine("images", fileName)))
                 return null;
 
             var imageData = GetImage(fileName);
 
             var currentImage = model.Images.FirstOrDefault(i => CreateDataString(i.Data) == CreateDataString(imageData));
 
-            if (currentImage == null)
+            if(currentImage == null)
             {
                 currentImage = model.Images.NewImagesRow();
                 currentImage.Data = imageData;
@@ -392,10 +397,10 @@ namespace TemplateManager.DataFetcher.DataTargets
         }
 
         private static void SetValue<T>(Skill source,
-                                 Data.GuildWars.Model.SkillsRow target,
-                                 Func<Skill, T?> valueSelector,
-                                 Action<Data.GuildWars.Model.SkillsRow, T> targetSetter,
-                                 Action<Data.GuildWars.Model.SkillsRow> nullSetter)
+                                        Data.GuildWars.Model.SkillsRow target,
+                                        Func<Skill, T?> valueSelector,
+                                        Action<Data.GuildWars.Model.SkillsRow, T> targetSetter,
+                                        Action<Data.GuildWars.Model.SkillsRow> nullSetter)
             where T : struct
         {
             var nullableValue = valueSelector(source);

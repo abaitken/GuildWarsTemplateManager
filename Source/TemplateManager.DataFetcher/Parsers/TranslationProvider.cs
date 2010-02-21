@@ -178,12 +178,8 @@ namespace TemplateManager.DataFetcher.Parsers
                     if(!translations.ContainsKey(culture))
                         translations.Add(culture, new Dictionary<string, string>());
 
-                    try
-                    {
-                        // Associate this culture, with the skill name and its translated string
-                        translations[culture].Add(row[englishIndex].ToLower(), row[i]);
-                    }
-                    catch(ArgumentException)
+                    var key = row[englishIndex].ToLower();
+                    if(translations[culture].ContainsKey(key))
                     {
                         logger.Log(GetType(),
                                    string.Format("String already added for skill. skill: {0}, culture: {1}",
@@ -192,6 +188,9 @@ namespace TemplateManager.DataFetcher.Parsers
                                    LogSeverity.Warning);
                         break;
                     }
+                    
+                    // Associate this culture, with the skill name and its translated string
+                    translations[culture].Add(key, row[i]);
                 }
             }
 

@@ -38,11 +38,6 @@ namespace TemplateManager.Data.GuildWars
                 }
             }
 
-            public int TemplateId
-            {
-                get { return Id; }
-            }
-
             public string WikiLink
             {
                 get { return SourceWikiLink; }

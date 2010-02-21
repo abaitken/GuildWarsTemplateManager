@@ -19,45 +19,6 @@ namespace TemplateManager.Modules.Services
             buildFactory = NativeBuildFactory.Empty;
         }
 
-
-        private static readonly ISkill UnknownSkill = new EmptySkill();
-
-        class EmptySkill : ISkill
-        {
-            public int TemplateId { get; private set; }
-            public string WikiLink { get; private set; }
-            public string Name { get; private set; }
-            public string Description { get; private set; }
-            public string ConciseDescription { get; private set; }
-            public double? ActivationTime { get; private set; }
-            public double? RechargeTime { get; private set; }
-            public double? EnergyCost { get; private set; }
-            public double? Sacrifice { get; private set; }
-            public double? AdrenalineCost { get; private set; }
-            public double? UpkeepCost { get; private set; }
-            public bool? CausesExhaustion { get; private set; }
-            public string Campaign { get; private set; }
-            public IProfession Profession { get; private set; }
-            public IAttribute Attribute { get; private set; }
-            public string Type { get; private set; }
-            public string SpecialType { get; private set; }
-            public string Range { get; private set; }
-            public string Target { get; private set; }
-            public string Projectile { get; private set; }
-            public string AreaOfEffect { get; private set; }
-            public IEnumerable<string> Removes { get; private set; }
-            public IEnumerable<ISkill> RelatedSkills { get; private set; }
-            public IEnumerable<string> Causes { get; private set; }
-            public IEnumerable<string> Categories { get; private set; }
-            public bool? IsElite { get; private set; }
-            public bool? IsPvEOnly { get; private set; }
-            public bool? IsPvPVersion { get; private set; }
-            public bool? HasPvP { get; private set; }
-            public BitmapImage Image { get; private set; }
-            public bool IsRemoved { get; private set; }
-            public bool IsValid { get; private set; }
-        }
-
         #region ISkillTemplateService Members
 
         public void RefreshTemplates(string buildStore)
@@ -108,7 +69,7 @@ namespace TemplateManager.Modules.Services
                 templatePath,
                 dataService.EmptyProfession);
         }
-
+        // TODO : Consider where skills do not match the primary or secondary profession
         private SkillTemplate CreateTemplate(string templatePath, NativeSkillBuild nativeTemplate)
         {
             if (nativeTemplate == null)
@@ -150,7 +111,7 @@ namespace TemplateManager.Modules.Services
                 join skill in dataService.Skills
                     on nativeSkill equals skill.TemplateId
                     into tempSkills
-                from result in tempSkills.DefaultIfEmpty(UnknownSkill)
+                from result in tempSkills.DefaultIfEmpty(dataService.InvalidSkill)
                 select result;
         }
     }

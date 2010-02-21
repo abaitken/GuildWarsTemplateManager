@@ -40,6 +40,7 @@
               <xs:element name="IsRemoved" msprop:Generator_UserColumnName="IsRemoved" msprop:Generator_ColumnVarNameInTable="columnIsRemoved" msprop:Generator_ColumnPropNameInRow="IsRemoved" msprop:Generator_ColumnPropNameInTable="IsRemovedColumn" type="xs:boolean" />
               <xs:element name="IsValid" msprop:Generator_UserColumnName="IsValid" msprop:Generator_ColumnVarNameInTable="columnIsValid" msprop:Generator_ColumnPropNameInRow="IsValid" msprop:Generator_ColumnPropNameInTable="IsValidColumn" type="xs:boolean" />
               <xs:element name="ImageRefId" msprop:Generator_UserColumnName="ImageRefId" msprop:Generator_ColumnPropNameInRow="ImageRefId" msprop:Generator_ColumnVarNameInTable="columnImageRefId" msprop:Generator_ColumnPropNameInTable="ImageRefIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TemplateId" msprop:Generator_UserColumnName="TemplateId" msprop:Generator_ColumnPropNameInRow="TemplateId" msprop:Generator_ColumnVarNameInTable="columnTemplateId" msprop:Generator_ColumnPropNameInTable="TemplateIdColumn" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

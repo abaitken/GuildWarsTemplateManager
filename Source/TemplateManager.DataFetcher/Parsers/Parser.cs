@@ -360,14 +360,13 @@ namespace TemplateManager.DataFetcher.Parsers
 
                 var key = match.Groups["Key"].Value.ToLower();
 
-                try
-                {
-                    result.Add(key, match.Groups["Value"].Value.Trim());
-                }
-                catch(ArgumentException)
+                if(result.ContainsKey(key))
                 {
                     logger.Log(GetType(), string.Format("InfoBox already contains value: {0}", key), LogSeverity.Warning);
+                    continue;
                 }
+                
+                result.Add(key, match.Groups["Value"].Value.Trim());
             }
 
             return result;

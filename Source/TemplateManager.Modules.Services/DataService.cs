@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TemplateManager.Data.GuildWars;
@@ -9,6 +10,7 @@ namespace TemplateManager.Modules.Services
     internal class DataService : IDataService
     {
         private readonly Model data;
+        private ISkill invalidSkill;
 
         public DataService()
         {
@@ -22,8 +24,18 @@ namespace TemplateManager.Modules.Services
             get
             {
                 return from item in data.Professions
-                       where item.IsValid
                        select item as IProfession;
+            }
+        }
+
+        public ISkill InvalidSkill
+        {
+            get
+            {
+                if (invalidSkill == null)
+                    invalidSkill = Skills.First(i => i.TemplateId == -1);
+
+                return invalidSkill;
             }
         }
 
@@ -57,7 +69,6 @@ namespace TemplateManager.Modules.Services
             get
             {
                 return from item in data.Skills
-                       where item.IsValid
                        select item as ISkill;
             }
         }
@@ -67,7 +78,6 @@ namespace TemplateManager.Modules.Services
             get
             {
                 return from item in data.Attributes
-                       where item.IsValid
                        select item as IAttribute;
             }
         }
