@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Practices.Composite.Modularity;
+﻿using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Unity;
 using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Modules.Updates.Controllers;
@@ -19,10 +15,14 @@ namespace TemplateManager.Modules.Updates
             this.container = container;
         }
 
+        #region IModule Members
+
         public void Initialize()
         {
             RegisterTypes();
         }
+
+        #endregion
 
         private void RegisterTypes()
         {

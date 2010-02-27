@@ -33,13 +33,13 @@ namespace GuildWarsDataFetcher
     ///Represents a strongly typed in-memory cache of data.
     ///</summary>
     [GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-    [Serializable()]
+    [Serializable]
     [DesignerCategory("code")]
     [ToolboxItem(true)]
     [XmlSchemaProvider("GetTypedDataSetSchema")]
     [XmlRoot("CacheDataSet")]
     [HelpKeyword("vs.data.DataSet")]
-    public partial class CacheDataSet : DataSet
+    public class CacheDataSet : DataSet
     {
         #region Delegates
 
@@ -50,7 +50,7 @@ namespace GuildWarsDataFetcher
         private SchemaSerializationMode _schemaSerializationMode = SchemaSerializationMode.IncludeSchema;
         private CacheDataTable tableCache;
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         public CacheDataSet()
         {
             BeginInit();
@@ -61,12 +61,12 @@ namespace GuildWarsDataFetcher
             EndInit();
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         protected CacheDataSet(SerializationInfo info, StreamingContext context)
             :
                 base(info, context, false)
         {
-            if((IsBinarySerialized(info, context) == true))
+            if(IsBinarySerialized(info, context))
             {
                 InitVars(false);
                 var schemaChangedHandler1 = new CollectionChangeEventHandler(SchemaChanged);
@@ -102,7 +102,7 @@ namespace GuildWarsDataFetcher
             Relations.CollectionChanged += schemaChangedHandler;
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
         public CacheDataTable Cache
@@ -110,7 +110,7 @@ namespace GuildWarsDataFetcher
             get { return tableCache; }
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [Browsable(true)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public override SchemaSerializationMode SchemaSerializationMode
@@ -119,21 +119,21 @@ namespace GuildWarsDataFetcher
             set { _schemaSerializationMode = value; }
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new DataTableCollection Tables
         {
             get { return base.Tables; }
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new DataRelationCollection Relations
         {
             get { return base.Relations; }
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         protected override void InitializeDerivedDataSet()
         {
             BeginInit();
@@ -141,7 +141,7 @@ namespace GuildWarsDataFetcher
             EndInit();
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         public override DataSet Clone()
         {
             var cln = ((CacheDataSet) (base.Clone()));
@@ -150,19 +150,19 @@ namespace GuildWarsDataFetcher
             return cln;
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         protected override bool ShouldSerializeTables()
         {
             return false;
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         protected override bool ShouldSerializeRelations()
         {
             return false;
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         protected override void ReadXmlSerializable(XmlReader reader)
         {
             if((DetermineSchemaSerializationMode(reader) == SchemaSerializationMode.IncludeSchema))
@@ -190,7 +190,7 @@ namespace GuildWarsDataFetcher
             }
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         protected override XmlSchema GetSchemaSerializable()
         {
             var stream = new MemoryStream();
@@ -199,17 +199,17 @@ namespace GuildWarsDataFetcher
             return XmlSchema.Read(new XmlTextReader(stream), null);
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         internal void InitVars()
         {
             InitVars(true);
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         internal void InitVars(bool initTable)
         {
             tableCache = ((CacheDataTable) (base.Tables["Cache"]));
-            if((initTable == true))
+            if(initTable)
             {
                 if((tableCache != null))
                 {
@@ -218,7 +218,7 @@ namespace GuildWarsDataFetcher
             }
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         private void InitClass()
         {
             DataSetName = "CacheDataSet";
@@ -230,13 +230,13 @@ namespace GuildWarsDataFetcher
             base.Tables.Add(tableCache);
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         private bool ShouldSerializeCache()
         {
             return false;
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         private void SchemaChanged(object sender, CollectionChangeEventArgs e)
         {
             if((e.Action == CollectionChangeAction.Remove))
@@ -245,7 +245,7 @@ namespace GuildWarsDataFetcher
             }
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         public static XmlSchemaComplexType GetTypedDataSetSchema(XmlSchemaSet xs)
         {
             var ds = new CacheDataSet();
@@ -308,14 +308,14 @@ namespace GuildWarsDataFetcher
         ///Represents the strongly named DataTable class.
         ///</summary>
         [GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        [Serializable()]
+        [Serializable]
         [XmlSchemaProvider("GetTypedTableSchema")]
-        public partial class CacheDataTable : TypedTableBase<CacheRow>
+        public class CacheDataTable : TypedTableBase<CacheRow>
         {
             private DataColumn columndata;
             private DataColumn columnid;
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public CacheDataTable()
             {
                 TableName = "Cache";
@@ -324,7 +324,7 @@ namespace GuildWarsDataFetcher
                 EndInit();
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             internal CacheDataTable(DataTable table)
             {
                 TableName = table.TableName;
@@ -344,7 +344,7 @@ namespace GuildWarsDataFetcher
                 MinimumCapacity = table.MinimumCapacity;
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             protected CacheDataTable(SerializationInfo info, StreamingContext context)
                 :
                     base(info, context)
@@ -352,26 +352,26 @@ namespace GuildWarsDataFetcher
                 InitVars();
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public DataColumn idColumn
             {
                 get { return columnid; }
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public DataColumn dataColumn
             {
                 get { return columndata; }
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             [Browsable(false)]
             public int Count
             {
                 get { return Rows.Count; }
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public CacheRow this[int index]
             {
                 get { return ((CacheRow) (Rows[index])); }
@@ -385,13 +385,13 @@ namespace GuildWarsDataFetcher
 
             public event CacheRowChangeEventHandler CacheRowDeleted;
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public void AddCacheRow(CacheRow row)
             {
                 Rows.Add(row);
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public CacheRow AddCacheRow(string id, string data)
             {
                 var rowCacheRow = ((CacheRow) (NewRow()));
@@ -405,7 +405,7 @@ namespace GuildWarsDataFetcher
                 return rowCacheRow;
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public CacheRow FindByid(string id)
             {
                 return ((CacheRow) (Rows.Find(new object[]
@@ -414,7 +414,7 @@ namespace GuildWarsDataFetcher
                                                   })));
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public override DataTable Clone()
             {
                 var cln = ((CacheDataTable) (base.Clone()));
@@ -422,20 +422,20 @@ namespace GuildWarsDataFetcher
                 return cln;
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             protected override DataTable CreateInstance()
             {
                 return new CacheDataTable();
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             internal void InitVars()
             {
                 columnid = base.Columns["id"];
                 columndata = base.Columns["data"];
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             private void InitClass()
             {
                 columnid = new DataColumn("id", typeof(string), null, MappingType.Element);
@@ -443,7 +443,7 @@ namespace GuildWarsDataFetcher
                 columndata = new DataColumn("data", typeof(string), null, MappingType.Element);
                 base.Columns.Add(columndata);
                 Constraints.Add(new UniqueConstraint("Constraint1",
-                                                     new DataColumn[]
+                                                     new[]
                                                          {
                                                              columnid
                                                          },
@@ -455,25 +455,25 @@ namespace GuildWarsDataFetcher
                 columndata.MaxLength = 536870911;
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public CacheRow NewCacheRow()
             {
                 return ((CacheRow) (NewRow()));
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             protected override DataRow NewRowFromBuilder(DataRowBuilder builder)
             {
                 return new CacheRow(builder);
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             protected override Type GetRowType()
             {
                 return typeof(CacheRow);
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             protected override void OnRowChanged(DataRowChangeEventArgs e)
             {
                 base.OnRowChanged(e);
@@ -483,7 +483,7 @@ namespace GuildWarsDataFetcher
                 }
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             protected override void OnRowChanging(DataRowChangeEventArgs e)
             {
                 base.OnRowChanging(e);
@@ -493,7 +493,7 @@ namespace GuildWarsDataFetcher
                 }
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             protected override void OnRowDeleted(DataRowChangeEventArgs e)
             {
                 base.OnRowDeleted(e);
@@ -503,7 +503,7 @@ namespace GuildWarsDataFetcher
                 }
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             protected override void OnRowDeleting(DataRowChangeEventArgs e)
             {
                 base.OnRowDeleting(e);
@@ -513,13 +513,13 @@ namespace GuildWarsDataFetcher
                 }
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public void RemoveCacheRow(CacheRow row)
             {
                 Rows.Remove(row);
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public static XmlSchemaComplexType GetTypedTableSchema(XmlSchemaSet xs)
             {
                 var type = new XmlSchemaComplexType();
@@ -602,11 +602,11 @@ namespace GuildWarsDataFetcher
         ///Represents strongly named DataRow class.
         ///</summary>
         [GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public partial class CacheRow : DataRow
+        public class CacheRow : DataRow
         {
-            private CacheDataTable tableCache;
+            private readonly CacheDataTable tableCache;
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             internal CacheRow(DataRowBuilder rb)
                 :
                     base(rb)
@@ -614,14 +614,14 @@ namespace GuildWarsDataFetcher
                 tableCache = ((CacheDataTable) (Table));
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public string id
             {
                 get { return ((string) (this[tableCache.idColumn])); }
                 set { this[tableCache.idColumn] = value; }
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public string data
             {
                 get { return ((string) (this[tableCache.dataColumn])); }
@@ -639,23 +639,23 @@ namespace GuildWarsDataFetcher
         [GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
         public class CacheRowChangeEvent : EventArgs
         {
-            private DataRowAction eventAction;
-            private CacheRow eventRow;
+            private readonly DataRowAction eventAction;
+            private readonly CacheRow eventRow;
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public CacheRowChangeEvent(CacheRow row, DataRowAction action)
             {
                 eventRow = row;
                 eventAction = action;
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public CacheRow Row
             {
                 get { return eventRow; }
             }
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public DataRowAction Action
             {
                 get { return eventAction; }
@@ -678,23 +678,22 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
     [Designer("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
               ", Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [HelpKeyword("vs.data.TableAdapter")]
-    public partial class CacheTableAdapter : Component
+    public class CacheTableAdapter : Component
     {
         private SqlCeDataAdapter _adapter;
-        private bool _clearBeforeFill;
         private SqlCeCommand[] _commandCollection;
 
         private SqlCeConnection _connection;
 
         private SqlCeTransaction _transaction;
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         public CacheTableAdapter()
         {
             ClearBeforeFill = true;
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         protected internal SqlCeDataAdapter Adapter
         {
             get
@@ -707,7 +706,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             }
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         internal SqlCeConnection Connection
         {
             get
@@ -737,13 +736,13 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
                 {
                     if((CommandCollection[i] != null))
                     {
-                        ((SqlCeCommand) (CommandCollection[i])).Connection = value;
+                        ((CommandCollection[i])).Connection = value;
                     }
                 }
             }
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         internal SqlCeTransaction Transaction
         {
             get { return _transaction; }
@@ -772,7 +771,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             }
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         protected SqlCeCommand[] CommandCollection
         {
             get
@@ -785,14 +784,10 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             }
         }
 
-        [DebuggerNonUserCode()]
-        public bool ClearBeforeFill
-        {
-            get { return _clearBeforeFill; }
-            set { _clearBeforeFill = value; }
-        }
+        [DebuggerNonUserCode]
+        public bool ClearBeforeFill { get; set; }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         private void InitAdapter()
         {
             _adapter = new SqlCeDataAdapter();
@@ -876,14 +871,14 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
                                                                      null));
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         private void InitConnection()
         {
             _connection = new SqlCeConnection();
             _connection.ConnectionString = Settings.Default.CacheConnectionString;
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         private void InitCommandCollection()
         {
             _commandCollection = new SqlCeCommand[1];
@@ -893,13 +888,13 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             _commandCollection[0].CommandType = CommandType.Text;
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [HelpKeyword("vs.data.TableAdapter")]
         [DataObjectMethod(DataObjectMethodType.Fill, true)]
         public virtual int Fill(CacheDataSet.CacheDataTable dataTable)
         {
             Adapter.SelectCommand = CommandCollection[0];
-            if((ClearBeforeFill == true))
+            if(ClearBeforeFill)
             {
                 dataTable.Clear();
             }
@@ -907,7 +902,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             return returnValue;
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [HelpKeyword("vs.data.TableAdapter")]
         [DataObjectMethod(DataObjectMethodType.Select, true)]
         public virtual CacheDataSet.CacheDataTable GetData()
@@ -918,38 +913,38 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             return dataTable;
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [HelpKeyword("vs.data.TableAdapter")]
         public virtual int Update(CacheDataSet.CacheDataTable dataTable)
         {
             return Adapter.Update(dataTable);
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [HelpKeyword("vs.data.TableAdapter")]
         public virtual int Update(CacheDataSet dataSet)
         {
             return Adapter.Update(dataSet, "Cache");
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [HelpKeyword("vs.data.TableAdapter")]
         public virtual int Update(DataRow dataRow)
         {
-            return Adapter.Update(new DataRow[]
+            return Adapter.Update(new[]
                                       {
                                           dataRow
                                       });
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [HelpKeyword("vs.data.TableAdapter")]
         public virtual int Update(DataRow[] dataRows)
         {
             return Adapter.Update(dataRows);
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [HelpKeyword("vs.data.TableAdapter")]
         [DataObjectMethod(DataObjectMethodType.Delete, true)]
         public virtual int Delete(string p1)
@@ -960,7 +955,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             }
             else
             {
-                Adapter.DeleteCommand.Parameters[0].Value = ((string) (p1));
+                Adapter.DeleteCommand.Parameters[0].Value = ((p1));
             }
             ConnectionState previousConnectionState = Adapter.DeleteCommand.Connection.State;
             if(((Adapter.DeleteCommand.Connection.State & ConnectionState.Open)
@@ -982,7 +977,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             }
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [HelpKeyword("vs.data.TableAdapter")]
         [DataObjectMethod(DataObjectMethodType.Insert, true)]
         public virtual int Insert(string p1, string p2)
@@ -993,7 +988,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             }
             else
             {
-                Adapter.InsertCommand.Parameters[0].Value = ((string) (p1));
+                Adapter.InsertCommand.Parameters[0].Value = ((p1));
             }
             if((p2 == null))
             {
@@ -1001,7 +996,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             }
             else
             {
-                Adapter.InsertCommand.Parameters[1].Value = ((string) (p2));
+                Adapter.InsertCommand.Parameters[1].Value = ((p2));
             }
             ConnectionState previousConnectionState = Adapter.InsertCommand.Connection.State;
             if(((Adapter.InsertCommand.Connection.State & ConnectionState.Open)
@@ -1023,7 +1018,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             }
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [HelpKeyword("vs.data.TableAdapter")]
         [DataObjectMethod(DataObjectMethodType.Update, true)]
         public virtual int Update(string p1, string p2, string p3)
@@ -1034,7 +1029,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             }
             else
             {
-                Adapter.UpdateCommand.Parameters[0].Value = ((string) (p1));
+                Adapter.UpdateCommand.Parameters[0].Value = ((p1));
             }
             if((p2 == null))
             {
@@ -1042,7 +1037,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             }
             else
             {
-                Adapter.UpdateCommand.Parameters[1].Value = ((string) (p2));
+                Adapter.UpdateCommand.Parameters[1].Value = ((p2));
             }
             if((p3 == null))
             {
@@ -1050,7 +1045,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             }
             else
             {
-                Adapter.UpdateCommand.Parameters[2].Value = ((string) (p3));
+                Adapter.UpdateCommand.Parameters[2].Value = ((p3));
             }
             ConnectionState previousConnectionState = Adapter.UpdateCommand.Connection.State;
             if(((Adapter.UpdateCommand.Connection.State & ConnectionState.Open)
@@ -1072,7 +1067,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             }
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [HelpKeyword("vs.data.TableAdapter")]
         [DataObjectMethod(DataObjectMethodType.Update, true)]
         public virtual int Update(string p2, string p3)
@@ -1090,7 +1085,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
     [Designer("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerDesigner, Microsoft.VSD" +
               "esigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [HelpKeyword("vs.data.TableAdapterManager")]
-    public partial class TableAdapterManager : Component
+    public class TableAdapterManager : Component
     {
         #region UpdateOrderOption enum
 
@@ -1107,20 +1102,14 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
 
         #endregion
 
-        private bool _backupDataSetBeforeUpdate;
         private CacheTableAdapter _cacheTableAdapter;
 
         private IDbConnection _connection;
-        private UpdateOrderOption _updateOrder;
 
-        [DebuggerNonUserCode()]
-        public UpdateOrderOption UpdateOrder
-        {
-            get { return _updateOrder; }
-            set { _updateOrder = value; }
-        }
+        [DebuggerNonUserCode]
+        public UpdateOrderOption UpdateOrder { get; set; }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [Editor("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
                 "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
                 "", "System.Drawing.Design.UITypeEditor")]
@@ -1130,14 +1119,10 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             set { _cacheTableAdapter = value; }
         }
 
-        [DebuggerNonUserCode()]
-        public bool BackupDataSetBeforeUpdate
-        {
-            get { return _backupDataSetBeforeUpdate; }
-            set { _backupDataSetBeforeUpdate = value; }
-        }
+        [DebuggerNonUserCode]
+        public bool BackupDataSetBeforeUpdate { get; set; }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [Browsable(false)]
         public IDbConnection Connection
         {
@@ -1157,7 +1142,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             set { _connection = value; }
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         [Browsable(false)]
         public int TableAdapterInstanceCount
         {
@@ -1175,7 +1160,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
         /// <summary>
         ///Update rows in top-down order.
         ///</summary>
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         private int UpdateUpdatedRows(CacheDataSet dataSet, List<DataRow> allChangedRows, List<DataRow> allAddedRows)
         {
             int result = 0;
@@ -1196,7 +1181,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
         /// <summary>
         ///Insert rows in top-down order.
         ///</summary>
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         private int UpdateInsertedRows(CacheDataSet dataSet, List<DataRow> allAddedRows)
         {
             int result = 0;
@@ -1216,7 +1201,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
         /// <summary>
         ///Delete rows in bottom-up order.
         ///</summary>
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         private int UpdateDeletedRows(CacheDataSet dataSet, List<DataRow> allChangedRows)
         {
             int result = 0;
@@ -1236,7 +1221,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
         /// <summary>
         ///Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
         ///</summary>
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         private DataRow[] GetRealUpdatedRows(DataRow[] updatedRows, List<DataRow> allAddedRows)
         {
             if(((updatedRows == null)
@@ -1264,7 +1249,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
         /// <summary>
         ///Update all changes to the dataset.
         ///</summary>
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         public virtual int UpdateAll(CacheDataSet dataSet)
         {
             if((dataSet == null))
@@ -1423,13 +1408,13 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
             return result;
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         protected virtual void SortSelfReferenceRows(DataRow[] rows, DataRelation relation, bool childFirst)
         {
-            Array.Sort<DataRow>(rows, new SelfReferenceComparer(relation, childFirst));
+            Array.Sort(rows, new SelfReferenceComparer(relation, childFirst));
         }
 
-        [DebuggerNonUserCode()]
+        [DebuggerNonUserCode]
         protected virtual bool MatchTableAdapterConnection(IDbConnection inputConnection)
         {
             if((_connection != null))
@@ -1456,10 +1441,10 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
         [GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
         private class SelfReferenceComparer : object, IComparer<DataRow>
         {
-            private int _childFirst;
-            private DataRelation _relation;
+            private readonly int _childFirst;
+            private readonly DataRelation _relation;
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             internal SelfReferenceComparer(DataRelation relation, bool childFirst)
             {
                 _relation = relation;
@@ -1475,7 +1460,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
 
             #region IComparer<DataRow> Members
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             public int Compare(DataRow row1, DataRow row2)
             {
                 if(ReferenceEquals(row1, row2))
@@ -1507,7 +1492,7 @@ namespace GuildWarsDataFetcher.CacheDataSetTableAdapters
 
             #endregion
 
-            [DebuggerNonUserCode()]
+            [DebuggerNonUserCode]
             private bool IsChildAndParent(DataRow child, DataRow parent)
             {
                 Debug.Assert((child != null));

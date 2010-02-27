@@ -20,12 +20,12 @@ namespace TemplateManager.Modules.DataExplorer
             RegisterTypes();
         }
 
+        #endregion
+
         private void RegisterTypes()
         {
             container.RegisterType<IDataExplorerView, DataExplorerView>();
             container.RegisterType<IDataExplorerViewModel, DataExplorerViewModel>();
         }
-
-        #endregion
     }
 }

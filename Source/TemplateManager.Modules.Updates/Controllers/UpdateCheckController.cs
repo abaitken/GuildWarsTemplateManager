@@ -5,7 +5,7 @@ using TemplateManager.Modules.Updates.Presentation.UpdateCheck;
 
 namespace TemplateManager.Modules.Updates.Controllers
 {
-    class UpdateCheckController : IUpdateCheckController
+    internal class UpdateCheckController : IUpdateCheckController
     {
         private readonly IUnityContainer container;
 
@@ -14,9 +14,13 @@ namespace TemplateManager.Modules.Updates.Controllers
             this.container = container;
         }
 
+        #region IUpdateCheckController Members
+
         public void ShowDialog()
         {
             container.ShowViewDialog<IUpdateCheckViewModel>(model => model.View);
         }
+
+        #endregion
     }
 }
