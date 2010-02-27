@@ -111,7 +111,7 @@
       <Project>{67BC7C95-AB1E-422D-9AD4-E34CA77460A9}</Project>
       <Name>TemplateManager.Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TemplateParser\TemplateParser\TemplateParser.csproj">
+    <ProjectReference Include="..\TemplateParser\TemplateParser.csproj">
       <Project>{CDDBA2FA-9389-40FC-8FB5-E6635C95EB24}</Project>
       <Name>TemplateParser</Name>
     </ProjectReference>

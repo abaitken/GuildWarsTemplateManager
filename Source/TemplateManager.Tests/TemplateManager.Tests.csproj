@@ -97,7 +97,7 @@
       <Project>{85A88912-18FD-4516-A1B9-F4FA1F7A97EC}</Project>
       <Name>TemplateManager.Modules.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TemplateParser\TemplateParser\TemplateParser.csproj">
+    <ProjectReference Include="..\TemplateParser\TemplateParser.csproj">
       <Project>{CDDBA2FA-9389-40FC-8FB5-E6635C95EB24}</Project>
       <Name>TemplateParser</Name>
     </ProjectReference>
