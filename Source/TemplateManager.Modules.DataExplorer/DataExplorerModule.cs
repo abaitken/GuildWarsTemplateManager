@@ -17,6 +17,11 @@ namespace TemplateManager.Modules.DataExplorer
 
         public void Initialize()
         {
+            RegisterTypes();
+        }
+
+        private void RegisterTypes()
+        {
             container.RegisterType<IDataExplorerView, DataExplorerView>();
             container.RegisterType<IDataExplorerViewModel, DataExplorerViewModel>();
         }

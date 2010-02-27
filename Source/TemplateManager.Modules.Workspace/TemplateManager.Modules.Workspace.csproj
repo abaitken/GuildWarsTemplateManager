@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{67BC7C95-AB1E-422D-9AD4-E34CA77460A9}</ProjectGuid>
+    <ProjectGuid>{8EF40DE2-F35F-4037-9676-9469A8500ACC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TemplateManager.Infrastructure</RootNamespace>
-    <AssemblyName>TemplateManager.Infrastructure</AssemblyName>
+    <RootNamespace>TemplateManager.Modules.Workspace</RootNamespace>
+    <AssemblyName>TemplateManager.Modules.Workspace</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>true</SignAssembly>
@@ -23,7 +23,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,19 +31,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release with Code Analysis|AnyCPU' ">
-    <OutputPath>bin\Release with Code Analysis\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
-    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
-    <ErrorReport>prompt</ErrorReport>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Practices.Composite, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5850e8078cce1523, processorArchitecture=MSIL">
@@ -69,11 +55,15 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.XML" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
     <Reference Include="WindowsBase">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
@@ -82,26 +72,51 @@
     <Compile Include="..\Include\GlobalAssemblyInfo.cs">
       <Link>GlobalAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Controllers\IUpdateCheckController.cs" />
-    <Compile Include="Extensions\LinqToXmlExtensions.cs" />
-    <Compile Include="HashCodeBuilder.cs" />
-    <Compile Include="IApplicationSettings.cs" />
-    <Compile Include="Model\IAttribute.cs" />
-    <Compile Include="Model\IProfession.cs" />
-    <Compile Include="Model\ISkill.cs" />
-    <Compile Include="Model\TemplateFolder.cs" />
-    <Compile Include="PresentationHelper.cs" />
-    <Compile Include="Services\IApplicationInformationService.cs" />
-    <Compile Include="Services\IDataService.cs" />
-    <Compile Include="Interfaces\IHeadedContent.cs" />
-    <Compile Include="Services\IServiceController.cs" />
-    <Compile Include="Services\ISkillTemplateService.cs" />
-    <Compile Include="Model\AttributeValue.cs" />
-    <Compile Include="Model\MetaLoader.cs" />
-    <Compile Include="Model\SkillTemplate.cs" />
+    <Compile Include="Presentation\Options\IOptionsView.cs" />
+    <Compile Include="Presentation\Options\IOptionsViewModel.cs" />
+    <Compile Include="Presentation\Options\OptionsViewModel.cs" />
+    <Compile Include="Presentation\Options\OptionsView.xaml.cs">
+      <DependentUpon>OptionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Workspace\IWorkspaceView.cs" />
+    <Compile Include="Presentation\Workspace\IWorkspaceViewModel.cs" />
+    <Compile Include="Presentation\Workspace\WorkspaceView.xaml.cs">
+      <DependentUpon>WorkspaceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Workspace\WorkspaceViewModel.cs" />
+    <Compile Include="WorkspaceModule.cs" />
+    <Compile Include="Presentation\About\AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\About\AboutViewModel.cs" />
+    <Compile Include="Presentation\About\IAboutView.cs" />
+    <Compile Include="Presentation\About\IAboutViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegionNames.cs" />
-    <Compile Include="Services\IUpdateService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Presentation\About\AboutView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Options\OptionsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Presentation\Resources\AboutTitleImage.png" />
+    <Page Include="Presentation\Workspace\WorkspaceView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TemplateManager.Common\TemplateManager.Common.csproj">
+      <Project>{5D573659-1A65-4112-9EED-1BF70DB94F22}</Project>
+      <Name>TemplateManager.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TemplateManager.Infrastructure\TemplateManager.Infrastructure.csproj">
+      <Project>{67BC7C95-AB1E-422D-9AD4-E34CA77460A9}</Project>
+      <Name>TemplateManager.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Signing\TemplateManager.snk">
@@ -109,7 +124,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Events\" />
+    <Resource Include="Presentation\Resources\About.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentation\Resources\DuplicateTemplates.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentation\Resources\HelpTopics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentation\Resources\Options.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

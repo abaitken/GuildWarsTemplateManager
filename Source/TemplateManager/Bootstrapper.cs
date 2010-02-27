@@ -2,14 +2,16 @@
 using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Composite.UnityExtensions;
 using Microsoft.Practices.Unity;
-using TemplateManager.AboutView;
 using TemplateManager.Common;
 using TemplateManager.Infrastructure;
+using TemplateManager.Infrastructure.Services;
 using TemplateManager.Modules.DataExplorer;
-using TemplateManager.Modules.Performance;
 using TemplateManager.Modules.Services;
 using TemplateManager.Modules.SkillsView;
-using TemplateManager.ShellView;
+using TemplateManager.Modules.Updates;
+using TemplateManager.Modules.Workspace;
+using TemplateManager.Presentation.Shell;
+using TemplateManager.Services;
 
 namespace TemplateManager
 {
@@ -53,12 +55,16 @@ namespace TemplateManager
         {
             var catalog = new ModuleCatalog();
             var servicesModule = typeof(ServicesModule);
+            var workspaceModule = typeof(WorkspaceModule);
+            var skillsViewModule = typeof(SkillsViewModule);
+            var dataExplorerModule = typeof(DataExplorerModule);
+            var updatesModule = typeof(UpdatesModule);
+
             catalog.AddModule(servicesModule);
-            var mainModule = typeof(MainModule);
-            catalog.AddModule(mainModule, servicesModule.Name);
-            catalog.AddModule(typeof(SkillsViewModule), servicesModule.Name, mainModule.Name);
-            catalog.AddModule(typeof(DataExplorerModule), servicesModule.Name);
-            catalog.AddModule(typeof(PerformanceModule));
+            catalog.AddModule(updatesModule);
+            catalog.AddModule(workspaceModule, servicesModule.Name, updatesModule.Name);
+            catalog.AddModule(skillsViewModule, servicesModule.Name);
+            catalog.AddModule(dataExplorerModule, servicesModule.Name);
             return catalog;
         }
 

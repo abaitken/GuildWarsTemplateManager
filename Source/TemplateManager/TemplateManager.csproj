@@ -18,6 +18,25 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\..\Signing\TemplateManager.snk</AssemblyOriginatorKeyFile>
     <ApplicationIcon>app.ico</ApplicationIcon>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://logaans-site.co.uk/projects/template-manager/files/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://logaans-site.co.uk/projects/template-manager/files/</InstallUrl>
+    <SupportUrl>http://wiki.logaans-site.co.uk/index.php%3ftitle=TemplateManager:Main</SupportUrl>
+    <ProductName>Template Manager</ProductName>
+    <PublisherName>Alex Boyne-Aitken</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>0.4.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -97,88 +116,38 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="AboutView\AboutDialog.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainView\MainView.xaml">
+    <Page Include="Presentation\Shell\MainWindowView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Options\OptionsWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ShellView\MainWindowView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UpdateCheck\UpdateCheckView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Resource Include="Images\About.png" />
-    <Resource Include="Images\Options.png" />
-    <Resource Include="Images\HelpTopics.png" />
     <Resource Include="app.ico" />
-    <Resource Include="Images\DuplicateTemplates.png" />
-    <Resource Include="Images\error.png" />
-    <Resource Include="Images\move.png" />
-    <Resource Include="Images\recyclebin.png" />
-    <Resource Include="Images\warning.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Include\GlobalAssemblyInfo.cs">
       <Link>GlobalAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="AboutView\AboutDialog.xaml.cs">
-      <DependentUpon>AboutDialog.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="AboutView\AboutViewModel.cs" />
-    <Compile Include="AboutView\IAboutView.cs" />
-    <Compile Include="AboutView\IAboutViewModel.cs" />
-    <Compile Include="ApplicationSettings.cs" />
-    <Compile Include="TemplateStoreLocator.cs" />
-    <Compile Include="IApplicationInformationService.cs" />
+    <Compile Include="Services\ApplicationInformation.cs" />
+    <Compile Include="Services\ApplicationSettings.cs" />
+    <Compile Include="Services\TemplateStoreLocator.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AboutView\ApplicationInformation.cs" />
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="MainView\MainView.xaml.cs">
-      <DependentUpon>MainView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainView\MainViewModel.cs" />
-    <Compile Include="MainView\IMainView.cs" />
-    <Compile Include="MainView\IMainViewModel.cs" />
-    <Compile Include="UpdateCheck\UpdateCheckViewModel.cs" />
-    <Compile Include="UpdateCheck\IUpdateCheckView.cs" />
-    <Compile Include="UpdateCheck\IUpdateCheckViewModel.cs" />
-    <Compile Include="UpdateCheck\UpdateCheckView.xaml.cs">
-      <DependentUpon>UpdateCheckView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainModule.cs" />
-    <Compile Include="Options\IOptionsView.cs" />
-    <Compile Include="Options\IOptionsViewModel.cs" />
-    <Compile Include="Options\OptionsWindow.xaml.cs">
-      <DependentUpon>OptionsWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Options\OptionsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ServiceController.cs" />
-    <Compile Include="ShellView\IMainWindowView.cs" />
-    <Compile Include="ShellView\IMainWindowViewModel.cs" />
-    <Compile Include="ShellView\MainWindowView.xaml.cs">
+    <Compile Include="Services\ServiceController.cs" />
+    <Compile Include="Presentation\Shell\IMainWindowView.cs" />
+    <Compile Include="Presentation\Shell\IMainWindowViewModel.cs" />
+    <Compile Include="Presentation\Shell\MainWindowView.xaml.cs">
       <DependentUpon>MainWindowView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ShellView\MainWindowViewModel.cs" />
-    <Compile Include="ShellView\MainWindowViewSettings.cs" />
+    <Compile Include="Presentation\Shell\MainWindowViewModel.cs" />
+    <Compile Include="Presentation\Shell\MainWindowViewSettings.cs" />
     <None Include="..\..\Signing\TemplateManager.snk">
       <Link>TemplateManager.snk</Link>
     </None>
@@ -197,10 +166,6 @@
       <Project>{0F2301AE-648A-4F3F-A06B-06BA4529A725}</Project>
       <Name>TemplateManager.Modules.DataExplorer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TemplateManager.Modules.Performance\TemplateManager.Modules.Performance.csproj">
-      <Project>{324F15D5-5E26-447E-BC8D-76BF37B7CCBA}</Project>
-      <Name>TemplateManager.Modules.Performance</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TemplateManager.Modules.Services\TemplateManager.Modules.Services.csproj">
       <Project>{85A88912-18FD-4516-A1B9-F4FA1F7A97EC}</Project>
       <Name>TemplateManager.Modules.Services</Name>
@@ -209,9 +174,46 @@
       <Project>{EACC47B1-C3C2-442E-9F4D-1E65C34F8D9A}</Project>
       <Name>TemplateManager.Modules.SkillsView</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TemplateManager.Modules.Updates\TemplateManager.Modules.Updates.csproj">
+      <Project>{9DB5FE85-A4A9-4113-ADC2-E759BAC69D88}</Project>
+      <Name>TemplateManager.Modules.Updates</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TemplateManager.Modules.Workspace\TemplateManager.Modules.Workspace.csproj">
+      <Project>{8EF40DE2-F35F-4037-9676-9469A8500ACC}</Project>
+      <Name>TemplateManager.Modules.Workspace</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="AboutView\Images\AboutTitleImage.png" />
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

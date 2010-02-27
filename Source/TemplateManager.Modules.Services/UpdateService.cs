@@ -45,6 +45,7 @@ namespace TemplateManager.Modules.Services
             cacheInformation = true;
 
             var client = new TemplateManagerService();
+            // TODO : Do this on a seperate thread
             var result = client.GetLatestVersion();
 
             if(result == null)

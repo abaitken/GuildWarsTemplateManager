@@ -17,12 +17,12 @@ namespace TemplateManager.Modules.Services
 
         public void Initialize()
         {
-            RegisterServices();
+            RegisterTypes();
         }
 
         #endregion
 
-        private void RegisterServices()
+        private void RegisterTypes()
         {
             container.RegisterType<IDataService, DataService>(new ContainerControlledLifetimeManager());
             container.RegisterType<ISkillTemplateService, SkillTemplateService>(new ContainerControlledLifetimeManager());

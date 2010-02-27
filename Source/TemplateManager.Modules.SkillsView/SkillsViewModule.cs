@@ -18,12 +18,12 @@ namespace TemplateManager.Modules.SkillsView
 
         public void Initialize()
         {
-            RegisterViews();
+            RegisterTypes();
         }
 
         #endregion
 
-        private void RegisterViews()
+        private void RegisterTypes()
         {
             container.RegisterType<ISkillsView, SkillView.SkillsView>();
             container.RegisterType<ISkillsViewModel, SkillsViewModel>();
