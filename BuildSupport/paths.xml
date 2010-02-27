@@ -6,6 +6,15 @@
     <OutputPath>$(BinFolder)\$(Configuration)</OutputPath>
     <LibsFolder>$(ProjectDirectory)\Libs</LibsFolder>
 
+	<TestResultsFolder>$(OutputPath)\TestResults</TestResultsFolder>
+	<TestResultFile>$(TestResultsFolder)\results.trx</TestResultFile>
+
     <SevenZipPath>C:\Program Files\7-Zip</SevenZipPath>
+	<WinSDKIDEFolder>$(VS90COMNTOOLS)..\IDE</WinSDKIDEFolder>
+  </PropertyGroup>
+
+  <PropertyGroup>
+	<SevenZip>$(SevenZipPath)\7z.exe</SevenZip>
+	<MSTestExe>$(WinSDKIDEFolder)\MSTest</MSTestExe>
   </PropertyGroup>
 </Project>

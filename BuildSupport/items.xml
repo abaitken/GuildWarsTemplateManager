@@ -2,4 +2,11 @@
   <ItemGroup>
     <Projects Include="$(SourceFolder)\TemplateManager.sln" />
   </ItemGroup>
+
+  <ItemGroup>
+    <TestProjects Include="$(SourceFolder)\TemplateManager.Common.Tests\TemplateManager.Common.Tests.csproj" />
+    <TestProjects Include="$(SourceFolder)\TemplateManager.DataFetcher.Tests\TemplateManager.DataFetcher.Tests.csproj" />
+    <TestProjects Include="$(SourceFolder)\TemplateManager.Tests\TemplateManager.Tests.csproj" />
+    <TestProjects Include="$(SourceFolder)\TemplateParser.Tests\TemplateParser.Tests.csproj" />
+  </ItemGroup>
 </Project>

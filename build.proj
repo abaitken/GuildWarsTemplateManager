@@ -17,6 +17,7 @@
   
   <Target Name="Build">
     <CallTarget Targets="BuildMSBuildProjects" />
+    <CallTarget Targets="RunTests" ContinueOnError="true" />
     <CallTarget Targets="CreateArchive" Condition="$(Configuration)=='Release'" />
   </Target>
 
@@ -24,9 +25,9 @@
     <CreateItem Include="$(OutputPath)\**\*.*"
                 Exclude="$(OutputPath)\**\*.pdb;
                          $(OutputPath)\**\*.xml;
-                         $(OutputPath)\Tests\**\*.*;
-			 $(OutputPath)\Setup\**\*.*;
-			 $(OutputPath)\*.vshost.*">
+			                   $(OutputPath)\Setup\**\*.*;
+                         $(OutputPath)\TestResults\**\*.*;
+			                   $(OutputPath)\*.vshost.*">
       <Output TaskParameter="Include" ItemName="FinalItems"/>
     </CreateItem>
   </Target>
@@ -36,9 +37,28 @@
     <Delete Files="$(BinFolder)\$(Configuration).zip" />
     
     <Copy SourceFiles="@(FinalItems)" DestinationFiles="@(FinalItems->'$(BinFolder)\TemplateManager\%(RecursiveDir)\%(Filename)%(Extension)')" />
-    <Exec Command='"$(SevenZipPath)\7z.exe" a -tzip "$(BinFolder)\$(Configuration).zip" "$(BinFolder)\TemplateManager"' />
+    <Exec Command='"$(SevenZip)" a -tzip "$(BinFolder)\$(Configuration).zip" "$(BinFolder)\TemplateManager"' />
     
     <RemoveDir Directories="$(BinFolder)\TemplateManager" />
+  </Target>
+
+  <Target Name="BuildTestProjects">
+    <MSBuild Properties="Configuration=$(Configuration)"
+             Projects="@(TestProjects)"
+             RebaseOutputs="true">
+      <Output TaskParameter="TargetOutputs" ItemName="TestTargetOutputs"/>
+    </MSBuild>
+  </Target>
+  
+  <Target Name="CreateTestResultsFolder">
+    <RemoveDir Directories="$(TestResultsFolder)" Condition="Exists('$(TestResultsFolder)')" />
+    <MakeDir Directories="$(TestResultsFolder)" />
+  </Target>
+  
+  <Target Name="RunTests" DependsOnTargets="BuildTestProjects;CreateTestResultsFolder">
+    <Message Text="Running unit tests"/>
+
+    <Exec Command="&quot;$(MSTestExe)&quot; /testcontainer:&quot;@(TestTargetOutputs, '&quot; /testcontainer:&quot;')&quot; /resultsfile:&quot;$(TestResultFile)&quot; /noisolation"/>
   </Target>
 
   <Target Name="BuildMSBuildProjects">
