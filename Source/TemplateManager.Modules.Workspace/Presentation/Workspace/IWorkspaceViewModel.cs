@@ -10,8 +10,6 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
         ICommand HelpCommand { get; }
         ICommand CloseWindowCommand { get; }
         ICommand HelpTopicsCommand { get; }
-        ICommand TemplatesViewCommand { get; }
-        ICommand DuplicateTemplatesViewCommand { get; }
         ICommand CloseTabCommand { get; }
         ICommand ShowUpdateCheckWindowCommand { get; }
         void OnViewLoaded();

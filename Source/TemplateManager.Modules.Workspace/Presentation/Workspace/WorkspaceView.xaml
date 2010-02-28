@@ -73,21 +73,7 @@
                           CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"/>
             </MenuItem>
 
-            <MenuItem Header="_View">
-                <MenuItem Header="_Explore Data"
-                          Command="{Binding ExploreDataCommand}"
-                          CommandParameter="{x:Static Infrastructure:RegionNames.DocumentRegion}"/>
-                <MenuItem Header="_Templates"
-                          Command="{Binding TemplatesViewCommand}"
-                          CommandParameter="{x:Static Infrastructure:RegionNames.DocumentRegion}"/>
-                <MenuItem Header="_Duplicate Templates"
-                          Command="{Binding DuplicateTemplatesViewCommand}"
-                          CommandParameter="{x:Static Infrastructure:RegionNames.DocumentRegion}">
-                    <MenuItem.Icon>
-                        <Image Source="../Resources/DuplicateTemplates.png" Width="16" Height="16" />
-                    </MenuItem.Icon>
-                </MenuItem>
-            </MenuItem>
+            <MenuItem Header="_View" ItemsSource="{Binding ViewItems}" />
 
             <MenuItem Header="_Tools">
                 <MenuItem Header="_Options" 

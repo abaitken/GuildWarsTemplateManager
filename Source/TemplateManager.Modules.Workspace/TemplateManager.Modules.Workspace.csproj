@@ -41,6 +41,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libs\Microsoft.Practices\Microsoft.Practices.Composite.Presentation.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Microsoft.Practices\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libs\Microsoft.Practices\Microsoft.Practices.Unity.dll</HintPath>
@@ -84,6 +88,7 @@
       <DependentUpon>WorkspaceView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Workspace\WorkspaceViewModel.cs" />
+    <Compile Include="ViewManager.cs" />
     <Compile Include="WorkspaceModule.cs" />
     <Compile Include="Presentation\About\AboutView.xaml.cs">
       <DependentUpon>AboutView.xaml</DependentUpon>
@@ -125,9 +130,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Presentation\Resources\About.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Presentation\Resources\DuplicateTemplates.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Presentation\Resources\HelpTopics.png" />

@@ -140,7 +140,6 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Services\ServiceController.cs" />
     <Compile Include="Presentation\Shell\IMainWindowView.cs" />
     <Compile Include="Presentation\Shell\IMainWindowViewModel.cs" />
     <Compile Include="Presentation\Shell\MainWindowView.xaml.cs">

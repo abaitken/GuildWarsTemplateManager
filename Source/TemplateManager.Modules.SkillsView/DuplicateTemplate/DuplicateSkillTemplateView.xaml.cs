@@ -1,4 +1,7 @@
-﻿namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
+﻿using System;
+using TemplateManager.Infrastructure;
+
+namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 {
     /// <summary>
     /// Interaction logic for DuplicateSkillTemplateView.xaml
@@ -19,5 +22,10 @@
         }
 
         #endregion
+
+        public string HeaderText
+        {
+            get { return Model.HeaderText; }
+        }
     }
 }

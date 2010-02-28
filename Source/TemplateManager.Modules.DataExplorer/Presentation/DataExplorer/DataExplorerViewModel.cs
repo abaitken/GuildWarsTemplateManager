@@ -6,6 +6,7 @@ using System.Windows.Data;
 using System.Windows.Input;
 using TemplateManager.Common.Commands;
 using TemplateManager.Common.ViewModel;
+using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Infrastructure.Model;
 using TemplateManager.Infrastructure.Services;
 
@@ -13,6 +14,9 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 {
     internal partial class DataExplorerViewModel : ViewModelBase, IDataExplorerViewModel
     {
+        private static readonly ViewDetails viewDetails = new ViewDetails("DataExplorer", "Data Explorer");
+        public static ViewDetails ViewDetails { get { return viewDetails; } }
+
         private const string any = "<Any>";
         private static readonly KeyValuePair<string, string> anyPair = new KeyValuePair<string, string>(any, any);
         private readonly IDataService service;
@@ -66,7 +70,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 
         public string HeaderText
         {
-            get { return "Data Explorer"; }
+            get { return ViewDetails.Name; }
         }
 
         #endregion

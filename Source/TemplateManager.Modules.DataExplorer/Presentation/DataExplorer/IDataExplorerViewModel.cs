@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Input;
-using TemplateManager.Infrastructure.Interfaces;
+using TemplateManager.Infrastructure;
 
 namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 {
-    public interface IDataExplorerViewModel : IHeadedContent
+    public interface IDataExplorerViewModel
     {
         IDataExplorerView View { get; }
         ICommand ResetFiltersCommand { get; }
@@ -49,6 +49,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
         KeyValuePair<string, string> SelectedAdrenalineCost { get; set; }
         KeyValuePair<string, string> SelectedUpkeepValue { get; set; }
         IList<KeyValuePair<string, string>> SelectedRemovesValues { get; set; }
+        string HeaderText { get; }
         void ViewLoaded();
     }
 }

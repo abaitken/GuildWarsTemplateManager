@@ -63,8 +63,8 @@ namespace TemplateManager
             catalog.AddModule(servicesModule);
             catalog.AddModule(updatesModule);
             catalog.AddModule(workspaceModule, servicesModule.Name, updatesModule.Name);
-            catalog.AddModule(skillsViewModule, servicesModule.Name);
-            catalog.AddModule(dataExplorerModule, servicesModule.Name);
+            catalog.AddModule(skillsViewModule, servicesModule.Name, workspaceModule.Name);
+            catalog.AddModule(dataExplorerModule, servicesModule.Name, workspaceModule.Name);
             return catalog;
         }
 

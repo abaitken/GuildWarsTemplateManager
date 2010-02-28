@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using Microsoft.Practices.Composite.Presentation.Commands;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
@@ -19,6 +23,7 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
         private readonly IApplicationInformationService applicationInformationService;
         private readonly IUnityContainer container;
         private readonly IRegionManager regionManager;
+        private readonly IViewManager viewManager;
         private readonly IUpdateService updateService;
         private readonly IWorkspaceView view;
 
@@ -26,19 +31,18 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
                                   IUpdateService updateService,
                                   IApplicationInformationService applicationInformationService,
                                   IUnityContainer container,
-                                  IRegionManager regionManager)
+                                  IRegionManager regionManager, IViewManager viewManager)
         {
             this.view = view;
             this.updateService = updateService;
             this.applicationInformationService = applicationInformationService;
             this.container = container;
             this.regionManager = regionManager;
+            this.viewManager = viewManager;
             view.Model = this;
 
             GenerateCommands();
         }
-
-        public ICommand ExploreDataCommand { get; private set; }
 
         #region IWorkspaceViewModel Members
 
@@ -52,10 +56,9 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
         public ICommand HelpCommand { get; private set; }
         public ICommand CloseWindowCommand { get; private set; }
         public ICommand HelpTopicsCommand { get; private set; }
-        public ICommand TemplatesViewCommand { get; private set; }
-        public ICommand DuplicateTemplatesViewCommand { get; private set; }
         public ICommand CloseTabCommand { get; private set; }
         public ICommand ShowUpdateCheckWindowCommand { get; private set; }
+        public ICommand OpenRegionView { get; private set; }
 
         public void OnViewLoaded()
         {
@@ -82,16 +85,9 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
             AboutCommand = new DelegateCommand(ShowAboutWindow);
             CloseWindowCommand = new DelegateCommand<Window>(OnCloseWindow);
             HelpTopicsCommand = new DelegateCommand(OnHelpTopicsRequested);
-            TemplatesViewCommand = new DelegateCommand<string>(OnShowTemplates);
-            DuplicateTemplatesViewCommand = new DelegateCommand<string>(OnShowDuplicateTemplates);
             CloseTabCommand = new DelegateCommand<TabItem>(OnCloseTab);
             ShowUpdateCheckWindowCommand = new DelegateCommand(DisplayUpdateNotification);
-            ExploreDataCommand = new DelegateCommand<string>(OnExploreData);
-        }
-
-        private void OnExploreData(string regionName)
-        {
-            //ShowViewRegion<IDataExplorerView, IDataExplorerViewModel>(regionName, vm => vm.View);
+            OpenRegionView = new DelegateCommand<string>(OnOpenRegionView);
         }
 
         private void OnCloseTab(TabItem tabItem)
@@ -100,14 +96,42 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
             region.Remove(tabItem.Content);
         }
 
-        private void OnShowDuplicateTemplates(string regionName)
+        public IEnumerable<MenuItem> ViewItems
         {
-            //ShowViewRegion<IDuplicateSkillTemplateView, IDuplicateSkillTemplateViewModel>(regionName, vm => vm.View);
+            get { return from item in viewManager.GetViewsForRegion(RegionNames.DocumentRegion)
+                             select CreateItem(item); }
         }
 
-        private void OnShowTemplates(string regionName)
+        private MenuItem CreateItem(ViewDetails details)
         {
-            //ShowViewRegion<ISkillsView, ISkillsViewModel>(regionName, vm => vm.View);
+            var result = new MenuItem
+                             {
+                                 Header = details.Name,
+                                 Command = OpenRegionView,
+                                 CommandParameter = details.Key
+                             };
+
+            if(details.ImageUri != null)
+            {
+                var decoder = BitmapDecoder.Create(details.ImageUri,
+                                                   BitmapCreateOptions.PreservePixelFormat,
+                                                   BitmapCacheOption.Default);
+
+                var source = decoder.Frames[0];
+                var image = new Image
+                                {
+                                    Source = source,
+                                    Width = 16,
+                                    Height = 16
+                                };
+                result.Icon = image;
+            }
+            return result;
+        }
+
+        private void OnOpenRegionView(string viewKey)
+        {
+            viewManager.OpenView(viewKey);
         }
 
         private void ShowViewRegion<TView, TViewModel>(string regionName, Func<TViewModel, TView> getViewFromViewModel)

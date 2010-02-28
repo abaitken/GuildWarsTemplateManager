@@ -2,7 +2,7 @@ using System;
 using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Services;
 
-namespace TemplateManager.Services
+namespace TemplateManager.Modules.Services.Controllers
 {
     internal class ServiceController : IServiceController
     {

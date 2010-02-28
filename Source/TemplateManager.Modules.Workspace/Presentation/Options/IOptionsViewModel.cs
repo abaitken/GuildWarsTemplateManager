@@ -1,5 +1,5 @@
 using System.Windows.Input;
-using TemplateManager.Infrastructure.Interfaces;
+using TemplateManager.Infrastructure;
 
 namespace TemplateManager.Modules.Workspace.Presentation.Options
 {

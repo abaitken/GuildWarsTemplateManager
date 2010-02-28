@@ -5,6 +5,7 @@ using System.Windows.Data;
 using System.Windows.Input;
 using TemplateManager.Common.Commands;
 using TemplateManager.Common.ViewModel;
+using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Infrastructure.Model;
 using TemplateManager.Infrastructure.Services;
 
@@ -12,6 +13,7 @@ namespace TemplateManager.Modules.SkillsView.SkillView
 {
     internal class SkillsViewModel : ViewModelBase, ISkillsViewModel
     {
+        private static readonly ViewDetails viewDetails = new ViewDetails("SkillsView", "Skill Templates");
         private readonly IDataService dataService;
         private readonly ISkillTemplateService service;
         private readonly ISkillsView view;
@@ -178,6 +180,11 @@ namespace TemplateManager.Modules.SkillsView.SkillView
             }
         }
 
+        public static ViewDetails ViewDetails
+        {
+            get { return viewDetails; }
+        }
+
         #region ISkillsViewModel Members
 
         public ISkillsView View
@@ -204,7 +211,7 @@ namespace TemplateManager.Modules.SkillsView.SkillView
 
         public string HeaderText
         {
-            get { return "Skill Templates"; }
+            get { return ViewDetails.Name; }
         }
 
         #endregion

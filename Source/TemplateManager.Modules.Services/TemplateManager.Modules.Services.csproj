@@ -83,6 +83,7 @@
     <Compile Include="..\Include\GlobalAssemblyInfo.cs">
       <Link>GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="DataService.cs" />
     <Compile Include="NativeObjects\NativeBuildFactory.cs" />
     <Compile Include="NativeObjects\NativeTemplateFolder.cs" />

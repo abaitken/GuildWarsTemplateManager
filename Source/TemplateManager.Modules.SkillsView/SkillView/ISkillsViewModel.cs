@@ -1,14 +1,15 @@
 using System.ComponentModel;
 using System.Windows.Input;
-using TemplateManager.Infrastructure.Interfaces;
+using TemplateManager.Infrastructure;
 
 namespace TemplateManager.Modules.SkillsView.SkillView
 {
-    public interface ISkillsViewModel : IHeadedContent
+    public interface ISkillsViewModel
     {
         ISkillsView View { get; }
         ICollectionView Builds { get; }
         ICommand SearchCommand { get; }
         ICommand ResetCommand { get; }
+        string HeaderText { get; }
     }
 }

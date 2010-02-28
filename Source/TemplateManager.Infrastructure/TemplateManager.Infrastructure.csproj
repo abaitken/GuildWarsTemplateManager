@@ -83,6 +83,8 @@
       <Link>GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Controllers\IUpdateCheckController.cs" />
+    <Compile Include="Controllers\IViewManager.cs" />
+    <Compile Include="Controllers\ViewDetails.cs" />
     <Compile Include="Extensions\LinqToXmlExtensions.cs" />
     <Compile Include="HashCodeBuilder.cs" />
     <Compile Include="IApplicationSettings.cs" />
@@ -93,7 +95,7 @@
     <Compile Include="PresentationHelper.cs" />
     <Compile Include="Services\IApplicationInformationService.cs" />
     <Compile Include="Services\IDataService.cs" />
-    <Compile Include="Interfaces\IHeadedContent.cs" />
+    <Compile Include="IHeadedContent.cs" />
     <Compile Include="Services\IServiceController.cs" />
     <Compile Include="Services\ISkillTemplateService.cs" />
     <Compile Include="Model\AttributeValue.cs" />
@@ -110,6 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Events\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

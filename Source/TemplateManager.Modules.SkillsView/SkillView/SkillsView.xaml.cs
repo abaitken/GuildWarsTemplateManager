@@ -1,4 +1,6 @@
-﻿namespace TemplateManager.Modules.SkillsView.SkillView
+﻿using System;
+
+namespace TemplateManager.Modules.SkillsView.SkillView
 {
     /// <summary>
     /// Interaction logic for SkillsView.xaml
@@ -19,5 +21,10 @@
         }
 
         #endregion
+
+        public string HeaderText
+        {
+            get { return Model.HeaderText; }
+        }
     }
 }

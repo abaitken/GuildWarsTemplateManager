@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
+using TemplateManager.Infrastructure;
 
 namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 {
@@ -26,6 +28,11 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
         private void DataExplorerView_Loaded(object sender, RoutedEventArgs e)
         {
             Model.ViewLoaded();
+        }
+
+        public string HeaderText
+        {
+            get { return Model.HeaderText; }
         }
     }
 }

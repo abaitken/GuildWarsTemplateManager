@@ -2,6 +2,7 @@
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
 using TemplateManager.Infrastructure;
+using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Modules.Workspace.Presentation.About;
 using TemplateManager.Modules.Workspace.Presentation.Options;
 using TemplateManager.Modules.Workspace.Presentation.Workspace;
@@ -37,6 +38,8 @@ namespace TemplateManager.Modules.Workspace
 
         private void RegisterViews()
         {
+            container.RegisterType<IViewManager, ViewManager>(new ContainerControlledLifetimeManager());
+
             container.RegisterType<IAboutView, AboutView>();
             container.RegisterType<IAboutViewModel, AboutViewModel>();
 

@@ -1,4 +1,4 @@
-﻿namespace TemplateManager.Infrastructure.Interfaces
+﻿namespace TemplateManager.Infrastructure
 {
     public interface IHeadedContent
     {

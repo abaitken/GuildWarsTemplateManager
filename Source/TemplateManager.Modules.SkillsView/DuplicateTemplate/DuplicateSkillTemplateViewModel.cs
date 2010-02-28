@@ -2,12 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using TemplateManager.Common.ViewModel;
+using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Infrastructure.Services;
 
 namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 {
     internal class DuplicateSkillTemplateViewModel : ViewModelBase, IDuplicateSkillTemplateViewModel
     {
+        private static readonly ViewDetails viewDetails = new ViewDetails("DuplicateTemplates",
+                                                                          "Duplicate Templates",
+                                                                          new Uri(
+                                                                              "pack://application:,,,/TemplateManager.Modules.SkillsView;component/Presentation/Resources/DuplicateTemplates.png", UriKind.Absolute));
         private readonly ISkillTemplateService service;
         private readonly IDuplicateSkillTemplateView view;
 
@@ -18,6 +23,11 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
             view.Model = this;
 
             controller.TemplatesChanged += ServiceBuildsChanged;
+        }
+
+        public static ViewDetails ViewDetails
+        {
+            get { return viewDetails; }
         }
 
         #region IDuplicateSkillTemplateViewModel Members
@@ -44,7 +54,7 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 
         public string HeaderText
         {
-            get { return "Duplicate Skill Templates"; }
+            get { return ViewDetails.Name; }
         }
 
         #endregion
