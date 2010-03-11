@@ -1,7 +1,6 @@
 ﻿using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Unity;
 using TemplateManager.Infrastructure.Services;
-using TemplateManager.Modules.Services.Controllers;
 
 namespace TemplateManager.Modules.Services
 {
@@ -25,7 +24,6 @@ namespace TemplateManager.Modules.Services
 
         private void RegisterTypes()
         {
-            container.RegisterType<IServiceController, ServiceController>(new ContainerControlledLifetimeManager());
             container.RegisterType<IDataService, DataService>(new ContainerControlledLifetimeManager());
             container.RegisterType<ISkillTemplateService, SkillTemplateService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IUpdateService, UpdateService>();

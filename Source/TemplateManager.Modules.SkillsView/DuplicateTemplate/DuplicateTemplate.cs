@@ -1,28 +1,27 @@
-using System.Collections.Generic;
-using System.Linq;
+using System.Windows.Input;
 using TemplateManager.Infrastructure.Model;
 
 namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 {
-    public struct DuplicateTemplate
+    class DuplicateTemplate : IDuplicateTemplate
     {
-        private readonly IEnumerable<SkillTemplate> templates;
+        private readonly IDuplicateResult parent;
+        private readonly ISkillTemplate inner;
 
-        public DuplicateTemplate(IEnumerable<SkillTemplate> templates)
-            : this()
+        public DuplicateTemplate(IDuplicateResult parent, ISkillTemplate inner)
         {
-            this.templates = templates;
+            this.parent = parent;
+            this.inner = inner;
         }
 
-
-        public IEnumerable<SkillTemplate> Templates
+        public ICommand DeleteTemplateCommand
         {
-            get { return templates; }
+            get { return parent.DeleteTemplateCommand; }
         }
 
-        public override string ToString()
+        public ISkillTemplate Template
         {
-            return string.Format("{0} duplicate templates", Templates.Count());
+            get { return inner; }
         }
     }
 }

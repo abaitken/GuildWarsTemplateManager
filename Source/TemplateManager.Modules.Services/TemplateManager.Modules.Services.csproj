@@ -83,7 +83,6 @@
     <Compile Include="..\Include\GlobalAssemblyInfo.cs">
       <Link>GlobalAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="DataService.cs" />
     <Compile Include="NativeObjects\NativeBuildFactory.cs" />
     <Compile Include="NativeObjects\NativeTemplateFolder.cs" />
@@ -104,6 +103,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TemplateManager.Common\TemplateManager.Common.csproj">
+      <Project>{5D573659-1A65-4112-9EED-1BF70DB94F22}</Project>
+      <Name>TemplateManager.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TemplateManager.Data.GuildWars\TemplateManager.Data.GuildWars.csproj">
       <Project>{F8BF79D8-5153-4FAC-B229-461F905FA18E}</Project>
       <Name>TemplateManager.Data.GuildWars</Name>
@@ -155,6 +158,9 @@
     <Content Include="TemplateManager.Data.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

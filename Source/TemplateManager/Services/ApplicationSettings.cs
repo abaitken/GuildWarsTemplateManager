@@ -7,15 +7,15 @@ namespace TemplateManager.Services
 {
     internal class ApplicationSettings : ApplicationSettingsBase, IApplicationSettings
     {
-        private const string TemplateFolderSettingName = "TemplateFolder";
+        private const string templateFolderSettingName = "TemplateFolder";
 
         #region IApplicationSettings Members
 
         [UserScopedSetting]
         public string TemplateFolder
         {
-            get { return Get<string>(TemplateFolderSettingName, TemplateStoreLocator.FindBuildStorePath); }
-            set { this[TemplateFolderSettingName] = value; }
+            get { return Get<string>(templateFolderSettingName, TemplateStoreLocator.FindBuildStorePath); }
+            set { this[templateFolderSettingName] = value; }
         }
 
         public event EventHandler TemplateFolderChanged;
@@ -36,7 +36,7 @@ namespace TemplateManager.Services
 
             switch(e.PropertyName)
             {
-                case TemplateFolderSettingName:
+                case templateFolderSettingName:
                     RaiseChangedEvent(sender, TemplateFolderChanged);
                     break;
             }

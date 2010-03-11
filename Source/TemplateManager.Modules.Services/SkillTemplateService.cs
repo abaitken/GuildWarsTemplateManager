@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using TemplateManager.Common.FileSystem;
+using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Model;
 using TemplateManager.Infrastructure.Services;
 using TemplateManager.Modules.Services.NativeObjects;
@@ -10,12 +13,31 @@ namespace TemplateManager.Modules.Services
     internal class SkillTemplateService : ISkillTemplateService
     {
         private readonly IDataService dataService;
+        private readonly IApplicationSettings applicationSettings;
         private NativeBuildFactory buildFactory;
 
-        public SkillTemplateService(IDataService dataService)
+        public SkillTemplateService(IDataService dataService, IApplicationSettings applicationSettings)
         {
             this.dataService = dataService;
+            this.applicationSettings = applicationSettings;
             buildFactory = NativeBuildFactory.Empty;
+            RefreshTemplates(applicationSettings.TemplateFolder);
+            applicationSettings.TemplateFolderChanged += OnTemplateFolderChanged;
+        }
+
+        public event EventHandler TemplatesChanged;
+
+        private void OnTemplateFolderChanged(object sender, EventArgs e)
+        {
+            OnTemplateFolderChangedImpl();
+        }
+
+        private void OnTemplateFolderChangedImpl()
+        {
+            RefreshTemplates(applicationSettings.TemplateFolder);
+
+            if (TemplatesChanged != null)
+                TemplatesChanged(this, new EventArgs());
         }
 
         #region ISkillTemplateService Members
@@ -23,6 +45,16 @@ namespace TemplateManager.Modules.Services
         public void RefreshTemplates(string buildStore)
         {
             buildFactory = NativeBuildFactory.Create(buildStore);
+        }
+
+        public bool Delete(ISkillTemplate template)
+        {
+            var deleteResult = FileHelper.Delete(template.BuildFile, true);
+
+            if(deleteResult)
+                OnTemplateFolderChangedImpl();
+
+            return deleteResult;
         }
 
         public TemplateFolder TemplateFolder

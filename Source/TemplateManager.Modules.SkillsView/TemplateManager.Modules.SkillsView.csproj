@@ -90,6 +90,8 @@
     <Compile Include="..\Include\GlobalAssemblyInfo.cs">
       <Link>GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="DuplicateTemplate\DeleteTemplateArgs.cs" />
+    <Compile Include="DuplicateTemplate\DuplicateResult.cs" />
     <Compile Include="DuplicateTemplate\DuplicateTemplate.cs" />
     <Compile Include="DuplicateTemplate\IDuplicateSkillTemplateView.cs" />
     <Compile Include="DuplicateTemplate\DuplicateSkillTemplateView.xaml.cs">
@@ -97,6 +99,8 @@
     </Compile>
     <Compile Include="DuplicateTemplate\DuplicateSkillTemplateViewModel.cs" />
     <Compile Include="DuplicateTemplate\IDuplicateSkillTemplateViewModel.cs" />
+    <Compile Include="DuplicateTemplate\IDuplicateResult.cs" />
+    <Compile Include="DuplicateTemplate\IDuplicateTemplate.cs" />
     <Compile Include="InfoPanel.xaml.cs">
       <DependentUpon>InfoPanel.xaml</DependentUpon>
     </Compile>

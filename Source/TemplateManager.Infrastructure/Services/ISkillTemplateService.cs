@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TemplateManager.Infrastructure.Model;
 
 namespace TemplateManager.Infrastructure.Services
@@ -8,5 +9,7 @@ namespace TemplateManager.Infrastructure.Services
         TemplateFolder TemplateFolder { get; }
         IEnumerable<SkillTemplate> AllTemplates { get; }
         void RefreshTemplates(string buildStore);
+        bool Delete(ISkillTemplate template);
+        event EventHandler TemplatesChanged;
     }
 }

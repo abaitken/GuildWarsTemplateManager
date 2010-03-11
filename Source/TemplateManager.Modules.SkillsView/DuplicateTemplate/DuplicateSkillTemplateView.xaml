@@ -1,69 +1,98 @@
 ﻿<UserControl x:Class="TemplateManager.Modules.SkillsView.DuplicateTemplate.DuplicateSkillTemplateView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <DockPanel LastChildFill="True">
-        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
-            <Button Content="Reset Ignore state" />
-        </StackPanel>
-        <ScrollViewer>
-            <ItemsControl ItemsSource="{Binding Templates}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Expander Header="{Binding}">
-                            <Border BorderThickness="0.5" BorderBrush="Black">
-                                <StackPanel Orientation="Vertical">
-                                    <ItemsControl ItemsSource="{Binding Templates}">
-                                        <ItemsControl.ItemTemplate>
-                                            <DataTemplate>
+
+    <ScrollViewer>
+        <ItemsControl ItemsSource="{Binding Templates}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Expander Header="{Binding}">
+                        <Border BorderThickness="0.5" BorderBrush="Black">
+                            <StackPanel Orientation="Vertical">
+                                <ItemsControl ItemsSource="{Binding Templates}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+
+
                                                 <Grid>
-                                                    <Grid.ColumnDefinitions>
-                                                        <ColumnDefinition Width="*" />
-                                                        <ColumnDefinition Width="9*" />
-                                                    </Grid.ColumnDefinitions>
-
-
-                                                    <StackPanel Orientation="Vertical">
-                                                        <Button Content="Ignore" />
-                                                        <Button Content="Delete" />
-                                                    </StackPanel>
-
-                                                    <StackPanel Grid.Column="2">
-                                                        <TextBlock Text="{Binding Name}" />
-                                                        <TextBlock Text="{Binding BuildFile}" />
-
-                                                        <ItemsControl ItemsSource="{Binding Skills}">
-                                                            <ItemsControl.ItemsPanel>
-                                                                <ItemsPanelTemplate>
-                                                                    <StackPanel Orientation="Horizontal" />
-                                                                </ItemsPanelTemplate>
-                                                            </ItemsControl.ItemsPanel>
-                                                            <ItemsControl.ItemTemplate>
-                                                                <DataTemplate>
-                                                                    <Image Source="{Binding Image}" Width="40" Height="40" >
-                                                                        <Image.ToolTip>
-                                                                            <ToolTip>
-                                                                                <StackPanel Orientation="Vertical">
-                                                                                    <TextBlock Text="{Binding Name}" />
-                                                                                    <TextBlock Text="{Binding Description}" />
-                                                                                </StackPanel>
-                                                                            </ToolTip>
-                                                                        </Image.ToolTip>
-                                                                    </Image>
-                                                                </DataTemplate>
-                                                            </ItemsControl.ItemTemplate>
-                                                        </ItemsControl>
-                                                    </StackPanel>
+                                                    <Button HorizontalAlignment="Center"
+                                                            VerticalAlignment="Center"
+                                                            Width="30"
+                                                            Height="30"
+                                                            Padding="5"
+                                                            Margin="10"
+                                                            CommandParameter="{Binding}"
+                                                            Command="{Binding Path=DeleteTemplateCommand}">
+                                                        <Image Source="../Images/Delete.png" />
+                                                    </Button>
                                                 </Grid>
-                                            </DataTemplate>
-                                        </ItemsControl.ItemTemplate>
-                                    </ItemsControl>
-                                </StackPanel>
-                            </Border>
-                        </Expander>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </ScrollViewer>
 
-    </DockPanel>
+                                                <StackPanel Grid.Column="2" DataContext="{Binding Template}">
+                                                    <TextBlock Text="{Binding Name}" />
+                                                    <TextBlock Text="{Binding BuildFile}" />
+                                                    
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                            <Image Source="{Binding PrimaryProfession.Image}" Width="19" Height="19" />
+                                                            <TextBlock Text="{Binding PrimaryProfession.Name}" />
+                                                        </StackPanel>
+                                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                            <Image Source="{Binding SecondaryProfession.Image}" Width="19" Height="19" />
+                                                            <TextBlock Text="{Binding SecondaryProfession.Name}" />
+                                                        </StackPanel>
+                                                    </StackPanel>
+
+                                                    <!--<ItemsControl ItemsSource="{Binding Attributes}">
+                                                        <ItemsControl.ItemsPanel>
+                                                            <ItemsPanelTemplate>
+                                                                <StackPanel Orientation="Vertical" />
+                                                            </ItemsPanelTemplate>
+                                                        </ItemsControl.ItemsPanel>
+                                                        <ItemsControl.ItemTemplate>
+                                                            <DataTemplate>
+                                                                <TextBlock Text="{Binding}" />
+                                                            </DataTemplate>
+                                                        </ItemsControl.ItemTemplate>
+                                                    </ItemsControl>-->
+                                                    
+                                                    <ItemsControl ItemsSource="{Binding Skills}">
+                                                        <ItemsControl.ItemsPanel>
+                                                            <ItemsPanelTemplate>
+                                                                <StackPanel Orientation="Horizontal" />
+                                                            </ItemsPanelTemplate>
+                                                        </ItemsControl.ItemsPanel>
+                                                        <ItemsControl.ItemTemplate>
+                                                            <DataTemplate>
+                                                                <Image Source="{Binding Image}" Width="40" Height="40" >
+                                                                    <Image.ToolTip>
+                                                                        <ToolTip>
+                                                                            <StackPanel Orientation="Vertical">
+                                                                                <TextBlock Text="{Binding Name}" />
+                                                                                <TextBlock Text="{Binding Description}" />
+                                                                            </StackPanel>
+                                                                        </ToolTip>
+                                                                    </Image.ToolTip>
+                                                                </Image>
+                                                            </DataTemplate>
+                                                        </ItemsControl.ItemTemplate>
+                                                    </ItemsControl>
+                                                </StackPanel>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </Border>
+                    </Expander>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </ScrollViewer>
+
+
 </UserControl>

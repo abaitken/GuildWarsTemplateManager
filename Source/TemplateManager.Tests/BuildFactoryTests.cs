@@ -2,6 +2,8 @@
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
+using TemplateManager.Infrastructure;
 using TemplateManager.Modules.Services;
 
 namespace TemplateManager.Tests
@@ -14,9 +16,11 @@ namespace TemplateManager.Tests
         [DeploymentItem("TemplateManager.Data.xml")]
         public void CanGetRelationalBuildData()
         {
+            var mockedAppSettings = new Mock<IApplicationSettings>();
+
             var buildPath = Path.Combine(Environment.CurrentDirectory, "SimpleTest");
 
-            var factory = new SkillTemplateService(new DataService());
+            var factory = new SkillTemplateService(new DataService(), mockedAppSettings.Object);
             factory.RefreshTemplates(buildPath);
             Assert.AreEqual(1, factory.TemplateFolder.Templates.Count());
 

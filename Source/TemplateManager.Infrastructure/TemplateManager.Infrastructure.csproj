@@ -91,12 +91,12 @@
     <Compile Include="Model\IAttribute.cs" />
     <Compile Include="Model\IProfession.cs" />
     <Compile Include="Model\ISkill.cs" />
+    <Compile Include="Model\ISkillTemplate.cs" />
     <Compile Include="Model\TemplateFolder.cs" />
     <Compile Include="PresentationHelper.cs" />
     <Compile Include="Services\IApplicationInformationService.cs" />
     <Compile Include="Services\IDataService.cs" />
     <Compile Include="IHeadedContent.cs" />
-    <Compile Include="Services\IServiceController.cs" />
     <Compile Include="Services\ISkillTemplateService.cs" />
     <Compile Include="Model\AttributeValue.cs" />
     <Compile Include="Model\MetaLoader.cs" />

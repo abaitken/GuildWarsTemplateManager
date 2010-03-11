@@ -55,6 +55,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libs\Microsoft.Practices\Microsoft.Practices.Composite.Presentation.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
@@ -82,6 +83,7 @@
     <Compile Include="CommandLineParser.cs" />
     <Compile Include="Commands\DelegateCommand.cs" />
     <Compile Include="Converters\VisibilityCoverter.cs" />
+    <Compile Include="FileSystem\FileHelper.cs" />
     <Compile Include="FileSystem\FolderHelper.cs" />
     <Compile Include="ImageSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

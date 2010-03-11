@@ -13,9 +13,9 @@ namespace TemplateManager.Infrastructure
             calculatedHash = initialPrime;
         }
 
-        public void Append(object obj)
+        public void Append(object value)
         {
-            calculatedHash = AppendToHash(calculatedHash, obj);
+            calculatedHash = AppendToHash(calculatedHash, value);
         }
 
         public static int Build(IEnumerable<int> items)

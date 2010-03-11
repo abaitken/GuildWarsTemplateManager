@@ -15,8 +15,8 @@ namespace TemplateManager.Modules.SkillsView.SkillView
     {
         private static readonly ViewDetails viewDetails = new ViewDetails("SkillsView", "Skill Templates");
         private readonly IDataService dataService;
-        private readonly ISkillTemplateService service;
         private readonly ISkillsView view;
+        private readonly ISkillTemplateService service;
         private ICollectionView collectionView;
         private bool searchAnyPrimaryProfession;
         private bool searchAnySecondaryProfession;
@@ -29,19 +29,19 @@ namespace TemplateManager.Modules.SkillsView.SkillView
         private bool? showValidBuilds;
 
         public SkillsViewModel(ISkillsView view,
-                               IServiceController controller,
+                               ISkillTemplateService service,
                                IDataService dataService)
         {
             this.view = view;
+            this.service = service;
             this.dataService = dataService;
-            service = controller.Service;
 
             GenerateCommands();
             ResetFilters();
             CreateView();
 
 
-            controller.TemplatesChanged += ServiceBuildsChanged;
+            service.TemplatesChanged += ServiceBuildsChanged;
 
             view.Model = this;
         }

@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace TemplateManager.Infrastructure.Model
 {
-    public class SkillTemplate
+    public class SkillTemplate : ISkillTemplate
     {
         private readonly IEnumerable<AttributeValue> attributes;
         private readonly string buildFile;
