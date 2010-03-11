@@ -15,8 +15,8 @@ namespace TemplateManager.Modules.SkillsView.SkillView
     {
         private static readonly ViewDetails viewDetails = new ViewDetails("SkillsView", "Skill Templates");
         private readonly IDataService dataService;
-        private readonly ISkillsView view;
         private readonly ISkillTemplateService service;
+        private readonly ISkillsView view;
         private ICollectionView collectionView;
         private bool searchAnyPrimaryProfession;
         private bool searchAnySecondaryProfession;

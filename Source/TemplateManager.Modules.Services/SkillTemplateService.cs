@@ -12,8 +12,8 @@ namespace TemplateManager.Modules.Services
 {
     internal class SkillTemplateService : ISkillTemplateService
     {
-        private readonly IDataService dataService;
         private readonly IApplicationSettings applicationSettings;
+        private readonly IDataService dataService;
         private NativeBuildFactory buildFactory;
 
         public SkillTemplateService(IDataService dataService, IApplicationSettings applicationSettings)
@@ -25,22 +25,9 @@ namespace TemplateManager.Modules.Services
             applicationSettings.TemplateFolderChanged += OnTemplateFolderChanged;
         }
 
-        public event EventHandler TemplatesChanged;
-
-        private void OnTemplateFolderChanged(object sender, EventArgs e)
-        {
-            OnTemplateFolderChangedImpl();
-        }
-
-        private void OnTemplateFolderChangedImpl()
-        {
-            RefreshTemplates(applicationSettings.TemplateFolder);
-
-            if (TemplatesChanged != null)
-                TemplatesChanged(this, new EventArgs());
-        }
-
         #region ISkillTemplateService Members
+
+        public event EventHandler TemplatesChanged;
 
         public void RefreshTemplates(string buildStore)
         {
@@ -68,6 +55,19 @@ namespace TemplateManager.Modules.Services
         }
 
         #endregion
+
+        private void OnTemplateFolderChanged(object sender, EventArgs e)
+        {
+            OnTemplateFolderChangedImpl();
+        }
+
+        private void OnTemplateFolderChangedImpl()
+        {
+            RefreshTemplates(applicationSettings.TemplateFolder);
+
+            if(TemplatesChanged != null)
+                TemplatesChanged(this, new EventArgs());
+        }
 
         private static IEnumerable<SkillTemplate> FlattenTemplateStructure(TemplateFolder templateFolder)
         {

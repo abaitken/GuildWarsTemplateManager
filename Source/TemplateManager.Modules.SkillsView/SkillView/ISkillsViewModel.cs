@@ -1,6 +1,5 @@
 using System.ComponentModel;
 using System.Windows.Input;
-using TemplateManager.Infrastructure;
 
 namespace TemplateManager.Modules.SkillsView.SkillView
 {

@@ -63,6 +63,8 @@ namespace TemplateManager.Infrastructure.Model
             isValid = true;
         }
 
+        #region ISkillTemplate Members
+
         public string TemplateCode
         {
             get { return templateCode; }
@@ -146,6 +148,8 @@ namespace TemplateManager.Infrastructure.Model
                 return skillKey;
             }
         }
+
+        #endregion
 
         private void ReadMeta()
         {

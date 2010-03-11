@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TemplateManager.Modules.SkillsView.SkillView
+﻿namespace TemplateManager.Modules.SkillsView.SkillView
 {
     /// <summary>
     /// Interaction logic for SkillsView.xaml
@@ -20,11 +18,11 @@ namespace TemplateManager.Modules.SkillsView.SkillView
             set { DataContext = value; }
         }
 
-        #endregion
-
         public string HeaderText
         {
             get { return Model.HeaderText; }
         }
+
+        #endregion
     }
 }

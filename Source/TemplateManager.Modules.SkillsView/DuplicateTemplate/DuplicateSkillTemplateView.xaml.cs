@@ -1,7 +1,4 @@
-﻿using System;
-using TemplateManager.Infrastructure;
-
-namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
+﻿namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 {
     /// <summary>
     /// Interaction logic for DuplicateSkillTemplateView.xaml
@@ -21,11 +18,11 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
             set { DataContext = value; }
         }
 
-        #endregion
-
         public string HeaderText
         {
             get { return Model.HeaderText; }
         }
+
+        #endregion
     }
 }

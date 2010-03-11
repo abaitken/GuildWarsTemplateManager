@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.Practices.Composite.Modularity;
+﻿using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Unity;
 using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Controllers;
@@ -26,14 +25,14 @@ namespace TemplateManager.Modules.DataExplorer
             RegisterViews();
         }
 
+        #endregion
+
         private void RegisterViews()
         {
             viewManager.Register(DataExplorerViewModel.ViewDetails,
                                  RegionNames.DocumentRegion,
                                  () => container.Resolve<IDataExplorerViewModel>().View);
         }
-
-        #endregion
 
         private void RegisterTypes()
         {

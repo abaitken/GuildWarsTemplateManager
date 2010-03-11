@@ -4,10 +4,10 @@ namespace TemplateManager.Infrastructure.Controllers
 {
     public struct ViewDetails
     {
+        private readonly Uri imageUri;
         private readonly string key;
         private readonly string name;
-        private readonly Uri imageUri;
-        
+
         public ViewDetails(string key, string name)
             : this(key, name, null)
         {

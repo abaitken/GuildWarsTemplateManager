@@ -14,11 +14,9 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 {
     internal partial class DataExplorerViewModel : ViewModelBase, IDataExplorerViewModel
     {
-        private static readonly ViewDetails viewDetails = new ViewDetails("DataExplorer", "Data Explorer");
-        public static ViewDetails ViewDetails { get { return viewDetails; } }
-
         private const string any = "<Any>";
         private static readonly KeyValuePair<string, string> anyPair = new KeyValuePair<string, string>(any, any);
+        private static readonly ViewDetails viewDetails = new ViewDetails("DataExplorer", "Data Explorer");
         private readonly IDataService service;
         private readonly IDataExplorerView view;
         private ICollectionView skills;
@@ -33,6 +31,11 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             GenerateCommands();
 
             view.Model = this;
+        }
+
+        public static ViewDetails ViewDetails
+        {
+            get { return viewDetails; }
         }
 
         #region IDataExplorerViewModel Members

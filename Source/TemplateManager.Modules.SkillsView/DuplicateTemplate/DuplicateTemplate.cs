@@ -3,16 +3,18 @@ using TemplateManager.Infrastructure.Model;
 
 namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 {
-    class DuplicateTemplate : IDuplicateTemplate
+    internal class DuplicateTemplate : IDuplicateTemplate
     {
-        private readonly IDuplicateResult parent;
         private readonly ISkillTemplate inner;
+        private readonly IDuplicateResult parent;
 
         public DuplicateTemplate(IDuplicateResult parent, ISkillTemplate inner)
         {
             this.parent = parent;
             this.inner = inner;
         }
+
+        #region IDuplicateTemplate Members
 
         public ICommand DeleteTemplateCommand
         {
@@ -23,5 +25,7 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
         {
             get { return inner; }
         }
+
+        #endregion
     }
 }

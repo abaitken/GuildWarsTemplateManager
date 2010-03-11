@@ -1,11 +1,9 @@
-using TemplateManager.Infrastructure.Model;
-
 namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 {
     public class DeleteTemplateArgs
     {
-        private readonly IDuplicateTemplate template;
         private readonly IDuplicateResult duplicateResult;
+        private readonly IDuplicateTemplate template;
 
         public DeleteTemplateArgs(IDuplicateTemplate template, IDuplicateResult duplicateResult)
         {

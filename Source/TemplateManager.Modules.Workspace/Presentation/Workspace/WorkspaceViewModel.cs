@@ -4,7 +4,6 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Microsoft.Practices.Composite.Presentation.Commands;
 using Microsoft.Practices.Composite.Regions;
@@ -23,15 +22,16 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
         private readonly IApplicationInformationService applicationInformationService;
         private readonly IUnityContainer container;
         private readonly IRegionManager regionManager;
-        private readonly IViewManager viewManager;
         private readonly IUpdateService updateService;
         private readonly IWorkspaceView view;
+        private readonly IViewManager viewManager;
 
         public WorkspaceViewModel(IWorkspaceView view,
                                   IUpdateService updateService,
                                   IApplicationInformationService applicationInformationService,
                                   IUnityContainer container,
-                                  IRegionManager regionManager, IViewManager viewManager)
+                                  IRegionManager regionManager,
+                                  IViewManager viewManager)
         {
             this.view = view;
             this.updateService = updateService;
@@ -42,6 +42,17 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
             view.Model = this;
 
             GenerateCommands();
+        }
+
+        public ICommand OpenRegionView { get; private set; }
+
+        public IEnumerable<MenuItem> ViewItems
+        {
+            get
+            {
+                return from item in viewManager.GetViewsForRegion(RegionNames.DocumentRegion)
+                       select CreateItem(item);
+            }
         }
 
         #region IWorkspaceViewModel Members
@@ -58,7 +69,6 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
         public ICommand HelpTopicsCommand { get; private set; }
         public ICommand CloseTabCommand { get; private set; }
         public ICommand ShowUpdateCheckWindowCommand { get; private set; }
-        public ICommand OpenRegionView { get; private set; }
 
         public void OnViewLoaded()
         {
@@ -94,12 +104,6 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
         {
             var region = regionManager.Regions[RegionNames.DocumentRegion];
             region.Remove(tabItem.Content);
-        }
-
-        public IEnumerable<MenuItem> ViewItems
-        {
-            get { return from item in viewManager.GetViewsForRegion(RegionNames.DocumentRegion)
-                             select CreateItem(item); }
         }
 
         private MenuItem CreateItem(ViewDetails details)

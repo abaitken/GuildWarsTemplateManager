@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -25,29 +24,27 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
             DeleteTemplateCommand = new DelegateCommand<IDuplicateTemplate>(OnDeleteTemplate);
         }
 
+        #region IDuplicateResult Members
+
+        public ObservableCollection<IDuplicateTemplate> Templates
+        {
+            get { return templates; }
+        }
+
+        public ICommand DeleteTemplateCommand { get; private set; }
+
+        public int Count
+        {
+            get { return Templates.Count; }
+        }
+
+        #endregion
+
         private void OnDeleteTemplate(IDuplicateTemplate obj)
         {
             var args = new DeleteTemplateArgs(obj, this);
             if(parent.DeleteTemplate(args))
                 templates.Remove(obj);
-        }
-
-        public ObservableCollection<IDuplicateTemplate> Templates
-        {
-            get
-            {
-                return templates;
-            }
-        }
-
-        public ICommand DeleteTemplateCommand
-        {
-            get; private set;
-        }
-
-        public int Count
-        {
-            get { return Templates.Count; }
         }
 
         public override string ToString()

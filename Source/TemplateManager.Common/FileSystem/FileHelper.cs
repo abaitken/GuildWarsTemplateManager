@@ -11,7 +11,10 @@ namespace TemplateManager.Common.FileSystem
 
             try
             {
-                Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile(path, UIOption.AllDialogs, option, UICancelOption.ThrowException);
+                Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile(path,
+                                                                   UIOption.AllDialogs,
+                                                                   option,
+                                                                   UICancelOption.ThrowException);
             }
             catch(Exception)
             {

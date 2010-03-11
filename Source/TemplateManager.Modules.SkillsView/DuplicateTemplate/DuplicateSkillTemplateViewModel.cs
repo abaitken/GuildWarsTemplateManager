@@ -13,10 +13,12 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
         private static readonly ViewDetails viewDetails = new ViewDetails("DuplicateTemplates",
                                                                           "Duplicate Templates",
                                                                           new Uri(
-                                                                              "pack://application:,,,/TemplateManager.Modules.SkillsView;component/Presentation/Resources/DuplicateTemplates.png", UriKind.Absolute));
-        
-        private readonly IDuplicateSkillTemplateView view;
+                                                                              "pack://application:,,,/TemplateManager.Modules.SkillsView;component/Presentation/Resources/DuplicateTemplates.png",
+                                                                              UriKind.Absolute));
+
         private readonly ISkillTemplateService service;
+        private readonly IDuplicateSkillTemplateView view;
+        private ObservableCollection<IDuplicateResult> templates;
 
         public DuplicateSkillTemplateViewModel(IDuplicateSkillTemplateView view, ISkillTemplateService service)
         {
@@ -28,19 +30,6 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
             //service.TemplatesChanged += ServiceBuildsChanged;
         }
 
-        public bool DeleteTemplate(DeleteTemplateArgs obj)
-        {
-            var result = obj.DuplicateResult;
-
-            var duplicateTemplate = obj.Template;
-            var deleteSuccess = service.Delete(duplicateTemplate.Template);
-
-            if (deleteSuccess && result.Count == 2)
-                templates.Remove(result);
-
-            return deleteSuccess;
-        }
-
         public static ViewDetails ViewDetails
         {
             get { return viewDetails; }
@@ -48,19 +37,29 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 
         #region IDuplicateSkillTemplateViewModel Members
 
+        public bool DeleteTemplate(DeleteTemplateArgs obj)
+        {
+            var result = obj.DuplicateResult;
+
+            var duplicateTemplate = obj.Template;
+            var deleteSuccess = service.Delete(duplicateTemplate.Template);
+
+            if(deleteSuccess && result.Count == 2)
+                templates.Remove(result);
+
+            return deleteSuccess;
+        }
+
         public IDuplicateSkillTemplateView View
         {
             get { return view; }
         }
 
-        private ObservableCollection<IDuplicateResult> templates;
-
         public ObservableCollection<IDuplicateResult> Templates
         {
             get
             {
-
-                if (templates == null)
+                if(templates == null)
                 {
                     var resultQuery = from item in service.AllTemplates
                                       where item.IsValid
@@ -72,7 +71,7 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
                                                               from item in g
                                                               select item) as IDuplicateResult;
 
-                    
+
                     templates = new ObservableCollection<IDuplicateResult>(resultQuery);
                 }
 
