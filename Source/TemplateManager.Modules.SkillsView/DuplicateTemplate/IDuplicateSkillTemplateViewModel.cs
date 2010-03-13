@@ -8,5 +8,6 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
         ObservableCollection<IDuplicateResult> Templates { get; }
         string HeaderText { get; }
         bool DeleteTemplate(DeleteTemplateArgs args);
+        void OnViewLoaded();
     }
 }

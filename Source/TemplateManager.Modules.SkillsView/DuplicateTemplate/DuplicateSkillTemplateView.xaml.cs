@@ -8,6 +8,12 @@
         public DuplicateSkillTemplateView()
         {
             InitializeComponent();
+            Loaded += DuplicateSkillTemplateView_Loaded;
+        }
+
+        void DuplicateSkillTemplateView_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Model.OnViewLoaded();
         }
 
         #region IDuplicateSkillTemplateView Members

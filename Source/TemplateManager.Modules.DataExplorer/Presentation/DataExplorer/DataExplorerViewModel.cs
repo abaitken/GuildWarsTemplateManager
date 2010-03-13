@@ -12,7 +12,7 @@ using TemplateManager.Infrastructure.Services;
 
 namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 {
-    internal partial class DataExplorerViewModel : ViewModelBase, IDataExplorerViewModel
+    internal partial class DataExplorerViewModel : BackgroundLoadingViewModel, IDataExplorerViewModel
     {
         private const string any = "<Any>";
         private static readonly KeyValuePair<string, string> anyPair = new KeyValuePair<string, string>(any, any);
@@ -20,7 +20,6 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
         private readonly IDataService service;
         private readonly IDataExplorerView view;
         private ICollectionView skills;
-        private bool viewLoaded;
 
         public DataExplorerViewModel(IDataExplorerView view, IDataService service)
         {
@@ -56,14 +55,22 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             }
         }
 
-        public void ViewLoaded()
+        protected override void WorkerDoWork(object sender, DoWorkEventArgs e)
         {
-            if(viewLoaded)
+            var result = CollectionViewSource.GetDefaultView(service.Skills);
+            result.Filter = SkillFilter;
+
+            e.Result = result;
+        }
+
+        protected override void WorkerRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs args)
+        {
+            var result = args.Result as ICollectionView;
+            if (result == null)
                 return;
 
-            viewLoaded = true;
-
             DataProviderLoadComplete();
+            Skills = result;
         }
 
         public IDataExplorerView View
@@ -133,8 +140,6 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             UpkeepValues = SelectValues(i => i.UpkeepCost.ToString());
             AreaOfEffectValues = SelectValues(i => i.AreaOfEffect);
             RemovesValues = SelectValues(i => i.Removes);
-
-            Skills = SelectSkills();
         }
 
         private IDictionary<string, string> SelectValues(Func<ISkill, IEnumerable<string>> selector)
@@ -178,14 +183,6 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             var result = values.Concat(additional).OrderBy(i => i.Key);
 
             return result.ToDictionary(k => k.Key, v => v.Value);
-        }
-
-        private ICollectionView SelectSkills()
-        {
-            var result = CollectionViewSource.GetDefaultView(service.Skills);
-            result.Filter = SkillFilter;
-
-            return result;
         }
 
         private bool SkillFilter(object obj)

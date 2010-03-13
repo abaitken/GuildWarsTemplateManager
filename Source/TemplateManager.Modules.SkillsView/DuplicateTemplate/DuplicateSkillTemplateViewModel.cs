@@ -1,5 +1,6 @@
 using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using TemplateManager.Common.ViewModel;
 using TemplateManager.Infrastructure.Controllers;
@@ -8,7 +9,7 @@ using TemplateManager.Infrastructure.Services;
 namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 {
     // TODO : Defer loading
-    internal class DuplicateSkillTemplateViewModel : ViewModelBase, IDuplicateSkillTemplateViewModel
+    internal class DuplicateSkillTemplateViewModel : BackgroundLoadingViewModel, IDuplicateSkillTemplateViewModel
     {
         private static readonly ViewDetails viewDetails = new ViewDetails("DuplicateTemplates",
                                                                           "Duplicate Templates",
@@ -24,7 +25,7 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
         {
             this.view = view;
             this.service = service;
-
+            templates = new ObservableCollection<IDuplicateResult>();
             view.Model = this;
 
             //service.TemplatesChanged += ServiceBuildsChanged;
@@ -44,10 +45,38 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
             var duplicateTemplate = obj.Template;
             var deleteSuccess = service.Delete(duplicateTemplate.Template);
 
-            if(deleteSuccess && result.Count == 2)
+            if (deleteSuccess && result.Count == 2)
                 templates.Remove(result);
 
             return deleteSuccess;
+        }
+
+        protected override void WorkerDoWork(object sender, DoWorkEventArgs e)
+        {
+            var resultQuery = from item in service.AllTemplates
+                              where item.IsValid
+                              group item by item.SkillKey
+                                  into g
+                                  where g.Count() > 1
+                                  select
+                                  new DuplicateResult(this,
+                                                      from item in g
+                                                      select item) as IDuplicateResult;
+
+
+            var result = new ObservableCollection<IDuplicateResult>(resultQuery);
+
+            e.Result = result;
+        }
+
+        protected override void WorkerRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            var result = e.Result as ObservableCollection<IDuplicateResult>;
+
+            if (result == null)
+                return;
+
+            Templates = result;
         }
 
         public IDuplicateSkillTemplateView View
@@ -59,23 +88,16 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
         {
             get
             {
-                if(templates == null)
-                {
-                    var resultQuery = from item in service.AllTemplates
-                                      where item.IsValid
-                                      group item by item.SkillKey
-                                      into g
-                                          where g.Count() > 1
-                                          select
-                                          new DuplicateResult(this,
-                                                              from item in g
-                                                              select item) as IDuplicateResult;
-
-
-                    templates = new ObservableCollection<IDuplicateResult>(resultQuery);
-                }
-
                 return templates;
+            }
+
+            set
+            {
+                if (templates == value)
+                    return;
+
+                templates = value;
+                SendPropertyChanged("Templates");
             }
         }
 
@@ -88,7 +110,7 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 
         private void ServiceBuildsChanged(object sender, EventArgs e)
         {
-            SendPropertyChanged("Templates");
+
         }
     }
 }

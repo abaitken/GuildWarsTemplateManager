@@ -10,5 +10,6 @@ namespace TemplateManager.Modules.SkillsView.SkillView
         ICommand SearchCommand { get; }
         ICommand ResetCommand { get; }
         string HeaderText { get; }
+        void OnViewLoaded();
     }
 }

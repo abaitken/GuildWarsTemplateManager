@@ -11,7 +11,7 @@ using TemplateManager.Infrastructure.Services;
 
 namespace TemplateManager.Modules.SkillsView.SkillView
 {
-    internal class SkillsViewModel : ViewModelBase, ISkillsViewModel
+    internal class SkillsViewModel : BackgroundLoadingViewModel, ISkillsViewModel
     {
         private static readonly ViewDetails viewDetails = new ViewDetails("SkillsView", "Skill Templates");
         private readonly IDataService dataService;
@@ -38,8 +38,6 @@ namespace TemplateManager.Modules.SkillsView.SkillView
 
             GenerateCommands();
             ResetFilters();
-            CreateView();
-
 
             service.TemplatesChanged += ServiceBuildsChanged;
 
@@ -216,12 +214,21 @@ namespace TemplateManager.Modules.SkillsView.SkillView
 
         #endregion
 
-        private void CreateView()
+        protected override void WorkerDoWork(object sender, DoWorkEventArgs e)
         {
             var defaultView = CollectionViewSource.GetDefaultView(service.AllTemplates);
             defaultView.Filter = MatchBuild;
 
-            Builds = defaultView;
+            e.Result = defaultView;
+        }
+
+        protected override void WorkerRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs args)
+        {
+            var result = args.Result as ICollectionView;
+            if(result == null)
+                return;
+
+            Builds = result;
         }
 
         private void GenerateCommands()
@@ -259,7 +266,7 @@ namespace TemplateManager.Modules.SkillsView.SkillView
 
         private void ServiceBuildsChanged(object sender, EventArgs e)
         {
-            CreateView();
+            RunWorkerASync();
         }
 
         private bool MatchBuild(object buildObject)

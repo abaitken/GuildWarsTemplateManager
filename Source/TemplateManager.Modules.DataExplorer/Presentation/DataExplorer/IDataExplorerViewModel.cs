@@ -49,6 +49,6 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
         KeyValuePair<string, string> SelectedUpkeepValue { get; set; }
         IList<KeyValuePair<string, string>> SelectedRemovesValues { get; set; }
         string HeaderText { get; }
-        void ViewLoaded();
+        void OnViewLoaded();
     }
 }

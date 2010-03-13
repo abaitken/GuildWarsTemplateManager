@@ -2,7 +2,7 @@
 
 namespace TemplateManager.Common.ViewModel
 {
-    public class ViewModelBase : INotifyPropertyChanged
+    public abstract class ViewModelBase : INotifyPropertyChanged
     {
         #region INotifyPropertyChanged Members
 

@@ -30,7 +30,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 
         private void DataExplorerView_Loaded(object sender, RoutedEventArgs e)
         {
-            Model.ViewLoaded();
+            Model.OnViewLoaded();
         }
     }
 }
