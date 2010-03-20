@@ -14,11 +14,13 @@ namespace TemplateManager.Modules.Workspace
     {
         private readonly IUnityContainer container;
         private readonly IRegionManager regionManager;
+        private readonly ViewManager viewManager;
 
-        public WorkspaceModule(IUnityContainer container, IRegionManager regionManager)
+        public WorkspaceModule(IUnityContainer container, IRegionManager regionManager, ViewManager viewManager)
         {
             this.container = container;
             this.regionManager = regionManager;
+            this.viewManager = viewManager;
         }
 
         #region IModule Members
@@ -35,6 +37,9 @@ namespace TemplateManager.Modules.Workspace
         {
             regionManager.RegisterViewWithRegion(RegionNames.ShellRegion,
                                                  () => container.Resolve<IWorkspaceViewModel>().View);
+            viewManager.Register(OptionsViewModel.ViewDetails,
+                                 RegionNames.DocumentRegion,
+                                 () => container.Resolve<IOptionsViewModel>().View);
         }
 
         private void RegisterViews()

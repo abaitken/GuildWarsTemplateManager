@@ -1,4 +1,6 @@
-﻿namespace TemplateManager.Modules.Workspace.Presentation.Options
+﻿using System;
+
+namespace TemplateManager.Modules.Workspace.Presentation.Options
 {
     /// <summary>
     /// Interaction logic for BuildStoreSelector.xaml
@@ -19,5 +21,10 @@
         }
 
         #endregion
+
+        public string HeaderText
+        {
+            get { return Model.HeaderText; }
+        }
     }
 }

@@ -6,9 +6,11 @@ using System.Windows.Data;
 using System.Windows.Input;
 using InfiniteRain.Shared.Presentation.Commands;
 using InfiniteRain.Shared.Presentation.PresentationModel;
+using InfiniteRain.Shared.Presentation.ViewManager;
 using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Infrastructure.Model;
 using TemplateManager.Infrastructure.Services;
+using TemplateManager.Infrastructure;
 
 namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 {
@@ -16,7 +18,7 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
     {
         private const string any = "<Any>";
         private static readonly KeyValuePair<string, string> anyPair = new KeyValuePair<string, string>(any, any);
-        private static readonly ViewDetails viewDetails = new ViewDetails("DataExplorer", "Data Explorer");
+        private static readonly ViewDetails viewDetails = new ViewDetails("Data Explorer", ToolCategories.View);
         private readonly IDataService service;
         private readonly IDataExplorerView view;
         private ICollectionView skills;

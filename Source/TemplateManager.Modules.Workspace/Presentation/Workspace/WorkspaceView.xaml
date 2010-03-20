@@ -73,17 +73,9 @@
                           CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"/>
             </MenuItem>
 
-            <MenuItem Header="_View" ItemsSource="{Binding ViewItems}" />
+            <MenuItem Header="_View" ItemsSource="{Binding ViewMenuItems}" />
 
-            <MenuItem Header="_Tools">
-                <MenuItem Header="_Options" 
-                          Command="{Binding ShowOptionsCommand}"
-                          CommandParameter="{x:Static Infrastructure:RegionNames.DocumentRegion}">
-                    <MenuItem.Icon>
-                        <Image Source="../Resources/Options.png" Width="16" Height="16" />
-                    </MenuItem.Icon>
-                </MenuItem>
-            </MenuItem>
+            <MenuItem Header="_Tools" ItemsSource="{Binding ToolMenuItems}"  />
 
             <MenuItem Header="_Help">
                 <MenuItem Header="_Help Topics" 

@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using InfiniteRain.Shared.Imaging;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TemplateManager.Common;
 
 namespace TemplateManager.DataFetcher.Tests

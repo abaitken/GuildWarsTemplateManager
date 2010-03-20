@@ -3,7 +3,7 @@ using InfiniteRain.Shared.Presentation;
 
 namespace TemplateManager.Modules.Workspace.Presentation.Options
 {
-    public interface IOptionsViewModel : IHeadedContent
+    public interface IOptionsViewModel
     {
         IOptionsView View { get; }
 
@@ -13,6 +13,7 @@ namespace TemplateManager.Modules.Workspace.Presentation.Options
         ICommand ApplySettingsCommand { get; }
         ICommand UseDefaultsCommand { get; }
         ICommand BrowseForTemplateFolderCommand { get; }
+        string HeaderText { get; }
         void WriteSettings();
     }
 }

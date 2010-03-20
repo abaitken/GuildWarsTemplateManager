@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Windows.Input;
 using InfiniteRain.Shared.Presentation.Commands;
 using InfiniteRain.Shared.Presentation.PresentationModel;
+using InfiniteRain.Shared.Presentation.ViewManager;
 using TemplateManager.Infrastructure;
 using MessageBox=System.Windows.MessageBox;
 
@@ -15,6 +16,7 @@ namespace TemplateManager.Modules.Workspace.Presentation.Options
         private readonly IApplicationSettings applicationSettings;
         private readonly IOptionsView view;
         private string templatefolder;
+        public static readonly ViewDetails ViewDetails = new ViewDetails("Options", ToolCategories.Tool);
 
         public OptionsViewModel(IOptionsView view, IApplicationSettings applicationSettings)
         {
@@ -66,7 +68,7 @@ namespace TemplateManager.Modules.Workspace.Presentation.Options
 
         public string HeaderText
         {
-            get { return "Options"; }
+            get { return ViewDetails.Name; }
         }
 
         #endregion

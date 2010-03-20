@@ -82,7 +82,6 @@
     <Compile Include="..\Include\ProjectAssemblyInfo.cs">
       <Link>ProjectAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="ImageSerializer.cs" />
     <Compile Include="Presentation\LoadingControl.xaml.cs">
       <DependentUpon>LoadingControl.xaml</DependentUpon>
     </Compile>

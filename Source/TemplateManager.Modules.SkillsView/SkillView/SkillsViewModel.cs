@@ -5,15 +5,17 @@ using System.Windows.Data;
 using System.Windows.Input;
 using InfiniteRain.Shared.Presentation.Commands;
 using InfiniteRain.Shared.Presentation.PresentationModel;
+using InfiniteRain.Shared.Presentation.ViewManager;
 using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Infrastructure.Model;
 using TemplateManager.Infrastructure.Services;
+using TemplateManager.Infrastructure;
 
 namespace TemplateManager.Modules.SkillsView.SkillView
 {
     internal class SkillsViewModel : BackgroundLoadingViewModel, ISkillsViewModel
     {
-        private static readonly ViewDetails viewDetails = new ViewDetails("SkillsView", "Skill Templates");
+        private static readonly ViewDetails viewDetails = new ViewDetails("Skill Templates", ToolCategories.View);
         private readonly IDataService dataService;
         private readonly ISkillTemplateService service;
         private readonly ISkillsView view;

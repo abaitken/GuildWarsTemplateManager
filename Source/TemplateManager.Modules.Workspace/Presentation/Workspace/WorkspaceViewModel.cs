@@ -6,6 +6,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
+using InfiniteRain.Shared.Imaging;
 using InfiniteRain.Shared.Presentation;
 using InfiniteRain.Shared.Presentation.Commands;
 using InfiniteRain.Shared.Presentation.PresentationModel;
@@ -44,20 +45,35 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
             this.container = container;
             this.regionManager = regionManager;
             this.viewManager = viewManager;
-            view.Model = this;
 
             GenerateCommands();
+            view.Model = this;
         }
 
         public ICommand OpenRegionView { get; private set; }
 
-        public IEnumerable<MenuItem> ViewItems
+        public IEnumerable<MenuItem> ViewMenuItems
         {
             get
             {
-                return from item in viewManager.GetViewsForRegion(RegionNames.DocumentRegion)
-                       select CreateItem(item);
+                return GetMenuItems(ToolCategories.View);
             }
+        }
+
+        public IEnumerable<MenuItem> ToolMenuItems
+        {
+            get
+            {
+                return GetMenuItems(ToolCategories.Tool);
+            }
+        }
+
+        private IEnumerable<MenuItem> GetMenuItems(string category)
+        {
+            var result = from item in viewManager.GetViewsForCategory(category)
+                         select CreateItem(item);
+
+            return result;
         }
 
         #region IWorkspaceViewModel Members
@@ -67,7 +83,6 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
             get { return view; }
         }
 
-        public ICommand ShowOptionsCommand { get; private set; }
         public ICommand AboutCommand { get; private set; }
         public ICommand HelpCommand { get; private set; }
         public ICommand CloseWindowCommand { get; private set; }
@@ -79,14 +94,13 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
 
         private void GenerateCommands()
         {
-            ShowOptionsCommand = new DelegateCommand<string>(ShowOptionsWindow);
             HelpCommand = new DelegateCommand(OnHelpRequested);
             AboutCommand = new DelegateCommand(ShowAboutWindow);
             CloseWindowCommand = new DelegateCommand<Window>(OnCloseWindow);
             HelpTopicsCommand = new DelegateCommand(OnHelpTopicsRequested);
             CloseTabCommand = new DelegateCommand<TabItem>(OnCloseTab);
             ShowUpdateCheckWindowCommand = new DelegateCommand(DisplayUpdateNotification);
-            OpenRegionView = new DelegateCommand<string>(OnOpenRegionView);
+            OpenRegionView = new DelegateCommand<ViewDetails>(OnOpenRegionView);
         }
 
         private void OnCloseTab(TabItem tabItem)
@@ -101,19 +115,14 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
                              {
                                  Header = details.Name,
                                  Command = OpenRegionView,
-                                 CommandParameter = details.Key
+                                 CommandParameter = details
                              };
 
-            if(details.ImageUri != null)
+            if (details.ImageUri != null)
             {
-                var decoder = BitmapDecoder.Create(details.ImageUri,
-                                                   BitmapCreateOptions.PreservePixelFormat,
-                                                   BitmapCacheOption.Default);
-
-                var source = decoder.Frames[0];
                 var image = new Image
                                 {
-                                    Source = source,
+                                    Source = details.ImageUri.CreateSource(),
                                     Width = 16,
                                     Height = 16
                                 };
@@ -122,38 +131,12 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
             return result;
         }
 
-        private void OnOpenRegionView(string viewKey)
+        private void OnOpenRegionView(ViewDetails details)
         {
-            viewManager.OpenView(viewKey);
-        }
+            if(viewManager.ActivateView(details))
+                return;
 
-        private void ShowViewRegion<TView, TViewModel>(string regionName, Func<TViewModel, TView> getViewFromViewModel)
-        {
-            var region = regionManager.Regions[regionName];
-            var newView = GetView<TView>(region);
-
-            if(newView != null)
-            {
-                region.Activate(newView);
-            }
-            else
-            {
-                newView = getViewFromViewModel(container.Resolve<TViewModel>());
-
-                region.Add(newView);
-                region.Activate(newView);
-            }
-        }
-
-        private static object GetView<TView>(IRegion region)
-        {
-            foreach(var view in region.Views)
-            {
-                if(view is TView)
-                    return view;
-            }
-
-            return null;
+            viewManager.OpenView(details);
         }
 
 
@@ -181,11 +164,6 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
         private void ShowAboutWindow()
         {
             container.ShowViewDialog<IAboutViewModel>(model => model.View);
-        }
-
-        private void ShowOptionsWindow(string regionName)
-        {
-            ShowViewRegion<IOptionsView, IOptionsViewModel>(regionName, vm => vm.View);
         }
 
         protected override void WorkerRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs args)

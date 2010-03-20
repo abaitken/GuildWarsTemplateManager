@@ -3,15 +3,16 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using InfiniteRain.Shared.Presentation.PresentationModel;
+using InfiniteRain.Shared.Presentation.ViewManager;
 using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Infrastructure.Services;
+using TemplateManager.Infrastructure;
 
 namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 {
     internal class DuplicateSkillTemplateViewModel : BackgroundLoadingViewModel, IDuplicateSkillTemplateViewModel
     {
-        private static readonly ViewDetails viewDetails = new ViewDetails("DuplicateTemplates",
-                                                                          "Duplicate Templates",
+        private static readonly ViewDetails viewDetails = new ViewDetails("Duplicate Templates", ToolCategories.View,
                                                                           new Uri(
                                                                               "pack://application:,,,/TemplateManager.Modules.SkillsView;component/Presentation/Resources/DuplicateTemplates.png",
                                                                               UriKind.Absolute));
