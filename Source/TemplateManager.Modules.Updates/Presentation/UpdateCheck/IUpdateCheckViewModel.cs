@@ -9,5 +9,6 @@ namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck
         string LatestVersion { get; }
         string InformationUrl { get; }
         ICommand CloseWindowCommand { get; }
+        void OnViewLoaded();
     }
 }

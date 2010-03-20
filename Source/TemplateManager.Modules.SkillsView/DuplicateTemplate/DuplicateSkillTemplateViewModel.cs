@@ -8,7 +8,6 @@ using TemplateManager.Infrastructure.Services;
 
 namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 {
-    // TODO : Defer loading
     internal class DuplicateSkillTemplateViewModel : BackgroundLoadingViewModel, IDuplicateSkillTemplateViewModel
     {
         private static readonly ViewDetails viewDetails = new ViewDetails("DuplicateTemplates",

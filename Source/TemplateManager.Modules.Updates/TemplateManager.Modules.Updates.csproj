@@ -93,6 +93,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TemplateManager.Common\TemplateManager.Common.csproj">
+      <Project>{5D573659-1A65-4112-9EED-1BF70DB94F22}</Project>
+      <Name>TemplateManager.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TemplateManager.Infrastructure\TemplateManager.Infrastructure.csproj">
       <Project>{67BC7C95-AB1E-422D-9AD4-E34CA77460A9}</Project>
       <Name>TemplateManager.Infrastructure</Name>

@@ -6,53 +6,40 @@ namespace TemplateManager.Modules.Services
 {
     internal class UpdateService : IUpdateService
     {
-        private bool cacheInformation;
-        private string informationUrl;
-        private Version latestVersion;
-
         #region IUpdateService Members
 
-        public Version LatestVersion
+        public IVersionInfo GetLatestVersionInformation()
         {
-            get
-            {
-                GetInformation();
-                return latestVersion;
-            }
-        }
+            var client = new TemplateManagerService();
 
-        public string InformationUrl
-        {
-            get
-            {
-                GetInformation();
-                return informationUrl;
-            }
-        }
+            var info = client.GetLatestVersion();
 
-        public void Refresh()
-        {
-            cacheInformation = false;
+            if(info == null)
+                return null;
+
+            var result = new UpdateInfo
+                             {
+                                 LatestVersion = new Version(info.Major, info.Minor, info.Build, info.Revision),
+                                 InformationUrl = info.InformationUrl
+                             };
+
+            return result;
         }
 
         #endregion
 
-        private void GetInformation()
+        #region Nested type: UpdateInfo
+
+        private class UpdateInfo : IVersionInfo
         {
-            if(cacheInformation)
-                return;
+            #region IVersionInfo Members
 
-            cacheInformation = true;
+            public Version LatestVersion { get; set; }
+            public string InformationUrl { get; set; }
 
-            var client = new TemplateManagerService();
-            // TODO : Do this on a seperate thread
-            var result = client.GetLatestVersion();
-
-            if(result == null)
-                return;
-
-            latestVersion = new Version(result.Major, result.Minor, result.Build, result.Revision);
-            informationUrl = result.InformationUrl;
+            #endregion
         }
+
+        #endregion
     }
 }

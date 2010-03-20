@@ -1,14 +1,15 @@
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 using Microsoft.Practices.Composite.Presentation.Commands;
+using TemplateManager.Common.ViewModel;
 using TemplateManager.Infrastructure.Model;
 
 namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 {
-    // TODO : Post updates to count, bind in UI
-    internal class DuplicateResult : IDuplicateResult
+    internal class DuplicateResult : ViewModelBase, IDuplicateResult
     {
         private readonly IDuplicateSkillTemplateViewModel parent;
         private readonly ObservableCollection<IDuplicateTemplate> templates;
@@ -20,8 +21,18 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
                                                                           select
                                                                               new DuplicateTemplate(this, item) as
                                                                               IDuplicateTemplate);
-
+            UpdateHeader();
             DeleteTemplateCommand = new DelegateCommand<IDuplicateTemplate>(OnDeleteTemplate);
+        }
+
+        private void UpdateHeader()
+        {
+            Header = string.Format("{0} duplicate templates", Count);
+        }
+        
+        public int Count
+        {
+            get { return Templates.Count; }
         }
 
         #region IDuplicateResult Members
@@ -33,23 +44,33 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 
         public ICommand DeleteTemplateCommand { get; private set; }
 
-        public int Count
+
+        string header;
+        public string Header
         {
-            get { return Templates.Count; }
+            get { return header; }
+            set
+            {
+                if (header == value)
+                    return;
+
+                header = value;
+                SendPropertyChanged("Header");
+            }
         }
+
 
         #endregion
 
         private void OnDeleteTemplate(IDuplicateTemplate obj)
         {
             var args = new DeleteTemplateArgs(obj, this);
-            if(parent.DeleteTemplate(args))
-                templates.Remove(obj);
-        }
+            
+            if(!parent.DeleteTemplate(args))
+                return;
 
-        public override string ToString()
-        {
-            return string.Format("{0} duplicate templates", Count);
+            templates.Remove(obj);
+            UpdateHeader();
         }
     }
 }

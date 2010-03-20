@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -9,6 +10,7 @@ using Microsoft.Practices.Composite.Presentation.Commands;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
 using TemplateManager.Common.Commands;
+using TemplateManager.Common.ViewModel;
 using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Infrastructure.Services;
@@ -17,7 +19,7 @@ using TemplateManager.Modules.Workspace.Presentation.Options;
 
 namespace TemplateManager.Modules.Workspace.Presentation.Workspace
 {
-    internal class WorkspaceViewModel : IWorkspaceViewModel
+    internal class WorkspaceViewModel : BackgroundLoadingViewModel, IWorkspaceViewModel
     {
         private readonly IApplicationInformationService applicationInformationService;
         private readonly IUnityContainer container;
@@ -70,23 +72,7 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
         public ICommand CloseTabCommand { get; private set; }
         public ICommand ShowUpdateCheckWindowCommand { get; private set; }
 
-        public void OnViewLoaded()
-        {
-            CheckForUpdates();
-        }
-
         #endregion
-
-        private void CheckForUpdates()
-        {
-            var currentVersion = new Version(applicationInformationService.FileVersion);
-            var latestVersion = updateService.LatestVersion;
-
-            if(currentVersion >= latestVersion)
-                return;
-
-            DisplayUpdateNotification();
-        }
 
         private void GenerateCommands()
         {
@@ -197,6 +183,31 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
         private void ShowOptionsWindow(string regionName)
         {
             ShowViewRegion<IOptionsView, IOptionsViewModel>(regionName, vm => vm.View);
+        }
+
+        protected override void WorkerRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs args)
+        {
+            var result = args.Result as IVersionInfo;
+
+            if(result == null)
+                return;
+
+            var currentVersion = new Version(applicationInformationService.FileVersion);
+            var latestVersion = result.LatestVersion;
+            CheckForUpdates(currentVersion, latestVersion);
+        }
+
+        private void CheckForUpdates(Version currentVersion, Version latestVersion)
+        {
+            if(currentVersion >= latestVersion)
+                return;
+
+            DisplayUpdateNotification();
+        }
+
+        protected override void WorkerDoWork(object sender, DoWorkEventArgs e)
+        {
+            e.Result = updateService.GetLatestVersionInformation();
         }
     }
 }

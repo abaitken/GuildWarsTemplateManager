@@ -8,6 +8,12 @@
         public UpdateCheckView()
         {
             InitializeComponent();
+            Loaded += UpdateCheckView_Loaded;
+        }
+
+        void UpdateCheckView_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Model.OnViewLoaded();
         }
 
         #region IUpdateCheckView Members

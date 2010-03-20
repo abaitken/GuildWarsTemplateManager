@@ -1,12 +1,14 @@
-﻿using System.Diagnostics;
+﻿using System.ComponentModel;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
 using Microsoft.Practices.Composite.Presentation.Commands;
+using TemplateManager.Common.ViewModel;
 using TemplateManager.Infrastructure.Services;
 
 namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck
 {
-    internal class UpdateCheckViewModel : IUpdateCheckViewModel
+    internal class UpdateCheckViewModel : BackgroundLoadingViewModel, IUpdateCheckViewModel
     {
         private readonly IApplicationInformationService informationService;
         private readonly IUpdateService updateService;
@@ -33,19 +35,49 @@ namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck
             get { return view; }
         }
 
+
+        string currentVersion;
         public string CurrentVersion
         {
-            get { return informationService.FileVersion; }
+            get { return currentVersion; }
+            set
+            {
+                if (currentVersion == value)
+                    return;
+
+                currentVersion = value;
+                SendPropertyChanged("CurrentVersion");
+            }
         }
 
+
+        string latestVersion;
         public string LatestVersion
         {
-            get { return updateService.LatestVersion.ToString(); }
+            get { return latestVersion; }
+            set
+            {
+                if (latestVersion == value)
+                    return;
+
+                latestVersion = value;
+                SendPropertyChanged("LatestVersion");
+            }
         }
 
+
+        string informationUrl;
         public string InformationUrl
         {
-            get { return updateService.InformationUrl; }
+            get { return informationUrl; }
+            set
+            {
+                if (informationUrl == value)
+                    return;
+
+                informationUrl = value;
+                SendPropertyChanged("InformationUrl");
+            }
         }
 
         public ICommand CloseWindowCommand { get; private set; }
@@ -66,6 +98,26 @@ namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck
         private static void OnCloseWindow(Window obj)
         {
             obj.Close();
+        }
+
+        protected override void WorkerRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs args)
+        {
+            CurrentVersion = informationService.FileVersion;
+
+            var result = args.Result as IVersionInfo;
+
+            if(result == null)
+                return;
+
+            InformationUrl = result.InformationUrl;
+            LatestVersion = result.LatestVersion.ToString();
+        }
+
+        protected override void WorkerDoWork(object sender, DoWorkEventArgs e)
+        {
+            var result = updateService.GetLatestVersionInformation();
+
+            e.Result = result;
         }
     }
 }

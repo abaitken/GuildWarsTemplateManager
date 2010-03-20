@@ -1,7 +1,8 @@
 ﻿<UserControl x:Class="TemplateManager.Modules.SkillsView.DuplicateTemplate.DuplicateSkillTemplateView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:Presentation="clr-namespace:TemplateManager.Common.Presentation;assembly=TemplateManager.Common">
+    xmlns:Presentation="clr-namespace:TemplateManager.Common.Presentation;assembly=TemplateManager.Common"
+    xmlns:System="clr-namespace:System;assembly=mscorlib">
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
     </UserControl.Resources>
@@ -10,7 +11,7 @@
             <ItemsControl ItemsSource="{Binding Templates}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Expander Header="{Binding}">
+                        <Expander Header="{Binding Header}">
                             <Border BorderThickness="0.5" BorderBrush="Black">
                                 <StackPanel Orientation="Vertical">
                                     <ItemsControl ItemsSource="{Binding Templates}">

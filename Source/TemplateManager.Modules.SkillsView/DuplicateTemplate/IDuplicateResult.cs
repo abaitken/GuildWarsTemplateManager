@@ -7,6 +7,7 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
     {
         ObservableCollection<IDuplicateTemplate> Templates { get; }
         ICommand DeleteTemplateCommand { get; }
+        string Header { get; }
         int Count { get; }
     }
 }
