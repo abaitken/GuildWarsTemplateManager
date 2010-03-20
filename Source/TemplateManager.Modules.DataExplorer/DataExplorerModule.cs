@@ -1,4 +1,5 @@
-﻿using Microsoft.Practices.Composite.Modularity;
+﻿using InfiniteRain.Shared.Presentation.ViewManager;
+using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Unity;
 using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Controllers;
@@ -9,9 +10,9 @@ namespace TemplateManager.Modules.DataExplorer
     public class DataExplorerModule : IModule
     {
         private readonly IUnityContainer container;
-        private readonly IViewManager viewManager;
+        private readonly ViewManager viewManager;
 
-        public DataExplorerModule(IUnityContainer container, IViewManager viewManager)
+        public DataExplorerModule(IUnityContainer container, ViewManager viewManager)
         {
             this.container = container;
             this.viewManager = viewManager;

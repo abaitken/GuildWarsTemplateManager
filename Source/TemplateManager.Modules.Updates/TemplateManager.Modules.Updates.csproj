@@ -100,6 +100,10 @@
       <Project>{D07C6BA9-54F3-454D-8514-ADB82178656C}</Project>
       <Name>InfiniteRain.Shared.Presentation</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Shared\InfiniteRain.Shared\InfiniteRain.Shared.csproj">
+      <Project>{AC0A0104-8EA2-48FA-873C-A3609BC658D1}</Project>
+      <Name>InfiniteRain.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TemplateManager.Infrastructure\TemplateManager.Infrastructure.csproj">
       <Project>{67BC7C95-AB1E-422D-9AD4-E34CA77460A9}</Project>
       <Name>TemplateManager.Infrastructure</Name>

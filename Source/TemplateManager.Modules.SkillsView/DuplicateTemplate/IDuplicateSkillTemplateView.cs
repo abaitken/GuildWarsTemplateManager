@@ -1,4 +1,4 @@
-﻿using TemplateManager.Infrastructure;
+﻿using InfiniteRain.Shared.Presentation;
 
 namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 {

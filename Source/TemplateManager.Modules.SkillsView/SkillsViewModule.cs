@@ -1,4 +1,5 @@
-﻿using Microsoft.Practices.Composite.Modularity;
+﻿using InfiniteRain.Shared.Presentation.ViewManager;
+using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Unity;
 using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Controllers;
@@ -10,9 +11,9 @@ namespace TemplateManager.Modules.SkillsView
     public class SkillsViewModule : IModule
     {
         private readonly IUnityContainer container;
-        private readonly IViewManager viewManager;
+        private readonly ViewManager viewManager;
 
-        public SkillsViewModule(IUnityContainer container, IViewManager viewManager)
+        public SkillsViewModule(IUnityContainer container, ViewManager viewManager)
         {
             this.container = container;
             this.viewManager = viewManager;

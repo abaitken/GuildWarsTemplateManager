@@ -1,4 +1,5 @@
-﻿using Microsoft.Practices.Composite.Modularity;
+﻿using InfiniteRain.Shared.Presentation.ViewManager;
+using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
 using TemplateManager.Infrastructure;
@@ -38,8 +39,6 @@ namespace TemplateManager.Modules.Workspace
 
         private void RegisterViews()
         {
-            container.RegisterType<IViewManager, ViewManager>(new ContainerControlledLifetimeManager());
-
             container.RegisterType<IAboutView, AboutView>();
             container.RegisterType<IAboutViewModel, AboutViewModel>();
 

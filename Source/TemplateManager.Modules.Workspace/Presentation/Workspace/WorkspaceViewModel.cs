@@ -6,8 +6,11 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
+using InfiniteRain.Shared.Presentation;
 using InfiniteRain.Shared.Presentation.Commands;
 using InfiniteRain.Shared.Presentation.PresentationModel;
+using InfiniteRain.Shared.Presentation.ViewManager;
+using InfiniteRain.Shared.Services;
 using Microsoft.Practices.Composite.Presentation.Commands;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
@@ -26,14 +29,14 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
         private readonly IRegionManager regionManager;
         private readonly IUpdateService updateService;
         private readonly IWorkspaceView view;
-        private readonly IViewManager viewManager;
+        private readonly ViewManager viewManager;
 
         public WorkspaceViewModel(IWorkspaceView view,
                                   IUpdateService updateService,
                                   IApplicationInformationService applicationInformationService,
                                   IUnityContainer container,
                                   IRegionManager regionManager,
-                                  IViewManager viewManager)
+                                  ViewManager viewManager)
         {
             this.view = view;
             this.updateService = updateService;

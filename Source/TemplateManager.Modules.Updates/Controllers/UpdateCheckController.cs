@@ -1,5 +1,5 @@
-﻿using Microsoft.Practices.Unity;
-using TemplateManager.Infrastructure;
+﻿using InfiniteRain.Shared.Presentation;
+using Microsoft.Practices.Unity;
 using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Modules.Updates.Presentation.UpdateCheck;
 

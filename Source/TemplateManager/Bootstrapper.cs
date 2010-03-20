@@ -1,10 +1,11 @@
 ﻿using System.Windows;
 using InfiniteRain.Shared;
+using InfiniteRain.Shared.Presentation.ViewManager;
+using InfiniteRain.Shared.Services;
 using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Composite.UnityExtensions;
 using Microsoft.Practices.Unity;
 using TemplateManager.Infrastructure;
-using TemplateManager.Infrastructure.Services;
 using TemplateManager.Modules.DataExplorer;
 using TemplateManager.Modules.Services;
 using TemplateManager.Modules.SkillsView;
@@ -33,6 +34,8 @@ namespace TemplateManager
             Container.RegisterType<IMainWindowView, MainWindowView>();
             Container.RegisterType<IMainWindowViewModel, MainWindowViewModel>();
             Container.RegisterType<IApplicationInformationService, ApplicationInformation>();
+            
+            Container.RegisterType<ViewManager>(new ContainerControlledLifetimeManager());
         }
 
         protected override DependencyObject CreateShell()
