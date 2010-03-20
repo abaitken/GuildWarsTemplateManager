@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
+using InfiniteRain.Shared.Presentation.PresentationModel;
 using Microsoft.Practices.Composite.Presentation.Commands;
-using TemplateManager.Common.ViewModel;
 using TemplateManager.Infrastructure.Model;
 
 namespace TemplateManager.Modules.SkillsView.DuplicateTemplate

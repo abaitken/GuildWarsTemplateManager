@@ -79,8 +79,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Include\GlobalAssemblyInfo.cs">
+    <Compile Include="..\..\Shared\Include\GlobalAssemblyInfo.cs">
       <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Include\ProjectAssemblyInfo.cs">
+      <Link>ProjectAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Controllers\IUpdateCheckController.cs" />
     <Compile Include="Controllers\IViewManager.cs" />

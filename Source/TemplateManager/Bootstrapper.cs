@@ -1,8 +1,8 @@
 ﻿using System.Windows;
+using InfiniteRain.Shared;
 using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Composite.UnityExtensions;
 using Microsoft.Practices.Unity;
-using TemplateManager.Common;
 using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Services;
 using TemplateManager.Modules.DataExplorer;

@@ -1,24 +1,14 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
 
 [assembly: AssemblyTitle("Template Parser")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("RELEASE")]
-[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Template Parser")]
-[assembly: AssemblyCopyright("Copyright © Alex Boyne-Aitken 2009")]
 [assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-[assembly: ComVisible(false)]
 [assembly: AssemblyVersion("1.0.0.1")]
 [assembly: AssemblyFileVersion("1.0.0.1")]
-[assembly: CLSCompliant(true)]
+
 [assembly:
     InternalsVisibleTo(
         "TemplateParser.Tests, publickey=0024000004800000940000000602000000240000525341310004000001000100f3a73496503bc9bab4e00c0a6a1185f4a440a9c0bfdd69b30870ceaadca57f8f35f3a7e32b1c789d2724a68f86b2d48068afbc90655907a6bb4819b685c4388ec3d146bd2dcce83d7a97c2e41f1933345c54a62eb054f26889b180c4f8df276bf41c6eec19e689f2567e39743d3b83b7a392856034484798c89f3c26ccbe66d6"

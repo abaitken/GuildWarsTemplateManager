@@ -57,6 +57,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\Shared\Include\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="Base64BinaryConverter.cs" />
     <Compile Include="BinaryIterator.cs" />
     <Compile Include="BitSet.cs" />

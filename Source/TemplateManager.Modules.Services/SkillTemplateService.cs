@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using TemplateManager.Common.FileSystem;
+using InfiniteRain.Shared.FileSystem;
 using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Model;
 using TemplateManager.Infrastructure.Services;

@@ -127,8 +127,11 @@
     <Resource Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Include\GlobalAssemblyInfo.cs">
+    <Compile Include="..\..\Shared\Include\GlobalAssemblyInfo.cs">
       <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Include\ProjectAssemblyInfo.cs">
+      <Link>ProjectAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Services\ApplicationInformation.cs" />
     <Compile Include="Services\ApplicationSettings.cs" />
@@ -153,9 +156,13 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TemplateManager.Common\TemplateManager.Common.csproj">
-      <Project>{5D573659-1A65-4112-9EED-1BF70DB94F22}</Project>
-      <Name>TemplateManager.Common</Name>
+    <ProjectReference Include="..\..\Shared\InfiniteRain.Shared.Presentation\InfiniteRain.Shared.Presentation.csproj">
+      <Project>{D07C6BA9-54F3-454D-8514-ADB82178656C}</Project>
+      <Name>InfiniteRain.Shared.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\InfiniteRain.Shared\InfiniteRain.Shared.csproj">
+      <Project>{AC0A0104-8EA2-48FA-873C-A3609BC658D1}</Project>
+      <Name>InfiniteRain.Shared</Name>
     </ProjectReference>
     <ProjectReference Include="..\TemplateManager.Infrastructure\TemplateManager.Infrastructure.csproj">
       <Project>{67BC7C95-AB1E-422D-9AD4-E34CA77460A9}</Project>

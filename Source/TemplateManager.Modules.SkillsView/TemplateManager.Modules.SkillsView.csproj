@@ -87,8 +87,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Include\GlobalAssemblyInfo.cs">
+    <Compile Include="..\..\Shared\Include\GlobalAssemblyInfo.cs">
       <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Include\ProjectAssemblyInfo.cs">
+      <Link>ProjectAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="DuplicateTemplate\DeleteTemplateArgs.cs" />
     <Compile Include="DuplicateTemplate\DuplicateResult.cs" />
@@ -129,6 +132,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\InfiniteRain.Shared.Presentation\InfiniteRain.Shared.Presentation.csproj">
+      <Project>{D07C6BA9-54F3-454D-8514-ADB82178656C}</Project>
+      <Name>InfiniteRain.Shared.Presentation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TemplateManager.Common\TemplateManager.Common.csproj">
       <Project>{5D573659-1A65-4112-9EED-1BF70DB94F22}</Project>
       <Name>TemplateManager.Common</Name>

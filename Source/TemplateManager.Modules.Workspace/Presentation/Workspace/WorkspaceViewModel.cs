@@ -6,11 +6,11 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
+using InfiniteRain.Shared.Presentation.Commands;
+using InfiniteRain.Shared.Presentation.PresentationModel;
 using Microsoft.Practices.Composite.Presentation.Commands;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
-using TemplateManager.Common.Commands;
-using TemplateManager.Common.ViewModel;
 using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Infrastructure.Services;
@@ -127,18 +127,18 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
         private void ShowViewRegion<TView, TViewModel>(string regionName, Func<TViewModel, TView> getViewFromViewModel)
         {
             var region = regionManager.Regions[regionName];
-            var view = GetView<TView>(region);
+            var newView = GetView<TView>(region);
 
-            if(view != null)
+            if(newView != null)
             {
-                region.Activate(view);
+                region.Activate(newView);
             }
             else
             {
-                view = getViewFromViewModel(container.Resolve<TViewModel>());
+                newView = getViewFromViewModel(container.Resolve<TViewModel>());
 
-                region.Add(view);
-                region.Activate(view);
+                region.Add(newView);
+                region.Activate(newView);
             }
         }
 

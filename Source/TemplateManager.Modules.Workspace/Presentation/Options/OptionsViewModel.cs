@@ -3,8 +3,8 @@ using System.IO;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
-using TemplateManager.Common.Commands;
-using TemplateManager.Common.ViewModel;
+using InfiniteRain.Shared.Presentation.Commands;
+using InfiniteRain.Shared.Presentation.PresentationModel;
 using TemplateManager.Infrastructure;
 using MessageBox=System.Windows.MessageBox;
 

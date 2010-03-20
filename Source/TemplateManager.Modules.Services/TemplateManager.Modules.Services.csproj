@@ -80,8 +80,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Include\GlobalAssemblyInfo.cs">
+    <Compile Include="..\..\Shared\Include\GlobalAssemblyInfo.cs">
       <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Include\ProjectAssemblyInfo.cs">
+      <Link>ProjectAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="DataService.cs" />
     <Compile Include="NativeObjects\NativeBuildFactory.cs" />
@@ -103,9 +106,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TemplateManager.Common\TemplateManager.Common.csproj">
-      <Project>{5D573659-1A65-4112-9EED-1BF70DB94F22}</Project>
-      <Name>TemplateManager.Common</Name>
+    <ProjectReference Include="..\..\Shared\InfiniteRain.Shared\InfiniteRain.Shared.csproj">
+      <Project>{AC0A0104-8EA2-48FA-873C-A3609BC658D1}</Project>
+      <Name>InfiniteRain.Shared</Name>
     </ProjectReference>
     <ProjectReference Include="..\TemplateManager.Data.GuildWars\TemplateManager.Data.GuildWars.csproj">
       <Project>{F8BF79D8-5153-4FAC-B229-461F905FA18E}</Project>

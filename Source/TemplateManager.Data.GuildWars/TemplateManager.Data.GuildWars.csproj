@@ -54,8 +54,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Include\GlobalAssemblyInfo.cs">
+    <Compile Include="..\..\Shared\Include\GlobalAssemblyInfo.cs">
       <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Include\ProjectAssemblyInfo.cs">
+      <Link>ProjectAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Model.cs">
       <DependentUpon>Model.xsd</DependentUpon>

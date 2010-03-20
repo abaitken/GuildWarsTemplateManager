@@ -4,8 +4,8 @@
              xmlns:dg="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit"
              xmlns:SkillsView1="clr-namespace:TemplateManager.Modules.SkillsView"             
              xmlns:local="clr-namespace:TemplateManager.Modules.SkillsView.SkillView"
-             xmlns:ListSynchronizer1="clr-namespace:TemplateManager.Common.Behaviours.ListSynchronizer;assembly=TemplateManager.Common"
              xmlns:Presentation="clr-namespace:TemplateManager.Common.Presentation;assembly=TemplateManager.Common"
+             xmlns:ListSynchronizer="clr-namespace:InfiniteRain.Shared.Presentation.Behaviours.ListSynchronizer;assembly=InfiniteRain.Shared.Presentation"
              x:Name="ThisControl">
     <UserControl.Resources>
         <local:NullableBoolConverter x:Key="NullableBoolConverter" />
@@ -61,7 +61,7 @@
 
                     <ListBox x:Name="PrimaryProfessions"  Grid.Row="7"
                       ItemsSource="{Binding PrimaryProfessions}"
-                      ListSynchronizer1:MultiSelectorBehaviours.SynchronizedSelectedItems="{Binding SelectedPrimaryProfessions}"
+                      ListSynchronizer:MultiSelectorBehaviours.SynchronizedSelectedItems="{Binding SelectedPrimaryProfessions}"
                       SelectionMode="Extended">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
@@ -79,7 +79,7 @@
 
                     <ListBox x:Name="SecondaryProfessions" Grid.Column="1"  Grid.Row="7"
                       ItemsSource="{Binding SecondaryProfessions}"
-                      ListSynchronizer1:MultiSelectorBehaviours.SynchronizedSelectedItems="{Binding SelectedSecondaryProfessions}"
+                      ListSynchronizer:MultiSelectorBehaviours.SynchronizedSelectedItems="{Binding SelectedSecondaryProfessions}"
                       SelectionMode="Extended">
                         <ListBox.ItemTemplate>
                             <DataTemplate>

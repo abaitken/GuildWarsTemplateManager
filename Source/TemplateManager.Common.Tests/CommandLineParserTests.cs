@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using InfiniteRain.Shared;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TemplateManager.Common.Tests

@@ -1,7 +1,7 @@
 using System;
 using System.IO;
+using InfiniteRain.Shared.FileSystem;
 using Microsoft.Win32;
-using TemplateManager.Common.FileSystem;
 
 namespace TemplateManager.Services
 {

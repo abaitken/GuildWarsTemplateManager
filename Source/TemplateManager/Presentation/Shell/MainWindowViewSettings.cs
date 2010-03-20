@@ -1,4 +1,4 @@
-using TemplateManager.Common.WindowPositionManager;
+using InfiniteRain.Shared.Presentation.WindowPositionManager;
 
 namespace TemplateManager.Presentation.Shell
 {

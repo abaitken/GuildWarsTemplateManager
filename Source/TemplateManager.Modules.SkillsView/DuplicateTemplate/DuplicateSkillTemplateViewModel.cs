@@ -2,7 +2,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using TemplateManager.Common.ViewModel;
+using InfiniteRain.Shared.Presentation.PresentationModel;
 using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Infrastructure.Services;
 
