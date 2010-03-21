@@ -81,6 +81,21 @@ namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck
             }
         }
 
+
+        string downloadUrl;
+        public string DownloadUrl
+        {
+            get { return informationUrl; }
+            set
+            {
+                if (downloadUrl == value)
+                    return;
+
+                downloadUrl = value;
+                SendPropertyChanged("DownloadUrl");
+            }
+        }
+
         public ICommand CloseWindowCommand { get; private set; }
 
         #endregion
@@ -103,7 +118,7 @@ namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck
 
         protected override void WorkerRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs args)
         {
-            CurrentVersion = informationService.FileVersion;
+            CurrentVersion = CreateVersionText(informationService.FileVersion, informationService.AssemblyConfiguration);
 
             var result = args.Result as IVersionInfo;
 
@@ -111,7 +126,13 @@ namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck
                 return;
 
             InformationUrl = result.InformationUrl;
-            LatestVersion = result.LatestVersion.ToString();
+            LatestVersion = CreateVersionText(result.LatestVersion.ToString(), result.Configuration);
+            DownloadUrl = result.DownloadUrl;
+        }
+
+        private static string CreateVersionText(string version, string configuration)
+        {
+            return string.Format("{0} ({1})", version, configuration);
         }
 
         protected override void WorkerDoWork(object sender, DoWorkEventArgs e)

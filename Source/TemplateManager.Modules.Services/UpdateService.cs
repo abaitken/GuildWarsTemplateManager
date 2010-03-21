@@ -20,7 +20,10 @@ namespace TemplateManager.Modules.Services
             var result = new UpdateInfo
                              {
                                  LatestVersion = new Version(info.Major, info.Minor, info.Build, info.Revision),
-                                 InformationUrl = info.InformationUrl
+                                 InformationUrl = info.InformationUrl,
+                                 Configuration = info.Configuration,
+                                 DownloadUrl = info.DownloadUrl,
+                                 Label = info.Label
                              };
 
             return result;
@@ -36,6 +39,9 @@ namespace TemplateManager.Modules.Services
 
             public Version LatestVersion { get; set; }
             public string InformationUrl { get; set; }
+            public string Configuration { get; set; }
+            public string Label { get; set; }
+            public string DownloadUrl { get; set; }
 
             #endregion
         }
