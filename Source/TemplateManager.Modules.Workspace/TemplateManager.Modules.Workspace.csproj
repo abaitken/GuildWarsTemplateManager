@@ -109,7 +109,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Resource Include="Presentation\Resources\AboutTitleImage.png" />
     <Page Include="Presentation\Workspace\WorkspaceView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -142,6 +141,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Presentation\Resources\Options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentation\Resources\AboutTitleImageLeft.png" />
+    <Resource Include="Presentation\Resources\AboutTitleImageRight.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
