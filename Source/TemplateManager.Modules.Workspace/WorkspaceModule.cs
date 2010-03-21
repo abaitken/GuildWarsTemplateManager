@@ -3,7 +3,6 @@ using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
 using TemplateManager.Infrastructure;
-using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Modules.Workspace.Presentation.About;
 using TemplateManager.Modules.Workspace.Presentation.Options;
 using TemplateManager.Modules.Workspace.Presentation.Workspace;

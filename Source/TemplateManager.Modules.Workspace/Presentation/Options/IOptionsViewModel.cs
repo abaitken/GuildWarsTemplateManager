@@ -1,5 +1,4 @@
 using System.Windows.Input;
-using InfiniteRain.Shared.Presentation;
 
 namespace TemplateManager.Modules.Workspace.Presentation.Options
 {

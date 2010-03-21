@@ -2,7 +2,6 @@
 using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Unity;
 using TemplateManager.Infrastructure;
-using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Modules.DataExplorer.Presentation.DataExplorer;
 
 namespace TemplateManager.Modules.DataExplorer

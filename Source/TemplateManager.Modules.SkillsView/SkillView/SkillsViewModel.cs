@@ -6,10 +6,9 @@ using System.Windows.Input;
 using InfiniteRain.Shared.Presentation.Commands;
 using InfiniteRain.Shared.Presentation.PresentationModel;
 using InfiniteRain.Shared.Presentation.ViewManager;
-using TemplateManager.Infrastructure.Controllers;
+using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Model;
 using TemplateManager.Infrastructure.Services;
-using TemplateManager.Infrastructure;
 
 namespace TemplateManager.Modules.SkillsView.SkillView
 {

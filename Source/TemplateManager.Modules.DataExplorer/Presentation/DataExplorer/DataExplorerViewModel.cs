@@ -7,10 +7,9 @@ using System.Windows.Input;
 using InfiniteRain.Shared.Presentation.Commands;
 using InfiniteRain.Shared.Presentation.PresentationModel;
 using InfiniteRain.Shared.Presentation.ViewManager;
-using TemplateManager.Infrastructure.Controllers;
+using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Model;
 using TemplateManager.Infrastructure.Services;
-using TemplateManager.Infrastructure;
 
 namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 {
@@ -57,24 +56,6 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
             }
         }
 
-        protected override void WorkerDoWork(object sender, DoWorkEventArgs e)
-        {
-            var result = CollectionViewSource.GetDefaultView(service.Skills);
-            result.Filter = SkillFilter;
-
-            e.Result = result;
-        }
-
-        protected override void WorkerRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs args)
-        {
-            var result = args.Result as ICollectionView;
-            if (result == null)
-                return;
-
-            DataProviderLoadComplete();
-            Skills = result;
-        }
-
         public IDataExplorerView View
         {
             get { return view; }
@@ -86,6 +67,24 @@ namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
         }
 
         #endregion
+
+        protected override void WorkerDoWork(object sender, DoWorkEventArgs e)
+        {
+            var result = CollectionViewSource.GetDefaultView(service.Skills);
+            result.Filter = SkillFilter;
+
+            e.Result = result;
+        }
+
+        protected override void WorkerRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs args)
+        {
+            var result = args.Result as ICollectionView;
+            if(result == null)
+                return;
+
+            DataProviderLoadComplete();
+            Skills = result;
+        }
 
         private void GenerateCommands()
         {

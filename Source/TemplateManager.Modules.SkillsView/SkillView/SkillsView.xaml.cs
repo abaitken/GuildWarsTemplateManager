@@ -1,4 +1,6 @@
-﻿namespace TemplateManager.Modules.SkillsView.SkillView
+﻿using System.Windows;
+
+namespace TemplateManager.Modules.SkillsView.SkillView
 {
     /// <summary>
     /// Interaction logic for SkillsView.xaml
@@ -9,11 +11,6 @@
         {
             InitializeComponent();
             Loaded += SkillsView_Loaded;
-        }
-
-        void SkillsView_Loaded(object sender, System.Windows.RoutedEventArgs e)
-        {
-            Model.OnViewLoaded();
         }
 
         #region ISkillsView Members
@@ -30,5 +27,10 @@
         }
 
         #endregion
+
+        private void SkillsView_Loaded(object sender, RoutedEventArgs e)
+        {
+            Model.OnViewLoaded();
+        }
     }
 }

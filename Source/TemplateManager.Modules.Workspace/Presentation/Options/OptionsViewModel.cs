@@ -13,10 +13,10 @@ namespace TemplateManager.Modules.Workspace.Presentation.Options
 {
     public class OptionsViewModel : ViewModelBase, IOptionsViewModel
     {
+        public static readonly ViewDetails ViewDetails = new ViewDetails("Options", ToolCategories.Tool);
         private readonly IApplicationSettings applicationSettings;
         private readonly IOptionsView view;
         private string templatefolder;
-        public static readonly ViewDetails ViewDetails = new ViewDetails("Options", ToolCategories.Tool);
 
         public OptionsViewModel(IOptionsView view, IApplicationSettings applicationSettings)
         {

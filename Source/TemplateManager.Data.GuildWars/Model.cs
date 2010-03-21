@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Linq;
 using System.Windows.Media.Imaging;
 using InfiniteRain.Shared.Imaging;
-using TemplateManager.Common;
 using TemplateManager.Infrastructure.Model;
 
 namespace TemplateManager.Data.GuildWars

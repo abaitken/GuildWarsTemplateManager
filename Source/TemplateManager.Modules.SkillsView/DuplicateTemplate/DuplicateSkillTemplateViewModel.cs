@@ -4,15 +4,15 @@ using System.ComponentModel;
 using System.Linq;
 using InfiniteRain.Shared.Presentation.PresentationModel;
 using InfiniteRain.Shared.Presentation.ViewManager;
-using TemplateManager.Infrastructure.Controllers;
-using TemplateManager.Infrastructure.Services;
 using TemplateManager.Infrastructure;
+using TemplateManager.Infrastructure.Services;
 
 namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 {
     internal class DuplicateSkillTemplateViewModel : BackgroundLoadingViewModel, IDuplicateSkillTemplateViewModel
     {
-        private static readonly ViewDetails viewDetails = new ViewDetails("Duplicate Templates", ToolCategories.View,
+        private static readonly ViewDetails viewDetails = new ViewDetails("Duplicate Templates",
+                                                                          ToolCategories.View,
                                                                           new Uri(
                                                                               "pack://application:,,,/TemplateManager.Modules.SkillsView;component/Presentation/Resources/DuplicateTemplates.png",
                                                                               UriKind.Absolute));
@@ -45,18 +45,44 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
             var duplicateTemplate = obj.Template;
             var deleteSuccess = service.Delete(duplicateTemplate.Template);
 
-            if (deleteSuccess && result.Count == 2)
+            if(deleteSuccess && result.Count == 2)
                 templates.Remove(result);
 
             return deleteSuccess;
         }
+
+        public IDuplicateSkillTemplateView View
+        {
+            get { return view; }
+        }
+
+        public ObservableCollection<IDuplicateResult> Templates
+        {
+            get { return templates; }
+
+            set
+            {
+                if(templates == value)
+                    return;
+
+                templates = value;
+                SendPropertyChanged("Templates");
+            }
+        }
+
+        public string HeaderText
+        {
+            get { return ViewDetails.Name; }
+        }
+
+        #endregion
 
         protected override void WorkerDoWork(object sender, DoWorkEventArgs e)
         {
             var resultQuery = from item in service.AllTemplates
                               where item.IsValid
                               group item by item.SkillKey
-                                  into g
+                              into g
                                   where g.Count() > 1
                                   select
                                   new DuplicateResult(this,
@@ -73,44 +99,14 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
         {
             var result = e.Result as ObservableCollection<IDuplicateResult>;
 
-            if (result == null)
+            if(result == null)
                 return;
 
             Templates = result;
         }
 
-        public IDuplicateSkillTemplateView View
-        {
-            get { return view; }
-        }
-
-        public ObservableCollection<IDuplicateResult> Templates
-        {
-            get
-            {
-                return templates;
-            }
-
-            set
-            {
-                if (templates == value)
-                    return;
-
-                templates = value;
-                SendPropertyChanged("Templates");
-            }
-        }
-
-        public string HeaderText
-        {
-            get { return ViewDetails.Name; }
-        }
-
-        #endregion
-
         private void ServiceBuildsChanged(object sender, EventArgs e)
         {
-
         }
     }
 }

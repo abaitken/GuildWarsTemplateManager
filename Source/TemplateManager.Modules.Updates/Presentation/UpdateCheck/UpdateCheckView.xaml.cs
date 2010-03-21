@@ -1,4 +1,6 @@
-﻿namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck
+﻿using System.Windows;
+
+namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck
 {
     /// <summary>
     /// Interaction logic for UpdateCheck.xaml
@@ -11,11 +13,6 @@
             Loaded += UpdateCheckView_Loaded;
         }
 
-        void UpdateCheckView_Loaded(object sender, System.Windows.RoutedEventArgs e)
-        {
-            Model.OnViewLoaded();
-        }
-
         #region IUpdateCheckView Members
 
         public IUpdateCheckViewModel Model
@@ -25,5 +22,10 @@
         }
 
         #endregion
+
+        private void UpdateCheckView_Loaded(object sender, RoutedEventArgs e)
+        {
+            Model.OnViewLoaded();
+        }
     }
 }

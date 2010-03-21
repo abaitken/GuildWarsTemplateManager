@@ -1,10 +1,10 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Globalization;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Data;
 using InfiniteRain.Shared.Presentation.Converters;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Globalization;
-using System.Windows;
 
 namespace InfiniteRain.Shared.Presentation.Tests
 {
@@ -58,7 +58,7 @@ namespace InfiniteRain.Shared.Presentation.Tests
 
         public Visibility Convert(bool value, string parameter)
         {
-            return (Visibility)target.Convert(value, typeof(Grid), parameter, CultureInfo.CurrentCulture);
+            return (Visibility) target.Convert(value, typeof(Grid), parameter, CultureInfo.CurrentCulture);
         }
 
 
@@ -101,7 +101,7 @@ namespace InfiniteRain.Shared.Presentation.Tests
 
         public bool ConvertBack(Visibility value, string parameter)
         {
-            return (bool)target.ConvertBack(value, typeof(Grid), parameter, CultureInfo.CurrentCulture);
+            return (bool) target.ConvertBack(value, typeof(Grid), parameter, CultureInfo.CurrentCulture);
         }
     }
 }

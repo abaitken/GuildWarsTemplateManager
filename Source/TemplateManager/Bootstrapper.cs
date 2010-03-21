@@ -34,7 +34,7 @@ namespace TemplateManager
             Container.RegisterType<IMainWindowView, MainWindowView>();
             Container.RegisterType<IMainWindowViewModel, MainWindowViewModel>();
             Container.RegisterType<IApplicationInformationService, ApplicationInformation>();
-            
+
             Container.RegisterType<ViewManager>(new ContainerControlledLifetimeManager());
         }
 
@@ -67,7 +67,11 @@ namespace TemplateManager
             catalog.AddModule(updatesModule);
             catalog.AddModule(skillsViewModule, servicesModule.Name);
             catalog.AddModule(dataExplorerModule, servicesModule.Name);
-            catalog.AddModule(workspaceModule, servicesModule.Name, updatesModule.Name, dataExplorerModule.Name, skillsViewModule.Name);
+            catalog.AddModule(workspaceModule,
+                              servicesModule.Name,
+                              updatesModule.Name,
+                              dataExplorerModule.Name,
+                              skillsViewModule.Name);
             return catalog;
         }
 

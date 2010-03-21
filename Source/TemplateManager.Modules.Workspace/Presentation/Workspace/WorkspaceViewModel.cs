@@ -5,7 +5,6 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media.Imaging;
 using InfiniteRain.Shared.Imaging;
 using InfiniteRain.Shared.Presentation;
 using InfiniteRain.Shared.Presentation.Commands;
@@ -19,7 +18,6 @@ using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Infrastructure.Services;
 using TemplateManager.Modules.Workspace.Presentation.About;
-using TemplateManager.Modules.Workspace.Presentation.Options;
 
 namespace TemplateManager.Modules.Workspace.Presentation.Workspace
 {
@@ -54,26 +52,12 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
 
         public IEnumerable<MenuItem> ViewMenuItems
         {
-            get
-            {
-                return GetMenuItems(ToolCategories.View);
-            }
+            get { return GetMenuItems(ToolCategories.View); }
         }
 
         public IEnumerable<MenuItem> ToolMenuItems
         {
-            get
-            {
-                return GetMenuItems(ToolCategories.Tool);
-            }
-        }
-
-        private IEnumerable<MenuItem> GetMenuItems(string category)
-        {
-            var result = from item in viewManager.GetViewsForCategory(category)
-                         select CreateItem(item);
-
-            return result;
+            get { return GetMenuItems(ToolCategories.Tool); }
         }
 
         #region IWorkspaceViewModel Members
@@ -91,6 +75,14 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
         public ICommand ShowUpdateCheckWindowCommand { get; private set; }
 
         #endregion
+
+        private IEnumerable<MenuItem> GetMenuItems(string category)
+        {
+            var result = from item in viewManager.GetViewsForCategory(category)
+                         select CreateItem(item);
+
+            return result;
+        }
 
         private void GenerateCommands()
         {
@@ -118,7 +110,7 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
                                  CommandParameter = details
                              };
 
-            if (details.ImageUri != null)
+            if(details.ImageUri != null)
             {
                 var image = new Image
                                 {

@@ -1,4 +1,6 @@
-﻿namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
+﻿using System.Windows;
+
+namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
 {
     /// <summary>
     /// Interaction logic for DuplicateSkillTemplateView.xaml
@@ -9,11 +11,6 @@
         {
             InitializeComponent();
             Loaded += DuplicateSkillTemplateView_Loaded;
-        }
-
-        void DuplicateSkillTemplateView_Loaded(object sender, System.Windows.RoutedEventArgs e)
-        {
-            Model.OnViewLoaded();
         }
 
         #region IDuplicateSkillTemplateView Members
@@ -30,5 +27,10 @@
         }
 
         #endregion
+
+        private void DuplicateSkillTemplateView_Loaded(object sender, RoutedEventArgs e)
+        {
+            Model.OnViewLoaded();
+        }
     }
 }

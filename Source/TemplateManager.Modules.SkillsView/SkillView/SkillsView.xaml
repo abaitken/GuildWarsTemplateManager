@@ -4,7 +4,6 @@
              xmlns:dg="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit"
              xmlns:SkillsView1="clr-namespace:TemplateManager.Modules.SkillsView"             
              xmlns:local="clr-namespace:TemplateManager.Modules.SkillsView.SkillView"
-             xmlns:Presentation="clr-namespace:TemplateManager.Common.Presentation;assembly=TemplateManager.Common"
              xmlns:ListSynchronizer="clr-namespace:InfiniteRain.Shared.Presentation.Behaviours.ListSynchronizer;assembly=InfiniteRain.Shared.Presentation"
              x:Name="ThisControl">
     <UserControl.Resources>
@@ -119,7 +118,20 @@
             </dg:DataGrid>
         </DockPanel>
 
+        <Grid Width="300"
+              Height="100" 
+              Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}">
 
-        <Presentation:LoadingControl Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}" />
+            <Border Background="AliceBlue"
+                    BorderBrush="Black"
+                    BorderThickness="2"
+                    CornerRadius="20">
+                <TextBlock Text="Loading..." 
+                           FontSize="30"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center" />
+            </Border>
+
+        </Grid>
     </Grid>
 </UserControl>

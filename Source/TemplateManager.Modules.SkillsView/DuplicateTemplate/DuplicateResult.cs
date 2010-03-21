@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -13,6 +12,7 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
     {
         private readonly IDuplicateSkillTemplateViewModel parent;
         private readonly ObservableCollection<IDuplicateTemplate> templates;
+        private string header;
 
         public DuplicateResult(IDuplicateSkillTemplateViewModel parent, IEnumerable<SkillTemplate> templates)
         {
@@ -25,17 +25,12 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
             DeleteTemplateCommand = new DelegateCommand<IDuplicateTemplate>(OnDeleteTemplate);
         }
 
-        private void UpdateHeader()
-        {
-            Header = string.Format("{0} duplicate templates", Count);
-        }
-        
+        #region IDuplicateResult Members
+
         public int Count
         {
             get { return Templates.Count; }
         }
-
-        #region IDuplicateResult Members
 
         public ObservableCollection<IDuplicateTemplate> Templates
         {
@@ -45,13 +40,12 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
         public ICommand DeleteTemplateCommand { get; private set; }
 
 
-        string header;
         public string Header
         {
             get { return header; }
             set
             {
-                if (header == value)
+                if(header == value)
                     return;
 
                 header = value;
@@ -59,13 +53,17 @@ namespace TemplateManager.Modules.SkillsView.DuplicateTemplate
             }
         }
 
-
         #endregion
+
+        private void UpdateHeader()
+        {
+            Header = string.Format("{0} duplicate templates", Count);
+        }
 
         private void OnDeleteTemplate(IDuplicateTemplate obj)
         {
             var args = new DeleteTemplateArgs(obj, this);
-            
+
             if(!parent.DeleteTemplate(args))
                 return;
 

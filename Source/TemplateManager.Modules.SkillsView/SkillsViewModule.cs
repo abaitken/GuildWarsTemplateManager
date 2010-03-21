@@ -2,7 +2,6 @@
 using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Unity;
 using TemplateManager.Infrastructure;
-using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Modules.SkillsView.DuplicateTemplate;
 using TemplateManager.Modules.SkillsView.SkillView;
 

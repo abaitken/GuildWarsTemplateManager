@@ -14,6 +14,10 @@ namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck
         private readonly IApplicationInformationService informationService;
         private readonly IUpdateService updateService;
         private readonly IUpdateCheckView view;
+        private string currentVersion;
+        private string downloadUrl;
+        private string informationUrl;
+        private string latestVersion;
 
         public UpdateCheckViewModel(IUpdateCheckView view,
                                     IApplicationInformationService informationService,
@@ -29,6 +33,19 @@ namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck
 
         public ICommand OpenWebAddress { get; private set; }
 
+        public string DownloadUrl
+        {
+            get { return informationUrl; }
+            set
+            {
+                if(downloadUrl == value)
+                    return;
+
+                downloadUrl = value;
+                SendPropertyChanged("DownloadUrl");
+            }
+        }
+
         #region IUpdateCheckViewModel Members
 
         public IUpdateCheckView View
@@ -37,13 +54,12 @@ namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck
         }
 
 
-        string currentVersion;
         public string CurrentVersion
         {
             get { return currentVersion; }
             set
             {
-                if (currentVersion == value)
+                if(currentVersion == value)
                     return;
 
                 currentVersion = value;
@@ -52,13 +68,12 @@ namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck
         }
 
 
-        string latestVersion;
         public string LatestVersion
         {
             get { return latestVersion; }
             set
             {
-                if (latestVersion == value)
+                if(latestVersion == value)
                     return;
 
                 latestVersion = value;
@@ -67,13 +82,12 @@ namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck
         }
 
 
-        string informationUrl;
         public string InformationUrl
         {
             get { return informationUrl; }
             set
             {
-                if (informationUrl == value)
+                if(informationUrl == value)
                     return;
 
                 informationUrl = value;
@@ -81,20 +95,6 @@ namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck
             }
         }
 
-
-        string downloadUrl;
-        public string DownloadUrl
-        {
-            get { return informationUrl; }
-            set
-            {
-                if (downloadUrl == value)
-                    return;
-
-                downloadUrl = value;
-                SendPropertyChanged("DownloadUrl");
-            }
-        }
 
         public ICommand CloseWindowCommand { get; private set; }
 

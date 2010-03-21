@@ -34,10 +34,7 @@ All rights reserved. ArenaNet, Arena.net and the ArenaNet logo, as well as Guild
 
         public string ProductName
         {
-            get
-            {
-                return applicationInformationService.AssemblyProduct;
-            }
+            get { return applicationInformationService.AssemblyProduct; }
         }
 
         #region IAboutViewModel Members
