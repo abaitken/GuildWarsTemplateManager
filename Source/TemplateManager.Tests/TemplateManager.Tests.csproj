@@ -52,16 +52,11 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="TemplateManager.Assets, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67a38c05e350ab2a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Libs\TemplateManager.Assets\TemplateManager.Assets.dll</HintPath>
-    </Reference>
     <Reference Include="WindowsBase">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssetTests.cs" />
     <Compile Include="Assumptions.cs" />
     <Compile Include="BuildFactoryTests.cs" />
     <Compile Include="NativeBuildFactoryTests.cs" />

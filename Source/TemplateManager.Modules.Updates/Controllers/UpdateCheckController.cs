@@ -1,5 +1,5 @@
-﻿using TemperedSoftware.Shared.Presentation;
-using Microsoft.Practices.Unity;
+﻿using Microsoft.Practices.Unity;
+using TemperedSoftware.Shared.Presentation;
 using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Modules.Updates.Presentation.UpdateCheck;
 

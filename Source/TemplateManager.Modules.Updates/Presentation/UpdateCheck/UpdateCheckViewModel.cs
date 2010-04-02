@@ -2,9 +2,9 @@
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
+using Microsoft.Practices.Composite.Presentation.Commands;
 using TemperedSoftware.Shared.Presentation.PresentationModel;
 using TemperedSoftware.Shared.Services;
-using Microsoft.Practices.Composite.Presentation.Commands;
 using TemplateManager.Infrastructure.Services;
 
 namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck
