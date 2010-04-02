@@ -4,7 +4,7 @@
          xmlns:Regions="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
          xmlns:Infrastructure="clr-namespace:TemplateManager.Infrastructure;assembly=TemplateManager.Infrastructure"
          xmlns:Shell="clr-namespace:TemplateManager.Presentation.Shell"
-         xmlns:WindowPositionManager="clr-namespace:InfiniteRain.Shared.Presentation.WindowPositionManager;assembly=InfiniteRain.Shared.Presentation"
+         xmlns:WindowPositionManager="clr-namespace:TemperedSoftware.Shared.Presentation.WindowPositionManager;assembly=TemperedSoftware.Shared.Presentation"
         Title="{Binding WindowTitle}"
         Height="600" Width="800" 
         MinWidth="320" MinHeight="240"

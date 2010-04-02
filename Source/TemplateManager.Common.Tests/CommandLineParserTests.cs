@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using InfiniteRain.Shared;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TemperedSoftware.Shared;
 
 namespace TemplateManager.Common.Tests
 {

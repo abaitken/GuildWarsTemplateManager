@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using InfiniteRain.Shared.Services;
+using TemperedSoftware.Shared.Services;
 
 namespace TemplateManager.Services
 {

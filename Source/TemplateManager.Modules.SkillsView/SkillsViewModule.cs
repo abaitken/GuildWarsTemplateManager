@@ -1,6 +1,6 @@
-﻿using InfiniteRain.Shared.Presentation.ViewManager;
-using Microsoft.Practices.Composite.Modularity;
+﻿using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Unity;
+using TemperedSoftware.Shared.Presentation.ViewManager;
 using TemplateManager.Infrastructure;
 using TemplateManager.Modules.SkillsView.DuplicateTemplate;
 using TemplateManager.Modules.SkillsView.SkillView;

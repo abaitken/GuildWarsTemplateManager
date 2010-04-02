@@ -132,9 +132,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\InfiniteRain.Shared.Presentation\InfiniteRain.Shared.Presentation.csproj">
-      <Project>{D07C6BA9-54F3-454D-8514-ADB82178656C}</Project>
-      <Name>InfiniteRain.Shared.Presentation</Name>
+    <ProjectReference Include="..\..\Shared\TemperedSoftware.Shared.Presentation\TemperedSoftware.Shared.Presentation.csproj">
+      <Project>{A2339109-CC85-4A85-9F39-7D146AFCB5C8}</Project>
+      <Name>TemperedSoftware.Shared.Presentation</Name>
     </ProjectReference>
     <ProjectReference Include="..\TemplateManager.Common\TemplateManager.Common.csproj">
       <Project>{5D573659-1A65-4112-9EED-1BF70DB94F22}</Project>

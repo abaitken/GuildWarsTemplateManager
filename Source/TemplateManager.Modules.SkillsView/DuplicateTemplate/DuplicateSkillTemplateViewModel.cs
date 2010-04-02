@@ -2,8 +2,8 @@ using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using InfiniteRain.Shared.Presentation.PresentationModel;
-using InfiniteRain.Shared.Presentation.ViewManager;
+using TemperedSoftware.Shared.Presentation.PresentationModel;
+using TemperedSoftware.Shared.Presentation.ViewManager;
 using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Services;
 

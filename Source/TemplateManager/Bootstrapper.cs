@@ -1,10 +1,10 @@
 ﻿using System.Windows;
-using InfiniteRain.Shared;
-using InfiniteRain.Shared.Presentation.ViewManager;
-using InfiniteRain.Shared.Services;
 using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Composite.UnityExtensions;
 using Microsoft.Practices.Unity;
+using TemperedSoftware.Shared;
+using TemperedSoftware.Shared.Presentation.ViewManager;
+using TemperedSoftware.Shared.Services;
 using TemplateManager.Infrastructure;
 using TemplateManager.Modules.DataExplorer;
 using TemplateManager.Modules.Services;

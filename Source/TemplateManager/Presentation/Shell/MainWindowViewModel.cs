@@ -1,4 +1,4 @@
-using InfiniteRain.Shared.Services;
+using TemperedSoftware.Shared.Services;
 
 namespace TemplateManager.Presentation.Shell
 {

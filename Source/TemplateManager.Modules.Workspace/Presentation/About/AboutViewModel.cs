@@ -2,9 +2,9 @@
 using System.Globalization;
 using System.Windows;
 using System.Windows.Input;
-using InfiniteRain.Shared.Presentation.PresentationModel;
-using InfiniteRain.Shared.Services;
 using Microsoft.Practices.Composite.Presentation.Commands;
+using TemperedSoftware.Shared.Presentation.PresentationModel;
+using TemperedSoftware.Shared.Services;
 
 namespace TemplateManager.Modules.Workspace.Presentation.About
 {

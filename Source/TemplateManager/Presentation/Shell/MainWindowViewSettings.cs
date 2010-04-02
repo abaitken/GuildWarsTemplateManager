@@ -1,4 +1,4 @@
-using InfiniteRain.Shared.Presentation.WindowPositionManager;
+using TemperedSoftware.Shared.Presentation.WindowPositionManager;
 
 namespace TemplateManager.Presentation.Shell
 {

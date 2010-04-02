@@ -1,4 +1,4 @@
-using InfiniteRain.Shared.Presentation;
+using TemperedSoftware.Shared.Presentation;
 
 namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 {

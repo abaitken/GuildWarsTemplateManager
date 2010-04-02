@@ -115,13 +115,13 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\InfiniteRain.Shared.Presentation\InfiniteRain.Shared.Presentation.csproj">
-      <Project>{D07C6BA9-54F3-454D-8514-ADB82178656C}</Project>
-      <Name>InfiniteRain.Shared.Presentation</Name>
+    <ProjectReference Include="..\..\Shared\TemperedSoftware.Shared.Presentation\TemperedSoftware.Shared.Presentation.csproj">
+      <Project>{A2339109-CC85-4A85-9F39-7D146AFCB5C8}</Project>
+      <Name>TemperedSoftware.Shared.Presentation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Shared\InfiniteRain.Shared\InfiniteRain.Shared.csproj">
-      <Project>{AC0A0104-8EA2-48FA-873C-A3609BC658D1}</Project>
-      <Name>InfiniteRain.Shared</Name>
+    <ProjectReference Include="..\..\Shared\TemperedSoftware.Shared\TemperedSoftware.Shared.csproj">
+      <Project>{70E4E700-F522-49DC-9DB7-9A8D576360A1}</Project>
+      <Name>TemperedSoftware.Shared</Name>
     </ProjectReference>
     <ProjectReference Include="..\TemplateManager.Infrastructure\TemplateManager.Infrastructure.csproj">
       <Project>{67BC7C95-AB1E-422D-9AD4-E34CA77460A9}</Project>

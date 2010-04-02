@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using InfiniteRain.Shared.Imaging;
+using TemperedSoftware.Shared.Imaging;
 using TemplateManager.DataFetcher.Logging;
 using TemplateManager.DataFetcher.Model;
 

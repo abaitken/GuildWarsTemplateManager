@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using InfiniteRain.Shared;
+using TemperedSoftware.Shared;
 
 namespace TemplateManager.Infrastructure.Model
 {

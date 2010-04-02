@@ -3,9 +3,9 @@ using System.IO;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
-using InfiniteRain.Shared.Presentation.Commands;
-using InfiniteRain.Shared.Presentation.PresentationModel;
-using InfiniteRain.Shared.Presentation.ViewManager;
+using TemperedSoftware.Shared.Presentation.Commands;
+using TemperedSoftware.Shared.Presentation.PresentationModel;
+using TemperedSoftware.Shared.Presentation.ViewManager;
 using TemplateManager.Infrastructure;
 using MessageBox=System.Windows.MessageBox;
 

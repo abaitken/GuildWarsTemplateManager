@@ -1,7 +1,7 @@
-﻿using InfiniteRain.Shared.Presentation.ViewManager;
-using Microsoft.Practices.Composite.Modularity;
+﻿using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
+using TemperedSoftware.Shared.Presentation.ViewManager;
 using TemplateManager.Infrastructure;
 using TemplateManager.Modules.Workspace.Presentation.About;
 using TemplateManager.Modules.Workspace.Presentation.Options;
