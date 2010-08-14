@@ -3,6 +3,7 @@ using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Composite.UnityExtensions;
 using Microsoft.Practices.Unity;
 using TemperedSoftware.Shared;
+using TemperedSoftware.Shared.CommandLine;
 using TemperedSoftware.Shared.Presentation.ViewManager;
 using TemperedSoftware.Shared.Services;
 using TemplateManager.Infrastructure;
@@ -43,10 +44,14 @@ namespace TemplateManager
             var settings = Container.Resolve<IApplicationSettings>();
             settings.Reload();
 
-            var arguments = CommandLineParser.Parse(args);
+            var provider = new CommandLineProvider<CommandLineOptions>(CommandLineParser.Parse(args));
+            var arguments = provider.CreateArgumentsModel();
 
-            if(arguments.Contains(CommandLineOptions.ResetOption))
-                settings.Reset();
+            if (arguments.IsValid)
+            {
+                if(arguments.Reset)
+                    settings.Reset();
+            }
 
             var model = Container.Resolve<IMainWindowViewModel>();
             model.ShowView();
@@ -74,14 +79,5 @@ namespace TemplateManager
                               skillsViewModule.Name);
             return catalog;
         }
-
-        #region Nested type: CommandLineOptions
-
-        private static class CommandLineOptions
-        {
-            public static readonly CommandLineOption ResetOption = new CommandLineOption("reset", "r");
-        }
-
-        #endregion
     }
 }

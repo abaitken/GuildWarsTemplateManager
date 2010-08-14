@@ -133,6 +133,7 @@
     <Compile Include="..\Include\ProjectAssemblyInfo.cs">
       <Link>Properties\ProjectAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="CommandLineOptions.cs" />
     <Compile Include="Services\ApplicationInformation.cs" />
     <Compile Include="Services\ApplicationSettings.cs" />
     <Compile Include="Services\TemplateStoreLocator.cs" />

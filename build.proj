@@ -1,4 +1,16 @@
 <Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup>
+    <BuildItems Include="$(MSBuildProjectDirectory)\Source\TemplateManager\TemplateManager.csproj" />
+
+  </ItemGroup>
+
+  <Target Name="Build">
+	<MSBuild Projects="%(BuildItems.Identity)"  />
+  </Target>
+  
+  <!--
+  
   <PropertyGroup>
     <BuildSupportFolder>$(MSBuildProjectDirectory)\BuildSupport</BuildSupportFolder>
   </PropertyGroup>
@@ -66,4 +78,6 @@
              Properties="Configuration=$(Configuration)"
              RebaseOutputs="true" />
   </Target>
+
+  -->
 </Project>

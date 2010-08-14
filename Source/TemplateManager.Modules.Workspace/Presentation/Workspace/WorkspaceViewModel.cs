@@ -8,7 +8,6 @@ using System.Windows.Input;
 using Microsoft.Practices.Composite.Presentation.Commands;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
-using TemperedSoftware.Shared.Imaging;
 using TemperedSoftware.Shared.Presentation;
 using TemperedSoftware.Shared.Presentation.Commands;
 using TemperedSoftware.Shared.Presentation.PresentationModel;
