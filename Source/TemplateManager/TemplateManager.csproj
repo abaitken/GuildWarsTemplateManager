@@ -128,10 +128,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\Shared\Include\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="..\Include\ProjectAssemblyInfo.cs">
-      <Link>ProjectAssemblyInfo.cs</Link>
+      <Link>Properties\ProjectAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Services\ApplicationInformation.cs" />
     <Compile Include="Services\ApplicationSettings.cs" />

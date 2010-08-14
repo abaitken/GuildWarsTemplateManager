@@ -45,7 +45,7 @@ namespace TemplateManager
 
             var arguments = CommandLineParser.Parse(args);
 
-            if(arguments[Const.ResetOption])
+            if(arguments.Contains(CommandLineOptions.ResetOption))
                 settings.Reset();
 
             var model = Container.Resolve<IMainWindowViewModel>();
@@ -75,9 +75,9 @@ namespace TemplateManager
             return catalog;
         }
 
-        #region Nested type: Const
+        #region Nested type: CommandLineOptions
 
-        private static class Const
+        private static class CommandLineOptions
         {
             public static readonly CommandLineOption ResetOption = new CommandLineOption("reset", "r");
         }

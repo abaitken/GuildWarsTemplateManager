@@ -74,10 +74,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\Shared\Include\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="..\Include\ProjectAssemblyInfo.cs">
-      <Link>ProjectAssemblyInfo.cs</Link>
+      <Link>Properties\ProjectAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Presentation\Options\IOptionsView.cs" />
     <Compile Include="Presentation\Options\IOptionsViewModel.cs" />
