@@ -4,7 +4,9 @@ namespace TemplateManager
 {
     internal class CommandLineOptions : CommandLineOptionsBase
     {
-        [CommandLineOption("Reset", "", new[] { "reset", "r" }, false)]
+        [HelpText("Reset")]
+        [DefaultValue(false)]
+        [Option("reset"), Option("r")]
         public bool Reset { get; set; }
     }
 }
