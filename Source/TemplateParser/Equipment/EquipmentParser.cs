@@ -24,6 +24,7 @@ namespace TemplateParser.Equipment
         private const int ModifierCountBitLength = 2;
         private const int ModifierIdBitLength = 4;
         private const int VersionBitLength = 4;
+        private const int ColorBitLength = 4;
 
         #endregion
 
@@ -45,7 +46,7 @@ namespace TemplateParser.Equipment
                 yield return new BitSet(item.SlotId, EquipmentSlotBitLength);
                 yield return new BitSet(item.ItemId, DefaultItemIdBitLength);
                 yield return new BitSet(item.ModifierIds.Count(), ModifierCountBitLength);
-                yield return new BitSet(item.ColorId, ItemCountBitLength);
+                yield return new BitSet(item.ColorId, ColorBitLength);
 
                 foreach(var modifier in item.ModifierIds)
                     yield return new BitSet(modifier, DefaultModifierIdBitLength);

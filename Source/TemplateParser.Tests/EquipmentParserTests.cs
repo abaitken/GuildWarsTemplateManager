@@ -119,7 +119,6 @@ namespace TemplateParser.Tests
         [TestMethod]
         public void CanCreateTemplateCode()
         {
-            const string expected = "Pk5hbWgmjkaikmWVqIh5ID1Qj5IRBhipITRhgpIPhzh5O9E";
 
             var parser = new EquipmentParser();
             var source = new NativeEquipmentBuild
@@ -134,14 +133,16 @@ namespace TemplateParser.Tests
                              };
 
             var result = parser.CreateTemplateCode(source);
-            Assert.AreEqual(expected, result);
+            Assert.AreEqual(newStyle, result);
         }
+            
+        const string newStyle = "Pk5hbWgmjkaikmWVqIh5ID1Qj5IRBhipITRhgpIPhzh5O9E";
 
         [TestMethod]
         public void CanParseNewStyleEquipmentTemplateCode()
         {
             var parser = new EquipmentParser();
-            var result = parser.ParseTemplateCode("Pk5hbWgmjkaikmWVqIh5ID1Qj5IRBhipITRhgpIPhzh5O9E");
+            var result = parser.ParseTemplateCode(newStyle);
 
             Assert.AreEqual(7, result.Count());
 

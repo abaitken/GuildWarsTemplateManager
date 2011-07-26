@@ -35,7 +35,7 @@ namespace TemplateParser
         private static string BinaryStringToBase64(string binaryString)
         {
             var values = from item in binaryString.ChunkString(6)
-                         select BinaryStringToInteger(item.Reverse());
+                         select BinaryStringToInteger(item);
 
             var result = from item in values
                          select Table.Substring(item, 1);
@@ -47,7 +47,7 @@ namespace TemplateParser
         {
             var result = 0;
 
-            var temp = chunk.Reverse();
+            var temp = chunk;
 
             for(var i = 0; i < temp.Length; i++)
                 result += int.Parse(temp.Substring(i, 1), CultureInfo.InvariantCulture) * (1 << i);
@@ -74,9 +74,7 @@ namespace TemplateParser
 
             // The algoritm gives us the binary number in reverse order (mirrored)
             // We store it in an array so that we can reverse it back to normal
-            var binary = result.ToCharArray();
-            Array.Reverse(binary);
-            return new string(binary);
+            return result.Reverse();
         }
 
         #endregion
