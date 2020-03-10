@@ -43,7 +43,7 @@ namespace TemplateManager.Data.GuildWars
 
             public BitmapImage GetImage()
             {
-                if(image == null)
+                if (image == null)
                     image = GetImage(Data);
 
                 return image;
@@ -93,7 +93,7 @@ namespace TemplateManager.Data.GuildWars
             {
                 get
                 {
-                    if(IsSourceActivationTimeNull())
+                    if (IsSourceActivationTimeNull())
                         return null;
 
                     return SourceActivationTime;
@@ -283,7 +283,7 @@ namespace TemplateManager.Data.GuildWars
 
             private T? GetSingleValue<T>(Func<bool> isNull, Func<SkillsRow, T> getter) where T : struct
             {
-                if(isNull())
+                if (isNull())
                     return null;
 
                 return getter(this);

@@ -1,13 +1,15 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager", "TemplateManager\TemplateManager.csproj", "{013D96FE-CBB0-4D28-AF0B-F73652843409}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{94D4F0FC-0027-4294-9680-E44C11E24338}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E1FF6121-5FAB-4226-9F69-0AD94E478DFE}"
-	ProjectSection(SolutionItems) = preProject
-		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
-		TemplateManager.vsmdi = TemplateManager.vsmdi
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{2459D0E8-C6AE-4D62-A992-C026F319E386}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3AB69CC8-D1ED-47CD-901A-A461BFDDD969}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager", "TemplateManager\TemplateManager.csproj", "{013D96FE-CBB0-4D28-AF0B-F73652843409}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Tests", "TemplateManager.Tests\TemplateManager.Tests.csproj", "{E362FD63-FFCB-41AC-8305-F442C7DAB711}"
 EndProject
@@ -18,10 +20,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Common", "TemplateManager.Common\TemplateManager.Common.csproj", "{5D573659-1A65-4112-9EED-1BF70DB94F22}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateManager.Modules.SkillsView", "TemplateManager.Modules.SkillsView\TemplateManager.Modules.SkillsView.csproj", "{EACC47B1-C3C2-442E-9F4D-1E65C34F8D9A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{94D4F0FC-0027-4294-9680-E44C11E24338}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{2459D0E8-C6AE-4D62-A992-C026F319E386}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{BDDD5FB5-3D0F-468B-A5BD-47593C042131}"
 EndProject
@@ -43,20 +41,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateParser", "TemplateP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateParser.Tests", "TemplateParser.Tests\TemplateParser.Tests.csproj", "{50FE85D1-A2E6-48F4-A3E3-40E6AA29CC7A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3AB69CC8-D1ED-47CD-901A-A461BFDDD969}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperedSoftware.Shared", "..\..\Shared\TemperedSoftware.Shared\TemperedSoftware.Shared.csproj", "{70E4E700-F522-49DC-9DB7-9A8D576360A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperedSoftware.Shared", "..\Shared\TemperedSoftware.Shared\TemperedSoftware.Shared.csproj", "{70E4E700-F522-49DC-9DB7-9A8D576360A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperedSoftware.Shared.Presentation", "..\..\Shared\TemperedSoftware.Shared.Presentation\TemperedSoftware.Shared.Presentation.csproj", "{A2339109-CC85-4A85-9F39-7D146AFCB5C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperedSoftware.Shared.Presentation", "..\Shared\TemperedSoftware.Shared.Presentation\TemperedSoftware.Shared.Presentation.csproj", "{A2339109-CC85-4A85-9F39-7D146AFCB5C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperedSoftware.Shared.Presentation.Tests", "..\..\Shared\TemperedSoftware.Shared.Presentation.Tests\TemperedSoftware.Shared.Presentation.Tests.csproj", "{29C366F4-AE7C-4164-B821-8F8D7D103751}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperedSoftware.Shared.Presentation.Tests", "..\Shared\TemperedSoftware.Shared.Presentation.Tests\TemperedSoftware.Shared.Presentation.Tests.csproj", "{29C366F4-AE7C-4164-B821-8F8D7D103751}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperedSoftware.Shared.Tests", "..\Shared\TemperedSoftware.Shared.Tests\TemperedSoftware.Shared.Tests.csproj", "{38739046-C28E-46A9-AD1E-7E80FDFB40C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperedSoftware.Shared.Tests", "..\..\Shared\TemperedSoftware.Shared.Tests\TemperedSoftware.Shared.Tests.csproj", "{38739046-C28E-46A9-AD1E-7E80FDFB40C5}"
 EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = TemplateManager.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release with Code Analysis|Any CPU = Release with Code Analysis|Any CPU
@@ -186,17 +179,23 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E362FD63-FFCB-41AC-8305-F442C7DAB711} = {94D4F0FC-0027-4294-9680-E44C11E24338}
+		{85A88912-18FD-4516-A1B9-F4FA1F7A97EC} = {2459D0E8-C6AE-4D62-A992-C026F319E386}
+		{EACC47B1-C3C2-442E-9F4D-1E65C34F8D9A} = {2459D0E8-C6AE-4D62-A992-C026F319E386}
 		{FDBE0B70-9EF1-4C3F-BDB8-21A8BC85E198} = {94D4F0FC-0027-4294-9680-E44C11E24338}
 		{30F39243-1007-4C09-B3F6-F54D093853C3} = {94D4F0FC-0027-4294-9680-E44C11E24338}
-		{50FE85D1-A2E6-48F4-A3E3-40E6AA29CC7A} = {94D4F0FC-0027-4294-9680-E44C11E24338}
-		{38739046-C28E-46A9-AD1E-7E80FDFB40C5} = {94D4F0FC-0027-4294-9680-E44C11E24338}
-		{29C366F4-AE7C-4164-B821-8F8D7D103751} = {94D4F0FC-0027-4294-9680-E44C11E24338}
-		{EACC47B1-C3C2-442E-9F4D-1E65C34F8D9A} = {2459D0E8-C6AE-4D62-A992-C026F319E386}
-		{85A88912-18FD-4516-A1B9-F4FA1F7A97EC} = {2459D0E8-C6AE-4D62-A992-C026F319E386}
 		{0F2301AE-648A-4F3F-A06B-06BA4529A725} = {2459D0E8-C6AE-4D62-A992-C026F319E386}
 		{8EF40DE2-F35F-4037-9676-9469A8500ACC} = {2459D0E8-C6AE-4D62-A992-C026F319E386}
 		{9DB5FE85-A4A9-4113-ADC2-E759BAC69D88} = {2459D0E8-C6AE-4D62-A992-C026F319E386}
+		{50FE85D1-A2E6-48F4-A3E3-40E6AA29CC7A} = {94D4F0FC-0027-4294-9680-E44C11E24338}
 		{70E4E700-F522-49DC-9DB7-9A8D576360A1} = {3AB69CC8-D1ED-47CD-901A-A461BFDDD969}
 		{A2339109-CC85-4A85-9F39-7D146AFCB5C8} = {3AB69CC8-D1ED-47CD-901A-A461BFDDD969}
+		{29C366F4-AE7C-4164-B821-8F8D7D103751} = {94D4F0FC-0027-4294-9680-E44C11E24338}
+		{38739046-C28E-46A9-AD1E-7E80FDFB40C5} = {94D4F0FC-0027-4294-9680-E44C11E24338}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1148A650-B84A-44A4-9CB2-EEF1C10F70E2}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = TemplateManager.vsmdi
 	EndGlobalSection
 EndGlobal

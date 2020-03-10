@@ -44,8 +44,7 @@ namespace TemplateManager
             var settings = Container.Resolve<IApplicationSettings>();
             settings.Reload();
 
-            var provider = new CommandLineProvider<CommandLineOptions>(CommandLineParser.Parse(args));
-            var arguments = provider.CreateArgumentsModel();
+            var arguments = new CommandLineProvider<CommandLineOptions>().CreateArgumentsModel(CommandLineParser.Parse(args));
 
             if (arguments.IsValid)
             {
