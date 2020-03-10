@@ -1,7 +1,7 @@
 ﻿<Window x:Class="TemplateManager.Presentation.Shell.MainWindowView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-         xmlns:Regions="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
+         xmlns:Regions="clr-namespace:Prism.Regions;assembly=Prism.Wpf"
          xmlns:Infrastructure="clr-namespace:TemplateManager.Infrastructure;assembly=TemplateManager.Infrastructure"
          xmlns:Shell="clr-namespace:TemplateManager.Presentation.Shell"
          xmlns:WindowPositionManager="clr-namespace:TemperedSoftware.Shared.Presentation.WindowPositionManager;assembly=TemperedSoftware.Shared.Presentation"

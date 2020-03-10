@@ -1,11 +1,12 @@
-﻿using Microsoft.Practices.Composite.Modularity;
-using Microsoft.Practices.Composite.Regions;
-using Microsoft.Practices.Unity;
+﻿using Prism.Ioc;
+using Prism.Modularity;
+using Prism.Regions;
 using TemperedSoftware.Shared.Presentation.ViewManager;
 using TemplateManager.Infrastructure;
 using TemplateManager.Modules.Workspace.Presentation.About;
 using TemplateManager.Modules.Workspace.Presentation.Options;
 using TemplateManager.Modules.Workspace.Presentation.Workspace;
+using Unity;
 
 namespace TemplateManager.Modules.Workspace
 {
@@ -21,17 +22,7 @@ namespace TemplateManager.Modules.Workspace
             this.regionManager = regionManager;
             this.viewManager = viewManager;
         }
-
-        #region IModule Members
-
-        public void Initialize()
-        {
-            RegisterViews();
-            RegisterViewsWithRegions();
-        }
-
-        #endregion
-
+        
         private void RegisterViewsWithRegions()
         {
             regionManager.RegisterViewWithRegion(RegionNames.ShellRegion,
@@ -51,6 +42,16 @@ namespace TemplateManager.Modules.Workspace
 
             container.RegisterType<IWorkspaceView, WorkspaceView>();
             container.RegisterType<IWorkspaceViewModel, WorkspaceViewModel>();
+        }
+
+        public void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+        }
+
+        public void OnInitialized(IContainerProvider containerProvider)
+        {
+            RegisterViews();
+            RegisterViewsWithRegions();
         }
     }
 }

@@ -1,8 +1,8 @@
-﻿using System.ComponentModel;
+﻿using Prism.Commands;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
-using Microsoft.Practices.Composite.Presentation.Commands;
 using TemperedSoftware.Shared.Presentation.PresentationModel;
 using TemperedSoftware.Shared.Services;
 using TemplateManager.Infrastructure.Services;

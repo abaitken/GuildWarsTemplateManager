@@ -1,8 +1,6 @@
 ﻿using System.Windows;
-using Microsoft.Practices.Composite.Modularity;
-using Microsoft.Practices.Composite.UnityExtensions;
-using Microsoft.Practices.Unity;
-using TemperedSoftware.Shared;
+using Prism.Modularity;
+using Prism.Unity;
 using TemperedSoftware.Shared.CommandLine;
 using TemperedSoftware.Shared.Presentation.ViewManager;
 using TemperedSoftware.Shared.Services;
@@ -14,6 +12,8 @@ using TemplateManager.Modules.Updates;
 using TemplateManager.Modules.Workspace;
 using TemplateManager.Presentation.Shell;
 using TemplateManager.Services;
+using Unity;
+using Unity.Lifetime;
 
 namespace TemplateManager
 {
@@ -58,9 +58,9 @@ namespace TemplateManager
             return model.View as DependencyObject;
         }
 
-        protected override IModuleCatalog GetModuleCatalog()
+        protected override void ConfigureModuleCatalog()
         {
-            var catalog = new ModuleCatalog();
+            var catalog = ModuleCatalog; /*new ModuleCatalog()*/
             var servicesModule = typeof(ServicesModule);
             var workspaceModule = typeof(WorkspaceModule);
             var skillsViewModule = typeof(SkillsViewModule);
@@ -76,7 +76,6 @@ namespace TemplateManager
                               updatesModule.Name,
                               dataExplorerModule.Name,
                               skillsViewModule.Name);
-            return catalog;
         }
     }
 }

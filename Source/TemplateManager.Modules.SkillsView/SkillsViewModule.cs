@@ -1,9 +1,10 @@
-﻿using Microsoft.Practices.Composite.Modularity;
-using Microsoft.Practices.Unity;
+﻿using Prism.Ioc;
+using Prism.Modularity;
 using TemperedSoftware.Shared.Presentation.ViewManager;
 using TemplateManager.Infrastructure;
 using TemplateManager.Modules.SkillsView.DuplicateTemplate;
 using TemplateManager.Modules.SkillsView.SkillView;
+using Unity;
 
 namespace TemplateManager.Modules.SkillsView
 {
@@ -17,16 +18,6 @@ namespace TemplateManager.Modules.SkillsView
             this.container = container;
             this.viewManager = viewManager;
         }
-
-        #region IModule Members
-
-        public void Initialize()
-        {
-            RegisterTypes();
-            RegisterViews();
-        }
-
-        #endregion
 
         private void RegisterViews()
         {
@@ -46,6 +37,16 @@ namespace TemplateManager.Modules.SkillsView
 
             container.RegisterType<IDuplicateSkillTemplateView, DuplicateSkillTemplateView>();
             container.RegisterType<IDuplicateSkillTemplateViewModel, DuplicateSkillTemplateViewModel>();
+        }
+
+        public void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+        }
+
+        public void OnInitialized(IContainerProvider containerProvider)
+        {
+            RegisterTypes();
+            RegisterViews();
         }
     }
 }

@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Prism.Commands;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Windows;
 using System.Windows.Input;
-using Microsoft.Practices.Composite.Presentation.Commands;
 using TemperedSoftware.Shared.Presentation.PresentationModel;
 using TemperedSoftware.Shared.Services;
 

@@ -1,7 +1,7 @@
-﻿using Microsoft.Practices.Unity;
-using TemperedSoftware.Shared.Presentation;
+﻿using TemperedSoftware.Shared.Presentation;
 using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Modules.Updates.Presentation.UpdateCheck;
+using Unity;
 
 namespace TemplateManager.Modules.Updates.Controllers
 {

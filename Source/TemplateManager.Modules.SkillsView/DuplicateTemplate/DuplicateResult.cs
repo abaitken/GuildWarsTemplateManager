@@ -1,8 +1,8 @@
+using Prism.Commands;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
-using Microsoft.Practices.Composite.Presentation.Commands;
 using TemperedSoftware.Shared.Presentation.PresentationModel;
 using TemplateManager.Infrastructure.Model;
 

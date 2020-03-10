@@ -1,8 +1,9 @@
-﻿using Microsoft.Practices.Composite.Modularity;
-using Microsoft.Practices.Unity;
+﻿using Prism.Ioc;
+using Prism.Modularity;
 using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Modules.Updates.Controllers;
 using TemplateManager.Modules.Updates.Presentation.UpdateCheck;
+using Unity;
 
 namespace TemplateManager.Modules.Updates
 {
@@ -15,14 +16,16 @@ namespace TemplateManager.Modules.Updates
             this.container = container;
         }
 
-        #region IModule Members
 
-        public void Initialize()
+        public void OnInitialized(IContainerProvider containerProvider)
         {
             RegisterTypes();
         }
 
-        #endregion
+        public void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+        }
+
 
         private void RegisterTypes()
         {

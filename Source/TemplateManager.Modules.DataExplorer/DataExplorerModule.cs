@@ -1,8 +1,9 @@
-﻿using Microsoft.Practices.Composite.Modularity;
-using Microsoft.Practices.Unity;
+﻿using Prism.Ioc;
+using Prism.Modularity;
 using TemperedSoftware.Shared.Presentation.ViewManager;
 using TemplateManager.Infrastructure;
 using TemplateManager.Modules.DataExplorer.Presentation.DataExplorer;
+using Unity;
 
 namespace TemplateManager.Modules.DataExplorer
 {
@@ -17,16 +18,6 @@ namespace TemplateManager.Modules.DataExplorer
             this.viewManager = viewManager;
         }
 
-        #region IModule Members
-
-        public void Initialize()
-        {
-            RegisterTypes();
-            RegisterViews();
-        }
-
-        #endregion
-
         private void RegisterViews()
         {
             viewManager.Register(DataExplorerViewModel.ViewDetails,
@@ -38,6 +29,16 @@ namespace TemplateManager.Modules.DataExplorer
         {
             container.RegisterType<IDataExplorerView, DataExplorerView>();
             container.RegisterType<IDataExplorerViewModel, DataExplorerViewModel>();
+        }
+
+        public void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+        }
+
+        public void OnInitialized(IContainerProvider containerProvider)
+        {
+            RegisterTypes();
+            RegisterViews();
         }
     }
 }

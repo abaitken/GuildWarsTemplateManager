@@ -1,6 +1,8 @@
-﻿using Microsoft.Practices.Composite.Modularity;
-using Microsoft.Practices.Unity;
+﻿using Prism.Ioc;
+using Prism.Modularity;
 using TemplateManager.Infrastructure.Services;
+using Unity;
+using Unity.Lifetime;
 
 namespace TemplateManager.Modules.Services
 {
@@ -14,10 +16,14 @@ namespace TemplateManager.Modules.Services
         }
 
         #region IModule Members
-
-        public void Initialize()
+        
+        public void OnInitialized(IContainerProvider containerProvider)
         {
             RegisterTypes();
+        }
+
+        public void RegisterTypes(IContainerRegistry containerRegistry)
+        {
         }
 
         #endregion
