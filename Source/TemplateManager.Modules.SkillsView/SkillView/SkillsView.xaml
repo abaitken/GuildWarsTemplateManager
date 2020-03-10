@@ -1,7 +1,6 @@
 ﻿<UserControl x:Class="TemplateManager.Modules.SkillsView.SkillView.SkillsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:dg="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit"
              xmlns:SkillsView1="clr-namespace:TemplateManager.Modules.SkillsView"             
              xmlns:local="clr-namespace:TemplateManager.Modules.SkillsView.SkillView"             
              xmlns:ListSynchronizer="clr-namespace:TemperedSoftware.Shared.Presentation.Behaviours.ListSynchronizer;assembly=TemperedSoftware.Shared.Presentation"
@@ -100,22 +99,22 @@
 
             </Expander>
 
-            <dg:DataGrid ItemsSource="{Binding Builds}" 
+            <DataGrid ItemsSource="{Binding Builds}" 
                  AutoGenerateColumns="False" 
                  IsReadOnly="True" 
                  x:Name="BuildListBox"
                  SelectionMode="Single">
-                <dg:DataGrid.RowDetailsTemplate>
+                <DataGrid.RowDetailsTemplate>
                     <DataTemplate>
                         <SkillsView1:InfoPanel />
                     </DataTemplate>
-                </dg:DataGrid.RowDetailsTemplate>
-                <dg:DataGrid.Columns>
-                    <dg:DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True"/>
-                    <dg:DataGridTextColumn Header="Primary Profession" Binding="{Binding PrimaryProfession.Name}" IsReadOnly="True"/>
-                    <dg:DataGridTextColumn Header="Secondary Profession" Binding="{Binding SecondaryProfession.Name}" IsReadOnly="True"/>
-                </dg:DataGrid.Columns>
-            </dg:DataGrid>
+                </DataGrid.RowDetailsTemplate>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Primary Profession" Binding="{Binding PrimaryProfession.Name}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Secondary Profession" Binding="{Binding SecondaryProfession.Name}" IsReadOnly="True"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </DockPanel>
 
         <Grid Width="300"
