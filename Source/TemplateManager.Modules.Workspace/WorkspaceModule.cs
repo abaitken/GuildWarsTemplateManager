@@ -1,7 +1,7 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
-using TemperedSoftware.Shared.Presentation.ViewManager;
+using TemplateManager.Common;
 using TemplateManager.Infrastructure;
 using TemplateManager.Modules.Workspace.Presentation.About;
 using TemplateManager.Modules.Workspace.Presentation.Options;

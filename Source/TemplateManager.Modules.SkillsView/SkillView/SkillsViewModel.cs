@@ -1,11 +1,10 @@
+using Prism.Commands;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Data;
 using System.Windows.Input;
-using TemperedSoftware.Shared.Presentation.Commands;
-using TemperedSoftware.Shared.Presentation.PresentationModel;
-using TemperedSoftware.Shared.Presentation.ViewManager;
+using TemplateManager.Common;
 using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Model;
 using TemplateManager.Infrastructure.Services;

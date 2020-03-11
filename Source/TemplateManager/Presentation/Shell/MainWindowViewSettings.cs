@@ -1,4 +1,4 @@
-using TemperedSoftware.Shared.Presentation.WindowPositionManager;
+using TemplateManager.Common;
 
 namespace TemplateManager.Presentation.Shell
 {

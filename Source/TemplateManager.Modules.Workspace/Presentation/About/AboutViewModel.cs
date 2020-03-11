@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Windows;
 using System.Windows.Input;
-using TemperedSoftware.Shared.Presentation.PresentationModel;
-using TemperedSoftware.Shared.Services;
+using TemplateManager.Common;
 
 namespace TemplateManager.Modules.Workspace.Presentation.About
 {

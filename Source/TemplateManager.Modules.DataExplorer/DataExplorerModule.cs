@@ -1,6 +1,6 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
-using TemperedSoftware.Shared.Presentation.ViewManager;
+using TemplateManager.Common;
 using TemplateManager.Infrastructure;
 using TemplateManager.Modules.DataExplorer.Presentation.DataExplorer;
 using Unity;

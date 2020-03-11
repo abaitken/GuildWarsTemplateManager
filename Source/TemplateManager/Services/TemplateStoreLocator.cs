@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 using Microsoft.Win32;
-using TemperedSoftware.Shared.FileSystem;
+using TemplateManager.Common;
 
 namespace TemplateManager.Services
 {

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:SkillsView1="clr-namespace:TemplateManager.Modules.SkillsView"             
              xmlns:local="clr-namespace:TemplateManager.Modules.SkillsView.SkillView"             
-             xmlns:ListSynchronizer="clr-namespace:TemperedSoftware.Shared.Presentation.Behaviours.ListSynchronizer;assembly=TemperedSoftware.Shared.Presentation"
+             xmlns:ListSynchronizer="clr-namespace:TemplateManager.Common;assembly=TemplateManager.Common"
              x:Name="ThisControl">
     <UserControl.Resources>
         <local:NullableBoolConverter x:Key="NullableBoolConverter" />

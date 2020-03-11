@@ -4,7 +4,7 @@
          xmlns:Regions="clr-namespace:Prism.Regions;assembly=Prism.Wpf"
          xmlns:Infrastructure="clr-namespace:TemplateManager.Infrastructure;assembly=TemplateManager.Infrastructure"
          xmlns:Shell="clr-namespace:TemplateManager.Presentation.Shell"
-         xmlns:WindowPositionManager="clr-namespace:TemperedSoftware.Shared.Presentation.WindowPositionManager;assembly=TemperedSoftware.Shared.Presentation"
+         xmlns:WindowPositionManager="clr-namespace:TemplateManager.Common;assembly=TemplateManager.Common"
         Title="{Binding WindowTitle}"
         Height="600" Width="800" 
         MinWidth="320" MinHeight="240"

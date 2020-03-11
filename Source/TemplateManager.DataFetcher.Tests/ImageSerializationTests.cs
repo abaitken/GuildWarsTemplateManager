@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TemperedSoftware.Shared.Imaging;
+using TemplateManager.Common;
 
 namespace TemplateManager.DataFetcher.Tests
 {

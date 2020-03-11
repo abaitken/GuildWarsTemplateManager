@@ -1,9 +1,7 @@
 ﻿using System.Windows;
 using Prism.Modularity;
 using Prism.Unity;
-using TemperedSoftware.Shared.CommandLine;
-using TemperedSoftware.Shared.Presentation.ViewManager;
-using TemperedSoftware.Shared.Services;
+using TemplateManager.Common;
 using TemplateManager.Infrastructure;
 using TemplateManager.Modules.DataExplorer;
 using TemplateManager.Modules.Services;

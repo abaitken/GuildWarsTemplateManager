@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using TemperedSoftware.Shared.Services;
+using TemplateManager.Common;
 
 namespace TemplateManager.Services
 {

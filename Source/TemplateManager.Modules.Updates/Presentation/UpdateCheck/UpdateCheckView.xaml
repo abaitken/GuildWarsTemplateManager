@@ -1,13 +1,13 @@
 ﻿<Window x:Class="TemplateManager.Modules.Updates.Presentation.UpdateCheck.UpdateCheckView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:Converters="clr-namespace:TemperedSoftware.Shared.Presentation.Converters;assembly=TemperedSoftware.Shared.Presentation"
+        xmlns:Converters="clr-namespace:TemplateManager.Common;assembly=TemplateManager.Common"
         Title="Update Check" 
         ResizeMode="NoResize" 
         WindowStartupLocation="CenterOwner" 
         Height="150" Width="300">
     <Window.Resources>
-        <Converters:BooleanVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
     </Window.Resources>
     <DockPanel>
 
@@ -18,7 +18,7 @@
                 CommandParameter="{Binding View}"  />
 
         <Grid>
-            <StackPanel Visibility="{Binding IsLoading,Converter={StaticResource BooleanToVisibilityConverter},ConverterParameter=False}"
+            <StackPanel Visibility="{Binding IsLoading,Converter={StaticResource BooleanToVisibilityConverter}}"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center">
                 <UniformGrid Columns="2">

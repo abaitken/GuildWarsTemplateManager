@@ -2,7 +2,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:TemplateManager.Modules.DataExplorer.Presentation.DataExplorer"
-    xmlns:ListSynchronizer="clr-namespace:TemperedSoftware.Shared.Presentation.Behaviours.ListSynchronizer;assembly=TemperedSoftware.Shared.Presentation">
+    xmlns:ListSynchronizer="clr-namespace:TemplateManager.Common;assembly=TemplateManager.Common">
     <UserControl.Resources>
         <local:NullableBoolConverter x:Key="NullableBoolConverter" />
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />

@@ -2,8 +2,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using TemperedSoftware.Shared.Presentation.PresentationModel;
-using TemperedSoftware.Shared.Presentation.ViewManager;
+using TemplateManager.Common;
 using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Services;
 

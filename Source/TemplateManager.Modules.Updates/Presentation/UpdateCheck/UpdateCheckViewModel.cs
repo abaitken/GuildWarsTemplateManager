@@ -3,8 +3,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
-using TemperedSoftware.Shared.Presentation.PresentationModel;
-using TemperedSoftware.Shared.Services;
+using TemplateManager.Common;
 using TemplateManager.Infrastructure.Services;
 
 namespace TemplateManager.Modules.Updates.Presentation.UpdateCheck

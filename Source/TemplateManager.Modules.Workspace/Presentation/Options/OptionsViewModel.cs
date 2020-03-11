@@ -1,11 +1,10 @@
-﻿using System;
+﻿using Prism.Commands;
+using System;
 using System.IO;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
-using TemperedSoftware.Shared.Presentation.Commands;
-using TemperedSoftware.Shared.Presentation.PresentationModel;
-using TemperedSoftware.Shared.Presentation.ViewManager;
+using TemplateManager.Common;
 using TemplateManager.Infrastructure;
 using MessageBox=System.Windows.MessageBox;
 

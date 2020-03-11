@@ -7,11 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using Prism.Commands;
 using Prism.Regions;
-using TemperedSoftware.Shared.Presentation;
-using TemperedSoftware.Shared.Presentation.Commands;
-using TemperedSoftware.Shared.Presentation.PresentationModel;
-using TemperedSoftware.Shared.Presentation.ViewManager;
-using TemperedSoftware.Shared.Services;
+using TemplateManager.Common;
 using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Controllers;
 using TemplateManager.Infrastructure.Services;
@@ -85,12 +81,12 @@ namespace TemplateManager.Modules.Workspace.Presentation.Workspace
 
         private void GenerateCommands()
         {
-            HelpCommand = new TemperedSoftware.Shared.Presentation.Commands.DelegateCommand(OnHelpRequested);
-            AboutCommand = new TemperedSoftware.Shared.Presentation.Commands.DelegateCommand(ShowAboutWindow);
+            HelpCommand = new DelegateCommand(OnHelpRequested);
+            AboutCommand = new DelegateCommand(ShowAboutWindow);
             CloseWindowCommand = new DelegateCommand<Window>(OnCloseWindow);
-            HelpTopicsCommand = new TemperedSoftware.Shared.Presentation.Commands.DelegateCommand(OnHelpTopicsRequested);
+            HelpTopicsCommand = new DelegateCommand(OnHelpTopicsRequested);
             CloseTabCommand = new DelegateCommand<TabItem>(OnCloseTab);
-            ShowUpdateCheckWindowCommand = new TemperedSoftware.Shared.Presentation.Commands.DelegateCommand(DisplayUpdateNotification);
+            ShowUpdateCheckWindowCommand = new DelegateCommand(DisplayUpdateNotification);
             OpenRegionView = new DelegateCommand<ViewDetails>(OnOpenRegionView);
         }
 

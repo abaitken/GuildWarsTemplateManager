@@ -181,10 +181,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Shared\TemperedSoftware.Shared\TemperedSoftware.Shared.csproj">
-      <Project>{70E4E700-F522-49DC-9DB7-9A8D576360A1}</Project>
-      <Name>TemperedSoftware.Shared</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TemplateManager.Common\TemplateManager.Common.csproj">
       <Project>{5D573659-1A65-4112-9EED-1BF70DB94F22}</Project>
       <Name>TemplateManager.Common</Name>

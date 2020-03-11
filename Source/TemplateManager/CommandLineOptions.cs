@@ -1,4 +1,4 @@
-using TemperedSoftware.Shared.CommandLine;
+using TemplateManager.Common;
 
 namespace TemplateManager
 {

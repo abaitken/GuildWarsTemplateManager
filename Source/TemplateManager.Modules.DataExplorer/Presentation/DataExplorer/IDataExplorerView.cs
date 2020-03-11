@@ -1,4 +1,4 @@
-using TemperedSoftware.Shared.Presentation;
+using TemplateManager.Common;
 
 namespace TemplateManager.Modules.DataExplorer.Presentation.DataExplorer
 {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Media.Imaging;
-using TemperedSoftware.Shared.Imaging;
+using TemplateManager.Common;
 using TemplateManager.Infrastructure.Model;
 
 namespace TemplateManager.Data.GuildWars

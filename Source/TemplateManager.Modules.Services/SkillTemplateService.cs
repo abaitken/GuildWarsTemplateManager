@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using TemperedSoftware.Shared.FileSystem;
+using TemplateManager.Common;
 using TemplateManager.Infrastructure;
 using TemplateManager.Infrastructure.Model;
 using TemplateManager.Infrastructure.Services;
